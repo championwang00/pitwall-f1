@@ -1,4 +1,4 @@
-import Link from "next/link";
+import EntityLink from "@/components/entity/EntityLink";
 import { eraOf } from "@/lib/eras";
 import u from "./unit.module.css";
 
@@ -20,7 +20,7 @@ export default function EraSpan({ years, className }: { years: number[]; classNa
     <p className={`${u.eras} ${className ?? ""}`}>
       <b>{es.length > 1 ? `横跨 ${es.length} 个时代` : "所属时代"}</b>
       {es.map((e, i) => (
-        <span key={e.id}><Link href={`/eras/${e.id}`}>{e.title}</Link>{i < es.length - 1 && <i>·</i>}</span>
+        <span key={e.id}><EntityLink kind="era" id={e.id}>{e.title}</EntityLink>{i < es.length - 1 && <i>·</i>}</span>
       ))}
     </p>
   );

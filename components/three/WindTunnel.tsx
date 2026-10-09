@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import s from "./wind.module.css";
+import EntityLink from "@/components/entity/EntityLink";
 
 /**
  * Flow-visualisation over the official side-view car cut-out: streaks travel nose → tail and are
@@ -97,7 +98,7 @@ export default function WindTunnel({ src, color = "#ffffff", modes = false, alt 
       <img ref={img} src={src} alt={alt} crossOrigin="anonymous" className={s.car} />
       {modes && (
         <div className={s.modes}>
-          <span>2026 主动空气动力学</span>
+          <span><EntityLink kind="year" id="2026" className="hlink">2026</EntityLink> 主动空气动力学</span>
           <div className="seg">
             <button className={mode === "corner" ? "on" : undefined} onClick={() => setMode("corner")}>弯道模式 · 高下压力</button>
             <button className={mode === "straight" ? "on" : undefined} onClick={() => setMode("straight")}>直道模式 · 低阻力</button>

@@ -7,3 +7,6 @@ shots
 .claude
 .git
 *.tsbuildinfo
+tmp
+tools
+data/f1.db

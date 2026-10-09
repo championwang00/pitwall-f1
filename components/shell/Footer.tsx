@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
           <div>
             <h4>图片与字体</h4>
-            <p>车手、车队、赛车、赛道图片引用自 formula1.com 媒体服务器，版权归 Formula One World Championship Limited。Formula1 字体为非官方演示使用。</p>
+            <p>图片来源包括 Formula 1、车队及制造商官方图库、Wikimedia Commons。版权或许可与作者信息见图片来源及素材记录。Formula1 字体为非官方演示使用。</p>
             <p>引擎音效：<a href="https://freesound.org/people/rfhache/sounds/44763/">rfhache · F1 BR 06 Engine Starts 2</a>（<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>，截取并淡入淡出）。</p>
           </div>
           <div>

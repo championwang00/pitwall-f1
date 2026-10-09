@@ -48,6 +48,25 @@ export async function bilingual(enTitle: string | null | undefined) {
   return { en, zh };
 }
 
+/**
+ * Never let Wikipedia hold up a page (user: 年份导航点击起来还是很慢): a known answer returns at once; an unknown one
+ * waits at most `ms` (enough for a disk-cache hit), then the page renders without it while the lookup finishes in the
+ * background for the next visit. A failure (e.g. Wikimedia 429) is retried on a later visit, never awaited.
+ */
+type Bi = Awaited<ReturnType<typeof bilingual>>;
+const EMPTY: Bi = { en: null, zh: null };
+const biMemo = new Map<string, Bi | Promise<Bi>>();
+export async function bilingualFast(enTitle: string | null | undefined, ms = 150): Promise<Bi> {
+  if (!enTitle) return EMPTY;
+  let v = biMemo.get(enTitle);
+  if (v && !(v instanceof Promise)) return v;
+  if (!v) {
+    v = bilingual(enTitle).then((r) => { biMemo.set(enTitle, r); return r; }, () => { biMemo.delete(enTitle); return EMPTY; });
+    biMemo.set(enTitle, v);
+  }
+  return Promise.race([v, new Promise<Bi>((r) => setTimeout(() => r(EMPTY), ms))]);
+}
+
 export async function driverImage(id: string): Promise<string | null> {
   const s = await summary(wikiMap().drivers[id]);
   if (!s) return null;

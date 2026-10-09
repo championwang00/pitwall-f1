@@ -1,0 +1,115 @@
+/* /live 「本站已结束节次」 (WeekendResults): one white card; CSS-only radio tabs (newest session first), F1 results rows —
+   position in --num-font, a team-colour bar, the driver chip, timing values in --tech-font (KH Interference F1). */
+.box { background: #fff; border-radius: 8px; padding: 16px 16px 8px; }
+.radio { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+
+.tabBar { display: flex; flex-wrap: wrap; gap: 2px; margin-bottom: 16px; }
+.tab { display: flex; flex-direction: column; gap: 4px; padding: 8px 14px; min-width: 104px; border-radius: 4px; background: var(--paper); cursor: pointer; transition: background .15s, color .15s; }
+.tab:hover { background: var(--paper-2); }
+.tab b { font: 700 13px/16px var(--font-display); }
+.tab span { font: 600 11px/12px var(--font-cn); color: var(--mute); white-space: nowrap; }
+
+/* with tabs only the checked session shows; a lone session (no radios) always shows */
+.radio ~ .panels > .panel { display: none; }
+.radio:nth-of-type(1):checked ~ .panels > .panel:nth-child(1) { display: block; }
+.radio:nth-of-type(1):checked ~ .tabBar > .tab:nth-child(1) { background: var(--ink); color: #fff; }
+.radio:nth-of-type(1):checked ~ .tabBar > .tab:nth-child(1) span { color: rgba(255,255,255,.7); }
+.radio:nth-of-type(1):focus-visible ~ .tabBar > .tab:nth-child(1) { outline: 2px solid var(--f1-red); outline-offset: 2px; }
+.radio:nth-of-type(2):checked ~ .panels > .panel:nth-child(2) { display: block; }
+.radio:nth-of-type(2):checked ~ .tabBar > .tab:nth-child(2) { background: var(--ink); color: #fff; }
+.radio:nth-of-type(2):checked ~ .tabBar > .tab:nth-child(2) span { color: rgba(255,255,255,.7); }
+.radio:nth-of-type(2):focus-visible ~ .tabBar > .tab:nth-child(2) { outline: 2px solid var(--f1-red); outline-offset: 2px; }
+.radio:nth-of-type(3):checked ~ .panels > .panel:nth-child(3) { display: block; }
+.radio:nth-of-type(3):checked ~ .tabBar > .tab:nth-child(3) { background: var(--ink); color: #fff; }
+.radio:nth-of-type(3):checked ~ .tabBar > .tab:nth-child(3) span { color: rgba(255,255,255,.7); }
+.radio:nth-of-type(3):focus-visible ~ .tabBar > .tab:nth-child(3) { outline: 2px solid var(--f1-red); outline-offset: 2px; }
+.radio:nth-of-type(4):checked ~ .panels > .panel:nth-child(4) { display: block; }
+.radio:nth-of-type(4):checked ~ .tabBar > .tab:nth-child(4) { background: var(--ink); color: #fff; }
+.radio:nth-of-type(4):checked ~ .tabBar > .tab:nth-child(4) span { color: rgba(255,255,255,.7); }
+.radio:nth-of-type(4):focus-visible ~ .tabBar > .tab:nth-child(4) { outline: 2px solid var(--f1-red); outline-offset: 2px; }
+.radio:nth-of-type(5):checked ~ .panels > .panel:nth-child(5) { display: block; }
+.radio:nth-of-type(5):checked ~ .tabBar > .tab:nth-child(5) { background: var(--ink); color: #fff; }
+.radio:nth-of-type(5):checked ~ .tabBar > .tab:nth-child(5) span { color: rgba(255,255,255,.7); }
+.radio:nth-of-type(5):focus-visible ~ .tabBar > .tab:nth-child(5) { outline: 2px solid var(--f1-red); outline-offset: 2px; }
+.radio:nth-of-type(6):checked ~ .panels > .panel:nth-child(6) { display: block; }
+.radio:nth-of-type(6):checked ~ .tabBar > .tab:nth-child(6) { background: var(--ink); color: #fff; }
+.radio:nth-of-type(6):checked ~ .tabBar > .tab:nth-child(6) span { color: rgba(255,255,255,.7); }
+.radio:nth-of-type(6):focus-visible ~ .tabBar > .tab:nth-child(6) { outline: 2px solid var(--f1-red); outline-offset: 2px; }
+
+.pHead { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 6px 16px; padding: 0 4px 12px; }
+.pTitle { display: flex; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; }
+.pTitle h3 { font: 700 20px/24px var(--font-display); }
+.pWhen { font: 400 12px/12px var(--tech-font); text-transform: uppercase; color: var(--mute); white-space: nowrap; }
+.pAct :global(a) { font-size: 13px; }
+
+.pending { display: flex; align-items: center; gap: 10px; margin: 0 4px 12px; padding: 14px 16px; border-radius: 4px; background: var(--paper); font: 600 13px/18px var(--font-cn); color: var(--mute); }
+.pending i { flex: none; width: 6px; height: 6px; border-radius: 50%; background: var(--mute); opacity: .6; animation: wrPulse 1.6s ease-in-out infinite; }
+@keyframes wrPulse { 50% { opacity: .15; } }
+@media (prefers-reduced-motion: reduce) { .pending i { animation: none; } }
+
+/* the race card's podium cells; a size container so their narrow-card layout (time under the face) kicks in on phones */
+.podium { margin: 0 4px 12px; max-width: 760px; container-type: inline-size; }
+
+/* results rows */
+.table { --cols: 96px 84px; display: flex; flex-direction: column; }
+.row { display: grid; grid-template-columns: 28px minmax(0, 1fr) var(--cols); align-items: center; gap: 12px; min-height: 40px; padding: 0 4px; border-bottom: 1px solid var(--line); }
+.headRow { min-height: 28px; border-bottom-color: var(--ink); font: 700 11px/14px var(--font-cn); text-transform: uppercase; color: var(--mute); }
+.headRow .cT, .headRow .cN { font: inherit; }
+/* desktop: the value columns share the width after the driver (F1.com results table); phones: fixed tracks below */
+.kPractice { --cols: repeat(2, minmax(84px, 160px)) minmax(44px, 96px); }
+.kQuali { --cols: repeat(3, minmax(84px, 140px)) minmax(44px, 88px); }
+.kQualiGrid { --cols: repeat(3, minmax(84px, 140px)) repeat(2, minmax(44px, 88px)); }
+.kRace { --cols: minmax(120px, 200px) repeat(2, minmax(44px, 96px)); }
+.qBest { display: none !important; }
+
+.cPos { font: 700 14px/16px var(--num-font); text-align: center; color: var(--ink); }
+.headRow .cPos { font: inherit; }
+.cDrv { position: relative; display: flex; align-items: center; min-width: 0; gap: 10px; }
+.bar { flex: none; width: 3px; height: 20px; border-radius: 2px; background: var(--team, #606066); }
+.person { min-width: 0; overflow: hidden; }
+.person b { font-size: 14px; font-weight: 600; }
+.plain { font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.plain b { font-weight: 600; }
+.plain .lat, .plain span { font-size: 12px; color: var(--mute); }
+.cT { font: 400 13px/16px var(--tech-font); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+.cN { font: 500 13px/16px var(--num-font); font-variant-numeric: tabular-nums; text-align: right; color: var(--mute); }
+.dim { color: var(--mute); }
+.purple { color: #a020f0; font-weight: 700; }
+.out .cPos, .out .cDrv { opacity: .55; }
+.outTxt { font: 700 12px/16px var(--font-cn); font-style: normal; color: var(--mute); }
+
+/* top 10, then the rest behind 显示全部 */
+.more > summary { list-style: none; cursor: pointer; display: flex; justify-content: center; padding: 10px 0 6px; font: 700 13px/16px var(--font-cn); }
+.more > summary::-webkit-details-marker { display: none; }
+.more > summary b { font: 700 13px/16px var(--num-font); }
+.more > summary span { border-bottom: 1px solid transparent; }
+.more > summary:hover span { border-color: currentColor; }
+.more:not([open]) .moreClose, .more[open] .moreOpen { display: none; }
+
+@media (max-width: 760px) {
+  .box { padding: 12px 8px 4px; }
+  .tab { min-width: 0; flex: 1 1 30%; padding: 8px 10px; }
+  .row { gap: 8px; grid-template-columns: 24px minmax(0, 1fr) var(--cols); }
+  .kPractice { --cols: 80px 64px; }
+  .kRace { --cols: 96px 32px; }
+  .kQuali { --cols: 104px; }
+  .kQualiGrid { --cols: 104px 36px; }
+  .cLaps, .qCol { display: none !important; }
+  .qBest { display: block !important; }
+  .qBest em { font: 700 10px/12px var(--font-display); font-style: normal; color: var(--mute); margin-right: 6px; }
+  .person :global(.lat) { display: none; }
+}
+
+/* inside the black next-race banner (user: 内容要放到黑色区块内): the same layout on dark tokens */
+.dark { --paper: rgba(255,255,255,.06); --paper-2: rgba(255,255,255,.1); --line: rgba(255,255,255,.1); --mute: rgba(255,255,255,.55); color: #fff; padding-bottom: 48px; border-top: 1px solid rgba(255,255,255,.08); }
+.dark .box { background: rgba(255,255,255,.04); box-shadow: inset 0 0 0 1px rgba(255,255,255,.06); }
+.dark .cPos { color: #fff; }
+.dark .headRow { border-bottom-color: rgba(255,255,255,.4); }
+.dark .purple { color: #c77dff; }
+.dark .radio:checked ~ .tabBar > .tab { color: inherit; }
+.dark .radio:nth-of-type(1):checked ~ .tabBar > .tab:nth-child(1), .dark .radio:nth-of-type(2):checked ~ .tabBar > .tab:nth-child(2),
+.dark .radio:nth-of-type(3):checked ~ .tabBar > .tab:nth-child(3), .dark .radio:nth-of-type(4):checked ~ .tabBar > .tab:nth-child(4),
+.dark .radio:nth-of-type(5):checked ~ .tabBar > .tab:nth-child(5), .dark .radio:nth-of-type(6):checked ~ .tabBar > .tab:nth-child(6) { background: #fff; color: var(--ink, #15151e); }
+.dark .radio:nth-of-type(1):checked ~ .tabBar > .tab:nth-child(1) span, .dark .radio:nth-of-type(2):checked ~ .tabBar > .tab:nth-child(2) span,
+.dark .radio:nth-of-type(3):checked ~ .tabBar > .tab:nth-child(3) span, .dark .radio:nth-of-type(4):checked ~ .tabBar > .tab:nth-child(4) span,
+.dark .radio:nth-of-type(5):checked ~ .tabBar > .tab:nth-child(5) span, .dark .radio:nth-of-type(6):checked ~ .tabBar > .tab:nth-child(6) span { color: rgba(21,21,30,.6); }

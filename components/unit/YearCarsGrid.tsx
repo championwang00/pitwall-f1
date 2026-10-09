@@ -1,13 +1,16 @@
 import s from "@/components/index/index.module.css";
 import { yearTeams } from "@/lib/yearData";
 import { all } from "@/lib/db";
-import { teamCar, teamColor, TEAMS_2026 } from "@/lib/assets";
+import { teamColorAt } from "@/lib/assets";
 import { ENGINE_ZH } from "@/lib/names";
 import { zhName } from "@/lib/zh";
 import CarCard, { carPicture } from "@/components/index/CarCard";
+import YearSpan from "@/components/entity/YearSpan";
+import Engine from "@/components/entity/Engine";
 
 /** 「Y 年的 N 台赛车」: every chassis raced that year as car cards, by constructors' position (/seasons/Y/cars and /cars?year=Y, spec §4.7). */
-export default function YearCarsGrid({ year, heading = true }: { year: number; heading?: boolean }) {
+/** `kicker`: the index page passes 「Season」; a year-hub tab passes nothing — the tab bar is its kicker (spec §0.8.7) */
+export default function YearCarsGrid({ year, heading = true, kicker = null }: { year: number; heading?: boolean; kicker?: string | null }) {
   const ts = yearTeams(year);
   const rows = all<any>(
     `select sec.constructor_id team, sec.chassis_id id, ch.name, sec.engine_manufacturer_id engine, em.name engineName, group_concat(distinct sed.driver_id) drivers
@@ -21,17 +24,16 @@ export default function YearCarsGrid({ year, heading = true }: { year: number; h
   const dname = new Map(ids.length ? all<any>(`select id, name from driver where id in (${ids.map(() => "?").join(",")})`, ...ids).map((d) => [d.id, d.name]) : []);
   return (
     <>
-      {heading && <div className="sec-head"><div><p className="kicker">Cars</p><h2 className="cn-h2">{year} 年的 {cars.length} 台赛车</h2></div><span className="sub">按车队积分排序；点赛车看它的成绩与技术档案</span></div>}
+      {heading && <div className="sec-head"><div>{kicker && <p className="kicker">{kicker}</p>}<h2 className="cn-h2"><YearSpan from={year} /> 年的 {cars.length} 台赛车</h2></div><span className="sub">按车队积分排序；点赛车看它的成绩与技术档案</span></div>}
       <div className={s.carGrid}>
         {cars.map((r) => {
-          const official = year === 2026 && r.team in TEAMS_2026 ? teamCar(r.team, 700) : null;
           const t = line.get(r.team);
           const ds = String(r.drivers ?? "").split(",").filter(Boolean).slice(0, 4);
           return (
-            <CarCard key={r.team + r.id} id={r.id} name={r.name} team={r.team} teamName={zhName.team(r.team) ?? r.team} color={teamColor(r.team, "#3a3a44")} year={year}
-              img={official ?? carPicture(r.id, r.team)} photo={!official}
+            <CarCard key={r.team + r.id} id={r.id} name={r.name} team={r.team} teamName={zhName.team(r.team) ?? r.team} color={teamColorAt(r.team, year, "#3a3a44")} year={year}
+              pic={carPicture(r.id)}
               rank={t?.pos ? <span className={s.carRank}>P{t.pos}{t.champ ? " · 车队冠军" : ""}</span> : null}
-              engine={<>{ENGINE_ZH[r.engine] ?? r.engineName ?? r.engine} 引擎</>}
+              engine={<><Engine id={r.engine} name={r.engineName} year={year} /> 引擎</>}
               drivers={ds.map((d) => ({ id: d, name: zhName.driver(d) ?? dname.get(d) ?? d }))} />
           );
         })}

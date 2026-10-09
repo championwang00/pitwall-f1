@@ -3,8 +3,10 @@
 import { REPLAY_EVENT } from "@/components/live/replay";
 
 /**
- * Wraps a season's race cards on the 回放 tab: a ▶ link to this same page (`?session=K`) switches the page's timing
- * panel in place (the panel then `replaceState`s `?session=`, so the breadcrumb follows) instead of reloading the page.
+ * Wraps links on a page that has a timing panel: a ▶ link to this same page (`?session=K`, e.g. another session of the
+ * weekend on /races/Y/R/replay) switches the panel in place (the panel then `replaceState`s `?session=`, the breadcrumb's
+ * 「回放 · 节次」 follows) instead of reloading. Links to another race's replay page navigate normally.
+ * (v5.1: no longer used by the season 回放 tab, which is an index without a panel.)
  */
 export default function ReplayLinks({ children }: { children: React.ReactNode }) {
   return (

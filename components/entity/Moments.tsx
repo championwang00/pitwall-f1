@@ -22,8 +22,8 @@ export function Moments({ items, title = "高光时刻", kicker = "Moments", not
             <li key={i} className={s.mItem}>
               <EntityLink kind="year" id={String(m.year)} href={href} className={s.mYear}><span className="num">{m.year}</span><em>{round ? `第 ${round} 站` : "赛季"}</em></EntityLink>
               <div className={s.mBody}>
-                <h3 className="cn-h3"><Linked text={m.title} skip={skip} /></h3>
-                <p><Linked text={m.text} skip={skip} />{m.sources.map((x, j) => <a key={j} className={s.srcInline} href={x.url} target="_blank" rel="noreferrer" title={x.label}>{j === 0 ? "来源" : j + 1}</a>)}</p>
+                <h3 className="cn-h3"><Linked text={m.title} skip={skip} year={m.year} /></h3>
+                <p><Linked text={m.text} skip={skip} year={m.year} />{m.sources.map((x, j) => <a key={j} className={s.srcInline} href={x.url} target="_blank" rel="noreferrer" title={x.label}>{j === 0 ? "来源" : j + 1}</a>)}</p>
               </div>
             </li>
           );
@@ -51,7 +51,7 @@ export function Anecdotes({ items, title = "你可能不知道", kicker = "Did Y
 }
 
 /** formula1.com statistics row: label (Titillium) over the value (Formula1 Black). */
-export function StatRow({ items }: { items: { k: string; v: string | number | null | undefined; sub?: string }[] }) {
+export function StatRow({ items }: { items: { k: string; v: React.ReactNode; sub?: string }[] }) {
   return (
     <dl className={s.stats}>
       {items.map((x) => (

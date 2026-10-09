@@ -354,10 +354,10 @@ function RadioCard({ clip, person, color, acr, year, lap, pos, time, playing, en
           {person.id && <img src={faceSrc(person.id, 240, year)} alt="" />}
         </div>
         <div className={s.rInfo}>
-          <p className={s.rEyebrow}><span>TEAM RADIO</span><canvas ref={level} width={120 * 2} height={18 * 2} className={s.rLevel} aria-hidden /></p>
+          <p className={s.rEyebrow}><span>车队无线电</span><canvas ref={level} width={120 * 2} height={18 * 2} className={s.rLevel} aria-hidden /></p>
           <h4 className={s.rBig}>{person.zh}<span className="lat">{acr}</span></h4>
           <p className={s.rCtx}>
-            <span className={s.rTeam}>{person.teamId && <img src={`/api/logo/${person.teamId}?r=3&v=white`} alt="" />}{person.teamZh}</span>
+            <span className={s.rTeam}>{person.teamId && <img src={`/api/logo/${person.teamId}?r=11&v=white`} alt="" />}{person.teamZh}</span>
             {pos ? <span>第 <b className="num">{pos}</b> 位</span> : null}
             {lap ? <span>第 <b className="num">{lap}</b> 圈</span> : null}
             <span className={s.tech}>{time}</span>

@@ -13,7 +13,9 @@
 .grid { stroke: var(--line); stroke-width: 1; }
 .axis { font-family: var(--font-data); font-size: 11px; fill: var(--mute); }
 .endLabel { font-family: var(--font-cn); font-size: 12px; font-weight: 700; fill: var(--ink); }
-.endPts { font-family: var(--font-data); font-weight: 900; fill: var(--mute); }
+.endLink { cursor: pointer; }
+.endLink:hover .endLabel { text-decoration: underline; text-underline-offset: 3px; }
+.endPts { font-family: var(--num-font); font-weight: var(--num-weight); fill: var(--mute); }
 @media (max-width: 760px) {
   .strip { gap: 1px; }
   .chip { min-width: 0; }

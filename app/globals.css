@@ -8,6 +8,12 @@
 @font-face { font-family: "Formula1 Digits"; src: url("/f1fonts/Formula1-Year.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
 @font-face { font-family: "KH Interference F1"; src: url("/f1fonts/KHInterferenceF1-Regular.woff2") format("woff2"); font-weight: 100 500; font-display: swap; }
 @font-face { font-family: "KH Interference F1"; src: url("/f1fonts/KHInterferenceF1-Bold.woff2") format("woff2"); font-weight: 600 900; font-display: swap; }
+/* "Formula1 Text" = the same Formula1 cuts, limited to Latin / digits / Latin punctuation and given Noto Sans SC's line
+   metrics, so it can lead the CJK body stack: every Latin letter and digit in Chinese UI and prose renders in the F1 face
+   while CJK (and CJK punctuation “” …… —— and the name dot ·) falls through to Noto with unchanged line boxes. */
+@font-face { font-family: "Formula1 Text"; src: url("/f1fonts/Formula1-Regular.woff2") format("woff2"); font-weight: 100 400; font-display: swap; unicode-range: U+0020-007E, U+00A0-00B6, U+00B8-00FF, U+0100-017F, U+2013, U+2019, U+2032-2033, U+2212; ascent-override: 116%; descent-override: 28.8%; line-gap-override: 0%; }
+@font-face { font-family: "Formula1 Text"; src: url("/f1fonts/Formula1-Bold.woff2") format("woff2"); font-weight: 500 800; font-display: swap; unicode-range: U+0020-007E, U+00A0-00B6, U+00B8-00FF, U+0100-017F, U+2013, U+2019, U+2032-2033, U+2212; ascent-override: 116%; descent-override: 28.8%; line-gap-override: 0%; }
+@font-face { font-family: "Formula1 Text"; src: url("/f1fonts/Formula1-Black.woff2") format("woff2"); font-weight: 900; font-display: swap; unicode-range: U+0020-007E, U+00A0-00B6, U+00B8-00FF, U+0100-017F, U+2013, U+2019, U+2032-2033, U+2212; ascent-override: 116%; descent-override: 28.8%; line-gap-override: 0%; }
 
 :root {
   --f1-red: #e10600;
@@ -29,10 +35,17 @@
   --font-wide: "Formula1 Wide", "Formula1", "Titillium Web", "PingFang SC", sans-serif;
   --font-digits: "Formula1", "Titillium Web", system-ui, sans-serif;
   --font-tech: "KH Interference F1", "Formula1", "Titillium Web", ui-monospace, sans-serif;
-  --font-year: "Formula1 Digits", "Formula1", "Titillium Web", sans-serif;
+  --font-year: var(--num-font); /* was "Formula1 Digits" (user: 「这个字体好像有点奇怪」) */
   --font-data: "Formula1", "Titillium Web", "Noto Sans SC", "PingFang SC", system-ui, sans-serif;
-  --font-body: "Titillium Web", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", system-ui, sans-serif;
-  --font-cn: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --font-body: "Formula1 Text", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", system-ui, sans-serif;
+  --font-cn: "Formula1 Text", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+
+  /* Type roles (user: numbers like the year rail — Formula1 at 700, never Black / "Formula1 Digits" / Titillium).
+     --num-font  standalone numerals: stat rows, tiles, tables, cards, rails, laurels, standings
+     --tech-font timing / clock values only (lap times, gaps, countdowns, dates in pills), as formula1.com does */
+  --num-font: var(--font-display);
+  --num-weight: 700;
+  --tech-font: var(--font-tech);
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
@@ -53,7 +66,7 @@ h1, h2, h3, h4, p { margin: 0; }
 
 /* ───────────── Site design system ───────────── */
 :root {
-  --font-cn: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --font-cn: "Formula1 Text", "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
   --gutter: 48px;
   --maxw: none; /* content spans the full width with gutters on every page (alignment rule) */
   --r: 10px;
@@ -75,9 +88,9 @@ body { font-family: var(--font-cn); }
 .band-paper + .band-white, .band-white + .band-paper, .band-white + .band-white, .band-paper + .band-paper { border-top: 1px solid var(--line); }
 .lat { font-family: var(--font-display); }
 .wide { font-family: var(--font-wide); text-transform: uppercase; letter-spacing: .01em; }
-.num { font-family: var(--font-display); font-weight: 500; font-variant-numeric: tabular-nums; }
+.num { font-family: var(--num-font); font-weight: var(--num-weight); font-variant-numeric: tabular-nums; }
 /* kicker = formula1.com's "ROUND 12" label (body-2-xs-bold, uppercase, text-3 grey). English where simple. */
-.kicker { font-family: "Titillium Web", var(--font-cn); font-size: 12px; line-height: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0; color: var(--mute); }
+.kicker { font-family: var(--font-cn); font-size: 12px; line-height: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0; color: var(--mute); }
 .band-dark .kicker, .band-ink .kicker, .on-color .kicker { color: inherit; opacity: .72; }
 .mute { color: var(--mute); }
 .cn-h1 { font-family: var(--font-cn); font-weight: 900; font-size: clamp(32px, 4vw, 52px); letter-spacing: -.01em; line-height: 1.1; }
@@ -106,7 +119,7 @@ body { font-family: var(--font-cn); }
 /* Tables — formula1.com results table: uppercase grey 14/16 semibold heads with no rule, 16/24 semibold rows on a
    #E0DEDC hairline, numbers in the F1 display face. Row hover = .row-hover / .rowlink tint. */
 .tbl { width: 100%; border-collapse: collapse; font-size: 15px; color: #1c1c25; }
-.tbl th { text-align: left; font-family: "Titillium Web", var(--font-cn); font-weight: 600; font-size: 14px; line-height: 16px; text-transform: uppercase; color: var(--mute); padding: 16px 12px 16px 4px; white-space: nowrap; }
+.tbl th { text-align: left; font-family: var(--font-cn); font-weight: 600; font-size: 14px; line-height: 16px; text-transform: uppercase; color: var(--mute); padding: 16px 12px 16px 4px; white-space: nowrap; }
 .tbl td { padding: 14px 12px 14px 4px; border-bottom: 1px solid var(--line); vertical-align: middle; font-weight: 600; line-height: 24px; }
 .tbl td.num, .tbl td.r, .tbl td.c { font-family: var(--font-display); font-weight: 700; }
 .tbl tr.rowlink { cursor: pointer; }
@@ -193,12 +206,36 @@ html, body { overflow-x: clip; }
 .lift { transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out), filter .25s; cursor: pointer; }
 .lift:hover { transform: translateY(-3px); box-shadow: 0 14px 30px -10px rgba(21,21,30,.35); filter: brightness(.96) saturate(1.05); }
 .lift:active { transform: translateY(-1px); }
+/* ONE hover per card (user: 「这个卡片已经是 hover 态了，那你还有个下划线的 hover 态就不太合适了」). A .lift card is the hover
+   and the click target as a whole, so nothing inside it adds a second hover: no underline on its title / names, no chip
+   pill (--pill), no recolour. An inner link that leads somewhere else (a driver on a team card, the team on a driver card,
+   a podium cell, a year) only dims a touch while pointed at (its quick preview still opens); the card's own subject link
+   (data-preview="0") doesn't change. Links that are underlined at rest (prose .ilink, 来源) keep exactly that underline.
+   Card modules never add `.card:hover .name { text-decoration }` — this block is the whole rule. Only whole-card links
+   get .lift (a tile of several separate links is not one). */
+.lift { --pill: transparent; }
+.lift a:hover :not(a) { text-decoration-line: none; }
+.lift a.hlink:hover { text-decoration-color: transparent; }
+.lift a.ilink:hover { text-decoration-color: color-mix(in srgb, currentColor 28%, transparent); text-decoration-thickness: 1px; }
+.lift a:not(.card-link, [data-preview="0"]) { transition: opacity .15s var(--ease-out); }
+.lift a:not(.card-link, [data-preview="0"]):hover { opacity: .72; }
 
 /* Hover by REGION (user rule: consistent inside a region, each region its own best form):
    prose links (.ilink) = underline · person/team chips = soft pill · cards = .lift · rail/menus = row highlight ·
-   table rows = .row-hover tint. Never recolour text on hover. */
+   table rows = .row-hover tint. Never recolour text on hover. Inside a .lift card the card is the only hover (above). */
+/* chip pill colour (Person / Team / car & circuit chips): the surrounding text colour at 10%; transparent inside .lift */
+:root { --pill: color-mix(in srgb, currentColor 10%, transparent); }
+/* quiet link (card insides, hero meta lines, headings, labels): no underline until hover, colour kept */
+.hlink { color: inherit; text-decoration: underline; text-decoration-color: transparent; text-decoration-thickness: 1px; text-underline-offset: 3px; transition: text-decoration-color .15s; }
+.hlink:hover { text-decoration-color: currentColor; }
+/* linked picture (track map, portrait, logo, car): subtle brightness lift, never a recolour
+   (the effect sits on the picture itself: a filter / transform on the link would re-anchor absolutely placed images) */
+.pic-link { display: block; color: inherit; }
+.pic-link img, .pic-link canvas { transition: filter .2s var(--ease-out); }
+.pic-link:hover img, .pic-link:hover canvas { filter: brightness(1.1); }
 .row-hover tr, .row-hover > li { transition: background .12s; }
-.row-hover tr:hover, .row-hover > li:hover { background: color-mix(in srgb, currentColor 5%, transparent); }
+/* only rows that hold something to click (user: 不可点就不要给 hover) — header rows / plain data rows stay still */
+.row-hover tr:has(a[href], button):hover, .row-hover > li:has(a[href], button):hover { background: color-mix(in srgb, currentColor 5%, transparent); }
 
 /* solid identity-colour surfaces expose their colour to medal laurels (see laurel.module.css) */
 .on-color { --surface: var(--c); }
@@ -223,8 +260,8 @@ html, body { overflow-x: clip; }
 .t-s { font: 400 14px/14px var(--font-tech); }
 .t-xs { font: 400 12px/12px var(--font-tech); }
 .t-2xs { font: 400 11px/11px var(--font-tech); }
-.b-2xs { font: 700 12px/16px "Titillium Web", var(--font-cn); }
-.b-xs { font: 600 14px/16px "Titillium Web", var(--font-cn); }
+.b-2xs { font: 700 12px/16px var(--font-cn); }
+.b-xs { font: 600 14px/16px var(--font-cn); }
 .upper { text-transform: uppercase; }
 :root {
   --i-chevron-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m13.2 12.123-4.6-4.6 1.4-1.4 6 6-6 6-1.4-1.4z'/%3E%3C/svg%3E");
@@ -241,6 +278,17 @@ img[src^="/api/flag/"] { height: auto !important; aspect-ratio: 1; border-radius
 .f1-surface { position: relative; isolation: isolate; overflow: hidden; --acc: color-mix(in srgb, var(--c, #3a3a44) 46%, #000); background: var(--acc); color: #fff; }
 .f1-surface::before { content: ""; position: absolute; z-index: -1; top: 50%; right: 0; height: 316px; aspect-ratio: 2.02845; transform: translateY(-50%); background: var(--c, #3a3a44); -webkit-mask: url(/f1asset/drs-g.webp) center / contain no-repeat; mask: url(/f1asset/drs-g.webp) center / contain no-repeat; }
 .f1-surface::after { content: ""; position: absolute; z-index: -1; inset: 0 auto 0 0; width: min(479px, 72%); background: linear-gradient(269.74deg, color-mix(in srgb, var(--acc) 0%, transparent) 20.12%, var(--acc) 89.81%); }
-.f1-surface.team-drs { background: var(--c, #3a3a44); }
+/* + formula1.com's masthead stripes (same original asset as the header) as the surface's diagonal texture (user: 斜纹的质感) */
+.f1-surface.team-drs { background: url(/f1/hero-stripes.svg) right top / 640px auto repeat, var(--c, #3a3a44); }
 .f1-surface.team-drs::before { top: auto; bottom: -2px; height: 150px; aspect-ratio: 6.09816; transform: none; opacity: .7; -webkit-mask-image: url(/f1asset/drs-d.webp); mask-image: url(/f1asset/drs-d.webp); }
 .f1-surface.team-drs::after { width: max(494px, 100%); background: linear-gradient(315deg, color-mix(in srgb, var(--acc) 0%, transparent) 0%, var(--acc) 100%); }
+
+/* Picture captions (lib/carImage.ts picture rule): a small muted label naming what a representative picture shows, or
+   that there is no photo ("暂无 1994 年赛车照片"). Sits in the image's own region (position it relative); brightens when
+   that region is hovered. */
+.img-slot { position: relative; }
+.img-cap, .img-slot .img-cap { position: absolute; z-index: 3; right: 10px; bottom: 8px; max-width: calc(100% - 20px); padding: 2px 7px; border-radius: 3px;
+  font: 500 11px/16px var(--font-cn, sans-serif); letter-spacing: .02em; color: rgba(255,255,255,.66);
+  background: rgba(0,0,0,.32); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; pointer-events: none; transition: color .2s, background .2s; }
+/* only where the picture is a link (a still picture gets no hover affordance) */
+.img-slot:is(a[href], :has(a[href])):hover .img-cap { color: #fff; background: rgba(0,0,0,.55); }

@@ -9,7 +9,7 @@ export default function Person({ id, name, latin, size = 28, sub, className, pla
 }) {
   const body = (
     <>
-      <img className={s.face} src={`/api/face/${id}?v=3&s=${size}${year ? `&year=${year}` : ""}`} alt="" loading="lazy" width={size} height={size} style={{ width: size, height: size, ...(color ? { background: color } : {}) }} />
+      <img className={s.face} src={`/api/face/${id}?v=4&s=${size}${year ? `&year=${year}` : ""}`} alt="" loading="lazy" width={size} height={size} style={{ width: size, height: size, ...(color ? { background: color } : {}) }} />
       <span className={s.text}>
         <b>{name}</b>
         {latin && <span className="lat">{latin}</span>}

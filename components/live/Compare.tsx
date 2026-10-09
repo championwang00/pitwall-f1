@@ -208,7 +208,7 @@ export default function Compare({
           )}
           <div className={s.stat}>
             <span>干净圈平均差 · {both.length} 圈</span>
-            <b className="num">{meanDelta != null ? Math.abs(meanDelta).toFixed(3) : "—"}<small>s/lap</small></b>
+            <b className="num">{meanDelta != null ? Math.abs(meanDelta).toFixed(3) : "—"}<small>秒/圈</small></b>
             <em>{meanDelta != null ? `${meanDelta >= 0 ? A.acr : B.acr} 更快` : "暂无可比圈"}</em>
           </div>
           <div className={s.stat}>
@@ -513,7 +513,7 @@ function SectorTable({ A, B, lapA, lapB, cA, cB, bests, title, mode, setMode, ca
     { k: "S1", a: lapA?.s[0] ?? null, b: lapB?.s[0] ?? null, best: bests[0] },
     { k: "S2", a: lapA?.s[1] ?? null, b: lapB?.s[1] ?? null, best: bests[1] },
     { k: "S3", a: lapA?.s[2] ?? null, b: lapB?.s[2] ?? null, best: bests[2] },
-    { k: "Lap", a: lapA?.dur ?? null, b: lapB?.dur ?? null, best: bests[3] },
+    { k: "单圈", a: lapA?.dur ?? null, b: lapB?.dur ?? null, best: bests[3] },
     { k: "测速点", a: lapA?.st ?? null, b: lapB?.st ?? null, speed: true },
   ];
   return (
@@ -543,10 +543,10 @@ function SectorTable({ A, B, lapA, lapB, cA, cB, bests, title, mode, setMode, ca
             const d = r.a != null && r.b != null ? r.b - r.a : null;
             const fasterA = d != null && (r.speed ? d < 0 : d > 0);
             const fasterB = d != null && (r.speed ? d > 0 : d < 0);
-            const f = (v: number | null) => (v == null ? "—" : r.speed ? `${v}` : r.k === "Lap" ? fmtLap(v) : v.toFixed(3));
+            const f = (v: number | null) => (v == null ? "—" : r.speed ? `${v}` : r.k === "单圈" ? fmtLap(v) : v.toFixed(3));
             const isBest = (v: number | null) => !r.speed && v != null && r.best != null && Math.abs(v - r.best) < 1e-6;
             return (
-              <tr key={r.k} className={r.k === "Lap" ? s.secLap : undefined}>
+              <tr key={r.k} className={r.k === "单圈" ? s.secLap : undefined}>
                 <th>{r.k}{r.speed && <small> km/h</small>}</th>
                 <td><span className={isBest(r.a) ? s.purple : undefined}>{f(r.a)}</span></td>
                 <td><span className={isBest(r.b) ? s.purple : undefined}>{f(r.b)}</span></td>

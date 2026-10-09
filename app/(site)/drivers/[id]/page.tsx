@@ -1,24 +1,22 @@
+import { entityOverview, overviewSource } from "@/lib/overview";
 import Link from "next/link";
 import { isLight } from "@/lib/color";
 import { notFound } from "next/navigation";
 import { ViewTransition } from "react";
 import s from "@/components/entity/entity.module.css";
 import k from "./driver.module.css";
-import { getDriver, driverSeasons, familyOf, teammates, getCountry } from "@/lib/f1";
+import { getDriver, driverSeasons, familyOf, teammates } from "@/lib/f1";
 import { cubeFor } from "@/lib/cube";
 import { drivers as dContent } from "@/lib/content";
-import { driverBust, driverNumberArt, teamColor, flag, DRIVERS_2026 } from "@/lib/assets";
-import { driverImage, bilingual, wikiMap } from "@/lib/wiki";
-import { NAT_ZH } from "@/lib/names";
+import { driverNumberArt, teamColorAt, DRIVERS_2026 } from "@/lib/assets";
+import { bilingualFast, wikiMap } from "@/lib/wiki";
 import Cube from "@/components/cube/Cube";
-import { StatRow } from "@/components/entity/Moments";
 import { LinkedMoments, LinkedAnecdotes } from "../LinkedMoments";
 import EntityLink from "@/components/entity/EntityLink";
 import Person from "@/components/entity/Person";
 import Laurel from "@/components/entity/Laurel";
 import { Linked } from "@/lib/linkify";
 import { zhName } from "@/lib/zh";
-import HeroField from "@/components/entity/HeroField";
 import TalkingPoints from "@/components/entity/TalkingPoints";
 import { driverTalk } from "@/lib/talk";
 import { driverRecords } from "@/lib/records";
@@ -28,13 +26,16 @@ import { driverYear, parseYear, nearestYears } from "@/lib/yearData";
 import RailScope from "@/components/season/RailScope";
 import { driverRail } from "@/lib/railData";
 import Team from "@/components/entity/Team";
-import EraSpan from "@/components/unit/EraSpan";
 import YearBand, { YearMissing } from "@/components/unit/YearBand";
 import DriverYear from "@/components/unit/DriverYear";
-import { driverYearTalk } from "@/components/unit/yearTalk";
+import { driverYearTalk, driverPeriodTalk } from "@/components/unit/yearTalk";
 import u from "@/components/unit/unit.module.css";
-import Icon from "@/components/ui/Icon";
-import Breadcrumb, { subjectCrumbs } from "@/components/shell/Breadcrumb";
+import ObjectHero from "@/components/entity/ObjectHero";
+import o from "@/components/entity/objecthero.module.css";
+import { driverHero, driverPicture, parsePeriod } from "@/lib/hero";
+import { rangeOf, inRange, rangeLabel, rangeTitle, rangeItems, nearestOutside } from "@/lib/range";
+import { periodFace, periodFaceKnown } from "@/lib/periodFace";
+import YearSpan from "@/components/entity/YearSpan";
 
 export const dynamic = "force-dynamic";
 
@@ -54,38 +55,11 @@ export default async function DriverPage({ params, searchParams }: { params: Pro
   const cube = cubeFor({ driver: id });
   const fam = familyOf(id);
   const mates = teammates(id);
-  const nat = getCountry(d.nationality_country_id);
-  const lastTeam = entries.at(-1)?.team ?? null;
-  // signature team = where they started most races (current drivers: their 2026 team)
-  const starts = new Map<string, number>();
-  for (const f of cube.rows) starts.set(f.t, (starts.get(f.t) ?? 0) + 1);
-  const sig = [...starts.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? lastTeam;
-  const color = teamColor(DRIVERS_2026[id]?.team ?? sig, "#47464c");
-  const cut = driverBust(id, 860, 1000);
-  const photo = cut ? null : await driverImage(id);
-  const wiki = c ? null : await bilingual(wikiMap().drivers[id]);
+  const wiki = c ? null : await bilingualFast(wikiMap().drivers[id]);
   const numberArt = driverNumberArt(id);
   const zh = c?.nameZh ?? DRIVERS_2026[id]?.nameZh ?? zhName.driver(id);
   const tName = (team: string, fallback?: string) => zhName.team(team) ?? fallback ?? team;
   const dName = (did: string, fallback: string) => zhName.driver(did) ?? fallback;
-  // honours shown as laurels in the hero (only the non-zero ones, at most four)
-  const honours = [
-    d.total_championship_wins > 0 && <Laurel key="wc" tone="gold" size={52} top={`${d.total_championship_wins} 届`} bottom="世界冠军" />,
-    d.total_race_wins > 0 && <Laurel key="w" tone={d.total_championship_wins > 0 ? "white" : "gold"} size={52} top={`${d.total_race_wins} 场`} bottom="分站冠军" />,
-    d.total_pole_positions > 0 && <Laurel key="p" tone="silver" size={52} top={`${d.total_pole_positions} 次`} bottom="杆位" />,
-    d.total_podiums > 0 && <Laurel key="pod" tone="bronze" size={52} top={`${d.total_podiums} 次`} bottom="领奖台" />,
-  ].filter(Boolean);
-  // the stat row keeps whatever is not already shown as a laurel (zeros stay as plain numbers)
-  const statItems = [
-    { k: "World Titles", v: d.total_championship_wins, laurel: d.total_championship_wins > 0 },
-    { k: "Wins", v: d.total_race_wins, laurel: d.total_race_wins > 0 },
-    { k: "Podiums", v: d.total_podiums, laurel: d.total_podiums > 0 },
-    { k: "Poles", v: d.total_pole_positions, laurel: d.total_pole_positions > 0 },
-    { k: "Fastest Laps", v: d.total_fastest_laps },
-    { k: "Starts", v: d.total_race_starts },
-    { k: "Points", v: Math.round(d.total_points) },
-    ...(d.total_grand_slams > 0 ? [{ k: "Grand Slams", v: d.total_grand_slams }] : []),
-  ].filter((x: any) => !x.laurel).map(({ k, v }) => ({ k, v }));
   const years = entries.map((e: any) => e.year);
   const y0 = years[0], y1 = years.at(-1);
 
@@ -101,130 +75,148 @@ export default async function DriverPage({ params, searchParams }: { params: Pro
   for (const m of mates) mateByYear.set(m.year, [...(mateByYear.get(m.year) ?? []), m]);
   // year layer (spec §4.1): ?year=Y inserts the 「Y 赛季」 band; the rail dims seasons he didn't race
   const year = parseYear(sp.year);
+  // 时期 (?from&to, from the rail's group headers): the third state — a period of this same object
+  const period = year ? null : parsePeriod(sp);
+  // spec §0.7: every section under the hero reads only `range` (null = 总览, the only state with all-time content)
+  const range = rangeOf(year, period);
   const ys = driverYears(id);
+  const exists = !range || ys.some((y) => inRange(y, range));
   const dy = year && ys.includes(year) ? driverYear(id, year) : null;
   const yTalk = dy && year ? driverYearTalk(id, year, dy) : null;
   const near = year ? nearestYears(ys, year) : null;
   const yHref = (y: number) => `/drivers/${id}?year=${y}`;
-  const age = d.date_of_death
-    ? null
-    : Math.floor((Date.now() - new Date(d.date_of_birth).getTime()) / 3.15576e10);
+  const pTalk = period ? driverPeriodTalk(id, period) : null;
+  const cubeRows = range ? cube.rows.filter((f) => inRange(f.y, range)) : cube.rows;
+  // a period's team-mates: each once, with the seasons inside the range (2008, 2009 / 2010–2012)
+  const pMates = period ? [...new Map(mates.filter((m: any) => inRange(m.year, period)).map((m: any) => [m.id, m])).values()] : [];
+  const mateYears = (mid: string, r: typeof range) => mates.filter((x: any) => x.id === mid && inRange(x.year, r)).map((x: any) => x.year).join(", ").replace(/(\d{4})(, \d{4})+, (\d{4})/, "$1–$3");
+  // picture rule (lib/periodFace.ts driverHeroImage): ?year → that season's photo or the captioned placeholder;
+  // no year → current bust / last season's photo / captioned reference photo
+  // overview = all moments / anecdotes; ?year / ?from&to = only the range's (user rule)
+  const moments = rangeItems(c?.highlights ?? [], range);
+  const anecdotes = rangeItems(c?.anecdotes ?? [], range);
+  // a period (?from&to) is that stint, so its picture must come from inside it (user: 迈凯伦时期要用迈凯伦时代的单人照):
+  // the latest season of the range that already has a period photo; otherwise the range's last season (lookup starts,
+  // captioned placeholder meanwhile) — never the current, other-team portrait
+  const periodYear = period ? (() => {
+    const inside = ys.filter((y: number) => inRange(y, period)).sort((a: number, b: number) => b - a);
+    inside.forEach((y: number) => { if (periodFaceKnown(id, y) === undefined) periodFace(id, y).catch(() => {}); });
+    return inside.find((y: number) => !!periodFaceKnown(id, y)) ?? inside[0] ?? period.to;
+  })() : null;
+  const hero = await driverPicture(id, dy ? year : periodYear);
+
+  const heroModel = (await driverHero(id, year, period))!;
 
   return (
     <ViewTransition enter="page" exit="page" default="none">
       <div>
-        <section className={s.hero} data-surface style={{ ["--surface" as any]: color }}>
-          <div className={s.heroBg}><HeroField color={color} /></div>
-          <div className={s.heroIn}>
-            <div className={s.heroText}>
-              <div>
-                <Breadcrumb flush items={subjectCrumbs("车手", "/drivers", { label: zh ?? d.name ?? id, href: `/drivers/${id}`, kind: "driver", id }, year)} />
-                <h1 style={{ marginTop: 24 }} className={k.h1}>
-                  <span className={s.first}>{d.first_name}</span>
-                  <span className={`${s.last} ${k.fit}`} style={{ ["--n" as any]: d.last_name.length, display: "block", fontSize: d.last_name.length > 9 ? "clamp(36px, 4.4vw, 68px)" : d.last_name.length > 6 ? "clamp(40px, 5.4vw, 82px)" : undefined }}>{d.last_name}</span>
-                </h1>
-                {zh && <p className="cx">{zh}</p>}
-                <p className="meta-line">
-                  {flag(d.nationality_country_id) && <img src={flag(d.nationality_country_id)!} alt="" />}
-                  {NAT_ZH[d.nationality_country_id] ?? nat?.name} · {d.date_of_birth}{d.date_of_death ? ` — ${d.date_of_death}` : ` · ${age} 岁`}{d.place_of_birth ? ` · 生于 ${d.place_of_birth}` : ""}
-                </p>
-                {c?.tagline && <p className={s.tagline}><Linked text={c.tagline} skip={id} /></p>}
-                {lastTeam && (
-                  /* dek: the team stands alone here → logo chip (white logo on the dark team surface), soft-pill hover */
-                  <p className={k.dek}>
-                    <span>{y1 === 2026 ? <><EntityLink kind="year" id="2026" className={k.heroLink}>2026</EntityLink> 效力于</> : "最后效力于"}</span>
-                    <Team id={lastTeam} name={tName(lastTeam, entries.at(-1)?.teamName)} size={22} onDark year={y1} />
-                    {entries.at(-1)?.chassis && <span>赛车 <Link href={`/cars/${entries.at(-1)?.chassisIds?.split("|")[0]}`} className={k.heroLink}>{entries.at(-1)?.chassis}</Link></span>}
-                  </p>
-                )}
-                <EraSpan years={ys} />
-                {dy && year && (
-                  <p className={u.yLine}>
-                    <span className={u.yBadge}>{year}</span>
-                    {dy.entries.map((e: any) => (
-                      <Team key={e.team} id={e.team} name={tName(e.team, e.teamName)} size={20} onDark href={`/teams/${e.team}?year=${year}`} />
-                    ))}
-                    {dy.entries.flatMap((e: any) => e.cars).slice(0, 2).map((ch: any) => <Link key={ch.id} href={`/cars/${ch.id}`}>{ch.name}</Link>)}
-                    <span>·</span>{dy.line?.champ ? "世界冠军" : dy.line?.pos ? <>{dy.line.live ? "目前" : "年终"} P<b className="num">{dy.line.pos}</b></> : "未计排名"}
-                    <span>·</span><b className="num">{dy.line?.points ?? 0}</b> 分
-                  </p>
-                )}
-                {honours.length > 0 && <div className={k.honours}>{honours}</div>}
-              </div>
-              <StatRow items={statItems} />
-            </div>
-            <div className={s.portrait}>
-              {numberArt && <img className={s.numberArt} src={numberArt} alt="" />}
-              <ViewTransition name={`driver-${id}`} share="morph" default="none">
-                {cut ? <img className={s.cut} src={cut} alt={d.name} /> : photo ? <img className={s.photo} src={photo} alt={d.name} /> : <span />}
-              </ViewTransition>
-            </div>
-          </div>
-        </section>
+        <ObjectHero model={heroModel} visual={
+          <>
+            {/* the current race-number art belongs to the current season only — not to a past year or a past stint */}
+            {numberArt && !period && (!dy || year === 2026) && <img className={o.numberArt} src={numberArt} alt="" />}
+            <ViewTransition name={`driver-${id}`} share="morph" default="none">
+              <img className={hero.kind === "cut" ? o.cut : o.periodPhoto} src={hero.url} alt={hero.caption ?? d.name} title={hero.caption ?? undefined}
+                data-img-kind="driver" data-img-id={id} data-img-source-year={hero.sourceYear ?? ""} data-img-year={dy && year ? year : periodYear ?? ""} data-img-status={hero.exact ? "exact" : hero.kind === "placeholder" ? "placeholder" : "representative"} data-img-caption={hero.caption ?? ""} />
+            </ViewTransition>
+            {hero.caption && <span className="img-cap" style={{ bottom: 48 }}>{hero.caption}</span>}
+          </>
+        } />
 
         <RailScope {...driverRail(id, year)} />
 
         {year && (
-          <YearBand year={year} label="赛季" clearHref={`/drivers/${id}`}
-            sub={dy ? `${zh ?? d.name} 的 ${year} 赛季：车队、赛车、逐站成绩与队友对比` : undefined}>
+          <YearBand year={year} label="赛季" skip={id}
+            sub={dy ? `${zh ?? d.name} 的 ${year} 赛季：队友对比` : undefined}>
             {dy ? <DriverYear id={id} year={year} d={dy} name={zh ?? d.name} /> : (
-              <YearMissing text={<>{year} 年未参赛 · 生涯 {y0}–{y1}</>} prev={near!.prev} next={near!.next} hrefFor={yHref} />
+              <YearMissing text={<><YearSpan from={year} /> 年未参赛 · 生涯 <YearSpan from={y0} to={y1} /></>} prev={near!.prev} next={near!.next} hrefFor={yHref} />
             )}
           </YearBand>
         )}
+        {/* a period he never raced in (hand-typed ?from&to): hero + this band, nothing else */}
+        {period && !exists && (
+          <YearBand year={period.from} to={period.to} label="时期" skip={id}>
+            <YearMissing text={<>{zh ?? d.name} <YearSpan from={period.from} to={period.to} /> 未参赛 · 出赛年份 <YearSpan from={ys[0]} to={ys.at(-1)} /></>} {...nearestOutside(ys, period)} hrefFor={yHref} />
+          </YearBand>
+        )}
 
-        {yTalk && year && (yTalk.notes.length + yTalk.auto.length > 0)
-          ? <TalkingPoints auto={yTalk.auto} notes={yTalk.notes} title={`${year} 年解说要点`} subject={`${zh ?? d.name} · ${year}`} skip={id} />
+        {exists && (<>
+        {year ? (yTalk && (yTalk.notes.length + yTalk.auto.length > 0)
+          ? <TalkingPoints auto={yTalk.auto} notes={yTalk.notes} title={`${year} 年解说要点`} subject={`${zh ?? d.name} · ${year}`} skip={id} year={year} />
+          : null)
+          // a period's points come from the period only; the 纪录簿 is all-time, so overview only
+          : period && pTalk ? (pTalk.notes.length + pTalk.auto.length > 0
+            ? <TalkingPoints auto={pTalk.auto} notes={pTalk.notes} title={`${heroModel.crumbs.at(-1)?.label} 解说要点`} subject={`${zh ?? d.name} · ${rangeLabel(period)}`} skip={id} />
+            : null)
           : <TalkingPoints auto={driverTalk(id)} notes={notes.driver(id)} subject={zh ?? d.name} records={driverRecords(id)} skip={id} />}
 
-        <section className="band band-paper">
-          <div className="wrap">
-            <div className="sec-head">
-              <div><p className="kicker">Career</p><h2 className="cn-h2">每一个赛季</h2></div>
-            </div>
-            <div className={s.career}>
-              <div className={s.cGrid}>
-                {[...byYear.entries()].map(([y, v]) => {
-                  const st = v.st;
-                  const t = v.teams[0];
-                  const ms = mateByYear.get(y) ?? [];
-                  const tc = teamColor(t.team, "#3a3a44"), light = isLight(tc);
-                  return (
-                    <div key={y} className={`${k.cell} lift on-color ${light ? "on-light" : ""} ${y === year ? u.cur : ""}`} style={{ ["--c" as any]: tc }}
-                      title={ms.length ? `队友：${ms.map((m) => dName(m.id, m.name)).join("、")}` : undefined}>
-                      <Link href={yHref(y)} className="card-link" aria-label={`${y} 赛季`} tabIndex={-1} scroll={false} />
-                      <EntityLink kind="year" id={String(y)} href={`/seasons/${y}?driver=${id}`} className={k.cy} preview={false}>{y}</EntityLink>
-                      <span className={k.cpos}>{st ? <>P{st.posText}</> : "—"}{st?.champ ? <Laurel tone={light ? "ink" : "white"} onColor size={20} top={<span className={k.lt}>冠军</span>} title={`${y} 世界冠军`} /> : null}</span>
-                      <span className={`${k.cteams} over-link`}>{v.teams.map((x: any) => <Team key={x.team} id={x.team} name={tName(x.team, x.teamName)} size={14} onDark={!light} year={y} />)}</span>
-                      <span className={`${k.ccar} over-link`}>{v.teams.filter((x: any) => x.chassis).map((x: any) => (
-                        <Link key={x.team} href={`/cars/${x.chassisIds?.split("|")[0]}`}>{x.chassis}</Link>
-                      ))}</span>
-                      <span className={k.cpts}>{st ? `${st.points} 分` : ""}</span>
-                    </div>
-                  );
-                })}
+        {/* ?year: the year band already is that season and the rail changes years, so no career grid */}
+        {!year && (
+          <section className="band band-paper">
+            <div className="wrap">
+              <div className="sec-head">
+                <div><p className="kicker">Career</p><h2 className="cn-h2">{rangeTitle(range, "每一个赛季", "的每一个赛季")}</h2></div>
               </div>
+              <div className={s.career}>
+                <div className={s.cGrid}>
+                  {[...byYear.entries()].filter(([y]) => inRange(y, range)).map(([y, v]) => {
+                    const st = v.st;
+                    const t = v.teams[0];
+                    const ms = mateByYear.get(y) ?? [];
+                    const tc = teamColorAt(t.team, y, "#3a3a44"), light = isLight(tc);
+                    return (
+                      <div key={y} className={`${k.cell} lift on-color ${light ? "on-light" : ""} ${y === year ? u.cur : ""}`} style={{ ["--c" as any]: tc }}
+                        title={ms.length ? `队友：${ms.map((m) => dName(m.id, m.name)).join("、")}` : undefined}>
+                        <Link href={yHref(y)} className="card-link" aria-label={`${y} 赛季`} tabIndex={-1} scroll={false} />
+                        <EntityLink kind="year" id={String(y)} href={range ? yHref(y) : `/seasons/${y}?driver=${id}`} className={k.cy}>{y}</EntityLink>
+                        <span className={k.cpos}>{st ? <>P{st.posText}</> : "—"}{st?.champ ? <Laurel tone={light ? "ink" : "white"} onColor size={20} top={<span className={k.lt}>冠军</span>} title={`${y} 世界冠军`} /> : null}</span>
+                        <span className={`${k.cteams} over-link`}>{v.teams.map((x: any) => <Team key={x.team} id={x.team} name={tName(x.team, x.teamName)} size={14} onDark={!light} year={y} />)}</span>
+                        <span className={`${k.ccar} over-link`}>{v.teams.filter((x: any) => x.chassis).map((x: any) => (
+                          <EntityLink key={x.team} kind="car" id={x.chassisIds?.split("|")[0]}>{x.chassis}</EntityLink>
+                        ))}</span>
+                        <span className={k.cpts}>{st ? `${st.points} 分` : ""}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+                {range && ![...byYear.keys()].some((y) => inRange(y, range)) && <p className={s.src}>这一时期没有记录</p>}
+              </div>
+              {/* 时期: its own team-mates (the overview lists them all beside 人物; ?year has 队友对比 in the band) — only when
+                  there are more than the hero's 队友 tile shows (3), else it repeats the tile (spec §0.8.3) */}
+              {period && pMates.length > 3 && (
+                <div style={{ marginTop: 72 }}>
+                  <div className="sec-head">
+                    <div><p className="kicker">Team-mates</p><h2 className="cn-h2">{rangeLabel(period)} 的队友</h2></div>
+                  </div>
+                  <div className={k.people}>
+                    {pMates.map((m: any) => <Person key={m.id} id={m.id} name={dName(m.id, m.name)} size={32} sub={mateYears(m.id, period)} />)}
+                  </div>
+                </div>
+              )}
             </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         <section className="band band-white">
           <div className="wrap">
-            <Cube key={year ?? "all"} data={cube} fixed="driver" fixedId={id} standings={standingMap} title={`全部 ${cube.rows.length} 场比赛`}
-              initial={{ team: sp.team, circuit: sp.circuit, from: year ?? (sp.from ? +sp.from : undefined), to: year ?? (sp.to ? +sp.to : undefined), view: (sp.view as any) || undefined }} />
+            <Cube key={range ? rangeLabel(range) : "all"} data={range ? { ...cube, rows: cubeRows } : cube} fixed="driver" fixedId={id} standings={standingMap} range={range}
+              title={year ? `${year} 赛季 ${cubeRows.length} 场比赛` : range ? `${rangeLabel(range)} ${cubeRows.length} 场比赛` : `全部 ${cube.rows.length} 场比赛`}
+              initial={{ team: sp.team, circuit: sp.circuit, view: (sp.view as any) || undefined }} />
           </div>
         </section>
 
-        {(c?.highlights?.length || c?.bio || wiki?.zh || wiki?.en) && (
+        {/* 人物 · F1 家族 · 历任队友 are all-time: overview only */}
+        {!range && (c?.bio || wiki?.zh || wiki?.en || entityOverview("driver", id)) && (
           <section className="band band-paper">
             <div className="wrap">
               <div className={s.twoCol}>
                 <div>
                   <div className="sec-head"><div><p className="kicker">Biography</p><h2 className="cn-h2">人物</h2></div></div>
-                  <p className={s.bio}><Linked text={c?.bio ?? wiki?.zh?.extract ?? wiki?.en?.extract ?? ""} skip={id} /></p>
-                  {!c && (wiki?.zh || wiki?.en) && (
+                  <p className={s.bio}><Linked text={c?.bio || wiki?.zh?.extract || entityOverview("driver", id) || ""} skip={id} /></p>
+                  {!c?.bio && !wiki?.zh?.extract && <p className={s.src}><a href={overviewSource.url}>{overviewSource.label}</a></p>}
+                  {/* Chinese only (user: 咋还有英文呢？翻译成中文): zh Wikipedia, else the Chinese F1DB overview — never the English extract */}
+                  {!c && wiki?.zh?.extract && (
                     <p className={s.src} style={{ marginTop: 12 }}>
-                      <a href={(wiki.zh ?? wiki.en)!.content_urls?.desktop.page} target="_blank" rel="noreferrer">Wikipedia · {(wiki.zh ?? wiki.en)!.title}</a>
+                      <a href={wiki.zh.content_urls?.desktop.page} target="_blank" rel="noreferrer">维基百科 · {wiki.zh.title}</a>
                     </p>
                   )}
                 </div>
@@ -241,18 +233,26 @@ export default async function DriverPage({ params, searchParams }: { params: Pro
                     <h3>历任队友</h3>
                     <div className={k.people}>
                       {[...new Map(mates.map((m: any) => [m.id, m])).values()].slice(-10).reverse().map((m: any) => (
-                        <Person key={m.id} id={m.id} name={dName(m.id, m.name)} size={32}
-                          sub={mates.filter((x: any) => x.id === m.id).map((x: any) => x.year).join(", ").replace(/(\d{4})(, \d{4})+, (\d{4})/, "$1–$3")} />
+                        <Person key={m.id} id={m.id} name={dName(m.id, m.name)} size={32} sub={mateYears(m.id, null)} />
                       ))}
                     </div>
                   </div>
                 </aside>
               </div>
-              {c?.highlights && <div style={{ marginTop: 72 }}><LinkedMoments items={c.highlights} skip={id} /></div>}
-              {c?.anecdotes && <div style={{ marginTop: 72 }}><LinkedAnecdotes items={c.anecdotes} skip={id} /></div>}
             </div>
           </section>
         )}
+
+        {/* 高光 / 趣事: their own band, cut to the range */}
+        {(moments.length > 0 || anecdotes.length > 0) && (
+          <section className="band band-paper">
+            <div className="wrap">
+              {moments.length > 0 && <LinkedMoments items={moments} skip={id} title={!range ? "高光时刻" : range.from === range.to ? `${range.from} 年高光时刻` : `${rangeLabel(range)} 高光时刻`} />}
+              {anecdotes.length > 0 && <div style={{ marginTop: moments.length ? 72 : 0 }}><LinkedAnecdotes items={anecdotes} skip={id} title={range ? `${rangeLabel(range)} · 你可能不知道` : "你可能不知道"} /></div>}
+            </div>
+          </section>
+        )}
+        </>)}
       </div>
     </ViewTransition>
   );

@@ -5,16 +5,11 @@ import type { Talk } from "@/lib/talk";
 import type { Rec } from "@/lib/records";
 import type { Note } from "@/lib/content";
 import CopyNotes from "./CopyNotes";
-import EntityLink from "./EntityLink";
+import EntityLink, { EntityHref } from "./EntityLink";
 import Person from "./Person";
 import Laurel, { type Tone } from "./Laurel";
 import { Linked } from "@/lib/linkify";
 
-/** Link every season year inside a short caption such as "2008–2010" or "2012 巴西大奖赛 起". */
-function Years({ text }: { text: string }) {
-  const parts = text.split(/(19[5-9]\d|20[0-2]\d)/);
-  return <>{parts.map((p, i) => (i % 2 ? <EntityLink key={i} kind="year" id={p} className="ilink">{p}</EntityLink> : p))}</>;
-}
 
 /** The few record-book entries that are honours get a laurel: wins/streaks gold, poles red, fastest laps purple. */
 const honour = (label: string): Tone | null =>
@@ -43,10 +38,14 @@ function covered(a: { title: string; tag?: string }, n: { title: string; text: s
 const ORDER = ["最近一次", "故事线", "下一站", "现役", "里程碑", "纪录", "数字", "冷知识"];
 
 /** On-air crib sheet: curated, web-verified notes first, then numbers computed from F1DB. */
-export default function TalkingPoints({ auto, notes = [], title = "解说要点", subject, limit, more, records, skip }: {
+export default function TalkingPoints({ auto, notes = [], title = "解说要点", subject, limit, more, records, skip, year, skipRace }: {
   auto: Talk[]; notes?: Note[]; title?: string; subject: string; limit?: number; more?: { href: string; label: string }; records?: Rec[];
   /** Entity id of the page's own subject, so prose doesn't link back to the page it is on. */
   skip?: string;
+  /** the page's year context: names open their ?year= slice, a bare "XX大奖赛" that year's race (lib/linkify) */
+  year?: number | null;
+  /** "YYYY/R" of the page's own race (race / brief pages) */
+  skipRace?: string;
 }) {
   const items = [
     ...notes.map((n) => ({ ...n, curated: true as const })),
@@ -59,8 +58,8 @@ export default function TalkingPoints({ auto, notes = [], title = "解说要点"
       <div className="wrap">
         <div className={s.head}>
           <div>
-            <h2 className={s.title}>{title}</h2>
-            <p className={s.sub}>{subject} · {items.length} 条，均可溯源</p>
+            <h2 className={s.title}><Linked text={title} skip={skip} skipRace={skipRace} /></h2>
+            <p className={s.sub}><Linked text={subject} skip={skip} skipRace={skipRace} year={year} /> · {items.length} 条，均可溯源</p>
           </div>
           <div className={s.headActions}>
             {more && <Link href={more.href} className={s.more}>{more.label}</Link>}
@@ -71,12 +70,14 @@ export default function TalkingPoints({ auto, notes = [], title = "解说要点"
           const render = (it: (typeof items)[number], i: number, lead = false) => {
             const href = "href" in it ? it.href : undefined;
             const src = it.curated ? (it as Note).sources[0] : null;
+            // a curated note carries its own year: its names and a bare "XX大奖赛" resolve against it
+            const ty = (it.curated ? (it as Note).year : null) ?? year;
             // title links to the detail (if any); the prose stays free to carry its own entity links
             return (
               <li key={i} className={lead ? s.lead : s.item}>
                 <span className={s.tag}>{it.tag}</span>
-                <h3>{href ? <Link href={href} className={s.itemLink}>{it.title}<Icon name="chevron-right" size={18} style={{ verticalAlign: "-3px" }} /></Link> : <Linked text={it.title} skip={skip} />}</h3>
-                <p><Linked text={it.text} skip={skip} />{src && <> <a className={s.srcLink} href={src.url} target="_blank" rel="noreferrer" title={src.label}>来源</a></>}</p>
+                <h3>{href ? <EntityHref href={href} className={s.itemLink}>{it.title}<Icon name="chevron-right" size={18} style={{ verticalAlign: "-3px" }} /></EntityHref> : <Linked text={it.title} skip={skip} skipRace={skipRace} year={ty} />}</h3>
+                <p><Linked text={it.text} skip={skip} skipRace={skipRace} year={ty} />{src && <> <a className={s.srcLink} href={src.url} target="_blank" rel="noreferrer" title={src.label}>来源</a></>}</p>
               </li>
             );
           };
@@ -108,12 +109,12 @@ export default function TalkingPoints({ auto, notes = [], title = "解说要点"
                   <div key={r.label}>
                     <dt>{r.label}</dt>
                     <dd>
-                      {r.href ? <Link href={r.href} className={s.recVal}>{value}</Link> : value}
+                      {r.href ? <EntityHref href={r.href} className={s.recVal}>{value}</EntityHref> : value}
                       {(r.who || r.when) && (
                         <span className={s.recWho}>
-                          {r.who && (r.whoId ? <Person id={r.whoId} name={r.who} size={22} className={s.recPerson} /> : r.who)}
+                          {r.who && (r.whoId ? <Person id={r.whoId} name={r.who} size={22} year={year} className={s.recPerson} /> : <Linked text={r.who} skip={skip} year={year} />)}
                           {r.who && r.when && <i> · </i>}
-                          {r.when && <span><Years text={r.when} /></span>}
+                          {r.when && <span><Linked text={r.when} skip={skip} skipRace={skipRace} year={year} /></span>}
                         </span>
                       )}
                     </dd>

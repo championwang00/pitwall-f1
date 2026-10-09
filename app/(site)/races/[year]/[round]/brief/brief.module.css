@@ -32,7 +32,7 @@
 .hy2:hover { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
 .lastY { margin-left: 4px; color: var(--mute); }
 .lastY:hover { text-decoration: underline; text-underline-offset: 3px; }
-.debut { font: 600 13px/16px "Titillium Web", var(--font-cn); color: var(--mute); }
+.debut { font: 600 13px/16px var(--font-cn); color: var(--mute); }
 .teamTbl td { white-space: nowrap; }
 .hon { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; color: var(--ink); }
 .leaders { display: flex; flex-wrap: wrap; gap: 14px 32px; margin: 18px 0 4px; }
@@ -70,7 +70,7 @@
 .notes li { padding: 14px 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 4px; }
 .notes li b { font-size: 15px; }
 .notes li p { font-size: 14px; line-height: 1.75; color: #3a3a42; }
-.tag { align-self: flex-start; font: 700 11px/16px "Titillium Web", var(--font-cn); padding: 0 6px; border-radius: 4px; background: #fff; color: var(--mute); }
+.tag { align-self: flex-start; font: 700 11px/16px var(--font-cn); padding: 0 6px; border-radius: 4px; background: #fff; color: var(--mute); }
 @media (max-width: 960px) { .two { grid-template-columns: 1fr; } }
 @media print {
   :global(header), :global(footer), .actions { display: none !important; }
@@ -85,10 +85,9 @@
 .storyGrid li { position: relative; background: #fff; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; scroll-margin-top: 140px; }
 .storyBody { padding: 12px 16px 16px; }
 .storyGrid b { display: block; font-size: 15px; margin-top: 2px; }
-.storyGrid li:hover .storyBody > b { text-decoration: underline; text-underline-offset: 4px; }
 .storyGrid p { font-size: 13px; line-height: 1.75; color: #3a3a42; margin-top: 4px; }
 .storyWho { display: block; font-size: 15px; padding: 16px; }
 @media (max-width: 960px) { .storyGrid { grid-template-columns: 1fr; } }
 /* .tbl heads stay Titillium even when right-aligned (globals' `.tbl .r` would switch them to Formula1) */
-.page :global(.tbl) th { font-family: "Titillium Web", var(--font-cn); font-weight: 600; }
+.page :global(.tbl) th { font-family: var(--font-cn); font-weight: 600; }
 .table td:nth-child(6) { white-space: nowrap; }

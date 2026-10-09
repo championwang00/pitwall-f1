@@ -6,7 +6,7 @@
 .hero { min-height: 380px; }
 .hero::before { height: 150% !important; right: -8% !important; }
 .heroLight { background: #fff; color: #1c1c25; }
-.kick { font: 700 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; opacity: .8; }
+.kick { font: 700 12px/16px var(--font-cn); text-transform: uppercase; opacity: .8; }
 .heroLight .kick { color: #606066; opacity: 1; }
 .title { font: 900 clamp(36px, 5vw, 64px)/1.1 var(--font-cn); }
 .lede { font-size: 16px; line-height: 1.85; max-width: 820px; opacity: .92; }
@@ -15,7 +15,7 @@
 .heroLight .stats { border-top-color: #e0dedc; }
 .stats div { display: flex; flex-direction: column; gap: 6px; }
 .stats dd { margin: 0; font: 900 32px/32px var(--font-display); }
-.stats dt { font: 700 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; opacity: .8; }
+.stats dt { font: 700 12px/16px var(--font-cn); text-transform: uppercase; opacity: .8; }
 .heroLight .stats dt { color: #606066; opacity: 1; }
 .rulers { display: flex; flex-wrap: wrap; gap: 14px 40px; margin-top: 4px; }
 .ruler { display: inline-flex; align-items: center; gap: 14px; }

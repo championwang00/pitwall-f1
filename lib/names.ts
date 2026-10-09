@@ -43,3 +43,7 @@ export const NAT_ZH: Record<string, string> = {
   bahrain: "巴林", qatar: "卡塔尔", "saudi-arabia": "沙特阿拉伯", "united-arab-emirates": "阿联酋", turkey: "土耳其",
   "south-korea": "韩国", morocco: "摩洛哥", portugal2: "葡萄牙",
 };
+
+/** A result gap in Chinese: "+1 Lap" / "+2 laps" → "+1 圈" / "+2 圈"; time gaps pass through unchanged. */
+export const gapZh = <T extends string | null | undefined>(g: T): T =>
+  (typeof g === "string" ? g.replace(/^\+?(\d+)\s*laps?$/i, "+$1 圈") : g) as T;

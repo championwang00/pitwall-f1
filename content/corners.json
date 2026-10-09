@@ -1,0 +1,1321 @@
+{
+  "_about": "弯角与分段的策展数据（IA spec §0.9）。键 = F1DB circuit id；corners 的键 = 弯角编号（MultiViewer 的 number + letter，如 \"1\"、\"12A\"）；只给真正有通用名称的弯角写 name/zh，其余弯角页面上只显示「T7」。note ≤ 60 字、新闻体、无感叹号。layout = 这些编号所属的 F1DB circuit_layout_id：地图布局不一致时整组标注不渲染（绝不把标签放到另一个布局上）。sections = 连续弯角组或直道（from/to 为弯角编号，kind = corners | straight）。manual = 没有 MultiViewer 数据时手工标定的弯心位置 t（沿 data/tracks 遥测圈的距离比例 0–1），approx 恒为 true。",
+  "circuits": {
+    "spa-francorchamps": {
+      "layout": "spa-francorchamps-4",
+      "corners": {
+        "1": {
+          "name": "La Source",
+          "zh": "水源弯",
+          "note": "发车后的第一个发夹右弯，全场最慢；起步时多车挤在一起，首圈常见碰撞。"
+        },
+        "2": {
+          "name": "Eau Rouge",
+          "zh": "红水弯",
+          "note": "下坡底部的左弯，以流经此处的小溪得名，与紧接的雷迪隆合称 Eau Rouge/Raidillon。",
+          "star": true
+        },
+        "3": {
+          "name": "Raidillon",
+          "zh": "雷迪隆",
+          "note": "陡峭上坡的右弯，现代 F1 可全油门通过；盲顶与压缩让它仍是最考验勇气的弯角之一。",
+          "star": true
+        },
+        "4": {
+          "name": "Raidillon",
+          "zh": "雷迪隆出口",
+          "note": "坡顶的左弯出口，之后是约 1.1 公里的肯梅尔直道。",
+          "star": true
+        },
+        "5": {
+          "name": "Les Combes",
+          "zh": "莱孔布",
+          "note": "肯梅尔直道尽头的右弯刹车点，全场最主要的超车位置。"
+        },
+        "6": {
+          "name": "Les Combes",
+          "zh": "莱孔布",
+          "note": "莱孔布组合的第二个弯（左弯）。"
+        },
+        "7": {
+          "name": "Malmedy",
+          "zh": "马尔梅迪",
+          "note": "下坡前的中速右弯。"
+        },
+        "8": {
+          "name": "Bruxelles",
+          "zh": "布鲁塞尔弯",
+          "note": "也称 Rivage。下坡的长发夹右弯，赛车长时间侧向受力，容易锁死前轮。"
+        },
+        "10": {
+          "name": "Pouhon",
+          "zh": "普翁",
+          "note": "双顶点的下坡高速左弯，现代赛车接近全油门，对下压力要求极高。",
+          "star": true
+        },
+        "11": {
+          "name": "Pouhon",
+          "zh": "普翁",
+          "note": "普翁的第二个顶点。",
+          "star": true
+        },
+        "12": {
+          "name": "Fagnes",
+          "zh": "法涅",
+          "note": "也称 Campus。中速右左组合的第一弯。"
+        },
+        "13": {
+          "name": "Fagnes",
+          "zh": "法涅",
+          "note": "法涅组合的左弯。"
+        },
+        "14": {
+          "name": "Stavelot",
+          "zh": "斯塔韦洛",
+          "note": "中速右弯，出弯进入全场最长的全油门路段。"
+        },
+        "15": {
+          "name": "Paul Frère",
+          "zh": "保罗·弗雷尔弯",
+          "note": "以比利时车手兼记者 Paul Frère 命名的高速右弯。"
+        },
+        "17": {
+          "name": "Blanchimont",
+          "zh": "布朗希蒙",
+          "note": "全油门的高速左弯，F1 最快的弯角之一。",
+          "star": true
+        },
+        "18": {
+          "name": "Bus Stop",
+          "zh": "公交站减速弯",
+          "note": "最后的右左减速弯，因原址附近的公交车站得名；出口即进入起终点直道。"
+        },
+        "19": {
+          "name": "Bus Stop",
+          "zh": "公交站减速弯",
+          "note": "减速弯的左弯出口。"
+        }
+      },
+      "sections": [
+        {
+          "id": "eau-rouge-raidillon",
+          "from": "2",
+          "to": "4",
+          "kind": "corners",
+          "name": "Eau Rouge / Raidillon",
+          "zh": "红水弯 · 雷迪隆",
+          "note": "F1 最著名的上坡弯道组合：从谷底左弯压缩着冲上陡坡，坡顶盲出；高度差约 40 米。"
+        },
+        {
+          "id": "kemmel",
+          "from": "4",
+          "to": "5",
+          "kind": "straight",
+          "name": "Kemmel Straight",
+          "zh": "肯梅尔直道",
+          "note": "约 1.1 公里的上坡直道，尾流跟车后在莱孔布完成超车。"
+        }
+      ]
+    },
+    "monza": {
+      "layout": "monza-7",
+      "corners": {
+        "1": {
+          "name": "Variante del Rettifilo",
+          "zh": "第一减速弯",
+          "note": "主直道尽头，赛车从 340 km/h 以上刹到一挡，全场最重要的超车点，首圈常见事故。"
+        },
+        "2": {
+          "name": "Variante del Rettifilo",
+          "zh": "第一减速弯",
+          "note": "第一减速弯的左弯出口。"
+        },
+        "3": {
+          "name": "Curva Grande",
+          "zh": "大弯",
+          "note": "全油门通过的长右弯。"
+        },
+        "4": {
+          "name": "Variante della Roggia",
+          "zh": "罗吉亚减速弯",
+          "note": "第二减速弯，左右组合，刹车超车点。"
+        },
+        "5": {
+          "name": "Variante della Roggia",
+          "zh": "罗吉亚减速弯",
+          "note": "第二减速弯的右弯出口。"
+        },
+        "6": {
+          "name": "Lesmo 1",
+          "zh": "莱斯莫一号弯",
+          "note": "两个莱斯莫右弯的第一个，中高速。"
+        },
+        "7": {
+          "name": "Lesmo 2",
+          "zh": "莱斯莫二号弯",
+          "note": "出弯速度决定随后下坡直道的尾速。"
+        },
+        "8": {
+          "name": "Variante Ascari",
+          "zh": "阿斯卡里减速弯",
+          "note": "以 1955 年在蒙扎遇难的阿尔贝托·阿斯卡里命名的三连弯，入口左弯。"
+        },
+        "9": {
+          "name": "Variante Ascari",
+          "zh": "阿斯卡里减速弯",
+          "note": "阿斯卡里的中段右弯。"
+        },
+        "10": {
+          "name": "Variante Ascari",
+          "zh": "阿斯卡里减速弯",
+          "note": "阿斯卡里的出口左弯，接最后的长直道。"
+        },
+        "11": {
+          "name": "Parabolica",
+          "zh": "抛物线弯",
+          "note": "半径逐渐放大的长右弯，2021 年起以米歇尔·阿尔博雷托命名（Curva Alboreto）；出口接主直道。",
+          "star": true
+        }
+      },
+      "sections": [
+        {
+          "id": "ascari",
+          "from": "8",
+          "to": "10",
+          "kind": "corners",
+          "name": "Variante Ascari",
+          "zh": "阿斯卡里减速弯",
+          "note": "左—右—左三连弯，出口速度直接决定最后直道的尾速。"
+        }
+      ]
+    },
+    "silverstone": {
+      "layout": "silverstone-8",
+      "corners": {
+        "1": {
+          "name": "Abbey",
+          "zh": "修道院弯",
+          "note": "现布局的第一弯，高速右弯，接近全油门。"
+        },
+        "2": {
+          "name": "Farm",
+          "zh": "农场弯",
+          "note": "高速左弯。"
+        },
+        "3": {
+          "name": "Village",
+          "zh": "村庄弯",
+          "note": "慢速右弯，首圈常见挤撞。"
+        },
+        "4": {
+          "name": "The Loop",
+          "zh": "环弯",
+          "note": "全场最慢的发夹左弯。"
+        },
+        "5": {
+          "name": "Aintree",
+          "zh": "安特里弯",
+          "note": "出弯进入惠灵顿直道。"
+        },
+        "6": {
+          "name": "Brooklands",
+          "zh": "布鲁克兰兹弯",
+          "note": "惠灵顿直道尽头的左弯刹车点，主要超车位置。"
+        },
+        "7": {
+          "name": "Luffield",
+          "zh": "拉菲尔德弯",
+          "note": "长右弯，出弯速度决定旧主直道的尾速。"
+        },
+        "8": {
+          "name": "Woodcote",
+          "zh": "伍德科特弯",
+          "note": "全油门的右弯，位于旧起终点线前。"
+        },
+        "9": {
+          "name": "Copse",
+          "zh": "科普斯弯",
+          "note": "高速右弯，现代赛车全油门通过。",
+          "star": true
+        },
+        "10": {
+          "name": "Maggotts",
+          "zh": "马戈茨弯",
+          "note": "高速 S 弯组合的第一个左弯。",
+          "star": true
+        },
+        "11": {
+          "name": "Becketts",
+          "zh": "贝克茨弯",
+          "note": "连续高速变向的中段。"
+        },
+        "12": {
+          "name": "Becketts",
+          "zh": "贝克茨弯",
+          "note": "贝克茨的左弯。"
+        },
+        "13": {
+          "name": "Becketts",
+          "zh": "贝克茨弯",
+          "note": "贝克茨的最后一个右弯。"
+        },
+        "14": {
+          "name": "Chapel",
+          "zh": "教堂弯",
+          "note": "出口接机库直道。"
+        },
+        "15": {
+          "name": "Stowe",
+          "zh": "斯托弯",
+          "note": "机库直道尽头的高速右弯，可超车。"
+        },
+        "16": {
+          "name": "Vale",
+          "zh": "维尔弯",
+          "note": "重刹车区，常见超车。"
+        },
+        "17": {
+          "name": "Club",
+          "zh": "俱乐部弯",
+          "note": "最后的双右弯。"
+        },
+        "18": {
+          "name": "Club",
+          "zh": "俱乐部弯",
+          "note": "出口接起终点直道。"
+        }
+      },
+      "sections": [
+        {
+          "id": "maggotts-becketts",
+          "from": "10",
+          "to": "14",
+          "kind": "corners",
+          "name": "Maggotts – Becketts – Chapel",
+          "zh": "马戈茨—贝克茨—教堂",
+          "note": "连续高速变向的 S 弯组合，被认为是最考验赛车空气动力学的路段之一。"
+        },
+        {
+          "id": "hangar",
+          "from": "14",
+          "to": "15",
+          "kind": "straight",
+          "name": "Hangar Straight",
+          "zh": "机库直道",
+          "note": "教堂弯到斯托弯之间的长直道。"
+        },
+        {
+          "id": "wellington",
+          "from": "5",
+          "to": "6",
+          "kind": "straight",
+          "name": "Wellington Straight",
+          "zh": "惠灵顿直道",
+          "note": "安特里弯到布鲁克兰兹之间的直道，尾流超车路段。"
+        }
+      ]
+    },
+    "monaco": {
+      "layout": "monaco-6",
+      "corners": {
+        "1": {
+          "name": "Sainte Dévote",
+          "zh": "圣德沃特弯",
+          "note": "发车后的第一个右弯，以旁边的小教堂命名，首圈最常发生碰撞。"
+        },
+        "2": {
+          "name": "Beau Rivage",
+          "zh": "博里瓦日",
+          "note": "全油门的爬坡弯道，一直向上到蒙特卡洛赌场。"
+        },
+        "3": {
+          "name": "Massenet",
+          "zh": "马斯内弯",
+          "note": "坡顶的长左弯，盲弯。"
+        },
+        "4": {
+          "name": "Casino",
+          "zh": "赌场弯",
+          "note": "经过蒙特卡洛赌场的右弯，出弯有颠簸。",
+          "star": true
+        },
+        "5": {
+          "name": "Mirabeau",
+          "zh": "米拉博弯",
+          "note": "下坡的右弯刹车点。"
+        },
+        "6": {
+          "name": "Fairmont Hairpin",
+          "zh": "费尔蒙发夹弯",
+          "note": "F1 赛历中最慢的弯角，约 45 km/h；以酒店命名，旧称 Loews 发夹弯。",
+          "star": true
+        },
+        "7": {
+          "name": "Mirabeau Bas",
+          "zh": "下米拉博弯",
+          "note": "发夹弯之后的右弯。"
+        },
+        "8": {
+          "name": "Portier",
+          "zh": "波蒂埃弯",
+          "note": "出弯进入隧道，出弯速度决定隧道内的尾速。"
+        },
+        "9": {
+          "name": "Tunnel",
+          "zh": "隧道",
+          "note": "隧道内的高速右弯，光线骤变。"
+        },
+        "10": {
+          "name": "Nouvelle Chicane",
+          "zh": "新减速弯",
+          "note": "隧道出口的减速弯，摩纳哥几乎唯一的超车点。"
+        },
+        "11": {
+          "name": "Nouvelle Chicane",
+          "zh": "新减速弯",
+          "note": "减速弯的出口。"
+        },
+        "12": {
+          "name": "Tabac",
+          "zh": "塔巴克弯",
+          "note": "以旧烟草店命名的高速左弯。"
+        },
+        "13": {
+          "name": "Piscine",
+          "zh": "泳池弯",
+          "note": "绕过游泳池的两组左右组合，高速且贴墙。"
+        },
+        "14": {
+          "name": "Piscine",
+          "zh": "泳池弯",
+          "note": "泳池弯入口组合的第二个弯。"
+        },
+        "15": {
+          "name": "Piscine",
+          "zh": "泳池弯",
+          "note": "泳池弯出口组合，较慢。"
+        },
+        "16": {
+          "name": "Piscine",
+          "zh": "泳池弯",
+          "note": "泳池弯的出口。"
+        },
+        "18": {
+          "name": "La Rascasse",
+          "zh": "拉斯卡斯弯",
+          "note": "以餐厅命名的慢速发夹右弯。"
+        },
+        "19": {
+          "name": "Anthony Noghès",
+          "zh": "安东尼·诺盖斯弯",
+          "note": "最后的右弯，以大奖赛创办人命名。"
+        }
+      },
+      "sections": [
+        {
+          "id": "piscine",
+          "from": "13",
+          "to": "16",
+          "kind": "corners",
+          "name": "Piscine",
+          "zh": "泳池弯",
+          "note": "绕过摩纳哥游泳池的高速左右组合，护墙紧贴赛道。"
+        }
+      ]
+    },
+    "suzuka": {
+      "layout": "suzuka-2",
+      "corners": {
+        "1": {
+          "name": "First Curve",
+          "zh": "第一弯",
+          "note": "下坡的双顶点右弯，入弯速度极高。"
+        },
+        "2": {
+          "name": "First Curve",
+          "zh": "第一弯",
+          "note": "第一弯的第二个顶点。"
+        },
+        "3": {
+          "name": "S Curves",
+          "zh": "S 弯",
+          "note": "上坡 S 弯的第一个左弯。"
+        },
+        "4": {
+          "name": "S Curves",
+          "zh": "S 弯",
+          "note": "S 弯的右弯。"
+        },
+        "5": {
+          "name": "S Curves",
+          "zh": "S 弯",
+          "note": "S 弯的左弯。"
+        },
+        "6": {
+          "name": "S Curves",
+          "zh": "S 弯",
+          "note": "S 弯的最后一个右弯。"
+        },
+        "7": {
+          "name": "Dunlop",
+          "zh": "邓禄普弯",
+          "note": "S 弯之后的上坡左弯。"
+        },
+        "8": {
+          "name": "Degner 1",
+          "zh": "德格纳一号弯",
+          "note": "以 1962 年在此翻车的恩斯特·德格纳命名的双右弯，第一个较快。"
+        },
+        "9": {
+          "name": "Degner 2",
+          "zh": "德格纳二号弯",
+          "note": "较慢的第二个右弯，出口护墙很近。"
+        },
+        "11": {
+          "name": "Hairpin",
+          "zh": "发夹弯",
+          "note": "全场最慢的弯角。"
+        },
+        "13": {
+          "name": "Spoon",
+          "zh": "汤匙弯",
+          "note": "形如汤匙的双顶点左弯，出口接全场最长的直道。",
+          "star": true
+        },
+        "14": {
+          "name": "Spoon",
+          "zh": "汤匙弯",
+          "note": "汤匙弯的第二个顶点。",
+          "star": true
+        },
+        "15": {
+          "name": "130R",
+          "zh": "130R",
+          "note": "半径 130 米的高速左弯，现代赛车全油门通过。",
+          "star": true
+        },
+        "16": {
+          "name": "Casio Triangle",
+          "zh": "卡西欧三角减速弯",
+          "note": "最后的减速弯，主要超车点。"
+        },
+        "17": {
+          "name": "Casio Triangle",
+          "zh": "卡西欧三角减速弯",
+          "note": "减速弯的出口左弯。"
+        }
+      },
+      "sections": [
+        {
+          "id": "esses",
+          "from": "3",
+          "to": "6",
+          "kind": "corners",
+          "name": "S Curves",
+          "zh": "S 弯",
+          "note": "上坡的连续左右组合，考验赛车平衡与车手节奏。"
+        },
+        {
+          "id": "back-straight",
+          "from": "14",
+          "to": "15",
+          "kind": "straight",
+          "name": "Back Straight",
+          "zh": "背直道",
+          "note": "汤匙弯到 130R 之间约 1 公里的直道，赛道的最高速路段。"
+        }
+      ]
+    },
+    "interlagos": {
+      "layout": "interlagos-2",
+      "corners": {
+        "1": {
+          "name": "S do Senna",
+          "zh": "塞纳 S 弯",
+          "note": "下坡的左右组合，以塞纳命名；全场主要超车点。",
+          "star": true
+        },
+        "2": {
+          "name": "S do Senna",
+          "zh": "塞纳 S 弯",
+          "note": "S 弯的右弯出口。",
+          "star": true
+        },
+        "3": {
+          "name": "Curva do Sol",
+          "zh": "太阳弯",
+          "note": "出口接 Reta Oposta 反向直道。"
+        },
+        "4": {
+          "name": "Descida do Lago",
+          "zh": "湖畔下坡",
+          "note": "反向直道尽头的下坡左弯，可超车。"
+        },
+        "6": {
+          "name": "Ferradura",
+          "zh": "马蹄弯",
+          "note": "长右弯。"
+        },
+        "8": {
+          "name": "Pinheirinho",
+          "zh": "松树弯",
+          "note": "慢速右弯。"
+        },
+        "9": {
+          "name": "Bico de Pato",
+          "zh": "鸭嘴弯",
+          "note": "慢速左弯。"
+        },
+        "10": {
+          "name": "Mergulho",
+          "zh": "俯冲弯",
+          "note": "下坡的右弯。"
+        },
+        "11": {
+          "name": "Junção",
+          "zh": "交汇弯",
+          "note": "出弯后一路爬坡到终点线，全油门时间很长。"
+        },
+        "12": {
+          "name": "Subida dos Boxes",
+          "zh": "维修区上坡",
+          "note": "爬坡中的左弯。"
+        },
+        "13": {
+          "name": "Arquibancadas",
+          "zh": "看台弯",
+          "note": "全油门的爬升左弯，正对主看台。"
+        },
+        "14": {
+          "name": "Arquibancadas",
+          "zh": "看台弯",
+          "note": "看台弯的中段。"
+        },
+        "15": {
+          "name": "Arquibancadas",
+          "zh": "看台弯",
+          "note": "看台弯的出口，接起终点直道。"
+        }
+      },
+      "sections": [
+        {
+          "id": "senna-s",
+          "from": "1",
+          "to": "2",
+          "kind": "corners",
+          "name": "S do Senna",
+          "zh": "塞纳 S 弯",
+          "note": "下坡的左—右组合，主直道尾流超车后在这里完成。"
+        }
+      ]
+    },
+    "montreal": {
+      "layout": "montreal-6",
+      "corners": {
+        "1": {
+          "name": "Virage Senna",
+          "zh": "塞纳弯",
+          "note": "发车后的左右组合，首圈常见碰撞。"
+        },
+        "2": {
+          "name": "Virage Senna",
+          "zh": "塞纳弯",
+          "note": "组合的右弯出口。"
+        },
+        "10": {
+          "name": "L'Épingle",
+          "zh": "发夹弯",
+          "note": "全场最慢的发夹弯，出口接卡西诺直道。"
+        },
+        "13": {
+          "name": "Wall of Champions",
+          "zh": "冠军之墙",
+          "note": "最后的减速弯，出口护墙因 1999 年三位世界冠军（希尔、舒马赫、维伦纽夫）在此撞车得名。",
+          "star": true
+        },
+        "14": {
+          "name": "Wall of Champions",
+          "zh": "冠军之墙",
+          "note": "减速弯的出口，护墙紧贴赛道。",
+          "star": true
+        }
+      },
+      "sections": [
+        {
+          "id": "casino",
+          "from": "10",
+          "to": "13",
+          "kind": "straight",
+          "name": "Casino Straight",
+          "zh": "卡西诺直道",
+          "note": "发夹弯到最后减速弯之间的长直道，主要超车路段。"
+        }
+      ]
+    },
+    "zandvoort": {
+      "layout": "zandvoort-5",
+      "corners": {
+        "1": {
+          "name": "Tarzan",
+          "zh": "塔尔赞弯",
+          "note": "主直道尽头略带倾斜的右弯，主要超车点。"
+        },
+        "2": {
+          "name": "Gerlach",
+          "zh": "格拉赫弯",
+          "note": "中速右弯。"
+        },
+        "3": {
+          "name": "Hugenholtz",
+          "zh": "胡根霍尔茨弯",
+          "note": "2021 年改造的 18° 倾斜左弯，可并排通过。",
+          "star": true
+        },
+        "7": {
+          "name": "Scheivlak",
+          "zh": "谢维拉克弯",
+          "note": "沙丘间的盲顶高速右弯。"
+        },
+        "8": {
+          "name": "Masters",
+          "zh": "大师弯",
+          "note": "中速右弯。"
+        },
+        "11": {
+          "name": "Hans Ernst",
+          "zh": "汉斯·恩斯特弯",
+          "note": "右左组合的入口。"
+        },
+        "12": {
+          "name": "Hans Ernst",
+          "zh": "汉斯·恩斯特弯",
+          "note": "组合的慢速左弯。"
+        },
+        "14": {
+          "name": "Arie Luyendyk",
+          "zh": "阿里·卢因迪克弯",
+          "note": "18° 倾斜的最后弯角，以两届印第 500 冠军命名，全油门进入主直道。",
+          "star": true
+        }
+      },
+      "sections": []
+    },
+    "spielberg": {
+      "layout": "spielberg-3",
+      "corners": {
+        "1": {
+          "name": "Niki Lauda",
+          "zh": "尼基·劳达弯",
+          "note": "以奥地利三届世界冠军命名的第一弯。"
+        },
+        "3": {
+          "name": "Remus",
+          "zh": "雷穆斯弯",
+          "note": "爬坡尽头的慢速右弯，主要超车点。"
+        },
+        "4": {
+          "name": "Schlossgold",
+          "zh": "施洛斯戈尔德弯",
+          "note": "坡顶之后的右弯。"
+        },
+        "9": {
+          "name": "Rindt",
+          "zh": "林特弯",
+          "note": "以 1970 年世界冠军约亨·林特命名的高速右弯。"
+        }
+      },
+      "sections": []
+    },
+    "imola": {
+      "layout": "imola-3",
+      "corners": {
+        "2": {
+          "name": "Tamburello",
+          "zh": "坦布雷洛",
+          "note": "原为全油门的高速左弯，1994 年塞纳在此遇难，之后改建为减速弯。",
+          "star": true
+        },
+        "3": {
+          "name": "Tamburello",
+          "zh": "坦布雷洛",
+          "note": "减速弯的中段。",
+          "star": true
+        },
+        "4": {
+          "name": "Tamburello",
+          "zh": "坦布雷洛",
+          "note": "减速弯的出口。",
+          "star": true
+        },
+        "5": {
+          "name": "Villeneuve",
+          "zh": "维伦纽夫弯",
+          "note": "以吉尔·维伦纽夫命名的减速弯。"
+        },
+        "6": {
+          "name": "Villeneuve",
+          "zh": "维伦纽夫弯",
+          "note": "减速弯的右弯出口。"
+        },
+        "7": {
+          "name": "Tosa",
+          "zh": "托萨弯",
+          "note": "爬坡前的慢速左弯，主要超车点。"
+        },
+        "9": {
+          "name": "Piratella",
+          "zh": "皮拉特拉弯",
+          "note": "坡顶的高速左弯。"
+        },
+        "11": {
+          "name": "Acque Minerali",
+          "zh": "矿泉水弯",
+          "note": "下坡的双右弯入口。"
+        },
+        "12": {
+          "name": "Acque Minerali",
+          "zh": "矿泉水弯",
+          "note": "双右弯的第二个顶点。"
+        },
+        "14": {
+          "name": "Variante Alta",
+          "zh": "高处减速弯",
+          "note": "坡顶的左右减速弯。"
+        },
+        "15": {
+          "name": "Variante Alta",
+          "zh": "高处减速弯",
+          "note": "减速弯的出口。"
+        },
+        "17": {
+          "name": "Rivazza",
+          "zh": "里瓦扎弯",
+          "note": "下坡的双左弯入口。"
+        },
+        "18": {
+          "name": "Rivazza",
+          "zh": "里瓦扎弯",
+          "note": "出口接起终点直道。"
+        }
+      },
+      "sections": []
+    },
+    "catalunya": {
+      "layout": "catalunya-6",
+      "corners": {
+        "1": {
+          "name": "Elf",
+          "note": "主直道尽头的右弯，主要超车点。"
+        },
+        "3": {
+          "name": "Renault",
+          "note": "全油门的长右弯。"
+        },
+        "4": {
+          "name": "Repsol",
+          "note": "慢速右弯。"
+        },
+        "5": {
+          "name": "Seat",
+          "note": "下坡的左弯。"
+        },
+        "9": {
+          "name": "Campsa",
+          "zh": "坎普萨弯",
+          "note": "越过坡顶的盲弯高速右弯，出口接背直道。"
+        },
+        "10": {
+          "name": "La Caixa",
+          "zh": "拉凯克萨弯",
+          "note": "背直道尽头的慢速左弯，第二超车点。"
+        },
+        "12": {
+          "name": "Banc Sabadell",
+          "note": "坡顶的右弯。"
+        }
+      },
+      "sections": [
+        {
+          "id": "final",
+          "from": "13",
+          "to": "14",
+          "kind": "corners",
+          "name": "Turns 13–14",
+          "zh": "最后两弯",
+          "note": "2023 年起取消减速弯后恢复的高速双右弯，全油门进入主直道。"
+        }
+      ]
+    },
+    "mexico-city": {
+      "layout": "mexico-city-3",
+      "corners": {
+        "1": {
+          "note": "约 1.2 公里主直道尽头的右弯；海拔 2200 米、空气稀薄，刹车距离更长，是主要超车点。"
+        },
+        "12": {
+          "name": "Foro Sol",
+          "zh": "太阳广场",
+          "note": "进入棒球场看台区的右弯，观众最密集的路段由此开始。"
+        },
+        "17": {
+          "name": "Peraltada",
+          "zh": "佩拉尔塔达",
+          "note": "传奇倾斜弯 Peraltada 的出口段，现布局只使用其后半部分。",
+          "star": true
+        }
+      },
+      "sections": [
+        {
+          "id": "foro-sol",
+          "from": "12",
+          "to": "15",
+          "kind": "corners",
+          "name": "Foro Sol",
+          "zh": "太阳广场体育场",
+          "note": "穿过棒球场看台的慢速路段，两侧全是观众。"
+        }
+      ]
+    },
+    "baku": {
+      "layout": "baku-1",
+      "corners": {
+        "1": {
+          "note": "主直道尽头的 90° 左弯，主要超车点。"
+        },
+        "8": {
+          "name": "Castle",
+          "zh": "城堡弯",
+          "note": "绕旧城城墙的最窄路段入口，仅 7.6 米宽，赛车只能单列通过。"
+        },
+        "15": {
+          "note": "下坡的重刹车左弯。"
+        },
+        "16": {
+          "note": "出弯后是约 2.2 公里的全油门路段，一直到主直道尽头。"
+        }
+      },
+      "sections": [
+        {
+          "id": "castle",
+          "from": "8",
+          "to": "12",
+          "kind": "corners",
+          "name": "Castle section",
+          "zh": "城堡区",
+          "note": "沿巴库旧城城墙的狭窄连续弯，赛道最窄处只有 7.6 米。"
+        },
+        {
+          "id": "main-straight",
+          "from": "16",
+          "to": "1",
+          "kind": "straight",
+          "name": "Main straight",
+          "zh": "主直道",
+          "note": "T16 到 T1 约 2.2 公里的全油门路段，F1 最长的尾流超车区之一。"
+        }
+      ]
+    },
+    "shanghai": {
+      "layout": "shanghai-1",
+      "corners": {
+        "1": {
+          "name": "The Snail",
+          "zh": "蜗牛弯",
+          "note": "半径逐渐收紧的长右弯接左弯，形如蜗牛（T1–T3），发车后常见多车并行。"
+        },
+        "13": {
+          "note": "长右弯的出口，接约 1.2 公里的大直道。"
+        },
+        "14": {
+          "zh": "发夹弯",
+          "note": "大直道尽头的发夹弯，全场主要超车点。"
+        }
+      },
+      "sections": [
+        {
+          "id": "snail",
+          "from": "1",
+          "to": "3",
+          "kind": "corners",
+          "name": "The Snail",
+          "zh": "蜗牛弯",
+          "note": "由宽到窄不断收紧的螺旋形弯道组合。"
+        },
+        {
+          "id": "back-straight",
+          "from": "13",
+          "to": "14",
+          "kind": "straight",
+          "name": "Back straight",
+          "zh": "大直道",
+          "note": "约 1.2 公里的直道，尾流跟车后在 T14 发夹弯超车。"
+        }
+      ]
+    },
+    "melbourne": {
+      "layout": "melbourne-2",
+      "corners": {
+        "1": {
+          "name": "Jones",
+          "zh": "琼斯弯",
+          "note": "以 1980 年世界冠军阿兰·琼斯命名的第一弯。"
+        },
+        "2": {
+          "name": "Brabham",
+          "zh": "布拉汉姆弯",
+          "note": "以三届世界冠军杰克·布拉汉姆命名。"
+        },
+        "3": {
+          "name": "Sports Centre",
+          "zh": "体育中心弯",
+          "note": "慢速右弯，主要超车点。"
+        }
+      },
+      "sections": []
+    },
+    "marina-bay": {
+      "layout": "marina-bay-4",
+      "corners": {
+        "1": {
+          "name": "Sheares",
+          "zh": "谢尔斯弯",
+          "note": "发车后的左弯组合入口（T1–T3）。"
+        },
+        "7": {
+          "name": "Memorial",
+          "zh": "纪念碑弯",
+          "note": "莱佛士大道尽头的左弯刹车点，主要超车点。"
+        },
+        "13": {
+          "note": "安德森桥前的慢速左发夹弯。"
+        }
+      },
+      "sections": []
+    },
+    "austin": {
+      "layout": "austin-1",
+      "corners": {
+        "1": {
+          "note": "上坡的盲顶发夹左弯，发车后看不到弯心。"
+        },
+        "11": {
+          "note": "背直道前的发夹弯。"
+        },
+        "12": {
+          "note": "约 1.2 公里背直道尽头的左弯，主要超车点。"
+        }
+      },
+      "sections": [
+        {
+          "id": "esses",
+          "from": "3",
+          "to": "6",
+          "kind": "corners",
+          "name": "Esses",
+          "zh": "S 弯",
+          "note": "仿照银石 Maggotts–Becketts 的高速连续变向。"
+        },
+        {
+          "id": "triple-right",
+          "from": "16",
+          "to": "18",
+          "kind": "corners",
+          "name": "Turns 16–18",
+          "zh": "三顶点右弯",
+          "note": "仿照伊斯坦布尔 T8 的三顶点长右弯。"
+        },
+        {
+          "id": "back-straight",
+          "from": "11",
+          "to": "12",
+          "kind": "straight",
+          "name": "Back straight",
+          "zh": "背直道",
+          "note": "约 1.2 公里的直道。"
+        }
+      ]
+    },
+    "las-vegas": {
+      "layout": "las-vegas-1",
+      "corners": {
+        "1": {
+          "note": "主直道尽头的左弯刹车点。"
+        },
+        "14": {
+          "note": "拉斯维加斯大道路段尽头的刹车点，主要超车点。"
+        }
+      },
+      "sections": [
+        {
+          "id": "strip",
+          "from": "12",
+          "to": "14",
+          "kind": "straight",
+          "name": "The Strip",
+          "zh": "拉斯维加斯大道",
+          "note": "约 1.9 公里的全油门路段。"
+        }
+      ]
+    },
+    "lusail": {
+      "layout": "lusail-1",
+      "corners": {
+        "1": {
+          "note": "主直道尽头的右弯，主要超车点。"
+        },
+        "16": {
+          "note": "最后的右弯，出口接主直道。"
+        }
+      },
+      "sections": [
+        {
+          "id": "triple-right",
+          "from": "12",
+          "to": "14",
+          "kind": "corners",
+          "name": "Turns 12–14",
+          "zh": "三顶点右弯",
+          "note": "连续高速右弯，轮胎负荷极大。"
+        }
+      ]
+    },
+    "miami": {
+      "layout": "miami-1",
+      "corners": {
+        "1": {
+          "note": "发车后的右弯，主要超车点之一。"
+        },
+        "11": {
+          "note": "长直道尽头的左弯刹车点。"
+        },
+        "17": {
+          "note": "穿过高速公路立交下方后的重刹车左弯，主要超车点。"
+        }
+      },
+      "sections": [
+        {
+          "id": "chicane",
+          "from": "11",
+          "to": "16",
+          "kind": "corners",
+          "name": "Turns 11–16",
+          "zh": "减速弯路段",
+          "note": "赛道最窄、最颠簸的慢速路段。"
+        },
+        {
+          "id": "back-straight",
+          "from": "16",
+          "to": "17",
+          "kind": "straight",
+          "name": "Back straight",
+          "zh": "背直道",
+          "note": "约 1.3 公里的直道。"
+        }
+      ]
+    },
+    "jeddah": {
+      "layout": "jeddah-1",
+      "corners": {
+        "1": {
+          "note": "发车直道尽头的左右减速弯入口。"
+        },
+        "13": {
+          "note": "12° 倾斜的左弯。"
+        },
+        "27": {
+          "note": "最后的发夹弯，出口接主直道。"
+        }
+      },
+      "sections": [
+        {
+          "id": "esses",
+          "from": "4",
+          "to": "12",
+          "kind": "corners",
+          "name": "Turns 4–12",
+          "zh": "高速连续弯",
+          "note": "护墙紧贴的高速连续变向路段。"
+        }
+      ]
+    },
+    "yas-marina": {
+      "layout": "yas-marina-2",
+      "corners": {
+        "5": {
+          "note": "2021 年改造新增的发夹弯，取代原来的减速弯。"
+        },
+        "6": {
+          "note": "约 1.2 公里长直道尽头的左弯，主要超车点。"
+        },
+        "9": {
+          "note": "2021 年改造后的倾斜长左弯，取代原来的减速弯。"
+        },
+        "16": {
+          "note": "最后的右弯，出口接主直道。"
+        }
+      },
+      "sections": [
+        {
+          "id": "hotel",
+          "from": "12",
+          "to": "14",
+          "kind": "corners",
+          "name": "Hotel section",
+          "zh": "酒店路段",
+          "note": "穿过亚斯酒店下方的连续弯。"
+        }
+      ]
+    },
+    "bahrain": {
+      "layout": "bahrain-1",
+      "corners": {
+        "1": {
+          "note": "主直道尽头的重刹车右弯，主要超车点。"
+        },
+        "4": {
+          "note": "上坡右弯，第二超车点。"
+        },
+        "10": {
+          "note": "下坡的慢速左弯。"
+        },
+        "11": {
+          "note": "长左弯，出口进入背直道。"
+        },
+        "14": {
+          "note": "背直道尽头的刹车点。"
+        }
+      },
+      "sections": []
+    },
+    "hungaroring": {
+      "layout": "hungaroring-3",
+      "corners": {
+        "1": {
+          "note": "下坡的重刹车右弯，主要超车点。"
+        },
+        "2": {
+          "note": "下坡的左弯。"
+        },
+        "4": {
+          "note": "盲顶的高速左弯。"
+        },
+        "14": {
+          "note": "最后的右弯，出口接主直道。"
+        }
+      },
+      "sections": []
+    },
+    "sepang": {
+      "layout": "sepang-1",
+      "corners": {
+        "1": {
+          "note": "主直道尽头的收紧右弯，接左弯 T2，主要超车点。"
+        },
+        "4": {
+          "note": "慢速右弯。"
+        },
+        "9": {
+          "note": "慢速发夹左弯。"
+        },
+        "14": {
+          "note": "背直道前的右弯。"
+        },
+        "15": {
+          "note": "超宽的最后发夹弯，可并排进弯。"
+        }
+      },
+      "sections": [
+        {
+          "id": "t5-6",
+          "from": "5",
+          "to": "6",
+          "kind": "corners",
+          "name": "Turns 5–6",
+          "zh": "高速双左弯",
+          "note": "连续高速左弯。"
+        },
+        {
+          "id": "t12-13",
+          "from": "12",
+          "to": "13",
+          "kind": "corners",
+          "name": "Turns 12–13",
+          "zh": "高速左右组合",
+          "note": "高速变向组合。"
+        }
+      ],
+      "manual": {
+        "approx": true,
+        "source": "data/tracks/sepang.json 的曲率峰值 + 官方赛道图核对（2026 排位赛遥测，session 11730）",
+        "corners": [
+          {
+            "n": "1",
+            "t": 0.102
+          },
+          {
+            "n": "2",
+            "t": 0.124
+          },
+          {
+            "n": "3",
+            "t": 0.16
+          },
+          {
+            "n": "4",
+            "t": 0.266
+          },
+          {
+            "n": "5",
+            "t": 0.325
+          },
+          {
+            "n": "6",
+            "t": 0.339
+          },
+          {
+            "n": "7",
+            "t": 0.369
+          },
+          {
+            "n": "8",
+            "t": 0.445
+          },
+          {
+            "n": "9",
+            "t": 0.555
+          },
+          {
+            "n": "10",
+            "t": 0.577
+          },
+          {
+            "n": "11",
+            "t": 0.62
+          },
+          {
+            "n": "12",
+            "t": 0.679
+          },
+          {
+            "n": "13",
+            "t": 0.708
+          },
+          {
+            "n": "14",
+            "t": 0.741
+          },
+          {
+            "n": "15",
+            "t": 0.912
+          }
+        ]
+      }
+    },
+    "madring": {
+      "layout": "madring-1",
+      "corners": {},
+      "sections": [],
+      "_pending": "MultiViewer 暂无 2026 新赛道数据（circuit_key 153 → 404）；曲率检测得到 24 个峰值而 F1DB 记 22 弯，无法可靠编号，先不标注弯角（只画分段）。La Monumental 倾斜弯的编号待核实后再加。"
+    }
+  }
+}

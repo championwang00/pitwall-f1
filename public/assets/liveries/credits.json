@@ -1,0 +1,1149 @@
+{
+  "changes": "Resized and converted to WebP.",
+  "sourceGallery": "https://global.honda/en/F1/gallery/2022/",
+  "assets": {
+    "red-bull-rb18@2022:1": {
+      "url": "/assets/liveries/rb18-2022-r01.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R01_BahrainGP/MaxVerstappen/SI202203200236.jpg",
+      "caption": "2022 年巴林大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R01_BahrainGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true
+      }
+    },
+    "red-bull-rb18@2022:2": {
+      "url": "/assets/liveries/rb18-2022-r02.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R02_SaudiArabianGP/MaxVerstappen/SI202203270662.jpg",
+      "caption": "2022 年沙特阿拉伯大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R02_SaudiArabianGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true
+      }
+    },
+    "red-bull-rb18@2022:3": {
+      "url": "/assets/liveries/rb18-2022-r03.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R03_AustralianGP/MaxVerstappen/SI202204100300.jpg",
+      "caption": "2022 年澳大利亚大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R03_AustralianGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true
+      }
+    },
+    "red-bull-rb18@2022:4": {
+      "url": "/assets/liveries/rb18-2022-r04.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R04_EmiliaRomagnaGP/MaxVerstappen/SI202204240491.jpg",
+      "caption": "2022 年艾米利亚-罗马涅大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R04_EmiliaRomagnaGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true
+      }
+    },
+    "red-bull-rb18@2022:5": {
+      "url": "/assets/liveries/rb18-2022-r05-clear.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R05_MiamiGP/MaxVerstappen/SI202205082795.jpg",
+      "caption": "2022 年迈阿密大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R05_MiamiGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true,
+        "sourceGallery": "https://global.honda/en/F1/gallery/2022/",
+        "assetId": "SI202205082795",
+        "visualNote": "同站图库原图；RB18 前翼、尾翼与四轮完整，侧面涂装可辨。"
+      }
+    },
+    "red-bull-rb18@2022:6": {
+      "url": "/assets/liveries/rb18-2022-r06-clear.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R06_SpanishGP/MaxVerstappen/SI202205220382.jpg",
+      "caption": "2022 年西班牙大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R06_SpanishGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true,
+        "sourceGallery": "https://global.honda/en/F1/gallery/2022/",
+        "assetId": "SI202205220382",
+        "visualNote": "同站图库原图；RB18 前翼、尾翼与四轮完整，侧面涂装可辨。"
+      }
+    },
+    "red-bull-rb18@2022:7": {
+      "url": "/assets/liveries/rb18-2022-r07.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R07_MonacoGP/MaxVerstappen/SI202205290716.jpg",
+      "caption": "2022 年摩纳哥大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R07_MonacoGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true
+      }
+    },
+    "red-bull-rb18@2022:8": {
+      "url": "/assets/liveries/rb18-2022-r08.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R08_AzerbaijanGP/MaxVerstappen/SI202206130279.jpg",
+      "caption": "2022 年阿塞拜疆大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R08_AzerbaijanGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true
+      }
+    },
+    "red-bull-rb18@2022:9": {
+      "url": "/assets/liveries/rb18-2022-r09.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R09_CanadianGP/MaxVerstappen/SI202206202280.jpg",
+      "caption": "2022 年加拿大大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R09_CanadianGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true
+      }
+    },
+    "red-bull-rb18@2022:10": {
+      "url": "/assets/liveries/rb18-2022-r10.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R10_BritishGP/MaxVerstappen/SI202207030526.jpg",
+      "caption": "2022 年英国大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R10_BritishGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true
+      }
+    },
+    "red-bull-rb18@2022:11": {
+      "url": "/assets/liveries/rb18-2022-r11.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R11_AustrianGP/MaxVerstappen/SI202207100618.jpg",
+      "caption": "2022 年奥地利大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R11_AustrianGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true
+      }
+    },
+    "red-bull-rb18@2022:12": {
+      "url": "/assets/liveries/rb18-2022-r12.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R12_FrenchGP/MaxVerstappen/SI202207240848.jpg",
+      "caption": "2022 年法国大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R12_FrenchGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true
+      }
+    },
+    "red-bull-rb18@2022:13": {
+      "url": "/assets/liveries/rb18-2022-r13-clear.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R13_HungarianGP/MaxVerstappen/SI202207310377.jpg",
+      "caption": "2022 年匈牙利大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R13_HungarianGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true,
+        "sourceGallery": "https://global.honda/en/F1/gallery/2022/",
+        "assetId": "SI202207310377",
+        "visualNote": "同站图库原图；RB18 前翼、尾翼与四轮完整，侧面涂装可辨。"
+      }
+    },
+    "red-bull-rb18@2022:14": {
+      "url": "/assets/liveries/rb18-2022-r14.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R14_BelgianGP/MaxVerstappen/SI202208280789.jpg",
+      "caption": "2022 年比利时大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R14_BelgianGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true
+      }
+    },
+    "red-bull-rb18@2022:15": {
+      "url": "/assets/liveries/rb18-2022-r15.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R15_DutchGP/MaxVerstappen/SI202209040836.jpg",
+      "caption": "2022 年荷兰大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R15_DutchGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true
+      }
+    },
+    "red-bull-rb18@2022:16": {
+      "url": "/assets/liveries/rb18-2022-r16-clear.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R16_ItalianGP/MaxVerstappen/SI202209110549.jpg",
+      "caption": "2022 年意大利大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R16_ItalianGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true,
+        "sourceGallery": "https://global.honda/en/F1/gallery/2022/",
+        "assetId": "SI202209110549",
+        "visualNote": "同站图库原图；RB18 前翼、尾翼与四轮完整，侧面涂装可辨。"
+      }
+    },
+    "red-bull-rb18@2022:17": {
+      "url": "/assets/liveries/rb18-2022-r17.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R17_SingaporeGP/MaxVerstappen/SI202210020573.jpg",
+      "caption": "2022 年新加坡大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R17_SingaporeGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true
+      }
+    },
+    "red-bull-rb18@2022:18": {
+      "url": "/assets/liveries/rb18-2022-r18.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R18_JapaneseGP/MaxVerstappen/SI202210090143.jpg",
+      "caption": "2022 年日本大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R18_JapaneseGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true
+      }
+    },
+    "red-bull-rb18@2022:19": {
+      "url": "/assets/liveries/rb18-2022-r19.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R19_UnitedStatesGP/MaxVerstappen/SI202210240154.jpg",
+      "caption": "2022 年美国大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R19_UnitedStatesGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true
+      }
+    },
+    "red-bull-rb18@2022:20": {
+      "url": "/assets/liveries/rb18-2022-r20.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R20_MexicoCityGP/MaxVerstappen/SI202210300607.jpg",
+      "caption": "2022 年墨西哥城大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R20_MexicoCityGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true
+      }
+    },
+    "red-bull-rb18@2022:21": {
+      "url": "/assets/liveries/rb18-2022-r21-clear.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R21_SaoPauloGP/MaxVerstappen/SI202211130431.jpg",
+      "caption": "2022 年圣保罗大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R21_SaoPauloGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true,
+        "sourceGallery": "https://global.honda/en/F1/gallery/2022/",
+        "assetId": "SI202211130431",
+        "visualNote": "同站图库原图；RB18 前翼、尾翼与四轮完整，侧面涂装可辨。"
+      }
+    },
+    "red-bull-rb18@2022:22": {
+      "url": "/assets/liveries/rb18-2022-r22.webp",
+      "source": "https://global.honda/jp/F1/gallery/2022/img/R22_AbuDhabiGP/MaxVerstappen/SI202211202280.jpg",
+      "caption": "2022 年阿布扎比大奖赛实拍 · Honda 官方 F1 图库",
+      "author": "Honda 官方 F1 图库",
+      "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+      "evidence": {
+        "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+        "entry": "window.galleryDataObj.y2022.R22_AbuDhabiGP.MaxVerstappen",
+        "indexTag": [
+          "MaxVerstappen",
+          "RB18"
+        ],
+        "visuallyReviewed": true
+      }
+    },
+    "alfa-romeo-c38@2019:14": {
+      "url": "/assets/liveries/special/alfa-romeo-c38-2019-r14.webp",
+      "source": "https://www.formula1.com/en/latest/article/alfas-giovinazzi-delighted-after-points-finish-at-home.4DRGyBJ2rEgjVojZ2imp9j",
+      "caption": "2019 · 2019 年蒙扎周末实拍 · Antonio Giovinazzi · 意大利三色",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "race",
+      "evidence": "图像视检（AI） F1 官方刊登的 Giovinazzi C38 单车俯侧面实拍：完整车身、绿色引擎罩、红白车侧清晰可辨。"
+    },
+    "haas-vf-25@2025:3": {
+      "url": "/assets/liveries/special/haas-vf-25-2025-r3.webp",
+      "source": "https://www.haasf1team.com/news/japanese-grand-prix-race-recap-5",
+      "caption": "2025 · 2025 年日本站实拍 · Esteban Ocon · Sakura 樱花",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "race",
+      "evidence": "图像视检（AI） Haas 官方正赛照片：单车完整侧后方视角，樱花粉色图案遍布侧箱、引擎罩和前翼，号码 31 可辨。"
+    }
+  },
+  "variants": {
+    "ferrari-sf1000-2020-dc849b5c": {
+      "photo": {
+        "url": "/assets/liveries/special/ferrari-sf1000-2020-r9.webp",
+        "source": "https://www.formula1.com/en/latest/article/ferrari-unveil-retro-burgandy-livery-for-1000th-grand-prix-at-mugello.6Jf4vU68IRW0NzGo8MO1gR",
+        "caption": "2020 · 官方涂装发布图 · 千场大奖赛勃艮第红",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/ferrari-unveil-retro-burgandy-livery-for-1000th-grand-prix-at-mugello.6Jf4vU68IRW0NzGo8MO1gR",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "mclaren-mcl35m-2021-f68bf93e": {
+      "photo": {
+        "url": "/assets/liveries/special/mclaren-mcl35m-2021-r5.webp",
+        "source": "https://www.formula1.com/en/latest/article/breaking-mclaren-to-run-one-off-livery-for-monaco-grand-prix-gulf.4hkyBhSrcmPhpwK8WVIwu7",
+        "caption": "2021 · 官方涂装发布图 · Gulf 经典蓝橙",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/breaking-mclaren-to-run-one-off-livery-for-monaco-grand-prix-gulf.4hkyBhSrcmPhpwK8WVIwu7",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "red-bull-rb16b-2021-d722b4cd": {
+      "photo": {
+        "url": "/assets/liveries/special/red-bull-rb16b-2021-r16.webp",
+        "source": "https://www.formula1.com/en/latest/article/revealed-check-out-red-bulls-honda-tribute-livery-for-the-turkish-grand-prix.Cz19wsw5xrsRNBfGTdWps",
+        "caption": "2021 · 官方涂装发布图 · Honda 白色致敬",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/revealed-check-out-red-bulls-honda-tribute-livery-for-the-turkish-grand-prix.Cz19wsw5xrsRNBfGTdWps",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "alpine-a522-2022-d993f1e1": {
+      "photo": {
+        "url": "/assets/liveries/special/alpine-a522-2022-r1.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-check-out-alpines-special-pink-livery-for-the-bahrain-and-saudi.3mh7BVJ5iKd300PH9IZiML",
+        "caption": "2022 · 官方涂装发布图 · BWT 粉色",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-alpines-special-pink-livery-for-the-bahrain-and-saudi.3mh7BVJ5iKd300PH9IZiML",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "ferrari-f1-75-2022-c05c2bf7": {
+      "photo": {
+        "url": "/assets/liveries/special/ferrari-f1-75-2022-r16.webp",
+        "source": "https://www.formula1.com/en/latest/article/ferrari-unveil-special-livery-with-a-splash-of-yellow-for-home-grand-prix-at.2ESWiN8Qv3SMH1pHKIqIBM",
+        "caption": "2022 · 官方涂装发布图 · 75周年黄色点缀",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/ferrari-unveil-special-livery-with-a-splash-of-yellow-for-home-grand-prix-at.2ESWiN8Qv3SMH1pHKIqIBM",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "mclaren-mcl36-2022-78d63e16": {
+      "photo": {
+        "url": "/assets/liveries/special/mclaren-mcl36-2022-r17.webp",
+        "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-special-livery-for-singapore-and-japan-as-f1-returns-to-asia.5DQH0NZzrkqQ78cCl9n4Cn",
+        "caption": "2022 · 官方涂装发布图 · Future Mode",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-special-livery-for-singapore-and-japan-as-f1-returns-to-asia.5DQH0NZzrkqQ78cCl9n4Cn",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "mclaren-mcl36-2022-6dddc474": {
+      "photo": {
+        "url": "/assets/liveries/special/mclaren-mcl36-2022-r22.webp",
+        "source": "https://www.formula1.com/en/latest/article/mclaren-unveil-special-livery-for-2022-season-finale-in-abu-dhabi.UwZDiMoAxF5vTOVI2HQXX",
+        "caption": "2022 · 官方涂装发布图 · Driven by Change · Anna Tangles",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/mclaren-unveil-special-livery-for-2022-season-finale-in-abu-dhabi.UwZDiMoAxF5vTOVI2HQXX",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "mclaren-mcl60-2023-7d2c8dc9": {
+      "photo": {
+        "url": "/assets/liveries/special/mclaren-mcl60-2023-r6.webp",
+        "source": "https://www.formula1.com/en/latest/article/mclaren-to-run-one-off-triple-crown-livery-at-monaco-grand-prix-as-part-of.1L0qis9t214tiz6Rj3cuyN",
+        "caption": "2023 · 官方涂装发布图 · Triple Crown",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.mclaren.com/racing/formula-1/2023/monaco-grand-prix/mclaren-racing-unveils-triple-crown-livery-for-monaco-grand-prix/",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "mclaren-mcl60-2023-218e75c7": {
+      "photo": {
+        "url": "/assets/liveries/special/mclaren-mcl60-2023-r10.webp",
+        "source": "https://www.formula1.com/en/latest/article/first-look-mclaren-to-run-special-chrome-livery-for-british-grand-prix.4ZjrGJSVAfQOoGA7klYRgQ",
+        "caption": "2023 · 官方涂装发布图 · Chrome",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.mclaren.com/racing/formula-1/2023/british-grand-prix/mclaren-racing-and-google-unveil-chrome-throwback-livery-for-british-grand-prix/",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "mclaren-mcl60-2023-3916625c": {
+      "photo": {
+        "url": "/assets/liveries/special/mclaren-mcl60-2023-r15.webp",
+        "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-stealth-mode-car-livery-for-singapore-and-japan-races.6bisW0mQphTTeYPKJAZU0k",
+        "caption": "2023 · 官方涂装发布图 · Stealth Mode",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-stealth-mode-car-livery-for-singapore-and-japan-races.6bisW0mQphTTeYPKJAZU0k",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "williams-fw45-2023-8d373947": {
+      "photo": {
+        "url": "/assets/liveries/special/williams-fw45-2023-r15.webp",
+        "source": "https://www.formula1.com/en/latest/article/williams-reveal-fan-voted-livery-that-will-race-in-singapore-japan-and-qatar.7skhgJ7aPmEnhzyU8z7D0Q",
+        "caption": "2023 · 官方涂装发布图 · Gulf · Bolder than Bold",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/williams-reveal-fan-voted-livery-that-will-race-in-singapore-japan-and-qatar.7skhgJ7aPmEnhzyU8z7D0Q",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "ferrari-sf-23-2023-f8b2ca2e": {
+      "photo": {
+        "url": "/assets/liveries/special/ferrari-sf-23-2023-r21.webp",
+        "source": "https://www.formula1.com/en/latest/article/ferrari-unveil-special-livery-for-las-vegas-grand-prix-in-nod-to-70s-golden.6GMQfXYHDl3zqM9rEaZsXy",
+        "caption": "2023 · 官方涂装发布图 · 70年代红白致敬",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/ferrari-unveil-special-livery-for-las-vegas-grand-prix-in-nod-to-70s-golden.6GMQfXYHDl3zqM9rEaZsXy",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "red-bull-rb19-2023-96145e75": {
+      "photo": {
+        "url": "/assets/liveries/special/red-bull-rb19-2023-r5.webp",
+        "source": "https://www.formula1.com/en/latest/article/first-look-red-bull-reveal-striking-fan-designed-livery-for-miami-grand-prix.7B41l2lI5ZJqmFi92jsDkM",
+        "caption": "2023 · 官方涂装发布图 · Make Your Mark · Miami",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/first-look-red-bull-reveal-striking-fan-designed-livery-for-miami-grand-prix.7B41l2lI5ZJqmFi92jsDkM",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "red-bull-rb19-2023-c00a0e35": {
+      "photo": {
+        "url": "/assets/liveries/special/red-bull-rb19-2023-r18.webp",
+        "source": "https://www.formula1.com/en/latest/article/red-bull-reveal-fan-designed-stars-and-stripes-livery-for-united-states.PXaxGTOxGRlRXW9sQHuFK",
+        "caption": "2023 · 官方涂装发布图 · Make Your Mark · Texas",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/red-bull-reveal-fan-designed-stars-and-stripes-livery-for-united-states.PXaxGTOxGRlRXW9sQHuFK",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "red-bull-rb19-2023-0169362d": {
+      "photo": {
+        "url": "/assets/liveries/special/red-bull-rb19-2023-r21.webp",
+        "source": "https://www.formula1.com/en/latest/article/red-bull-unveil-special-fan-designed-las-vegas-livery-ahead-of-weekends.XVuUOsfjeen0c0Tti5pv7",
+        "caption": "2023 · 官方涂装发布图 · 俯视 · Make Your Mark · Las Vegas",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/red-bull-unveil-special-fan-designed-las-vegas-livery-ahead-of-weekends.XVuUOsfjeen0c0Tti5pv7",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "ferrari-sf-24-2024-5b5d3fc7": {
+      "photo": {
+        "url": "/assets/liveries/special/ferrari-sf-24-2024-r6.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-ferrari-unveil-special-livery-for-miami-grand-prix.6ij2e6sCUGUd0s4mgiar3Z",
+        "caption": "2024 · 官方涂装发布图 · Azzurro 蓝色纪念",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-ferrari-unveil-special-livery-for-miami-grand-prix.6ij2e6sCUGUd0s4mgiar3Z",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "mclaren-mcl38-2024-ae4335ae": {
+      "photo": {
+        "url": "/assets/liveries/special/mclaren-mcl38-2024-r8.webp",
+        "source": "https://www.formula1.com/en/latest/article/mclaren-unveil-special-ayrton-senna-inspired-livery-for-2024-monaco-grand.7e2wmR25HF4mX3scPjZjz9",
+        "caption": "2024 · 官方涂装发布图 · Senna 致敬",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.mclaren.com/racing/formula-1/2024/monaco-grand-prix/mclaren-formula-1-team-launch-bespoke-senna-livery-for-the-2024-monaco-grand-prix/",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "mclaren-mcl38-2024-2d2c8208": {
+      "photo": {
+        "url": "/assets/liveries/special/mclaren-mcl38-2024-r18.webp",
+        "source": "https://www.formula1.com/en/latest/article/mclaren-become-latest-f1-team-to-reveal-special-singapore-livery-with-nod-to.5H65SnudCCJg78iLY64iuw",
+        "caption": "2024 · 官方涂装发布图 · Legend Reborn",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/mclaren-become-latest-f1-team-to-reveal-special-singapore-livery-with-nod-to.5H65SnudCCJg78iLY64iuw",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "mercedes-f1-w15-2024-6be2d418": {
+      "photo": {
+        "url": "/assets/liveries/special/mercedes-f1-w15-2024-r18.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-mercedes-unveil-special-one-off-livery-for-singapore-grand-prix.4qcEz4SfRCZzz6IzzMBPWf",
+        "caption": "2024 · 官方涂装发布图 · PETRONAS 50周年",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-mercedes-unveil-special-one-off-livery-for-singapore-grand-prix.4qcEz4SfRCZzz6IzzMBPWf",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "alpine-a524-2024-e507f4a5": {
+      "photo": {
+        "url": "/assets/liveries/special/alpine-a524-2024-r14.webp",
+        "source": "https://www.formula1.com/en/latest/article/alpine-unveil-special-deadpool-and-wolverine-livery-ahead-of-belgian-grand.1Z7U2SK7NqnYuGzmGt4mX5",
+        "caption": "2024 · 官方涂装发布图 · Deadpool & Wolverine",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/alpine-unveil-special-deadpool-and-wolverine-livery-ahead-of-belgian-grand.1Z7U2SK7NqnYuGzmGt4mX5",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "alpine-a524-2024-8a2073bc": {
+      "photo": {
+        "url": "/assets/liveries/special/alpine-a524-2024-r19.webp",
+        "source": "https://www.formula1.com/en/latest/article/alpine-present-indiana-jones-inspired-livery-for-united-states-grand-prix.18yyEVXOmIBK2TlUzWUJul",
+        "caption": "2024 · 官方涂装发布图 · Indiana Jones",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/alpine-present-indiana-jones-inspired-livery-for-united-states-grand-prix.18yyEVXOmIBK2TlUzWUJul",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "alpine-a524-2024-84e0f788": {
+      "photo": {
+        "url": "/assets/liveries/special/alpine-a524-2024-r22.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-alpine-unveil-all-pink-livery-for-final-three-races-of-2024-season.6SyxZPEenoW32amhmn8w23",
+        "caption": "2024 · 官方涂装发布图 · BWT 全粉色",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-alpine-unveil-all-pink-livery-for-final-three-races-of-2024-season.6SyxZPEenoW32amhmn8w23",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "red-bull-rb21-2025-2dcd53a7": {
+      "photo": {
+        "url": "/assets/liveries/special/red-bull-rb21-2025-r3.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-red-bull-unveil-special-white-and-red-livery-for-japanese-grand-prix.6ed0ssKwGkFA30a0HpfSVN",
+        "caption": "2025 · 官方涂装发布图 · Honda RA272 致敬",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-red-bull-unveil-special-white-and-red-livery-for-japanese-grand-prix.6ed0ssKwGkFA30a0HpfSVN",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "mclaren-mcl39-2025-2b448b34": {
+      "photo": {
+        "url": "/assets/liveries/special/mclaren-mcl39-2025-r8.webp",
+        "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-tweaked-riviera-inspired-livery-for-monaco-and-spanish-grands.697HMvtQmLBNNiZilwTTUH",
+        "caption": "2025 · 官方涂装发布图 · Riviera · M7A 致敬",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-tweaked-riviera-inspired-livery-for-monaco-and-spanish-grands.697HMvtQmLBNNiZilwTTUH",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "racing-bulls-vcarb-02-2025-ad03193f": {
+      "photo": {
+        "url": "/assets/liveries/special/racing-bulls-vcarb-02-2025-r6.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-racing-bulls-unveil-striking-special-livery-for-miami-grand-prix.5m4UDgNDO62QX1OTdxAF5H",
+        "caption": "2025 · 官方涂装发布图 · Summer Edition 洋红",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-racing-bulls-unveil-striking-special-livery-for-miami-grand-prix.5m4UDgNDO62QX1OTdxAF5H",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "mclaren-mcl39-2025-89077971": {
+      "photo": {
+        "url": "/assets/liveries/special/mclaren-mcl39-2025-r12.webp",
+        "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-chrome-livery-for-silverstone.205orpMlPrDyyjorzSdh8f",
+        "caption": "2025 · 官方涂装发布图 · Chrome 2025",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-chrome-livery-for-silverstone.205orpMlPrDyyjorzSdh8f",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "audi-r26-2026-b2251517": {
+      "photo": {
+        "url": "/assets/liveries/special/audi-r26-2026-r17.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-audi-unveil-special-livery-for-singapore-grand-prix.5Z07QWFA7vVqCPC1jb6AIq",
+        "caption": "2026 · 官方涂装发布图 · Peranakan 暮色",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-audi-unveil-special-livery-for-singapore-grand-prix.5Z07QWFA7vVqCPC1jb6AIq",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "aston-martin-amr26-2026-675a9d57": {
+      "photo": {
+        "url": "/assets/liveries/special/aston-martin-amr26-2026-r6.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-aston-martin-reveal-special-livery-for-the-monaco-grand-prix.5cFPFnHMs4SfUK0B0QO4VA",
+        "caption": "2026 · 官方涂装发布图 · Maaden 铜色渐变",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-aston-martin-reveal-special-livery-for-the-monaco-grand-prix.5cFPFnHMs4SfUK0B0QO4VA",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "williams-fw48-2026-b821b4b2": {
+      "photo": {
+        "url": "/assets/liveries/special/williams-fw48-2026-r14.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-williams-reveal-1981-inspired-special-edition-livery-ahead-of-spanish-gp-in-madrid.vJj60otd7GvQvPZpvPRLJ",
+        "caption": "2026 · 官方涂装发布图 · FW07C 1981致敬",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-williams-reveal-1981-inspired-special-edition-livery-ahead-of-spanish-gp-in-madrid.vJj60otd7GvQvPZpvPRLJ",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "racing-bulls-vcarb-03-2026-d71e53e3": {
+      "photo": {
+        "url": "/assets/liveries/special/racing-bulls-vcarb-03-2026-r7.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-racing-bulls-show-off-football-inspired-special-livery-for-barcelona.3ijlEuQv361CqHhvYMJgMe",
+        "caption": "2026 · 官方涂装发布图 · 世界杯足球主题",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-racing-bulls-show-off-football-inspired-special-livery-for-barcelona.3ijlEuQv361CqHhvYMJgMe",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "cadillac-ca01-2026-000f886f": {
+      "photo": {
+        "url": "/assets/liveries/special/cadillac-ca01-2026-r4.webp",
+        "source": "https://www.formula1.com/en/latest/article/cadillac-unveil-special-miami-grand-prix-livery-for-first-home-race.40Nl9HEiAWWI9QWpr0MN4l",
+        "caption": "2026 · 官方涂装发布图 · 首个主场 · Stars and Stripes",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/cadillac-unveil-special-miami-grand-prix-livery-for-first-home-race.40Nl9HEiAWWI9QWpr0MN4l",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "cadillac-ca01-2026-822683e4": {
+      "photo": {
+        "url": "/assets/liveries/special/cadillac-ca01-2026-r9.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-cadillac-unveil-special-4th-of-july-livery-for-british-grand-prix.6EdWIm2702LzU9REWsPwGq",
+        "caption": "2026 · 官方涂装发布图 · 美国250周年",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-cadillac-unveil-special-4th-of-july-livery-for-british-grand-prix.6EdWIm2702LzU9REWsPwGq",
+      "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering."
+    },
+    "ferrari-sf-26-2026-c87e07ba": {
+      "photo": {
+        "url": "/assets/liveries/special/ferrari-sf-26-2026-r13.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-ferrari-reveal-schumacher-inspired-livery-for-home-grand-prix-at-monza.5burkVG8etBZzPdZrIN7bX",
+        "caption": "2026 · 官方涂装发布图 · Schumacher 30周年致敬",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-ferrari-reveal-schumacher-inspired-livery-for-home-grand-prix-at-monza.5burkVG8etBZzPdZrIN7bX",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "mclaren-mcl40-2026-69e93ddb": {
+      "photo": {
+        "url": "/assets/liveries/special/mclaren-mcl40-2026-r9.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-check-out-mclarens-heritage-inspired-livery-for-the-british-grand-prix.3LDBOQciM7Exdrist6NacH",
+        "caption": "2026 · 官方涂装发布图 · M2B 传承白绿",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-mclarens-heritage-inspired-livery-for-the-british-grand-prix.3LDBOQciM7Exdrist6NacH",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "mercedes-f1-w10-2019-f989951a": {
+      "photo": {
+        "url": "/assets/liveries/special/mercedes-f1-w10-2019-r11.webp",
+        "source": "https://www.formula1.com/en/latest/article/mercedes-reveal-special-heritage-livery-for-german-grand-prix.1SYTGhGJI0rHOEi0av1TmK",
+        "caption": "2019 · 官方现场发布资料图 · 125年赛车运动 · 白银传承",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/mercedes-reveal-special-heritage-livery-for-german-grand-prix.1SYTGhGJI0rHOEi0av1TmK",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "ferrari-sf90-2019-6ca49837": {
+      "photo": {
+        "url": "/assets/liveries/special/ferrari-sf90-2019-r1.webp",
+        "source": "https://www.formula1.com/en/latest/article/ferrari-to-race-with-90th-anniversary-livery-in-australia.255xTL5cQdTlvTIq7Tao5P",
+        "caption": "2019 · 官方涂装发布图 · Scuderia 90周年",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/ferrari-to-race-with-90th-anniversary-livery-in-australia.255xTL5cQdTlvTIq7Tao5P",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "williams-fw47-2025-44af2c3b": {
+      "photo": {
+        "url": "/assets/liveries/special/williams-fw47-2025-r19.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+        "caption": "2025 · 官方涂装发布图 · Atlassian Foundation · FW24传承",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "racing-bulls-vcarb-02-2025-3bc91f26": {
+      "photo": {
+        "url": "/assets/liveries/special/racing-bulls-vcarb-02-2025-r19.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+        "caption": "2025 · 官方涂装发布图 · 俯视 · Tortoiseshell 玳瑁纹",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "aston-martin-amr25-2025-f780b3b6": {
+      "photo": {
+        "url": "/assets/liveries/special/aston-martin-amr25-2025-r19.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+        "caption": "2025 · 官方涂装发布图 · Invisible Science · 科学公式",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "alpine-a525-2025-a00b2c8e": {
+      "photo": {
+        "url": "/assets/liveries/special/alpine-a525-2025-r19.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+        "caption": "2025 · 官方涂装发布图 · Mercado Libre 黄蓝",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "mclaren-mcl39-2025-5317d802": {
+      "photo": {
+        "url": "/assets/liveries/special/mclaren-mcl39-2025-r19.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+        "caption": "2025 · 官方涂装发布图 · Google Gemini · 虹彩",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "haas-vf-25-2025-ea4d5c61": {
+      "photo": {
+        "url": "/assets/liveries/special/haas-vf-25-2025-r19.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+        "caption": "2025 · 官方涂装发布图 · Stars and Stripes 星条旗",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "williams-fw47-2025-81df2238": {
+      "photo": {
+        "url": "/assets/liveries/special/williams-fw47-2025-r22.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-sauber-racing-bulls-and-alpines-special-liveries.18JjRoB0eTKr0PoaxDWENe",
+        "caption": "2025 · 官方涂装发布图 · Rovo · 黑色",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-sauber-racing-bulls-and-alpines-special-liveries.18JjRoB0eTKr0PoaxDWENe",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "kick-sauber-c45-2025-bd9c53f6": {
+      "photo": {
+        "url": "/assets/liveries/special/kick-sauber-c45-2025-r22.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-sauber-racing-bulls-and-alpines-special-liveries.18JjRoB0eTKr0PoaxDWENe",
+        "caption": "2025 · 官方涂装发布图 · Stake Final Lap",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-sauber-racing-bulls-and-alpines-special-liveries.18JjRoB0eTKr0PoaxDWENe",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "racing-bulls-vcarb-02-2025-cb206737": {
+      "photo": {
+        "url": "/assets/liveries/special/racing-bulls-vcarb-02-2025-r22.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-sauber-racing-bulls-and-alpines-special-liveries.18JjRoB0eTKr0PoaxDWENe",
+        "caption": "2025 · 官方涂装发布图 · Cash App · 全息银",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-sauber-racing-bulls-and-alpines-special-liveries.18JjRoB0eTKr0PoaxDWENe",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "ferrari-sf-25-2025-cbe9775e": {
+      "photo": {
+        "url": "/assets/liveries/special/ferrari-sf-25-2025-r6.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-ferrari-reveal-special-co-designed-livery-for-miami-grand-prix.bIA2nDHqo3SYRp150gl00",
+        "caption": "2025 · 官方涂装发布图 · HP周年 · 红白蓝",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-ferrari-reveal-special-co-designed-livery-for-miami-grand-prix.bIA2nDHqo3SYRp150gl00",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "williams-fw48-2026-0bfae6d0": {
+      "photo": {
+        "url": "/assets/liveries/special/williams-fw48-2026-r9.webp",
+        "source": "https://www.formula1.com/en/latest/article/williams-reveal-special-livery-for-home-race-at-silverstone.6FxNnNqJ3D4OTcBqb6oRe6",
+        "caption": "2026 · 官方涂装发布图 · 英国国旗 · 主场",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/williams-reveal-special-livery-for-home-race-at-silverstone.6FxNnNqJ3D4OTcBqb6oRe6",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "racing-bulls-vcarb-03-2026-1efeb93a": {
+      "photo": {
+        "url": "/assets/liveries/special/racing-bulls-vcarb-03-2026-r3.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-check-out-racing-bulls-special-livery-for-the-japanese-grand-prix.3xzvEGBKo1rfFJhCEkbOCh",
+        "caption": "2026 · 官方涂装发布图 · Spring Edition · 日本书道",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-racing-bulls-special-livery-for-the-japanese-grand-prix.3xzvEGBKo1rfFJhCEkbOCh",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "racing-bulls-vcarb-03-2026-1aac6fcb": {
+      "photo": {
+        "url": "/assets/liveries/special/racing-bulls-vcarb-03-2026-r4.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-racing-bulls-reveal-vibrant-yellow-livery-for-miami-grand-prix-weekend.3qkktjcjeVnMY6j9hZLPYR",
+        "caption": "2026 · 官方涂装发布图 · Summer Edition · 黄柑橘",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-racing-bulls-reveal-vibrant-yellow-livery-for-miami-grand-prix-weekend.3qkktjcjeVnMY6j9hZLPYR",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "mclaren-mcl40-2026-14f5bb87": {
+      "photo": {
+        "url": "/assets/liveries/special/mclaren-mcl40-2026-r6.webp",
+        "source": "https://www.mclaren.com/racing/formula-1/2026/monaco-grand-prix/monaco-1000th-gp-livery-and-grid-moment/",
+        "caption": "2026 · 官方涂装发布图 · 第1000场 · 金属橙黑",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/all-the-liveries-special-helmet-designs-and-eye-catching-looks-for-monaco.B2w22A5AjE8qtqhuIvqnL",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "ferrari-sf-23-2023-4827e048": {
+      "photo": {
+        "url": "/assets/liveries/special/ferrari-sf-23-2023-r14.webp",
+        "source": "https://www.formula1.com/en/latest/article/ferrari-reveal-special-car-livery-for-italian-gp-weekend-at-monza.7lCwQF5FAGd95mNcz0jp7h",
+        "caption": "2023 · 官方涂装发布图 · Le Mans冠军 · 黄黑",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/ferrari-reveal-special-car-livery-for-italian-gp-weekend-at-monza.7lCwQF5FAGd95mNcz0jp7h",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "mclaren-mcl33-2018-e0921c0c": {
+      "photo": {
+        "url": "/assets/liveries/special/mclaren-mcl33-2018-r21.webp",
+        "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-one-off-livery-for-alonsos-final-race.8YzX6QexZmqag42OSykw2",
+        "caption": "2018 · 官方涂装发布图 · Alonso 告别纪念",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-one-off-livery-for-alonsos-final-race.8YzX6QexZmqag42OSykw2",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "haas-vf-17-2017-15c04981": {
+      "photo": {
+        "url": "/assets/liveries/special/haas-vf-17-2017-r6.webp",
+        "source": "https://www.formula1.com/en/latest/article/haas-unveil-new-livery-ahead-of-monaco.4lnDOpBZbW4scais8ySCQi",
+        "caption": "2017 · 官方涂装发布图 · 摩纳哥起 · 深灰配色",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/haas-unveil-new-livery-ahead-of-monaco.4lnDOpBZbW4scais8ySCQi",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "red-bull-rb15-2019-d91de225": {
+      "photo": {
+        "url": "/assets/liveries/special/red-bull-rb15-2019-r10.webp",
+        "source": "https://www.formula1.com/en/latest/article/red-bull-to-celebrate-bond-with-special-silverstone-livery.7hRHuzgwGkcF9M543qfa0B",
+        "caption": "2019 · 官方现场发布资料图 · James Bond 007",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/red-bull-to-celebrate-bond-with-special-silverstone-livery.7hRHuzgwGkcF9M543qfa0B",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "alfa-romeo-c38-2019-90b78e49": {
+      "photo": {
+        "url": "/assets/liveries/special/alfa-romeo-c38-2019-r14.webp",
+        "source": "https://www.formula1.com/en/latest/article/alfas-giovinazzi-delighted-after-points-finish-at-home.4DRGyBJ2rEgjVojZ2imp9j",
+        "caption": "2019 · 2019 年蒙扎周末实拍 · Antonio Giovinazzi · 意大利三色",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "race"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-alfa-romeo-to-run-special-italian-themed-livery-in-monza.5d0AeepkZcjNMTBkF5R8i0",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "haas-vf-25-2025-e99b4c7c": {
+      "photo": {
+        "url": "/assets/liveries/special/haas-vf-25-2025-r10.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-check-out-haas-special-livery-for-their-200th-grand-prix-in-canada.4Q38Lnr7Gnkyr4tbW3qUVK.4Q38Lnr7Gnkyr4tbW3qUVK.4Q38Lnr7Gnkyr4tbW3qUVK",
+        "caption": "2025 · 官方涂装发布图 · 第200场 · VF16传承",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-haas-special-livery-for-their-200th-grand-prix-in-canada.4Q38Lnr7Gnkyr4tbW3qUVK.4Q38Lnr7Gnkyr4tbW3qUVK.4Q38Lnr7Gnkyr4tbW3qUVK",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "haas-vf-26-2026-18c342af": {
+      "photo": {
+        "url": "/assets/liveries/special/haas-vf-26-2026-r3.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-haas-reveal-special-godzilla-themed-livery-for-japanese-grand-prix.7GnmylxXYe0UD4Ei8zLp7L.7GnmylxXYe0UD4Ei8zLp7L",
+        "caption": "2026 · 官方涂装发布图 · Godzilla 哥斯拉",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-haas-reveal-special-godzilla-themed-livery-for-japanese-grand-prix.7GnmylxXYe0UD4Ei8zLp7L.7GnmylxXYe0UD4Ei8zLp7L",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "ferrari-sf-25-2025-b2f36158": {
+      "photo": {
+        "url": "/assets/liveries/special/ferrari-sf-25-2025-r16.webp",
+        "source": "https://www.formula1.com/en/video/2025-italian-gp-fp1-first-look-at-ferraris-lauda-inspired-livery-on-track.1842433298059659088",
+        "caption": "2025 · 官方比赛视频封面 · Lauda首冠50周年 · 312T传承",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/video/2025-italian-gp-fp1-first-look-at-ferraris-lauda-inspired-livery-on-track.1842433298059659088",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "haas-vf-25-2025-040272ae": {
+      "photo": {
+        "url": "/assets/liveries/special/haas-vf-25-2025-r3.webp",
+        "source": "https://www.haasf1team.com/news/japanese-grand-prix-race-recap-5",
+        "caption": "2025 · 2025 年日本站实拍 · Esteban Ocon · Sakura 樱花",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "race"
+      },
+      "source": "https://www.haasf1team.com/news/japanese-grand-prix-preview-2",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "racing-bulls-vcarb-02-2025-b9a2f6bb": {
+      "photo": {
+        "url": "/assets/liveries/special/racing-bulls-vcarb-02-2025-r12.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-racing-bulls-unveil-special-livery-for-british-grand-prix.3jvKET9jEaCsGlDw6NIfVK.3jvKET9jEaCsGlDw6NIfVK",
+        "caption": "2025 · 官方涂装发布图 · HUGO x Slawn · 街头涂鸦",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-racing-bulls-unveil-special-livery-for-british-grand-prix.3jvKET9jEaCsGlDw6NIfVK.3jvKET9jEaCsGlDw6NIfVK",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "williams-fw47-2025-9f065035": {
+      "photo": {
+        "url": "/assets/liveries/special/williams-fw47-2025-r12.webp",
+        "source": "https://www.williamsf1.com/articles/85c210a4-b2af-4495-802f-87dcba6f5d4c/home-race-home-colours",
+        "caption": "2025 · 官方涂装发布图 · 主场英国国旗标识",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.williamsf1.com/articles/85c210a4-b2af-4495-802f-87dcba6f5d4c/home-race-home-colours",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "alpine-a525-2025-d993f1e1": {
+      "photo": {
+        "url": "/assets/liveries/special/alpine-a525-2025-r22.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-sauber-racing-bulls-and-alpines-special-liveries.18JjRoB0eTKr0PoaxDWENe",
+        "caption": "2025 · 官方涂装发布图 · BWT 粉色",
+        "author": "Formula 1 / team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-sauber-racing-bulls-and-alpines-special-liveries.18JjRoB0eTKr0PoaxDWENe",
+      "evidence": "GP mapped against local F1DB"
+    },
+    "mercedes-f1-w17-2026-r16-petronas": {
+      "photo": {
+        "url": "/assets/liveries/special/mercedes-f1-w17-2026-r16.webp",
+        "source": "https://www.formula1.com/en/latest/article/gallery-mercedes-reveal-special-livery-for-bahrain-grand-prix-in-malaysia.5rOQab3eO0NktK8AJNG9p7",
+        "caption": "2026 · F1官方涂装发布图 · W17 PETRONAS 绿色特别涂装（侧前视角）",
+        "author": "Formula 1 / Mercedes team media",
+        "license": "All rights reserved; no free license asserted",
+        "scope": "season"
+      },
+      "source": "https://www.formula1.com/en/latest/article/gallery-mercedes-reveal-special-livery-for-bahrain-grand-prix-in-malaysia.5rOQab3eO0NktK8AJNG9p7",
+      "evidence": "F1官方2026-09-30图库明确称 Mercedes W17 将于 Malaysia 举办的 Bahrain Grand Prix 使用 PETRONAS 绿色配通常黑色的特别涂装；本地 F1DB 将 2026-10-04 Bahrain GP 映射为第16轮、Sepang 赛道。图片取自该图库第2张 FrontQtr_GR_16_9_v001.webp，1600×900等比保存；目视检查为单辆完整W17侧前视角，车头、两翼、四轮、侧箱和尾翼均未被裁切。"
+    }
+  }
+}

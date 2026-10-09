@@ -1,7 +1,8 @@
+import { logoRev } from "@/lib/logoRev";
 import EntityLink from "./EntityLink";
 import s from "./team.module.css";
 import logos from "@/data/team-logos.json";
-import { TEAMS_2026, teamColor } from "@/lib/assets";
+import { TEAMS_2026, teamColor, teamColorAt } from "@/lib/assets";
 
 /** Only real logos (official 2026 / Wikidata / Commons) — a team without one shows its name alone, never a drawn badge. */
 const hasLogo = (id: string) => id in TEAMS_2026 || !!(logos as Record<string, string | null>)[id];
@@ -19,11 +20,11 @@ export default function Team({ id, name, size = 22, sub, className, plain, previ
       {hasLogo(id) && (badge
         ? (id in TEAMS_2026
           /* official white logo on the team colour (formula1.com TeamLogo) */
-          ? <span className={s.badge} style={{ width: size, height: size, padding: Math.round(size * 0.12), background: teamColor(id, "#3a3a44") }}><img src={`/api/logo/${id}?r=3&v=white`} alt="" loading="lazy" /></span>
+          ? <span className={s.badge} style={{ width: size, height: size, padding: Math.round(size * 0.12), background: teamColorAt(id, year, "#3a3a44") }}><img src={`/api/logo/${id}?r=${logoRev()}&w=${Math.round(size * 4.4)}&v=white${year ? `&year=${year}` : ""}`} alt="" loading="lazy" /></span>
           /* historic teams: colour logos of any aspect ratio (often wide wordmarks) — a round tile would shrink them
              to a sliver, so they stand bare at the badge height */
-          : <img className={s.logo} src={`/api/logo/${id}?r=3${onDark ? "&v=white" : ""}`} alt="" loading="lazy" style={{ height: size, maxWidth: size * 2.6 }} />)
-        : <img className={s.logo} src={`/api/logo/${id}?r=3${onDark ? "&v=white" : ""}`} alt="" loading="lazy" style={{ height: size, maxWidth: size * 2.2 }} />)}
+          : <img className={s.logo} src={`/api/logo/${id}?r=${logoRev()}&w=${Math.round(size * 4.4)}${onDark ? "&v=white" : ""}${year ? `&year=${year}` : ""}`} alt="" loading="lazy" style={{ height: size, maxWidth: size * 2.6 }} />)
+        : <img className={s.logo} src={`/api/logo/${id}?r=${logoRev()}&w=${Math.round(size * 4.4)}${onDark ? "&v=white" : ""}${year ? `&year=${year}` : ""}`} alt="" loading="lazy" style={{ height: size, maxWidth: size * 2.2 }} />)}
       <span className={s.text}><b>{name}</b>{sub && <em>{sub}</em>}</span>
     </>
   );

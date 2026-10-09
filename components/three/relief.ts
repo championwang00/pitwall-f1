@@ -57,3 +57,31 @@ export function trackCurve(raw: P3[], boost = 1) {
   if (v.length > 3 && v[0].distanceTo(v[v.length - 1]) < 0.05) v.pop();
   return new THREE.CatmullRomCurve3(v, true, "centripetal", 0.5);
 }
+
+const planarCache = new WeakMap<THREE.CatmullRomCurve3, (t: number) => number>();
+/**
+ * Distance fraction along the real (horizontal) lap → the curve's own arc-length parameter. `getPointAt` measures the
+ * exaggerated 3D length, so on flat street circuits (relief ×80) z-noise stretches it and a raw `t` drifts up to ~100 m
+ * (Jeddah); remapped, corner pins land within ~8 m of the real apex on every track (IA spec §0.9).
+ */
+export function planarParam(curve: THREE.CatmullRomCurve3, N = 2048): (t: number) => number {
+  const hit = planarCache.get(curve);
+  if (hit) return hit;
+  const acc = new Float64Array(N + 1);
+  let prev = curve.getPointAt(0);
+  for (let i = 1; i <= N; i++) {
+    const p = curve.getPointAt((i / N) % 1);
+    acc[i] = acc[i - 1] + Math.hypot(p.x - prev.x, p.z - prev.z);
+    prev = p;
+  }
+  const L = acc[N] || 1;
+  const f = (t: number) => {
+    const target = (((t % 1) + 1) % 1) * L;
+    let lo = 0, hi = N;
+    while (hi - lo > 1) { const m = (lo + hi) >> 1; if (acc[m] < target) lo = m; else hi = m; }
+    const r = (target - acc[lo]) / ((acc[hi] - acc[lo]) || 1);
+    return ((lo + r) / N) % 1;
+  };
+  planarCache.set(curve, f);
+  return f;
+}

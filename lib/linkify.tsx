@@ -3,8 +3,9 @@ import { zhName } from "./zh";
 import { DRIVERS_2026 } from "./assets";
 import { GP_ZH } from "./names";
 import { drivers as dContent, teams as tContent, circuits as cContent } from "./content";
-import EntityLink, { type Kind } from "@/components/entity/EntityLink";
-import Term, { type TermDef } from "@/components/entity/Term";
+import { hrefOf, type Kind } from "@/components/entity/EntityLink";
+import LinkedParts from "@/components/entity/LinkedParts";
+import { type TermDef } from "@/components/entity/Term";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -78,11 +79,13 @@ function dictionary() {
 
   // spelling variants seen in bios / wiki text
   const ALIAS: Record<string, Target> = {
-    "吉尔斯·维伦纽夫": { kind: "driver", id: "gilles-villeneuve" }, "路特斯": { kind: "team", id: "lotus" },
+    "吉尔斯·维伦纽夫": { kind: "driver", id: "gilles-villeneuve" }, "路特斯": { kind: "team", id: "lotus" }, "莲花": { kind: "team", id: "lotus" },
     "梅奔": { kind: "team", id: "mercedes" }, "法拉利车队": { kind: "team", id: "ferrari" }, "迈凯伦车队": { kind: "team", id: "mclaren" },
     "威廉斯": { kind: "team", id: "williams" }, "布朗GP": { kind: "team", id: "brawn" }, "红牛车队": { kind: "team", id: "red-bull" },
   };
-  for (const [k, t] of Object.entries(ALIAS)) add(k, t);
+  // aliases are hand-checked and win over the generated short forms (e.g. 「莲花」 alone = Team Lotus, not the 2010
+  // Lotus Racing whose name happens to shorten to the same word)
+  for (const [k, t] of Object.entries(ALIAS)) map.set(k, t);
 
   // glossary terms (DRS, 光头胎, 地面效应…) — after entities so a team/driver name always wins a tie
   for (const [id, g] of Object.entries(terms()) as [string, TermDef & { aliases: string[] }][]) for (const k of [g.term, ...g.aliases]) if (k.length >= 2 || /^[A-Z]/.test(k)) add(k, { kind: "term", id });
@@ -93,7 +96,13 @@ function dictionary() {
   const keys = [...map.keys()].sort((a, b) => b.length - a.length).map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
   // "2008年巴西大奖赛" → that race; "2008年" / "2008赛季" → the season
   const gpAlt = Object.values(GP_ZH).sort((a, b) => b.length - a.length).map((k) => k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|");
-  const re = new RegExp(`((?:19[5-9]\\d|20[0-2]\\d)年(?:${gpAlt})大奖赛)|((?:19[5-9]\\d|20[0-2]\\d))(?=年|赛季|\\s?赛季)|(${keys.join("|")})`, "g");
+  // 1 "2008年巴西大奖赛" / "1993 年澳大利亚大奖赛" → that race · 2 any standalone season year 1950–2026 (prose lists such as
+  // "2018、2024和2025年" or "1999至2004年" link every year; not inside longer numbers, decimals, Latin words like F2002,
+  // ISO dates, or measurements like "2000毫米") · 3 a bare "XX大奖赛" (resolved against the sentence / context year)
+  // · 4 entity names
+  const Y = "(?:19[5-9]\\d|20[01]\\d|202[0-6])";
+  const UNIT = "毫米|米|转|公里|千米|公斤|千克|kg|cc|rpm|马力|亿|万|分|圈|场|次|名|位|号|秒|小时|km|个|支|人|匹|台|辆|%";
+  const re = new RegExp(`(${Y}\\s?年\\s?(?:${gpAlt})大奖赛)|((?<![\\d.,:/A-Za-z-])${Y}(?![\\d.,]\\d|[\\d]|[-/]\\d|s(?![A-Za-z])|\\s?(?:${UNIT})))|((?:${gpAlt})大奖赛)|(${keys.join("|")})`, "g");
   built = { re, map };
   builtAt = Date.now();
   return built;
@@ -102,30 +111,58 @@ function dictionary() {
 const gpByZh = () => new Map(Object.entries(GP_ZH).map(([id, zh]) => [zh, id]));
 const roundOf = (year: number, gp: string) => all<any>("select round from race where year = ? and grand_prix_id = ?", year, gp)[0]?.round as number | undefined;
 
-/** Turn plain Chinese prose into text with hover-card links for every year / driver / team / circuit it mentions. */
+/** Turn plain Chinese prose into text with hover-card links for every year / driver / team / circuit / race it mentions. */
 /** `skipRace` = "YYYY/R" of the page's own race so it does not link to itself. */
-export function Linked({ text, skip, skipRace }: { text: string; skip?: string; skipRace?: string }) {
+/** `year` = the page / block's year context (user rule: a click lands on the most specific unit): drivers / teams /
+ *  circuits open their ?year= slice, and a bare "XX大奖赛" opens that year's race. A year written in the same sentence
+ *  ("2008年的首届新加坡大奖赛") wins over the context year for the race. */
+export function Linked({ text, skip, skipRace, year }: { text: string; skip?: string; skipRace?: string; year?: number | null }) {
+  return <LinkedParts parts={linkParts(text, { skip, skipRace, year })} />;
+}
+
+/** One piece of linkified prose: plain text, or a link (`href` set) to an entity / race, or a glossary term. */
+export type LinkPart = { t: string; kind?: Kind | "term"; id?: string; href?: string; year?: number | null; term?: TermDef };
+
+/**
+ * The tokenizer behind <Linked>, as data — so client components that receive prose from an API (the timing viewer's
+ * crib cards) can render the same links (see LinkedParts, which is safe to import client-side via its own file).
+ */
+export function linkParts(text: string, { skip, skipRace, year }: { skip?: string; skipRace?: string; year?: number | null } = {}): LinkPart[] {
   const { re, map } = dictionary();
-  const out: React.ReactNode[] = [];
-  let last = 0, m: RegExpExecArray | null, n = 0;
+  const out: LinkPart[] = [];
+  let last = 0, m: RegExpExecArray | null;
   re.lastIndex = 0;
   const seen = new Set<string>();
+  let sentenceYear: number | null = null, scan = 0;
+  const raceLink = (y: number, gpZh: string, label: string): LinkPart | null => {
+    const gp = gpByZh().get(gpZh);
+    const r = gp ? roundOf(y, gp) : undefined;
+    if (!r || `${y}/${r}` === skipRace || seen.has(`r${y}/${r}`)) return null;
+    seen.add(`r${y}/${r}`);
+    return { t: label, kind: "race", id: `${y}-${r}`, href: `/races/${y}/${r}` };
+  };
   while ((m = re.exec(text))) {
-    const [whole, race, year, name] = m;
-    let node: React.ReactNode = null;
+    const [whole, race, yearM, gpBare, name] = m;
+    // a sentence boundary since the last match forgets the sentence's year
+    if (/[。！？；\n]/.test(text.slice(scan, m.index))) sentenceYear = null;
+    scan = m.index + whole.length;
+    let node: LinkPart | null = null;
     if (race) {
       const y = +race.slice(0, 4);
-      const gpZh = race.slice(5, -3);
-      const gp = gpByZh().get(gpZh);
-      const r = gp ? roundOf(y, gp) : undefined;
-      node = r && `${y}/${r}` !== skipRace ? <EntityLink key={n++} kind="year" id={String(y)} href={`/races/${y}/${r}`} className="ilink">{whole}</EntityLink> : null;
-    } else if (year) {
-      const y = +year;
+      sentenceYear = y;
+      node = raceLink(y, race.replace(/^\d{4}\s?年\s?/, "").slice(0, -3), whole);
+    } else if (yearM) {
+      const y = +yearM;
+      sentenceYear = y;
       // each year once per paragraph
-      if (y >= 1950 && y <= 2026 && !seen.has("y" + y)) {
+      // (`skip` may also be the page's own year, e.g. on its season page)
+      if (y >= 1950 && y <= 2026 && yearM !== skip && !seen.has("y" + y)) {
         seen.add("y" + y);
-        node = <EntityLink key={n++} kind="year" id={year} className="ilink">{year}</EntityLink>;
+        node = { t: yearM, kind: "year", id: yearM, href: `/seasons/${yearM}` };
       }
+    } else if (gpBare) {
+      const y = sentenceYear ?? year;
+      node = y ? raceLink(y, gpBare.slice(0, -3), whole) : null;
     } else if (name) {
       const t = map.get(name);
       // link each entity once per paragraph, and never the page's own subject
@@ -136,18 +173,18 @@ export function Linked({ text, skip, skipRace }: { text: string; skip?: string; 
       if (t && !latinInside && !inFullName && t.id !== skip && !seen.has(t.kind + t.id)) {
         seen.add(t.kind + t.id);
         node = t.kind === "term"
-          ? <Term key={n++} t={terms()[t.id]}>{name}</Term>
-          : <EntityLink key={n++} kind={t.kind} id={t.id} className="ilink">{name}</EntityLink>;
+          ? { t: name, kind: "term", id: t.id, term: terms()[t.id] }
+          : { t: name, kind: t.kind, id: t.id, href: year ? `${hrefOf(t.kind, t.id)}?year=${year}` : hrefOf(t.kind, t.id), year };
       }
     }
     if (node) {
-      if (m.index > last) out.push(text.slice(last, m.index));
+      if (m.index > last) out.push({ t: text.slice(last, m.index) });
       out.push(node);
       last = m.index + whole.length;
     }
   }
-  if (last < text.length) out.push(text.slice(last));
-  return <>{out}</>;
+  if (last < text.length) out.push({ t: text.slice(last) });
+  return out;
 }
 
 /** Audit helper: every driver link a text would get via a SURNAME (not a full name), with context. */
@@ -157,7 +194,7 @@ export function surnameLinks(text: string) {
   let m: RegExpExecArray | null;
   re.lastIndex = 0;
   while ((m = re.exec(text))) {
-    const name = m[3];
+    const name = m[4];
     if (!name) continue;
     const t = map.get(name);
     if (t?.kind !== "driver" || name.includes("·")) continue;

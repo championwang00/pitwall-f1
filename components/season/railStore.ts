@@ -13,6 +13,8 @@ export type RailGroup = { id: string; title: string; from: number; to: number; h
 export type Scope = {
   /** @deprecated v5 (§0.5.6): the rail has no header any more; still accepted, never rendered. */
   header?: { title: string; sub?: string; href?: string };
+  /** the object's own home (overview, no year) as the rail's first row — drivers, teams, circuits; cars have none */
+  home?: { label: string; href: string; sub?: string };
   years?: number[];
   only?: boolean;
   rows?: Record<number, RailRow>;
@@ -31,7 +33,10 @@ export type Scope = {
 
 let scope: Scope = {};
 const subs = new Set<() => void>();
+/** what the server rendered (RailScope only sets the store in an effect): hydration must see exactly this, even when the
+ *  page's RailScope effect already ran before the rail's Suspense boundary hydrated — else a hydration mismatch */
+const SERVER: Scope = {};
 export function setScope(s: Scope) { scope = s; subs.forEach((f) => f()); }
 export function useScope() {
-  return useSyncExternalStore((f) => { subs.add(f); return () => subs.delete(f); }, () => scope, () => scope);
+  return useSyncExternalStore((f) => { subs.add(f); return () => subs.delete(f); }, () => scope, () => SERVER);
 }

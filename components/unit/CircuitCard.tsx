@@ -11,25 +11,26 @@ import { flag, trackOutline } from "@/lib/assets";
  * round flag 20 + name Formula1 24/28 500, grey sub line, F1-face stats, then the race podium (PodiumCells)
  * or the official track outline as a mask. The circuit is the card's subject (no hover intro); the race / drivers are mentions.
  */
-export default function CircuitCard({ id, name, href, nameHref, country, label, tag, tagTone, date, sub, stats, podium, outline = true }: {
-  id: string; name: string; href: string; /** the name's own link (default: href) */ nameHref?: string; country?: string | null; label?: React.ReactNode; tag?: React.ReactNode; tagTone?: "red" | "ink";
+export default function CircuitCard({ id, name, href, nameHref, country, label, tag, tagTone, date, sub, stats, podium, outline = true, year, round }: {
+  id: string; name: string; href: string; year?: number; round?: number; /** the name's own link (default: href) */ nameHref?: string; country?: string | null; label?: React.ReactNode; tag?: React.ReactNode; tagTone?: "red" | "ink";
   date?: string | null; sub?: React.ReactNode; stats?: { v: React.ReactNode; k: string }[]; podium?: PodiumEntry[] | null; outline?: boolean;
 }) {
   const f = flag(country);
-  const o = outline ? trackOutline(id) : null;
+  const contextYear = year ?? (Number(/(?:[?&]year=|\/races\/)(\d{4})/.exec(nameHref ?? href)?.[1]) || undefined);
+  const o = outline ? trackOutline(id, contextYear, round) : null;
   return (
     <li className={`${u.card} ${podium?.length ? "" : u.compact} lift`}>
       <Link href={href} className="card-link" aria-label={name} tabIndex={-1} />
       <div className={`${u.body} over-link`}>
         {(label || tag || date) && (
           <span className={u.top}>
-            <span className={u.label}>{label}{tag && <em className={`${u.tag} ${tagTone === "red" ? u.tagRed : tagTone === "ink" ? u.tagInk : ""}`}>{tag}</em>}</span>
+            <span className={u.label} data-kicker>{label}{tag && <em className={`${u.tag} ${tagTone === "red" ? u.tagRed : tagTone === "ink" ? u.tagInk : ""}`}>{tag}</em>}</span>
             {date && <span className={u.pill}><Icon name={podium?.length ? "chequered-flag" : "calendar"} size={16} /><span>{date}</span></span>}
           </span>
         )}
         <span className={u.titleRow}>
           {f && <img src={f} alt="" width={20} className={u.flag} />}
-          <EntityLink kind="circuit" id={id} href={nameHref ?? href} preview={false} className={u.name}>{name}</EntityLink>
+          <EntityLink kind="circuit" id={id} href={nameHref ?? href} className={u.name}>{name}</EntityLink>
         </span>
         <span className={u.mid}>
           <span className={u.info}>

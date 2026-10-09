@@ -1,7 +1,7 @@
 import { allSeasons } from "@/lib/f1";
 import { all } from "@/lib/db";
 import { regulations } from "@/lib/content";
-import { teamColor } from "@/lib/assets";
+import { teamColor, teamColorAt } from "@/lib/assets";
 import { zhName } from "@/lib/zh";
 import { Suspense } from "react";
 import YearRail, { type RailEra } from "./YearRail";
@@ -33,7 +33,7 @@ export default function YearShell({ children }: { children: React.ReactNode }) {
       id: er.id, title: er.title, summary: er.summary ?? "", from: er.years[0], to: er.years[1],
       years: ys.map((x: any) => ({
         year: x.year,
-        color: teamColor(champTeamOf.get(x.year), "#8a8a94"),
+        color: teamColorAt(champTeamOf.get(x.year), x.year, "#8a8a94"),
         champ: surname(x.champ ?? leaders.get(x.year) ?? null),
         champTeam: x.champTeam ? zhName.team(x.champTeam) ?? x.champTeam : champTeamOf.get(x.year) ? zhName.team(champTeamOf.get(x.year)!) : null,
         champCar: champCar.get(x.year) ?? null,

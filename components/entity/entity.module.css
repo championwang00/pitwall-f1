@@ -16,24 +16,25 @@
 /* formula1.com statistics block: label (Titillium 14/16 600) over the value (Formula1 Black) */
 .stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 0 16px; margin: 0; border-top: 1px solid rgba(255,255,255,.2); max-width: 760px; }
 .stats > div { padding: 16px 0 0; display: flex; flex-direction: column; gap: 8px; }
-.stats dt { font: 600 14px/16px "Titillium Web", var(--font-cn); color: rgba(255,255,255,.72); white-space: nowrap; }
+.stats dt { font: 600 14px/16px var(--font-cn); color: rgba(255,255,255,.72); white-space: nowrap; }
 .stats dt em { font-style: normal; margin-left: 4px; opacity: .8; }
-.stats dd { margin: 0; font-family: var(--font-display); font-size: 28px; font-weight: 900; line-height: 32px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.stats dd { margin: 0; font-family: var(--font-display); font-size: 28px; font-weight: 700; /* same F1 cut as the year rail (user) */ line-height: 32px; white-space: nowrap; font-variant-numeric: tabular-nums; }
 
 /* Career strip */
-.career { overflow-x: auto; padding-bottom: 6px; }
-.cGrid { display: flex; gap: 6px; padding: 4px; }
+.career { padding-bottom: 6px; }
+/* every season wraps onto new rows — no sideways scrolling (user: 换行逻辑，不要左右滚动) */
+.cGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 6px; padding: 4px; }
 
 /* Moments / anecdotes: white formula1.com cards (radius 8) on the paper band — no rules, no accent lines */
 .mList { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 .mItem { display: grid; grid-template-columns: 92px 1fr; gap: 20px; padding: 20px 24px; background: #fff; border-radius: 8px; }
 .mYear { display: flex; flex-direction: column; gap: 6px; align-self: start; border-radius: 4px; }
-.mYear .num { font-family: var(--font-display); font-size: 24px; font-weight: 900; line-height: 28px; }
-.mYear em { font: 700 12px/16px "Titillium Web", var(--font-cn); font-style: normal; text-transform: uppercase; color: var(--mute); }
+.mYear .num { font-family: var(--num-font); font-size: 24px; font-weight: var(--num-weight); line-height: 28px; }
+.mYear em { font: 700 12px/16px var(--font-cn); font-style: normal; text-transform: uppercase; color: var(--mute); }
 .mYear:hover .num { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .mBody p { font-size: 15px; line-height: 1.8; color: #3a3a42; margin-top: 8px; }
 .src { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 8px !important; }
-.src a { font: 600 12px/16px "Titillium Web", var(--font-cn); color: var(--mute); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 2px; }
+.src a { font: 600 12px/16px var(--font-cn); color: var(--mute); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 2px; }
 .src a:hover { text-decoration-color: currentColor; }
 
 .aGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
@@ -45,9 +46,9 @@
 .side { display: flex; flex-direction: column; gap: 8px; }
 .sideBox { background: #fff; border-radius: 8px; padding: 16px 20px 20px; }
 /* box titles = formula1.com label (Titillium 12/16 700 uppercase #606066) */
-.sideBox h3 { font: 700 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; color: var(--mute); margin-bottom: 12px; }
+.sideBox h3 { font: 700 12px/16px var(--font-cn); text-transform: uppercase; color: var(--mute); margin-bottom: 12px; }
 .kv { display: grid; grid-template-columns: auto 1fr; gap: 10px 16px; font-size: 14px; margin: 0; }
-.kv dt { font: 600 14px/20px "Titillium Web", var(--font-cn); color: var(--mute); }
+.kv dt { font: 600 14px/20px var(--font-cn); color: var(--mute); }
 .kv dd { margin: 0; font-weight: 700; line-height: 20px; }
 .kv dd :global(.num) { font-family: var(--font-display); font-weight: 500; }
 
@@ -61,5 +62,5 @@
   .aGrid { grid-template-columns: 1fr; }
   .twoCol { grid-template-columns: 1fr; gap: 32px; }
 }
-.srcInline { margin-left: 6px; font: 600 12px/16px "Titillium Web", var(--font-cn); color: var(--mute); text-decoration: underline; text-underline-offset: 2px; text-decoration-color: var(--line); }
+.srcInline { margin-left: 6px; font: 600 12px/16px var(--font-cn); color: var(--mute); text-decoration: underline; text-underline-offset: 2px; text-decoration-color: var(--line); }
 .srcInline:hover { text-decoration-color: currentColor; }

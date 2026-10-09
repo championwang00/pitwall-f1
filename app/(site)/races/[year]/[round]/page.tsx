@@ -3,15 +3,15 @@ import { notFound } from "next/navigation";
 import { ViewTransition } from "react";
 import r from "./race.module.css";
 import e from "@/components/entity/entity.module.css";
-import { getRaceByYearRound, raceResults, raceData, neighbours, chassisForTeamYear, driverStandingsAfter, circuitRaces } from "@/lib/f1";
-import { seasonSchedule } from "@/lib/schedule";
+import { getRaceByYearRound, raceResults, raceData, neighbours, driverStandingsAfter, circuitRaces } from "@/lib/f1";
 import { momentsFor } from "@/lib/content";
-import { teamColor, flag, raceCard, trackMap, driverPortrait } from "@/lib/assets";
-import { gpZh } from "@/lib/names";
+import { teamColor, teamColorAt, raceCard } from "@/lib/assets";
+import { gpZh, gapZh } from "@/lib/names";
 import { isLight } from "@/lib/color";
-import { bilingual, wikiMap } from "@/lib/wiki";
+import { bilingualFast, wikiMap } from "@/lib/wiki";
 import { drivers as dContent } from "@/lib/content";
-import { trackShape } from "@/lib/tracks";
+import { circuitImage } from "@/lib/circuitImage";
+import { cornerLayer } from "@/lib/corners";
 import TrackField from "@/components/entity/TrackField";
 import { zhName } from "@/lib/zh";
 import TalkingPoints from "@/components/entity/TalkingPoints";
@@ -26,7 +26,8 @@ import Icon from "@/components/ui/Icon";
 import { PodiumCells } from "@/components/ui/RaceCard";
 import { raceRail } from "@/lib/railData";
 import { Linked } from "@/lib/linkify";
-import Breadcrumb from "@/components/shell/Breadcrumb";
+import ObjectHero from "@/components/entity/ObjectHero";
+import { raceHero } from "@/lib/hero";
 
 export const dynamic = "force-dynamic";
 
@@ -54,9 +55,7 @@ export default async function RacePage({ params }: { params: Promise<{ year: str
   if (!race) notFound();
   const results = raceResults(race.id);
   const quali = raceData(race.id, "QUALIFYING_RESULT");
-  const fl = raceData(race.id, "FASTEST_LAP");
   const pits = raceData(race.id, "PIT_STOP");
-  const dotd = raceData(race.id, "DRIVER_OF_THE_DAY_RESULT");
   const sprint = raceData(race.id, "SPRINT_RACE_RESULT");
   const qLaps = quali.some((q: any) => q.qualifying_laps);
   const nb = neighbours(year, round, race.circuit_id);
@@ -64,17 +63,20 @@ export default async function RacePage({ params }: { params: Promise<{ year: str
     momentsFor({ year, gp: race.grand_prix_id }).filter((m) => m.circuit !== race.circuit_id)
   );
   const uniq = [...new Map(moments.map((m) => [m.kind + m.subject + m.title, m])).values()];
-  const wiki = await bilingual(wikiMap().races[`${year}-${round}`]);
+  const wiki = await bilingualFast(wikiMap().races[`${year}-${round}`]);
   const standings = results.length ? driverStandingsAfter(year, round).slice(0, 10) : [];
   const winner = results[0];
   const podium = results.filter((x: any) => x.position_number && x.position_number <= 3);
-  const winCar = winner ? chassisForTeamYear(winner.constructor_id, year) : [];
   const photo = year >= 2026 ? raceCard(race.grand_prix_id, 1600) : null;
   const wikiImg = wiki.en?.originalimage?.source ?? wiki.en?.thumbnail?.source;
   // a real photograph for the story column: the official 2026 race card, else the article's lead image if it isn't a track diagram
   const storyImg = photo ?? (wikiImg && !/\.svg|circuit|track|layout/i.test(wikiImg) ? wikiImg : null);
-  const shape = trackShape(race.circuit_id, 300);
-  const map = trackMap(race.circuit_id, 700);
+  // picture rule (lib/circuitImage.ts): the layout raced THIS year — telemetry 3D only if it is the same layout, else F1DB's outline
+  const cpic = circuitImage(race.circuit_id, year, 300, "black"); // black outline: this page inverts track maps
+  const shape = cpic?.kind === "shape" ? cpic.shape : null;
+  const map = cpic?.kind === "svg" ? cpic.url : null;
+  // not-yet-run hero: the same corner layer as the circuit page, only on the layout raced this year (spec §0.9.5)
+  const corners = cpic?.kind === "shape" ? cornerLayer(race.circuit_id, cpic.layout) : null;
   const dz = dContent();
   const zhOf = (id: string, name: string) => zhName.driver(id) ?? name;
   const teamOf = (id: string, name?: string) => zhName.team(id) ?? name ?? id;
@@ -86,35 +88,9 @@ export default async function RacePage({ params }: { params: Promise<{ year: str
   const teamById = new Map<string, string>(results.map((x: any) => [x.driver_id, x.constructor_id]));
   const second = results.find((x: any) => x.position_number === 2);
   const third = results.find((x: any) => x.position_number === 3);
-  const pole = results.find((x: any) => x.pole_position);
-  const slam = results.find((x: any) => x.grand_slam);
-  const hatTrick = winner && !slam && winner.pole_position && winner.fastest_lap ? winner : null;
-  const poleQ = pole ? quali.find((q: any) => q.driver_id === pole.driver_id) : null;
-  const poleTime = poleQ ? poleQ.qualifying_q3 ?? poleQ.qualifying_q2 ?? poleQ.qualifying_q1 ?? poleQ.qualifying_time : null;
-  // race honours grouped by driver, so a hat-trick shows one face with all its laurels
-  const honours: { id: string; name: string; badges: React.ReactNode[] }[] = [];
-  const honour = (who: any, node: React.ReactNode) => {
-    if (!who) return;
-    let h = honours.find((x) => x.id === who.driver_id);
-    if (!h) honours.push((h = { id: who.driver_id, name: who.driverName, badges: [] }));
-    h.badges.push(node);
-  };
-  if (results.length) {
-    honour(slam, <Laurel key="slam" tone="gold" size={34} top="大满贯" bottom="杆位·冠军·最快圈·全程领跑" />);
-    honour(hatTrick, <Laurel key="hat" tone="gold" size={34} top="帽子戏法" bottom="杆位·冠军·最快圈" />);
-    honour(pole, <Laurel key="pole" tone="red" size={34} top="杆位" bottom={poleTime ?? undefined} />);
-    honour(fl[0], <Laurel key="fl" tone="purple" size={34} top="最快圈" bottom={fl[0]?.fastest_lap_time} />);
-    honour(dotd[0], <Laurel key="dotd" tone="white" size={34} top="车手之日" bottom={dotd[0]?.driver_of_the_day_percentage ? `${dotd[0].driver_of_the_day_percentage}%` : undefined} />);
-  }
   const upcoming = !results.length;
   const story = wiki.zh?.extract ?? wiki.en?.extract;
 
-  // the year rail on a race page = this circuit through time (spec §1.2 route table)
-  // ▶ timing replay: OpenF1 has every session from 2023 on
-  let replayKey: number | null = null;
-  if (year >= 2023 && !upcoming) {
-    try { replayKey = (await seasonSchedule(year)).find((x) => x.round === round)?.sessions.find((x) => x.name === "Race")?.key ?? null; } catch {}
-  }
 
   const circuitZh = zhName.circuit(race.circuit_id) ?? race.circuitName;
   const podEntry = (x: any) => ({ pos: x.position_number, driver: x.driver_id, code: x.abbreviation ?? x.driverName.split(" ").pop().slice(0, 3).toUpperCase(), time: x.gap ?? x.time ?? null, color: teamColor(x.constructor_id, "#3a3a44"), year });
@@ -124,33 +100,10 @@ export default async function RacePage({ params }: { params: Promise<{ year: str
       <div>
         <RailScope {...raceRail(year, round)} />
         {/* formula1.com race hub hero: a dark media surface (official race photo from 2026 on), official name in Formula1 caps */}
-        <section className={r.hero}>
-          {photo && <div className={r.photo} style={{ backgroundImage: `url(${photo})` }} />}
-          <div className={r.heroIn}>
-            <div className={r.text}>
-              <Breadcrumb tone="dark" flush items={[
-                { label: "历史", href: "/seasons" },
-                { label: year, kind: "year", id: String(year), href: `/seasons/${year}`, name: String(year) },
-                { label: <>第 <span className="num">{round}</span> 站 {gpZh(race.grand_prix_id)}</>, name: `第 ${round} 站 ${gpZh(race.grand_prix_id)}` },
-              ]} />
-              <h1 className={r.title}>
-                <ViewTransition name={`year-${year}`} share="morph" default="none"><span className={r.year}>{year}</span></ViewTransition>
-                <span className={r.gp}>{gpZh(race.grand_prix_id)}</span>
-              </h1>
-              <p className={r.official}>{race.official_name}</p>
-              <p className={r.meta}>
-                {flag(race.circuitCountry) && <img src={flag(race.circuitCountry)!} alt="" width={20} />}
-                <span className={r.date}>{race.date}</span>
-                <EntityLink kind="circuit" id={race.circuit_id} year={year} className="ilink">{circuitZh}</EntityLink>
-                {race.place_name !== race.circuitName && <span>{race.place_name}</span>}
-                {race.laps ? <span className={r.laps}><b>{race.laps}</b> 圈 · <b>{race.distance}</b> km</span> : null}
-              </p>
-              <p className={r.ctas}>
-                {replayKey && <Link href={`/seasons/${year}/replay?session=${replayKey}`} className="btn btn-red"><Icon name="play" size={16} />计时回放</Link>}
-                <Link href={`/races/${year}/${round}/brief`} className="btn btn-line">解说手册</Link>
-              </p>
+        <ObjectHero model={(await raceHero(year, round))!} visual={!upcoming ? (
+          <>
               {winner && (() => {
-                const tc = teamColor(winner.constructor_id, "#3a3a44");
+                const tc = teamColorAt(winner.constructor_id, year, "#3a3a44");
                 return (
                   /* the winner as a formula1.com driver card: dark team colour + DRS halftone, period portrait bleeding off the right */
                   <div className={`${r.winner} f1-surface lift`} style={{ ["--c" as any]: tc }} data-surface>
@@ -158,74 +111,38 @@ export default async function RacePage({ params }: { params: Promise<{ year: str
                     <img className={r.winFace} src={`/api/face/${winner.driver_id}?v=3&s=280&year=${year}`} alt="" />
                     <span className={`${r.winText} over-link`}>
                       <Laurel tone="white" onColor size={40} top="冠军" bottom="P1" />
-                      <EntityLink kind="driver" id={winner.driver_id} year={year} className={r.winName} preview={false}>
+                      <EntityLink kind="driver" id={winner.driver_id} year={year} className={r.winName}>
                         {zhName.driver(winner.driver_id) && <span className={r.winLatin}>{winner.driverName}</span>}
                         {zhOf(winner.driver_id, winner.driverName)}
                       </EntityLink>
+                      {/* team · car · time are the hero's tiles (spec §0.8.9): the panel adds only the grid slot */}
                       <span className={r.winDek}>
-                        <Team year={year} id={winner.constructor_id} name={teamOf(winner.constructor_id, winner.teamName)} size={20} onDark />
-                        {winCar[0] && <Link href={`/cars/${winCar[0].id}`} className="ilink">{winCar[0].name}</Link>}
                         <span>{winner.grid_position_number === 1 ? "杆位起步" : <>第 <span className="num">{winner.grid_position_text ?? "—"}</span> 位起步</>}</span>
-                        {winner.time && <span className={r.winTime}>{winner.time}</span>}
                       </span>
                     </span>
                   </div>
                 );
               })()}
               {(second || third) && <PodiumCells dark className={r.podium} podium={[second, third].filter(Boolean).map(podEntry)} />}
-              {honours.length > 0 && (
-                <div className={r.honours}>
-                  {honours.map((h) => (
-                    <div key={h.id} className={r.hon}>
-                      <span className={r.honLaurels}>{h.badges}</span>
-                      {P(h.id, h.name, 24, false, teamById.get(h.id))}
-                    </div>
-                  ))}
-                </div>
-              )}
-              {upcoming && <p className={r.upcoming}>本站尚未进行。<EntityLink kind="year" id={String(year)} className="ilink">查看 {year} 赛程与日历订阅</EntityLink></p>}
-            </div>
-            {!upcoming ? (
-              /* timing-tower style top ten (the full table is below) */
-              <div className={r.tower}>
-                <p className={r.towerHead}><span>正赛前十</span><span><b>{race.laps}</b> 圈</span></p>
-                <ol className="row-hover">
-                  {results.slice(0, 10).map((x: any) => (
-                    <li key={x.driver_id} className={r.tRow}>
-                      <span className={r.tPos}>{x.position_text}</span>
-                      {P(x.driver_id, x.driverName, 24, false, x.constructor_id)}
-                      <span className={r.tTeam}><Team year={year} id={x.constructor_id} name={teamOf(x.constructor_id, x.teamName)} size={20} badge onDark /></span>
-                      <span className={r.tGap}>{x.position_number === 1 ? x.time : x.gap ?? x.time ?? x.reason_retired}</span>
-                    </li>
-                  ))}
-                </ol>
+          </>
+        ) : (
+              <div>
+                {shape ? <div className={r.canvas}><TrackField points={shape.points} lap={20} corners={corners} legendClassName={r.cornerLegend} /></div> : map ? <img className={r.map} src={map} alt="" /> : null}
               </div>
-            ) : (
-              <div className={r.visual}>
-                {shape ? <div className={r.canvas}><TrackField points={shape.points} lap={20} /></div> : map ? <img className={r.map} src={map} alt="" /> : null}
-              </div>
-            )}
-          </div>
-        </section>
+                    )} />
 
-        {/* round pager (this season) + the race's dimensions — a light formula1.com sub-bar, F1 chevrons */}
+        {/* round pager (this season) — a light formula1.com sub-bar, F1 chevrons; the race's dimensions are the hero (spec §0.8.9) */}
         <nav className={r.cross} aria-label="分站翻页">
           <div className="wrap">
             <div className={r.crossIn}>
               {nb.prev ? (
-                <EntityLink kind="year" id={String(nb.prev.year)} href={`/races/${nb.prev.year}/${nb.prev.round}`} className={r.pg} preview={false}>
+                <EntityLink kind="race" id={`${nb.prev.year}-${nb.prev.round}`} className={r.pg}>
                   <Icon name="chevron-left" size={20} /><span><em>上一站</em><b>{gpZh(nb.prev.gp)}</b></span>
                 </EntityLink>
               ) : <span className={r.pgNone} />}
-              <div className={r.dims}>
-                <EntityLink kind="year" id={String(year)} className={r.dim}><span className="num">{year}</span> 赛季</EntityLink>
-                <EntityLink kind="circuit" id={race.circuit_id} year={year} className={r.dim}>{circuitZh}</EntityLink>
-                {winner && P(winner.driver_id, winner.driverName, 20, false, winner.constructor_id)}
-                {winner && <Team year={year} id={winner.constructor_id} name={teamOf(winner.constructor_id, winner.teamName)} size={18} />}
-                {winCar.map((c: any) => <Link key={c.id} href={`/cars/${c.id}`} className={r.dim}>{c.name}</Link>)}
-              </div>
+              <span aria-hidden />
               {nb.next ? (
-                <EntityLink kind="year" id={String(nb.next.year)} href={`/races/${nb.next.year}/${nb.next.round}`} className={`${r.pg} ${r.pgNext}`} preview={false}>
+                <EntityLink kind="race" id={`${nb.next.year}-${nb.next.round}`} className={`${r.pg} ${r.pgNext}`}>
                   <span><em>下一站</em><b>{gpZh(nb.next.gp)}</b></span><Icon name="chevron-right" size={20} />
                 </EntityLink>
               ) : <span className={r.pgNone} />}
@@ -238,6 +155,7 @@ export default async function RacePage({ params }: { params: Promise<{ year: str
           notes={notes.circuit(race.circuit_id).filter((n) => upcoming || n.year === year)}
           subject={`${year} ${gpZh(race.grand_prix_id)}`}
           title={upcoming ? "赛前解说要点" : "解说要点"}
+          year={year} skipRace={`${year}/${round}`}
         />
 
         {(story || uniq.length > 0) && (
@@ -250,11 +168,11 @@ export default async function RacePage({ params }: { params: Promise<{ year: str
                   {story ? (
                     <>
                       {!wiki.zh && wiki.en && <p className={r.enNote}>这一站暂无中文维基条目，以下为英文维基摘要</p>}
-                      <p className={r.story} lang={wiki.zh ? "zh" : "en"}><Linked text={story} skipRace={`${year}/${round}`} /></p>
+                      <p className={r.story} lang={wiki.zh ? "zh" : "en"}><Linked text={story} skipRace={`${year}/${round}`} year={year} /></p>
                       {wiki.zh && wiki.en && (
                         <details className={r.en}>
                           <summary><Icon name="chevron-down" size={16} />英文维基摘要（通常更详细）</summary>
-                          <p lang="en">{wiki.en.extract}</p>
+                          <p lang="en"><Linked text={wiki.en.extract} skipRace={`${year}/${round}`} year={year} /></p>
                         </details>
                       )}
                       <p className={e.src}>
@@ -270,7 +188,7 @@ export default async function RacePage({ params }: { params: Promise<{ year: str
                     {storyImg ? <img className={r.storyImg} src={storyImg} alt="" /> : shape ? <div className={r.canvas}><TrackField points={shape.points} lap={20} /></div> : map ? <img className={r.map} src={map} alt="" /> : null}
                     <span className={`${r.storyVisCap} over-link`}>
                       <span className="kicker">Circuit</span>
-                      <EntityLink kind="circuit" id={race.circuit_id} year={year} preview={false}>{circuitZh} · 这条赛道的全部比赛<Icon name="chevron-right" size={18} /></EntityLink>
+                      <EntityLink kind="circuit" id={race.circuit_id} year={year}>{circuitZh} · 这条赛道的全部比赛<Icon name="chevron-right" size={18} /></EntityLink>
                     </span>
                   </div>
                 )}
@@ -285,8 +203,8 @@ export default async function RacePage({ params }: { params: Promise<{ year: str
                           : m.kind === "team"
                             ? <span className={r.noteSubj}><span className="kicker">车队</span><Team year={year} id={m.subject} name={m.subjectName} size={18} /></span>
                             : <span className={r.noteSubj}><span className="kicker">赛道</span><EntityLink kind="circuit" id={m.subject} year={year} className="ilink">{m.subjectName}</EntityLink></span>}
-                        <h3 className="cn-h3">{m.title}</h3>
-                        <p><Linked text={m.text} skip={m.subject} skipRace={`${year}/${round}`} /></p>
+                        <h3 className="cn-h3"><Linked text={m.title} skip={m.subject} skipRace={`${year}/${round}`} year={year} /></h3>
+                        <p><Linked text={m.text} skip={m.subject} skipRace={`${year}/${round}`} year={year} /></p>
                         <p className={e.src}>{m.sources.map((x, j) => <a key={j} href={x.url} target="_blank" rel="noreferrer">{x.label}</a>)}</p>
                       </article>
                     ))}
@@ -322,7 +240,7 @@ export default async function RacePage({ params }: { params: Promise<{ year: str
                               </td>
                               <td className={r.hideS}><Team year={year} id={x.constructor_id} name={teamOf(x.constructor_id, x.teamName)} size={20} badge /></td>
                               <td className={`r num mute ${r.hideS}`}>{x.laps ?? ""}</td>
-                              <td className={`r ${r.time}`}>{x.position_number ? (x.position_number === 1 ? x.time : x.gap ?? x.time ?? "") : <span className={r.retired}>{RETIRED_ZH[x.reason_retired] ?? x.reason_retired ?? x.position_text}</span>}</td>
+                              <td className={`r ${r.time}`}>{x.position_number ? (x.position_number === 1 ? x.time : gapZh(x.gap) ?? x.time ?? "") : <span className={r.retired}>{RETIRED_ZH[x.reason_retired] ?? x.reason_retired ?? x.position_text}</span>}</td>
                               <td className={`r num ${r.hideS}`}>{x.grid_position_text ?? ""}{gain ? <em className={gain > 0 ? r.up : r.down}>{gain > 0 ? `+${gain}` : gain}</em> : null}</td>
                               <td className="r num">{x.points || ""}</td>
                             </tr>
@@ -343,18 +261,6 @@ export default async function RacePage({ params }: { params: Promise<{ year: str
                           </li>
                         ))}
                       </ol>
-                    </div>
-                  )}
-                  {fl[0] && (
-                    <div className={e.sideBox}>
-                      <h3>最快圈</h3>
-                      <p className={r.flLine}>{P(fl[0].driver_id, fl[0].driverName, 24, false, fl[0].constructor_id ?? teamById.get(fl[0].driver_id))}<span><b>{fl[0].fastest_lap_time}</b>{fl[0].fastest_lap_lap ? <em>第 {fl[0].fastest_lap_lap} 圈</em> : null}</span></p>
-                    </div>
-                  )}
-                  {dotd[0] && (
-                    <div className={e.sideBox}>
-                      <h3>车手之日（票选）</h3>
-                      {dotd.slice(0, 3).map((x: any) => <p key={x.driver_id} className={r.flLine}>{P(x.driver_id, x.driverName, 24, false, x.constructor_id ?? teamById.get(x.driver_id))} <b className={r.pct}>{x.driver_of_the_day_percentage}%</b></p>)}
                     </div>
                   )}
                 </aside>

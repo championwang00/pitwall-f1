@@ -1,8 +1,9 @@
 import Link from "next/link";
 import s from "./racecard.module.css";
 import Icon from "./Icon";
-import EntityLink from "@/components/entity/EntityLink";
+import EntityLink, { EntityHref } from "@/components/entity/EntityLink";
 import { flag } from "@/lib/assets";
+import { gapZh } from "@/lib/names";
 
 export type PodiumEntry = { pos: number; driver: string; code: string; time?: string | null; color: string; year?: number | null; name?: string };
 
@@ -22,7 +23,7 @@ export function PodiumCells({ podium, className, dark }: { podium: PodiumEntry[]
           <img className={`avatar ${s.face}`} src={`/api/face/${p.driver}?s=64${p.year ? `&year=${p.year}` : ""}`} alt="" width={32} height={32} loading="lazy" style={{ background: p.color }} />
           <span className={s.who}>
             <b>{p.code}</b>
-            {p.time && <span>{p.time}</span>}
+            {p.time && <span>{gapZh(p.time)}</span>}
           </span>
         </EntityLink>
       ))}
@@ -54,19 +55,19 @@ export default function RaceCard({ href, round, label, name, latin, country, off
   const f = flag(country);
   const top = (
     <span className={s.top}>
-      <span className={s.round}>{label ?? `Round ${round}`}{tag && <em className={s.tag}>{tag}</em>}{sprint && <em className={s.sprint}>冲刺</em>}</span>
+      <span className={s.round} data-kicker>{label ?? `Round ${round}`}{tag && <em className={s.tag}>{tag}</em>}{sprint && <em className={s.sprint}>冲刺</em>}</span>
       {state !== "next" && <span className={s.pill}>{state === "done" && <Icon name="chequered-flag" size={16} />}<span>{dates}</span></span>}
     </span>
   );
   const title = (
     <span className={s.titleRow}>
       {f && <img src={f} alt="" className={s.flag} />}
-      <Link href={href} className={s.name}>{name}</Link>
+      <EntityHref href={href} className={s.name}>{name}</EntityHref>
       {latin && <span className={s.latin}>{latin}</span>}
     </span>
   );
   return (
-    <li className={`${s.card} ${s[state]} lift`}>
+    <li className={`${s.card} ${s[state]} lift`} data-state={state}>
       <Link href={href} className="card-link" aria-label={name} tabIndex={-1} />
       {state === "next" && photo && (
         <>
@@ -81,7 +82,7 @@ export default function RaceCard({ href, round, label, name, latin, country, off
         {state === "next" && <span className={s.nextDate}>{dates}</span>}
         <span className={s.official}>
           {state !== "next" && official && <span>{official}</span>}
-          {circuit && <span className={s.circ}>{circuit.name}</span>}
+          {circuit && <EntityLink kind="circuit" id={circuit.id} year={Number(href.match(/^\/races\/(\d{4})\//)?.[1]) || null} className={`${s.circ} hlink`}>{circuit.name}</EntityLink>}
         </span>
         {when && <span className={s.when}>{when}</span>}
         {actions && <span className={s.actions}>{actions}</span>}

@@ -17,7 +17,7 @@
 .on { background: #fff !important; color: var(--ink) !important; height: 34px; }
 .on::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--f1-red); }
 .on i { width: 14px; height: 14px; opacity: 1; }
-.on .num { font-family: var(--font-display); font-weight: 900; font-size: 16px; }
+.on .num { font-family: var(--num-font); font-weight: var(--num-weight); font-size: 16px; }
 .on em { color: var(--mute); }
 .live { color: var(--f1-red) !important; font-weight: 700; }
 
@@ -31,7 +31,7 @@
   .on { height: 52px; }
   .on::before { top: auto; right: 0; width: auto; height: 3px; }
 }
-.eraT:hover { color: #fff; background: #1f1f29; }
+a.eraT:hover { color: #fff; background: #1f1f29; } /* only a header that links somewhere reacts (user: 不能点的，不要给 hover 态) */
 .eraT > span { overflow: hidden; text-overflow: ellipsis; }
 .eraOn { color: #fff; white-space: normal; }
 .eraOn b { color: var(--f1-red); }
@@ -72,7 +72,20 @@ a.group:hover { background: #23232d; }
 
 /* user: numbers / Latin set in the official F1 faces */
 .num { font-family: var(--font-display) !important; font-weight: 700 !important; font-size: 13px !important; letter-spacing: .02em; }
-.on .num { font-weight: 900 !important; font-size: 15px !important; }
+.on .num { font-weight: var(--num-weight) !important; font-size: 15px !important; }
 .eraT b { font-family: var(--font-display) !important; font-weight: 700 !important; font-size: 11px; }
 .y em small { font-family: var(--font-display); }
 .rail { padding-top: 10px !important; }
+
+/* object home row (overview) on top of a subject timeline */
+.home { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin: 2px 0 8px; padding: 10px 12px 10px 16px; color: #e4e4ea; border-bottom: 1px solid #26262f; position: relative; }
+.home b { font-size: 14px; font-weight: 900; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.home em { font-style: normal; font-size: 11px; color: #8a8a94; flex: none; }
+.home:hover { background: #23232d; color: #fff; }
+.homeOn { background: #fff !important; color: var(--ink) !important; }
+.homeOn::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--f1-red); }
+.homeOn em { color: var(--mute); }
+@media (max-width: 960px) { .home { margin: 0; border-bottom: 0; border-right: 1px solid #26262f; flex-direction: column; justify-content: center; } .home em { display: none; } }
+.subject .eraOn.group { background: #fff; color: var(--ink); position: relative; }
+.subject .eraOn.group::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--f1-red); }
+.subject .eraOn.group > span b { color: var(--mute) !important; }

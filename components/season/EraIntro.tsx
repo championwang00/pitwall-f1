@@ -9,12 +9,13 @@ import { all } from "@/lib/db";
 import { Linked } from "@/lib/linkify";
 import EntityLink from "@/components/entity/EntityLink";
 import Person from "@/components/entity/Person";
-import Laurel from "@/components/entity/Laurel";
+import YearSpan from "@/components/entity/YearSpan";
 import Team from "@/components/entity/Team";
 import Icon from "@/components/ui/Icon";
 import CircuitCard from "@/components/unit/CircuitCard";
 import SeasonCards from "./SeasonCards";
-import Breadcrumb from "@/components/shell/Breadcrumb";
+import ObjectHero from "@/components/entity/ObjectHero";
+import { eraHero } from "@/lib/hero";
 
 /**
  * One regulation era: what defined it, its key events, every season's champion, its circuits and dominators.
@@ -22,53 +23,24 @@ import Breadcrumb from "@/components/shell/Breadcrumb";
  * (`full` = /eras/[id]: the dominant team's colour + F1 DRS texture; inside the year hub's Era tab it is a white card,
  * since the year hero above already carries the colour).
  */
-export default function EraIntro({ era, current, full = true }: { era: Era; current?: number; full?: boolean }) {
+export default async function EraIntro({ era, current, full = true }: { era: Era; current?: number; full?: boolean }) {
   const f = eraFacts(era);
   const names = new Map(all<any>("select id, name from driver").map((d) => [d.id, d.name]));
   const list = eras();
   const i = list.findIndex((x) => x.id === era.id);
   const newer = list[i - 1], older = list[i + 1];
-  const topT = f.titlesT[0]?.[0] ?? f.winsT[0]?.id;
-  const color = teamColor(topT, "#15151e");
   const events = full ? f.events : f.events.slice(0, 4);
   const [a, b] = era.years;
   // a driver inside the era: his last season in it → that year's photo, team colour and year-context link
   const lastIn = (id: string) => all<any>("select r.year y, rr.constructor_id t from race_result rr join race r on r.id = rr.race_id where rr.driver_id = ? and r.year between ? and ? order by r.year desc, r.round desc limit 1", id, a, b)[0] as { y: number; t: string } | undefined;
   const cinfo = new Map(f.circuits.length ? all<any>(`select id, name, country_id country, place_name place from circuit where id in (${f.circuits.map(() => "?").join(",")})`, ...f.circuits.map((x: any) => x.id)).map((x) => [x.id, x]) : []);
-  const champD = f.titlesD[0], champT = f.titlesT[0];
-  const champDl = champD ? lastIn(champD[0]) : undefined;
 
   return (
     <div className={e.page}>
       <section className={e.top}>
-        <div className={full ? `${e.hero} f1-surface` : e.heroLight} style={full ? { ["--c" as any]: color } : undefined}>
-          {full && <Breadcrumb flush items={[{ label: "历史", href: "/seasons" }, { label: era.title }]} />}
-          <p className={e.kick}>Era · <span className="num">{a}–{b}</span></p>
-          <h1 className={e.title}>{era.title}</h1>
-          <p className={e.lede}><Linked text={era.summary} /></p>
-          <dl className={e.stats}>
-            <div><dd>{f.years.length}</dd><dt>Seasons</dt></div>
-            <div><dd>{f.races}</dd><dt>Races</dt></div>
-            <div><dd>{f.circuits.length}</dd><dt>Circuits</dt></div>
-            <div><dd>{f.titlesD.length}</dd><dt>World Champions</dt></div>
-          </dl>
-          {(champD || champT) && (
-            <div className={e.rulers}>
-              {champD && (
-                <span className={e.ruler}>
-                  <Laurel tone={full ? "white" : "gold"} onColor={full} size={40} top={<><span className="num">{champD[1]}</span> 冠</>} bottom="车手冠军最多" />
-                  <Person id={champD[0]} name={zhName.driver(champD[0]) ?? names.get(champD[0]) ?? champD[0]} size={40} year={champDl?.y} color={teamColor(champDl?.t, "#3a3a44")} />
-                </span>
-              )}
-              {champT && (
-                <span className={e.ruler}>
-                  <Laurel tone={full ? "white" : "gold"} onColor={full} size={40} top={<><span className="num">{champT[1]}</span> 冠</>} bottom="车队冠军最多" />
-                  <Team id={champT[0]} name={zhName.team(champT[0]) ?? champT[0]} size={full ? 32 : 28} onDark={full} />
-                </span>
-              )}
-            </div>
-          )}
-        </div>
+        {/* the era card = ObjectHero on the card surface (IA spec v6 §0.6, P0-21): the dominant team's colour, or a
+            white card inside the year hub (whose own hero already carries the colour) */}
+        <ObjectHero model={(await eraHero(era, full))!} />
       </section>
 
       <section className={e.band}>
@@ -82,8 +54,8 @@ export default function EraIntro({ era, current, full = true }: { era: Era; curr
                     <li key={k}>
                       <EntityLink kind="year" id={String(n.year)} className={e.evYear}>{n.year}</EntityLink>
                       <div>
-                        <b><Linked text={n.title} /></b>
-                        <p><Linked text={n.text} /></p>
+                        <b><Linked text={n.title} year={n.year} /></b>
+                        <p><Linked text={n.text} year={n.year} /></p>
                         {n.sources?.[0] && <a className={e.src} href={n.sources[0].url} target="_blank" rel="noreferrer">{n.sources[0].label}<Icon name="external-link" size={12} /></a>}
                       </div>
                     </li>
@@ -137,7 +109,7 @@ export default function EraIntro({ era, current, full = true }: { era: Era; curr
                   <CircuitCard key={x.id} id={x.id} name={zhName.circuit(x.id) ?? ci?.name ?? x.id} href={`/circuits/${x.id}`} country={ci?.country}
                     tag={isNew ? "首次登场" : bye ? "告别" : null} tagTone={isNew ? "red" : bye ? "ink" : undefined}
                     sub={ci?.place} outline={x.last >= 2023}
-                    stats={[{ v: x.n, k: "Races" }, { v: x.first === x.last ? x.first : `${x.first}–${x.last}`, k: "Seasons" }]} />
+                    stats={[{ v: x.n, k: "场次" }, { v: <YearSpan from={x.first} to={x.last} />, k: "年份" }]} />
                 );
               })}
             </ul>
@@ -146,8 +118,8 @@ export default function EraIntro({ era, current, full = true }: { era: Era; curr
       )}
 
       <nav className={`wrap ${e.pager}`}>
-        {older ? <Link href={`/eras/${older.id}`} className={e.pg}><Icon name="arrow-left" size={20} /><span><em className="num">{older.years[0]}–{older.years[1]}</em><b>{older.title}</b></span></Link> : <span />}
-        {newer ? <Link href={`/eras/${newer.id}`} className={`${e.pg} ${e.pgNext}`}><span><em className="num">{newer.years[0]}–{newer.years[1]}</em><b>{newer.title}</b></span><Icon name="arrow-right" size={20} /></Link> : <span />}
+        {older ? <EntityLink kind="era" id={older.id} className={e.pg}><Icon name="arrow-left" size={20} /><span><em className="num">{older.years[0]}–{older.years[1]}</em><b>{older.title}</b></span></EntityLink> : <span />}
+        {newer ? <EntityLink kind="era" id={newer.id} className={`${e.pg} ${e.pgNext}`}><span><em className="num">{newer.years[0]}–{newer.years[1]}</em><b>{newer.title}</b></span><Icon name="arrow-right" size={20} /></EntityLink> : <span />}
       </nav>
     </div>
   );

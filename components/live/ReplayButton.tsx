@@ -5,12 +5,14 @@ import { REPLAY_EVENT } from "./replay";
 
 /**
  * ▶ for one session. On a page with a timing panel it switches the page's timing panel and scrolls to it (the panel cancels the event);
- * anywhere else, or for a session the panel doesn't hold, it is a plain link to the year hub's 回放 tab (v5 §0.5.5).
+ * anywhere else, or for a session the panel doesn't hold, it is a plain link to that race's replay page
+ * /races/Y/R/replay?session=K (v5.1). Without `round` it links the season's 回放 index, which redirects to the owner race.
  */
-export default function ReplayButton({ sessionKey, year, className, title, children }: {
-  sessionKey: number; year?: number; className?: string; title?: string; children?: React.ReactNode;
+export default function ReplayButton({ sessionKey, year, round, className, title, children }: {
+  sessionKey: number; year?: number; round?: number; className?: string; title?: string; children?: React.ReactNode;
 }) {
-  const href = `/seasons/${year ?? new Date().getUTCFullYear()}/replay?session=${sessionKey}`;
+  const y = year ?? new Date().getUTCFullYear();
+  const href = round ? `/races/${y}/${round}/replay?session=${sessionKey}` : `/seasons/${y}/replay?session=${sessionKey}`;
   return (
     <a
       href={href}

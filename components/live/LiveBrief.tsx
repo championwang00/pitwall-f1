@@ -5,8 +5,10 @@ import { useEffect, useState } from "react";
 import s from "./live.module.css";
 import EntityLink from "@/components/entity/EntityLink";
 import Person from "@/components/entity/Person";
+import LinkedParts from "@/components/entity/LinkedParts";
+import type { LinkPart } from "@/lib/linkify";
 
-type Pt = { tag: string; title: string; text: string; src: string | null };
+type Pt = { tag: string; title: string; text: string; src: string | null; titleParts?: LinkPart[]; textParts?: LinkPart[] };
 type Rec = { starts: number; wins: number; pods: number; poles: number; best: { pos: number; year: number } | null; last: { pos: number | null; pt: string; year: number } | null };
 type D = { id: string; name: string; zh: string; rec: Rec | null; points: Pt[] } | null;
 type Data = { circuit: string; circuitZh: string; circuitPoints: Pt[]; drivers: Record<string, D> };
@@ -20,9 +22,9 @@ export default function LiveBrief({ circuit, a, b, year }: { circuit: string | u
     if (!circuit) return;
     const acr = [a, b].filter(Boolean).join(",");
     let alive = true;
-    preparedJSON(`/api/talk?circuit=${circuit}&acr=${acr}`).then((r) => { if (alive && r.ok) setData(r.data as Data); }).catch(() => {});
+    preparedJSON(`/api/talk?circuit=${circuit}&acr=${acr}${year ? `&year=${year}` : ""}`).then((r) => { if (alive && r.ok) setData(r.data as Data); }).catch(() => {});
     return () => { alive = false; };
-  }, [circuit, a, b]);
+  }, [circuit, a, b, year]);
   if (!data) return null;
   const card = (acr: string | undefined, side: "A" | "B") => {
     const d = acr ? data.drivers[acr] : null;
@@ -36,7 +38,7 @@ export default function LiveBrief({ circuit, a, b, year }: { circuit: string | u
         </p>
         <ul className={s.bList}>
           {d.points.map((p, i) => (
-            <li key={i}><span>{p.tag}</span><b>{p.title}</b><p>{p.text}{p.src && <a href={p.src} target="_blank" rel="noreferrer"> 来源</a>}</p></li>
+            <li key={i}><span>{p.tag}</span><b>{p.titleParts ? <LinkedParts parts={p.titleParts} /> : p.title}</b><p>{p.textParts ? <LinkedParts parts={p.textParts} /> : p.text}{p.src && <a href={p.src} target="_blank" rel="noreferrer"> 来源</a>}</p></li>
           ))}
         </ul>
       </div>
@@ -55,7 +57,7 @@ export default function LiveBrief({ circuit, a, b, year }: { circuit: string | u
         <div className={s.bCard}>
           <div className={s.bHead}><span className={s.bSide}>赛道</span><EntityLink kind="circuit" id={data.circuit} year={year} className="ilink"><b>{data.circuitZh}</b></EntityLink></div>
           <ul className={s.bList}>
-            {data.circuitPoints.map((p, i) => <li key={i}><span>{p.tag}</span><b>{p.title}</b><p>{p.text}{p.src && <a href={p.src} target="_blank" rel="noreferrer"> 来源</a>}</p></li>)}
+            {data.circuitPoints.map((p, i) => <li key={i}><span>{p.tag}</span><b>{p.titleParts ? <LinkedParts parts={p.titleParts} /> : p.title}</b><p>{p.textParts ? <LinkedParts parts={p.textParts} /> : p.text}{p.src && <a href={p.src} target="_blank" rel="noreferrer"> 来源</a>}</p></li>)}
           </ul>
         </div>
       </div>

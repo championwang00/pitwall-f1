@@ -1,9 +1,10 @@
+import Link from "next/link";
 import s from "./season.module.css";
 
 type Series = { id: string; name: string; color: string; pts: number[] };
 
 /** Cumulative-points title fight. Static SVG; each line is labelled at its end. */
-export default function PointsChart({ series, rounds, labels }: { series: Series[]; rounds: number; labels: string[] }) {
+export default function PointsChart({ series, rounds, labels, year }: { series: Series[]; rounds: number; labels: string[]; /** season → end labels open the driver's ?year= slice */ year?: number }) {
   const W = 1000, H = 360, L = 44, R = 150, T = 16, B = 34;
   const max = Math.max(1, ...series.flatMap((x) => x.pts));
   const nice = Math.pow(10, Math.floor(Math.log10(max)));
@@ -37,7 +38,10 @@ export default function PointsChart({ series, rounds, labels }: { series: Series
       {ends.map(({ sr, y: ey }) => (
         <g key={sr.id}>
           <circle cx={x(sr.pts.length - 1)} cy={y(sr.pts[sr.pts.length - 1] ?? 0)} r={3.5} fill={sr.color} />
-          <text x={x(sr.pts.length - 1) + 12} y={ey + 4} className={s.endLabel}>{sr.name} <tspan className={s.endPts}>{sr.pts[sr.pts.length - 1]}</tspan></text>
+          {/* the end label names a driver → his season (SVG <a>; no hover card — the layer reads HTML anchors only) */}
+          <Link href={`/drivers/${sr.id}${year ? `?year=${year}` : ""}`} className={s.endLink}>
+            <text x={x(sr.pts.length - 1) + 12} y={ey + 4} className={s.endLabel}>{sr.name} <tspan className={s.endPts}>{sr.pts[sr.pts.length - 1]}</tspan></text>
+          </Link>
         </g>
       ))}
     </svg>

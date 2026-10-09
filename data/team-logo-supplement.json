@@ -1,0 +1,859 @@
+{
+  "created": "2026-10-09",
+  "purpose": "Historically matched candidate logos for review before integrating into team-logos-year.json",
+  "semantics": "exact means file/page evidence supports that season; representative means suitable team-era fallback with no verified design validity; unknown means no season assignment; icon-only means low-resolution fallback and not an authentic full-size team logo. brand-only identifies a manufacturer or corporate mark and must retain a brand caption.",
+  "candidateCount": 50,
+  "candidates": [
+    {
+      "teamId": "minardi",
+      "file": "Minardi F1 Team.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Minardi_F1_Team.svg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Minardi_F1_Team.svg",
+      "author": "Unknown author",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "Vektordaten: http://www.race-inn.ch/file/minardi-flyer_v2.pdf Farbinfo: http://www.race-inn.ch/file/minardi-flyer_v2.pdf",
+      "fileDate": null,
+      "seasonSpan": {
+        "from": 1985,
+        "to": 2005,
+        "status": "representative"
+      },
+      "evidence": "Commons calls this the Minardi logo; no dated design history on file page.",
+      "displayQuality": "vector"
+    },
+    {
+      "teamId": "brawn",
+      "file": "Brawn GP logo.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/24/Brawn_GP_logo.svg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Brawn_GP_logo.svg",
+      "author": "Brawn GP",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "https://www.brandsoftheworld.com/logo/brawn-gp-0",
+      "fileDate": "2009",
+      "seasonSpan": {
+        "from": 2009,
+        "to": 2009,
+        "status": "exact"
+      },
+      "evidence": "Commons dates the team mark 2009; Brawn raced in only the 2009 season.",
+      "displayQuality": "vector"
+    },
+    {
+      "teamId": "bmw-sauber",
+      "file": "BMW Sauber F1 Team logo.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/14/BMW_Sauber_F1_Team_logo.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:BMW_Sauber_F1_Team_logo.png",
+      "author": "BMW / Sauber Motorsport",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "http://www.bmw-sauber-f1.com/de/50_paddock/teamstand/racecalendar_pdfs/de/deutschland.pdf",
+      "fileDate": "circa 2005date QS:P,+2005-00-00T00:00:00Z/9,P1480,Q5727902",
+      "seasonSpan": {
+        "from": 2006,
+        "to": 2009,
+        "status": "exact"
+      },
+      "evidence": "Commons explicitly describes the logo as used from 2005 to 2009; F1DB BMW Sauber entry spans 2006–2009.",
+      "displayQuality": "raster; check display dimensions"
+    },
+    {
+      "teamId": "pacific",
+      "file": "Logo Pacific Grand Prix.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Logo_Pacific_Grand_Prix.svg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Logo_Pacific_Grand_Prix.svg",
+      "author": "Unknown author",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "http://www.pacificgrandprix.com/index.html",
+      "fileDate": "15 January 2015",
+      "seasonSpan": {
+        "from": 1994,
+        "to": 1995,
+        "status": "representative"
+      },
+      "evidence": "Commons identifies the former Pacific Grand Prix F1 team; year-specific design use is not stated.",
+      "displayQuality": "vector"
+    },
+    {
+      "teamId": "force-india",
+      "file": "Force India.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Force_India.svg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Force_India.svg",
+      "author": "Robertay2536",
+      "license": "CC BY-SA 4.0",
+      "source": "Own work",
+      "fileDate": "30 October 2025",
+      "seasonSpan": {
+        "from": 2008,
+        "to": 2018,
+        "status": "representative"
+      },
+      "evidence": "Commons identifies Sahara Force India, but this is a 2025 redraw with no historical validity dates.",
+      "displayQuality": "vector"
+    },
+    {
+      "teamId": "hesketh",
+      "file": "Hesketh.gif",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Hesketh.gif",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Hesketh.gif",
+      "author": "Unknown author",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": ":en:Image:Hesketh.gif",
+      "fileDate": "7 September 2006 (original upload date)",
+      "seasonSpan": {
+        "from": 1974,
+        "to": 1978,
+        "status": "representative"
+      },
+      "evidence": "Commons description calls it the official Hesketh Racing logo; low-resolution GIF and no season dates.",
+      "displayQuality": "raster; check display dimensions"
+    },
+    {
+      "teamId": "honda",
+      "file": "Honda Racing F1 Team logo.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/ae/Honda_Racing_F1_Team_logo.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Honda_Racing_F1_Team_logo.png",
+      "author": "Honda",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "www.hondaracingf1.com",
+      "fileDate": "2 October 2008 (original upload date)",
+      "seasonSpan": {
+        "from": 2006,
+        "to": 2008,
+        "status": "representative"
+      },
+      "evidence": "Commons credits Honda and its team site; applies to the modern Honda Racing team, not the 1960s Honda works entry.",
+      "displayQuality": "raster; check display dimensions"
+    },
+    {
+      "teamId": "manor",
+      "file": "Logo Manor F1.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/99/Logo_Manor_F1.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Logo_Manor_F1.png",
+      "author": "Juanchocarbonero",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "Own work",
+      "fileDate": "23 November 2016",
+      "seasonSpan": {
+        "from": 2016,
+        "to": 2016,
+        "status": "representative"
+      },
+      "evidence": "Commons logo drawn in 2016; F1DB Manor constructor entry is 2016 only.",
+      "displayQuality": "raster; check display dimensions"
+    },
+    {
+      "teamId": "mercedes",
+      "file": "Logo Mercedes GP Petronas 2011.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2b/Logo_Mercedes_GP_Petronas_2011.svg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Logo_Mercedes_GP_Petronas_2011.svg",
+      "author": "Unknown author",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "http://www.mercedes-gp.com",
+      "fileDate": "19 February 2011",
+      "seasonSpan": {
+        "from": 2011,
+        "to": 2011,
+        "status": "exact"
+      },
+      "evidence": "File name explicitly says 2011 and Commons source is the then Mercedes GP site.",
+      "displayQuality": "vector"
+    },
+    {
+      "teamId": "lotus-racing",
+      "file": "Lotus F1 Racing Logo.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Lotus_F1_Racing_Logo.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Lotus_F1_Racing_Logo.jpg",
+      "author": "Mcemj",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "Own work",
+      "fileDate": "15 January 2009",
+      "seasonSpan": {
+        "from": 2010,
+        "to": 2011,
+        "status": "representative"
+      },
+      "evidence": "Commons upload precedes Lotus Racing F1 debut; design period not independently dated.",
+      "displayQuality": "raster; check display dimensions"
+    },
+    {
+      "teamId": "midland",
+      "file": "MF1.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/MF1.svg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:MF1.svg",
+      "author": "Flyz1",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "This W3C-unspecified vector image was created with Inkscape .",
+      "fileDate": "1 October 2010",
+      "seasonSpan": {
+        "from": 2006,
+        "to": 2006,
+        "status": "representative"
+      },
+      "evidence": "Commons identifies the MF1 team mark; F1DB Midland entry is 2006 only.",
+      "displayQuality": "vector"
+    },
+    {
+      "teamId": "caterham",
+      "file": "Caterham F1 Team 2014 logo.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Caterham_F1_Team_2014_logo.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Caterham_F1_Team_2014_logo.png",
+      "author": "Unknown author",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "www.Caterhamf1.com",
+      "fileDate": null,
+      "seasonSpan": {
+        "from": 2014,
+        "to": 2014,
+        "status": "exact"
+      },
+      "evidence": "File name says 2014 and Commons source is the Caterham F1 site.",
+      "displayQuality": "raster; check display dimensions"
+    },
+    {
+      "teamId": "honda",
+      "file": "Logo Honda F1 Racing.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Logo_Honda_F1_Racing.svg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Logo_Honda_F1_Racing.svg",
+      "author": "Unknown author",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "PDF",
+      "fileDate": null,
+      "seasonSpan": {
+        "from": 2006,
+        "to": 2008,
+        "status": "representative"
+      },
+      "evidence": "Alternative vector team logo; Commons source is a team PDF without a precise year span.",
+      "displayQuality": "vector"
+    },
+    {
+      "teamId": "mercedes",
+      "file": "Mercedes AMG Petronas F1 Logo.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Mercedes_AMG_Petronas_F1_Logo.svg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mercedes_AMG_Petronas_F1_Logo.svg",
+      "author": "Unknown author",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "vectorize.net",
+      "fileDate": null,
+      "seasonSpan": {
+        "from": 2012,
+        "to": 2025,
+        "status": "representative"
+      },
+      "evidence": "Commons labels Mercedes AMG Petronas F1, but provides no adoption or retirement dates.",
+      "displayQuality": "vector"
+    },
+    {
+      "teamId": "super-aguri",
+      "file": "Super Aguri logo.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Super_Aguri_logo.svg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Super_Aguri_logo.svg",
+      "author": "Flyz1",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "This W3C-unspecified vector image was created with Inkscape .",
+      "fileDate": "11 September 2011",
+      "seasonSpan": {
+        "from": 2006,
+        "to": 2008,
+        "status": "representative"
+      },
+      "evidence": "Commons identifies Super Aguri team; no specific usage years stated.",
+      "displayQuality": "vector"
+    },
+    {
+      "teamId": "tyrrell",
+      "file": "Tyrrell.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Tyrrell.svg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Tyrrell.svg",
+      "author": "Original: Unknown Author SVG: DraftSaturn15",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "Own work based on: Tyrrell.png",
+      "fileDate": "3 October 2008 (original upload date)SVG: 8 February 2022",
+      "seasonSpan": {
+        "from": 1970,
+        "to": 1998,
+        "status": "representative"
+      },
+      "evidence": "Commons calls this a vector rendering based on Tyrrell.png; no season-specific use stated.",
+      "displayQuality": "vector"
+    },
+    {
+      "teamId": "theodore",
+      "file": "Theodore logo.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Theodore_logo.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Theodore_logo.png",
+      "author": "Cassio96",
+      "license": "CC BY-SA 4.0",
+      "source": "Own work",
+      "fileDate": "9 November 2017",
+      "seasonSpan": {
+        "from": 1978,
+        "to": 1983,
+        "status": "representative"
+      },
+      "evidence": "Commons title identifies Theodore; drawn in 2017 without season validity notes.",
+      "displayQuality": "raster; check display dimensions"
+    },
+    {
+      "teamId": "racing-point",
+      "file": "BWT Racing Point logo 2020.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/d0/BWT_Racing_Point_logo_2020.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:BWT_Racing_Point_logo_2020.png",
+      "author": "RACING POINT F1 TEAM",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "https://www.racingpointf1.com/",
+      "fileDate": "27 February 2020",
+      "seasonSpan": {
+        "from": 2020,
+        "to": 2020,
+        "status": "exact"
+      },
+      "evidence": "Commons dates the mark February 2020 and links the then team site.",
+      "displayQuality": "raster; check display dimensions"
+    },
+    {
+      "teamId": "mclaren",
+      "file": "Mclaren logo (old).png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Mclaren_logo_%28old%29.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mclaren_logo_(old).png",
+      "author": "Original uploader was 718 Bot at en.wikipedia",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "http://www.statsf1.com   Transferred from en.wikipedia",
+      "fileDate": "3 October 2008 (original upload date)",
+      "seasonSpan": {
+        "from": null,
+        "to": null,
+        "status": "unknown"
+      },
+      "evidence": "Commons labels it old, but provides no defensible exact season interval.",
+      "displayQuality": "raster; check display dimensions"
+    },
+    {
+      "teamId": "mclaren",
+      "file": "Vodafone mclaren f1 logo.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Vodafone_mclaren_f1_logo.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Vodafone_mclaren_f1_logo.jpg",
+      "author": "mc laren",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "http://www.f1racinggear.co.uk/uploads/images/vodafone_mclaren_logo-border1.jpg",
+      "fileDate": null,
+      "seasonSpan": {
+        "from": null,
+        "to": null,
+        "status": "unknown"
+      },
+      "evidence": "Sponsorship version; Commons page does not establish precise debut and retirement seasons.",
+      "displayQuality": "raster; check display dimensions"
+    },
+    {
+      "teamId": "tyrrell",
+      "file": "Tyrrell.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Tyrrell.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Tyrrell.png",
+      "author": "Original uploader was 718 Bot at en.wikipedia",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "www.f1ultra.pl   Transferred from en.wikipedia",
+      "fileDate": "3 October 2008 (original upload date)",
+      "seasonSpan": {
+        "from": 1970,
+        "to": 1998,
+        "status": "representative"
+      },
+      "evidence": "Alternative original raster for Tyrrell.svg; no season-specific use stated.",
+      "displayQuality": "raster; check display dimensions"
+    },
+    {
+      "teamId": "arrows",
+      "file": "Arrows Grand Prix logo.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/62/Arrows_Grand_Prix_logo.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Arrows_Grand_Prix_logo.png",
+      "author": "Arrows Grand Prix International",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "https://www.formula1.it/scuderia/7/arrows-grand-prix-international",
+      "fileDate": "3 August 2019",
+      "seasonSpan": {
+        "from": 1978,
+        "to": 2002,
+        "status": "representative"
+      },
+      "evidence": "Commons credits Arrows Grand Prix International, but the 2019 upload does not date historical use.",
+      "displayQuality": "raster; check display dimensions"
+    },
+    {
+      "teamId": "toyota",
+      "file": "Panasonic Toyota Racing logo.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Panasonic_Toyota_Racing_logo.svg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Panasonic_Toyota_Racing_logo.svg",
+      "author": "Panasonic Toyota Racing",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "Own work This W3C-unspecified vector image was created with Inkscape .",
+      "fileDate": "10 July 2019",
+      "seasonSpan": {
+        "from": 2002,
+        "to": 2009,
+        "status": "representative"
+      },
+      "evidence": "Commons labels Panasonic Toyota Racing and links it to Toyota F1; no design validity span given.",
+      "displayQuality": "vector"
+    },
+    {
+      "teamId": "williams",
+      "file": "Logo Williams F1.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Logo_Williams_F1.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Logo_Williams_F1.png",
+      "author": "Juanchocarbonero",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "Own work",
+      "fileDate": "23 November 2016",
+      "seasonSpan": {
+        "from": null,
+        "to": null,
+        "status": "unknown"
+      },
+      "evidence": "2016 Williams mark, but its 2021 file revision changed colour; exact year span requires visual verification.",
+      "displayQuality": "raster; check display dimensions"
+    },
+    {
+      "teamId": "andrea-moda",
+      "file": "Mini Free Logo Andrea Moda.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Mini_Free_Logo_Andrea_Moda.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mini_Free_Logo_Andrea_Moda.png",
+      "author": "MiniPictures",
+      "license": "CC0 claim on Commons",
+      "source": "Dominio público",
+      "fileDate": "20 June 2017",
+      "seasonSpan": {
+        "from": 1992,
+        "to": 1992,
+        "status": "icon-only"
+      },
+      "evidence": "Commons miniature is an independently drawn, very low resolution team icon; it cannot verify the full historical logo or a precise design span.",
+      "displayQuality": "icon-only / approximately 50 px wide"
+    },
+    {
+      "teamId": "fondmetal",
+      "file": "Mini Free Logo Fondmetal.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/d/db/Mini_Free_Logo_Fondmetal.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mini_Free_Logo_Fondmetal.png",
+      "author": "MiniPictures",
+      "license": "CC0 claim on Commons",
+      "source": "Dominio público",
+      "fileDate": "20 June 2017",
+      "seasonSpan": {
+        "from": 1991,
+        "to": 1992,
+        "status": "icon-only"
+      },
+      "evidence": "Commons miniature is an independently drawn, very low resolution team icon; it cannot verify the full historical logo or a precise design span.",
+      "displayQuality": "icon-only / approximately 50 px wide"
+    },
+    {
+      "teamId": "footwork",
+      "file": "Mini Free Logo Footwork.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/Mini_Free_Logo_Footwork.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mini_Free_Logo_Footwork.png",
+      "author": "MiniPictures",
+      "license": "CC0 claim on Commons",
+      "source": "Dominio público",
+      "fileDate": "19 June 2017",
+      "seasonSpan": {
+        "from": 1991,
+        "to": 1996,
+        "status": "icon-only"
+      },
+      "evidence": "Commons miniature is an independently drawn, very low resolution team icon; it cannot verify the full historical logo or a precise design span.",
+      "displayQuality": "icon-only / approximately 50 px wide"
+    },
+    {
+      "teamId": "forti",
+      "file": "Mini Free Logo Forti.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/33/Mini_Free_Logo_Forti.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mini_Free_Logo_Forti.png",
+      "author": "MiniPictures",
+      "license": "CC0 claim on Commons",
+      "source": "Dominio público",
+      "fileDate": "19 June 2017",
+      "seasonSpan": {
+        "from": 1995,
+        "to": 1996,
+        "status": "icon-only"
+      },
+      "evidence": "Commons miniature is an independently drawn, very low resolution team icon; it cannot verify the full historical logo or a precise design span.",
+      "displayQuality": "icon-only / approximately 50 px wide"
+    },
+    {
+      "teamId": "hrt",
+      "file": "Mini Free Logo HRT.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Mini_Free_Logo_HRT.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mini_Free_Logo_HRT.png",
+      "author": "MiniPictures",
+      "license": "CC0 claim on Commons",
+      "source": "Dominio público",
+      "fileDate": "18 June 2017",
+      "seasonSpan": {
+        "from": 2010,
+        "to": 2012,
+        "status": "icon-only"
+      },
+      "evidence": "Commons miniature is an independently drawn, very low resolution team icon; it cannot verify the full historical logo or a precise design span.",
+      "displayQuality": "icon-only / approximately 50 px wide"
+    },
+    {
+      "teamId": "jordan",
+      "file": "Mini Free Logo Jordan.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Mini_Free_Logo_Jordan.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mini_Free_Logo_Jordan.png",
+      "author": "MiniPictures",
+      "license": "CC0 claim on Commons",
+      "source": "Dominio público",
+      "fileDate": "18 June 2017",
+      "seasonSpan": {
+        "from": 1991,
+        "to": 2005,
+        "status": "icon-only"
+      },
+      "evidence": "Commons miniature is an independently drawn, very low resolution team icon; it cannot verify the full historical logo or a precise design span.",
+      "displayQuality": "icon-only / approximately 50 px wide"
+    },
+    {
+      "teamId": "march",
+      "file": "Mini Free Logo March.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Mini_Free_Logo_March.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mini_Free_Logo_March.png",
+      "author": "MiniPictures",
+      "license": "CC0 claim on Commons",
+      "source": "Dominio público",
+      "fileDate": "20 June 2017",
+      "seasonSpan": {
+        "from": 1970,
+        "to": 1993,
+        "status": "icon-only"
+      },
+      "evidence": "Commons miniature is an independently drawn, very low resolution team icon; it cannot verify the full historical logo or a precise design span.",
+      "displayQuality": "icon-only / approximately 50 px wide"
+    },
+    {
+      "teamId": "toyota",
+      "file": "Mini Free Logo Toyota.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/2/29/Mini_Free_Logo_Toyota.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mini_Free_Logo_Toyota.png",
+      "author": "MiniPictures",
+      "license": "CC0 claim on Commons",
+      "source": "Dominio público",
+      "fileDate": "18 June 2017",
+      "seasonSpan": {
+        "from": 2002,
+        "to": 2009,
+        "status": "icon-only"
+      },
+      "evidence": "Commons miniature is an independently drawn, very low resolution team icon; it cannot verify the full historical logo or a precise design span.",
+      "displayQuality": "icon-only / approximately 50 px wide"
+    },
+    {
+      "teamId": "virgin",
+      "file": "Mini Free Logo Virgin.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/72/Mini_Free_Logo_Virgin.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mini_Free_Logo_Virgin.png",
+      "author": "MiniPictures",
+      "license": "CC0 claim on Commons",
+      "source": "Dominio público",
+      "fileDate": "18 June 2017",
+      "seasonSpan": {
+        "from": 2010,
+        "to": 2011,
+        "status": "icon-only"
+      },
+      "evidence": "Commons miniature is an independently drawn, very low resolution team icon; it cannot verify the full historical logo or a precise design span.",
+      "displayQuality": "icon-only / approximately 50 px wide"
+    },
+    {
+      "teamId": "marussia",
+      "file": "Mini Free Logo Marussia.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Mini_Free_Logo_Marussia.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mini_Free_Logo_Marussia.png",
+      "author": "MiniPictures",
+      "license": "CC0 claim on Commons",
+      "source": "Dominio público",
+      "fileDate": "18 June 2017",
+      "seasonSpan": {
+        "from": 2012,
+        "to": 2015,
+        "status": "icon-only"
+      },
+      "evidence": "Commons miniature is an independently drawn, very low resolution team icon; it cannot verify the full historical logo or a precise design span.",
+      "displayQuality": "icon-only / approximately 50 px wide"
+    },
+    {
+      "teamId": "midland",
+      "file": "Mini Free Logo Midland.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/6/65/Mini_Free_Logo_Midland.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mini_Free_Logo_Midland.png",
+      "author": "MiniPictures",
+      "license": "CC0 claim on Commons",
+      "source": "Dominio público",
+      "fileDate": "18 June 2017",
+      "seasonSpan": {
+        "from": 2006,
+        "to": 2006,
+        "status": "icon-only"
+      },
+      "evidence": "Commons miniature is an independently drawn, very low resolution team icon; it cannot verify the full historical logo or a precise design span.",
+      "displayQuality": "icon-only / approximately 50 px wide"
+    },
+    {
+      "teamId": "simtek",
+      "file": "Mini Free Logo Simtek.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Mini_Free_Logo_Simtek.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mini_Free_Logo_Simtek.png",
+      "author": "MiniPictures",
+      "license": "CC0 claim on Commons",
+      "source": "Dominio público",
+      "fileDate": "19 June 2017",
+      "seasonSpan": {
+        "from": 1994,
+        "to": 1995,
+        "status": "icon-only"
+      },
+      "evidence": "Commons miniature is an independently drawn, very low resolution team icon; it cannot verify the full historical logo or a precise design span.",
+      "displayQuality": "icon-only / approximately 50 px wide"
+    },
+    {
+      "teamId": "larrousse",
+      "file": "Mini Free Logo Larrousse.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Mini_Free_Logo_Larrousse.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mini_Free_Logo_Larrousse.png",
+      "author": "MiniPictures",
+      "license": "CC0 claim on Commons",
+      "source": "Dominio público",
+      "fileDate": "19 June 2017",
+      "seasonSpan": {
+        "from": 1993,
+        "to": 1995,
+        "status": "icon-only"
+      },
+      "evidence": "Commons miniature is an independently drawn, very low resolution team icon; it cannot verify the full historical logo or a precise design span.",
+      "displayQuality": "icon-only / approximately 50 px wide"
+    },
+    {
+      "teamId": "stewart",
+      "file": "Mini Free Logo Stewart.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/15/Mini_Free_Logo_Stewart.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mini_Free_Logo_Stewart.png",
+      "author": "MiniPictures",
+      "license": "CC0 claim on Commons",
+      "source": "Dominio público",
+      "fileDate": "18 June 2017",
+      "seasonSpan": {
+        "from": 1997,
+        "to": 1999,
+        "status": "icon-only"
+      },
+      "evidence": "Commons miniature is an independently drawn, very low resolution team icon; it cannot verify the full historical logo or a precise design span.",
+      "displayQuality": "icon-only / approximately 50 px wide"
+    },
+    {
+      "teamId": "benetton",
+      "file": "Mini Free Logo Benetton.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Mini_Free_Logo_Benetton.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mini_Free_Logo_Benetton.png",
+      "author": "MiniPictures",
+      "license": "CC0 claim on Commons",
+      "source": "Dominio público",
+      "fileDate": "18 June 2017",
+      "seasonSpan": {
+        "from": 1986,
+        "to": 2001,
+        "status": "icon-only"
+      },
+      "evidence": "Commons miniature is an independently drawn, very low resolution team icon; it cannot verify the full historical logo or a precise design span.",
+      "displayQuality": "icon-only / approximately 50 px wide"
+    },
+    {
+      "teamId": "bar",
+      "file": "Mini Free Logo BAR.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Mini_Free_Logo_BAR.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mini_Free_Logo_BAR.png",
+      "author": "MiniPictures",
+      "license": "CC0 claim on Commons",
+      "source": "Dominio público",
+      "fileDate": "18 June 2017",
+      "seasonSpan": {
+        "from": 1999,
+        "to": 2005,
+        "status": "icon-only"
+      },
+      "evidence": "Commons miniature is an independently drawn, very low resolution team icon; it cannot verify the full historical logo or a precise design span.",
+      "displayQuality": "icon-only / approximately 50 px wide"
+    },
+    {
+      "teamId": "caterham",
+      "file": "Mini Free Logo Caterham.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Mini_Free_Logo_Caterham.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Mini_Free_Logo_Caterham.png",
+      "author": "MiniPictures",
+      "license": "CC0 claim on Commons",
+      "source": "Dominio público",
+      "fileDate": "18 June 2017",
+      "seasonSpan": {
+        "from": 2012,
+        "to": 2014,
+        "status": "icon-only"
+      },
+      "evidence": "Commons miniature is an independently drawn, very low resolution team icon; it cannot verify the full historical logo or a precise design span.",
+      "displayQuality": "icon-only / approximately 50 px wide"
+    },
+    {
+      "teamId": "red-bull",
+      "file": "Red Bull Racing - 2005 Logo.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Red_Bull_Racing_-_2005_Logo.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Red_Bull_Racing_-_2005_Logo.png",
+      "author": "Unknown author",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "http://www.redbullracing.com/cs/Satellite/en_INT/Red-Bull-Racing/001242807156063",
+      "fileDate": "28 January 2026",
+      "seasonSpan": {
+        "from": 2005,
+        "to": 2012,
+        "status": "exact"
+      },
+      "evidence": "Commons description explicitly says the Red Bull Racing F1 logo was used 2005–2012; page cites the former team site.",
+      "displayQuality": "(500 × 124 pixels, file size: 17 KB, MIME type:  image/png )"
+    },
+    {
+      "teamId": "williams",
+      "file": "Williams F1 Team 2014 logo.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Williams_F1_Team_2014_logo.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Williams_F1_Team_2014_logo.jpg",
+      "author": "Williams",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "https://www.facebook.com/WilliamsF1Team",
+      "fileDate": "25 February 2014, 20:07:00",
+      "seasonSpan": {
+        "from": 2014,
+        "to": 2014,
+        "status": "exact"
+      },
+      "evidence": "Commons dates this Williams mark February 2014 and says it was used since 2014; only 2014 asserted here because end date is unverified.",
+      "displayQuality": "(180 × 180 pixels, file size: 3 KB, MIME type:  image/jpeg )"
+    },
+    {
+      "teamId": "williams",
+      "file": "Williams Racing 2020 logo.png",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Williams_Racing_2020_logo.png",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Williams_Racing_2020_logo.png",
+      "author": "Williams Racing",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "https://www.williamsf1.com/",
+      "fileDate": null,
+      "seasonSpan": {
+        "from": 2020,
+        "to": 2020,
+        "status": "representative"
+      },
+      "evidence": "File name gives 2020; Commons source is Williams Racing, though no date field is supplied.",
+      "displayQuality": "(409 × 30 pixels, file size: 5 KB, MIME type:  image/png )"
+    },
+    {
+      "teamId": "williams",
+      "file": "Williams Racing 2022 logo.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Williams_Racing_2022_logo.svg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Williams_Racing_2022_logo.svg",
+      "author": "Williams Racing",
+      "license": "CC BY-SA 4.0",
+      "source": "Williams Racing - extracted from https://www.williamsf1.com/",
+      "fileDate": "25 January 2022",
+      "seasonSpan": {
+        "from": 2022,
+        "to": 2022,
+        "status": "exact"
+      },
+      "evidence": "Commons explicitly calls it the 2022 logo, dates it January 2022, and cites Williams Racing.",
+      "displayQuality": "(SVG file, nominally 300 × 25 pixels, file size: 6 KB)"
+    },
+    {
+      "teamId": "williams",
+      "file": "Williams Racing Logo 2024.webp",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/Williams_Racing_Logo_2024.webp",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Williams_Racing_Logo_2024.webp",
+      "author": "Williams Grand Prix Engineering Limited",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "https://logos.fandom.com/Williams_F1_Team",
+      "fileDate": "7 February 2026",
+      "seasonSpan": {
+        "from": 2024,
+        "to": 2024,
+        "status": "representative"
+      },
+      "evidence": "Commons labels this 2024, but a 2026 upload cites a fan-maintained logo site, so exactness needs independent review.",
+      "displayQuality": "(1,163 × 408 pixels, file size: 7 KB, MIME type:  image/webp )"
+    },
+    {
+      "teamId": "williams",
+      "file": "Williams racing2025logo.jpg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Williams_racing2025logo.jpg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Williams_racing2025logo.jpg",
+      "author": "Williams racing",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "williamsf1.com",
+      "fileDate": "5 March 2025",
+      "seasonSpan": {
+        "from": 2025,
+        "to": 2025,
+        "status": "exact"
+      },
+      "evidence": "Commons describes it as the 2025 entry logo, dated March 2025, with Williams site as source.",
+      "displayQuality": "(1,339 × 283 pixels, file size: 161 KB, MIME type:  image/jpeg )"
+    },
+    {
+      "teamId": "sauber",
+      "file": "Sauber F1 Team logo.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/9/94/Sauber_F1_Team_logo.svg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:Sauber_F1_Team_logo.svg",
+      "author": "formula1.com",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "formula1.com",
+      "fileDate": "1 November 2017",
+      "seasonSpan": {
+        "from": 2017,
+        "to": 2018,
+        "status": "representative"
+      },
+      "evidence": "Commons marks it as a Sauber F1 team logo, dated November 2017, and credits formula1.com; end date not established.",
+      "displayQuality": "(SVG file, nominally 722 × 193 pixels, file size: 20 KB)"
+    },
+    {
+      "teamId": "mclaren",
+      "file": "McLaren wordmark.svg",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/0/00/McLaren_wordmark.svg",
+      "filePage": "https://commons.wikimedia.org/wiki/File:McLaren_wordmark.svg",
+      "author": "McLaren Group Limited",
+      "license": "PD-textlogo claim on Commons; trademark may still apply",
+      "source": "www.mclaren.co.uk",
+      "fileDate": "2003",
+      "seasonSpan": {
+        "from": 2003,
+        "to": null,
+        "status": "brand-only"
+      },
+      "evidence": "Commons states the McLaren corporate wordmark dates from 2003. It is a brand identifier, not an F1 team season logo.",
+      "displayQuality": "(SVG file, nominally 500 × 46 pixels, file size: 3 KB)"
+    },
+    {
+      "teamId": "red-bull",
+      "file": "oracle-red-bull-racing-2022.svg",
+      "url": "https://www.oracle.com/cmsng/90964689233832582671117078038803699493.svg?_wsbfilename=customerlogo-redbull-racing-clr.svg",
+      "localPath": "public/assets/team-logos/oracle-red-bull-racing-2022.svg",
+      "filePage": "https://www.oracle.com/customers/oracle-red-bull-racing/",
+      "author": "Oracle / Red Bull Racing",
+      "license": "Official brand/trademark asset; no free reuse license asserted",
+      "source": "https://www.oracle.com/news/announcement/oracle-and-red-bull-racing-launch-a-new-chapter-of-innovation-in-formula-one-2022-02-09/",
+      "fileDate": "2022 launch identity corroborated by contemporaneous press asset ORBR_LOGO22_POS_JPEG_Logo.jpg",
+      "seasonSpan": {
+        "from": 2022,
+        "to": 2022,
+        "status": "exact"
+      },
+      "evidence": "Oracle and Red Bull announced the Oracle Red Bull Racing identity on 9 February 2022. The contemporaneous press image https://mma.prnewswire.com/media/1743011/ORBR_LOGO22_POS_JPEG_Logo.jpg is visually identical to this transparent Oracle-hosted SVG. Vector rendered and inspected on dark background; keep original colors, do not whiten.",
+      "displayQuality": "SVG vector, transparent, 650×306 viewBox; red/yellow bulls and gray-white wordmark"
+    }
+  ]
+}

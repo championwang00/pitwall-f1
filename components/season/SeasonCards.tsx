@@ -2,7 +2,7 @@ import Link from "next/link";
 import s from "./bigcard.module.css";
 import { allSeasons } from "@/lib/f1";
 import { all } from "@/lib/db";
-import { teamColor } from "@/lib/assets";
+import { teamColor, teamColorAt } from "@/lib/assets";
 import { zhName } from "@/lib/zh";
 import DriverCard from "@/components/entity/DriverCard";
 import Team from "@/components/entity/Team";
@@ -37,7 +37,7 @@ export default function SeasonCards({ years, current, tab = "" }: { years: numbe
         if (!id) return <Link key={y.year} href={href} className={`${s.card} f1-surface lift`}><span className={s.kicker}>{y.year}</span></Link>;
         const team = teamOf(y.year, id);
         return (
-          <DriverCard key={y.year} id={id} year={y.year} color={teamColor(team, "#3a3a44")} href={href} nameHref={`/drivers/${id}?year=${y.year}`}
+          <DriverCard key={y.year} id={id} year={y.year} color={teamColorAt(team, y.year, "#3a3a44")} href={href} nameHref={`/drivers/${id}?year=${y.year}`}
             preview label={`${y.year} 赛季`} className={`${s.season} ${y.year === current ? s.cur : ""}`}
             name={zhName.driver(id) ?? names.get(id) ?? id} latin={names.get(id)}
             kicker={y.year}
@@ -47,7 +47,7 @@ export default function SeasonCards({ years, current, tab = "" }: { years: numbe
               {y.champTeam && y.champTeam !== team && <Team id={y.champTeam} name={tn(y.champTeam)} size={16} onDark year={y.year} sub="车队冠军" />}
             </div>}
             chips={y.champ && y.champTeam && y.champTeam === team ? [{ label: "双冠" }] : undefined}
-            stats={[{ v: y.races, k: "Rounds" }]} />
+            stats={[{ v: y.races, k: "分站" }]} />
         );
       })}
     </div>

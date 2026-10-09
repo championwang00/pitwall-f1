@@ -22,7 +22,7 @@ export default async function CalendarPage({ searchParams }: { searchParams: Pro
   // v5 §0.5.5: /calendar is this season only (it belongs to 实时); past seasons' calendars live in the year hub
   if (sp.year !== undefined) {
     const asked = Number(Array.isArray(sp.year) ? sp.year[0] : sp.year);
-    permanentRedirect(Number.isInteger(asked) && asked !== year && asked >= 1950 ? `/seasons/${asked}` : "/calendar");
+    permanentRedirect(Number.isInteger(asked) && asked !== year && asked >= 1950 ? `/seasons/${asked}/calendar` : "/calendar");
   }
   const sched = await seasonSchedule(year);
   const now = Date.now();
@@ -38,7 +38,7 @@ export default async function CalendarPage({ searchParams }: { searchParams: Pro
         <section className={c.pageHead}>
           <div>
             <Breadcrumb flush items={[{ label: "实时", href: "/live" }, { label: "赛历与日历订阅" }]} />
-            <p className="kicker">{year} FIA Formula One World Championship · Schedule</p>
+            <p className="kicker"><EntityLink kind="year" id={String(year)} className="hlink">{year}</EntityLink> FIA Formula One World Championship · Schedule</p>
             <h1 className={c.pageTitle}><EntityLink kind="year" id={String(year)}>{year}</EntityLink> 全年赛历 · <b>{sched.length}</b> 站</h1>
             <p className={c.sub}>所有时间按你所在时区显示</p>
           </div>
@@ -65,7 +65,7 @@ export default async function CalendarPage({ searchParams }: { searchParams: Pro
           <div className={`${s.hero} ${c.globeCard}`}>
             <div className={s.globe}><Globe stops={stops} /></div>
             <div className={s.heroIn} style={{ padding: "48px 40px" }}>
-              <p className="kicker">Season Map · {year}</p>
+              <p className="kicker">Season Map · <EntityLink kind="year" id={String(year)} className="hlink">{year}</EntityLink></p>
               <h2 className={c.globeTitle}><b>{sched.length}</b> 站，<b>{new Set(sched.map((r) => r.country)).size}</b> 个国家</h2>
               <p className={s.dek}>红线是已经跑完的行程，虚线是接下来的路。拖动地球查看。</p>
             </div>

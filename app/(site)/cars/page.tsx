@@ -2,7 +2,7 @@ import { ViewTransition } from "react";
 import s from "@/components/index/index.module.css";
 import { all } from "@/lib/db";
 import { cars as carContent } from "@/lib/content";
-import { teamCar, teamColor, TEAMS_2026 } from "@/lib/assets";
+import { teamColorAt, TEAMS_2026 } from "@/lib/assets";
 import { TEAM_ZH } from "@/lib/names";
 import { zhName } from "@/lib/zh";
 import { Linked } from "@/lib/linkify";
@@ -12,6 +12,7 @@ import RailScope from "@/components/season/RailScope";
 import Breadcrumb from "@/components/shell/Breadcrumb";
 import YearCarsGrid from "@/components/unit/YearCarsGrid";
 import CarCard, { carPicture } from "@/components/index/CarCard";
+import YearSpan from "@/components/entity/YearSpan";
 
 export const dynamic = "force-dynamic";
 
@@ -27,11 +28,11 @@ export default async function CarsIndex({ searchParams }: { searchParams: Promis
   const classics = ids.filter((id) => meta.get(id)?.y !== 2026).sort((a, b) => (meta.get(a)?.y ?? 0) - (meta.get(b)?.y ?? 0));
   const card = (id: string) => {
     const m = meta.get(id);
-    const official = m?.y === 2026 && TEAMS_2026[m.team as keyof typeof TEAMS_2026] ? teamCar(m.team, 700) : null;
+    const official = m?.y === 2026 && !!TEAMS_2026[m.team as keyof typeof TEAMS_2026];
     return (
       <CarCard key={id} id={id} name={m?.name ?? id} team={m?.team} teamName={m?.team ? zhName.team(m.team) ?? TEAM_ZH[m.team] ?? m.team : null}
-        color={teamColor(m?.team, "#3a3a44")} year={m?.y} img={official ?? carPicture(id, m?.team)} photo={!official} morph={official ? `car-${m.team}` : undefined}
-        summary={<Linked text={cc[id].summary} skip={m?.team} />} />
+        color={teamColorAt(m?.team, m?.y, "#3a3a44")} year={m?.y} pic={carPicture(id)} morph={official ? `car-${m.team}` : undefined}
+        summary={<Linked text={cc[id].summary} skip={m?.team} year={m?.y} />} />
     );
   };
   return (
@@ -42,14 +43,14 @@ export default async function CarsIndex({ searchParams }: { searchParams: Promis
             {year ? <Breadcrumb flush items={[{ label: "赛车", href: "/cars" }, { label: year, kind: "year", name: String(year) }]} /> : null}
             <p className="kicker">Cars</p>
             <h1 className={s.h1}>赛车</h1>
-            <p className={s.lede}>赛车挂在「车队 × 年份」上：每支车队每年至少一台底盘。这里是 2026 年的 11 台新规赛车，以及改变过 F1 的经典赛车；其余 1100 多台可从车队页的年份表进入。</p>
+            <p className={s.lede}>赛车挂在「车队 × 年份」上：每支车队每年至少一台底盘。这里是 <YearSpan from={2026} /> 年的 11 台新规赛车，以及改变过 F1 的经典赛车；其余 1100 多台可从车队页的年份表进入。</p>
           </div>
         </header>
         <RailScope labels="champCar" pattern="/cars?year={y}" header={{ title: "赛车索引" }} current={year ?? null} />
         <section className="band band-paper" style={{ paddingTop: 16 }}>
           <div className="wrap">
-            {sliced ? <YearCarsGrid year={sliced} /> : <>
-            <div className="sec-head"><div><p className="kicker">Season 2026</p><h2 className="cn-h2">2026 新规赛车</h2></div><span className="sub">更小、更轻，前后翼可在直道 / 弯道模式间切换</span></div>
+            {sliced ? <YearCarsGrid year={sliced} kicker="Season" /> : <>
+            <div className="sec-head"><div><p className="kicker">Season <YearSpan from={2026} /></p><h2 className="cn-h2"><YearSpan from={2026} /> 新规赛车</h2></div><span className="sub">更小、更轻，前后翼可在直道 / 弯道模式间切换</span></div>
             <div className={s.carGrid}>{current.map(card)}</div>
             </>}
           </div>

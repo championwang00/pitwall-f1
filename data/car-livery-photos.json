@@ -1,0 +1,387 @@
+{
+  "red-bull-rb18@2022:1": {
+    "url": "/assets/liveries/rb18-2022-r01.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R01_BahrainGP/MaxVerstappen/SI202203200236.jpg",
+    "caption": "2022 年巴林大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R01_BahrainGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true
+    }
+  },
+  "red-bull-rb18@2022:2": {
+    "url": "/assets/liveries/rb18-2022-r02.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R02_SaudiArabianGP/MaxVerstappen/SI202203270662.jpg",
+    "caption": "2022 年沙特阿拉伯大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R02_SaudiArabianGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true
+    }
+  },
+  "red-bull-rb18@2022:3": {
+    "url": "/assets/liveries/rb18-2022-r03.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R03_AustralianGP/MaxVerstappen/SI202204100300.jpg",
+    "caption": "2022 年澳大利亚大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R03_AustralianGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true
+    }
+  },
+  "red-bull-rb18@2022:4": {
+    "url": "/assets/liveries/rb18-2022-r04.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R04_EmiliaRomagnaGP/MaxVerstappen/SI202204240491.jpg",
+    "caption": "2022 年艾米利亚-罗马涅大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R04_EmiliaRomagnaGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true
+    }
+  },
+  "red-bull-rb18@2022:5": {
+    "url": "/assets/liveries/rb18-2022-r05-clear.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R05_MiamiGP/MaxVerstappen/SI202205082795.jpg",
+    "caption": "2022 年迈阿密大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R05_MiamiGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true,
+      "sourceGallery": "https://global.honda/en/F1/gallery/2022/",
+      "assetId": "SI202205082795",
+      "visualNote": "同站图库原图；RB18 前翼、尾翼与四轮完整，侧面涂装可辨。"
+    }
+  },
+  "red-bull-rb18@2022:6": {
+    "url": "/assets/liveries/rb18-2022-r06-clear.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R06_SpanishGP/MaxVerstappen/SI202205220382.jpg",
+    "caption": "2022 年西班牙大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R06_SpanishGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true,
+      "sourceGallery": "https://global.honda/en/F1/gallery/2022/",
+      "assetId": "SI202205220382",
+      "visualNote": "同站图库原图；RB18 前翼、尾翼与四轮完整，侧面涂装可辨。"
+    }
+  },
+  "red-bull-rb18@2022:7": {
+    "url": "/assets/liveries/rb18-2022-r07.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R07_MonacoGP/MaxVerstappen/SI202205290716.jpg",
+    "caption": "2022 年摩纳哥大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R07_MonacoGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true
+    }
+  },
+  "red-bull-rb18@2022:8": {
+    "url": "/assets/liveries/rb18-2022-r08.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R08_AzerbaijanGP/MaxVerstappen/SI202206130279.jpg",
+    "caption": "2022 年阿塞拜疆大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R08_AzerbaijanGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true
+    }
+  },
+  "red-bull-rb18@2022:9": {
+    "url": "/assets/liveries/rb18-2022-r09.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R09_CanadianGP/MaxVerstappen/SI202206202280.jpg",
+    "caption": "2022 年加拿大大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R09_CanadianGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true
+    }
+  },
+  "red-bull-rb18@2022:10": {
+    "url": "/assets/liveries/rb18-2022-r10.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R10_BritishGP/MaxVerstappen/SI202207030526.jpg",
+    "caption": "2022 年英国大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R10_BritishGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true
+    }
+  },
+  "red-bull-rb18@2022:11": {
+    "url": "/assets/liveries/rb18-2022-r11.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R11_AustrianGP/MaxVerstappen/SI202207100618.jpg",
+    "caption": "2022 年奥地利大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R11_AustrianGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true
+    }
+  },
+  "red-bull-rb18@2022:12": {
+    "url": "/assets/liveries/rb18-2022-r12.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R12_FrenchGP/MaxVerstappen/SI202207240848.jpg",
+    "caption": "2022 年法国大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R12_FrenchGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true
+    }
+  },
+  "red-bull-rb18@2022:13": {
+    "url": "/assets/liveries/rb18-2022-r13-clear.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R13_HungarianGP/MaxVerstappen/SI202207310377.jpg",
+    "caption": "2022 年匈牙利大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R13_HungarianGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true,
+      "sourceGallery": "https://global.honda/en/F1/gallery/2022/",
+      "assetId": "SI202207310377",
+      "visualNote": "同站图库原图；RB18 前翼、尾翼与四轮完整，侧面涂装可辨。"
+    }
+  },
+  "red-bull-rb18@2022:14": {
+    "url": "/assets/liveries/rb18-2022-r14.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R14_BelgianGP/MaxVerstappen/SI202208280789.jpg",
+    "caption": "2022 年比利时大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R14_BelgianGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true
+    }
+  },
+  "red-bull-rb18@2022:15": {
+    "url": "/assets/liveries/rb18-2022-r15.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R15_DutchGP/MaxVerstappen/SI202209040836.jpg",
+    "caption": "2022 年荷兰大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R15_DutchGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true
+    }
+  },
+  "red-bull-rb18@2022:16": {
+    "url": "/assets/liveries/rb18-2022-r16-clear.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R16_ItalianGP/MaxVerstappen/SI202209110549.jpg",
+    "caption": "2022 年意大利大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R16_ItalianGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true,
+      "sourceGallery": "https://global.honda/en/F1/gallery/2022/",
+      "assetId": "SI202209110549",
+      "visualNote": "同站图库原图；RB18 前翼、尾翼与四轮完整，侧面涂装可辨。"
+    }
+  },
+  "red-bull-rb18@2022:17": {
+    "url": "/assets/liveries/rb18-2022-r17.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R17_SingaporeGP/MaxVerstappen/SI202210020573.jpg",
+    "caption": "2022 年新加坡大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R17_SingaporeGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true
+    }
+  },
+  "red-bull-rb18@2022:18": {
+    "url": "/assets/liveries/rb18-2022-r18.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R18_JapaneseGP/MaxVerstappen/SI202210090143.jpg",
+    "caption": "2022 年日本大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R18_JapaneseGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true
+    }
+  },
+  "red-bull-rb18@2022:19": {
+    "url": "/assets/liveries/rb18-2022-r19.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R19_UnitedStatesGP/MaxVerstappen/SI202210240154.jpg",
+    "caption": "2022 年美国大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R19_UnitedStatesGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true
+    }
+  },
+  "red-bull-rb18@2022:20": {
+    "url": "/assets/liveries/rb18-2022-r20.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R20_MexicoCityGP/MaxVerstappen/SI202210300607.jpg",
+    "caption": "2022 年墨西哥城大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R20_MexicoCityGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true
+    }
+  },
+  "red-bull-rb18@2022:21": {
+    "url": "/assets/liveries/rb18-2022-r21-clear.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R21_SaoPauloGP/MaxVerstappen/SI202211130431.jpg",
+    "caption": "2022 年圣保罗大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R21_SaoPauloGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true,
+      "sourceGallery": "https://global.honda/en/F1/gallery/2022/",
+      "assetId": "SI202211130431",
+      "visualNote": "同站图库原图；RB18 前翼、尾翼与四轮完整，侧面涂装可辨。"
+    }
+  },
+  "red-bull-rb18@2022:22": {
+    "url": "/assets/liveries/rb18-2022-r22.webp",
+    "source": "https://global.honda/jp/F1/gallery/2022/img/R22_AbuDhabiGP/MaxVerstappen/SI202211202280.jpg",
+    "caption": "2022 年阿布扎比大奖赛实拍 · Honda 官方 F1 图库",
+    "author": "Honda 官方 F1 图库",
+    "license": "Copyright Honda / Red Bull Content Pool. No free license asserted.",
+    "evidence": {
+      "url": "https://global.honda/en/F1/gallery/shared/data/data_gallery_portal.js",
+      "entry": "window.galleryDataObj.y2022.R22_AbuDhabiGP.MaxVerstappen",
+      "indexTag": [
+        "MaxVerstappen",
+        "RB18"
+      ],
+      "visuallyReviewed": true
+    }
+  },
+  "alfa-romeo-c38@2019:14": {
+    "url": "/assets/liveries/special/alfa-romeo-c38-2019-r14.webp",
+    "source": "https://www.formula1.com/en/latest/article/alfas-giovinazzi-delighted-after-points-finish-at-home.4DRGyBJ2rEgjVojZ2imp9j",
+    "caption": "2019 · 2019 年蒙扎周末实拍 · Antonio Giovinazzi · 意大利三色",
+    "author": "Formula 1 / team media",
+    "license": "All rights reserved; no free license asserted",
+    "scope": "race",
+    "evidence": "图像视检（AI） F1 官方刊登的 Giovinazzi C38 单车俯侧面实拍：完整车身、绿色引擎罩、红白车侧清晰可辨。"
+  },
+  "haas-vf-25@2025:3": {
+    "url": "/assets/liveries/special/haas-vf-25-2025-r3.webp",
+    "source": "https://www.haasf1team.com/news/japanese-grand-prix-race-recap-5",
+    "caption": "2025 · 2025 年日本站实拍 · Esteban Ocon · Sakura 樱花",
+    "author": "Formula 1 / team media",
+    "license": "All rights reserved; no free license asserted",
+    "scope": "race",
+    "evidence": "图像视检（AI） Haas 官方正赛照片：单车完整侧后方视角，樱花粉色图案遍布侧箱、引擎罩和前翼，号码 31 可辨。"
+  }
+}

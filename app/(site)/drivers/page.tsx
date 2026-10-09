@@ -13,6 +13,7 @@ import { parseYear } from "@/lib/yearData";
 import RailScope from "@/components/season/RailScope";
 import Breadcrumb from "@/components/shell/Breadcrumb";
 import YearDriversGrid from "@/components/unit/YearDriversGrid";
+import YearSpan from "@/components/entity/YearSpan";
 
 export const dynamic = "force-dynamic";
 
@@ -36,13 +37,13 @@ export default async function DriversIndex({ searchParams }: { searchParams: Pro
             {year ? <Breadcrumb flush items={[{ label: "车手", href: "/drivers" }, { label: year, kind: "year", name: String(year) }]} /> : null}
             <p className="kicker">Drivers</p>
             <h1 className={s.h1}>车手</h1>
-            <p className={s.lede}>2026 赛季的 22 位车手，以及 1950 年以来全部 {rows.length} 位出赛过的车手。点进任何一位，按年份、赛道、车队展开他的全部比赛。</p>
+            <p className={s.lede}><YearSpan from={2026} /> 赛季的 22 位车手，以及 <YearSpan from={1950} /> 年以来全部 {rows.length} 位出赛过的车手。点进任何一位，按年份、赛道、车队展开他的全部比赛。</p>
           </div>
         </header>
         <RailScope labels="champ" pattern="/drivers?year={y}" header={{ title: "车手索引" }} current={year ?? null} />
         {sliced ? (
           <section className="band band-paper" style={{ paddingTop: 16 }}>
-            <div className="wrap"><YearDriversGrid year={sliced} /></div>
+            <div className="wrap"><YearDriversGrid year={sliced} kicker="Season" /></div>
           </section>
         ) : (
         <section className="band band-paper" style={{ paddingTop: 16 }}>
@@ -54,7 +55,7 @@ export default async function DriversIndex({ searchParams }: { searchParams: Pro
                 return (
                   <DriverCard key={d.driver} id={d.driver} name={meta.nameZh} latin={d.name} color={teamColor(meta.team)} morph={`driver-${d.driver}`}
                     meta={<Team id={meta.team} name={TEAMS_2026[meta.team].nameZh} size={16} onDark />}
-                    stats={[{ v: `P${d.pos}`, k: "Pos" }, { v: d.points, k: "PTS" }]} />
+                    stats={[{ v: `P${d.pos}`, k: "排名" }, { v: d.points, k: "积分" }]} />
                 );
               })}
             </div>
@@ -65,7 +66,7 @@ export default async function DriversIndex({ searchParams }: { searchParams: Pro
           <div className="wrap">
             <div className="sec-head"><h2 className="cn-h2">全部车手</h2><span className="sub">搜索中文或英文名；按年代筛选；点表头排序</span></div>
             <Explorer rows={rows} base="/drivers" faces placeholder="搜索：塞纳、Schumacher、Clark…" defaultSort="wins"
-              cols={[{ k: "titles", label: "冠军" }, { k: "wins", label: "胜" }, { k: "pods", label: "领奖台" }, { k: "poles", label: "杆位" }, { k: "starts", label: "出赛" }, { k: "pts", label: "PTS" }]}
+              cols={[{ k: "titles", label: "冠军" }, { k: "wins", label: "胜" }, { k: "pods", label: "领奖台" }, { k: "poles", label: "杆位" }, { k: "starts", label: "出赛" }, { k: "pts", label: "积分" }]}
               flags={[{ k: "champ", label: "只看世界冠军", test: "titles" }, { k: "winner", label: "只看分站冠军", test: "wins" }]} />
           </div>
         </section>

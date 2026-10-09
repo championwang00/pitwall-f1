@@ -19,14 +19,14 @@
 .nextMeta img { width: 22px; height: 15px; object-fit: cover; border-radius: 2px; }
 .count { display: flex; flex-direction: column; gap: 6px; margin-top: 28px; }
 .count > span:first-child { font-size: 13px; color: rgba(255,255,255,.7); }
-.countNum { font-family: var(--font-display); font-weight: 900; font-size: clamp(40px, 5vw, 64px); line-height: 1; font-variant-numeric: tabular-nums; }
+.countNum { font-family: var(--tech-font); font-weight: 700; font-size: clamp(40px, 5vw, 64px); line-height: 1; font-variant-numeric: tabular-nums; }
 .countUnit { font-style: normal; font-family: var(--font-cn); font-size: 14px; font-weight: 400; color: rgba(255,255,255,.6); margin: 0 12px 0 4px; }
 .nextBtns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
 
 .sessions { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1px; background: rgba(255,255,255,.1); border-radius: 10px; overflow: hidden; }
 .sessions li { display: grid; grid-template-columns: 1fr 40px 54px 54px 84px; gap: 10px; align-items: center; padding: 12px 16px; background: rgba(15,15,21,.9); font-size: 14px; }
 .sessions .dow { color: rgba(255,255,255,.55); font-size: 12px; }
-.sessions .time { font-family: var(--font-data); font-weight: 900; text-align: right; font-variant-numeric: tabular-nums; }
+.sessions .time { font-family: var(--tech-font); font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
 .sessions .race { background: var(--f1-red); }
 .sessions .past { opacity: .45; }
 .gLink { font-size: 12px; text-align: right; color: rgba(255,255,255,.7); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(255,255,255,.3); }
@@ -37,7 +37,7 @@
 .row summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 52px 120px minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1.2fr); gap: 16px; align-items: center; padding: 14px 20px; min-height: 64px; }
 .row summary::-webkit-details-marker { display: none; }
 .row summary:hover { background: #fbfaf9; }
-.rnd { font-family: var(--font-data); font-weight: 900; color: var(--mute); }
+.rnd { font-family: var(--num-font); font-weight: var(--num-weight); color: var(--mute); }
 .dates { font-family: var(--font-data); font-weight: 700; font-size: 14px; display: flex; gap: 4px; }
 .dates i { font-style: normal; color: var(--mute); }
 .gp { display: flex; align-items: center; gap: 10px; }

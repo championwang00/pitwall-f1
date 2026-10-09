@@ -8,17 +8,21 @@ import Countdown from "@/components/ui/Countdown";
 import { Clock, useClockT } from "./clock";
 import { buildModel, ENDPOINTS, offsetMinutes, standings, type Endpoint, type Model, type Raw, type SessionInfo } from "./model";
 import { CIRCUIT_ID, meetingZh, PLACE_ZH, SESSION_ZH } from "./names";
+import EntityLink, { EntityHref } from "@/components/entity/EntityLink";
+import Link from "next/link";
 import Tower from "./Tower";
+import type { CornerLayer } from "@/lib/corners";
 import LiveTrack from "./LiveTrack";
 import LiveBrief from "./LiveBrief";
 import Compare from "./Compare";
 import { Controls, Hud } from "./Controls";
 import { RaceControl, Radio, Weather } from "./Feeds";
 import { REPLAY_EVENT } from "./replay";
+import Breadcrumb, { type Crumb } from "@/components/shell/Breadcrumb";
 import s from "./live.module.css";
 
 export type SessionLite = SessionInfo & { meeting_name: string };
-export type Weekend = { meeting_key: number; meeting_name: string; circuit_short_name: string; sessions: SessionLite[] };
+export type Weekend = { meeting_key: number; meeting_name: string; circuit_short_name: string; sessions: SessionLite[]; /** f1db race page of this meeting */ race?: string | null };
 
 type Load =
   | { st: "loading" }
@@ -78,12 +82,15 @@ function TowerLive({ model, clock, a, b, onPick }: { model: Model; clock: Clock;
 /**
  * `embedded`: mounted mid-page (the /live page) rather than as the whole page — h2 title, no page min-height,
  * the keyboard shortcut only while the panel is on screen. `focus`: scroll the panel into view on mount (deep link).
+ * `crumbs`: the panel IS the page (a race's replay page, v5.1): the breadcrumb's ancestors; the panel renders them as the
+ * first thing in its block and appends 「回放 · {节次}」, which follows the session switcher. `archive`: a small link back.
+ * The weekend selector only shows when there is more than one weekend to pick from.
  */
 export default function LiveTiming({
-  weekends, initialKey, liveKey, fallbackKey, initialA, initialB, embedded = false, focus = false, id,
+  weekends, initialKey, liveKey, fallbackKey, initialA, initialB, embedded = false, focus = false, id, crumbs, archive,
 }: {
   weekends: Weekend[]; initialKey: number | null; liveKey: number | null; fallbackKey: number | null; initialA: number | null; initialB: number | null;
-  embedded?: boolean; focus?: boolean; id?: string;
+  embedded?: boolean; focus?: boolean; id?: string; crumbs?: Crumb[]; archive?: { href: string; label: string };
 }) {
   const sessions = useMemo(() => {
     const m = new Map<number, SessionLite>();
@@ -95,6 +102,7 @@ export default function LiveTiming({
   const [load, setLoad] = useState<Load>(() => (initialKey !== liveKey ? preparedReplay(initialKey) : null) ?? { st: "loading" });
   const [nonce, setNonce] = useState(0);
   const [points, setPoints] = useState<[number, number, number][] | null>(null);
+  const [corners, setCorners] = useState<CornerLayer | null>(null);
   const [ab, setAb] = useState<{ a: number | null; b: number | null; next: "a" | "b" }>({ a: initialA, b: initialB, next: "b" });
   const clock = useMemo(() => new Clock(), []);
   useEffect(() => () => clock.dispose(), [clock]);
@@ -150,7 +158,7 @@ export default function LiveTiming({
       const bad = core.find((r) => !r.ok);
       if (bad) {
         if (live && fallbackKey && fallbackKey !== session.session_key) {
-          setNotice(`${refusalText(bad.status)}。已为你切换到最近一场已结束正赛的回放，直播恢复后刷新即可。`);
+          setNotice(`${refusalText(bad.status)}。已为你切换到本站上一节已结束的回放，直播恢复后刷新即可。`);
           setKey(fallbackKey);
           return;
         }
@@ -163,7 +171,7 @@ export default function LiveTiming({
           // OpenF1 publishes the entry list ahead of time; laps only appear once cars run.
           const since = Date.now() - Date.parse(session.date_start);
           if (since > 10 * 60e3 && fallbackKey && fallbackKey !== session.session_key) {
-            setNotice("本节次已经开始，但 OpenF1 免费接口还没有返回计时数据（实时数据可能需付费授权，或存在延迟）。已切换到最近一场已结束正赛的回放，稍后刷新可重试。");
+            setNotice("本节次已经开始，但 OpenF1 免费接口还没有返回计时数据（实时数据可能需付费授权，或存在延迟）。已切换到本站上一节已结束的回放，稍后刷新可重试。");
             setKey(fallbackKey);
             return;
           }
@@ -270,8 +278,12 @@ export default function LiveTiming({
     if (!circuit) return;
     let dead = false;
     setPoints(null);
-    getJSON(`/api/track/${encodeURIComponent(circuit)}`, true).then((r) => {
-      if (!dead) setPoints(r.ok ? ((r.data as { points: [number, number, number][] }).points ?? null) : null);
+    setCorners(null);
+    getJSON(`/api/track/${encodeURIComponent(circuit)}?v=corners1`, true).then((r) => {
+      if (dead) return;
+      const d = r.ok ? (r.data as { points?: [number, number, number][]; corners?: CornerLayer | null }) : null;
+      setPoints(d?.points ?? null);
+      setCorners(d?.corners ?? null);
     });
     return () => { dead = true; };
   }, [circuit]);
@@ -319,26 +331,30 @@ export default function LiveTiming({
   return (
     <div className={`band-ink dark-res ${s.page} ${embedded ? s.embedded : ""}`} ref={root} id={id}>
       <div className="wrap">
+        {crumbs && <Breadcrumb tone="dark" flush items={[...crumbs, { label: session ? `回放 · ${SESSION_ZH[session.session_name] ?? session.session_name}` : "回放" }]} />}
         <header className={s.top}>
           <div className={s.titleBlock}>
             <p className="kicker">
-              {live ? <><span className={s.liveWord}>Live</span> · OpenF1</> : "Replay · OpenF1"}
+              {live ? <><span className={s.liveWord}>直播</span> · OpenF1</> : "回放 · OpenF1"}
             </p>
             <H className={s.h1}>
               <span className={`${s.h1Mode} ${live ? s.liveWord : ""}`}>{live ? "直播" : "回放"} ·</span>
-              {title}
+              {weekend?.race ? <EntityHref href={weekend.race} className="hlink">{title}</EntityHref> : title}
               {session && <span className={s.h1Session}>{SESSION_ZH[session.session_name] ?? session.session_name}</span>}
             </H>
             {session && (
               <p className={s.meta}>
-                {PLACE_ZH[session.circuit_short_name] ?? session.location}
+                {CIRCUIT_ID[session.circuit_short_name]
+                  ? <EntityLink kind="circuit" id={CIRCUIT_ID[session.circuit_short_name]} year={new Date(session.date_start).getUTCFullYear()} className="hlink">{PLACE_ZH[session.circuit_short_name] ?? session.location}</EntityLink>
+                  : PLACE_ZH[session.circuit_short_name] ?? session.location}
                 <span className={s.tech}>{fmtTrackDate(session.date_start, session.gmt_offset)}</span>
-                {model?.kind === "race" && model.totalLaps ? <span><b className="num">{model.totalLaps}</b> Laps</span> : null}
+                {model?.kind === "race" && model.totalLaps ? <span><b className="num">{model.totalLaps}</b> 圈</span> : null}
+                {archive && <Link href={archive.href} className={`hlink ${s.archive}`}><Icon name="chevron-left" size={14} />{archive.label}</Link>}
               </p>
             )}
           </div>
           <div className={s.pickerBlock}>
-            <label className={s.weekendSel}>
+            {weekends.length > 1 && <label className={s.weekendSel}>
               <span>分站</span>
               <span className={s.selWrap}><select
                 value={weekend?.meeting_key ?? ""}
@@ -360,7 +376,7 @@ export default function LiveTiming({
                   );
                 })}
               </select></span>
-            </label>
+            </label>}
             {weekend && (
               <div className={`seg ${s.sessSeg}`} role="group" aria-label="节次">
                 {weekend.sessions.map((x) => {
@@ -401,7 +417,7 @@ export default function LiveTiming({
         {load.st === "empty" && (
           <div className={s.state}>
             <p>这一节次在 OpenF1 中暂无计时数据。</p>
-            {fallbackKey && fallbackKey !== key && <button type="button" className="btn btn-red" onClick={() => setKey(fallbackKey)}>看最近一场正赛回放</button>}
+            {fallbackKey && fallbackKey !== key && <button type="button" className="btn btn-red" onClick={() => setKey(fallbackKey)}>看本站已结束节次的回放</button>}
           </div>
         )}
         {load.st === "waiting" && session && (
@@ -410,14 +426,14 @@ export default function LiveTiming({
             {Date.parse(session.date_start) > now
               ? <Countdown to={session.date_start} className={`num ${s.count}`} unitClassName={s.countUnit} />
               : <small className={s.stateNote}>每 15 秒自动重试。OpenF1 免费接口在直播时段可能受限或延迟。</small>}
-            {fallbackKey && <button type="button" className="btn btn-red" onClick={() => { setNotice(null); setKey(fallbackKey); }}>先看最近一场正赛回放</button>}
+            {fallbackKey && <button type="button" className="btn btn-red" onClick={() => { setNotice(null); setKey(fallbackKey); }}>先看本站已结束节次的回放</button>}
           </div>
         )}
         {load.st === "future" && session && (
           <div className={s.state}>
             <p>{meetingZh(session.meeting_name)} {SESSION_ZH[session.session_name] ?? session.session_name} 尚未开始</p>
             <Countdown to={session.date_start} className={`num ${s.count}`} unitClassName={s.countUnit} />
-            {fallbackKey && <button type="button" className="btn btn-red" onClick={() => setKey(fallbackKey)}>先看最近一场正赛回放</button>}
+            {fallbackKey && <button type="button" className="btn btn-red" onClick={() => setKey(fallbackKey)}>先看本站已结束节次的回放</button>}
           </div>
         )}
 
@@ -433,7 +449,7 @@ export default function LiveTiming({
                 <TowerLive model={model} clock={clock} a={ab.a} b={ab.b} onPick={pick} />
               </div>
               <div className={s.colTrack}>
-                <LiveTrack model={model} clock={clock} points={points} a={ab.a} b={ab.b} onPick={pick}>
+                <LiveTrack model={model} clock={clock} points={points} corners={corners} a={ab.a} b={ab.b} onPick={pick}>
                   <Hud model={model} clock={clock} />
                 </LiveTrack>
                 <Weather model={model} clock={clock} />

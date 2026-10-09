@@ -15,7 +15,8 @@ const PAGES = [
   ["/calendar", "实时", ["实时", "赛历与日历订阅"]],
   ["/seasons", "历史", null],
   ["/eras/v8-2006-2013", "历史", ["历史", "*"]],
-  ["/seasons/2024", "历史", ["历史", "2024"]],
+  ["/seasons/2024", "历史", ["历史", "2024"]], // v5.1: 总览
+  ["/seasons/2024/calendar", "历史", ["历史", "2024", "赛历"]],
   ["/seasons/2024/standings", "历史", ["历史", "2024", "积分榜"]],
   ["/seasons/1988/era", "历史", ["历史", "1988", "时代"]],
   ["/seasons/1988/circuits", "历史", ["历史", "1988", "赛道"]],
@@ -23,8 +24,11 @@ const PAGES = [
   ["/seasons/1988/teams", "历史", ["历史", "1988", "车队"]],
   ["/seasons/1988/cars", "历史", ["历史", "1988", "赛车"]],
   ["/seasons/2024/replay", "历史", ["历史", "2024", "回放"]],
-  ["/seasons/2024/replay?session={BAHRAIN}", "历史", ["历史", "2024", "回放", "巴林大奖赛 · 正赛"]],
   ["/races/2024/1", "历史", ["历史", "2024", "第 1 站 巴林大奖赛"]],
+  // v5.1: the replay is a child of its race — the race's crumb, then 「回放 · 节次」 (default 正赛)
+  ["/races/2024/1/replay", "历史", ["历史", "2024", "第 1 站 巴林大奖赛", "回放 · 正赛"]],
+  ["/races/2024/1/replay?session={BAHRAIN}", "历史", ["历史", "2024", "第 1 站 巴林大奖赛", "回放 · 正赛"]],
+  ["/races/2024/1/replay?session={BAHRAIN_Q}", "历史", ["历史", "2024", "第 1 站 巴林大奖赛", "回放 · 排位赛"]],
   ["/races/2024/1/brief", "历史", ["历史", "2024", "第 1 站 巴林大奖赛", "解说手册"]],
   ["/circuits", "赛道", null],
   ["/circuits?year=1988", "赛道", ["赛道", "1988"]],
@@ -47,19 +51,21 @@ const PAGES = [
 // [old URL, expected final path + query]
 const REDIRECTS = [
   ["/", "/live"],
-  ["/live?year=2024&session={BAHRAIN}", "/seasons/2024/replay?session={BAHRAIN}"],
-  ["/live?year=2024&session={BAHRAIN}&a=1&b=44", "/seasons/2024/replay?session={BAHRAIN}&a=1&b=44"],
+  ["/live?year=2024&session={BAHRAIN}", "/races/2024/1/replay?session={BAHRAIN}"],
+  ["/live?year=2024&session={BAHRAIN}&a=1&b=44", "/races/2024/1/replay?session={BAHRAIN}&a=1&b=44"],
   ["/live?year=2024", "/seasons/2024/replay"],
   ["/live?year=1988", "/seasons/1988"],
-  ["/live?session={BAHRAIN}", `/seasons/${YEAR}/replay?session={BAHRAIN}`],
+  ["/live?session={LATEST}", "{LATEST_REPLAY}"],
   ["/live#timing", `/seasons/${YEAR}/replay`],
   ["/brief", "{NEXT_BRIEF}"],
   ["/brief?year=2019&round=15", "/races/2019/15/brief"],
-  ["/calendar?year=1988", "/seasons/1988"],
+  ["/calendar?year=1988", "/seasons/1988/calendar"],
   [`/calendar?year=${YEAR}`, "/calendar"],
-  ["/races/2024/1/replay", "/seasons/2024/replay?session={BAHRAIN}"],
   ["/races/1988/3/replay", "/races/1988/3"],
   ["/seasons/1988/replay", "/seasons/1988"],
+  // v5.1: the season tab is an index; a session deep link there goes to the race that owns it
+  ["/seasons/2024/replay?session={BAHRAIN}", "/races/2024/1/replay?session={BAHRAIN}"],
+  ["/seasons/2024/replay?session={BAHRAIN_Q}&a=1&b=16", "/races/2024/1/replay?session={BAHRAIN_Q}&a=1&b=16"],
   ["/seasons/2024/replay?year=2019", "/seasons/2024/replay?year=2019"], // the year param is ignored, not redirected
 ];
 
@@ -91,13 +97,23 @@ async function open(path) {
   return u.pathname + u.search;
 }
 
-// a real session key: 2024 Bahrain GP race (from the 2024 calendar's first ▶) and the next race's brief
-await open("/seasons/2024");
-const bahrain = await page.evaluate(() => [...document.querySelectorAll('a[href*="/seasons/2024/replay?session="]')].map((a) => new URL(a.href).searchParams.get("session"))[0]);
-if (!bahrain) { console.log("could not find a 2024 replay session key on /seasons/2024 (OpenF1 down?)"); process.exit(2); }
+// real session keys: 2024 Bahrain GP race (the 2024 calendar's first ▶ → /races/2024/1/replay?session=K) and its
+// qualifying (from OpenF1 via the app's proxy), this season's latest ▶ on /live, and the next race's brief
+await open("/seasons/2024/calendar");
+const bahrain = await page.evaluate(() => [...document.querySelectorAll('a[href*="/races/2024/1/replay?session="]')].map((a) => new URL(a.href).searchParams.get("session"))[0]);
+if (!bahrain) { console.log("could not find a 2024 replay session key on /seasons/2024/calendar (OpenF1 down?)"); process.exit(2); }
+const bahrainQ = await page.evaluate(async (k) => {
+  const r = await fetch(`/api/openf1/sessions?session_key=${k}`).then((x) => x.json()).catch(() => []);
+  const m = r?.[0]?.meeting_key;
+  const all = m ? await fetch(`/api/openf1/sessions?meeting_key=${m}`).then((x) => x.json()).catch(() => []) : [];
+  return all.find?.((x) => x.session_name === "Qualifying")?.session_key ?? null;
+}, bahrain);
 await open("/live");
 const nextBrief = await page.evaluate(() => { const a = [...document.querySelectorAll("a")].find((x) => /^\/races\/\d+\/\d+\/brief$/.test(new URL(x.href).pathname)); return a ? new URL(a.href).pathname : null; });
-const fill = (s) => s.replaceAll("{BAHRAIN}", bahrain).replace("{NEXT_BRIEF}", nextBrief ?? "(no brief link on /live)");
+const latestReplay = await page.evaluate(() => { const a = [...document.querySelectorAll('a[href*="/replay?session="]')].filter((x) => /^\/races\/\d+\/\d+\/replay$/.test(new URL(x.href).pathname)).at(-1); return a ? new URL(a.href).pathname + new URL(a.href).search : null; });
+const latest = latestReplay ? new URL(latestReplay, BASE).searchParams.get("session") : null;
+const fill = (s) => s.replaceAll("{BAHRAIN_Q}", bahrainQ ?? "(no 2024 Bahrain qualifying key)").replaceAll("{BAHRAIN}", bahrain)
+  .replace("{NEXT_BRIEF}", nextBrief ?? "(no brief link on /live)").replace("{LATEST_REPLAY}", latestReplay ?? "(no ▶ on /live)").replace("{LATEST}", latest ?? "0");
 
 console.log(`\nS1 / S2 — ${PAGES.length} canonical pages`);
 for (const [p0, nav, trail] of PAGES) {
@@ -126,6 +142,37 @@ for (const [p0, nav, trail] of PAGES) {
   }
   if (errs.length) bad(`${p}: ${errs.join("; ")}`);
   else ok(`${p}  [${r.lit[0]}]  ${r.crumbs ? r.crumbs.join(" › ") : "—"}`);
+}
+
+console.log("\nv5.1 — the replay is a child of its race; the season tab is an index");
+{
+  await open(`/races/2024/1/replay?session=${bahrain}`);
+  await page.waitForSelector("#timing", { timeout: 60000 }).catch(() => {});
+  const r = await page.evaluate(() => ({
+    panels: document.querySelectorAll("#timing").length,
+    selects: [...document.querySelectorAll("#timing header label")].filter((l) => l.textContent.includes("分站")).length,
+    sessions: [...document.querySelectorAll('#timing [aria-label="节次"] button')].map((b) => b.textContent.trim()),
+    tabs: document.querySelectorAll('nav[aria-label$="赛季"]').length,
+    otherRounds: [...document.querySelectorAll("a[href]")].filter((a) => /^\/races\/2024\/(?!1(\/|$))\d+/.test(new URL(a.href).pathname)).length,
+    back: [...document.querySelectorAll("#timing a")].some((a) => a.textContent.includes("返回本站档案") && new URL(a.href).pathname === "/races/2024/1"),
+  }));
+  const errs = [];
+  if (r.panels !== 1) errs.push(`${r.panels} timing panels`);
+  if (r.selects) errs.push("weekend selector shown");
+  if (!r.sessions.includes("正赛") || !r.sessions.includes("排位赛")) errs.push(`sessions: ${r.sessions.join(" ")}`);
+  if (r.tabs) errs.push("year tabs on the replay page");
+  if (r.otherRounds) errs.push(`${r.otherRounds} links to other 2024 rounds`);
+  if (!r.back) errs.push("no 返回本站档案");
+  if (errs.length) bad(`/races/2024/1/replay: ${errs.join("; ")}`); else ok(`/races/2024/1/replay: one panel, sessions ${r.sessions.join(" · ")}, no weekend picker, no other rounds`);
+
+  await open("/seasons/2024/replay");
+  const i = await page.evaluate(() => ({
+    panels: document.querySelectorAll("#timing").length,
+    links: new Set([...document.querySelectorAll("a[href]")].map((a) => new URL(a.href).pathname).filter((p) => /^\/races\/2024\/\d+\/replay$/.test(p))).size,
+    seasonLinks: [...document.querySelectorAll("a[href]")].filter((a) => /^\/seasons\/\d+\/replay$/.test(new URL(a.href).pathname) && new URL(a.href).search).length,
+  }));
+  if (i.panels || !i.links) bad(`/seasons/2024/replay: ${i.panels} panels, ${i.links} race replay links`);
+  else ok(`/seasons/2024/replay: index of ${i.links} race replay pages, no panel`);
 }
 
 console.log(`\nS5 — ${REDIRECTS.length} old URLs (§0.5.5)`);

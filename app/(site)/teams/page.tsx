@@ -14,6 +14,8 @@ import { parseYear } from "@/lib/yearData";
 import RailScope from "@/components/season/RailScope";
 import Breadcrumb from "@/components/shell/Breadcrumb";
 import YearTeamsGrid from "@/components/unit/YearTeamsGrid";
+import Engine from "@/components/entity/Engine";
+import YearSpan from "@/components/entity/YearSpan";
 
 export const dynamic = "force-dynamic";
 
@@ -37,13 +39,13 @@ export default async function TeamsIndex({ searchParams }: { searchParams: Promi
             {year ? <Breadcrumb flush items={[{ label: "车队", href: "/teams" }, { label: year, kind: "year", name: String(year) }]} /> : null}
             <p className="kicker">Teams</p>
             <h1 className={s.h1}>车队</h1>
-            <p className={s.lede}>2026 赛季 11 支车队，以及 1950 年以来全部 {rows.length} 个车队名号。车队页按年份列出车手、赛车与引擎，并能按车手、赛道展开全部比赛。</p>
+            <p className={s.lede}><YearSpan from={2026} /> 赛季 11 支车队，以及 <YearSpan from={1950} /> 年以来全部 {rows.length} 个车队名号。车队页按年份列出车手、赛车与引擎，并能按车手、赛道展开全部比赛。</p>
           </div>
         </header>
         <RailScope labels="champTeam" pattern="/teams?year={y}" header={{ title: "车队索引" }} current={year ?? null} />
         {sliced ? (
           <section className="band band-paper" style={{ paddingTop: 16 }}>
-            <div className="wrap"><YearTeamsGrid year={sliced} /></div>
+            <div className="wrap"><YearTeamsGrid year={sliced} kicker="Season" /></div>
           </section>
         ) : (
         <section className="band band-paper" style={{ paddingTop: 16 }}>
@@ -54,8 +56,8 @@ export default async function TeamsIndex({ searchParams }: { searchParams: Promi
                 <TeamCard key={t.team} id={t.team} name={zhName.team(t.team) ?? TEAM_ZH[t.team] ?? t.name} latin={t.name} color={teamColor(t.team)}
                   href={`/teams/${t.team}`} year={last.year} car={teamCar(t.team, 800)} morph={`car-${t.team}`}
                   drivers={drivers.filter((d: any) => d.team === t.team).map((d: any) => ({ id: d.id, first: d.f, last: d.l }))}
-                  stats={[{ v: `P${t.pos}`, k: "Pos" }, { v: t.points, k: "PTS" }]}
-                  honour={<span className={s.teamEngine}>{ENGINE_ZH[t.engine] ?? t.engine} 动力</span>} />
+                  stats={[{ v: `P${t.pos}`, k: "排名" }, { v: t.points, k: "积分" }]}
+                  honour={<span className={s.teamEngine}><Engine id={t.engine} year={last.year} /> 动力</span>} />
               ))}
             </div>
           </div>

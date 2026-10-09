@@ -22,18 +22,20 @@ export default function NextRaceCard({ next }: { next: ScheduledRace }) {
   const dates = raceDates;
   return (
     <div className={n.nextCard}>
+      {/* the race photo IS this race: the whole card opens it (stretched .card-link; buttons / links inside keep theirs) */}
+      <Link href={`/races/${next.year}/${next.round}`} className="card-link" aria-label={gpZh(next.gp)} tabIndex={-1} />
       {raceCard(next.gp, 1600) && <img className={n.nextPhoto} src={raceCard(next.gp, 1600)!} alt="" />}
       <span className={n.nextFade} />
-      <div className={n.nextIn}>
+      <div className={`${n.nextIn} over-link`}>
         <div className={n.nextMain}>
-          <span className={n.nextRound}>Round {next.round}{next.sprint && <em>冲刺赛周末</em>}</span>
+          <span className={n.nextRound} data-kicker>Round {next.round}{next.sprint && <em>冲刺赛周末</em>}</span>
           <h3 className={n.nextTitle}>
             {flag(next.country) && <img src={flag(next.country)!} alt="" />}
-            <Link href={`/races/${next.year}/${next.round}`}>{gpZh(next.gp)}</Link>
+            <EntityLink kind="race" id={`${next.year}-${next.round}`}>{gpZh(next.gp)}</EntityLink>
           </h3>
           <p className={n.nextMeta}>
             <span className={n.nextDates}>{dates(next)}</span>
-            <EntityLink kind="circuit" id={next.circuit} href={`/races/${next.year}/${next.round}`} className={n.nextCirc}>{zhName.circuit(next.circuit) ?? next.circuitName}</EntityLink>
+            <EntityLink kind="circuit" id={next.circuit} year={next.year} className={n.nextCirc}>{zhName.circuit(next.circuit) ?? next.circuitName}</EntityLink>
             <span>{next.place}</span>
           </p>
           {nextSession && (
@@ -42,7 +44,7 @@ export default function NextRaceCard({ next }: { next: ScheduledRace }) {
               <span className={n.countSep} />
               {new Date(nextSession.start).getTime() > now
                 ? <Countdown to={nextSession.start} units="en" className={n.countNum} numClassName={n.countDigits} unitClassName={n.countUnit} />
-                : <Link href="/live" className={n.liveNow}><i />Live · 打开实时计时</Link>}
+                : <Link href="/live" className={n.liveNow}><i />直播中 · 打开实时计时</Link>}
             </div>
           )}
           <div className={n.nextBtns}>

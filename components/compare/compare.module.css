@@ -18,8 +18,8 @@
 .right .zh { flex-direction: row-reverse; }
 .zh img { width: 20px; }
 .vs { position: absolute; left: 50%; bottom: 36px; transform: translateX(-50%); z-index: 3; display: flex; align-items: center; gap: 18px; background: rgba(11,11,16,.88); padding: 12px 22px; border-radius: 999px; backdrop-filter: blur(8px); }
-.vs .num { font: 900 34px/1 var(--font-display); }
-.vs em { font-style: normal; font: 700 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; color: rgba(255,255,255,.7); white-space: nowrap; }
+.vs .num { font: var(--num-weight) 34px/1 var(--num-font); }
+.vs em { font-style: normal; font: 700 12px/16px var(--font-cn); text-transform: uppercase; color: rgba(255,255,255,.7); white-space: nowrap; }
 .vs em b { font: 500 12px/16px var(--font-display); color: #fff; }
 .picker { position: relative; margin-top: 12px; }
 .pickIcon { position: absolute; left: 12px; top: 10px; color: rgba(255,255,255,.75); pointer-events: none; }
@@ -36,8 +36,8 @@
 .bar { display: grid; grid-template-columns: 70px 1fr 120px 1fr 70px; align-items: center; gap: 14px; }
 .bar > .num:first-child { text-align: right; }
 .bar .num { font: 500 22px/1 var(--font-display); color: var(--mute); }
-.bar .win { color: var(--ink); font-weight: 900; }
-.bar b { text-align: center; font: 600 14px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; color: var(--mute); }
+.bar .win { color: var(--ink); font-weight: var(--num-weight); }
+.bar b { text-align: center; font: 600 14px/16px var(--font-cn); text-transform: uppercase; color: var(--mute); }
 .track { height: 10px; background: var(--paper-2); border-radius: 2px; display: flex; justify-content: flex-end; overflow: hidden; }
 .trackR { justify-content: flex-start; }
 .track i { display: block; height: 100%; border-radius: 2px; }

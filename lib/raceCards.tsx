@@ -1,8 +1,8 @@
 import { all } from "@/lib/db";
-import { raceCard, teamColor, trackMap, trackOutline } from "@/lib/assets";
+import { raceCard, teamColor, teamColorAt, trackMap, trackOutline } from "@/lib/assets";
 import { gpZh } from "@/lib/names";
 import { zhName } from "@/lib/zh";
-import type { ScheduledRace } from "@/lib/schedule";
+import { seasonSchedule, type ScheduledRace } from "@/lib/schedule";
 import LocalTime from "@/components/ui/LocalTime";
 import RaceCard, { CardAction, SessionList, weekendRange, type PodiumEntry } from "@/components/ui/RaceCard";
 import { SESSION_ZH } from "@/lib/openf1";
@@ -19,29 +19,44 @@ export function seasonPodiums(year: number) {
     from race_result rr join race r on r.id = rr.race_id join driver d on d.id = rr.driver_id
     where r.year = ? and rr.position_number <= 3 order by r.round, rr.position_number`, year);
   return (round: number): PodiumEntry[] => rows.filter((p) => p.round === round).map((p) => ({
-    pos: p.pos, driver: p.driver, code: p.code, year, color: teamColor(p.team, "#3a3a44"),
-    time: p.pos === 1 ? p.time : p.gap ?? (p.gap_laps ? `+${p.gap_laps} Lap${p.gap_laps > 1 ? "s" : ""}` : null),
+    pos: p.pos, driver: p.driver, code: p.code, year, color: teamColorAt(p.team, year, "#3a3a44"),
+    time: p.pos === 1 ? p.time : p.gap ?? (p.gap_laps ? `+${p.gap_laps} 圈` : null),
   }));
 }
 
 export const raceSession = (r: ScheduledRace) => r.sessions.find((x) => x.name === "Race");
 export const raceDates = (r: ScheduledRace) => weekendRange(r.sessions[0]?.start, raceSession(r)?.start ?? `${r.date}T12:00:00Z`);
 
-/** where ▶ goes for a finished race (OpenF1, 2023+): the year hub's 回放 tab on that race (IA spec v5 §0.5.5, S3). */
+/** The canonical replay page of one race weekend (IA spec v5.1 §0.5): a child of the race, /races/Y/R/replay[?session=K]. */
+export const raceReplayPath = (year: number, round: number, key?: number | null, extra?: URLSearchParams) => {
+  const q = new URLSearchParams(key ? { session: String(key) } : {});
+  extra?.forEach((v, k) => { if (k !== "session") q.set(k, v); });
+  const s = q.toString();
+  return `/races/${year}/${round}/replay${s ? `?${s}` : ""}`;
+};
+
+/** where ▶ goes for a finished race (OpenF1, 2023+): that race's replay page on its race session (v5.1, S3). */
 export function replayHref(r: ScheduledRace, now = Date.now()) {
   const s = raceSession(r);
   if (!s?.key || new Date(s.end).getTime() > now) return null;
-  return `/seasons/${r.year}/replay?session=${s.key}`;
+  return raceReplayPath(r.year, r.round, s.key);
+}
+
+/** OpenF1 session key K of season Y → the replay page of the race weekend that owns it (old deep links redirect here). */
+export async function sessionReplayHref(year: number, key: number, extra?: URLSearchParams) {
+  const r = (await seasonSchedule(year).catch(() => [] as ScheduledRace[])).find((x) => x.sessions.some((s) => s.key === key));
+  return r ? raceReplayPath(year, r.round, key, extra) : null;
 }
 
 /** `sessions`: upcoming cards list every session (FP1 · Fri 16:30 …) instead of only the race time. */
-export function ScheduleCard({ r, state, podium, replay, tag, sessions }: {
-  r: ScheduledRace; state: "done" | "next" | "future"; podium?: PodiumEntry[]; replay?: string | null; tag?: string; sessions?: boolean;
+/** `href`: where the card itself opens (default the race page; the 回放 index opens the race's replay page). */
+export function ScheduleCard({ r, state, podium, replay, tag, sessions, href: cardHref }: {
+  r: ScheduledRace; state: "done" | "next" | "future"; podium?: PodiumEntry[]; replay?: string | null; tag?: string; sessions?: boolean; href?: string;
 }) {
   const href = `/races/${r.year}/${r.round}`;
   const race = raceSession(r);
   return (
-    <RaceCard href={href} round={r.round} name={gpZh(r.gp)} latin={r.gpName} country={r.country} official={r.official}
+    <RaceCard href={cardHref ?? href} round={r.round} name={gpZh(r.gp)} latin={r.gpName} country={r.country} official={r.official}
       circuit={{ id: r.circuit, name: zhName.circuit(r.circuit) ?? r.circuitName }} dates={raceDates(r)} podium={podium} state={state} sprint={r.sprint}
       tag={tag ?? (state === "next" ? "下一站" : undefined)}
       photo={state === "next" ? raceCard(r.gp, 960) : null}

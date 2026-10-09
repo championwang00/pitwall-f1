@@ -13,3 +13,6 @@ shots
 .claude
 outputs
 _data_raw
+tmp/
+data/f1.db
+tools/cutout

@@ -80,7 +80,7 @@ export default async function BriefPage({ params }: { params: Promise<{ year: st
               <div>
                 <p className="kicker">Commentator Brief · Round {round} · {Y(year)}</p>
                 <h1 className={b.title}>{gpZh(race.grand_prix_id)}</h1>
-                <p className="meta-line">{flag(race.circuitCountry) && <img src={flag(race.circuitCountry)!} alt="" />}<EntityLink kind="circuit" id={cid} href={`/races/${year}/${round}`} className={b.u}>{zhName.circuit(cid) ?? race.circuitName}</EntityLink><span>{race.place_name}</span><span className={b.facts}><b>{race.course_length}</b> 公里 × <b>{race.scheduled_laps ?? race.laps}</b> 圈 · <b>{race.turns}</b> 个弯</span></p>
+                <p className="meta-line">{flag(race.circuitCountry) && <img src={flag(race.circuitCountry)!} alt="" />}<EntityLink kind="circuit" id={cid} year={year} className={b.u}>{zhName.circuit(cid) ?? race.circuitName}</EntityLink><span>{race.place_name}</span><span className={b.facts}><b>{race.course_length}</b> 公里 × <b>{race.scheduled_laps ?? race.laps}</b> 圈 · <b>{race.turns}</b> 个弯</span></p>
               </div>
               <div className={b.actions}>
                 <PrintButton />
@@ -102,7 +102,7 @@ export default async function BriefPage({ params }: { params: Promise<{ year: st
           </div>
         </header>
 
-        <TalkingPoints auto={circuitTalk(cid)} notes={notes.circuit(cid)} subject={cz?.nameZh ?? race.circuitName} title="赛道要点" records={circuitRecords(cid)} />
+        <TalkingPoints auto={circuitTalk(cid)} notes={notes.circuit(cid)} subject={cz?.nameZh ?? race.circuitName} title="赛道要点" records={circuitRecords(cid)} year={year} skipRace={`${year}/${round}`} />
 
         <section className="band band-paper">
           <div className="wrap">
@@ -124,7 +124,7 @@ export default async function BriefPage({ params }: { params: Promise<{ year: st
                     {lr.fl && <span className={b.hon}><Laurel tone="purple" size={26} top="最快圈" bottom={lr.fl.time} />{D(lr.fl.id, lr.fl.name, 22)}</span>}
                   </div>
                   {lrMoments.map((m, i) => (
-                    <div key={i} className={b.story}><b>{m.title}</b><p><Linked text={m.text} skip={cid} /></p><p className={b.src}>{m.sources.map((x, j) => <a key={j} href={x.url}>{x.label}</a>)}</p></div>
+                    <div key={i} className={b.story}><b><Linked text={m.title} skip={cid} year={lr.race.year} /></b><p><Linked text={m.text} skip={cid} year={lr.race.year} /></p><p className={b.src}>{m.sources.map((x, j) => <a key={j} href={x.url}>{x.label}</a>)}</p></div>
                   ))}
                   {Y(lr.race.year, lr.race.round, `${lr.race.year} 年完整成绩`, "link-arrow")}
                 </div>
@@ -134,8 +134,8 @@ export default async function BriefPage({ params }: { params: Promise<{ year: st
                 <h2 className="cn-h2">冠军形势</h2>
                 {(leader || teamLeader) && (
                   <div className={b.leaders}>
-                    {leader && <span className={b.hon}><Laurel tone="gold" size={34} top="车手积分领跑" bottom={`${leader.points} PTS`} />{D(leader.driver, leader.name, 28, undefined, leader.team)}</span>}
-                    {teamLeader && <span className={b.hon}><Laurel tone="gold" size={34} top="车队积分领跑" bottom={`${teamLeader.points} PTS`} /><Team id={teamLeader.team} name={tn(teamLeader.team, teamLeader.name)} size={24} year={year} badge /></span>}
+                    {leader && <span className={b.hon}><Laurel tone="gold" size={34} top="车手积分领跑" bottom={`${leader.points} 分`} />{D(leader.driver, leader.name, 28, undefined, leader.team)}</span>}
+                    {teamLeader && <span className={b.hon}><Laurel tone="gold" size={34} top="车队积分领跑" bottom={`${teamLeader.points} 分`} /><Team id={teamLeader.team} name={tn(teamLeader.team, teamLeader.name)} size={24} year={year} badge /></span>}
                   </div>
                 )}
                 {leader && p2 && <p className={b.math}><EntityLink kind="driver" id={leader.driver} year={year} className="ilink">{dn(leader.driver, leader.name)}</EntityLink> 领先 <EntityLink kind="driver" id={p2.driver} year={year} className="ilink">{dn(p2.driver, p2.name)}</EntityLink> <b className="num">{leader.points - p2.points}</b> 分；还剩 <b className="num">{left.length}</b> 站，最多 <b className="num">{maxLeft}</b> 分可争。</p>}
@@ -156,7 +156,7 @@ export default async function BriefPage({ params }: { params: Promise<{ year: st
 
         <section className="band band-paper">
           <div className="wrap">
-            <div className="sec-head"><h2 className="cn-h2">每位车手在<EntityLink kind="circuit" id={cid} href={`/races/${year}/${round}`} className="ilink">{zhName.circuit(cid) ?? race.circuitName}</EntityLink></h2><span className="sub">按当前积分排序；历史成绩点开即那一年</span></div>
+            <div className="sec-head"><h2 className="cn-h2">每位车手在<EntityLink kind="circuit" id={cid} year={year} className="ilink">{zhName.circuit(cid) ?? race.circuitName}</EntityLink></h2><span className="sub">按当前积分排序；历史成绩点开即那一年</span></div>
             <div className={b.tableWrap}>
               <table className={`tbl ${b.table}`}>
                 <thead><tr><th>车手</th><th className="r">出赛</th><th className="r">胜</th><th className="r">领奖台</th><th className="r">杆位</th><th>最好</th><th>历年</th>{hasNotes && <th>一句话</th>}</tr></thead>
@@ -188,7 +188,7 @@ export default async function BriefPage({ params }: { params: Promise<{ year: st
         {hasNotes && (
           <section className="band band-paper">
             <div className="wrap">
-              <div className="sec-head"><h2 className="cn-h2">车手故事线</h2><span className="sub">每人一条，来自核实过的 2026 报道</span></div>
+              <div className="sec-head"><h2 className="cn-h2">车手故事线</h2><span className="sub"><Linked text="每人一条，来自核实过的 2026 报道" /></span></div>
               <ol className={b.storyGrid}>
                 {recs.map((r) => {
                   const n = dNote(r.id);
@@ -198,11 +198,11 @@ export default async function BriefPage({ params }: { params: Promise<{ year: st
                     <li key={r.id} id={`note-${r.id}`} className="lift">
                       <Link href={`/drivers/${r.id}?year=${year}`} className="card-link" aria-label={dn(r.id, st?.name ?? nameOf.get(r.id))} tabIndex={-1} />
                       <span className={`${b.storyWho} over-link on-color ${isLight(teamColor(st?.team, "#3a3a44")) ? "on-light" : ""}`} style={{ ["--c" as any]: teamColor(st?.team, "#3a3a44") }}>
-                        <Person id={r.id} year={year} name={dn(r.id, st?.name ?? nameOf.get(r.id))} size={40} sub={`P${st?.pos ?? "—"}`} preview={false} color={teamColor(st?.team, "#3a3a44")} />
+                        <Person id={r.id} year={year} name={dn(r.id, st?.name ?? nameOf.get(r.id))} size={40} sub={`P${st?.pos ?? "—"}`} color={teamColor(st?.team, "#3a3a44")} />
                       </span>
                       <div className={`${b.storyBody} over-link`}>
-                        <b>{n.title}</b>
-                        <p><Linked text={n.text} skip={r.id} /> <a href={n.sources[0]?.url} className={b.noteSrc}>来源</a></p>
+                        <b><Linked text={n.title} skip={r.id} year={year} /></b>
+                        <p><Linked text={n.text} skip={r.id} year={year} /> <a href={n.sources[0]?.url} className={b.noteSrc}>来源</a></p>
                       </div>
                     </li>
                   );
@@ -237,7 +237,7 @@ export default async function BriefPage({ params }: { params: Promise<{ year: st
                   <h2 className="cn-h2">{Y(year, undefined, undefined, b.hy2)} 赛季看点</h2>
                   <ol className={b.notes}>
                     {seasonNotes.map((n, i) => (
-                      <li key={i}><span className={b.tag}>{n.tag}</span><b>{n.title}</b><p><Linked text={n.text} /></p><p className={b.src}>{n.sources.map((x, j) => <a key={j} href={x.url}>{x.label}</a>)}</p></li>
+                      <li key={i}><span className={b.tag}>{n.tag}</span><b><Linked text={n.title} year={year} /></b><p><Linked text={n.text} year={year} /></p><p className={b.src}>{n.sources.map((x, j) => <a key={j} href={x.url}>{x.label}</a>)}</p></li>
                     ))}
                   </ol>
                 </div>

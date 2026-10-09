@@ -22,8 +22,8 @@ export function LinkedMoments({ items, title = "高光时刻", kicker = "Moments
             <li key={i} className={s.mItem}>
               <EntityLink kind="year" id={String(m.year)} href={href} className={s.mYear}><span className="num">{m.year}</span><em>{round ? `第 ${round} 站` : "赛季"}</em></EntityLink>
               <div className={s.mBody}>
-                <h3 className="cn-h3">{m.title}</h3>
-                <p><Linked text={m.text} skip={skip} />{m.sources.map((x, j) => <a key={j} className={s.srcInline} href={x.url} target="_blank" rel="noreferrer" title={x.label}>{j === 0 ? "来源" : j + 1}</a>)}</p>
+                <h3 className="cn-h3"><Linked text={m.title} skip={skip} year={m.year} /></h3>
+                <p><Linked text={m.text} skip={skip} year={m.year} />{m.sources.map((x, j) => <a key={j} className={s.srcInline} href={x.url} target="_blank" rel="noreferrer" title={x.label}>{j === 0 ? "来源" : j + 1}</a>)}</p>
               </div>
             </li>
           );
@@ -41,7 +41,7 @@ export function LinkedAnecdotes({ items, title = "你可能不知道", kicker = 
       <div className={s.aGrid}>
         {items.map((a, i) => (
           <article key={i} className={s.aCard}>
-            <h3 className="cn-h3">{a.title}</h3>
+            <h3 className="cn-h3"><Linked text={a.title} skip={skip} /></h3>
             <p><Linked text={a.text} skip={skip} />{a.sources.map((x, j) => <a key={j} className={s.srcInline} href={x.url} target="_blank" rel="noreferrer" title={x.label}>{j === 0 ? "来源" : j + 1}</a>)}</p>
           </article>
         ))}

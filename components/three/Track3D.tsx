@@ -3,7 +3,7 @@
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import * as THREE from "three";
 import { useEffect, useMemo, useRef } from "react";
-import { trackCurve } from "./relief";
+import { trackCurve, planarParam } from "./relief";
 
 export type TrackPalette = {
   track: string;      // asphalt ribbon
@@ -24,6 +24,11 @@ export const PALETTE_LIGHT: TrackPalette = {
 
 export type Car = { color: string; t: number; label?: string };
 
+/** A point on the lap (distance fraction `t`, same parameter as cars) whose screen position is reported every frame. */
+export type Mark = { key: string; t: number };
+/** key → [x px, y px, depth] in the canvas box; depth > 0 = behind the track's centre (labels there fade a little). */
+export type MarkPositions = Map<string, [number, number, number]>;
+
 type Props = {
   points: [number, number, number][];
   palette?: TrackPalette;
@@ -40,6 +45,13 @@ type Props = {
   showSectors?: boolean;
   /** Radius (world units) that must stay in frame; track spans ~10 units. */
   fit?: number;
+  /** Corner pins etc.: projected every frame (after spin + pointer parallax) and handed to `onMarks`. */
+  marks?: Mark[];
+  onMarks?: (pos: MarkPositions) => void;
+  /** Real S1/S2 end as distance fractions; replaces the equal thirds when `showSectors`. */
+  sectors?: [number, number] | null;
+  /** A stretch of the lap [from, to] (distance fractions; to < from crosses the line) drawn white on the racing line. */
+  highlight?: [number, number] | null;
 };
 
 const buildCurve = trackCurve;
@@ -60,15 +72,20 @@ const ribbonFrag = /* glsl */ `
   uniform vec3 uPulse;
   uniform vec3 uS1; uniform vec3 uS2; uniform vec3 uS3;
   uniform float uSectors;
+  uniform float uS1End; uniform float uS2End;
+  uniform float uHi; uniform float uHiFrom; uniform float uHiTo;
   varying vec2 vUv;
   void main() {
     float along = vUv.x;
     float across = abs(vUv.y - 0.5) * 2.0;
     vec3 col = uTrack;
     // sector tint on the racing line
-    vec3 sec = along < 0.333 ? uS1 : (along < 0.666 ? uS2 : uS3);
+    vec3 sec = along < uS1End ? uS1 : (along < uS2End ? uS2 : uS3);
     float line = smoothstep(0.22, 0.0, across);
     col = mix(col, sec, line * 0.85 * uSectors);
+    // highlighted stretch (a named section under the pointer); wraps across the line when to < from
+    float inHi = uHiFrom <= uHiTo ? step(uHiFrom, along) * step(along, uHiTo) : max(step(uHiFrom, along), step(along, uHiTo));
+    col = mix(col, vec3(1.0), smoothstep(0.62, 0.0, across) * 0.85 * inHi * uHi);
     // asphalt sheen toward the racing line, bright kerb edges
     col += vec3(0.06) * smoothstep(0.7, 0.0, across) * (1.0 - uSectors);
     float edge = smoothstep(0.8, 0.97, across);
@@ -82,7 +99,10 @@ const ribbonFrag = /* glsl */ `
   }
 `;
 
-function Ribbon({ curve, palette, lap, sectors }: { curve: THREE.CatmullRomCurve3; palette: TrackPalette; lap: number; sectors: boolean }) {
+function Ribbon({ curve, palette, lap, sectors, bounds, highlight }: {
+  curve: THREE.CatmullRomCurve3; palette: TrackPalette; lap: number; sectors: boolean;
+  bounds?: [number, number] | null; highlight?: [number, number] | null;
+}) {
   const mat = useRef<THREE.ShaderMaterial>(null);
   const geom = useMemo(() => {
     const N = 1400, W = 0.2;
@@ -111,8 +131,21 @@ function Ribbon({ curve, palette, lap, sectors }: { curve: THREE.CatmullRomCurve
       uPulse: { value: new THREE.Color(palette.pulse) },
       uS1: { value: new THREE.Color(s[0]) }, uS2: { value: new THREE.Color(s[1]) }, uS3: { value: new THREE.Color(s[2]) },
       uSectors: { value: sectors && palette.sectors ? 1 : 0 },
+      uS1End: { value: 0.333 }, uS2End: { value: 0.666 },
+      uHi: { value: 0 }, uHiFrom: { value: 0 }, uHiTo: { value: 0 },
     };
   }, [palette, lap, sectors]);
+  // shader `along` is the curve's own parameter: convert distance fractions once. R3F copies the uniform objects into
+  // the material (stable target), so write to the material's own uniforms, not to the memo above
+  useEffect(() => {
+    const u = mat.current?.uniforms;
+    if (!u?.uHi) return;
+    const P = planarParam(curve);
+    u.uS1End.value = bounds ? P(bounds[0]) : 0.333;
+    u.uS2End.value = bounds ? P(bounds[1]) : 0.666;
+    u.uHi.value = highlight ? 1 : 0;
+    if (highlight) { u.uHiFrom.value = P(highlight[0]); u.uHiTo.value = P(highlight[1]); }
+  }, [uniforms, curve, bounds?.[0], bounds?.[1], highlight?.[0], highlight?.[1]]); // eslint-disable-line react-hooks/exhaustive-deps
   useFrame((_, dt) => { if (mat.current) mat.current.uniforms.uTime.value += dt; });
   return (
     <mesh geometry={geom}>
@@ -220,13 +253,14 @@ const glowTex = (() => {
 function Cars({ curve, cars, lap, driven }: { curve: THREE.CatmullRomCurve3; cars: Car[]; lap: number; driven: boolean }) {
   const refs = useRef<(THREE.Sprite | null)[]>([]);
   const time = useRef(0);
+  const P = useMemo(() => planarParam(curve), [curve]);
   useFrame((_, dt) => {
     time.current += dt;
     cars.forEach((c, i) => {
       const s = refs.current[i];
       if (!s) return;
       const t = driven ? c.t : (c.t + time.current / lap) % 1;
-      const p = curve.getPointAt(((t % 1) + 1) % 1);
+      const p = curve.getPointAt(P(t));
       s.position.set(p.x, p.y + 0.09, p.z);
     });
   });
@@ -259,15 +293,42 @@ function FitCamera({ dir, radius = 7.4, y = -0.3 }: { dir: [number, number, numb
   return null;
 }
 
-function Scene({ points, palette, elevation, spin, ghosts, positions, lapSeconds, showSectors, camera, fit }: Required<Omit<Props, "className" | "positions" | "ghosts" | "fit">> & { ghosts?: Car[]; positions?: Car[]; fit: number }) {
+type SceneProps = Required<Omit<Props, "className" | "positions" | "ghosts" | "fit" | "marks" | "onMarks" | "sectors" | "highlight">>
+  & Pick<Props, "ghosts" | "positions" | "marks" | "onMarks" | "sectors" | "highlight"> & { fit: number };
+
+function Scene({ points, palette, elevation, spin, ghosts, positions, lapSeconds, showSectors, camera, fit, marks, onMarks, sectors, highlight }: SceneProps) {
   const curve = useMemo(() => buildCurve(points, elevation), [points, elevation]);
   const group = useRef<THREE.Group>(null);
+  // marks in the group's local frame (1.5 px above the ribbon, like the cars), recomputed only when the list changes
+  const local = useMemo(() => {
+    if (!marks?.length) return null;
+    const P = planarParam(curve);
+    return marks.map((m) => { const p = curve.getPointAt(P(m.t)); return { key: m.key, p: new THREE.Vector3(p.x, p.y + 0.09, p.z) }; });
+  }, [marks, curve]);
+  const out = useRef<MarkPositions>(new Map());
+  const v = useMemo(() => new THREE.Vector3(), []);
+  const centre = useMemo(() => new THREE.Vector3(), []);
   useFrame((state, dt) => {
     if (!group.current) return;
     group.current.rotation.y += dt * spin;
     const tx = state.pointer.y * 0.08, ty = state.pointer.x * 0.12;
     group.current.rotation.x += (tx - group.current.rotation.x) * 0.04;
     group.current.position.x += (ty - group.current.position.x) * 0.04;
+    if (!local || !onMarks) return;
+    // project after this frame's spin / parallax so the DOM pins never lag the ribbon
+    group.current.updateMatrixWorld();
+    state.camera.updateMatrixWorld();
+    const { width: w, height: h } = state.size;
+    const cd = centre.setFromMatrixPosition(group.current.matrixWorld).distanceTo(state.camera.position);
+    const m = out.current;
+    m.clear();
+    for (const { key, p } of local) {
+      v.copy(p).applyMatrix4(group.current.matrixWorld);
+      const depth = v.distanceTo(state.camera.position) - cd;
+      v.project(state.camera);
+      m.set(key, [((v.x + 1) / 2) * w, ((1 - v.y) / 2) * h, depth]);
+    }
+    onMarks(m);
   });
   return (
     <>
@@ -276,7 +337,7 @@ function Scene({ points, palette, elevation, spin, ghosts, positions, lapSeconds
       <GroundDots color={palette.grid} />
       <Shadow curve={curve} color={palette.curtain} />
       <Curtain curve={curve} color={palette.curtain} />
-      <Ribbon curve={curve} palette={palette} lap={lapSeconds} sectors={showSectors} />
+      <Ribbon curve={curve} palette={palette} lap={lapSeconds} sectors={showSectors} bounds={sectors} highlight={highlight} />
       <StartLine curve={curve} />
       {positions ? <Cars curve={curve} cars={positions} lap={lapSeconds} driven /> : ghosts ? <Cars curve={curve} cars={ghosts} lap={lapSeconds} driven={false} /> : null}
     </group>
@@ -286,12 +347,13 @@ function Scene({ points, palette, elevation, spin, ghosts, positions, lapSeconds
 
 export default function Track3D({
   points, palette = PALETTE_DARK, elevation = 1, spin = 0.04, ghosts, positions, lapSeconds = 14,
-  className, camera = [0, 8.5, 9.5], showSectors = false, fit = 6.6,
+  className, camera = [0, 8.5, 9.5], showSectors = false, fit = 6.6, marks, onMarks, sectors = null, highlight = null,
 }: Props) {
   return (
     <div className={className} style={className ? undefined : { position: "relative", width: "100%", height: "100%" }}>
       <Canvas camera={{ position: camera, fov: 38 }} dpr={[1, 2]} gl={{ antialias: true, alpha: true }} style={{ position: "absolute", inset: 0 }}>
-        <Scene points={points} palette={palette} elevation={elevation} spin={spin} ghosts={ghosts} positions={positions} lapSeconds={lapSeconds} showSectors={showSectors} camera={camera} fit={fit} />
+        <Scene points={points} palette={palette} elevation={elevation} spin={spin} ghosts={ghosts} positions={positions} lapSeconds={lapSeconds} showSectors={showSectors} camera={camera} fit={fit}
+          marks={marks} onMarks={onMarks} sectors={sectors} highlight={highlight} />
       </Canvas>
     </div>
   );

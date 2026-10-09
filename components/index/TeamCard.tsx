@@ -1,3 +1,4 @@
+import { logoRev } from "@/lib/logoRev";
 import Link from "next/link";
 import { ViewTransition } from "react";
 import s from "./index.module.css";
@@ -28,7 +29,7 @@ export default function TeamCard({ id, name, latin, color, href, year, drivers, 
       <div className={`${s.teamIn} over-link`}>
         <div className={s.teamTop}>
           <div className={s.teamHead}>
-            <EntityLink kind="team" id={id} href={href} preview={false} className={s.teamName}>
+            <EntityLink kind="team" id={id} href={href} className={s.teamName}>
               {name}{latin && latin !== name && <span className={s.teamLatin}>{latin}</span>}
             </EntityLink>
             <span className={s.teamDrivers}>
@@ -43,7 +44,7 @@ export default function TeamCard({ id, name, latin, color, href, year, drivers, 
           </div>
           {hasLogo && (
             <span className={`${s.teamLogo} ${official ? "" : s.teamLogoLight}`}>
-              <img src={`/api/logo/${id}?r=3${official ? "&v=white" : ""}`} alt="" loading="lazy" />
+              <img src={`/api/logo/${id}?r=${logoRev()}${official ? "&v=white" : ""}${year ? `&year=${year}` : ""}`} alt="" loading="lazy" />
             </span>
           )}
         </div>

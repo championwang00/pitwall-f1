@@ -1,6 +1,6 @@
 import { all, get } from "./db";
 import { allSeasons, circuitLayouts, constructorLineage, teamChassisByYear } from "./f1";
-import { teamColor } from "./assets";
+import { teamColor, teamColorAt } from "./assets";
 import { ENGINE_ZH } from "./names";
 import { zhName } from "./zh";
 import type { Scope, RailRow, RailGroup } from "@/components/season/railStore";
@@ -46,7 +46,7 @@ export function driverRail(id: string, year?: number | null): Scope {
     const live = inProgress(s.year);
     if (x?.champ) titles++;
     rows[s.year] = {
-      color: teamColor(s.team, "#606066"),
+      color: teamColorAt(s.team, s.year, "#606066"),
       label: x ? (x.pos ? `P${x.pos}` : x.posText ?? "—") : "—",
       sub: [s.wins ? `${s.wins}胜` : "", s.teams > 1 ? `${s.teams} 队` : ""].filter(Boolean).join(" · ") || undefined,
       laurel: x?.champ ? "gold" : live && x?.pos === 1 ? "red" : undefined,
@@ -55,11 +55,12 @@ export function driverRail(id: string, year?: number | null): Scope {
   }
   const years = seasons.map((s) => s.year as number);
   const groups = stints(seasons.map((s) => [s.year, s.team as string]), (t, from, to) => ({
-    id: `${t}-${from}`, title: zhName.team(t) ?? t, from, to, href: `/teams/${t}`, color: teamColor(t, "#606066"),
+    id: `${t}-${from}`, title: zhName.team(t) ?? t, from, to, href: `/drivers/${id}?from=${from}&to=${to}`, color: teamColorAt(t, from, "#606066"),
   }));
   return {
     only: true, years, rows, groups, current: year ?? null,
     header: { title: zhName.driver(id) ?? get<any>("select name from driver where id = ?", id)?.name ?? id, sub: `${span(years)} · ${years.length} 季${titles ? ` · ${titles} 冠` : ""}`, href: `/drivers/${id}` },
+    home: { label: zhName.driver(id) ?? get<any>("select name from driver where id = ?", id)?.name ?? id, href: `/drivers/${id}`, sub: "总览" },
     pattern: `/drivers/${id}?year={y}`, gap: "{a}–{b} · 未参赛",
   };
 }
@@ -84,7 +85,7 @@ function teamRows(team: string) {
     const live = inProgress(r.year);
     if (x?.champ) titles++;
     rows[r.year] = {
-      color: teamColor(team, "#606066"),
+      color: teamColorAt(team, r.year, "#606066"),
       label: x?.pos ? `P${x.pos}` : "—",
       sub: r.wins ? `${r.wins}胜` : undefined,
       laurel: x?.champ ? "gold" : live && x?.pos === 1 ? "red" : undefined,
@@ -94,13 +95,20 @@ function teamRows(team: string) {
   return { years: res.map((r) => r.year as number), rows, titles };
 }
 
-function teamGroups(team: string): RailGroup[] {
+/**
+ * Rail rule (user): every rail entry stays INSIDE the current object. A group header opens this object's summary for
+ * that period (?from&to), never another page; `slice=false` (car rail: each year is its own car) makes headers labels.
+ */
+function teamGroups(team: string, slice = true): RailGroup[] {
+  const range = (from: number, to: number) => (slice ? `/teams/${team}?from=${from}&to=${to}` : undefined);
   const engines = stints(engineByYear(team), (e, from, to) => ({
     id: `eng-${e}-${from}`, title: `${ENGINE_ZH[e] ?? get<any>("select name from engine_manufacturer where id = ?", e)?.name ?? e} 引擎`, from, to,
+    href: range(from, to),
   }));
-  // predecessors / successors as title-only rows in the chain (Mercedes ← Brawn ← Honda ← BAR ← Tyrrell)
+  // predecessors / successors as title-only rows in the chain (Mercedes ← Brawn ← Honda ← BAR ← Tyrrell):
+  // the same lineage seen from this team's page, so they open this team's view of that period
   const lineage = constructorLineage(team).filter((l: any) => l.id !== team).map((l: any) => ({
-    id: `lin-${l.id}`, title: `${zhName.team(l.id) ?? l.name} →`, from: l.year_from, to: l.year_to ?? latest(), href: `/teams/${l.id}`, color: teamColor(l.id, "#606066"),
+    id: `lin-${l.id}`, title: `${zhName.team(l.id) ?? l.name} 时期`, from: l.year_from, to: l.year_to ?? latest(), href: range(l.year_from, l.year_to ?? latest()), color: teamColor(l.id, "#606066"),
   }));
   return [...engines, ...lineage];
 }
@@ -110,6 +118,7 @@ export function teamRail(id: string, year?: number | null): Scope {
   return {
     only: true, years, rows, groups: teamGroups(id), current: year ?? null,
     header: { title: zhName.team(id) ?? id, sub: `${span(years)} · ${years.length} 季${titles ? ` · ${titles} 冠` : ""}`, href: `/teams/${id}` },
+    home: { label: zhName.team(id) ?? id, href: `/teams/${id}`, sub: "总览" },
     pattern: `/teams/${id}?year={y}`, gap: "{a}–{b} · 未参赛",
   };
 }
@@ -125,7 +134,7 @@ function circuitBase(id: string) {
   for (const r of races) {
     if (rows[r.year]) continue; // first race of the year represents it
     rows[r.year] = {
-      color: teamColor(r.team, "#3a3a44"),
+      color: teamColorAt(r.team, r.year, "#3a3a44"),
       label: r.winner ? surname(r.winner) : "未赛",
       sub: (count.get(r.year) ?? 1) > 1 ? `×${count.get(r.year)}` : undefined,
       live: !r.winner,
@@ -144,9 +153,12 @@ function circuitBase(id: string) {
 
 export function circuitRail(id: string, year?: number | null): Scope {
   const b = circuitBase(id);
+  // a layout group opens the circuit in the layout's first year
+  const groups = b.groups.map((g) => ({ ...g, href: `/circuits/${id}?from=${g.from}&to=${g.to}` })); // this circuit, that layout's period
   return {
-    only: true, years: b.years, rows: b.rows, groups: b.groups, current: year ?? null,
+    only: true, years: b.years, rows: b.rows, groups, current: year ?? null,
     header: { title: zhName.circuit(id) ?? get<any>("select name from circuit where id = ?", id)?.name ?? id, sub: `${span(b.years)} · ${b.n} 届`, href: `/circuits/${id}` },
+    home: { label: zhName.circuit(id) ?? get<any>("select name from circuit where id = ?", id)?.name ?? id, href: `/circuits/${id}`, sub: "总览" },
     pattern: `/circuits/${id}?year={y}`, gap: "{a}–{b} · 未举办",
   };
 }
@@ -156,18 +168,40 @@ export function raceRail(year: number, round: number): Scope {
   if (!c) return {};
   const b = circuitBase(c);
   const nth = all<any>("select count(*) n from race where circuit_id = ? and (year < ? or (year = ? and round <= ?))", c, year, year, round)[0].n;
+  // a layout group opens this circuit in that layout's period, as on the circuit's own rail (user: 尽量都还是可点的)
+  const groups = b.groups.map((g) => ({ ...g, href: `/circuits/${c}?from=${g.from}&to=${g.to}` }));
   return {
-    only: true, years: b.years, rows: b.rows, groups: b.groups, current: year,
+    only: true, years: b.years, rows: b.rows, groups, current: year,
     header: { title: `${zhName.circuit(c) ?? get<any>("select name from circuit where id = ?", c)?.name ?? c} · 第 ${nth} 届`, sub: `${span(b.years)} · ${b.n} 届`, href: `/circuits/${c}` },
+    // the rail's first row, as on every object page: this circuit's overview (user: 为啥这里没有总览)
+    home: { label: zhName.circuit(c) ?? get<any>("select name from circuit where id = ?", c)?.name ?? c, href: `/circuits/${c}`, sub: "总览" },
     map: Object.fromEntries([...b.first].map(([y, r]) => [y, `/races/${y}/${r}`])), gap: "{a}–{b} · 未举办",
   };
+}
+
+/** The rail on a race's replay page (v5.1): the race rail, each year → that circuit's replay when OpenF1 has it
+ *  (2023+, already run), else that year's race page. */
+export function raceReplayRail(year: number, round: number): Scope {
+  const s = raceRail(year, round);
+  if (!s.map) return s;
+  const today = new Date().toISOString().slice(0, 10);
+  const to = (href: string) => {
+    const m = href.match(/^\/races\/(\d+)\/(\d+)$/);
+    if (!m || +m[1] < 2023) return href;
+    const d = get<any>("select date from race where year = ? and round = ?", +m[1], +m[2])?.date as string | undefined;
+    return d && d < today ? `${href}/replay` : href;
+  };
+  const map = Object.fromEntries(Object.entries(s.map).map(([y, href]) => [y, to(href)]));
+  const groups = s.groups?.map((g) => ({ ...g, href: g.href && to(g.href) }));
+  return { ...s, map, groups };
 }
 
 export function briefRail(year: number, round: number): Scope {
   const s = raceRail(year, round);
   if (!s.map) return s;
   const map = Object.fromEntries(Object.entries(s.map).map(([y, href]) => [y, `${href}/brief`]));
-  return { ...s, map, header: s.header && { ...s.header, title: `解说手册 · ${s.header.title.split(" · ")[0]}` } };
+  const groups = s.groups; // layout groups open the circuit's period, the same from a brief
+  return { ...s, map, groups, header: s.header && { ...s.header, title: `解说手册 · ${s.header.title.split(" · ")[0]}` } };
 }
 
 /* ─────────────────────────── car ─────────────────────────── */
@@ -185,7 +219,9 @@ export function carRail(chassisId: string): Scope {
   }
   const mine = all<any>("select distinct year from season_entrant_chassis where chassis_id = ? order by year desc", chassisId);
   return {
-    only: true, years, rows, groups: teamGroups(team), current: mine[0]?.year ?? null,
+    only: true, years, rows, current: mine[0]?.year ?? null,
+    // a car's rail groups open the team in that period (engine stint / predecessor name), user: 这个和下面的为啥不能点
+    groups: teamGroups(team),
     header: { title: `${zhName.team(team) ?? team}的赛车`, sub: span(years), href: `/teams/${team}` },
     map: Object.fromEntries(years.filter((y) => carOf.has(y)).map((y) => [y, `/cars/${carOf.get(y)!.id}`])),
     fallback: `/teams/${team}?year={y}`, gap: "{a}–{b} · 未参赛",

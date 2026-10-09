@@ -13,6 +13,7 @@ import Person from "@/components/entity/Person";
 import Laurel from "@/components/entity/Laurel";
 
 import RailScope from "@/components/season/RailScope";
+import Engine from "@/components/entity/Engine";
 
 export const dynamic = "force-dynamic";
 
@@ -50,8 +51,8 @@ export default async function YearStandings({ params, searchParams }: { params: 
         {series.length > 0 && maxRound > 1 && (
           <section className="band band-paper">
             <div className="wrap">
-              <div className="sec-head"><div><p className="kicker">Standings</p><h2 className="cn-h2">冠军之争</h2></div><span className="sub">前五名的累计积分，逐站</span></div>
-              <div className={t.card}><PointsChart series={series} rounds={maxRound} labels={labels} /></div>
+              <div className="sec-head"><div><h2 className="cn-h2">冠军之争</h2></div><span className="sub">前五名的累计积分，逐站</span></div>
+              <div className={t.card}><PointsChart series={series} rounds={maxRound} labels={labels} year={year} /></div>
             </div>
           </section>
         )}
@@ -63,7 +64,7 @@ export default async function YearStandings({ params, searchParams }: { params: 
                 <div className="sec-head"><div><p className="kicker">Drivers</p><h2 className="cn-h2">车手积分榜</h2></div>{live && <span className="sub">截至目前</span>}</div>
                 <div className={t.card}>
                   <table className="tbl row-hover">
-                    <thead><tr><th>名次</th><th>车手</th><th>车队</th><th /><th style={{ textAlign: "right" }}>PTS</th></tr></thead>
+                    <thead><tr><th>名次</th><th>车手</th><th>车队</th><th /><th style={{ textAlign: "right" }}>积分</th></tr></thead>
                     <tbody>
                       {dStand.map((d: any) => {
                         const tm = lastTeam.get(d.driver);
@@ -86,13 +87,13 @@ export default async function YearStandings({ params, searchParams }: { params: 
                 {cStand.length ? (
                   <div className={t.card}>
                     <table className="tbl row-hover">
-                      <thead><tr><th>名次</th><th>车队</th><th>引擎</th><th /><th style={{ textAlign: "right" }}>PTS</th></tr></thead>
+                      <thead><tr><th>名次</th><th>车队</th><th>引擎</th><th /><th style={{ textAlign: "right" }}>积分</th></tr></thead>
                       <tbody>
                         {cStand.map((c: any) => (
                           <tr key={c.team}>
                             <td className="num" style={{ width: 48 }}>{c.posText}</td>
                             <td><Team id={c.team} year={year} badge size={20} name={zhName.team(c.team) ?? c.name} /></td>
-                            <td className="mute">{ENGINE_ZH[c.engine] ?? c.engine}</td>
+                            <td className="mute"><Engine id={c.engine} year={year} /></td>
                             <td>{medal(c.pos, !!c.champ)}</td>
                             <td className="r num">{c.points}</td>
                           </tr>

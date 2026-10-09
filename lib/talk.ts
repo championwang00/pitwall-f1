@@ -60,9 +60,7 @@ function circuitTalk_(cid: string): Talk[] {
   const recent = races.slice(0, 10);
   const conv = recent.filter((r) => r.pole && r.pole === r.wid).length;
   out.push({ tag: "数字", title: `杆位转化 ${conv}/${recent.length}`, text: `最近 ${recent.length} 场里，杆位车手有 ${conv} 次最终夺冠${conv / recent.length >= 0.6 ? "，排位赛几乎决定一半以上的结果" : conv / recent.length <= 0.3 ? "，在这里排位领先并不可靠" : ""}。`, source: "F1DB" });
-  // biggest comeback
-  const comeback = races.filter((r) => r.wgrid).sort((a, b) => b.wgrid - a.wgrid)[0];
-  if (comeback && comeback.wgrid > 3) out.push({ tag: "纪录", title: `最大逆转：第 ${comeback.wgrid} 位起步夺冠`, text: `${comeback.year} 年，${zh(comeback.wid, comeback.wname)}从${ord(comeback.wgrid)}起步赢下这里，是这条赛道起步位置最靠后的冠军。`, href: `/races/${comeback.year}/${comeback.round}`, source: "F1DB" });
+  // (no 最大逆转 here: the 纪录簿 beside it has 最靠后起步的冠军 — spec §0.8.5)
   // retirements
   const r5 = races.slice(0, 5);
   const avgDnf = r5.reduce((a, r) => a + r.dnf, 0) / Math.max(1, r5.length);
@@ -144,14 +142,7 @@ function driverTalk_(id: string): Talk[] {
       out.push({ tag: "下一站", title: `首次在${circ?.name}出赛`, text: `下一站${gpZh(nr.grand_prix_id)}将是他第一次在这条赛道参加正赛。`, href: `/circuits/${nr.circuit_id}`, source: "F1DB" });
     }
   }
-  // best circuit
-  const byC = new Map<string, { w: number; p: number; n: number }>();
-  for (const r of res) { const c = byC.get(r.circuit) ?? { w: 0, p: 0, n: 0 }; c.n++; if (r.pos === 1) c.w++; if (r.pos && r.pos <= 3) c.p++; byC.set(r.circuit, c); }
-  const bestC = [...byC.entries()].sort((a, b) => b[1].w - a[1].w || b[1].p - a[1].p)[0];
-  if (bestC && (bestC[1].w > 1 || bestC[1].p > 2)) {
-    const cn = cname(bestC[0]);
-    out.push({ tag: "纪录", title: `最擅长：${cn}`, text: `在${cn}出赛 ${bestC[1].n} 次，${bestC[1].w} 胜、${bestC[1].p} 个领奖台，是他成绩最好的赛道。`, href: `/circuits/${bestC[0]}?driver=${id}`, source: "F1DB" });
-  }
+  // (no 「最擅长：X」: the hero's 最擅长赛道 tile says it — spec §0.8.3)
   // first win age
   const fw = res.find((r) => r.pos === 1);
   if (fw) {
@@ -211,7 +202,7 @@ function seasonTalk_(year: number): Talk[] {
   if (!wins.length) return out;
   const races = get<any>("select count(*) n from race where year = ?", year)!.n;
   const done = get<any>("select count(*) n from race r where year = ? and exists (select 1 from race_result rr where rr.race_id = r.id and rr.position_number = 1)", year)!.n;
-  out.push({ tag: "数字", title: `${wins.length} 位不同的分站冠军`, text: `${done} 场正赛${done < races ? `（共 ${races} 站）` : ""}产生了 ${wins.length} 位冠军，赢得最多的是${zh(wins[0].id, wins[0].name)}（${wins[0].n} 胜）。`, source: "F1DB" });
+  // (no 「N 位不同的分站冠军」: the hero's 分站 / 车手冠军 tiles say it — spec §0.8.7)
   const decider = get<any>("select round, grand_prix_id gp from race where year = ? and drivers_championship_decider = 1", year);
   if (decider) out.push({ tag: "纪录", title: decider.round === races ? "冠军悬念留到最后一站" : `第 ${decider.round} 站提前决出冠军`, text: `车手总冠军在${gpZh(decider.gp)}${decider.round === races ? "——赛季最后一场——" : `（全年 ${races} 站中的第 ${decider.round} 站）`}尘埃落定。`, href: `/races/${year}/${decider.round}`, source: "F1DB" });
   // first-time winners
@@ -241,9 +232,7 @@ function raceTalk_(raceId: number): Talk[] {
   const r = get<any>("select * from race where id = ?", raceId);
   const res = all<any>("select rr.*, d.name from race_result rr join driver d on d.id = rr.driver_id where rr.race_id = ? order by rr.position_display_order", raceId);
   if (!r || !res.length) return out;
-  const w = res[0];
-  const pole = res.find((x) => x.pole_position);
-  out.push({ tag: "数字", title: w.grid_position_number === 1 ? "杆位转化为胜利" : `冠军从第 ${w.grid_position_number} 位起步`, text: `${zh(w.driver_id, w.name)}${w.grid_position_number === 1 ? "从杆位出发一路守住胜利" : `从${ord(w.grid_position_number)}起步夺冠${pole ? `，杆位车手${zh(pole.driver_id, pole.name)}最终第 ${pole.position_text}` : ""}`}。`, source: "F1DB" });
+  // (no 「杆位转化为胜利 / 冠军从第 N 位起步」: the winner panel and the result table's grid column say it — spec §0.8.9)
   const climber = res.filter((x) => x.grid_position_number && x.position_number).map((x) => ({ ...x, gain: x.grid_position_number - x.position_number })).sort((a, b) => b.gain - a.gain)[0];
   if (climber && climber.gain >= 5) out.push({ tag: "纪录", title: `${zh(climber.driver_id, climber.name)}追回 ${climber.gain} 位`, text: `从${ord(climber.grid_position_number)}起步，最终第 ${climber.position_number}，是本场名次提升最多的车手。`, href: `/drivers/${climber.driver_id}`, source: "F1DB" });
   const dnf = res.filter((x) => !x.position_number).length;

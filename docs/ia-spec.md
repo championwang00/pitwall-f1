@@ -1,8 +1,8 @@
-# PITWALL 信息架构定稿（IA Spec v5）
+# PITWALL 信息架构定稿（IA Spec v6）
 
 > 作者：Fable 5.1（产品 / IA）。执行：Opus 5.5。日期：2026-10-09。
-> 依据：用户 24 条输入（`scratchpad/user-inputs.md` 1–14，口述 15–24）、README、design-log、当前站点实测截图（`/`、`/live`、`/live?year=2024`、`/seasons/2024`、`/seasons/2026/era`、`/seasons/1988/circuits`、`/races/2024/1`、`/races/2026/16`、`/circuits/monaco`、`/drivers/lewis-hamilton`、`/teams/ferrari`、`/brief`）。
-> 本文是唯一的结构真相；与 README 冲突以本文为准，实施完成后再回写 README。**读本文先读 §0.5（站点结构 v5）——它是全站的树、每页的落点与面包屑；再读 §1.2（年份栏）——它是全站唯一的时间控件。** v3 相对 v1：加入**时代层**（输入 16）、**恢复被删页面**（输入 16）、**大卡片设计规则**（输入 17）、**左栏是唯一的年份控件**（输入 18）、**照片必须符合年代**（输入 19）。v4 相对 v3：年份栏成为栏目 / 主体感知的（输入 20）；hover 全站统一为下划线（输入 23）。**v5 相对 v4（输入 24「整个导航结构非常混乱 … 回放应该是当年的 2 级页面 … 要有面包屑去做导航和定位 … 现在这些页面都不要漏掉」）：新增 §0.5 站点结构——每页恰有一个顶栏落点、每个非根页有面包屑；回放从 `/live?year=` 迁到 `/seasons/Y/replay`，解说手册迁到 `/races/Y/R/brief`，`/calendar` 归「实时」只管本赛季；年份栏去掉栏头只剩时间线；所有旧 URL 重定向、一页不删。** §1–§6 中与 §0.5 冲突的句子已按 v5 改写并标「v5」。
+> 依据：用户 25 条输入（`scratchpad/user-inputs.md` 1–14，口述 15–25）、README、design-log、当前站点实测截图（`/`、`/live`、`/live?year=2024`、`/seasons/2024`、`/seasons/2026/era`、`/seasons/1988/circuits`、`/races/2024/1`、`/races/2026/16`、`/circuits/monaco`、`/drivers/lewis-hamilton`、`/teams/ferrari`、`/brief`）。
+> 本文是唯一的结构真相；与 README 冲突以本文为准，实施完成后再回写 README。**读本文先读 §0.5（站点结构 v5）——它是全站的树、每页的落点与面包屑；再读 §1.2（年份栏）——它是全站唯一的时间控件。** v3 相对 v1：加入**时代层**（输入 16）、**恢复被删页面**（输入 16）、**大卡片设计规则**（输入 17）、**左栏是唯一的年份控件**（输入 18）、**照片必须符合年代**（输入 19）。v4 相对 v3：年份栏成为栏目 / 主体感知的（输入 20）；hover 全站统一为下划线（输入 23）。**v5 相对 v4（输入 24「整个导航结构非常混乱 … 回放应该是当年的 2 级页面 … 要有面包屑去做导航和定位 … 现在这些页面都不要漏掉」）：新增 §0.5 站点结构——每页恰有一个顶栏落点、每个非根页有面包屑；回放从 `/live?year=` 迁到 `/seasons/Y/replay`，解说手册迁到 `/races/Y/R/brief`，`/calendar` 归「实时」只管本赛季；年份栏去掉栏头只剩时间线；所有旧 URL 重定向、一页不删。** §1–§6 中与 §0.5 冲突的句子已按 v5 改写并标「v5」。 **v6 相对 v5（输入 25「底层对象逻辑 … 把人、车、队、赛车、赛道都串联起来 … 顶部的区块样式尽可能都接近维斯塔潘的区块」）：新增 §0.6 对象头图与串联——七种对象（年份 / 赛道 / 车手 / 车队 / 赛车 / 单场 / 时代）共用一个 `ObjectHero`，十个槽顺序不变，串联行按年份态 / 全部年份态写全人—车—队—赛车—赛道的关系（P0-17 … P0-22）。读本文顺序：§0.5 → §0.6 → §1.2。**
 
 ---
 
@@ -37,6 +37,9 @@
 
 ### 0.5 站点结构 v5（输入 24）— 每页恰有一个顶栏落点，每个非根页有一条面包屑
 
+> **v5.1 修订（输入 25 / 26，用户原话）**：「回放应该是单独一个页面，作为赛道的某个子集吧？回放作为一个单体就很奇怪。我点了一个回放，上面又有整个赛道的一些信息，下面有别的赛道信息……它应该是一个更子集的页面。」「面包屑导航这个逻辑不太对……回放这个还是不太对。」「这个导航应该可以放到最上面去吧……只要在 2026 的时候是一个整体的介绍，然后你点击某个 tab，就对应显示某个内容。」
+> 裁决：① **规范回放页 = 某站的子页** `/races/Y/R/replay[?session=K&a&b]`，面包屑 `历史 › Y › 第 R 站 {大奖赛} › 回放 · {节次}`（节次是最后一节标签的一部分，不是单独一级）；页面**只有这一站**：面板自己的紧凑标题块（大奖赛 · 赛道 · 日期 ·「返回本站档案」）+ 本站节次切换（一练…正赛，缺省正赛；切换用 `replaceState` 同步 `?session=`，不整页刷新）+ 完整计时面板。没有赛季英雄区、赛季综述、标签条、其他分站卡、分站下拉。无 OpenF1 数据（< 2023）→ 308 `/races/Y/R`；未赛 → 307 `/races/Y/R`。栏 = 赛道时间线（`raceRail`），每年指向该年同赛道的回放页（有的话）否则该年单场页。② **`/seasons/Y/replay` 只是索引**：本季可回放分站的标准分站卡，卡片与 ▶ 都进该站回放页；不再嵌面板；`?session=K` → 308 到拥有 K 的那站回放页。③ **年份中枢**：标签条是页面第一块（面包屑在其内、整块 sticky，面包屑行滚到顶栏下、标签行钉住）；新第一个标签「总览」= `/seasons/Y`（赛季卡 + 赛季综述 + 解说要点只在这里）；「赛历」迁到 `/seasons/Y/calendar`；其余标签只显示自己的内容。下文 v5 的回放 / 赛历句子以此为准。
+
 > 用户原话：「现在整个导航结构非常的混乱 … 要不你所有的实时、回放你都做成 2 级，其实回放都应该是当年回放的 2 级页面，你可以直接跳转到那个页面，但是你要有面包屑去做导航和定位。现在比如说我现在到回放，你现在是在导航栏是没有一个落点的，这个落点不存在是有问题的 … 现在这页面都不要漏掉。」
 
 #### 0.5.1 五条结构规则（全站不变量，可被脚本检查）
@@ -45,7 +48,7 @@
 |---|---|---|
 | S1 | **每个页面恰有一个顶栏落点**。落点由路径第一段决定：`live` `calendar` → 实时；`seasons` `eras` `races` → 历史；`circuits` → 赛道；`drivers` `compare` → 车手；`teams` → 车队；`cars` → 赛车。查询串不改变落点。 | 任一页 `nav [aria-current="page"]` 恰 1 个 |
 | S2 | **每个非根页有一条面包屑，且第一节 = 落点**。六个根页（`/live` `/seasons` `/circuits` `/drivers` `/teams` `/cars`，无查询串）没有面包屑——顶栏高亮本身就是位置。面包屑只写**祖先链**（树上的父节点），不写立方体的横向关系（车手页不写车队）。 | 非根页 `nav[aria-label="面包屑"] li:first-child` 文本 === 高亮导航项文本 |
-| S3 | **链接去最具体的单元**：大奖赛 / 某站 → `/races/Y/R`；年份上下文里的车手 / 车队 / 赛道 → 它的 `?year=Y` 切片；裸年份 → `/seasons/Y`；某年某站的计时 → `/seasons/Y/replay?session=K`；某站的解说 → `/races/Y/R/brief`。 | 代码审查：全站不再出现 `/live?year=` `/live?session=` `/brief?` |
+| S3 | **链接去最具体的单元**：大奖赛 / 某站 → `/races/Y/R`；年份上下文里的车手 / 车队 / 赛道 → 它的 `?year=Y` 切片；裸年份 → `/seasons/Y`；某年某站的计时 → `/races/Y/R/replay?session=K`（v5.1）；某站的解说 → `/races/Y/R/brief`。 | 代码审查：全站不再出现 `/live?year=` `/live?session=` `/brief?` |
 | S4 | **「实时」= 本赛季的现在**，只有两样东西：下一站英雄区 + 本赛季分站卡；它的子页只有本赛季的「赛历与日历订阅」。任何"往年"的东西一律在「历史」树里。 | `/live` DOM 只有 `#hero` `#rounds`（live 相位多一个 `#timing`） |
 | S5 | **旧 URL 一个不丢**：移动的路由全部 308 到新位置（§0.5.5），`/poc/*` 留在壳外。 | §0.5.5 表逐行 `curl -I` |
 
@@ -58,16 +61,18 @@
 
 历史  /seasons ······················· 根（无面包屑）· 栏：历史树
 ├─ 时代  /eras/[id] ··················· 历史 › 时代名 · 栏：历史树（时代标题高亮，时代外变暗）
-└─ 年份  /seasons/Y ··················· 历史 › Y · 栏：历史树（Y 高亮）· 页 = 英雄区 + 赛季综述 + 标签
-   ├─ 赛历     /seasons/Y ············· （默认标签，面包屑止于 Y）
+└─ 年份  /seasons/Y ··················· 历史 › Y · 栏：历史树（Y 高亮）· 页 = 标签条（第一块）+ 当前标签内容（v5.1）
+   ├─ 总览     /seasons/Y ············· （默认标签 = 赛季卡 + 赛季综述 + 解说要点，面包屑止于 Y）
+   ├─ 赛历     /seasons/Y/calendar ···· 历史 › Y › 赛历（v5.1）
    ├─ 积分榜   /seasons/Y/standings ··· 历史 › Y › 积分榜
    ├─ 时代     /seasons/Y/era ········· 历史 › Y › 时代
    ├─ 赛道     /seasons/Y/circuits ···· 历史 › Y › 赛道
    ├─ 车手     /seasons/Y/drivers ····· 历史 › Y › 车手
    ├─ 车队     /seasons/Y/teams ······· 历史 › Y › 车队
    ├─ 赛车     /seasons/Y/cars ········ 历史 › Y › 赛车
-   ├─ 回放     /seasons/Y/replay?session=K · 历史 › Y › 回放 › 巴林大奖赛 · 正赛（2023 ≤ Y ≤ 当前年才有此标签）
+   ├─ 回放     /seasons/Y/replay ······ 历史 › Y › 回放（索引：可回放分站卡；2023 ≤ Y ≤ 当前年才有此标签）
    └─ 第 R 站  /races/Y/R ············· 历史 › Y › 第 R 站 巴林大奖赛 · 栏：赛道时间线（Y 高亮）
+      ├─ 回放      /races/Y/R/replay?session=K · 历史 › Y › 第 R 站 巴林大奖赛 › 回放 · 正赛（v5.1）· 栏：赛道时间线 → 各年回放
       └─ 解说手册  /races/Y/R/brief ··· 历史 › Y › 第 R 站 巴林大奖赛 › 解说手册 · 栏：赛道时间线
 
 赛道  /circuits[?year=Y] ·············· 根；带 ?year 时面包屑 赛道 › Y · 栏：历史树
@@ -100,7 +105,8 @@
 | 时代 | `/eras/[id]` | 历史 | `历史→/seasons › {时代名}` | 历史树（时代标题高亮） | `/seasons` 带标题、年份中枢「所属时代」、单元页「横跨 N 个时代」、栏的时代标题 |
 | 年份中枢 · 赛历 | `/seasons/Y` | 历史 | `历史→/seasons › {Y}` | 历史树（Y） | 栏年份行、裸年份链接、`/calendar?year=` 重定向、`/live?year=`（<2023）重定向 |
 | 年份中枢 · 其余标签 | `/seasons/Y/{standings\|era\|circuits\|drivers\|teams\|cars}` | 历史 | `历史→/seasons › {Y}→/seasons/Y › {标签名}` | 历史树（Y；注记随标签 §1.2.3 A） | 标签条、索引页「Y 年的…」区块 |
-| 年份中枢 · 回放 | `/seasons/Y/replay[?session=K][&a&b]` | 历史 | `历史→/seasons › {Y}→/seasons/Y › 回放`；有 `session` 时再追加 ` › {大奖赛名} · {节次}`（纯文本） | 历史树（Y；2023+ 行 sub `▶ 回放`，点 Y′ ≥ 2023 → `/seasons/Y′/replay`，更早 → `/seasons/Y′`） | 分站卡 ▶（`/live` `/seasons/Y` `/calendar`）、单场页「计时回放」、标签条「回放」、`/live?year=` `/live?session=` `/races/Y/R/replay` 重定向 |
+| 年份中枢 · 回放（索引，v5.1） | `/seasons/Y/replay` | 历史 | `历史→/seasons › {Y}→/seasons/Y › 回放` | 历史树（Y；2023+ 行 sub `▶ 回放`，点 Y′ ≥ 2023 → `/seasons/Y′/replay`，更早 → `/seasons/Y′`） | 标签条「回放」、`/live?year=Y` 重定向 |
+| 单场 · 回放（v5.1） | `/races/Y/R/replay[?session=K][&a&b]` | 历史 | `历史→/seasons › {Y}→/seasons/Y › 第 {R} 站 {大奖赛名}→/races/Y/R › 回放 · {节次}` | 赛道时间线（Y；点 Y′ → 该年同赛道回放页，无回放 → `/races/Y′/R′`） | 分站卡 ▶（`/live` `/seasons/Y/calendar` `/calendar` `/seasons/Y/replay`）、单场页「计时回放」、赛道页「Y 年在这里」▶、`/live?session=` `/seasons/Y/replay?session=` 重定向 |
 | 单场 | `/races/Y/R` | 历史 | `历史→/seasons › {Y}→/seasons/Y › 第 {R} 站 {大奖赛名}` | 赛道时间线（Y） | 分站卡、英雄区大奖赛名、赛道页「Y 年在这里」、回放面板「本站档案」、上一站 / 下一站 |
 | 解说手册 | `/races/Y/R/brief` | 历史 | `历史→/seasons › {Y}→/seasons/Y › 第 {R} 站 {大奖赛名}→/races/Y/R › 解说手册` | 赛道时间线（Y；点 Y′ → `/races/Y′/R′/brief`） | ticker「解说手册」（指向下一站的）、`/live` 英雄区「本站解说手册」、单场页「解说手册」按钮、`/brief` 重定向 |
 | 赛道索引 | `/circuits[?year=Y]` | 赛道 | 无参数：—；有 `?year`：`赛道→/circuits › {Y}` | 历史树（注记 `N 站`） | 顶栏、栏年份行 |
@@ -132,19 +138,21 @@
 | 旧 URL | 新 URL | 规则 |
 |---|---|---|
 | `/` | `/live` | 不变 |
-| `/live?year=Y&session=K[&a&b]`（2023 ≤ Y < 当前年） | `/seasons/Y/replay?session=K[&a&b]` | 原样透传 `session` `a` `b` |
+| `/live?year=Y&session=K[&a&b]`（2023 ≤ Y ≤ 当前年） | `/races/Y/R/replay?session=K[&a&b]`（v5.1：R = 拥有 K 的那站） | 原样透传 `session` `a` `b` |
+| `/live?year=Y`（2023 ≤ Y ≤ 当前年） | `/seasons/Y/replay` | 索引 |
 | `/live?year=Y`（Y < 2023 或 Y > 当前年） | `/seasons/Y` | 无回放的年份落到档案 |
-| `/live?session=K`（无 `year`） | `/seasons/{当前年}/replay?session=K` | **例外**：K 是进行中的节 → 不重定向，`/live` 自己显示面板 |
+| `/live?session=K`（无 `year`） | `/races/{当前年}/R/replay?session=K`（v5.1） | **例外**：K 是进行中的节 → 不重定向，`/live` 自己显示面板 |
 | `/live#timing` | `/seasons/{当前年}/replay` | 锚点由客户端处理：`/live` 不再有 `#timing`，分站卡 ▶ 直接写新 URL |
 | `/brief` | `/races/{next.year}/{next.round}/brief` | 休赛期 → `lastRace` |
 | `/brief?year=Y&round=R` | `/races/Y/R/brief` | — |
-| `/calendar?year=Y`（Y ≠ 当前年） | `/seasons/Y` | — |
+| `/calendar?year=Y`（Y ≠ 当前年） | `/seasons/Y/calendar`（v5.1） | — |
 | `/calendar?year={当前年}` | `/calendar` | 去掉多余参数 |
-| `/races/Y/R/replay` | `/seasons/Y/replay?session={该站正赛 key}` | 无 OpenF1 会话（< 2023 或未赛）→ `/races/Y/R` |
+| `/races/Y/R/replay` | —（v5.1：它就是规范回放页，缺省正赛） | 无 OpenF1 会话：< 2023 → 308 `/races/Y/R`；未赛 → 307 `/races/Y/R`；`?session=K` 属于别站 → 308 那站回放页 |
+| `/seasons/Y/replay?session=K[&a&b]` | `/races/Y/R/replay?session=K[&a&b]`（v5.1） | R = 拥有 K 的那站 |
 | `/seasons/Y/replay`（Y < 2023 或 Y > 当前年或该年尚无已完成节次） | `/seasons/Y` | 标签条此时不渲染「回放」 |
 | `/seasons/Y/replay?year=…` | 忽略 `year` 参数 | 路径已含年 |
 
-链接改写（不留任何旧写法）：`lib/raceCards.tsx` `replayHref` → `/seasons/${r.year}/replay?session=${key}`（不再区分当前年）；`components/live/ReplayButton.tsx` 同；`app/(site)/races/[year]/[round]/page.tsx` 「计时回放」按钮同；`components/live/LivePage.tsx` 栏映射删除（栏隐藏）；`components/shell/Header.tsx` ticker「解说手册」→ `/races/${next.year}/${next.round}/brief`、「赛历与日历订阅」→ `/calendar` 不变；`/live` 英雄区「本站解说手册」→ 同上；单场页加「解说手册」按钮 → `/races/Y/R/brief`；§1.2.3 E `/brief` 行的 pattern → `/races/{y}/{r}/brief`。
+链接改写（不留任何旧写法）：`lib/raceCards.tsx` `replayHref` → `raceReplayPath(Y, R, key)` = `/races/Y/R/replay?session=K`（v5.1；v5 曾是 `/seasons/Y/replay?session=K`）；`components/live/ReplayButton.tsx`（新增 `round`）、`app/(site)/races/[year]/[round]/page.tsx`「计时回放」、`app/(site)/circuits/[id]/page.tsx` 的 ▶ 同；`/seasons/Y/replay` 索引卡片 `href` = 该站回放页；`components/live/LivePage.tsx` 栏映射删除（栏隐藏）；`components/shell/Header.tsx` ticker「解说手册」→ `/races/${next.year}/${next.round}/brief`、「赛历与日历订阅」→ `/calendar` 不变；`/live` 英雄区「本站解说手册」→ 同上；单场页加「解说手册」按钮 → `/races/Y/R/brief`；§1.2.3 E `/brief` 行的 pattern → `/races/{y}/{r}/brief`。
 
 #### 0.5.6 面包屑规范
 
@@ -227,6 +235,667 @@ export default function Breadcrumb({ items, tone }: { items: Crumb[]; tone?: "pa
 - 验收：`node scripts/ia-check.mjs` 全绿；人工抽查 `/seasons/2024/replay`、`/races/2026/17/brief`、`/calendar`、`/compare`、`/cars/ferrari-sf-26` 五页，顶栏各恰亮一项且与面包屑第一节一致。
 
 执行顺序：P0-10 → P0-11 → P0-12 → P0-13 → P0-14 → P0-15 → P0-16；每步独立可验收，P0-16 的脚本最后跑一遍兜底。
+
+### 0.6 对象头图与串联 v6（输入 25）— 一个 `ObjectHero`，七种对象，两种状态
+
+> 用户原话：「我这个就是底层对象逻辑。比如说，我现在点到维斯塔潘，他在年份上定位到 2026 年，他已经有一个很统一的区块，在展示他今年开的是什么车、隶属于哪个车队。如果我选了比如铃鹿赛道在 2026 年，那一定有人来说，这一年的冠军是谁？冠军车队是谁？冠军车辆是什么。那如果我选了 RB 的某辆车在对应的年数，那一定会说明它的驾驶者是谁，隶属的车队是谁。就是基于这个逻辑，要把人、车、队、赛车、赛道都给串联起来。保证它们是非常合理的、逻辑互通的。顶部的区块样式尽可能都接近于这个区块，在这个区块内能够承载所有串联互通的信息。参考这个维斯塔潘顶部的区块的信息。」
+
+#### 0.6.0 一条规则 + 实测现状
+
+**规则**：立方体（§0 A1）的每一种对象——**年份、赛道、车手、车队、赛车**，加上两个派生格子 **单场**（年份 × 赛道）和 **时代**（年份之上的刻度）——打开时第一屏都是同一个区块 `ObjectHero`：**它是谁（名字）→ 它在哪（元信息）→ 它和谁连着（串联行）→ 它跨过哪些时代 → 它的荣誉 → 它的数字 → 它的样子（视觉槽）**。串联行是区块的核心：把这个对象在**当前年份语境**下与其他四类对象的关系一次写全，每个被提到的对象都是可点的芯片（人 = 头像 + 名，队 = 车标 + 名，赛车 = 小车图 + 名，赛道 = 线稿 + 名，年份 = 徽章）。换对象类型，只换**填进槽里的东西**，不换槽的顺序与样式。
+
+**基准**：`/drivers/max-verstappen` 的头图（截图 `scratchpad/hero/driver.png`）：面包屑 · `Max` / `VERSTAPPEN` · `马克斯·维斯塔潘` · `荷兰 · 1997-09-30 · 29 岁 · 生于 Hasselt` · 口号 · **「2026 效力于 [红牛] 赛车 RB22」** · 「横跨 3 个时代 …」 · 四枚月桂 · 四格数字 · 右侧出血半身像，底色 = 红牛色。这就是目标，其余六种对象向它看齐。
+
+**实测（2026-10-09，11 张截图在 `scratchpad/hero/`）与差距**：
+
+| 页面 | 现状 | 差距（v6 要补的） |
+|---|---|---|
+| `/drivers/max-verstappen` | 基准 | 串联行缺**队友**与**名次 / 积分**（2026 进行中：P6 · 188 分）、缺**引擎** |
+| `/drivers/max-verstappen?year=2021` | 「2026 效力于 红牛 赛车 RB22」与「2021 红牛 RB16B · 世界冠军 · 395.5 分」**两行叠放** | 年份态必须**替换**而不是叠加；半身像仍是 2026 红牛版（违反 §1.5，应为 2021 本田时期照片）；缺队友（佩雷斯） |
+| `/teams/red-bull` | 谱系行、时代行、月桂、数字、赛车侧视图 | **没有任何串联行**：不说 2026 阵容是谁、开的什么车、什么引擎、目前第几 |
+| `/teams/red-bull?year=2021` | 「2021 车队 P2 · RB16B · 本田 引擎」 | 缺**阵容**（维斯塔潘 · 佩雷斯）、积分、分站胜 |
+| `/circuits/suzuka` | 名字 · 元信息 · 口号 · 特征 · 时代行 · 数字 · 三枚月桂（赛道之王 / 杆位最多 / 圈速纪录）· 3D 赛道 | **没有串联行**：不说最近一届是谁赢的、哪支车队 / 哪辆车赢得最多 |
+| `/circuits/suzuka?year=2026` | 「2026 日本大奖赛 · 冠军 基米·安东内利」 | 缺**冠军车队、冠军赛车、杆位、最快圈**，缺「计时回放 / 解说手册」入口 |
+| `/cars/red-bull-rb22` | 「[红牛] 2026」· 全名 · 动力单元 · 风洞图 · 数字 | 缺**驾驶者**（维斯塔潘 · 哈贾尔 · 劳森）、**车队名次 / 积分**、设计师；无中文名槽、无时代行；数字行在视觉槽之后（顺序与基准不同） |
+| `/cars/lotus-79` | 「莲花 1978–1979」· 动力单元 · 「1978 安德雷蒂 · 车手冠军」月桂 · 照片 | 同上；两季各自的驾驶者（安德雷蒂 / 彼得森 / 雅里埃；罗伊特曼 / 雷巴克）与名次 |
+| `/seasons/2021`（总览 tab 内的赛季卡，另一位执行者正在做） | 「WORLD CHAMPION」· `2021` · 两枚月桂 · Champion [维斯塔潘] · Constructors [梅赛德斯] · 四格数字 · 冠军时期照片 | 缺**冠军赛车**（RB16B）与**车队冠军的赛车**（F1 W12）、缺时代行（所属时代 → `/eras/hybrid-2014-2021`） |
+| `/races/2026/3` | `2026` / 日本大奖赛 · 官方名 · 日期 · [铃鹿赛道] · 圈数 · 两个按钮 · **冠军大卡**（安东内利 · 梅赛德斯 · F1 W17 · 杆位起步 · 用时）· 亚季军格 · 荣誉月桂 · 右侧前十塔 | 已经最接近"串联全"；差：冠军大卡里的车队 / 赛车是文字链不是芯片；缺**积分榜影响**（赛后领跑者）可不做；顺序：串联在按钮之后（应在按钮之前） |
+| `/eras/hybrid-2014-2021` | 卡片：`ERA · 2014–2021` · 标题 · 摘要 · 四格数字 · 「6 冠 车手冠军最多 [汉密尔顿]」「8 冠 车队冠军最多 [梅赛德斯]」 | 缺**代表赛车**（胜场最多底盘 F1 W07 · 19 胜）、缺举办最多的赛道；没有视觉槽 |
+
+共同的结论：**串联行要么没有，要么只写了一半；每页各写各的，年份态和全部年份态的关系也不一致。** v6 用一个组件、一张槽位表、一张串联表把它们统一。
+
+#### 0.6.1 共享解剖（十个槽，顺序全站不变）
+
+```
+┌ ObjectHero（底色 = 对象的身份色，§1.4；dark 变体作底 + DRS 半调纹理）──────────────────────────────┐
+│ ① breadcrumb   §0.5.6（flush，白字）                                              │  ⑩ visual        │
+│ ② eyebrow      小写标签（Titillium 12/16 700 大写）：对象类型 · 状态                  │  出血的大图：     │
+│ ③ display      拉丁展示名（Formula1 Wide 大写；车手 = first 小 + LAST 大；年份 = 数字字体） │  半身像 / 赛车    │
+│ ④ cx           中文名（`.cx`）；无中文名的对象 = 全名拉丁小写行                        │  侧视 / 3D 赛道  │
+│ ⑤ meta         `.meta-line`：国旗 + 国籍 · 日期 / 基地 / 地点 · 类型                 │  / 冠军时期照片   │
+│ ⑤b lineage     （仅车队有谱系、赛道有多布局时）谱系行                                 │                  │
+│ ⑥ tagline      content 口号（`Linked`，skip 自己）                                 │                  │
+│ ⑦ connection   串联行 L1（身份：和谁连着）+ L2（结果：名次 / 积分 / 冠军 / 杆位 / 最快圈） │                  │
+│ ⑧ eras         「横跨 N 个时代 / 所属时代」（`EraSpan`）                              │                  │
+│ ⑨ laurels      月桂行（生涯 / 历史荣誉；年份态的当年冠军月桂放进 L2 末尾）               │                  │
+│ ⑨b actions     （仅单场 / 赛道@Y）按钮：▶ 计时回放 · 解说手册                          │                  │
+│ ⑩ stats        `StatRow`：英文标签 + Formula1 数字（生涯 / 历史合计，不随年份变）        │                  │
+└──────────────────────────────────────────────────────────────────────────────────┘
+```
+
+- **顺序不可调换**；某个槽没有数据就整行不渲染，不留空。
+- **两种表面**：`surface="bleed"`（车手 / 车队 / 赛道 / 赛车 / 单场 / 时代页：通栏，`entity.module.css .hero` 的现状）；`surface="card"`（年份中枢总览 tab 内的赛季卡、年份中枢「时代」tab 内的时代卡：纸底上的圆角 8 卡片，`season.module.css .hero` 的现状）。槽位与样式相同，只是外框不同——这是与正在重构年份中枢（tab 在最上、总览 tab 放赛季头图）的那位执行者对齐的点：**赛季头图留在总览 tab 的卡片里，v6 只换它的内部槽位，不动它的位置。**
+- **年份态 vs 全部年份态**：同一个组件，`year` 有值时 ②⑦⑩ 按下表变化，①按 §0.5.6 多一节，⑩ 视觉槽照片换成那一年（§1.5）。**年份态的串联行替换全部年份态的串联行**，不叠放（修正 `?year=2021` 现状）。
+- 三个"没有全部年份态"的对象：**年份**的全部年份 = 历史根 `/seasons`（时代总览，不是对象头图）；**单场**的全部年份 = 赛道页；**时代**的"指定年份" = 年份中枢的「时代」tab（卡片表面，同槽位，去掉 ⑩ 视觉）。表里标 —。
+
+#### 0.6.2 串联表：七种对象 × 两种状态（每格 = 串联行的精确写法）
+
+写法约定：`[X]` = 芯片（可点、可 hover）；`{…}` = 填值；`·` = 分隔点；`(…)` = 条件渲染；L2 行首的年份徽章只在年份态出现。进行中的赛季（`live`）名次前缀「目前」，已结束的「年终」。人名用 `zhName.driver` 全名；车队 `zhName.team`；赛车 = 底盘名（拉丁，`.lat`）。
+
+| 对象 | 全部年份态 L1 / L2 | 指定年份态（Y）L1 / L2 |
+|---|---|---|
+| **车手** `/drivers/[id]` | 现役（最后一季 = 当前年）：**L1** `[{当前年}] 效力于 [Team] · 赛车 [Car] · 引擎 [Engine]` **L2** `队友 [Person]( · [Person]) · 目前 P{n} · {pts} 分` ＝ 与 `?year={当前年}` 完全相同的两行（所以维斯塔潘无参数页和 `?year=2026` 看到的串联行一字不差）。退役 / 离开：**L1** `最后效力于 [Team] · 赛车 [Car] · [{Y1}]` **L2** `队友 [Person] · 年终 P{n} · {pts} 分( · 世界冠军 月桂)` | **L1** `[Y] 效力于 [Team] · 赛车 [Car] · 引擎 [Engine]`（一年多队：每队一段 `[Team] [Car] 第 {a–b} 站`，用 ` → ` 连接）**L2** `队友 [Person]( · [Person]…最多 3 人，按同场次数降序) · 目前/年终 P{n} · {pts} 分( · 世界冠军 月桂)`；未参赛：`[Y] 年未参赛 · 生涯 [{y0}]–[{y1}]`（前后最近年份可点） |
+| **车队** `/teams/[id]` | 现役：＝ `?year={当前年}`。解散 / 改名：**L1** `最后参赛 [{Y1}] · 阵容 [Person] · [Person] · 赛车 [Car] · 引擎 [Engine]`（谱系后继在 ⑤b 行）**L2** `年终 车队 P{n} · {wins} 胜 · {pts} 分( · 车队冠军 月桂)` | **L1** `[Y] 阵容 [Person] · [Person]( · [Person]…按出赛场次降序，最多 4 人，多的折成「等 {k} 人」→ 「Y 赛季」带) · 赛车 [Car]( · [Car]) · 引擎 [Engine]` **L2** `目前/年终 车队 P{n} · {wins} 胜 · {pts} 分( · 车队冠军 月桂)( · 车手冠军 [Person] 月桂)`；1958 年前：「1958 年前无车队锦标赛」代替名次；未参赛：`[Y] 年未参赛 · 出赛 [{y0}]–[{y1}]`（+ 同一车队别名提示，现状保留） |
+| **赛道** `/circuits/[id]` | **L1** `最近 [{Y1}] [第 R 站 {大奖赛名}] · 冠军 [Person] · [Team] · [Car]`（有未赛的本赛季场次 → 追加 ` · 下一次 [{Y} 第 R 站]`，链到 `/races/Y/R`）**L2** `胜场最多车队 [Team] {n} 胜 · 举办 {m} 届 [{y0}]–[{y1}]`（赛道之王 / 杆位最多 / 圈速纪录已在 ⑨ 月桂行，不重复） | **L1** `[Y] [第 R 站 {大奖赛名}] · {date}` **L2** `冠军 [Person] · [Team] · [Car] · 杆位 [Person] · 最快圈 [Person] {time}`（+ ⑨b 按钮：2023+ 已赛 `▶ 计时回放` → 回放页；`解说手册` → `/races/Y/R/brief`）；同年两场（2020 红牛环）→ 两组 L1/L2；未赛：L2 = `尚未进行 · {各节时间}`；未举办：`[Y] 年未举办 · 最近 [{prev}] / [{next}]` |
+| **赛车** `/cars/[id]`（本身就是「车队 × 年份」切片，不接受 `?year=`；年份栏切换 = 换底盘） | **L1** `[Team] · [{y0}](–[{y1}]) · 车手 [Person] · [Person]( · [Person]…该底盘所有正赛车手，按场次降序，最多 4) · 引擎 [Engine] {engine.full_name}` **L2**（每个赛季一行，最多 3 行，最新在上）`[Y] 目前/年终 车队 P{n} · {wins} 胜 · {pts} 分( · 车队冠军 月桂)( · 车手冠军 [Person] 月桂)`；设计师放 ⑤ meta 行末尾 `· 设计 {designers}` | —（多年份底盘的"指定年份"= L2 里那一年的行；年份栏点 Y′ → 同车队 Y′ 年底盘，§4.5） |
+| **年份** `/seasons/Y`（总览 tab 的赛季卡，`surface="card"`） | —（= `/seasons` 历史根） | 已结束：**L1** `世界冠军 [Person] · [Team] · 赛车 [Car]` **L2** `车队冠军 [Team] · 赛车 [Car]( · 车手 [Person] · [Person])`；进行中：**L1** `积分领跑 [Person] · [Team] · [Car] · {pts} 分 · 领先 [Person] +{gap}` **L2** `车队领跑 [Team] · [Car] · {pts} 分`；尚未开始：`赛季尚未开始 · 首站 [第 1 站 {GP}] {date}`。⑧ = `所属时代 [Era]` |
+| **单场** `/races/Y/R` | —（= 赛道页） | **L1** `[Y 赛季] 第 R 站 · [Circuit] · {date} · {laps} 圈 {km} km`（现状 meta 行并入）**L2** `冠军 [Person] · [Team] · [Car] · 杆位 [Person] · 最快圈 [Person] {time}`；⑨b 按钮 `▶ 计时回放`（2023+）`解说手册`；未赛：L2 = `尚未进行 · 查看 [Y] 赛程与日历订阅`。右侧 ⑩ 视觉 = **冠军大卡**（现状 `r.winner`，冠军车队色 f1-surface + 时期半身像）+ 亚季军格 + 前十塔；大卡内指向冠军的链接 `preview={false}`（卡里不弹卡），L2 里的冠军芯片照常弹 |
+| **时代** `/eras/[id]`（`surface="card"`，底色 = 冠军最多车队色） | **L1** `[{a}]–[{b}] · {n} 季 · 车手冠军最多 [Person] {k} 冠 · 车队冠军最多 [Team] {k} 冠`（现状「统治者」月桂行即此行，改成芯片语法）**L2** `胜场最多赛车 [Car] {n} 胜 · 举办最多 [Circuit] {n} 届` | 年份中枢「时代」tab：同两行，白卡，无 ⑩ |
+
+**三个必须一致的"互通"检查**（任一对象页说的事，在相对对象页上必须能找到同一句话的反面）：
+1. 车手@Y 说「效力于 [Team] · 赛车 [Car]」⇔ 车队@Y 阵容里有他 ⇔ 赛车页车手里有他。数据同源：三者都来自 `season_entrant_driver × season_entrant_chassis`（`driverYear.entries` / `teamYear.drivers` / `getChassis().drivers`）。
+2. 赛道@Y 说「冠军 [Person] · [Team] · [Car]」⇔ 单场页冠军大卡 ⇔ 年份中枢赛历那一站的领奖台。数据同源：`circuitYear().podium[0]` / `raceResults()[0]` + `chassisForTeamYear(team, Y)`。
+3. 年份@Y 说「世界冠军 [Person] · [Team] · [Car]」⇔ 车手@Y L2 有「世界冠军」月桂 ⇔ 车队@Y L2 有「车手冠军 [Person]」⇔ 赛车页 L2 该年有「车手冠军 [Person]」。数据同源：`seasonDriverStandings(Y).champ` + 冠军最后一站的 `constructor_id`（`SeasonHero` 的 `heroTeam` 查询）+ `chassisForTeamYear`。
+
+#### 0.6.3 每个槽的数据来源（`lib/hero.ts`，新建；所有查询复用现有函数）
+
+新建 `lib/hero.ts`，导出一个统一模型和七个构造函数，页面只传模型给 `<ObjectHero>`：
+
+```ts
+export type Chip =
+  | { kind: "driver"; id: string; name: string; year?: number | null; color?: string | null }
+  | { kind: "team"; id: string; name: string; year?: number | null }
+  | { kind: "car"; id: string; name: string; team: string; year: number }
+  | { kind: "circuit"; id: string; name: string; year?: number | null }
+  | { kind: "year"; year: number; href?: string; label?: string }      // 年份徽章；href 可指向 /races/Y/R
+  | { kind: "engine"; id: string | null; name?: string | null; year?: number | null; self?: string }
+  | { kind: "era"; id: string; title: string }
+  | { kind: "text"; text: string }                                   // 「效力于」「冠军」「·」等连接词
+  | { kind: "laurel"; tone: Tone; top: string; bottom?: string };    // L2 末尾的当年冠军月桂
+export type HeroModel = {
+  kind: "driver" | "team" | "circuit" | "car" | "season" | "race" | "era";
+  id: string; year: number | null;                 // year = 指定年份态；null = 全部年份态
+  surface: "bleed" | "card"; color: string;        // 身份色（§1.4）
+  crumbs: Crumb[]; eyebrow?: string;
+  display: { first?: string; last: string; numeral?: boolean };  // ③；numeral = 年份数字字体
+  cx?: string | null; meta: Chip[]; lineage?: Chip[][]; tagline?: string | null;
+  connection: Chip[][];                            // ⑦：一行 = 一个 Chip[]；通常两行，赛车可到四行
+  eraYears: number[];                              // ⑧：EraSpan 的输入（赛季 / 时代 = 自身年份）
+  laurels: React.ReactNode[]; actions?: { label: string; href: string; icon?: string; tone?: "red" | "line" }[];
+  stats: { k: string; v: React.ReactNode; sub?: string }[];
+  visual: React.ReactNode;                         // ⑩，页面自己组装（半身像 / WindTunnel / TrackField / 冠军卡）
+};
+```
+
+| 对象 | 构造函数 | 槽 ③④⑤⑥ | 槽 ⑦ L1 / L2 来源 | ⑧ | ⑨ | ⑩ 数字 | 身份色 |
+|---|---|---|---|---|---|---|---|
+| 车手 | `driverHero(id, year)` | `getDriver` · `zhName.driver` · `getCountry` + `NAT_ZH` + `flag` · `content.drivers[id].tagline` | 年份态 / 现役：`driverYear(id, Y)` → `entries`（team · cars · engine · rounds_text）、`mates`（id · n）、`line`（pos · points · champ · live）；退役：`driverSeasons(id).entries.at(-1)` + `standings.at(-1)` + `teammates(id)` 过滤该年 | `driverYears(id)` | 现状四枚（生涯合计） | 现状 `StatRow` | `teamColor(年份态的 team ?? DRIVERS_2026[id].team ?? 签名车队)` |
+| 车队 | `teamHero(id, year)` | `getConstructor` · `zhName.team` · `content.teams[id]`（base / founded / tagline）· `constructorLineage` → ⑤b | `teamYear(id, Y)` → `drivers`（id · starts）、`cars`（id · name · engine · engineName）、`line`（pos · points · wins · champ · live）、车手冠军 = `drivers.find(d => d.line?.champ)`；解散车队：`constructorYears(id).at(-1)` 作 Y | `constructorYears(id)` | 现状三枚 | 现状 | `teamColor(id)` |
+| 赛道 | `circuitHero(id, year)` | `getCircuit` · `content.circuits[id]`（nameZh / tagline / traits）· `TYPE_ZH` | 年份态：`circuitYear(id, Y)` → `round · gp · date · podium[0]（id · team）· pole · fl` + `chassisForTeamYear(podium[0].team, Y)` 取冠军赛车；回放键：`seasonSchedule(Y)` + `raceReplayPath`（现状）；全部年份态：`circuitRaces(id)[0]`（最近一届：year · round · gp · winner · winnerTeam）+ `chassisForTeamYear`；胜场最多车队 = `circuitRaces` 按 `winnerTeam` 计数；未赛场次：`seasonRaces(当前年)` 中 `circuit === id && !winner` | `circuitYears(id)` | 现状三枚（赛道之王 / 杆位最多 / 圈速纪录） | 现状 | `#15151e`（碳黑） |
+| 赛车 | `carHero(id)` | `getChassis` → `name · full_name · constructor_id · seasons · drivers · engines`；`content.cars[id]`（nameEn · designers） | L1：`drivers` 按场次（`facts({team, year})` 计数）降序；`engines[0]`；L2 每季：`yearTeams(y).find(t => t.id === team)`（pos · points · wins · champ · live；**用积分榜积分，不用 `race_result` 求和**——RB22 现状 286 分是漏了冲刺赛，积分榜是 298）+ 车手冠军 = `seasonDriverStandings(y).champ ∈ drivers` | `seasons.map(y)` | 现状（`cTitles` / `dTitles`，一年多底盘时按现状规则不计车队冠军） | 现状五格（把 `StatRow` 从视觉槽之后挪到之前，与基准顺序一致） | `teamColor(team)` |
+| 年份 | `seasonHero(year)`（改造现有 `components/season/SeasonHero.tsx`，保留它在总览 tab 卡片内的位置） | ③ = 年份数字（`numeral`）· ② = `World Champion` / `Championship Leader · Round n / N` / `Season` | `seasonDriverStandings` / `driverStandingsAfter`（live）→ champ / leader；`seasonConstructorStandings` / `constructorStandingsAfter` → champTeam；冠军所在车队 = 现状 `heroTeam` 查询；**赛车** = `chassisForTeamYear(heroTeam, Y)[0]` 与 `chassisForTeamYear(champTeam, Y)[0]`；车队冠军的两位车手 = `teamYear(champTeam, Y).drivers.slice(0, 2)` | `[year]`（EraSpan 自动变成「所属时代」） | 现状两枚 | 现状四格 | `teamColor(heroTeam)` |
+| 单场 | `raceHero(year, round)` | `getRaceByYearRound` → ③ = `{Y}` 数字 + 大奖赛中文名（现状两行标题保留为 ③ 的 `first/last`）· ④ = `official_name` | `raceResults(race.id)[0]`（winner · constructor_id · time · grid）、`chassisForTeamYear(winner.constructor_id, Y)[0]`、`pole = results.find(pole_position)`、`raceData(id, "FASTEST_LAP")[0]`；回放 key：现状 `seasonSchedule` | `[year]` | 现状（大满贯 / 帽子戏法 / 杆位 / 最快圈 / 车手之日） | `laps · distance` 并入 L1，⑩ 数字行不单独渲染（单场没有"合计" ） | 已赛 = `teamColor(winner.constructor_id)`；未赛 = 碳黑 + 官方赛事图 |
+| 时代 | `eraHero(id)`（改造 `EraIntro` 的头部） | `eraById` → ③ = `era.title`（中文，`font-cn` 900）· ② = `Era · a–b` · ⑥ = `era.summary` | `eraFacts(er)` → `titlesD[0]`、`titlesT[0]`、`circuits[0]`；**新查询** `eraTopChassis(a, b)`：`race_result ⋈ race ⋈ season_entrant_chassis`（同年同车队）按 `chassis_id` 计 `position_number = 1`，取第一（混动时代 = `mercedes-f1-w07` · 19 胜） | `years`（本时代 = 一条，EraSpan 省略） | 现状两枚（改成 L1 的芯片语法后，⑨ 行只留月桂 + 芯片） | 现状四格 | `teamColor(titlesT[0] ?? winsT[0])` |
+
+#### 0.6.4 链接去向（最具体单元，§0.5.1 S3 的头图特例）
+
+| 芯片 | 全部年份态 | 指定年份态 Y | 不链接的情况 |
+|---|---|---|---|
+| `[Person]` | `/drivers/{id}`；现役车手的"当前年"行按年份态处理 → `?year={当前年}` | `/drivers/{id}?year=Y` | 页面主体自己（车手页不出现自己） |
+| `[Team]` | `/teams/{id}`；现役 → `?year={当前年}` | `/teams/{id}?year=Y` | 车队页自己的队名 → `plain`；赛车页 L1 的车队 → `?year={底盘最新年}` |
+| `[Car]` | `/cars/{chassisId}`（永不带 `?year=`，§4.5） | 同左 | 赛车页自己 |
+| `[Circuit]` | `/circuits/{id}` | `/circuits/{id}?year=Y`（单场页的赛道芯片 → `?year=Y`） | 赛道页自己 |
+| `[第 R 站 大奖赛名]` | `/races/Y/R`（`EntityLink kind="year" href=…`，预览赛季） | 同左 | 单场页自己（标题不链） |
+| `[Y]` 年份徽章 | `/seasons/Y` | `/seasons/Y` | 年份中枢自己的 `{Y}` 数字不链 |
+| `[Engine]` | `Engine` 组件现状规则（有厂队 → `/teams/{works}`，该年厂队参赛才带 `?year=`；纯供应商 = 文字） | 同左 | 车队页自己做引擎（`self`） |
+| `[Era]` | `/eras/{id}` | 同左 | 时代页自己 |
+| ⑨b 按钮 | `▶ 计时回放` → 单场的回放页（随年份中枢 / 回放重构：回放页挂在单场下，入口由 `raceReplayPath` 给出，本节不另定 URL）；`解说手册` → `/races/Y/R/brief` | | |
+
+面包屑：现状 `subjectCrumbs(section, href, subject, year)`；单场 / 年份 / 时代按 §0.5.3。
+
+#### 0.6.5 芯片形态（`components/entity/*`，头图区统一尺寸）
+
+| 芯片 | 组件 | 形态 | 头图尺寸 | hover 卡 |
+|---|---|---|---|---|
+| 人 | `Person`（现有） | 圆头像（**那一年**的照片 `?year=Y`，§1.5；背景 = 那一年车队色 `color`）+ 中文全名粗体 | `size={24}`，名字 15/700 | `/api/preview/driver/{id}`（现有） |
+| 车队 | `Team`（现有，`onDark`） | 白色车标（透明底，不加圆片）+ 中文名粗体；历史车队无 logo → 名字 | `size={22}` | `/api/preview/team/{id}`（现有） |
+| **赛车** | **新建 `components/entity/Car.tsx`** | 小侧视图 + 底盘名（`.lat` 拉丁等宽展示字）：2026 车 = `teamCar(team, 160)` 裁成 56×20；历史车 = `carImageFast(id)` 缩略（无图 → 只有名字，不画占位）；链接 `/cars/{id}` | 图高 20，名字 15/700 | **新增 `kind: "car"`**：`EntityLink` 的 `Kind` 加 `"car"`，`hrefOf("car", id) = /cars/{id}`；`app/api/preview/[kind]/[id]/route.ts` 加 `car` 分支（`getChassis`：title = 底盘名，latin = full_name，image = 2026 官方侧视图 / `carImageFast`，`imageKind: "car"`（新：宽图贴底），color = 车队色，metaParts = `[Team] · y0–y1 · 引擎`，stats = Starts / Wins / Podiums / Poles（`facts({team, year})` 按季合计），blurb = `content.cars[id].summary` 首句）；`HoverLayer` 加 `.car` 样式（宽 180 高 64，object-fit contain，贴卡底） |
+| **赛道** | **新建 `components/entity/Circuit.tsx`** | 白色线稿 `trackOutline(id)`（无线稿 → 不画）+ 中文名粗体；链接按 §0.6.4 | 线稿高 22（宽随比例，最大 44） | `/api/preview/circuit/{id}`（现有） |
+| 年份徽章 | `u.yBadge`（现有样式）抽成 `YearBadge` | 白底黑字 Formula1 900；`href` 可覆盖（指向 `/races/Y/R` 时仍预览赛季） | 15px | `/api/preview/year/{Y}`（现有） |
+| 引擎 | `Engine` / `Engines`（现有） | 文字（`hlink`） | 15/700 | 厂队 → team 卡；供应商无卡 |
+| 时代 | `EraSpan`（现有） | 文字下划线 | 14 | 无（时代无卡，P2 可加 `kind: "era"`） |
+| 连接词 | `text` chip | 白字 55% 不透明、400 字重（`u.yLine > span` 现状） | 15 | — |
+| 当年冠军月桂 | `Laurel tone="white" onColor size={28}` | 行内 | 28 | — |
+
+所有芯片在同一行里用 `u.yLine` 的现状排版（flex · gap 6/10 · 15px · 700），**L1 与 L2 之间 8px**，L2 行首的年份徽章只在年份态出现（全部年份态的 L1 行首已经有）。
+
+#### 0.6.6 hover 在头图区的规则（§1.3 的头图实例）
+
+1. **头图的主体不弹卡**：③④ 标题、⑩ 视觉（半身像 / 赛车 / 赛道）、面包屑最后一节——`preview={false}` 或根本不是链接；面包屑上级（`车手` `历史 › 2026`）照常弹。
+2. **串联行里的每个芯片都弹**：它们是"顺带提到的别的实体"（车手页的车队 / 赛车 / 队友，赛道页的冠军 / 车队 / 赛车，赛车页的车手 / 车队）。年份态的芯片带 `year`，卡片标题链接到 `?year=Y` 切片（`HoverLayer` 现状已支持）。
+3. **卡里不弹卡**：单场页右侧冠军大卡内指向冠军的链接 `preview={false}`；大卡内提到的车队 / 赛车芯片照常弹；左侧 L2 的冠军芯片照常弹（它在"行"里，不在"卡"里）。
+4. **hover 形态**：芯片 = 共享的软药丸（`person.module.css` / `team.module.css` 的 `:hover` 背景 10% + 外环 5px）；纯文字链 = 下划线（`heroLink` 现状：1px 40% 白 → hover 1.5px 100% 白）；年份徽章 = `hlink` 下划线；按钮 = `btn-red` / `btn-line` 现状。**不再有第三种 hover**（输入 23）。
+5. hover 卡**不重复屏上内容**（输入 15）：车队页@2026 L1 里的 `[RB22]` 弹赛车卡（另一个实体，允许）；车手页 L1 的 `[红牛]` 弹车队卡（允许）；赛车页 L1 的 `[红牛]` 弹车队卡（允许）；但赛车页 ⑩ 的风洞图不弹（它就是主体）。
+
+#### 0.6.7 视觉槽 ⑩ 与身份色（按对象）
+
+| 对象 | ⑩ 视觉（全部年份态 → 指定年份态） | 身份色 |
+|---|---|---|
+| 车手 | 官方出血半身像 `driverBust`（仅当前年 / 2025+ 有）→ 年份态 Y < 2025：`/api/face/{id}?s=600&year=Y` 时期照片（`s.photo` 4:5 圆角，`SeasonHero` 现状做法），**不得**用当前年半身像（修正 `?year=2021` 截图） | 年份态 = 那一年车队色；全部年份态 = 当前车队（现役）/ 签名车队（退役） |
+| 车队 | 当前年官方侧视图 `teamCar`（2026）→ 年份态：该年底盘图 `carImageFast(cars[0].id)`（无图 → 该年主力车手时期照片 `teamImageFast` 现状） | 车队色（不随年变——同一车队的历史色是 P2） |
+| 赛道 | `TrackField` 3D（最新布局遥测）→ 年份态：同一 3D，点击去 `/races/Y/R`（现状） | 碳黑 + 线稿 |
+| 赛车 | 2026：`WindTunnel`；历史：`carImageFast` 照片（现状） | 车队色 |
+| 年份 | 冠军 / 领跑者时期照片（现状，`SeasonHero`） | 冠军 / 领跑者车队色 |
+| 单场 | 冠军大卡 + 亚季军格 + 前十塔（现状）；未赛：3D 赛道 | 已赛 = 冠军车队色（§1.4「单场 = 冠军车队色」，现状碳黑 + 官方照片 → 改成冠军色 dark 变体，照片 35% 叠在上面）；未赛 = 碳黑 |
+| 时代 | 无（卡片表面）；P2：胜场最多赛车的照片出血 | 冠军最多车队色 |
+
+#### 0.6.8 实施清单 v6（给 Opus 5.5；接在 P0-16 之后，与年份中枢 / 回放重构并行时只动下面列出的文件）
+
+**P0-17 `ObjectHero` 组件 + 芯片**
+- 文件：新 `components/entity/ObjectHero.tsx`（十个槽、两种表面；接受 `HeroModel`）、`objecthero.module.css`（把 `entity.module.css` 的 `.hero .heroIn .heroText .first .last .tagline .portrait .stats` 与 `season.module.css .hero .text .kick .year` 的卡片变体合并进来；旧 class 保留一轮不删）；新 `components/entity/ConnectionLine.tsx`（渲染 `Chip[]`，按 §0.6.5 分发到 `Person` / `Team` / `Car` / `Circuit` / `YearBadge` / `Engine` / `Laurel` / 文字）；新 `components/entity/Car.tsx`、`Circuit.tsx`、`YearBadge.tsx`；`EntityLink.tsx` `Kind` 加 `"car"`；`app/api/preview/[kind]/[id]/route.ts` 加 `car` 分支；`HoverLayer.tsx` + `hover.module.css` 加 `imageKind: "car"`；新 `lib/hero.ts`（§0.6.3 的七个构造函数 + `eraTopChassis`）。
+- 验收：
+  1. `npx tsc --noEmit -p .` 干净；`curl /api/preview/car/red-bull-rb22` 返回 `title: "RB22"`、`metaParts` 含 `红牛` 与 `2026`、`stats[0].k === "Starts"`。
+  2. 任何页面还没接入前，站点与现状一致（组件先建、后接入）。
+
+**P0-18 车手页接入（基准页先做，确认样式与现状像素级一致）**
+- 文件：`app/(site)/drivers/[id]/page.tsx`（头图替换为 `<ObjectHero model={driverHero(id, year)} visual={…} />`；删 `k.dek` 行与 `u.yLine` 行；`driver.module.css` 删 `.dek .honours .heroLink`，留 `.h1 .fit .cell*`）。
+- 验收（精确文案）：
+  1. `/drivers/max-verstappen` 与 `/drivers/max-verstappen?year=2026` 串联行**完全相同**：L1 `2026 效力于 [红牛] · 赛车 [RB22] · 引擎 红牛-福特`；L2 `队友 [伊萨克·哈贾尔] · [利亚姆·劳森] · 目前 P6 · 188 分`（数据随赛季推进变化，验收时以 `/seasons/2026/standings` 的维斯塔潘行为准）。`[红牛]` → `/teams/red-bull?year=2026`，`[RB22]` → `/cars/red-bull-rb22`，`[伊萨克·哈贾尔]` → `/drivers/isack-hadjar?year=2026`，`2026` 徽章 → `/seasons/2026`。
+  2. `/drivers/max-verstappen?year=2021`：**只有一组**串联行：L1 `2021 效力于 [红牛] · 赛车 [RB16B] · 引擎 本田`；L2 `队友 [塞尔吉奥·佩雷斯] · 年终 P1 · 395.5 分 · [世界冠军 月桂]`；页面上不再出现「2026 效力于」；右侧是 2021 本田时期照片（4:5 圆角），不是 2026 半身像。
+  3. `/drivers/ayrton-senna`：L1 `最后效力于 [威廉姆斯] · 赛车 [FW16] · 1994`；L2 `队友 [达蒙·希尔]`（1994 无年终名次 → 名次 / 积分段不渲染；有 `posText` 无 `pos` 的年份写 `posText`）。
+  4. `/drivers/lewis-hamilton?year=2008`：L1 `2008 效力于 [迈凯伦] · 赛车 [MP4-23] · 引擎 梅赛德斯`；L2 `队友 [海基·科瓦莱宁] · 年终 P1 · 98 分 · [世界冠军]`。
+  5. hover `[红牛]` 弹车队卡、hover `[RB22]` 弹赛车卡（顶部红牛色 + 侧视图）、hover 半身像与 `VERSTAPPEN` 标题不弹。
+
+**P0-19 车队页、赛道页接入**
+- 文件：`app/(site)/teams/[id]/page.tsx` + `team.module.css`（删 `.lineage` 的独立样式 → ⑤b 槽；删 `u.yLine`）；`app/(site)/circuits/[id]/page.tsx` + `circuit.module.css`（头图改用 `ObjectHero surface="bleed"`，⑩ 视觉 = 现状 `c.track` 的 3D 画布，`.note` 保留）。
+- 验收（精确文案）：
+  1. `/teams/red-bull` 与 `/teams/red-bull?year=2026` 相同：L1 `2026 阵容 [马克斯·维斯塔潘] · [伊萨克·哈贾尔] · [利亚姆·劳森] · 赛车 [RB22] · 引擎 红牛-福特`；L2 `目前 车队 P4 · 1 胜 · 298 分`（以 `/seasons/2026/standings` 车队榜为准）。
+  2. `/teams/red-bull?year=2021`：L1 `2021 阵容 [马克斯·维斯塔潘] · [塞尔吉奥·佩雷斯] · 赛车 [RB16B] · 引擎 本田`；L2 `年终 车队 P2 · 11 胜 · 585.5 分 · 车手冠军 [马克斯·维斯塔潘] [月桂]`。
+  3. `/teams/brawn`（布朗GP）：L1 `最后参赛 2009 · 阵容 [简森·巴顿] · [鲁本斯·巴里切罗] · 赛车 [BGP 001] · 引擎 梅赛德斯`；L2 `年终 车队 P1 · 8 胜 · 172 分 · [车队冠军]`；⑤b 谱系行现状保留（本田 → 布朗GP → 梅赛德斯）。
+  4. **`/circuits/suzuka?year=2026`**：L1 `2026 [第 3 站 日本大奖赛] · 2026-03-29`；L2 `冠军 [基米·安东内利] · [梅赛德斯] · [F1 W17] · 杆位 [基米·安东内利] · 最快圈 [基米·安东内利] 1:32.432`；⑨b 两个按钮 `▶ 计时回放`（→ 该站回放页）`解说手册`（→ `/races/2026/3/brief`）。`[第 3 站 日本大奖赛]` → `/races/2026/3`；`[梅赛德斯]` → `/teams/mercedes?year=2026`；`[F1 W17]` → `/cars/mercedes-f1-w17`。面包屑 `赛道 › 铃鹿赛道 › 2026`。
+  5. `/circuits/suzuka`：L1 `最近 2026 [第 3 站 日本大奖赛] · 冠军 [基米·安东内利] · [梅赛德斯] · [F1 W17]`；L2 `胜场最多车队 [红牛] 8 胜 · 举办 36 届 1987–2026`；⑨ 月桂行现状保留（6 胜 赛道之王 [舒马赫] · 8 杆 杆位最多 [舒马赫] · 圈速纪录 1:30.965 [安东内利] 2025）。
+  6. `/circuits/monaco?year=2020`：`2020 年未举办 · 最近 [2019] / [2021]`，无 L2、无按钮。
+
+**P0-20 赛车页、单场页接入**
+- 文件：`app/(site)/cars/[id]/page.tsx` + `car.module.css`（删 `.dek .dekYears .teamChip .sub .full`；`StatRow` 移到视觉槽之前；头图补 ④ 全名行、⑧ `EraSpan`）；`app/(site)/races/[year]/[round]/page.tsx` + `race.module.css`（L1 吸收 `.meta`；L2 新增在按钮之前；`.winner` 大卡与 `.tower` 作为 ⑩；已赛底色改冠军车队色）。
+- 验收（精确文案）：
+  1. **`/cars/red-bull-rb22`**：③ `RB22`，④ `RED BULL RB22`，⑤ `红牛-福特 DM01 1.6 V6 T H · 设计 Pierre Waché、Ben Hodgkinson、Craig Skinner、Enrico Balbo、Paul Monaghan`；L1 `[红牛] · 2026 · 车手 [马克斯·维斯塔潘] · [伊萨克·哈贾尔] · [利亚姆·劳森] · 引擎 红牛-福特`；L2 `2026 目前 车队 P4 · 1 胜 · 298 分`；⑧ `所属时代 2026新时代`；⑩ 数字 `Starts 16 · Wins 1 · Podiums 10 · Poles 1 · Points 298`（Points 改为积分榜积分；以 `/seasons/2026/standings` 为准）。`[红牛]` → `/teams/red-bull?year=2026`。
+  2. `/cars/lotus-79`：L1 `[莲花] · 1978–1979 · 车手 [马里奥·安德雷蒂] · [罗尼·彼得森] · [卡洛斯·罗伊特曼] · [让-皮埃尔·雅里埃] · 引擎 福特 Ford Cosworth DFV 3.0 V8`；L2 两行：`1979 年终 车队 P4 · 0 胜 · 39 分` / `1978 年终 车队 P1 · 8 胜 · 86 分 · 车手冠军 [马里奥·安德雷蒂] [月桂]`（1978 车队冠军月桂按现状"一年多底盘不计"规则省略，但 L2 的名次仍写 P1）。
+  3. `/races/2026/3`：L1 `[2026 赛季] 第 3 站 · [铃鹿赛道] · 2026-03-29 · 53 圈 307.471 km`；L2 `冠军 [基米·安东内利] · [梅赛德斯] · [F1 W17] · 杆位 [基米·安东内利] · 最快圈 [基米·安东内利] 1:32.432`；按钮在 L2 之后；右侧冠军大卡内 `[梅赛德斯]` `[F1 W17]` 改为芯片，卡内「基米·安东内利」`preview={false}`；头图底色 = 梅赛德斯色。
+  4. `/races/2026/17`（未赛）：L2 `尚未进行 · 查看 [2026] 赛程与日历订阅`；底色碳黑。
+
+**P0-21 赛季卡、时代卡接入（卡片表面；与年份中枢重构的执行者协调——只改 `SeasonHero.tsx` / `EraIntro.tsx` 头部的内部结构，不改它们在 tab 里的位置）**
+- 文件：`components/season/SeasonHero.tsx`（`y.dek` 改为 `ConnectionLine` 两行；加 `EraSpan years={[year]}`）；`components/season/EraIntro.tsx`（`e.rulers` 改为 L1 芯片语法 + 新 L2）；`lib/hero.ts eraTopChassis`。
+- 验收：
+  1. `/seasons/2021` 总览 tab 的赛季卡：L1 `世界冠军 [马克斯·维斯塔潘] · [红牛] · 赛车 [RB16B]`；L2 `车队冠军 [梅赛德斯] · 赛车 [F1 W12] · 车手 [刘易斯·汉密尔顿] · [瓦尔特利·博塔斯]`；⑧ `所属时代 V6涡轮混动时代` → `/eras/hybrid-2014-2021`。卡片仍在 tab 条之下。
+  2. `/seasons/2026`（进行中）：L1 `积分领跑 [基米·安东内利] · [梅赛德斯] · [F1 W17] · 320 分 · 领先 [乔治·拉塞尔] +84`；L2 `车队领跑 [梅赛德斯] · [F1 W17] · 556 分`（以当时积分榜为准）。
+  3. `/eras/hybrid-2014-2021`：L1 `2014–2021 · 8 季 · 车手冠军最多 [刘易斯·汉密尔顿] 6 冠 · 车队冠军最多 [梅赛德斯] 8 冠`；L2 `胜场最多赛车 [F1 W07] 19 胜 · 举办最多 [红牛环] 10 届`（`spielberg`，2014–2021 含 2020 施蒂利亚站）。
+
+**P0-22 一致性脚本 `scripts/hero-check.mjs`**
+- 对 §0.6.2 的三个互通检查各取 3 组（维斯塔潘 / 红牛 / RB22 @2026；汉密尔顿 / 迈凯伦 / MP4-23 @2008；安东内利 / 梅赛德斯 / F1 W17 @ 铃鹿 2026 ↔ `/races/2026/3` ↔ `/seasons/2026`），抓每页 `[data-hero-line]` 的文本，断言同一事实在相对页面上出现（车手页的车队名 ∈ 车队页阵容；赛道页冠军 = 单场页冠军 = 年份赛历该站冠军）。
+- 验收：`node scripts/hero-check.mjs` 全绿；`grep -rn "u.yLine\|k.dek\|y.dek\|e.rulers" app components` 返回 0（旧串联行全部迁移）。
+
+执行顺序：P0-17 → P0-18 → P0-19 → P0-20 → P0-21 → P0-22。P0-18 做完先截图与 `scratchpad/hero/driver.png` 对比，像素级一致后再推其他页。
+
+---
+
+### 0.7 状态筛选（总览 / 年份 / 时期）v1（输入 26）— 页面上的一切随左栏状态走
+
+> 用户原话：「左边导航是哪个阶段，就要看哪个阶段的事情啊。不应该是展示所有整体阶段，整体阶段只有在总览的时候出现啊。」「像这种，我选了 18 年到 20 年，你右边还是展示所有年份的信息。这个还是没有做到，筛选逻辑还是不对啊。」「这块和 2024 赛季就是一个重复信息了吧？没有用了吧？」（`/drivers/lewis-hamilton?year=2024` 年份带开头的赛季摘要卡）
+
+#### 0.7.0 两条规则
+
+**R1 状态规则。** 三个对象页（`/drivers/[id]`、`/teams/[id]`、`/circuits/[id]`）恰有三种状态，由左栏决定：**总览**（无参数）= 全部年份；**年份** `?year=Y` = 只有 Y；**时期** `?from=A&to=B` = 只有 A–B（含端点；来自栏的分组标题）。头图之下的**每一个区块**——阵容、成绩表、高光、趣事、解说要点、纪录簿、队友、赛车、图表、「全部 N 场」透视、档案——都只呈现当前状态里的内容。**全时段内容只出现在总览。**没有"筛一半"：一个区块要么按范围过滤并改题，要么在该状态下整体隐藏，要么换成范围专用变体（下表逐一裁决）。
+
+**R2 去重规则。** 头图（§0.6）在年份 / 时期态已经把该范围的串联行、瓷砖（车队 · 赛车 · 引擎 / 阵容 / 冠军 · 杆位 · 最快圈）、月桂与数字行写全。**头图之下的任何区块不得重复头图在同一状态下已展示的信息**（同一组瓷砖 + 同一行数字）。年份带 / 时期区块直接从**新信息**开始（逐站成绩、队友对比、阵容大卡、领奖台三人、完整单场入口……）。删除清单见 §0.7.5。
+
+**实测（2026-10-09，curl 抽文本）**：
+
+| 页面 | 泄漏的全时段区块 |
+|---|---|
+| `/teams/mclaren?from=2018&to=2020` | 「历年阵容与赛车」列 2026…1966；透视题「全部 2121 场出赛」+ 年份下拉可跳出范围；「车队的故事」档案 `出赛 1966–2026 · 1009 场 / 车队冠军 1974…` |
+| `/teams/mclaren?year=2019` | 同上三处；年份带开头 `P4 · 145 · 0 · 1 · 21` 数字行与「赛车与引擎 MCL34 雷诺」卡 = 头图重复 |
+| `/drivers/lewis-hamilton?from=2007&to=2012` | 「每一个赛季」列 2007–2026；「历任队友」全时段；解说要点混进现在时的「下一站 在滨海湾…（2009）…（2025）」「纪录 美国站六冠」（正则年份命中）；透视「全部 396 场比赛」 |
+| `/drivers/lewis-hamilton?year=2024` | 同上；年份带开头赛季摘要卡（车队标 · F1 W15 · 梅赛德斯引擎 · P7 / 223 / 2 / 5 / 0 / 24 · 肖像）= 头图重复 |
+| `/circuits/monza?from=2000&to=2026`、`?year=1971` | 「历届比赛 76 场 · 1950–2026」+ 全部年份色带；「这里的故事」官方赛道图；透视「谁最擅长这里」全时段；年份带的站名 / 日期行与「杆位 / 最快圈」小块 = 头图重复 |
+
+头图下半（口号 · 时代 · 月桂 · 数字）已由 `lib/hero.ts` 的 `scopeOf / inScope / teamTotals / driverTotals` 修好，三页三态抽查一致（迈凯伦 2018–20：`0 胜 · 3 领奖台 · 59 出赛`，时代行只列 V6 混动），**不再改**。
+
+#### 0.7.1 一个共享机制：`lib/range.ts`（新建，纯函数，无 db 依赖，客户端组件可引）
+
+```ts
+export type Range = { from: number; to: number };
+/** 页面状态：year 优先；都没有 = 总览（null） */
+export const rangeOf = (year: number | null, period: Range | null): Range | null => (year ? { from: year, to: year } : period);
+export const inRange = (y: number, r: Range | null) => !r || (y >= r.from && y <= r.to);
+export const rangeLabel = (r: Range) => (r.from === r.to ? `${r.from}` : `${r.from}–${r.to}`);
+/** 区块标题：总览用原题；年份 / 时期用「{范围} {后缀}」，如 rangeTitle(r, "历年阵容与赛车", "阵容与赛车") → 「2018–2020 阵容与赛车」 */
+export const rangeTitle = (r: Range | null, overview: string, suffix: string) => (r ? `${rangeLabel(r)} ${suffix}` : overview);
+/** 范围内最近的两个存在年份（范围之外），给"未参赛 / 未举办"带用 */
+export const nearestOutside = (ys: number[], r: Range) => ({ prev: [...ys].reverse().find((y) => y < r.from) ?? null, next: ys.find((y) => y > r.to) ?? null });
+/** 策展条目：有 year 字段按 year；没有的（趣事）按标题 / 正文里写到的赛季；r=null 全给 */
+export function rangeItems<T extends { year?: number | null; title?: string; text?: string }>(items: T[], r: Range | null): T[] {
+  if (!r) return items;
+  return items.filter((x) => x.year != null ? inRange(x.year, r)
+    : (`${x.title ?? ""} ${x.text ?? ""}`.match(/(19|20)\d{2}/g) ?? []).some((y) => inRange(+y, r)));
+}
+```
+
+`lib/hero.ts` 里的 `forYear / forPeriod / parsePeriod` 保留给头图自己用，页面层**只用** `rangeItems`（语义与 `forYear`∪`forPeriod` 相同，一处实现）。`teamTotals / driverTotals` 加 `export`（时期解说要点复用，§0.7.3），其余不动。
+
+**每页开头统一四行**（三页相同，之后所有区块只认 `range`）：
+
+```ts
+const year = parseYear(sp.year);
+const period = year ? null : parsePeriod(sp);
+const range = rangeOf(year, period);                 // null = 总览
+const exists = !range || ys.some((y) => inRange(y, range));   // ys = driverYears / constructorYears / circuitYears
+```
+
+**不存在态**（`range && !exists`，含手输的 `?from=1950&to=1960`）：页面 = 头图 + 栏 + 一条带，**其余区块全部不渲染**（现状在「Y 年未参赛」下仍渲染全时段阵容、故事，属泄漏）。带用 `YearBand`，给它加可选 `to?: number`（`<YearSpan from={year} to={to} />`，label 改「时期」）：
+- 年份：现状文案不变（`{名字} Y 年未参赛 · 出赛年份 A–B`，前后最近年份 → `?year=`；车队另有「同一支车队的不同名号」）。
+- 时期：`{名字} <A–B> 未参赛 · 出赛年份 <首–末>` / 赛道 `… 未举办 F1 世锦赛分站 · 举办年份 …`，`prev / next = nearestOutside(ys, range)` → `?year=`。
+
+#### 0.7.2 区块裁决表（三页 × 三态）
+
+记法：**原样** = 总览现状；**过滤 + 改题** = `items.filter(inRange)` + `rangeTitle`；**隐藏** = 不渲染；**变体** = 范围专用组件。所有改题区块的 `.sec-head` 右侧加 `<Link href={base} className="sub">看全部年份</Link>`（`base` = 对象总览 URL；与 `YearBand` 的「看全部年份」同款语义）。
+
+**A. 车手 `/drivers/[id]`**
+
+| 区块（现文件位置） | 总览 | 年份 `?year=Y` | 时期 `?from&to` |
+|---|---|---|---|
+| 头图 `ObjectHero`（`lib/hero.ts driverHero`） | 原样 | 原样（已修） | 原样（已修） |
+| 「Y 赛季」带 `YearBand` + `DriverYear` | — | 保留，但 **删掉开头赛季摘要卡**（`u.season`：车队标 · 赛车 · 引擎 · 月桂 · 6 格数字 · 肖像，全是头图已有）；带从「逐站成绩」开始，然后「队友对比」。`sub` 文案改「{名} 的 Y 赛季：逐站成绩与队友对比」 | — （时期没有带；头图承担摘要） |
+| 解说要点 `TalkingPoints`（`lib/talk.ts driverTalk` + `notes.driver` + `driverRecords`） | 原样（含纪录簿） | `driverYearTalk`（现状） | **变体** `driverPeriodTalk(id, range)`（§0.7.3）；**不传 `records`**（纪录簿是全时段，只在总览） |
+| 「每一个赛季」生涯格（`page.tsx` `byYear` → `k.cell`） | 原样 | **隐藏**（年份带已是那一年；栏负责换年） | 过滤 `[...byYear].filter(([y]) => inRange(y, range))`；题 `rangeTitle(range, "每一个赛季", "的每一个赛季")` → 「2007–2012 的每一个赛季」；格内年份芯片 `EntityLink kind="year"` 的 `href` 改为 `yHref(y)`（同对象 `?year=Y`，hover 仍是赛季卡）；`card-link` 不变 |
+| 透视 `Cube`（「全部 N 场比赛」） | 原样 | 过滤 + 锁定（§0.7.4）；题 `${Y} 赛季 ${n} 场比赛` | 过滤 + 锁定；题 `${A–B} ${n} 场比赛` |
+| 「人物」传记 + 维基来源 + 「F1 家族」 | 原样 | **隐藏** | **隐藏** |
+| 「历任队友」（`mates`） | 原样（在人物侧栏） | **隐藏**（年份带有「队友对比」） | **变体**：独立小节「{A–B} 的队友」，`mates.filter((m) => inRange(m.year, range))` 按 id 去重，`sub` = 范围内年份（现有压缩写法 `2008, 2009` / `2010–2012`）；空 → 整节隐藏 |
+| 「高光时刻」`LinkedMoments` / 「你可能不知道」`LinkedAnecdotes` | 原样（题「高光时刻」「你可能不知道」） | 从「人物」节里**搬出**成独立 `band band-paper`；`rangeItems`；题 `rangeTitle(range, "高光时刻", "年高光时刻")`（年份态 → 「2008 年高光时刻」；时期态后缀 `高光时刻` → 「2007–2012 高光时刻」——`rangeTitle` 调两次或传后缀前判断 `range.from===range.to`）；趣事题「2007–2012 · 你可能不知道」；两者都空 → 整节隐藏 | 同左 |
+
+**B. 车队 `/teams/[id]`**
+
+| 区块 | 总览 | 年份 | 时期 |
+|---|---|---|---|
+| 头图 `teamHero` | 原样 | 原样 | 原样 |
+| 「Y 赛季」带 + `TeamYear` | — | 保留，但 **删掉 `u.teamStats` 数字行**（P · 积分 · 胜场 · 领奖台 · 1-2 · 出赛 + 两枚月桂 = 头图）和 **「赛车与引擎」卡**（头图已有赛车 + 引擎瓷砖，含车图）；带从「阵容 · N 位车手」大卡开始（每人成绩是新信息）。F1DB 无底盘记录那行提示（`t.cars.length === 0`）随卡一起删。`sub` 改「{名} 的 Y 赛季：阵容与每位车手的成绩」 | — |
+| 解说要点 | 原样（含纪录簿） | `teamYearTalk`（现状） | **变体** `teamPeriodTalk(id, range)`；无 `records` |
+| 「历年阵容与赛车」（`decades` → `t.yRow`） | 原样（含「更早」折叠） | **隐藏**（年份带的阵容大卡已覆盖） | 过滤 `years.filter((y) => inRange(y, range))`；题 `rangeTitle(range, "历年阵容与赛车", "阵容与赛车")` → 「2018–2020 阵容与赛车」；范围 ≤ 15 季：**扁平列表**，无年代标签、无「更早」折叠；> 15 季：保留年代标签，全部展开。行内链接不变（年份 → `yHref`；车手 → `/drivers/{d}?team={id}&from={y}&to={y}`；赛车 → `/cars/{id}`） |
+| 透视 `Cube`（「全部 N 场出赛」） | 原样 | 过滤 + 锁定；题 `${Y} 赛季 ${n} 场出赛` | 过滤 + 锁定；题 `${A–B} ${n} 场出赛` |
+| 「车队的故事」传记 + 档案（基地 · 出赛 · 最近赛车 · 车队冠军 · 车手冠军）+ 维基 | 原样 | **隐藏** | **隐藏**（范围内的冠军 / 出赛已在头图数字行） |
+| 「高光时刻」/「你可能不知道」 | 原样 | 搬出成独立节，`rangeItems` + 改题（同车手） | 同左 |
+
+**C. 赛道 `/circuits/[id]`**
+
+| 区块 | 总览 | 年份 | 时期 |
+|---|---|---|---|
+| 头图 `circuitHero`（含 `after` 的 3D 模型说明） | 原样 | 原样 | 原样 |
+| 「Y 年在这里」带 + `CircuitYear` | — | 保留，但 **删掉每场的 `u.raceHead`（站名 · 第 R 站 · 日期 · 圈数）**、**删掉 `u.extras`（杆位 / 最快圈）**——都在头图串联行。**例外**：同年多场（2020 穆杰罗 / 伊莫拉式双站、`races.length > 1`）时每场保留一行 `raceHead` 以区分。带 = 领奖台三张大卡（P2 / P3 的差距、发车位是新信息）+ 「完整单场 / 计时回放」按钮。`sub` 改「{名} 的 Y 年：领奖台与完整单场」 | — |
+| 解说要点 | 原样（含纪录簿） | `circuitYearTalk`（现状） | **变体** `circuitPeriodTalk(id, range)`；无 `records` |
+| 「历届比赛」（`sec-head` 统计 + `YearStrip` + `c.list`） | 原样 | **隐藏**（年份带就是那一年那场） | 过滤 `races.filter((r) => inRange(r.year, range))`；题 `rangeTitle(range, "历届比赛", "的比赛")` → 「2000–2026 的比赛」；`sub` 的 `N 场 · A–B · 胜场最多：X（n 胜）` 用**范围内**的 `winsBy / king` 重算；`YearStrip` 只传范围内的 `races`（其头部「首届 / 最近 / 共 N 场」随之变成范围值）；无「更早」折叠，范围跨 ≥ 2 个年代才显示年代标签；列表的年份格 `EntityLink` `href` 改为 `/circuits/{id}?year={r.year}`（同对象；色带芯片仍 → `/races/Y/R`，其图例写明"点击进入那一站"） |
+| 透视 `Cube`「谁最擅长这里」 | 原样 | **隐藏**（一年一场，无"最擅长"可言；领奖台在带里） | 过滤 + 锁定；题 「2000–2026 谁最擅长这里」 |
+| 「这里的故事」概述 + 官方赛道图 + 故事照片 + 维基 | 原样 | **隐藏** | **隐藏** |
+| 「这里发生过」`Moments`（`content.moments`） | 原样，题「这里发生过」 | 搬出成独立节；`rangeItems`；题「1971 年这里发生过」（现状） | 独立节；题「2000–2026 这里发生过」；空 → 隐藏 |
+
+**D. 赛车 `/cars/[id]`**：本身是「车队 × 年份」切片（§4.5），不接受 `?year / ?from`，栏分组 `slice=false` 无链接——**没有三态，不改**。
+
+**E. 空态文案**（范围来自栏分组时成绩类区块不会空；手输范围走 0.7.1 的不存在态；下列是对象存在但该区块无数据时）：
+
+| 区块 | 文案 |
+|---|---|
+| 透视 `Cube`（范围内 0 行；如报名未出赛） | `这一时期没有出赛记录`（年份态 `Y 赛季没有出赛记录`），替代表格，筛选条不渲染 |
+| 阵容与赛车 / 每一个赛季 / 的比赛 | `这一时期没有记录`（理论上不可达，兜底） |
+| 的队友 | 整节隐藏 |
+| 解说要点 / 高光时刻 / 你可能不知道 / 这里发生过 | 整节隐藏（现状做法；策展内容可选，不提示） |
+
+#### 0.7.3 时期解说要点 `driverPeriodTalk / teamPeriodTalk / circuitPeriodTalk`（`components/unit/yearTalk.ts` 新增三函数，与 `*YearTalk` 同形 `{ notes, auto }`）
+
+现状用 `forPeriod(driverTalk(id))` 正则抓年份，把现在时条目（`最近一次`、`下一站`、`现役`）也放进来——**废止**。时期态的 `auto` 必须**只由范围内的数据计算**，`notes` 只取范围内的策展：
+
+- `notes`（三页同法，`uniq` 去重，按年倒序，最多 16 条）：`notes.X(id).filter(n => inRange(n.year))` + 范围内的 `highlights / moments`（`fromMoment`，tag 故事线）+ `notes.season(y)`（y ∈ 范围 ∩ ys）中提到主体的条目（车手按姓氏、车队按中文名、赛道按 `circuit` 字段——与 `*YearTalk` 相同判法）。
+- `auto` 车手（用 `driverTotals(id, range)`）：
+  1. 「数字」`${rangeLabel} 战绩`：`${starts} 站出赛，${wins} 胜、${podiums} 次领奖台、${poles} 次杆位，${points} 分。`
+  2. 「里程碑」每个范围内的冠军年：`${y} 年世界冠军`（href `/drivers/{id}?year={y}`）；> 3 个合并一条「{n} 次世界冠军：y1、y2…」。
+  3. 「里程碑」生涯首胜 / 首杆 / 首个领奖台落在范围内的：`生涯首胜：${y} ${gp}`（href 单场）。
+  4. 「数字」范围内效力 > 1 支车队：`效力 ${n} 支车队：迈凯伦（2007–2012）、梅赛德斯（2013–2024）`。
+  5. 无冠军时「数字」最佳赛季：`最佳赛季 ${y} 年第 ${pos}`（href `?year=`）。
+- `auto` 车队（`teamTotals(subject, range)`，`subject` 同 `teamPeriod` 的谱系判定）：战绩（含 `oneTwo` 包揽前二）；车队冠军年 / 车手冠军年（名字）；范围内 > 1 家引擎：`用过 ${n} 家引擎：本田（2015–2017）、雷诺（2018–2020）`；范围内车手名单（≤ 8 人）：`${n} 位车手为车队出赛：…`；无冠军时最佳赛季。
+- `auto` 赛道（范围内 `circuitRaces`）：`共举办 ${n} 届`；夺冠最多 / 杆位最多（若 ≥ 2 次）；范围内最快圈（`fastest_lap` 最小 `time_millis`，写 `${time} · ${y}`，href 单场）；最大逆转（冠军发车位 > 3）。
+- 绝不出现 `最近一次 / 下一站 / 现役` 标签；不传 `records`。标题沿用 `${heroModel.crumbs.at(-1)?.label} 解说要点`，`subject` = `${名} · ${rangeLabel}`；空 → 不渲染。
+
+#### 0.7.4 透视 `Cube` 的范围锁定（`components/cube/Cube.tsx`，客户端）
+
+新 prop `range?: Range | null`（类型从 `lib/range.ts` 引，纯类型）：
+- 页面**先过滤**再传：`data={{ ...cube, rows: cube.rows.filter((f) => inRange(f.y, range)) }}`，`title` 由页面按 0.7.2 给，`key={range ? rangeLabel(range) : "all"}`。
+- `range` 存在时：年份下拉**不渲染**（`years` 本就只剩范围内）；`flt.from / flt.to` 不再从 `initial` 取（删掉 `initial.from/to` 的传入）；URL 同步 `useEffect` **跳过 `from / to` 两键**（保持地址栏的 `?from&to` 或 `?year`，不再把 `?year=2019` 写成 `?year=2019&from=2019&to=2019`）；「清除筛选」只清 driver / team / circuit。
+- 跨对象链接 `href(dim, id)` 在 `range` 存在时追加 `&from=${range.from}&to=${range.to}`（与阵容表的车手链接同规则：从一个对象的时期进入另一个对象的同一时期）。
+- `rows.length === 0` → 渲染 0.7.2 E 的空态一行，不渲染筛选条与表格。
+
+#### 0.7.5 链接规则（筛选后的区块内）
+
+1. **年份芯片 → 同对象的 `?year=Y`**：生涯格、阵容表、赛道列表的年份格一律 `yHref(y)`；`EntityLink kind="year"` 保留，hover 仍是赛季卡。赛道「举办年份」色带芯片例外（→ `/races/Y/R`，图例已声明）。
+2. **跨对象链接带上切片**：`?{fixed}={id}&from=A&to=B`（透视、阵容表现状）。
+3. **「看全部年份」→ 对象总览 `base`**，出现在 `YearBand` 与每个改题区块头。
+4. 头图、栏、面包屑不在本节范围（§0.6、§1.2、§0.5.6）。
+
+#### 0.7.6 实施清单 v1（给 Opus；只动下列文件）
+
+**S-1 `lib/range.ts`**（新建）：0.7.1 的全部导出。`lib/hero.ts`：`teamTotals`、`driverTotals` 前加 `export`，其余不动。`components/unit/YearBand.tsx`：加 `to?: number`。
+
+**S-2 `components/unit/yearTalk.ts`**：新增 `driverPeriodTalk / teamPeriodTalk / circuitPeriodTalk`（0.7.3）。
+
+**S-3 `components/cube/Cube.tsx`**：`range` prop（0.7.4）。
+
+**S-4 去重（R2）**：`components/unit/DriverYear.tsx` 删 `u.season` 整块（含 `sKick / stats / sPhoto`）；`components/unit/TeamYear.tsx` 删 `u.teamStats` 行与「赛车与引擎」块（`u.cars` 及 `h3`）；`components/unit/CircuitYear.tsx` 删 `u.raceHead`（`races.length > 1` 时保留）与 `u.extras`。`unit.module.css` 里对应 class 留一轮不删。
+
+**S-5 `app/(site)/drivers/[id]/page.tsx`**：四行状态头 + 不存在态早退；解说要点三分支（时期用 `driverPeriodTalk`，无 `records`）；「每一个赛季」年份隐藏 / 时期过滤改题 + 年份芯片 `yHref`；`Cube` 过滤 + `range` + 题；「人物」节总览 only；时期「{A–B} 的队友」节；高光 / 趣事搬出成独立节 + `rangeItems` + 改题；删 `forYear / forPeriod` 引用。
+
+**S-6 `app/(site)/teams/[id]/page.tsx`**：同 S-5 结构；「历年阵容与赛车」年份隐藏 / 时期过滤改题（≤ 15 季扁平）；「车队的故事」总览 only；高光 / 趣事独立节。
+
+**S-7 `app/(site)/circuits/[id]/page.tsx`**：同结构；「历届比赛」年份隐藏 / 时期过滤改题（`winsBy / king / YearStrip` 用范围内 `races`，年份格 → `?year=`）；`Cube` 年份隐藏 / 时期过滤；「这里的故事」总览 only；「这里发生过」独立节改题。
+
+**验收**（`curl -s URL | perl -pe 's/<script.*?<\/script>//gs; s/<[^>]+>/ /g'` 后 grep）：
+1. `/teams/mclaren?from=2018&to=2020`：含「2018–2020 阵容与赛车」且阵容区只有 2020 / 2019 / 2018 三行；不含「历年阵容与赛车」「车队的故事」「2026」「MCL40」「1966」；透视题形如「2018–2020 118 场出赛」（数字以实际为准），不含「全部 2121」；地址栏加载后仍是 `?from=2018&to=2020`。
+2. `/teams/mclaren?year=2019`：不含「历年阵容与赛车」「车队的故事」；年份带内不含「赛车与引擎」，`P4 排名 145 积分` 只在头图出现一次；地址栏不被改成 `&from=2019&to=2019`。
+3. `/teams/mclaren`：与改前逐字相同（除高光 / 趣事从「车队的故事」内搬到其后的独立节）。
+4. `/drivers/lewis-hamilton?from=2007&to=2012`：「2007–2012 的每一个赛季」六格，不含「2013」「梅赛德斯」格；解说要点不含「下一站」「最近一次」「纪录簿」，含「2007–2012 战绩」「2008 年世界冠军」；含「2007–2012 的队友」= 阿隆索、科瓦莱宁、巴顿；不含「人物」「F1 家族」「历任队友」。
+5. `/drivers/lewis-hamilton?year=2024`：年份带第一个子标题是「逐站成绩」，带内不含「F1 W15」「223」肖像卡；不含「每一个赛季」。
+6. `/circuits/monza?from=2000&to=2026`：「2000–2026 的比赛」与「27 场 · 2000–2026」（数字以实际为准），色带不含「1950」；「2000–2026 谁最擅长这里」；「2000–2026 这里发生过」；不含「这里的故事」「官方赛道图」。
+7. `/circuits/monza?year=1971`：不含「历届比赛」「谁最擅长这里」「这里的故事」；年份带内不含「第 9 站 1971-09-05」行与「杆位 克里斯·阿蒙」小块（它们只在头图）；含三张领奖台卡与「完整单场」。
+8. `/teams/mclaren?from=1950&to=1960`：只有头图 + 「1950–1960 时期」带「迈凯伦 1950–1960 未参赛 · 出赛年份 1966–2026」+ 「之后最近 1966」；页面不含「阵容」「场出赛」。
+9. `npx tsc --noEmit -p .` 干净；`grep -rn "forYear\|forPeriod" app` 返回 0（页面层全走 `rangeItems`）。
+
+### 0.8 去重与精简 v1（输入 27）— 一个事实在一页只出现一次
+
+> 用户原话：「整体复盘下来，基于这种总览筛选的逻辑，原来页面里的一些重复信息可以删掉，让页面信息更加简单干净一点。」
+
+**实测（2026-10-09，curl 抽文本 + 读源码；抽样 27 个 URL，文本存 `scratchpad/txt/`）**。§0.7 已删掉三个对象页年份带开头的赛季摘要卡与重复头图的解说要点；这一轮把**同一页上重复第二次的信息**全部列出来裁决。下表只记"重复"；未列出的区块一律保留不动。
+
+#### 0.8.0 原则
+
+1. **头图是事实源。** 对象页里，瓷砖 + 数字行 + 头行 + 元信息已把该状态的"是谁 · 在哪 · 连着谁 · 几个数"写全；头图之下的区块只放**新信息**（§0.7 R2 推广到全站，含赛车页、赛季卡、单场、时代卡）。
+2. **头图内部四个槽互斥。** 同一个键（冠军数、胜场、积分、举办届数、引擎名、长度、方向……）只能出现在 头行 / 元信息 / 瓷砖 / 月桂 / 数字行 之一。瓷砖优先（它有链接与上下文），其次数字行，最后月桂。
+3. **回到总览只有两处：** 年份栏的 总览 行（`lib/railData.ts` 的 `home.sub = "总览"`）与面包屑里的对象名。区块头与年份带不再放「看全部年份」（废止 §0.7.2 开头那句与 §0.7.5 第 3 条）。
+4. **策展内容只出现在它自己的区块。** 高光时刻 / 这里发生过 / 赛季故事线 不再复制进 解说要点；解说要点 = 自动计算 + 不属于任何高光的笔记。
+5. **自动解说要点与纪录簿不得重述瓷砖 / 数字行已有的数。**（最擅长赛道、为车队赢得最多、队内对比、冠军从第 N 位起步、N 位不同的分站冠军……）
+6. **眉题（kicker）+ 标题 + 副题不得同义**；年份中枢的 tab 页不放英文眉题（tab 栏就是眉题）。
+7. **删优先于并。** 只有"被删处有且仅有它才有的小字"时才并入别处（赛车名并入透视表、车手冠军姓并入战绩瓷砖、领先亚军分差并入车手冠军瓷砖）。
+8. **R1 不变**：删除不改变三态各自的范围；不存在态（§0.7.1）不变。
+9. **跨页重复不算**（/seasons 的"2026 进行中"块与 /live、/seasons 的赛季卡与时代页）；但同一中枢下的 tab 互为一页。
+
+#### 0.8.1 需要用户拍板的三处（不默默决定；下面各表按"建议"写，实施前先问）
+
+| # | 问题 | 建议 | 备选 |
+|---|---|---|---|
+| **D1** | 车手 / 车队头图（总览、时期态）的**月桂行**与**冠军瓷砖**重复：「7 届 世界冠军」月桂 = 「世界冠军 7 届 · 2008、2014 … 2020」瓷砖；迈凯伦「10 届 车队冠军 · 13 届 车手冠军」月桂 = 「冠军 10 届」瓷砖。且胜场 / 杆位 / 领奖台一半画成月桂、一半留在数字行，是同一组数字的两种画法 | **A′：删掉车手 / 车队头图的全部月桂**；数字行承载全部数字（世界冠军除外——它在瓷砖里，带月桂小图标）。头图 = 头行 · 瓷砖 · 口号 · 时代 · 数字行。赛车 / 赛季 / 单场的月桂另有裁决（见各表） | A：只删冠军类月桂（世界冠军 / 车队冠军 / 车手冠军），保留 分站冠军 / 杆位 / 领奖台 月桂；或 C：维持现状 |
+| **D2** | 车手 `?year=Y` 的年份带「逐站成绩」色带（R1 7 · R2 9 …）与透视「按赛道」视图（同年 24 行）是同一组逐站名次的两种详略 | **删色带与图例**，年份带只剩「队友对比」；透视在年份态默认「按赛道」，隐藏只剩 1 组的视图（按年份 / 按车队） | 保留色带，年份态隐藏透视（损失逐场积分 / 发车位表） |
+| **D3** | 年份中枢两个 tab 是别处的缩略版：**「赛车」tab** 的每行（年份 · P · 赛车 · 车队 · 引擎 · 车手）是「车队」tab 卡片的子集（车队卡已含赛车链接 + 引擎 + 车手）；**「时代」tab** = `/eras/[id]` 去掉赛道的缩略版，而头图的「所属时代」已直接链去 `/eras/[id]` | **删这两个 tab**（§0.5 的 tab 表相应减两行；`/seasons/Y/cars`、`/seasons/Y/era` 路由 308 → `/seasons/Y/teams`、`/eras/{id}`） | 只删「赛车」；或都留 |
+
+#### 0.8.2 全站通用（三条改动，影响所有对象页）
+
+| 元素 | 与谁重复 | 裁决 | 文件 |
+|---|---|---|---|
+| 「看全部年份」链接（`YearBand` 右上 + 三个对象页每个改题区块头的 `rangeHead`） | 年份栏 总览 行；面包屑对象名 | **删**（全部） | `components/unit/YearBand.tsx` 删 `u.clear` 链接与 `clearHref` prop；`app/(site)/{drivers,teams,circuits}/[id]/page.tsx` 删 `rangeHead` 及其引用 |
+| 透视 `Cube` 顶部汇总行「396 场 · 106 胜 · 208 领奖台 · 104 杆位 · 5149.5 分」 | 头图数字行 / 月桂（且积分口径不同：头图 5233 含冲刺分，透视 5149.5 不含；车队页 48 场 = 车次，头图 出赛 24 = 场次） | **只在 driver / team / circuit 任一筛选激活时渲染**（那时它是"筛选小计"，是新信息）；无筛选不渲染 | `components/cube/Cube.tsx` L191–196：条件 `total && (flt.driver \|\| flt.team \|\| flt.circuit)` |
+| 年份 / 时期解说要点 `notes` 里的 `fromMoment` 条目（高光时刻 / 这里发生过 / `momentsFor` 复制成「故事线」） | 同页独立的「Y 年高光时刻」「A–B 高光时刻」「这里发生过」节 | **删**：`driverYearTalk / teamYearTalk / circuitYearTalk` 与三个 `*PeriodTalk` 的 `notes` 不再拼入 `fromMoment(...)`；`notes.season(y)` 里提到主体的条目与 `notes.X(id)` 照旧。§0.7.3「范围内的 highlights / moments（fromMoment，tag 故事线）」一句废止 | `components/unit/yearTalk.ts` L26、55、70–71、99、128、148–149；`fromMoment` 不再被引用则删 |
+
+#### 0.8.3 车手 `/drivers/[id]`
+
+| 状态 | 元素 | 与谁重复 | 裁决 | 文件 · 组件 |
+|---|---|---|---|---|
+| 总览 | 月桂「7 届 世界冠军 · 106 场 分站冠军 · 104 次 杆位 · 208 次 领奖台」 | 瓷砖「世界冠军 7 届 2008、2014 … 2020」；数字行（已隐藏月桂键，形成两行数字） | **D1**（建议 A′：`laurels = []`，`stats` 显示 胜场 · 领奖台 · 杆位 · 最快圈 · 出赛 · 积分 · 大满贯；世界冠军键仍不进数字行——在瓷砖） | `lib/hero.ts` `driverHero` L497–514 |
+| 总览 | 解说要点 auto「纪录 · 最擅长：银石赛道（出赛 21 次，9 胜、16 领奖台）」 | 瓷砖「最擅长赛道 银石赛道 9 胜」 | **删** | `lib/talk.ts` `driverTalk` L153 |
+| 总览 · 时期 | 「每一个赛季」/「2013–2024 的每一个赛季」生涯格（年 · P · 车队 · 赛车 · 积分） | 透视「按年份」行（年 · 车队 · 总成绩 · 出赛 · 胜 · 领奖台 · 杆位 · 积分 · 逐场）+ 年份栏（每季名次 + 胜） | **删整节**；**合并**：赛车名（唯一只在此处的小字）并入透视「按年份」行的车队格：「梅赛德斯 · F1 W15」（链 `/cars/{id}`） | `app/(site)/drivers/[id]/page.tsx` 删 `byYear` 节（`s.career / k.cell`）；`components/cube/Cube.tsx` 新 prop `cars?: Record<string, { id: string; name: string }>`（键 `${y}\|${t}`），页面从 `entries` 的 `chassis / chassisIds` 生成；`team` 维度同样传（车队页 `chassis` 表） |
+| 总览 | 「人物」「F1 家族」「历任队友」「纪录簿」「高光时刻」「你可能不知道」 | — | 保留（队友的年份、家族、纪录都只在这里） | — |
+| 年份 | 数字行「积分 223」 | 瓷砖「排名 P7 · 年终 · 223 分」 | **删**年份态数字行的 积分 键（时期 / 总览不变） | `lib/hero.ts` `driverHero` stats：`{ k: "积分", laurel: !!year }` 式隐藏 |
+| 年份 | 解说要点 auto「数字 · 队内对比：拉塞尔（同场 24 站，名次 9:15，发车位 5:17，积分 223 对 245）」 | 年份带「队友对比」块（同一组数字） | **删** | `components/unit/yearTalk.ts` `driverYearTalk` L46 |
+| 年份 | 年份带「逐站成绩」色带 + 图例 | 透视「按赛道」（年份态 = 一行一站） | **D2**（建议删；`sub` 改「{名} 的 Y 赛季：队友对比」；无队友时带只放一句「本季无同队队友」——不可达则略） | `components/unit/DriverYear.tsx` 删 `u.strip / u.legend` 与 `h3 逐站成绩`；`Cube.tsx`：`range` 为单年时 `defaultView = "circuit"`，`views` 过滤掉分组数 ≤ 1 的维度（矩阵保留） |
+| 时期 | 月桂「6 届 世界冠军 · 84 场 分站冠军 …」 | 瓷砖「最佳排名 P1 · 世界冠军 2014、2015、2017…」 | **D1** | 同上 |
+| 时期 | 「2013–2024 的队友」节（罗斯伯格 2013–2016 · 博塔斯 · 拉塞尔） | 瓷砖「队友 博塔斯 · 罗斯伯格 · 拉塞尔」 | **只在 `pMates.length > 3` 时渲染**（瓷砖最多 3 人，超出时这一节才有新名字）；≤ 3 删 | `app/(site)/drivers/[id]/page.tsx` 条件 `period && pMates.length > 3` |
+
+#### 0.8.4 车队 `/teams/[id]`
+
+| 状态 | 元素 | 与谁重复 | 裁决 | 文件 · 组件 |
+|---|---|---|---|---|
+| 总览 | 瓷砖「冠军 10 届」的子行「车队冠军 10 届 · 车手冠军 13 届」 | 瓷砖自身的值 | 子行只留「车手冠军 13 届」 | `lib/hero.ts` `teamOverviewTiles` L298 |
+| 总览 | 月桂「10 届 车队冠军 · 13 届 车手冠军 · 205 场 分站冠军」 | 瓷砖 冠军；数字行 | **D1**（A′：`laurels = []`；数字行 = 胜场 · 一二名 · 杆位 · 领奖台 · 出赛，车队冠军 / 车手冠军 仍在瓷砖） | `lib/hero.ts` `teamHero` L595–608 |
+| 总览 | 纪录簿「为车队赢得最多 35 胜 埃尔顿·塞纳」 | 瓷砖「传奇车手 塞纳 35 胜」 | **删**；当瓷砖是「出赛最多」（`legend.w === 0`）时改删「为车队出赛最多」 | `lib/records.ts` `teamRecords` L109 / L112（加参数或在 page 过滤 `label`） |
+| 总览 | 「车队的故事」右侧**档案**框：基地 · 出赛 1966–2026 · 1009 场 · 最近赛车 MCL40 · 梅赛德斯 动力 · 车队冠军 年份表 · 车手冠军 13 次 | 元信息「英国 · 英国沃金」；头行「出赛 1966 – 2026」；数字行 出赛 1009；阵容表首行 MCL40 梅赛德斯引擎；阵容表各年的 车队冠军 月桂；瓷砖 冠军 | **删整个档案框**（传记正文 + 维基来源保留，`twoCol` 变单列） | `app/(site)/teams/[id]/page.tsx` 删 `<aside className={s.sideBox}>…档案…</aside>` 及 `driverTitles / titleYears` 的档案用法（`titleYears` 阵容表仍用） |
+| 年份 | 数字行「胜场 6」 | 瓷砖「排名 车队冠军 P1 · 年终 · 6 胜 · 666 分」 | **删**年份态数字行的 胜场 键 | `lib/hero.ts` `teamHero` stats L603：`laurel: (!year && t.wins > 0) \|\| !!year` |
+| 年份 · 时期 | 「历年阵容与赛车」/「2018–2020 阵容与赛车」、阵容大卡、透视 | — | 保留（每年每人的名次是新信息） | — |
+
+#### 0.8.5 赛道 `/circuits/[id]`
+
+| 状态 | 元素 | 与谁重复 | 裁决 | 文件 · 组件 |
+|---|---|---|---|---|
+| 总览 | 数字行「举办场次 76 · 首届大奖赛 1950」 | 头行「总览 · 历史 · 举办 76 届 1950 – 2026 · 最近 …」 | **删**这两格；数字行 = 赛道长度 · 弯道 | `lib/hero.ts` `circuitHero` stats L795–800 |
+| 总览 · 三态 | 特征行「高速 / 长直道 / 减速弯 / **顺时针** / 1922年启用」 | 元信息「意大利 · Monza · 永久赛道 · **顺时针**」 | 特征行过滤掉 `顺时针 / 逆时针` | `lib/hero.ts` `circuitHero` `traits: content?.traits?.filter((t) => !/顺时针\|逆时针/.test(t))` |
+| 总览 · 时期 | 「历届比赛」/「2000–2026 的比赛」副题「76 场 · 1950 – 2026 · 胜场最多：汉密尔顿（5 胜）」 | 头行 举办 N 届 A–B；瓷砖 夺冠最多 | **删**副题（`winsBy / king / kingName` 若无他用一并删） | `app/(site)/circuits/[id]/page.tsx` `sec-head` 内 `<span className="sub">` |
+| 总览 · 时期 | `YearStrip` 头「举办年份 · 首届 1950 · 最近 2026 · 共 76 场世界锦标赛分站」 | 头行 | **删**三个数字，只留图例「色块 = 当年冠军所在车队；悬停看那个赛季，点击进入那一站」 | `app/(site)/circuits/[id]/YearStrip.tsx` |
+| 总览 | 纪录簿「杆位最多 7 次 汉密尔顿」 | 瓷砖「杆位最多 汉密尔顿 7 杆」 | **删** | `lib/records.ts` `circuitRecords` L53 |
+| 总览 | 解说要点 auto「纪录 · 最大逆转：第 N 位起步夺冠」 | 纪录簿「最靠后起步的冠军 第 19 位 安东内利 · 2026」 | **删** auto（时期态的 `circuitPeriodTalk` 无纪录簿，其「最大逆转」保留） | `lib/talk.ts` `circuitTalk` L65 |
+| 年份 | 年份带尾部「计时回放」按钮 | 头图 actions「计时回放 · 解说手册」 | **删**带内 计时回放，只留「完整单场」 | `components/unit/CircuitYear.tsx` `u.actions`（`replay` prop 可删） |
+| 年份 | 解说要点 auto「冠军从第 4 位起步 / 杆位转化为胜利」 | 瓷砖 杆位；领奖台 P1 卡「发车位 P4」 | **删** | `components/unit/yearTalk.ts` `circuitYearTalk` L79–80 |
+| 年份 | 解说要点 auto「第 74 次在这里举办 — 意大利大奖赛是 2024 年第 16 站，53 圈」 | 头行「2024 第 16 站 意大利大奖赛 · 2024-09-01」 | 保留标题；正文改「53 圈」（圈数是唯一新信息） | `yearTalk.ts` L78 |
+| 年份 | 领奖台 P1 卡（勒克莱尔 · 法拉利 · 1:14:40.727 · 发车位 P4） | 瓷砖 冠军（名 + 用时）、冠军车队 | **保留**：领奖台是一组三张，P1 卡的发车位是新信息 | — |
+| 时期 | 瓷砖「布局 7」子行「5.793 km · 11 弯 · 2000–2026」 | 数字行 赛道长度 5.793 · 弯道 11 | 子行只留年份跨度；**R1 顺手修**：时期态数字行的 长度 / 弯道 改用该布局（`lay.length / lay.turns`，老布局时与现行值不同） | `lib/hero.ts` `circuitPeriod` tiles + `circuitHero` stats |
+| 时期 | 数字行「期间举办 27」 | 头行「布局 7 时期 · 2000 – 2026 · 举办 27 届」 | **删** | `lib/hero.ts` `circuitHero` stats（`heldIn` 只给头行用） |
+
+#### 0.8.6 赛车 `/cars/[id]`
+
+| 元素 | 与谁重复 | 裁决 | 文件 · 组件 |
+|---|---|---|---|
+| 元信息行「梅赛德斯-AMG F1 M15 1.6 V6 T H」 | 瓷砖「引擎 梅赛德斯-AMG F1 M15 1.6 V6 T H」 | 元信息只留「设计 …」（无设计师 → 元信息为空，槽不渲染） | `lib/hero.ts` `carHero` meta L859–862 |
+| 月桂「2024 车队冠军」「1978 安德雷蒂 · 车手冠军」 | 瓷砖「战绩 车队冠军 P1」（月桂小图标 + 标签） | **删月桂**；**合并**：战绩瓷砖子行每季写「{y} 年终」+（该季有冠军时）「车队冠军」/「车手冠军 {姓}」（写法同 `teamTiles` 的 `车手冠军 ${dn(...).split(/[·・]/).pop()}`） | `lib/hero.ts` `carHero` L849–853 删 `laurels`；tiles 的 `valueTile("战绩", …)` sub 改写 |
+| 瓷砖 战绩 子行「2024 年终 · 4 胜 · 468 分」 | 数字行「胜场 4 · 积分 468」 | 子行**不写胜 / 分**（上一行已定义）；数字行管全部数字。`teamStanding().sub` 由 `teamTiles`（车队年份态）共用，给 `carHero` 单独拼子行，不改 `teamStanding` | `lib/hero.ts` `carHero` |
+| 侧栏「技术规格」框：引擎全名 · 排量 1.6 升 · 布局 V6 · 进气 TURBOCHARGED_HYBRID | 瓷砖 引擎（三者都是引擎串的拆写；进气枚举还没翻译） | **无 `c.tech` 时删整框**；有策展 `c.tech` 时保留（只渲染 `c.tech`，不再渲染引擎四行）。`设计：` 一行跟着框走——无框时已在元信息 | `app/(site)/cars/[id]/page.tsx` aside 第一个 `sideBox` |
+| 侧栏「车手」框「拉塞尔 2024 · 汉密尔顿 2024」 | 瓷砖「车手 拉塞尔 · 汉密尔顿」 | **只在 多赛季（`years.length > 1`）或 车手 > 2 人 时渲染**（年份 / 第三人是新信息，如 Lotus 79）；否则删 | `app/(site)/cars/[id]/page.tsx` aside 第二个 `sideBox` |
+| 「Era · 2022–2025 地面效应回归」段落（时代摘要全文） | 头图「所属时代 地面效应回归」→ `/eras/[id]`；时代页本身 | **删** | `app/(site)/cars/[id]/page.tsx` `k.era` 块（`reg / era` 若无他用一并删） |
+| 「这是一辆怎样的车」「技术亮点」「它的每一场比赛」「前后几代」「2026 技术规则」 | — | 保留 | — |
+
+#### 0.8.7 年份中枢 `/seasons/[year]` 与 tab
+
+| 元素 | 与谁重复 | 裁决 | 文件 · 组件 |
+|---|---|---|---|
+| 赛季卡数字行「分站 24 · 不同冠军 7 · 车手 24 · 车队 10」 | 瓷砖「分站 24 站 · 7 位分站冠军」；tab 栏计数「赛历 24 · 车手 24 · 车队 10」 | **删整个数字行**（`stats: []`） | `lib/hero.ts` `seasonHero` L921–926 |
+| 月桂「[迈凯伦] 第 9 座车队冠军」 | 瓷砖「车队冠军 迈凯伦 666 分」 | 月桂改 `top: "第 9 座"`，`bottom: "车队冠军"`，不再放队名链接；「第 4 冠 车手世界冠军」保留（第几冠是新信息） | `lib/hero.ts` `seasonHero` L911–913 |
+| 肖像题注「世界冠军 · Max Verstappen」 | 眉题「世界冠军」+ 瓷砖 车手冠军 | **删** `figcaption`（§0.6.6：视觉就是主体） | `components/season/SeasonHero.tsx` |
+| 赛季综述 `factSummary` 段「2024 赛季共24站，7位车手赢得过分站。维斯塔潘以437分、9场分站胜利夺得车手世界冠军，领先亚军诺里斯 63分。迈凯伦夺得车队锦标赛（666分）。」 | 头图瓷砖 | **删**；**合并**：唯一新信息「9 胜」「领先亚军 +63」并入 车手冠军 瓷砖子行——已完赛季也用进行中的写法：`[`437 分 · 9 胜 · 红牛`, `领先 诺里斯 +63`]` | `components/season/SeasonOverview.tsx` 删 `factSummary` 与 `s.facts`；`lib/hero.ts` `seasonHero` tiles L898–900 |
+| 赛季综述 meta「所属时代 地面效应回归 · 来源 维基百科」 | 头图 `EraSpan`「所属时代 地面效应回归」 | 删「所属时代」，只留「来源 维基百科」 | `SeasonOverview.tsx` `s.meta` |
+| 赛季综述右侧三条故事线（`notes.season(y).slice(0, 3)`） | 解说要点 notes（同三条逐字相同：拉斯维加斯封王 / 迈凯伦26年后夺冠 / 七位冠军） | **删** `<ol className={s.story}>`（综述 = 维基段落 + 来源） | `SeasonOverview.tsx` |
+| 解说要点 auto「数字 · 7 位不同的分站冠军（24 场正赛产生了 7 位冠军，赢得最多的是维斯塔潘 9 胜）」 | 瓷砖 分站 子行；瓷砖 车手冠军 子行（并入 9 胜后） | **删** | `lib/talk.ts` `seasonTalk`（标题 `${n} 位不同的分站冠军` 那条） |
+| tab「赛车」`/seasons/Y/cars` | tab「车队」卡片（P · 积分 · 胜场 · 赛车链接 · 引擎 · 车手） | **D3**（建议删 tab + 路由 308 → `/seasons/Y/teams`；`YearCarsGrid` 若只被此 tab 用则删） | `components/season/YearTabs.tsx` `TABS`；`app/(site)/seasons/[year]/cars/page.tsx` |
+| tab「时代」`/seasons/Y/era` | 头图「所属时代」→ `/eras/[id]`；`/eras/[id]` 本页 | **D3**（建议删 tab + 路由 308 → `/eras/{eraOf(Y).id}`） | 同上；`app/(site)/seasons/[year]/era/page.tsx` |
+| 各 tab 页顶部眉题「Drivers / Teams / Cars / Circuits / Schedule / Standings」 | tab 栏当前项「车手 / 车队 / …」+ h2「2024 年的 24 位车手」 | **删** tab 页的英文眉题：四个 grid 的 `heading` 改为 `kicker?: string \| null`（tab 页传 `null`，索引页传 `"Season"`）；`calendar/page.tsx` L57「Schedule」、`standings/page.tsx` L54「Standings」删；`standings` 内的「Drivers / Teams」小眉题保留（区分两张表） | `components/unit/Year{Drivers,Teams,Circuits,Cars}Grid.tsx`；`app/(site)/seasons/[year]/{calendar,standings}/page.tsx`；`app/(site)/{drivers,teams,circuits}/page.tsx` 传 `kicker="Season"` |
+| 赛道 tab 每张卡的领奖台（1ST VER · 2ND PER · 3RD SAI） | 赛历 tab 每张卡同一领奖台 | **删** `YearCircuitsGrid` 的 `podium`（`CircuitCard` 不传 → 自动 `compact`）；赛道卡 = 站次 · 日期 · 大奖赛 · 届次 · 年份 | `components/unit/YearCircuitsGrid.tsx`（`pod` 查询一并删） |
+| 积分榜 tab vs 车手 / 车队 tab | 同一排名两种形态 | 保留（表 + 逐站曲线 vs 带脸的卡片，功能不同） | — |
+
+#### 0.8.8 时代 `/eras/[id]`（与年份中枢 时代 tab 同组件）
+
+| 元素 | 与谁重复 | 裁决 | 文件 · 组件 |
+|---|---|---|---|
+| 时代卡数字行「赛季 4 · 分站 92」 | 头行「2022 – 2025 · 4 季 · 92 场」 | **删**两格；数字行 = 赛道 · 车手冠军 | `lib/hero.ts` `eraHero` stats L1047–1052 |
+| 眉题「Era」 | 面包屑「历史 › 地面效应回归」+ h1 + 栏头 | **删** `eyebrow` | `lib/hero.ts` `eraHero` L1041 |
+| 「N 个赛季的冠军」赛季卡 | 年份栏按年列冠军姓 | 保留（肖像、第几冠、分站数；时代页主体） | — |
+
+#### 0.8.9 单场 `/races/[year]/[round]`
+
+| 元素 | 与谁重复 | 裁决 | 文件 · 组件 |
+|---|---|---|---|
+| 冠军面板副行「红牛 · RB20 · 杆位起步 · 1:31:44.742」 | 瓷砖 冠军（含用时）· 车队 · 赛车 | 面板只留 脸 + 「冠军 P1」月桂 + 名字 + 「杆位起步 / 第 N 位起步」（发车位是新信息） | `app/(site)/races/[year]/[round]/page.tsx` `r.winDek`：删 `Team / Car / winTime` |
+| 面板下「正赛前十 · 57 圈」塔 | 「正赛成绩」全表 | **删**塔（P2 / P3 `PodiumCells` 保留） | 同上 `r.tower` |
+| 月桂「杆位 1:29.179」 | 瓷砖「杆位 维斯塔潘 1:29.179」 | **删** race 模式的 杆位 月桂（circuit 年份态不经此路径） | `lib/hero.ts` `raceHero` `add(pole, …)` L985 |
+| 侧栏「最快圈 维斯塔潘 1:32.608 · 第 39 圈」框 | 月桂「最快圈 1:32.608」 | **删**框；**合并**：月桂 `bottom` 改「1:32.608 · 第 39 圈」 | `page.tsx` aside；`lib/hero.ts` `raceHero` L986（`fl.fastest_lap_lap`） |
+| 侧栏「车手之日（票选）」框（前三票数） | 月桂「车手之日 31.36%」 | **删**框（第 2、3 名票数随之消失，可接受） | `page.tsx` aside |
+| 分站翻页中间的 `dims`「2024 赛季 · 巴林国际赛道 · 维斯塔潘 · 红牛 · RB20」 | 头行 + 四枚瓷砖 | **删** `dims`，翻页只留 上一站 / 下一站（§4.6 的分站翻页保留） | `page.tsx` `r.dims` |
+| 解说要点 auto「杆位转化为胜利 / 冠军从第 N 位起步」 | 面板发车位；成绩表 发车列；与「X 追回 N 位」同事实（2020 蒙扎：加斯利追回 9 位 + 冠军从第 10 位起步） | **删** | `lib/talk.ts` `raceTalk` L246 |
+| 「百科中的这一站」同一事件的 车手条 + 赛道条（2020 蒙扎两条都写加斯利首胜） | 策展层面，两条来自不同对象 | 保留（内容问题，另立策展规则） | — |
+| 正赛成绩表、本站后积分榜、排位赛、冲刺赛、进站 | — | 保留 | — |
+
+#### 0.8.10 实时 `/live`
+
+| 元素 | 与谁重复 | 裁决 | 文件 · 组件 |
+|---|---|---|---|
+| 分站卡列表里「下一站」卡的节次表（一练 周五 16:30 … 正赛 周日 20:00）+ 「前瞻 · 加入日历」 | 头图的节次表 + 「加入日历 · 本站前瞻 · 本站解说手册」 | 下一站卡只显示 标签「下一站」· 站名 · 日期（`sessions={false}`，不渲染 actions）；其余未来站卡不变 | `components/live/LivePage.tsx` `RoundCards` L193：`sessions={r.round !== nextRound}`；`lib/raceCards.tsx` `ScheduleCard` 的 `sessions=false` 分支不渲染 `actions` |
+| 头图元信息「滨海湾街道赛道 · Singapore」 | h1「Singapore」 | `place_name` 与 h1 同词时不写 | `components/live/LivePage.tsx` `NextRaceHero` meta-line |
+| 顶栏实时条「新加坡大奖赛 · 一练 进行中 · 实时计时 · 解说手册 · 赛历与日历订阅」 | 头图按钮 | 保留（全站壳，每页一致） | — |
+
+#### 0.8.11 索引页 `/drivers` `/teams` `/circuits` `/cars` `/seasons`
+
+| 元素 | 与谁重复 | 裁决 |
+|---|---|---|
+| `/circuits` 页眉题「Circuits」+ `YearCircuitsGrid` 区块眉题「Circuits」 | 同词两次 | grid 眉题走 0.8.7 的 `kicker` prop：索引页传「Season」（与 /drivers /teams 一致） |
+| 页首一段介绍（「2026 赛季的 22 位车手，以及 1950 年以来全部 860 位…」） | 下方两个区块标题 | 保留（它说的是怎么用这页，不是数据） |
+| `/seasons` 的「2026 进行中」块（下一站倒计时 · 最新一站领奖台 · 实时 / 完整赛历） | `/live` 头图（跨页） | 保留（原则 9） |
+
+#### 0.8.12 验收（`t(){ curl -s "http://localhost:3210$1" \| perl -0pe 's/<script.*?<\/script>//gs; s/<[^>]+>/ /g; s/\s+/ /g'; }`；`n(){ t "$1" \| grep -o "$2" \| wc -l; }`）
+
+1. 全站：`grep -rn "看全部年份" app components` = 0；`grep -n "fromMoment" components/unit/yearTalk.ts` = 0；`npx tsc --noEmit -p .` 干净。
+2. `/drivers/lewis-hamilton`：不含「每一个赛季」「最擅长：」「396 场 · 106 胜」；含「全部 396 场比赛」；透视按年份行含「F1 W15」；`n … "7 届"` = 1（D1 后）。
+3. `/drivers/lewis-hamilton?year=2024`：不含「队内对比」「24 场 · 2 胜」；`n … "银石第九次夺冠"` = 1（只在高光时刻）；原始 HTML `grep -c '<dt>积分'` = 0；D2 后不含「逐站成绩」，含「队友对比」。
+4. `/drivers/lewis-hamilton?from=2013&to=2024`：不含「的每一个赛季」「的队友」；`n … "第92胜改写纪录"` = 1；地址栏仍 `?from=2013&to=2024`。
+5. `/teams/mclaren`：不含「档案」「最近赛车」「为车队赢得最多」；`n … "35 胜"` = 1；`n … "10 届"` = 1；含「车手冠军 13 届」且不含「车队冠军 10 届」。
+6. `/teams/mclaren?year=2024`：原始 HTML `grep -c '<dt>胜场'` = 0；`n … "时隔26年重夺"` = 1；不含「48 场 · 6 胜」。
+7. `/circuits/monza`：不含「举办场次」「首届大奖赛」「首届 1950」「胜场最多：」「最大逆转」；`n … "顺时针"` = 1；`n … "杆位最多"` = 1（瓷砖）。
+8. `/circuits/monza?year=2024`：`n … "计时回放"` = 1；不含「冠军从第」「杆位转化」；含「53 圈」；含三张领奖台卡与「完整单场」。
+9. `/circuits/monza?from=2000&to=2026`：不含「期间举办」「5.793 km · 11 弯」「胜场最多：」；`n … "第19位逆转"` = 1（只在 这里发生过）。
+10. `/cars/mercedes-f1-w15`：`n … "M15"` = 1；不含「技术规格」「排量」「TURBOCHARGED」「Era ·」「4 胜 · 468 分」；原始 HTML 不含 `>车手</h3>`。`/cars/mclaren-mcl38`：`n … "车队冠军"` = 1。`/cars/lotus-79`：含 `>车手</h3>`（两季），瓷砖含「车手冠军 安德雷蒂」。
+11. `/seasons/2024`：原始 HTML `grep -c '<dd>'` 在赛季卡内 = 0（无数字行）；不含「不同冠军」「共24站」「世界冠军 · Max Verstappen」「7 位不同的分站冠军」；`n … "所属时代"` = 1；`n … "拉斯维加斯封王"` = 1；含「9 胜」与「+63」；D3 后原始 HTML 不含 `href="/seasons/2024/cars"`、`href="/seasons/2024/era"`，且 `curl -sI /seasons/2024/cars` 为 308 → `/seasons/2024/teams`。
+12. `/seasons/2024/drivers` `/seasons/2024/teams` `/seasons/2024/circuits` `/seasons/2024/calendar`：原始 HTML `grep -c 'class="kicker">\(Drivers\|Teams\|Circuits\|Schedule\)<'` = 0；`/seasons/2024/circuits` 不含「1 ST 」，`/seasons/2024/calendar` 含「1 ST VER」；`/circuits` 含 `class="kicker">Season<` 且 `n … "Circuits"` = 1。
+13. `/eras/ground-effect-2022-2025`：原始 HTML `grep -c '<dt>赛季\|<dt>分站'` = 0；不含眉题「Era」（`class="…eyebrow"` 元素不存在）；`n … "4 季"` = 1。
+14. `/races/2024/1`：不含「正赛前十」「杆位转化为胜利」「车手之日（票选）」「RB20 下一站」；`n … "RB20"` = 1；`n … "1:29.179"` = 1；`n … "1:32.608"` = 1 且含「第 39 圈」；`n … "31.36%"` = 1；含「下一站 沙特阿拉伯大奖赛」与「本站后车手积分榜」。
+15. `/live`：`t /live | perl -ne 'print $1 if /(下一站.*?)(Round \d+|$)/'` 不含「一练」「加入日历」；头图仍含「加入日历」「本站前瞻」。
+16. 回归：§0.7.6 验收 1–9 仍通过（R1 不变；其中第 2 条「P4 排名 145 积分 只在头图出现一次」改为「只在头图出现一次且数字行无 胜场」）。
+
+### 0.9 赛道弯角与分段 v1（输入 28）— 每条赛道的弯角有编号、有名字、hover 有解释
+
+> 用户原话：「所有的赛道，有不同的赛道和弯角以及对应的名称，也都在地图上标识一下，或者可以 hover 到哪段都有说明，现在缺少这个部分。」
+
+**实测（2026-10-09，Fable 5.1；探针脚本在 scratchpad `scripts/framecheck.py`、`scripts/geom.py`，已交付的构建脚本 `scripts/build-corners.mjs` 与种子数据 `content/corners.json`、`data/corners/*.json`）。**
+
+#### 0.9.0 数据源裁决
+
+| 要什么 | 用什么 | 实测 | 备选 |
+|---|---|---|---|
+| **弯心位置 + 编号**（T1 … T19，含 1A / 12A 这类字母弯） | **MultiViewer 公开赛道 API** `https://api.multiviewer.app/api/v1/circuits/{circuit_key}/{year}`（FastF1 用的就是它）。返回 `corners[{number, letter?, angle, length, trackPosition{x,y}}]`、`marshalSectors`、`marshalLights`、`miniSectorsIndexes`、`rotation`、`x[]/y[]`、`candidateLap`、`pitLoss`。 | 本机 curl 可达：HTTP 200，1.0–2.0 s/次，无鉴权。扫描 key 1–260 共 32 条赛道；**我们 26 条遥测赛道里 24 条有数据**（key 见 `scripts/build-corners.mjs` 的 `KEY`）；**Sepang（key 12）与 Madring（key 153）404**。返回的是该赛道最近一次它采过的布局（2019–2025），与我们遥测年的 F1DB 布局逐条核对全部一致（`data/corners/*.json` 的 `layout` = 遥测年的 `circuit_layout_id`）。弯角数与 F1DB `circuit_layout.turns` 全部相等（Hungaroring 14 + 1A/12A 两个字母弯）。 | 无 API 时：`content/corners.json` 的 `manual.corners[{n,t}]` 手工标定（Sepang 已按遥测曲率峰值 + 官方图标定 15 弯，转向序列 R-L-R-R-L-L-R-R-L-R-R-L-R-R-L 与真实布局一致，标 `approx:true`）。Madring 曲率检测得 24 个峰值 vs F1DB 22 弯，无法可靠编号 → **v1 不标弯角**，只画分段，待 MultiViewer 上线后 `--force` 重建即可。 |
+| **弯角名称 + 中文解释** | 没有任何 API 有。**策展文件 `content/corners.json`**（已写好种子：26 条赛道、176 条弯角名 / 注释、28 个分段）。 | 名称只给真正通用的（Eau Rouge/Raidillon、Parabolica、130R、Maggotts–Becketts、Casino、Copse、Senna S、Wall of Champions、Tarzan、Tamburello…）；赞助商名只在几十年不变处保留（Catalunya 的 Elf / Repsol / Campsa / La Caixa）；其余弯角页面上只写「T7」。注释 ≤ 60 字，新闻体。每条都按 `scripts/geom.py` 的转角 / 直道长度核过：发夹弯 ≥ 130°、减速弯是相距 < 100 m 的一对、130R 前有 1033 m 直道等。 | — |
+| **计时分段 S1/S2/S3** | **OpenF1 `/v1/laps`** 的 `duration_sector_1/2/3`（遥测圈本身那一行）。我们的 `data/tracks` 是按时间等距采样的一圈，时间比例 → `timeToDistance`（`components/live/trackMath.ts`）→ 距离比例，就是分段边界。 | 字段在本机 `.cache/http` 的 laps 响应里确认存在（`duration_sector_*`、`segments_sector_*`、`i1_speed/i2_speed/st_speed`）。**今天（新加坡站周末）OpenF1 免费接口对所有请求返回 401**（「Live F1 session in progress」），构建脚本已容错：留 `sectors: null`，赛后重跑一次即可。 | MultiViewer `marshalSectors`（约 20 个裁判段）不是计时段，不用。 |
+| **DRS 区 / 测速点** | 没有坐标数据源：OpenF1 `car_data.drs` 只能推断开启位置且 **2026 年已无 DRS**（可动空气动力学，无固定区）；`st_speed` 有数值无位置；F1 官方只有图片。 | — | **v1 不做**。`content/corners.json` 的 `sections` 已能表达直道（`kind: "straight"`，已写肯梅尔、机库、大直道、Strip 等 10 条）；DRS 区作为 v2 的 `kind: "drs"`（按年份）留给以后，schema 不变。 |
+| **弯角速度 / 挡位**（popover 里的小数字） | **OpenF1 `/v1/car_data`**（遥测圈时间窗内的 `speed`、`n_gear`），构建脚本在弯心时刻 ±1.5 s 取最低速度与此时挡位。 | 同上，今天 401；脚本已写好，重跑即填。 | 没有就不显示那一行。 |
+
+**坐标系（关键结论）**：MultiViewer 的 `trackPosition` 与 OpenF1 `/location` 同一坐标系（单位分米，原点同）。24 条赛道的全部弯心到我们 `data/tracks` 折线的距离 **最大 8.3 m（Miami），均值 ≤ 2.5 m**，弯角沿圈顺序单调递增 —— 不需要任何旋转 / 缩放变换。`rotation` 字段只是 TV 图的摆正角度，忽略。构建期把每个弯心吸附到折线，存 **`t` = 沿圈距离比例（0–1，起点 = 遥测圈的计时线）**；这正是 `Track3D` 的 `curve.getPointAt(t)` 与回放车位 `timeToDistance(f)` 用的参数，所以**同一个 `t` 在 3D 头图、/live 头图、回放地图上都落在同一点**，不需要再做任何投影换算。`f` = 时间比例（给 car_data 对齐用）。
+
+#### 0.9.1 数据文件（已交付）与运行时 API（待建）
+
+```
+content/corners.json                      策展（人写）。circuits[id] = { layout, corners{ "n": {name?, zh?, note} }, sections[{id, from, to, kind: corners|straight, name, zh, note}], manual? }
+data/corners/<circuit>.json               构建产物（scripts/build-corners.mjs）。{ circuit, layout, source: multiviewer|manual|null, circuitKey, mvYear, lapYear, session_key,
+                                          corners[{ n, t, f, x, y, angle, off, speed|null, gear|null, approx? }], sectors: [tS1end, tS2end] | null, built }
+scripts/build-corners.mjs                 node --no-warnings scripts/build-corners.mjs [circuit] [--force]。MultiViewer 结果缓存在 .cache/multiviewer/；OpenF1 401/403/429 → 跳过分段与速度并提示重跑。
+                                          加进 package.json："corners": "node --no-warnings scripts/build-corners.mjs"；`npm run tracks` 之后必须跑它（t 依赖 data/tracks 的那一圈）。
+lib/corners.ts（新）                       cornerLayer(circuitId, layoutId?: string|null): CornerLayer | null —— 同步读两个文件（同 lib/tracks.ts 的 fs 读法，请求时无网络），
+                                          layoutId 给了且 ≠ data.layout → 返回 null（§0.9.5）。输出给客户端的最小 JSON：
+                                          { layout, year, approx, corners[{ n, t, name?, zh?, note?, speed?, gear?, sector: 1|2|3 }], sections[{ id, kind, from: t0, to: t1, name, zh, note }], sectors: [t,t]|null }
+                                          sections 的 t0/t1 = from 弯心 t − 0.006、to 弯心 t + 0.006（corners）；straight 则 from 弯心 t + 0.006 到 to 弯心 t − 0.006（跨起点时 to < from，客户端按环处理）。
+```
+
+#### 0.9.2 哪些地图有哪一层
+
+| 地图 | 现状 | 弯角针 | 名称标签 | 分段上色 | hover / 焦点说明 | 原因 |
+|---|---|---|---|---|---|---|
+| 赛道页头图 `TrackField`（`/circuits/[id]`，总览 / 时期 / 布局相同的年份态） | 3D 浮雕 + 幽灵车 | **有** | **有**（命名弯 + 分段名） | **有**（S1/S2/S3 真实边界） | **有** | 用户诉求的主场景 |
+| 单场页头图（未赛 · `TrackField`） | 3D | 有 | 有 | 有 | 有 | 同一组件，同一数据 |
+| `/live` 头图 `HomeTrack` | 3D，整个画布是一个 `EntityHref` 链接 | 只有编号针（静态，小） | 无 | 无 | **无**（链接内不放交互元素） | 保持首屏干净；点击进赛道页才看说明 |
+| 回放地图 `LiveTrack`（`/seasons/Y/replay`、`/races/Y/R/replay`、`/live` 进行中） | 3D 顶视 + 2D 叠层（车点 / A-B 标签） | **有**（小针，编号） | 命名弯只在 hover 时出现 | 有（可选，默认开） | **有**（与车点 hover 同一叠层；车点优先） | 解说员最需要「现在在哪个弯」 |
+| 2D 轮廓：F1DB 布局 SVG（历史布局、`?year=` 旧布局）、官方黑线稿 mask（`CircuitCard` / hover 卡 / 车手页「最擅长赛道」等小图） | 图片 / mask | **无** | 无 | 无 | 无 | 坐标系未知；小图放针是杂讯（§1.4 大卡纪律） |
+| 「这里的故事」里的官方详图 `trackMap()`（本身印有弯角编号 / DRS / 计时段） | 图片 | 无 | 无 | 无 | 无 | 它已经是官方标注图，保留作对照 |
+
+#### 0.9.3 UI 规格（中文、F1 风格、沿用现有部件）
+
+1. **针（pin）**：18 px 圆，碳黑 `#15151e` 底、1 px 白环、`var(--font-display)` 10 px 700 的编号（`1`、`12A`）；在 3D 场景中贴在弯心上方（世界 y + 0.09，同车点）。**命名弯**的针右侧带标签：`zh`（12 px 600 `--font-cn`）+ 其下 `name`（10 px `--font-display` 70% 白）；标签底 `rgba(14,14,20,.72)`、radius 3，和 `live.module.css` 的 `.carTag span` 同一语言。分段（`sections`）的标签放在该段中点、斜体眉题样式（11 px，`--f1-red` 小圆点 + 名字）。
+2. **防重叠**：按屏幕坐标做一次贪心剔除——两个标签在 44 px 内时只留编号小的那个（另一个仅 hover 时出现）；针永不剔除。窄屏（`max-width: 760px`）只画针不画标签。
+3. **图例 / 开关**：头图右下角（`.note` 的对面，`var(--gutter)` 对齐）一个 `seg` 三段：**弯角 · 分段 · 关**（默认「弯角」；`matchMedia('(max-width:760px)')` 默认「关」）。「分段」态：丝带按真实边界三色（沿用 `Track3D` 的 `sectors` 调色：`#e10600 / #ffd800 / #00a1e8`），图例旁写 `S1 · S2 · S3`；没有 `sectors` 数据时该段按钮 `disabled` 并 `title="分段数据待构建"`。选择写进 `localStorage('pitwall.cornerLayer')`。
+4. **hover / 焦点 → popover**：每个针是 `<button type="button" aria-label="T6 费尔蒙发夹弯">`，`:hover` 与 `:focus-visible` 都打开 popover（`role="tooltip"`，`aria-describedby`），**样式复用 `components/entity/hover.module.css` 的 `.card`**但宽 260 px、无顶部色块：
+   - 第一行 `T6 · 费尔蒙发夹弯`（20 px 700），第二行 `Fairmont Hairpin`（12 px display，灰）；
+   - 注释 1–2 行（13 px / 1.6，`.blurb` 样式）；
+   - 数字行（`.stats`）：`最低 48 km/h` · `1 挡`（有 `speed/gear` 才出现）· `S2`（所在计时段，恒有）· 手工标定的加一枚 `chip`「位置约略」；
+   - 无名弯：第一行只有 `T7`，第二行省略，注释没有就只显示数字行。
+   - 定位：针的右上；越出容器右缘则翻到左侧，越出底部则上翻（同 `HoverLayer` 的 `up` 逻辑）；`pointer-events: none`（popover 不可交互，所以不需要 180 ms 的越沟延迟）。
+5. **分段 hover**：鼠标 / 焦点落在分段标签上 → `Track3D` 收到 `highlight=[t0,t1]`，shader 里把该区间的丝带调成白色 85%（`uHiFrom/uHiTo` 两个 uniform，跨起点时 `t1 < t0`），其余不变；popover 内容同上（名称 + 注释 + 长度 `(t1−t0)×圈长` 四舍五入到 10 m）。
+6. **键盘**：针按编号顺序进入 Tab 序列（在头图文字列之后）；`←/→` 在针之间移动焦点；`Esc` 关闭 popover 并保留焦点。图例按钮是普通 `seg`。
+7. **触屏**：`(hover: none)` 时点针 = 开 / 关 popover，点空白关闭；不出现分段标签 hover（分段只靠上色）。
+8. **文案**：头图现有 `.note`「3D 模型由 2026 年排位赛最快圈…」后追加一句：`弯角位置来自 MultiViewer（2021 年采样）；分段为该圈 S1/S2/S3 边界`，手工标定的赛道写 `弯角位置按遥测曲率估算`。Madring 这类无弯角数据的赛道，图例只剩「分段 · 关」，并在 `.note` 写 `弯角数据待补`。
+9. **/live 头图**：只画编号针（无标签、无交互、`pointer-events:none`），尺寸 14 px、70% 透明——首屏信息量不变，只是让赛道"可读"。
+10. **回放地图**：针 14 px，叠在 `LiveTrack` 现有 `trackOverlay` 里（同 `sfMark` 用一次性投影 `makeProjector`，因为该视图 `spin=0` 且叠层挡住指针、无视差）；`nearest()` 先找车（18 px）再找针（12 px）；车点 hover 优先。popover 复用同一组件，深色主题（`--panel` 底）。图例放 `Hud` 右侧：**弯角 · 关**（默认开，分段上色在回放里默认关——回放的丝带要留给车点辨识）。
+
+#### 0.9.4 3D 实现方式（不引入新依赖）
+
+`Track3D` 的场景组有自转（`spin`）与指针视差（`group.rotation.x / position.x` 每帧插值），所以**针不能一次投影了事**。沿用 `LiveTrack` 已验证的模式——每帧算屏幕坐标、直接写 DOM `transform`，不走 React state：
+
+- `Track3D` 新 props：`marks?: { key: string; t: number }[]`、`onMarks?: (pos: Map<string, [x, y, depth]>) => void`（`useFrame` 末尾：`group.localToWorld(curve.getPointAt(t)).project(camera)` → 像素；depth = 投影 z，用来把被转到"背面"的标签淡掉 15%）、`sectors?: [number, number] | null`（真实边界；传了就替换 shader 里的 0.333/0.666 硬编码，`showSectors` 语义不变）、`highlight?: [number, number] | null`。
+- 新 `components/track/CornerLayer.tsx`（client）：接 `CornerLayer` 数据 + `mode`，渲染针 / 标签 / 图例 / popover，把 `onMarks` 回调的坐标写到 ref 的 `style.transform`（同 `LiveTrack` 的 `tagA/tagB`）。`drei` 的 `<Html>` 也能做，但它会在 Canvas 外再开一层 portal 且与现有 `ViewTransition name="track-…"` 的 morph 不兼容，不用。
+- `TrackField` 加 `corners?: CornerLayer | null` 透传；`HomeTrack` 加 `pins?: {t:number;n:string}[]`（只画静态针）。
+
+#### 0.9.5 历史布局：永不把标签放到另一个布局上
+
+- `content/corners.json` 与 `data/corners/*.json` 都带 `layout`（F1DB `circuit_layout_id`）。`lib/corners.ts` 的 `cornerLayer(id, layoutId)` 在 `layoutId ≠ data.layout` 时返回 `null`——调用方把 `circuitImage(...).layout` 传进去，**于是 `?year=1995` 的蒙扎（SVG 旧布局）与 `?from=1983&to=2002` 的斯帕（SVG）自然无针**；`?year=2024` 的蒙扎（布局 monza-7 = 遥测布局）有针。
+- 遥测与 MultiViewer 年份不同（如 Spa 遥测 2026 / MV 2021）但 F1DB 布局 id 相同 → 可用（已逐条核对，弯角位置偏差 ≤ 8 m）。若将来 `npm run tracks` 换了遥测年而布局变了，`build-corners` 会用新遥测年的布局 id 重新对账；MV 弯心离折线 > 15 m 时脚本打 WARNING，此时宁可把该赛道的 `source` 清空（无针）也不渲染。
+- 旧布局的弯角名（如 1994 年前的 Tamburello 是全油门弯、旧 Hockenheim 的 Ostkurve）**不做**：没有坐标，也没有地图。
+
+#### 0.9.6 性能
+
+- 渲染期零网络：`cornerLayer()` 是同步文件读取（与 `trackShape` 同一模式），服务端组件把 ≤ 3 KB 的 JSON 作为 prop 传给客户端。
+- 回放：`/api/track/[circuit]` 的响应**加上 `corners` 与 `sectors` 字段**（同一个 JSON，同一条请求，`max-age=86400` 不变），`LiveTiming` 不再多发请求。
+- 每帧只做 ≤ 30 次向量投影 + DOM transform 写入（与现有 20 个车点同量级）；popover 开关才触发 React 渲染。
+- 构建脚本离线跑；MultiViewer 结果缓存在 `.cache/multiviewer/`，OpenF1 只在 `npm run corners` 时访问。
+
+#### 0.9.7 需要用户拍板（不默默决定）
+
+| # | 问题 | 建议 | 备选 |
+|---|---|---|---|
+| **D4** | 弯角名的**中文译名**：有些名字中文圈习惯直接说英文（Eau Rouge、130R、Parabolica、Maggotts–Becketts），有些有固定译名（发夹弯、塞纳 S 弯、冠军之墙）。种子数据两种都给了（`zh` + `name`）。 | 标签 **中文在上、原文在下**（无 `zh` 时只显示原文）；popover 同。 | 标签只显示原文（更像 TV 图），中文只进 popover |
+| **D5** | **Madring**（2026 新赛道）现在没有弯角坐标源，曲率峰值 24 ≠ 22 弯。 | v1 只画分段、不标弯角，`.note` 写「弯角数据待补」；等 MultiViewer 补数据后 `npm run corners -- madring --force` 即可。 | 我按曲率峰值手工合并成 22 弯标上去（有标错编号的风险，且 La Monumental 的编号未核实） |
+| **D6** | **分段上色**在回放地图里默认关（丝带留给车点），在赛道页头图里默认「弯角」而不是「分段」。 | 如建议 | 回放也默认开；或头图默认「分段」 |
+| **D7** | 回放地图的针要不要在**直播**（进行中节次）也显示。 | 显示（它是静态的，不影响轮询）。 | 只在回放显示 |
+
+#### 0.9.8 实施清单（给 Opus 5.5）
+
+> 顺序：C-1 → C-2 → C-3（数据与 API，可独立验证）→ C-4（Track3D）→ C-5（CornerLayer + 赛道页）→ C-6（回放）→ C-7（/live、单场）→ C-8（样式与无障碍）→ C-9（文档）。**不要改 `content/corners.json` 的事实内容**（要改名 / 加弯请走用户），schema 可加字段不可删。
+
+| # | 文件 | 做什么 |
+|---|---|---|
+| C-1 | `package.json` | `"corners": "node --no-warnings scripts/build-corners.mjs"`；README 的数据脚本表加一行（`tracks` 之后跑 `corners`）。**赛后（新加坡站结束后）跑一次 `npm run corners`**，确认 `data/corners/*.json` 的 `sectors` 与 `speed` 填上；今天跑只会得到弯角（已交付）。 |
+| C-2 | `lib/corners.ts`（新） | `export type CornerLayer = {...}`（§0.9.1）；`cornerLayer(circuitId, layoutId?)`；`sectorOf(t, sectors)`；sections 的 t 区间计算；`manual` 赛道 `approx: true`。纯同步 fs + JSON，无 db 依赖（layout 比对用传入值）。 |
+| C-3 | `app/api/track/[circuit]/route.ts` | 响应体加 `corners: cornerLayer(id, null)`（回放地图始终是遥测布局，不需要比对）。 |
+| C-4 | `components/three/Track3D.tsx` | 新 props `marks / onMarks / sectors / highlight`（§0.9.4）；shader：`uS1End / uS2End` 替换 0.333/0.666，`uHiFrom / uHiTo / uHi` 做高亮（白 85% 混入 `line` 区域）；`Scene` 的 `useFrame` 末尾投影 marks。保持现有调用方零改动（新 props 全部可选）。 |
+| C-5 | `components/track/CornerLayer.tsx` + `corner.module.css`（新）；`components/entity/TrackField.tsx`；`app/(site)/circuits/[id]/page.tsx` | 针 / 标签 / 分段标签 / 图例 seg / popover / 键盘 / 触屏（§0.9.3 1–8）。赛道页：`const corners = pic?.kind === "shape" ? cornerLayer(id, pic.layout) : null;` 传给 `TrackField`；`after` 里的 `.note` 追加来源句（§0.9.3 8）。图例放在 `.note` 对面（`right: var(--gutter); bottom: 20px`），窄屏（`max-width: 960px`，与 `.track` 变 360 px 同断点）图例进入 `.note` 之下的流式位置。 |
+| C-6 | `components/live/LiveTrack.tsx`、`LiveTiming.tsx`、`Controls.tsx`（Hud）、`live.module.css` | `LiveTiming` 从 `/api/track` 响应取 `corners` 传下去；`LiveTrack` 用 `makeProjector` 一次性投影针（同 `sfMark`），`nearest()` 车优先、针其次；popover 深色；Hud 右侧 `seg`「弯角 · 关」。 |
+| C-7 | `components/home/HomeTrack.tsx`、`components/live/LivePage.tsx`、`app/(site)/races/[year]/[round]/page.tsx` | `/live` 头图静态针（§0.9.3 9）；单场页未赛头图与赛道页同样传 `cornerLayer(race.circuit_id, cpic.layout)`。 |
+| C-8 | `corner.module.css`、`hover.module.css` | popover 复用 `.card` 的阴影 / 圆角 / 字体 token（不复制整段，`composes` 或共享 class）；`:focus-visible` 用全局红框；`prefers-reduced-motion` 下去掉 popover 的 `pop` 动画；无色线（§1.4）。 |
+| C-9 | `README.md`、`docs/design-log.md` | 数据来源表加 MultiViewer（公开、无鉴权、仅构建期访问）；design-log 记一段「弯角层」。 |
+
+#### 0.9.9 验收（打开某页能观察到什么）
+
+1. `/circuits/spa-francorchamps`：头图上 19 个编号针；标签可见 La Source / 红水弯·雷迪隆 / 莱孔布 / 普翁 / 布朗希蒙 / 公交站减速弯 等（防重叠后 ≥ 8 个）；hover T6 弹出「T6 · 莱孔布 — Les Combes — 莱孔布组合的第二个弯（左弯）。— S1」；hover 分段「红水弯 · 雷迪隆」时丝带 T2–T4 段变白。鼠标移动（视差）与自转过程中针始终贴在弯心上。
+2. `/circuits/suzuka`：T15 标签「130R」，T11「发夹弯」，T13–14「汤匙弯」；分段态下 S1/S2/S3 三色边界不在 1/3、2/3 处（`npm run corners` 跑过之后）；跑之前「分段」按钮 disabled 且有 title。
+3. `/circuits/monza?year=1995`：图片是 F1DB 旧布局 SVG，**无针、无图例**。`/circuits/monza?year=2024`：3D + 11 个针，T11「抛物线弯」。
+4. `/circuits/sepang`：15 个针，popover 内有「位置约略」chip；`.note` 含「按遥测曲率估算」。`/circuits/madring`：无针，图例只有「分段 · 关」，`.note` 含「弯角数据待补」。
+5. `/seasons/2026/replay?session=11330`（斯帕排位）：顶视图上 19 个小针；hover 针显示 popover，hover 车点显示车手（车优先）；Hud 右侧「弯角 · 关」切换生效并记住。
+6. `/live`：头图有编号小针、无标签；整个头图仍是一个链接（点击进赛道页）。
+7. 键盘：在赛道页 Tab 到第一个针，`→` 移到 T2，popover 随焦点出现，`Esc` 关闭；`axe` 无 `button-name` / `aria` 错误。
+8. 窄屏 375 px：只有针无标签，默认「关」；选「弯角」后针可点出 popover 且 popover 不越出视口。
+9. 性能：赛道页 `curl` 原始 HTML 内含 `"corners":[` 且大小增量 < 4 KB；DevTools Network 在页面加载后没有对 `multiviewer.app` / `openf1.org` 的请求。
+10. `node --no-warnings scripts/build-corners.mjs` 在非直播时段结束后：26 个文件 `sectors` 非 null（madring 除外视 OpenF1 数据而定），`speed` 覆盖率 ≥ 90%；脚本对任何一条赛道不打 WARNING。
 
 ---
 
@@ -739,4 +1408,7 @@ liveState(): {
 | 20 | 左栏要随顶部栏目变化：「历史」讲历史，「车手」就是他参加过哪些年份、各年有什么变化 | §1.2.0 一条规则、§1.2.1 七个裁决、§1.2.3 逐页规格、§1.2.4 `Scope` 扩展（P0-9） |
 | 23 | hover 样式全站统一：只有下划线 | §1.2.1 D7（P0-9 验收 10） |
 | 24 | 导航结构混乱；实时 / 回放做成 2 级，回放是当年的 2 级页面，可直达但要有面包屑定位；回放在顶栏没有落点；用 Fable 5.1 重想页面结构，一页不漏 | §0.5 全部：S1 每页一个落点、S2 面包屑、`/seasons/Y/replay`、`/races/Y/R/brief`、`/calendar` 归实时、栏去头、重定向表（P0-10 … P0-16） |
+| 25 | 底层对象逻辑：点到维斯塔潘定位到 2026 就有统一区块说他开什么车、属哪个队；选铃鹿 2026 要说冠军 / 冠军车队 / 冠军车；选 RB 某车要说驾驶者 / 车队；人、车、队、赛车、赛道串联互通；顶部区块样式都向维斯塔潘的看齐 | §0.6 全部：`ObjectHero` 十槽、串联表 0.6.2、互通检查、链接 / 芯片 / hover 规则（P0-17 … P0-22） |
+| 26 | 左边导航是哪个阶段就看哪个阶段的事；整体阶段只在总览出现；选了 18–20 年右边仍展示所有年份；年份带开头的赛季摘要卡与头图重复、没有用 | §0.7 全部：R1 状态规则 + R2 去重规则、`lib/range.ts` 一个机制、三页 × 三态裁决表、时期解说要点、透视锁定、去重删除清单（S-1 … S-7） |
+| 27 | 基于总览 / 筛选逻辑，页面里重复的信息可以删掉，让页面更简单干净 | §0.8 全部：9 条原则、三处待拍板（D1 月桂 vs 冠军瓷砖、D2 逐站色带 vs 透视、D3 赛车 / 时代 tab）、全站三条通用改动、逐页去重表（车手 / 车队 / 赛道 / 赛车 / 年份中枢 / 时代 / 单场 / 实时 / 索引）、16 条验收 |
 | 口述（v5 前） | 顶栏中文六项 + 对比 / 搜索工具区；`/live` = 英雄区 + 本赛季分站卡；栏在实时隐藏、无栏头；链接去最具体单元；年份页先赛季综述再标签 | §1.1、§0.5.4、§1.2（位置段）、§0.5.1 S3、§3.3 |

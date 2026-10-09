@@ -1,0 +1,97 @@
+/* Corner pins, labels, legend and popover over the 3D track maps (IA spec §0.9.3). Positions are written per frame as
+   `transform` by CornerLayer; everything here is anchored at (0,0) of the overlay. No colour lines (§1.4). */
+
+.root { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.wrap { position: absolute; inset: 0; }
+.wrap > .stage, .wrap > .link { position: absolute; inset: 0; }
+
+/* ── pin: 18 px carbon disc, 1 px white ring, the corner number ── */
+.pin {
+  position: absolute; left: 0; top: 0; z-index: 2; width: 18px; height: 18px; margin: -9px 0 0 -9px; padding: 0;
+  display: grid; place-items: center; border-radius: 50%; background: #15151e; box-shadow: 0 0 0 1px #fff;
+  color: #fff; font: 700 10px/1 var(--font-display); font-variant-numeric: tabular-nums; letter-spacing: -.02em;
+  pointer-events: auto; cursor: default; will-change: transform; transition: background .15s, color .15s;
+}
+.pin[data-wide] { width: auto; min-width: 18px; padding: 0 4px; border-radius: 9px; margin-left: -11px; }
+.pin:hover, .pin[data-on] { background: #fff; color: #15151e; }
+.pin:focus-visible { outline: 2px solid var(--f1-red); outline-offset: 2px; }
+.root[data-pending] .pin, .root[data-pending] .label { visibility: hidden; }
+
+/* ── named-corner label: Chinese on top, original name underneath (D4) ── */
+.label {
+  position: absolute; left: 0; top: 0; z-index: 1; display: flex; flex-direction: column; gap: 1px; padding: 3px 6px 4px;
+  background: rgba(14, 14, 20, .72); border-radius: 3px; color: #fff; white-space: nowrap;
+  pointer-events: auto; opacity: 0; visibility: hidden; transition: opacity .2s, visibility .2s; will-change: transform;
+}
+.label b { font: 600 12px/15px var(--font-cn); }
+.label span { font: 400 10px/12px var(--font-display); color: rgba(255, 255, 255, .7); }
+.label[data-show] { opacity: 1; visibility: visible; }
+.label[data-back][data-show] { opacity: .85; }
+
+/* named section: an italic eyebrow at the section's middle, a small red dot + the name */
+.section {
+  position: absolute; left: 0; top: 0; z-index: 1; display: inline-flex; align-items: center; gap: 6px; padding: 3px 7px;
+  background: rgba(14, 14, 20, .72); border-radius: 3px; color: #fff; white-space: nowrap;
+  font: italic 600 11px/14px var(--font-cn); pointer-events: auto; cursor: default;
+  opacity: 0; visibility: hidden; transition: opacity .2s, visibility .2s, background .15s; will-change: transform;
+}
+.section i { width: 6px; height: 6px; border-radius: 50%; background: var(--f1-red); flex: none; }
+.section[data-show] { opacity: 1; visibility: visible; }
+.section[data-back][data-show] { opacity: .85; }
+.section:hover, .section[data-on] { background: #fff; color: #15151e; }
+.section:focus-visible { outline: 2px solid var(--f1-red); outline-offset: 2px; }
+
+/* ── popover: the site's hover card (.card in hover.module.css), 260 px wide, no colour top ── */
+.root .pop { position: absolute; left: 0; top: 0; width: 260px; z-index: 3; pointer-events: none; will-change: transform; }
+.popHead { display: flex; flex-direction: column; gap: 2px; padding: 14px 16px 0; }
+.popHead b { font: 700 20px/24px var(--font-cn); color: var(--ink); }
+.popHead b em { font-style: normal; font-family: var(--num-font); font-weight: var(--num-weight); }
+.popHead span { font: 400 12px/16px var(--font-display); color: var(--mute); }
+.chip { align-self: center; display: inline-block; padding: 3px 8px; border-radius: 999px; background: var(--paper-2, #eeeef0); font: 600 11px/14px var(--font-cn); color: var(--ink); white-space: nowrap; }
+/* hero popover: portalled to <body> (fixed, the hover card's own z-index) so the hero text column never covers it */
+.float.float { left: 0; top: 0; width: 260px; pointer-events: none; will-change: transform; }
+.floatDark.floatDark { background: var(--panel, #15151e); color: #fff; box-shadow: 0 18px 48px rgba(0, 0, 0, .5), 0 0 0 1px #2a2a33; }
+.floatDark .popHead b, .floatDark dd { color: #fff; }
+.floatDark .popHead span, .floatDark dt { color: var(--t-3, #8a8a94); }
+.floatDark p { color: var(--t-2, #b4b4be); }
+.floatDark .chip { background: #2a2a33; color: #fff; }
+/* dark variant (replay map) */
+.dark .pop { background: var(--panel, #15151e); color: #fff; box-shadow: 0 18px 48px rgba(0, 0, 0, .5), 0 0 0 1px #2a2a33; }
+.dark .popHead b, .dark .pop dd { color: #fff; }
+.dark .popHead span, .dark .pop dt { color: var(--t-3, #8a8a94); }
+.dark .pop p { color: var(--t-2, #b4b4be); }
+.dark .chip { background: #2a2a33; color: #fff; }
+
+/* ── legend (seg): 弯角 · 分段 · 关, opposite the .note ── */
+.legend { position: absolute; right: var(--gutter); bottom: 20px; z-index: 3; display: flex; align-items: center; gap: 12px; pointer-events: auto; }
+.legend :global(.seg) { background: #1f1f27; }
+.legend :global(.seg) button { color: rgba(255, 255, 255, .6); padding: 6px 14px; font-size: 12px; }
+.legend :global(.seg) button:disabled { opacity: .4; cursor: not-allowed; }
+.legend :global(.seg) :global(.on) { background: #fff; color: #15151e; }
+.key { display: inline-flex; gap: 10px; font: 600 11px/1 var(--num-font); color: rgba(255, 255, 255, .7); }
+.key span { display: inline-flex; align-items: center; gap: 4px; }
+.key i { width: 8px; height: 8px; border-radius: 2px; background: var(--k); }
+
+/* /live banner: static number pins only, smaller and quieter, never interactive */
+.static .pin { width: 14px; height: 14px; margin: -7px 0 0 -7px; font-size: 8px; opacity: .7; pointer-events: none; }
+.static .pin[data-wide] { margin-left: -9px; padding: 0 3px; border-radius: 7px; }
+
+/* replay map: 14 px pins; the overlay's own pointer logic drives hover (cars first), so pins don't take the mouse */
+.mini .pin { width: 14px; height: 14px; margin: -7px 0 0 -7px; font-size: 8px; pointer-events: none; }
+.mini .pin[data-wide] { margin-left: -9px; padding: 0 3px; border-radius: 7px; }
+
+@media (max-width: 960px) {
+  .legend { right: 16px; bottom: 12px; }
+}
+/* narrow: pins only, never labels (§0.9.3 ②) */
+@media (max-width: 760px) {
+  .label, .section { display: none; }
+  .key { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .root .pop, .float.float { animation: none; }
+  .label, .section { transition: none; }
+}
+
+/* replay map: the 弯角 · 关 seg sits top-right, across from the lap / flag HUD */
+.legend.legendTop { right: 14px; top: 12px; bottom: auto; z-index: 2; }

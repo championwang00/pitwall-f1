@@ -25,13 +25,13 @@
 .label b { font-weight: 700; }
 .label > :global(.lat) { color: var(--mute); font-size: 12px; }
 .label:hover { background: color-mix(in srgb, currentColor 7%, transparent); border-radius: 6px; }
-.label .num { font-size: 16px; font-weight: 900; }
+.label .num { font-size: 16px; font-weight: var(--num-weight); }
 .swatch { width: 10px; height: 10px; border-radius: 2px; background: var(--team); align-self: center; flex: none; }
 .teams { display: flex; gap: 6px; flex-wrap: wrap; }
 .teamChip { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; }
 .teamChip i { width: 3px; height: 14px; background: var(--team); border-radius: 1px; }
 .teamChip:hover { background: color-mix(in srgb, currentColor 7%, transparent); border-radius: 6px; }
-.hi { color: var(--ink); font-weight: 900 !important; }
+.hi { color: var(--ink); font-weight: var(--num-weight) !important; }
 .zero { color: #c8c6c3 !important; }
 .stripHead { width: 1%; }
 .stripCell { width: 1%; }

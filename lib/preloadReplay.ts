@@ -5,7 +5,7 @@ import type { SessionLite } from "@/components/live/LiveTiming";
 /** Prepare exactly the URLs the replay consumes, not an unused copy of its data. */
 export async function preloadReplay(report: (fraction: number) => void, prefetch: (routes: string[]) => void) {
   const query = new URLSearchParams();
-  const year = location.pathname.match(/\/seasons\/(\d+)\/replay/)?.[1];
+  const year = location.pathname.match(/^\/(?:seasons\/(\d+)|races\/(\d+)\/\d+)\/replay/)?.slice(1).find(Boolean);
   if (year) query.set("year", year);
   const asked = new URLSearchParams(location.search).get("session");
   if (asked) query.set("session", asked);
@@ -18,7 +18,7 @@ export async function preloadReplay(report: (fraction: number) => void, prefetch
     () => import("@/components/live/LiveTiming"),
     () => import("@/components/three/Track3D"),
     ...(plan.session ? ENDPOINTS.map((ep) => () => preparedJSON(`/api/openf1/${ep}?session_key=${plan.session!.session_key}`)) : []),
-    ...Array.from(new Set([plan.session?.circuit_short_name, plan.nextTrack].filter(Boolean))).map((track) => () => preparedJSON(`/api/track/${encodeURIComponent(track!)}`)),
+    ...Array.from(new Set([plan.session?.circuit_short_name, plan.nextTrack].filter(Boolean))).map((track) => () => preparedJSON(`/api/track/${encodeURIComponent(track!)}?v=corners1`)),
   ];
   let completed = 0;
   let next = 0;

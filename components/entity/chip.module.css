@@ -1,0 +1,12 @@
+/* Car / circuit chips (IA spec v6 §0.6.5): same soft-pill hover as person.module.css / team.module.css */
+.chip { display: inline-flex; align-items: center; gap: 8px; min-width: 0; vertical-align: middle; border-radius: 999px; transition: background .15s, box-shadow .15s; color: inherit; }
+.chip:hover { background: var(--pill); box-shadow: 0 0 0 5px var(--pill); }
+.chip b { font-weight: 700; white-space: nowrap; }
+.chip b:global(.lat) { font-family: var(--font-display); }
+/* official 2026 side view: transparent art fitted into 56 × 20 */
+.side { flex: none; display: block; object-fit: contain; object-position: center; }
+/* historic chassis photo: a small rounded crop */
+.pic { flex: none; display: block; object-fit: cover; border-radius: 3px; }
+/* official black track outline turned white on dark surfaces */
+.outline { flex: none; display: block; width: auto; object-fit: contain; }
+.onDark .outline { filter: invert(1); }

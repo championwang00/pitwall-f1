@@ -4,9 +4,10 @@ import Link from "next/link";
 import { Fragment, useEffect, useMemo, useState } from "react";
 import type { CF, CubeData, Dim } from "@/lib/cube";
 import s from "./cube.module.css";
-import EntityLink from "@/components/entity/EntityLink";
+import EntityLink, { EntityHref } from "@/components/entity/EntityLink";
 import Person from "@/components/entity/Person";
 import Laurel from "@/components/entity/Laurel";
+import type { Range } from "@/lib/range";
 
 type View = Dim | "matrix";
 type Filters = { year?: never; driver?: string; team?: string; circuit?: string; from?: number; to?: number };
@@ -52,18 +53,25 @@ function stats(rows: CF[], dim: Dim): Stat[] {
 const fmtPts = (n: number) => (Number.isInteger(n) ? String(n) : n.toFixed(1));
 
 export default function Cube({
-  data, fixed, fixedId, defaultView, initial, title = "维度透视", standings, only,
+  data, fixed, fixedId, defaultView, initial, title = "维度透视", standings, only, range,
 }: {
   data: CubeData; fixed: Dim; fixedId: string; defaultView?: View; initial?: Partial<Filters & { view: View }>; title?: string;
   /** Restrict the available views (e.g. a circuit page has its own per-year winners table). */
   only?: View[];
   /** Optional championship result per year (driver/team pages) */
   standings?: Record<number, string>;
+  /** The page state (spec §0.7.4): `data` is already cut to it. Locks the years — no year select, no from/to in the URL —
+   *  and cross-object links open the other object in the same range. */
+  range?: Range | null;
 }) {
   const others = (["year", "circuit", "team", "driver"] as Dim[]).filter((d) => d !== fixed);
-  const views: View[] = only ?? [...others, "matrix"];
-  const [view, setView] = useState<View>(initial?.view && views.includes(initial.view) ? initial.view : defaultView ?? views[0]);
-  const [flt, setFlt] = useState<Filters>({ driver: initial?.driver, team: initial?.team, circuit: initial?.circuit, from: initial?.from, to: initial?.to });
+  // a single season (spec §0.8.3 D2): one row per round is the useful view, so 按赛道 leads; a view that would be a
+  // single group (按年份 = the season itself, 按车队 for a one-team year) adds nothing and is hidden — the matrix stays
+  const single = !!range && range.from === range.to;
+  const views: View[] = (only ?? [...others, "matrix"]).filter((v) => !single || v === "matrix" || new Set(data.rows.map(keyOf[v as Dim])).size > 1);
+  const def: View = single && views.includes("circuit") ? "circuit" : defaultView && views.includes(defaultView) ? defaultView : views[0];
+  const [view, setView] = useState<View>(initial?.view && views.includes(initial.view) ? initial.view : def);
+  const [flt, setFlt] = useState<Filters>({ driver: initial?.driver, team: initial?.team, circuit: initial?.circuit, ...(range ? {} : { from: initial?.from, to: initial?.to }) });
   const [sort, setSort] = useState<{ k: keyof Stat | "label"; dir: 1 | -1 }>({ k: "label", dir: 1 });
   const [open, setOpen] = useState<string | null>(null);
   const [showAll, setShowAll] = useState(false);
@@ -82,11 +90,12 @@ export default function Cube({
   // keep URL in sync so any slice is shareable
   useEffect(() => {
     const u = new URL(window.location.href);
-    for (const k of ["driver", "team", "circuit", "from", "to"] as const) {
+    // a locked range keeps the address bar's own ?year / ?from&to
+    for (const k of range ? (["driver", "team", "circuit"] as const) : (["driver", "team", "circuit", "from", "to"] as const)) {
       const v = flt[k];
       if (v) u.searchParams.set(k, String(v)); else u.searchParams.delete(k);
     }
-    if (view !== (defaultView ?? views[0])) u.searchParams.set("view", view); else u.searchParams.delete("view");
+    if (view !== def) u.searchParams.set("view", view); else u.searchParams.delete("view");
     if (u.toString() !== window.location.href) window.history.replaceState(window.history.state, "", u.toString());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [flt, view]);
@@ -101,7 +110,7 @@ export default function Cube({
     return { zh: n?.[1] ?? n?.[0] ?? id, lat: n?.[1] ? n[0] : "" };
   };
   const href = (dim: Dim, id: string) => {
-    const q = new URLSearchParams({ [fixed]: fixedId });
+    const q = new URLSearchParams({ [fixed]: fixedId, ...(range && dim !== "year" ? { from: String(range.from), to: String(range.to) } : {}) });
     if (dim === "year") return `/seasons/${id}?${fixed === "driver" || fixed === "team" ? q : ""}`;
     return `/${dim === "driver" ? "drivers" : dim === "team" ? "teams" : "circuits"}/${id}?${fixed !== "year" ? q : `from=${fixedId}&to=${fixedId}`}`;
   };
@@ -135,6 +144,13 @@ export default function Cube({
     </th>
   );
 
+  if (range && !data.rows.length) return (
+    <section className={s.cube}>
+      <div className={s.head}><div><h2 className="cn-h2">{title}</h2></div></div>
+      <p className={s.empty}>{range.from === range.to ? `${range.from} 赛季没有出赛记录` : "这一时期没有出赛记录"}</p>
+    </section>
+  );
+
   return (
     <section className={s.cube}>
       <div className={s.head}>
@@ -161,7 +177,7 @@ export default function Cube({
             </select>
           </label>
         ))}
-        {fixed !== "year" && years.length > 1 && (
+        {fixed !== "year" && !range && years.length > 1 && (
           <label className={`${s.select} ${flt.from || flt.to ? s.selOn : ""}`}>
             <span>年份</span>
             <select value={flt.from ?? ""} onChange={(e) => setFlt({ ...flt, from: e.target.value ? +e.target.value : undefined })}>
@@ -178,7 +194,8 @@ export default function Cube({
         {(flt.driver || flt.team || flt.circuit || flt.from || flt.to) && (
           <button className={s.reset} onClick={() => setFlt({})}>清除筛选</button>
         )}
-        {total && (
+        {/* the unfiltered total is the hero's number row again (spec §0.8.2): only a filtered subtotal is new information */}
+        {total && (flt.driver || flt.team || flt.circuit) && (
           <p className={s.total}>
             <b className="num">{total.n}</b> 场 · <b className="num">{total.wins}</b> 胜 · <b className="num">{total.pods}</b> 领奖台 · <b className="num">{total.poles}</b> 杆位 · <b className="num">{fmtPts(total.pts)}</b> 分
           </p>
@@ -393,7 +410,7 @@ function Matrix({ rows, data, fixed, rowDim, colDim, metric, setRow, setCol, set
                     const b = best(a);
                     const content = <span className={`${resClass(b)}${b.po ? " pole" : ""}${b.fl ? " fl" : ""}`}>{label(b)}</span>;
                     return a.length === 1 ? (
-                      <Link key={c} href={raceHref(b)} title={raceTitle(b)} className={s.mCell}>{content}</Link>
+                      <EntityHref key={c} href={raceHref(b)} title={raceTitle(b)} className={s.mCell}>{content}</EntityHref>
                     ) : (
                       <span key={c} title={`${a.length} 场，最佳：${raceTitle(b)}`} className={s.mCell}>{content}</span>
                     );

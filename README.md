@@ -47,6 +47,7 @@ npm run dev        # http://localhost:3210
 
 - **F1DB**（`data/f1db.db`，1950 → 2026 第 16 站，CC BY 4.0）：比赛、成绩、积分、底盘、引擎、赛道布局。`npm run update-data` 拉取最新版本（带 SHA-256 校验）。
 - **OpenF1**：赛程各节时间、实时 / 回放计时、遥测坐标（3D 赛道由排位赛最快圈的位置数据重建，见 `data/tracks/`，`npm run tracks` 可重建）。
+- **MultiViewer 赛道 API**（`api.multiviewer.app`，公开、无鉴权，**只在构建期访问**）：弯心位置与编号。`npm run corners`（`scripts/build-corners.mjs`）把弯心吸附到 `data/tracks` 的遥测圈，写入 `data/corners/`；同一脚本从 OpenF1 取该圈的 S1/S2/S3 边界与弯心最低速度 / 挡位（直播时段 OpenF1 返回 401，脚本跳过并保留弯角）。**`npm run tracks` 之后必须再跑 `npm run corners`**。弯角中文名与注释是人工策展的 `content/corners.json`；页面渲染时只读这两个文件，不联网。
 - **Wikipedia REST**：单场综述（中文优先）、历史车手与赛车照片（`data/wiki.json` 由 Jolpica 的维基链接映射而来）。
 - **中文译名**：人工核实的译名优先；其余车手 / 车队 / 赛道取中文维基条目按大陆用语转换后的标题（`data/zh-names.json`，`npm run zh-names` 重建）；没有通行译名的保留原文。
 - **`content/*.json`**：车手 44 位、车队 28 支、赛车 33 台、赛道 50 条、9 个规则时代的中文档案；另有解说素材 `notes.*.json`（赛道 147 条、车手 137 条、车队 64 条、赛季 198 条，偏重 2025–2026 的最新事件）。合计 1313 条，每条附来源链接，数字与 F1DB 交叉核对；来源互相矛盾或无法在页面上找到的说法已删除。`node --no-warnings scripts/validate-content.mjs` 可重新核对所有引用。

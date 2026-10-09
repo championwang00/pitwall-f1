@@ -29,9 +29,9 @@ export function Hud({ model, clock }: { model: Model; clock: Clock }) {
   return (
     <div className={s.hud}>
       {model.kind === "race" ? (
-        <p className={s.hudLap}><span>Lap</span><b className="num">{Math.max(0, Math.min(lap, model.totalLaps))}</b><i className="num">/ {model.totalLaps}</i></p>
+        <p className={s.hudLap}><span>圈</span><b className="num">{Math.max(0, Math.min(lap, model.totalLaps))}</b><i className="num">/ {model.totalLaps}</i></p>
       ) : (
-        <p className={s.hudLap}><span>{phase ? "阶段" : "Lap"}</span><b className="num">{phase ? phase.name : lap}</b></p>
+        <p className={s.hudLap}><span>{phase ? "阶段" : "圈"}</span><b className="num">{phase ? phase.name : lap}</b></p>
       )}
       <StatusChip st={st} />
     </div>
@@ -132,8 +132,8 @@ function Scrubber({ model, clock, t }: { model: Model; clock: Clock; t: number }
         {model.periods.map((p, i) => (
           <span key={i} className={`${s.scrubBand} ${s["sb_" + p.kind]}`} style={{ left: pct(Math.max(t0, p.start)), width: `${((Math.min(t1, p.end) - Math.max(t0, p.start)) / span) * 100}%` }} title={p.kind === "RED" ? "红旗" : p.kind === "SC" ? "安全车" : "虚拟安全车"} />
         ))}
-        {model.phases.map((p) => (
-          <span key={p.name} className={s.scrubPhase} style={{ left: pct(p.start), width: `${((p.end - p.start) / span) * 100}%` }} />
+        {model.phases.map((p, k) => (
+          <span key={`${p.name}-${k}`} className={s.scrubPhase} style={{ left: pct(p.start), width: `${((p.end - p.start) / span) * 100}%` }} />
         ))}
         <span className={s.scrubFill} style={{ width: pct(t) }} />
       </div>
@@ -148,8 +148,8 @@ function Scrubber({ model, clock, t }: { model: Model; clock: Clock; t: number }
             {m.major && !model.phases.some((p) => Math.abs(p.start - m.t) < span * 0.04) && <b className="num">{m.label}</b>}
           </span>
         ))}
-        {model.phases.map((p) => (
-          <span key={p.name} className={s.tickPhase} style={{ left: pct(p.start) }}><b className="num">{p.name}</b></span>
+        {model.phases.map((p, k) => (
+          <span key={`${p.name}-${k}`} className={s.tickPhase} style={{ left: pct(p.start) }}><b className="num">{p.name}</b></span>
         ))}
         {model.chequer && model.kind === "race" && <span className={s.chequer} style={{ left: pct(model.chequer) }} title="方格旗" />}
       </div>
@@ -157,7 +157,7 @@ function Scrubber({ model, clock, t }: { model: Model; clock: Clock; t: number }
       {hov && (
         <span className={s.scrubTip} style={{ left: hov.x }}>
           <b className="num">{fmtClock(hov.t - ref0)}</b>
-          {model.kind === "race" && lapAt(hov.t) > 0 && <small>Lap {lapAt(hov.t)}</small>}
+          {model.kind === "race" && lapAt(hov.t) > 0 && <small>第 {lapAt(hov.t)} 圈</small>}
         </span>
       )}
     </div>

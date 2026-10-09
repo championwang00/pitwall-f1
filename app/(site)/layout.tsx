@@ -3,6 +3,9 @@ import Footer from "@/components/shell/Footer";
 import { nextSession } from "@/lib/schedule";
 import YearShell from "@/components/season/YearShell";
 import HoverLayer from "@/components/entity/HoverLayer";
+import NavSkeleton from "@/components/shell/NavSkeleton";
+import DemoCursor from "@/components/shell/DemoCursor";
+import { Suspense } from "react";
 
 export default async function SiteLayout({ children }: { children: React.ReactNode }) {
   let next: NextSession = null;
@@ -13,6 +16,8 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       <main><YearShell>{children}</YearShell></main>
       <Footer />
       <HoverLayer />
+      <Suspense fallback={null}><NavSkeleton /></Suspense>
+      <DemoCursor />
     </>
   );
 }

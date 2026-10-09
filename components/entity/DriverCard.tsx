@@ -14,16 +14,17 @@ const CJK = /[㐀-鿿]/;
  * THAT year + the official DRS halftone in the bright colour; Latin first name (Formula1 400) over the surname
  * (Formula1 500), Chinese name under it, team / meta line, number art (2026 grid) or the big kicker numeral in
  * Formula1 Digits, round flag bottom-left, period portrait bleeding from the bottom-right half (`year` → /api/face?year=).
- * Hover = .lift + underline the name. The whole card clicks through via a stretched sibling `.card-link`;
- * the name is the card's own subject (no hover intro unless `preview`), team / year links inside keep theirs.
+ * Hover = .lift only (one hover per card, globals.css). The whole card clicks through via a stretched sibling `.card-link`;
+ * the name previews like every entity link (user: 其他维度的信息合围上去都应该能看到) — the layer itself skips a link to the
+ * page you're on; `preview={false}` only for the page's own subject. Team / year links inside keep theirs.
  */
-export default function DriverCard({ id, name, latin, color, kicker, laurels = [], meta, chips, href, size, className, year, stats, preview = false, label, morph, nameHref }: {
+export default function DriverCard({ id, name, latin, color, kicker, laurels = [], meta, chips, href, size, className, year, stats, preview = true, label, morph, nameHref }: {
   id: string; year?: number | null; name: string; latin?: string | null; color: string; kicker?: React.ReactNode;
   laurels?: { top: React.ReactNode; bottom?: React.ReactNode }[]; meta?: React.ReactNode;
   chips?: { label: React.ReactNode; solid?: boolean }[]; href?: string; size?: "sm"; className?: string;
-  /** F1 stat cells along the foot: value in Formula1, label in Titillium caps (PTS, WINS…). */
+  /** F1 stat cells along the foot: value in Formula1, label in Chinese (积分, 胜场…). */
   stats?: { v: React.ReactNode; k: string }[];
-  /** the name links with its hover intro (cards whose subject is not the driver, e.g. a season card) */
+  /** false only when the driver IS the page's own subject */
   preview?: boolean;
   /** accessible name of the whole-card link (defaults to the driver's name) */
   label?: string;
@@ -39,7 +40,7 @@ export default function DriverCard({ id, name, latin, color, kicker, laurels = [
   const zh = zhName.driver(id) ?? (CJK.test(name) ? name : null);
   const f = flag(d?.nat);
   const to = href ?? (year ? `/drivers/${id}?year=${year}` : `/drivers/${id}`);
-  const photo = `/api/face/${id}?v=3&s=440${year ? `&year=${year}` : ""}`;
+  const photo = `/api/face/${id}?v=4&s=440${year ? `&year=${year}` : ""}`;
   const art = kicker == null && (!year || year === 2026) ? driverNumberArt(id) : null;
   return (
     <div className={`${s.card} f1-surface lift ${size === "sm" ? s.sm : ""} ${className ?? ""}`} style={{ ["--c" as any]: color }}>

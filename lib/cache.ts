@@ -2,14 +2,19 @@ import fs from "node:fs/promises";
 import path from "node:path";
 import os from "node:os";
 import crypto from "node:crypto";
+import { isWikimedia, slot, pause, ok as wmOk } from "./wmGate";
 
 const DIR = process.env.VERCEL ? path.join(os.tmpdir(), "pitwall/http") : path.join(process.cwd(), ".cache/http");
 const mem = new Map<string, { t: number; data: unknown }>();
 const inflight = new Map<string, Promise<unknown>>();
 const lastHit = new Map<string, number>();
+/** count of fetches that failed for good (429 / 5xx / network) — lets resolvers tell "no data" from "could not ask" */
+const failures = { n: 0 };
+export const httpFailures = () => failures.n;
 
 // Polite per-host spacing (Jolpica allows ~4 req/s burst, 500/h)
-const GAP: Record<string, number> = { "api.jolpi.ca": 300, "api.openf1.org": 120 };
+// Wikimedia rate-limits this IP hard (x-envoy-ratelimited, retry-after 30–40 s): keep API calls well spaced
+const GAP: Record<string, number> = { "api.jolpi.ca": 300, "api.openf1.org": 120, "en.wikipedia.org": 900, "www.wikidata.org": 900, "zh.wikipedia.org": 900 };
 
 async function spaced(host: string) {
   const gap = GAP[host] ?? 0;
@@ -37,10 +42,14 @@ export async function cachedJSON<T = any>(url: string, ttl: number, init?: Reque
   const p = (async () => {
     const host = new URL(url).host;
     let lastErr: unknown;
+    const wm = isWikimedia(url);
     for (let i = 0; i < 3; i++) {
       await spaced(host);
       try {
+        if (wm) await slot(); // Wikimedia: one serialized queue for the whole process, paused after a 429 (lib/wmGate)
         const r = await fetch(url, { ...init, headers: { "user-agent": "pitwall-f1-demo/0.1", ...(init?.headers || {}) }, cache: "no-store" });
+        if (wm && r.status === 429) { pause(+(r.headers.get("retry-after") ?? 0)); const e: any = new Error(`429 ${url}`); e.fatal = true; throw e; }
+        if (wm && r.ok) wmOk();
         if (r.status === 404) return null;
         if (r.status === 401 || r.status === 403) { const e: any = new Error(`${r.status} ${url}`); e.status = r.status; e.fatal = true; throw e; }
         if (!r.ok) throw new Error(`${r.status} ${url}`);
@@ -55,7 +64,7 @@ export async function cachedJSON<T = any>(url: string, ttl: number, init?: Reque
         return data;
       } catch (e: any) {
         lastErr = e;
-        if (e?.fatal) break;
+        if (e?.fatal || e?.name === "WmPaused" || e?.constructor?.name === "WmPaused") break;
         await new Promise((r) => setTimeout(r, 600 * (i + 1)));
       }
     }
@@ -64,6 +73,7 @@ export async function cachedJSON<T = any>(url: string, ttl: number, init?: Reque
       const raw = JSON.parse(await fs.readFile(file, "utf8"));
       return raw.data;
     } catch {}
+    failures.n++;
     throw lastErr;
   })().finally(() => inflight.delete(key));
   inflight.set(key, p);

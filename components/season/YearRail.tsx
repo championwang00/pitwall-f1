@@ -10,7 +10,7 @@ import s from "./rail.module.css";
 export type RailYear = { year: number; color: string; champ: string | null; champTeam?: string | null; champCar?: string | null; rounds?: string; live?: boolean };
 export type RailEra = { id: string; title: string; from: number; to: number; summary: string; years: RailYear[] };
 
-const TABS = new Set(["standings", "era", "circuits", "drivers", "teams", "cars"]);
+const TABS = new Set(["calendar", "standings", "circuits", "drivers", "teams"]); // no 时代 / 赛车 tabs (spec §0.8.7 D3)
 
 type Item =
   | { t: "era"; id: string; title: string; from: number; to: number; summary?: string; href?: string; color?: string; dim?: boolean }
@@ -34,8 +34,10 @@ export default function YearRail({ eras, latest }: { eras: RailEra[]; latest: nu
   const eraPage = path.match(/^\/eras\/([^/]+)/);
   const subject = !!scope.only;
 
+  const spFrom = sp.get("from") ? +sp.get("from")! : null, spTo = sp.get("to") ? +sp.get("to")! : null;
   const current: number | null =
-    scope.current !== undefined ? scope.current
+    spFrom != null && spTo != null && spFrom !== spTo && !spYear ? null
+    : scope.current !== undefined ? scope.current
     : seg ? +seg[1]
     : spYear ?? (unit || eraPage || path.startsWith("/cars/") || path === "/seasons" ? null : latest);
 
@@ -149,9 +151,15 @@ export default function YearRail({ eras, latest }: { eras: RailEra[]; latest: nu
   if (off) return <nav className={s.off} aria-hidden />;
   return (
     <nav ref={box} className={`${s.rail} ${subject ? s.subject : ""}`} aria-label="年份">
+      {scope.home && (
+        // the object's own home page: highlighted when no year is selected (user: 主页能点击，默认先进主页)
+        <Link href={scope.home.href} scroll={false} className={`${s.home} ${current == null && spFrom == null ? s.homeOn : ""}`} data-on={current == null && spFrom == null ? "" : undefined}>
+          <b>{scope.home.label}</b>{scope.home.sub && <em>{scope.home.sub}</em>}
+        </Link>
+      )}
       {items.map((it, k) => {
         if (it.t === "era") {
-          const on = it.id === openEra;
+          const on = it.id === openEra || (subject && spFrom === it.from && spTo === it.to && !spYear);
           const label = <span><b>{subject ? (it.from === it.to ? it.from : `${it.from}–${String(it.to).slice(2)}`) : `${it.from}–${it.to === it.from ? "" : String(it.to).slice(2)}`}</b>{it.title}</span>;
           const cls = `${s.eraT} ${on ? s.eraOn : ""} ${it.dim ? s.dimEra : ""} ${subject ? s.group : ""}`;
           const body = (

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Fragment } from "react";
-import EntityLink, { type Kind } from "@/components/entity/EntityLink";
+import EntityLink, { entityOfHref, type Kind } from "@/components/entity/EntityLink";
 import Icon from "@/components/ui/Icon";
 import BreadcrumbMore from "./BreadcrumbMore";
 import s from "./breadcrumb.module.css";
@@ -10,7 +10,7 @@ import s from "./breadcrumb.module.css";
  * `kind` + `id` on a parent crumb → an EntityLink (hover card per §1.3; a link to the page you're on never previews).
  * `name`: plain-text label for the JSON-LD BreadcrumbList when `label` isn't a string.
  */
-export type Crumb = { label: React.ReactNode; href?: string; kind?: Kind | "era"; id?: string; name?: string };
+export type Crumb = { label: React.ReactNode; href?: string; kind?: Kind; id?: string; name?: string };
 
 const text = (c: Crumb) => c.name ?? (typeof c.label === "string" || typeof c.label === "number" ? String(c.label) : "");
 
@@ -37,10 +37,12 @@ export default function Breadcrumb({ items, tone = "paper", flush = false, class
           const last = i === n - 1;
           const mid = collapse && i >= 1 && i <= n - 3;
           const label = c.kind === "year" ? <span className="num">{c.label}</span> : c.label;
+          // a parent crumb that is an entity (subject, season, era, race) previews it; section crumbs are plain links
+          const ent = c.kind && c.id ? { kind: c.kind, id: c.id } : entityOfHref(c.href);
           const body = last || !c.href
             ? <span>{label}</span>
-            : c.kind && c.kind !== "era" && c.id
-              ? <EntityLink kind={c.kind} id={c.id} href={c.href}>{label}</EntityLink>
+            : ent
+              ? <EntityLink kind={ent.kind} id={ent.id} href={c.href}>{label}</EntityLink>
               : <Link href={c.href}>{label}</Link>;
           return (
             <Fragment key={i}>

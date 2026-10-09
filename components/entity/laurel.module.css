@@ -1,7 +1,7 @@
 .laurel { --leaf: transparent; display: inline-flex; align-items: center; gap: 2px; color: var(--tone); line-height: 1; vertical-align: middle; }
 .branch { flex: none; display: block; } /* inline svg sat on the text baseline → looked low in pills */
 .text { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: inherit; }
-.text b { font-family: var(--font-display); font-weight: 900; font-size: calc(var(--size) * 0.36); letter-spacing: .02em; white-space: nowrap; }
+.text b { font-family: var(--num-font); font-weight: var(--num-weight); font-size: calc(var(--size) * 0.36); letter-spacing: .02em; white-space: nowrap; }
 .text b :global(.num), .text b .n { font-family: var(--font-display); }
 .text em { font-style: normal; font-family: var(--font-display); font-weight: 700; font-size: calc(var(--size) * 0.3); margin-top: 2px; white-space: nowrap; }
 .row { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; }

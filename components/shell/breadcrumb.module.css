@@ -5,7 +5,7 @@
 .nav { display: flex; align-items: center; min-height: 16px; margin: 0 0 16px; padding: 0 var(--gutter); min-width: 0; color: inherit; }
 .flush { padding: 0; }
 .ol { display: flex; align-items: center; gap: 6px; list-style: none; margin: 0; padding: 0; white-space: nowrap; overflow: hidden; min-width: 0; }
-.li { display: inline-flex; align-items: center; gap: 6px; font: 600 13px/16px "Titillium Web", var(--font-cn); color: inherit; opacity: .7; }
+.li { display: inline-flex; align-items: center; gap: 6px; font: 600 13px/16px var(--font-cn); color: inherit; opacity: .7; }
 .li :global(.num) { font-family: var(--font-display); font-weight: 500; }
 .li a { color: inherit; }
 .li a:hover { text-decoration: underline; text-underline-offset: 4px; }

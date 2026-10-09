@@ -1,4 +1,4 @@
-// Usage: node scripts/link-audit.mjs [base=http://localhost:3210] [--only=substr] [--verbose]
+// Usage: node scripts/link-audit.mjs [base=http://localhost:3210] [--only=substr] [--pages=/a,/b] [--verbose]
 // Global link rule (docs/ia-spec.md §0.5.1 S3 + §1.3): every driver / team / circuit / GP / year that appears on a page
 // must be a link to its most specific unit. This loads a broad page sample in a real browser and reports
 //   · text nodes OUTSIDE <a> that mention a driver (Chinese full name / unambiguous surname), team, circuit, GP name
@@ -28,6 +28,9 @@ const PAGES = [
   "/cars", "/cars/mercedes-f1-w17", "/cars/lotus-79",
   "/compare?a=lewis-hamilton&b=max-verstappen",
 ].filter((p) => !ONLY || p.includes(ONLY));
+// --pages=/a,/b replaces the sample (spot checks)
+const CUSTOM = args.find((a) => a.startsWith("--pages="))?.slice(8).split(",").filter(Boolean);
+if (CUSTOM) PAGES.splice(0, PAGES.length, ...CUSTOM);
 
 const browser = await chromium.launch({ channel: "chrome", headless: true });
 const ctx = await browser.newContext({ viewport: { width: 1440, height: 900 } });
@@ -43,7 +46,7 @@ const gpAlt = [...gps].sort((a, b) => b.length - a.length).map(esc).join("|");
 // GP first (so 巴西大奖赛 is one hit, not 巴西 + …), then entity names, then years
 // years: 1950–2026 only (no season page beyond the current one); not inside longer numbers, dates (2026-10-09) or
 // measurements (2000毫米)
-const SRC = `((?:${gpAlt})大奖赛)|(${keys.join("|")})|((?<![\\d.:/\\-−A-Za-z])(?:19[5-9]\\d|20[01]\\d|202[0-6])(?![\\d]|[-/]\\d|\\s?(?:毫米|米|转|公里|千米|公斤|千克|kg|cc|rpm|马力|亿|万)))`;
+const SRC = `((?:${gpAlt})大奖赛)|(${keys.join("|")})|((?<![\\d.:/\\-−A-Za-z])(?:19[5-9]\\d|20[01]\\d|202[0-6])(?![\\d]|[-/]\\d|s(?![A-Za-z])|\\s?(?:毫米|米|转|公里|千米|公斤|千克|kg|cc|rpm|马力|亿|万)))`;
 
 
 // Acceptable by rule (docs/ia-spec.md §1.3 + the global link rule) — counted, not listed as misses:
@@ -52,12 +55,17 @@ const SRC = `((?:${gpAlt})大奖赛)|(${keys.join("|")})|((?<![\\d.:/\\-−A-Za-
 //   repeat   the same entity is already linked earlier in the same block (Wikipedia: link once per paragraph)
 //   control  form controls (<select>/<option>/<input>) cannot hold links
 //   crumb    the current (last) breadcrumb
-const OK_TAGS = ["subject", "covered", "repeat", "control", "crumb"];
+//   h1       the page's hero title (its own subject's name, e.g. "2026 巴林大奖赛")
+//   decade   "1980s" group labels (not a season)
+const OK_TAGS = ["subject", "covered", "repeat", "control", "crumb", "h1", "decade"];
 let totalMiss = 0, totalOk = 0;
 const summary = [];
 for (const path of PAGES) {
-  await page.goto(BASE + path, { waitUntil: "load", timeout: 120000 }).catch(() => {});
-  await page.waitForTimeout(2500);
+  for (let tries = 0; tries < 3; tries++) {
+    await page.goto(BASE + path, { waitUntil: "load", timeout: 120000 }).catch(() => {});
+    await page.waitForTimeout(2500);
+    if (new URL(page.url()).pathname === path.split("?")[0]) break;
+  }
   await page.waitForLoadState("load").catch(() => {});
   // scroll once so lazy blocks render
   await page.evaluate(async () => { for (let y = 0; y < document.body.scrollHeight; y += 900) { window.scrollTo(0, y); await new Promise((r) => setTimeout(r, 60)); } window.scrollTo(0, 0); }).catch(() => {});
@@ -104,6 +112,8 @@ for (const path of PAGES) {
         const tags = [];
         const p = pathOf(kind, id);
         if (el.closest("h1")) tags.push("h1");
+        // a decade label ("1980" + "s" as separate React text nodes) is not a season
+        if (kind === "year" && (el.textContent ?? "").includes(whole + "s")) tags.push("decade");
         if (p && (here === p || here.startsWith(p + "/")) || (kind === "gp" && h1.includes(whole) && /^\/races\//.test(here))) tags.push("subject");
         if (el.closest("select, option, input, textarea")) tags.push("control");
         else if (el.closest("button, [role=button], [role=tab], label")) tags.push("button");
@@ -115,7 +125,9 @@ for (const path of PAGES) {
         const cover = coverOf(el);
         if (cover != null) {
           const yIn = (y) => cover.includes(`/seasons/${y}`) || cover.includes(`year=${y}`) || cover.includes(`/races/${y}/`) || cover.includes(`-${String(y).slice(2)}`) || new RegExp(`\\b${y}\\b`).test(cover);
-          if (p && kind !== "year" ? cover.startsWith(p) : kind === "year" ? yIn(id) : kind === "gp" ? cover.startsWith("/races/") : false) tags.push("covered");
+          // a car card (team × year): its own team and year are the card's subject
+          const car = cover.startsWith("/cars/") && (kind === "year" || (kind === "team" && cover.startsWith(`/cars/${id}-`)));
+          if (car || (p && kind !== "year" ? cover.startsWith(p) : kind === "year" ? yIn(id) : kind === "gp" ? cover.startsWith("/races/") : false)) tags.push("covered");
           else tags.push("in-card→" + cover.slice(0, 40));
         }
         const blk = blockOf(el);
@@ -124,6 +136,12 @@ for (const path of PAGES) {
           return p ? (h === p || h.startsWith(p + "?") || h.startsWith(p + "/")) : kind === "gp" ? h.startsWith("/races/") && a.textContent.includes(whole) : false;
         });
         if (linked) tags.push("repeat");
+        else {
+          // the card / note's own subject: the same entity is linked as the item's header (race-page notes, brief notes)
+          const item = el.closest("article, li");
+          const own = item && [...item.querySelectorAll("a[href]")].some((a) => { const h = a.getAttribute("href"); return p && (h === p || h.startsWith(p + "?")); });
+          if (own) tags.push("covered");
+        }
         hits.push({ kind, id, whole, ctx: text.slice(Math.max(0, m.index - 16), m.index + whole.length + 12).replace(/\s+/g, " ").trim(), where: where(el), tags });
       }
     }
@@ -131,11 +149,18 @@ for (const path of PAGES) {
     for (const img of document.querySelectorAll("img, canvas")) {
       if (img.closest("a")) continue;
       const src = img.getAttribute("src") ?? "";
-      const k = /\/api\/face\//.test(src) ? "face" : /\/api\/logo\//.test(src) ? "logo" : /\/api\/carimg\/|car/i.test(src) && img.tagName === "IMG" ? "car"
-        : /\/api\/track\/|track/i.test(src) ? "track" : img.tagName === "CANVAS" ? "canvas" : null;
+      if (/\/api\/flag\/|drs-|halftone/.test(src)) continue;
+      const k = /\/api\/face\/|:driver:|\/drivers?\/|right\.webp|left\.webp/.test(src) ? "face" : /\/api\/logo\/|logo/i.test(src) ? "logo"
+        : /track|circuit/i.test(src) ? "track" : /\/api\/carimg\/|car/i.test(src) && img.tagName === "IMG" ? "car"
+        : img.tagName === "CANVAS" ? "canvas" : /media\.formula1\.com|wikimedia/.test(src) ? "photo" : null;
       if (!k) continue;
       const cover = coverOf(img);
       const tags = [];
+      // a unit page's own hero picture (portrait / car / 3D track of the page's subject) is the subject itself
+      const unitPage = /^\/(drivers|teams|circuits|cars)\/[^/]+$/.test(here);
+      const firstSection = document.querySelector("main section, section");
+      const subjId = here.split("/")[2];
+      if (unitPage && (firstSection?.contains(img) || src.includes(`/${subjId}?`) || src.includes(`/${subjId}/`) || (here.startsWith("/circuits/") && img.closest("[class*=storyRow]")))) tags.push("subject");
       if (cover != null) tags.push("covered→" + cover.slice(0, 40));
       if (!img.checkVisibility()) tags.push("hidden");
       pics.push({ kind: k, src: src.slice(0, 70), where: where(img), tags });
@@ -148,13 +173,14 @@ for (const path of PAGES) {
   const ok = (h) => h.tags.some((t) => OK_TAGS.includes(t));
   const miss = res.hits.filter((h) => !ok(h));
   const okHits = res.hits.filter(ok);
-  const picMiss = res.pics.filter((p) => !p.tags.some((t) => t.startsWith("covered")));
+  const picMiss = res.pics.filter((p) => !p.tags.some((t) => t.startsWith("covered") || t === "subject"));
   totalMiss += miss.length + picMiss.length; totalOk += okHits.length;
   summary.push([path, miss.length, picMiss.length, okHits.length]);
   console.log(`\n=== ${path}${landed !== path ? `  (landed on ${landed})` : ""} — ${miss.length} unlinked mentions, ${picMiss.length} unlinked pictures, ${okHits.length} acceptable`);
   const groups = new Map();
   for (const h of miss) {
-    const g = `${h.where} [${h.kind}]${h.tags.length ? " {" + h.tags.join(",") + "}" : ""}`;
+    const tg = h.tags.map((t) => t.replace(/→.*/, ""));
+    const g = `${h.where} [${h.kind}]${tg.length ? " {" + tg.join(",") + "}" : ""}`;
     groups.set(g, [...(groups.get(g) ?? []), h]);
   }
   for (const [g, hs] of [...groups].sort((a, b) => b[1].length - a[1].length)) {

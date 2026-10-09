@@ -1,10 +1,18 @@
 /* Year tabs — formula1.com sub-nav on the page's own paper surface: Formula1 16px labels, 3px red rule under the
-   current one, counts in Formula1 grey; sticky under the masthead. */
-.tabs { position: sticky; top: var(--head-h, 125px); z-index: 15; background: var(--paper); border-bottom: 1px solid var(--line); }
+   current one, counts in Formula1 grey. v5.1: the page's FIRST block = breadcrumb row + tab row; the block is sticky at
+   (masthead − crumb row), so the crumb scrolls away under the masthead and the tab row stays pinned under it. */
+.tabs { position: sticky; top: var(--head-h, 125px); z-index: 15; background: var(--paper); }
+.crumbs { padding: 16px var(--gutter) 0; display: flex; align-items: flex-start; } /* under the tab row, scrolls with the page */
+.crumbs > nav { margin: 0; }
+.row { border-bottom: 1px solid var(--line); }
 .in { display: flex; align-items: stretch; gap: 8px; padding: 0 var(--gutter); height: 56px; overflow-x: auto; scrollbar-width: none; }
-.year { font: 900 20px/24px var(--font-display); display: flex; align-items: center; padding-right: 20px; margin-right: 4px; border-right: 1px solid var(--line); }
+.year { font: var(--num-weight) 20px/24px var(--num-font); display: flex; align-items: center; padding-right: 20px; margin-right: 4px; border-right: 1px solid var(--line); }
 .in a { position: relative; display: flex; align-items: center; gap: 6px; padding: 0 12px; font: 400 16px/16px var(--font-display); color: var(--ink); white-space: nowrap; border-bottom: 3px solid transparent; transition: border-color .15s; }
 .in a:hover { border-color: var(--ink); }
 .in a i { font-style: normal; font: 500 11px/12px var(--font-display); color: var(--mute); }
 .on { font-weight: 700 !important; border-color: var(--f1-red) !important; }
-@media (max-width: 960px) { .tabs { top: calc(var(--head-h, 125px) + 53px); } .in { padding: 0 16px; } .year { display: none; } .in a { padding: 0 10px; font-size: 14px; } }
+@media (max-width: 960px) {
+  .tabs { top: calc(var(--head-h, 125px) + 53px); }
+  .crumbs { padding: 12px 16px 0; }
+  .in { padding: 0 16px; } .year { display: none; } .in a { padding: 0 10px; font-size: 14px; }
+}

@@ -13,7 +13,8 @@ function ink(hex: string | null) {
 
 /**
  * Every World Championship GP this circuit hosted, one chip per race in calendar order, coloured by the winner's team.
- * Years the circuit was off the calendar show as thin ticks (short gaps) or a labelled break (long gaps).
+ * Years the circuit was off the calendar show as thin ticks (short gaps) or a labelled break (long gaps). No first /
+ * last / count in the head: the hero's head line says 「举办 N 届 A – B」 (spec §0.8.5).
  */
 export default function YearStrip({ races, current }: { races: Race[]; current?: number | null }) {
   if (!races.length) return null;
@@ -48,9 +49,6 @@ export default function YearStrip({ races, current }: { races: Race[]; current?:
     <div className={c.yStrip}>
       <p className={c.yHead}>
         <b>举办年份</b>
-        <span>首届 <EntityLink kind="year" id={String(y0)} href={`/races/${y0}/${asc[0].round}`} className="ilink">{y0}</EntityLink></span>
-        <span>最近 <EntityLink kind="year" id={String(y1)} href={`/races/${y1}/${asc.at(-1)!.round}`} className="ilink">{y1}</EntityLink></span>
-        <span>共 <b className="num">{asc.length}</b> 场世界锦标赛分站{years.size !== asc.length ? <>（<span className="num">{years.size}</span> 个年份）</> : ""}</span>
         <em>色块 = 当年冠军所在车队；悬停看那个赛季，点击进入那一站</em>
       </p>
       <div className={c.yChips}>{items}</div>

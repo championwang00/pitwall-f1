@@ -111,17 +111,52 @@ export function raceCard(gpId: string, w = 1296) {
  *  countries F1 has none for. Always round (globals.css crops every /api/flag/ image to a circle). */
 export function flag(countryId: string | null | undefined) {
   const a2 = countryId ? (COUNTRY_A2 as Record<string, string>)[countryId] : null;
-  return a2 ? `/api/flag/${countryId}` : null;
+  // ?v= busts the week-long browser cache whenever a flag is redrawn (v2: China as a full red disc)
+  return a2 ? `/api/flag/${countryId}?v=2` : null;
 }
 
 /** Official F1 track outline (black, transparent) — formula1.com uses it as a CSS mask on upcoming race cards. */
-export function trackOutline(circuitId: string) {
+export function trackOutline(circuitId: string, year?: number | null, round?: number | null) {
+  if (year) return `/api/outline/${encodeURIComponent(circuitId)}?year=${year}${round ? `&round=${round}` : ""}`;
   const s = TRACK_SLUG[circuitId];
   return s ? `${CDN}/c_lfill,w_3392/${V}/common/f1/2026/track/2026track${s}blackoutline.svg` : null;
 }
 
 export function teamColor(team: string | null | undefined, fallback = "#606066") {
   return (team && TEAMS_2026[team as TeamKey]?.color) || HISTORIC_COLORS[team || ""] || fallback;
+}
+
+/**
+ * Year-aware livery colour: the main colour of a team's car IN THAT SEASON (2008 McLaren = silver, not 2026 papaya).
+ * Ranges are inclusive [from, to, colour]; years not covered fall back to `teamColor`. Kept to the main historical
+ * liveries — card surfaces only need the dominant colour.
+ */
+const LIVERY: Record<string, [number, number, string][]> = {
+  mclaren: [[1966, 1967, "#8F969E"], [1968, 1971, "#F47600"], [1972, 1973, "#8F969E"], [1974, 1996, "#D50F25"], [1997, 2014, "#9AA1A9"], [2015, 2016, "#4A4A50"], [2017, 2026, "#F47600"]],
+  williams: [[1977, 1977, "#1F4E9C"], [1978, 1984, "#0E7C3A"], [1985, 1993, "#1F4E9C"], [1994, 1997, "#13245C"], [1998, 1999, "#C8102E"], [2000, 2013, "#1B3A6B"], [2014, 2018, "#7F8C9B"], [2019, 2020, "#0A4BB0"], [2021, 2026, "#1868DB"]],
+  lotus: [[1958, 1967, "#1E5631"], [1968, 1971, "#B22222"], [1972, 1978, "#1A1A1A"], [1979, 1979, "#0E5A32"], [1980, 1981, "#1E3A8A"], [1982, 1986, "#1A1A1A"], [1987, 1990, "#F2C300"], [1991, 1994, "#1E7B3C"]],
+  ferrari: [[1950, 1995, "#C8102E"], [1996, 2026, "#ED1131"]],
+  "red-bull": [[2005, 2015, "#1E2A6B"], [2016, 2025, "#3671C6"], [2026, 2026, "#4781D7"]],
+  renault: [[1977, 1985, "#FFD800"], [2002, 2006, "#1E7BD0"], [2007, 2008, "#F47A20"], [2009, 2009, "#8F969E"], [2010, 2010, "#FFD800"], [2016, 2020, "#FFD800"]],
+  brawn: [[2009, 2009, "#C8F51D"]],
+  benetton: [[1986, 1993, "#00A651"], [1994, 2001, "#2E8BD8"]],
+  jordan: [[1991, 1991, "#008F4C"], [1992, 1992, "#1F3A93"], [1993, 1995, "#1F7A5A"], [1996, 1996, "#C9A227"], [1997, 2005, "#F9D71C"]],
+  tyrrell: [[1968, 1990, "#1E3A8A"], [1991, 1993, "#2F5DA8"], [1994, 1998, "#2B4F9E"]],
+  mercedes: [[1954, 1955, "#9AA1A9"], [2010, 2019, "#9AA1A9"], [2020, 2021, "#1A1A1A"], [2022, 2025, "#27F4D2"], [2026, 2026, "#00D7B6"]],
+  brabham: [[1962, 1971, "#1E5631"], [1972, 1975, "#8F969E"], [1976, 1981, "#C8102E"], [1982, 1992, "#1B3F8B"]],
+  "lotus-f1": [[2012, 2015, "#1A1A1A"]],
+  sauber: [[1993, 1995, "#1A1A1A"], [1996, 2005, "#1E4FA0"], [2010, 2018, "#8F969E"], [2019, 2023, "#9B0000"], [2024, 2025, "#52E252"]],
+  "toro-rosso": [[2006, 2019, "#1E3D8F"]],
+  alpine: [[2021, 2026, "#00A1E8"]],
+  "aston-martin": [[1959, 1960, "#1E5631"], [2021, 2026, "#229971"]],
+  bar: [[1999, 2005, "#8F969E"]],
+  honda: [[1964, 1968, "#8F969E"], [2006, 2006, "#8F969E"], [2007, 2008, "#1E5AA8"]],
+};
+
+/** Livery colour of `team` in `year` (falls back to `teamColor` when the year is unknown / not tabled). */
+export function teamColorAt(team: string | null | undefined, year: number | null | undefined, fallback = "#606066") {
+  const r = team && year ? LIVERY[team]?.find(([a, b]) => year >= a && year <= b) : undefined;
+  return r ? r[2] : teamColor(team, fallback);
 }
 
 /** Livery colours for constructors that no longer race — used for accents only. */

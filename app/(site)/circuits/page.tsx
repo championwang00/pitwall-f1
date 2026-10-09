@@ -9,6 +9,7 @@ import { parseYear } from "@/lib/yearData";
 import RailScope from "@/components/season/RailScope";
 import Breadcrumb from "@/components/shell/Breadcrumb";
 import YearCircuitsGrid from "@/components/unit/YearCircuitsGrid";
+import YearSpan from "@/components/entity/YearSpan";
 
 export const dynamic = "force-dynamic";
 
@@ -30,18 +31,18 @@ export default async function CircuitsIndex({ searchParams }: { searchParams: Pr
             {picked ? <Breadcrumb flush items={[{ label: "赛道", href: "/circuits" }, { label: picked, kind: "year", name: String(picked) }]} /> : null}
             <p className="kicker">Circuits</p>
             <h1 className={s.h1}>赛道</h1>
-            <p className={s.lede}>{year} 赛季的 {cal.length} 站，以及 1950 年以来举办过 F1 正赛的全部 {rows.length} 条赛道。赛道页列出历届冠军，并能按车手、车队看谁最擅长这里。</p>
+            <p className={s.lede}><YearSpan from={year} /> 赛季的 {cal.length} 站，以及 <YearSpan from={1950} /> 年以来举办过 F1 正赛的全部 {rows.length} 条赛道。赛道页列出历届冠军，并能按车手、车队看谁最擅长这里。</p>
           </div>
         </header>
         <RailScope labels="rounds" pattern="/circuits?year={y}" header={{ title: "赛道索引" }} current={picked ?? null} />
         <section className="band band-paper" style={{ paddingTop: 16 }}>
-          <div className="wrap"><YearCircuitsGrid year={sliced ?? year} /></div>
+          <div className="wrap"><YearCircuitsGrid year={sliced ?? year} kicker="Season" /></div>
         </section>
         <section className="band band-white">
           <div className="wrap">
             <div className="sec-head"><h2 className="cn-h2">全部赛道</h2></div>
             <Explorer rows={rows} base="/circuits" placeholder="搜索：纽博格林、Monza、铃鹿…" defaultSort="races"
-              cols={[{ k: "races", label: "正赛场数" }, { k: "length", label: "KM" }, { k: "turns", label: "弯角" }]} />
+              cols={[{ k: "races", label: "正赛场数" }, { k: "length", label: "长度 km" }, { k: "turns", label: "弯角" }]} />
           </div>
         </section>
       </div>

@@ -9,6 +9,7 @@
     "shot": "node scripts/shot.mjs",
     "update-data": "node scripts/update-data.mjs",
     "tracks": "node scripts/build-tracks.mjs",
+    "corners": "node --no-warnings scripts/build-corners.mjs",
     "wiki-map": "node --no-warnings scripts/build-wiki-map.mjs",
     "zh-names": "node scripts/build-zh-names.mjs && node scripts/refine-zh-names.mjs",
     "validate": "node --no-warnings scripts/validate-content.mjs"

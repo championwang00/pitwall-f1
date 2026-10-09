@@ -1,0 +1,1557 @@
+[
+  {
+    "chassis": "red-bull-rb18",
+    "year": 2022,
+    "id": "rb18-2022-honda-return",
+    "name": "Honda 标识回归",
+    "kind": "update",
+    "rounds": [
+      18,
+      19,
+      20,
+      21,
+      22
+    ],
+    "description": "从日本站起，车身侧面重新加入 Honda 标识，沿用至赛季结束。主涂装保持不变。",
+    "source": "https://global.honda/en/topics/2022/ce_2022-10-05eng.html"
+  },
+  {
+    "id": "ferrari-sf1000-2020-dc849b5c",
+    "chassis": "ferrari-sf1000",
+    "year": 2020,
+    "rounds": [
+      9
+    ],
+    "name": "千场大奖赛勃艮第红",
+    "kind": "special",
+    "description": "SF1000在Mugello/Tuscan GP使用一次性勃艮第红，纪念第1000场。",
+    "source": "https://www.formula1.com/en/latest/article/ferrari-unveil-retro-burgandy-livery-for-1000th-grand-prix-at-mugello.6Jf4vU68IRW0NzGo8MO1gR",
+    "photo": {
+      "url": "/assets/liveries/special/ferrari-sf1000-2020-r9.webp",
+      "source": "https://www.formula1.com/en/latest/article/ferrari-unveil-retro-burgandy-livery-for-1000th-grand-prix-at-mugello.6Jf4vU68IRW0NzGo8MO1gR",
+      "caption": "2020 · 官方涂装发布图 · 千场大奖赛勃艮第红",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "mclaren-mcl35m-2021-f68bf93e",
+    "chassis": "mclaren-mcl35m",
+    "year": 2021,
+    "rounds": [
+      5
+    ],
+    "name": "Gulf 经典蓝橙",
+    "kind": "special",
+    "description": "MCL35M全摩纳哥周末使用Gulf蓝橙。",
+    "source": "https://www.formula1.com/en/latest/article/breaking-mclaren-to-run-one-off-livery-for-monaco-grand-prix-gulf.4hkyBhSrcmPhpwK8WVIwu7",
+    "photo": {
+      "url": "/assets/liveries/special/mclaren-mcl35m-2021-r5.webp",
+      "source": "https://www.formula1.com/en/latest/article/breaking-mclaren-to-run-one-off-livery-for-monaco-grand-prix-gulf.4hkyBhSrcmPhpwK8WVIwu7",
+      "caption": "2021 · 官方涂装发布图 · Gulf 经典蓝橙",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "red-bull-rb16b-2021-d722b4cd",
+    "chassis": "red-bull-rb16b",
+    "year": 2021,
+    "rounds": [
+      16
+    ],
+    "name": "Honda 白色致敬",
+    "kind": "special",
+    "description": "土耳其GP Honda致敬涂装；非日本GP，2021日本站取消。",
+    "source": "https://www.formula1.com/en/latest/article/revealed-check-out-red-bulls-honda-tribute-livery-for-the-turkish-grand-prix.Cz19wsw5xrsRNBfGTdWps",
+    "photo": {
+      "url": "/assets/liveries/special/red-bull-rb16b-2021-r16.webp",
+      "source": "https://www.formula1.com/en/latest/article/revealed-check-out-red-bulls-honda-tribute-livery-for-the-turkish-grand-prix.Cz19wsw5xrsRNBfGTdWps",
+      "caption": "2021 · 官方涂装发布图 · Honda 白色致敬",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "alpine-a522-2022-d993f1e1",
+    "chassis": "alpine-a522",
+    "year": 2022,
+    "rounds": [
+      1,
+      2
+    ],
+    "name": "BWT 粉色",
+    "kind": "special",
+    "description": "A522首两站Bahrain和Saudi使用粉色，之后恢复蓝色为主。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-check-out-alpines-special-pink-livery-for-the-bahrain-and-saudi.3mh7BVJ5iKd300PH9IZiML",
+    "photo": {
+      "url": "/assets/liveries/special/alpine-a522-2022-r1.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-alpines-special-pink-livery-for-the-bahrain-and-saudi.3mh7BVJ5iKd300PH9IZiML",
+      "caption": "2022 · 官方涂装发布图 · BWT 粉色",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "ferrari-f1-75-2022-c05c2bf7",
+    "chassis": "ferrari-f1-75",
+    "year": 2022,
+    "rounds": [
+      16
+    ],
+    "name": "75周年黄色点缀",
+    "kind": "special",
+    "description": "F1官方2022-09发布Monza纪念法拉利75周年黄色点缀涂装。",
+    "source": "https://www.formula1.com/en/latest/article/ferrari-unveil-special-livery-with-a-splash-of-yellow-for-home-grand-prix-at.2ESWiN8Qv3SMH1pHKIqIBM",
+    "photo": {
+      "url": "/assets/liveries/special/ferrari-f1-75-2022-r16.webp",
+      "source": "https://www.formula1.com/en/latest/article/ferrari-unveil-special-livery-with-a-splash-of-yellow-for-home-grand-prix-at.2ESWiN8Qv3SMH1pHKIqIBM",
+      "caption": "2022 · 官方涂装发布图 · 75周年黄色点缀",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "mclaren-mcl36-2022-78d63e16",
+    "chassis": "mclaren-mcl36",
+    "year": 2022,
+    "rounds": [
+      17,
+      18
+    ],
+    "name": "Future Mode",
+    "kind": "special",
+    "description": "MCL36在Singapore和Japan使用霓虹粉、赛博朋克发动机图案Future Mode。",
+    "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-special-livery-for-singapore-and-japan-as-f1-returns-to-asia.5DQH0NZzrkqQ78cCl9n4Cn",
+    "photo": {
+      "url": "/assets/liveries/special/mclaren-mcl36-2022-r17.webp",
+      "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-special-livery-for-singapore-and-japan-as-f1-returns-to-asia.5DQH0NZzrkqQ78cCl9n4Cn",
+      "caption": "2022 · 官方涂装发布图 · Future Mode",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "mclaren-mcl36-2022-6dddc474",
+    "chassis": "mclaren-mcl36",
+    "year": 2022,
+    "rounds": [
+      22
+    ],
+    "name": "Driven by Change · Anna Tangles",
+    "kind": "special",
+    "description": "MCL36在Abu Dhabi使用Anna Tangles创作的Driven by Change涂装。",
+    "source": "https://www.formula1.com/en/latest/article/mclaren-unveil-special-livery-for-2022-season-finale-in-abu-dhabi.UwZDiMoAxF5vTOVI2HQXX",
+    "photo": {
+      "url": "/assets/liveries/special/mclaren-mcl36-2022-r22.webp",
+      "source": "https://www.formula1.com/en/latest/article/mclaren-unveil-special-livery-for-2022-season-finale-in-abu-dhabi.UwZDiMoAxF5vTOVI2HQXX",
+      "caption": "2022 · 官方涂装发布图 · Driven by Change · Anna Tangles",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "mclaren-mcl60-2023-7d2c8dc9",
+    "chassis": "mclaren-mcl60",
+    "year": 2023,
+    "rounds": [
+      6,
+      7
+    ],
+    "name": "Triple Crown",
+    "kind": "special",
+    "description": "McLaren官方2023-05-23明确MCL60在Monaco及Spain使用Triple Crown黑白橙涂装。",
+    "source": "https://www.mclaren.com/racing/formula-1/2023/monaco-grand-prix/mclaren-racing-unveils-triple-crown-livery-for-monaco-grand-prix/",
+    "photo": {
+      "url": "/assets/liveries/special/mclaren-mcl60-2023-r6.webp",
+      "source": "https://www.formula1.com/en/latest/article/mclaren-to-run-one-off-triple-crown-livery-at-monaco-grand-prix-as-part-of.1L0qis9t214tiz6Rj3cuyN",
+      "caption": "2023 · 官方涂装发布图 · Triple Crown",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "mclaren-mcl60-2023-218e75c7",
+    "chassis": "mclaren-mcl60",
+    "year": 2023,
+    "rounds": [
+      10
+    ],
+    "name": "Chrome",
+    "kind": "special",
+    "description": "McLaren官方2023-07-03明确两辆MCL60整个British GP周末使用Chrome涂装。",
+    "source": "https://www.mclaren.com/racing/formula-1/2023/british-grand-prix/mclaren-racing-and-google-unveil-chrome-throwback-livery-for-british-grand-prix/",
+    "photo": {
+      "url": "/assets/liveries/special/mclaren-mcl60-2023-r10.webp",
+      "source": "https://www.formula1.com/en/latest/article/first-look-mclaren-to-run-special-chrome-livery-for-british-grand-prix.4ZjrGJSVAfQOoGA7klYRgQ",
+      "caption": "2023 · 官方涂装发布图 · Chrome",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "mclaren-mcl60-2023-3916625c",
+    "chassis": "mclaren-mcl60",
+    "year": 2023,
+    "rounds": [
+      15,
+      16
+    ],
+    "name": "Stealth Mode",
+    "kind": "special",
+    "description": "F1官方明确Singapore和Japan两站使用Stealth Mode；McLaren日本站guide进一步确认MCL60及两站连续使用。",
+    "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-stealth-mode-car-livery-for-singapore-and-japan-races.6bisW0mQphTTeYPKJAZU0k",
+    "photo": {
+      "url": "/assets/liveries/special/mclaren-mcl60-2023-r15.webp",
+      "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-stealth-mode-car-livery-for-singapore-and-japan-races.6bisW0mQphTTeYPKJAZU0k",
+      "caption": "2023 · 官方涂装发布图 · Stealth Mode",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "williams-fw45-2023-8d373947",
+    "chassis": "williams-fw45",
+    "year": 2023,
+    "rounds": [
+      15,
+      16,
+      17
+    ],
+    "name": "Gulf · Bolder than Bold",
+    "kind": "special",
+    "description": "FW45在Singapore、Japan、Qatar使用票选Bolder than Bold涂装。发布时Goodwood展示车不能算大奖赛实拍。",
+    "source": "https://www.formula1.com/en/latest/article/williams-reveal-fan-voted-livery-that-will-race-in-singapore-japan-and-qatar.7skhgJ7aPmEnhzyU8z7D0Q",
+    "photo": {
+      "url": "/assets/liveries/special/williams-fw45-2023-r15.webp",
+      "source": "https://www.formula1.com/en/latest/article/williams-reveal-fan-voted-livery-that-will-race-in-singapore-japan-and-qatar.7skhgJ7aPmEnhzyU8z7D0Q",
+      "caption": "2023 · 官方涂装发布图 · Gulf · Bolder than Bold",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "ferrari-sf-23-2023-f8b2ca2e",
+    "chassis": "ferrari-sf-23",
+    "year": 2023,
+    "rounds": [
+      21
+    ],
+    "name": "70年代红白致敬",
+    "kind": "special",
+    "description": "Las Vegas GP使用70年代黄金时代致敬涂装。",
+    "source": "https://www.formula1.com/en/latest/article/ferrari-unveil-special-livery-for-las-vegas-grand-prix-in-nod-to-70s-golden.6GMQfXYHDl3zqM9rEaZsXy",
+    "photo": {
+      "url": "/assets/liveries/special/ferrari-sf-23-2023-r21.webp",
+      "source": "https://www.formula1.com/en/latest/article/ferrari-unveil-special-livery-for-las-vegas-grand-prix-in-nod-to-70s-golden.6GMQfXYHDl3zqM9rEaZsXy",
+      "caption": "2023 · 官方涂装发布图 · 70年代红白致敬",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "red-bull-rb19-2023-96145e75",
+    "chassis": "red-bull-rb19",
+    "year": 2023,
+    "rounds": [
+      5
+    ],
+    "name": "Make Your Mark · Miami",
+    "kind": "special",
+    "description": "RB19 Miami涂装由Martina Andriano设计，增加粉蓝紫色。",
+    "source": "https://www.formula1.com/en/latest/article/first-look-red-bull-reveal-striking-fan-designed-livery-for-miami-grand-prix.7B41l2lI5ZJqmFi92jsDkM",
+    "photo": {
+      "url": "/assets/liveries/special/red-bull-rb19-2023-r5.webp",
+      "source": "https://www.formula1.com/en/latest/article/first-look-red-bull-reveal-striking-fan-designed-livery-for-miami-grand-prix.7B41l2lI5ZJqmFi92jsDkM",
+      "caption": "2023 · 官方涂装发布图 · Make Your Mark · Miami",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "red-bull-rb19-2023-c00a0e35",
+    "chassis": "red-bull-rb19",
+    "year": 2023,
+    "rounds": [
+      18
+    ],
+    "name": "Make Your Mark · Texas",
+    "kind": "special",
+    "description": "RB19 Austin涂装由Franco Cavallone设计，Texas旗红白蓝和星星。",
+    "source": "https://www.formula1.com/en/latest/article/red-bull-reveal-fan-designed-stars-and-stripes-livery-for-united-states.PXaxGTOxGRlRXW9sQHuFK",
+    "photo": {
+      "url": "/assets/liveries/special/red-bull-rb19-2023-r18.webp",
+      "source": "https://www.formula1.com/en/latest/article/red-bull-reveal-fan-designed-stars-and-stripes-livery-for-united-states.PXaxGTOxGRlRXW9sQHuFK",
+      "caption": "2023 · 官方涂装发布图 · Make Your Mark · Texas",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "red-bull-rb19-2023-0169362d",
+    "chassis": "red-bull-rb19",
+    "year": 2023,
+    "rounds": [
+      21
+    ],
+    "name": "Make Your Mark · Las Vegas",
+    "kind": "special",
+    "description": "RB19 Las Vegas涂装由Lindsay Palmer设计，紫底、紫黄霓虹和扑克牌轮盖。",
+    "source": "https://www.formula1.com/en/latest/article/red-bull-unveil-special-fan-designed-las-vegas-livery-ahead-of-weekends.XVuUOsfjeen0c0Tti5pv7",
+    "photo": {
+      "url": "/assets/liveries/special/red-bull-rb19-2023-r21.webp",
+      "source": "https://www.formula1.com/en/latest/article/red-bull-unveil-special-fan-designed-las-vegas-livery-ahead-of-weekends.XVuUOsfjeen0c0Tti5pv7",
+      "caption": "2023 · 官方涂装发布图 · 俯视 · Make Your Mark · Las Vegas",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "ferrari-sf-24-2024-5b5d3fc7",
+    "chassis": "ferrari-sf-24",
+    "year": 2024,
+    "rounds": [
+      6
+    ],
+    "name": "Azzurro 蓝色纪念",
+    "kind": "special",
+    "description": "SF-24在Miami使用Azzurro La Plata和Azzurro Dino蓝色，纪念进入北美70周年。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-ferrari-unveil-special-livery-for-miami-grand-prix.6ij2e6sCUGUd0s4mgiar3Z",
+    "photo": {
+      "url": "/assets/liveries/special/ferrari-sf-24-2024-r6.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-ferrari-unveil-special-livery-for-miami-grand-prix.6ij2e6sCUGUd0s4mgiar3Z",
+      "caption": "2024 · 官方涂装发布图 · Azzurro 蓝色纪念",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "mclaren-mcl38-2024-ae4335ae",
+    "chassis": "mclaren-mcl38",
+    "year": 2024,
+    "rounds": [
+      8
+    ],
+    "name": "Senna 致敬",
+    "kind": "special",
+    "description": "McLaren官方明确2024 Monaco使用Senna头盔黄绿蓝纪念涂装；车队设计说明明确MCL38。",
+    "source": "https://www.mclaren.com/racing/formula-1/2024/monaco-grand-prix/mclaren-formula-1-team-launch-bespoke-senna-livery-for-the-2024-monaco-grand-prix/",
+    "photo": {
+      "url": "/assets/liveries/special/mclaren-mcl38-2024-r8.webp",
+      "source": "https://www.formula1.com/en/latest/article/mclaren-unveil-special-ayrton-senna-inspired-livery-for-2024-monaco-grand.7e2wmR25HF4mX3scPjZjz9",
+      "caption": "2024 · 官方涂装发布图 · Senna 致敬",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "mclaren-mcl38-2024-2d2c8208",
+    "chassis": "mclaren-mcl38",
+    "year": 2024,
+    "rounds": [
+      18
+    ],
+    "name": "Legend Reborn",
+    "kind": "special",
+    "description": "Singapore一次性涂装，致敬1981-1996 MP4时代，加入13位车手名字。",
+    "source": "https://www.formula1.com/en/latest/article/mclaren-become-latest-f1-team-to-reveal-special-singapore-livery-with-nod-to.5H65SnudCCJg78iLY64iuw",
+    "photo": {
+      "url": "/assets/liveries/special/mclaren-mcl38-2024-r18.webp",
+      "source": "https://www.formula1.com/en/latest/article/mclaren-become-latest-f1-team-to-reveal-special-singapore-livery-with-nod-to.5H65SnudCCJg78iLY64iuw",
+      "caption": "2024 · 官方涂装发布图 · Legend Reborn",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "mercedes-f1-w15-2024-6be2d418",
+    "chassis": "mercedes-f1-w15",
+    "year": 2024,
+    "rounds": [
+      18
+    ],
+    "name": "PETRONAS 50周年",
+    "kind": "special",
+    "description": "W15 Singapore周末绿色涂装，纪念PETRONAS 50周年。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-mercedes-unveil-special-one-off-livery-for-singapore-grand-prix.4qcEz4SfRCZzz6IzzMBPWf",
+    "photo": {
+      "url": "/assets/liveries/special/mercedes-f1-w15-2024-r18.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-mercedes-unveil-special-one-off-livery-for-singapore-grand-prix.4qcEz4SfRCZzz6IzzMBPWf",
+      "caption": "2024 · 官方涂装发布图 · PETRONAS 50周年",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "alpine-a524-2024-e507f4a5",
+    "chassis": "alpine-a524",
+    "year": 2024,
+    "rounds": [
+      14
+    ],
+    "name": "Deadpool & Wolverine",
+    "kind": "special",
+    "description": "Belgian GP一次性红黑色及黄色爪痕电影主题涂装。",
+    "source": "https://www.formula1.com/en/latest/article/alpine-unveil-special-deadpool-and-wolverine-livery-ahead-of-belgian-grand.1Z7U2SK7NqnYuGzmGt4mX5",
+    "photo": {
+      "url": "/assets/liveries/special/alpine-a524-2024-r14.webp",
+      "source": "https://www.formula1.com/en/latest/article/alpine-unveil-special-deadpool-and-wolverine-livery-ahead-of-belgian-grand.1Z7U2SK7NqnYuGzmGt4mX5",
+      "caption": "2024 · 官方涂装发布图 · Deadpool & Wolverine",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "alpine-a524-2024-8a2073bc",
+    "chassis": "alpine-a524",
+    "year": 2024,
+    "rounds": [
+      19
+    ],
+    "name": "Indiana Jones",
+    "kind": "special",
+    "description": "United States GP使用日落橙Indiana Jones and the Great Circle主题涂装。",
+    "source": "https://www.formula1.com/en/latest/article/alpine-present-indiana-jones-inspired-livery-for-united-states-grand-prix.18yyEVXOmIBK2TlUzWUJul",
+    "photo": {
+      "url": "/assets/liveries/special/alpine-a524-2024-r19.webp",
+      "source": "https://www.formula1.com/en/latest/article/alpine-present-indiana-jones-inspired-livery-for-united-states-grand-prix.18yyEVXOmIBK2TlUzWUJul",
+      "caption": "2024 · 官方涂装发布图 · Indiana Jones",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "alpine-a524-2024-84e0f788",
+    "chassis": "alpine-a524",
+    "year": 2024,
+    "rounds": [
+      22,
+      23,
+      24
+    ],
+    "name": "BWT 全粉色",
+    "kind": "special",
+    "description": "最后三站Las Vegas、Qatar、Abu Dhabi使用全粉色涂装。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-alpine-unveil-all-pink-livery-for-final-three-races-of-2024-season.6SyxZPEenoW32amhmn8w23",
+    "photo": {
+      "url": "/assets/liveries/special/alpine-a524-2024-r22.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-alpine-unveil-all-pink-livery-for-final-three-races-of-2024-season.6SyxZPEenoW32amhmn8w23",
+      "caption": "2024 · 官方涂装发布图 · BWT 全粉色",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "red-bull-rb21-2025-2dcd53a7",
+    "chassis": "red-bull-rb21",
+    "year": 2025,
+    "rounds": [
+      3
+    ],
+    "name": "Honda RA272 致敬",
+    "kind": "special",
+    "description": "F1官方明确2025 Japan白红Honda RA272致敬涂装，纪念Honda首胜60周年。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-red-bull-unveil-special-white-and-red-livery-for-japanese-grand-prix.6ed0ssKwGkFA30a0HpfSVN",
+    "photo": {
+      "url": "/assets/liveries/special/red-bull-rb21-2025-r3.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-red-bull-unveil-special-white-and-red-livery-for-japanese-grand-prix.6ed0ssKwGkFA30a0HpfSVN",
+      "caption": "2025 · 官方涂装发布图 · Honda RA272 致敬",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "mclaren-mcl39-2025-2b448b34",
+    "chassis": "mclaren-mcl39",
+    "year": 2025,
+    "rounds": [
+      8,
+      9
+    ],
+    "name": "Riviera · M7A 致敬",
+    "kind": "special",
+    "description": "两辆MCL39在Monaco和Spain整个周末使用M7A Riviera致敬涂装。",
+    "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-tweaked-riviera-inspired-livery-for-monaco-and-spanish-grands.697HMvtQmLBNNiZilwTTUH",
+    "photo": {
+      "url": "/assets/liveries/special/mclaren-mcl39-2025-r8.webp",
+      "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-tweaked-riviera-inspired-livery-for-monaco-and-spanish-grands.697HMvtQmLBNNiZilwTTUH",
+      "caption": "2025 · 官方涂装发布图 · Riviera · M7A 致敬",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "racing-bulls-vcarb-02-2025-ad03193f",
+    "chassis": "racing-bulls-vcarb-02",
+    "year": 2025,
+    "rounds": [
+      6
+    ],
+    "name": "Summer Edition 洋红",
+    "kind": "special",
+    "description": "VCARB02 Miami周末使用White Peach夏季饮品主题洋红涂装。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-racing-bulls-unveil-striking-special-livery-for-miami-grand-prix.5m4UDgNDO62QX1OTdxAF5H",
+    "photo": {
+      "url": "/assets/liveries/special/racing-bulls-vcarb-02-2025-r6.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-racing-bulls-unveil-striking-special-livery-for-miami-grand-prix.5m4UDgNDO62QX1OTdxAF5H",
+      "caption": "2025 · 官方涂装发布图 · Summer Edition 洋红",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "mclaren-mcl39-2025-89077971",
+    "chassis": "mclaren-mcl39",
+    "year": 2025,
+    "rounds": [
+      12
+    ],
+    "name": "Chrome 2025",
+    "kind": "special",
+    "description": "British GP使用新版本Chrome涂装。",
+    "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-chrome-livery-for-silverstone.205orpMlPrDyyjorzSdh8f",
+    "photo": {
+      "url": "/assets/liveries/special/mclaren-mcl39-2025-r12.webp",
+      "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-chrome-livery-for-silverstone.205orpMlPrDyyjorzSdh8f",
+      "caption": "2025 · 官方涂装发布图 · Chrome 2025",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "audi-r26-2026-b2251517",
+    "chassis": "audi-r26",
+    "year": 2026,
+    "rounds": [
+      17
+    ],
+    "name": "Peranakan 暮色",
+    "kind": "special",
+    "description": "R26 Singapore GP使用钛银灰变体及Peranakan图案；当前属于已公布、比赛尚未结束的设计。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-audi-unveil-special-livery-for-singapore-grand-prix.5Z07QWFA7vVqCPC1jb6AIq",
+    "photo": {
+      "url": "/assets/liveries/special/audi-r26-2026-r17.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-audi-unveil-special-livery-for-singapore-grand-prix.5Z07QWFA7vVqCPC1jb6AIq",
+      "caption": "2026 · 官方涂装发布图 · Peranakan 暮色",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "announced",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "aston-martin-amr26-2026-675a9d57",
+    "chassis": "aston-martin-amr26",
+    "year": 2026,
+    "rounds": [
+      6
+    ],
+    "name": "Maaden 铜色渐变",
+    "kind": "special",
+    "description": "AMR26 Monaco GP前部使用随光变化的虹彩铜色，向后渐变绿色。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-aston-martin-reveal-special-livery-for-the-monaco-grand-prix.5cFPFnHMs4SfUK0B0QO4VA",
+    "photo": {
+      "url": "/assets/liveries/special/aston-martin-amr26-2026-r6.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-aston-martin-reveal-special-livery-for-the-monaco-grand-prix.5cFPFnHMs4SfUK0B0QO4VA",
+      "caption": "2026 · 官方涂装发布图 · Maaden 铜色渐变",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "williams-fw48-2026-b821b4b2",
+    "chassis": "williams-fw48",
+    "year": 2026,
+    "rounds": [
+      14
+    ],
+    "name": "FW07C 1981致敬",
+    "kind": "special",
+    "description": "Madrid Spanish GP使用1981 FW07C白绿海军蓝致敬设计。DB该季唯一Williams赛车为FW48。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-williams-reveal-1981-inspired-special-edition-livery-ahead-of-spanish-gp-in-madrid.vJj60otd7GvQvPZpvPRLJ",
+    "photo": {
+      "url": "/assets/liveries/special/williams-fw48-2026-r14.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-williams-reveal-1981-inspired-special-edition-livery-ahead-of-spanish-gp-in-madrid.vJj60otd7GvQvPZpvPRLJ",
+      "caption": "2026 · 官方涂装发布图 · FW07C 1981致敬",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "racing-bulls-vcarb-03-2026-d71e53e3",
+    "chassis": "racing-bulls-vcarb-03",
+    "year": 2026,
+    "rounds": [
+      7
+    ],
+    "name": "世界杯足球主题",
+    "kind": "special",
+    "description": "Barcelona-Catalunya GP两辆赛车整周末使用足球主题涂装，配合世界杯开幕。DB该季唯一车型VCARB03。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-racing-bulls-show-off-football-inspired-special-livery-for-barcelona.3ijlEuQv361CqHhvYMJgMe",
+    "photo": {
+      "url": "/assets/liveries/special/racing-bulls-vcarb-03-2026-r7.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-racing-bulls-show-off-football-inspired-special-livery-for-barcelona.3ijlEuQv361CqHhvYMJgMe",
+      "caption": "2026 · 官方涂装发布图 · 世界杯足球主题",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "cadillac-ca01-2026-000f886f",
+    "chassis": "cadillac-ca01",
+    "year": 2026,
+    "rounds": [
+      4
+    ],
+    "name": "首个主场 · Stars and Stripes",
+    "kind": "special",
+    "description": "Miami首个主场GP特别涂装，前翼50颗星及尾翼USA。DB该季唯一车型CA01。",
+    "source": "https://www.formula1.com/en/latest/article/cadillac-unveil-special-miami-grand-prix-livery-for-first-home-race.40Nl9HEiAWWI9QWpr0MN4l",
+    "photo": {
+      "url": "/assets/liveries/special/cadillac-ca01-2026-r4.webp",
+      "source": "https://www.formula1.com/en/latest/article/cadillac-unveil-special-miami-grand-prix-livery-for-first-home-race.40Nl9HEiAWWI9QWpr0MN4l",
+      "caption": "2026 · 官方涂装发布图 · 首个主场 · Stars and Stripes",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "cadillac-ca01-2026-822683e4",
+    "chassis": "cadillac-ca01",
+    "year": 2026,
+    "rounds": [
+      9
+    ],
+    "name": "美国250周年",
+    "kind": "special",
+    "description": "British GP使用红白蓝星条旗设计，纪念7月4日美国250周年。DB该季唯一车型CA01。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-cadillac-unveil-special-4th-of-july-livery-for-british-grand-prix.6EdWIm2702LzU9REWsPwGq",
+    "photo": {
+      "url": "/assets/liveries/special/cadillac-ca01-2026-r9.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-cadillac-unveil-special-4th-of-july-livery-for-british-grand-prix.6EdWIm2702LzU9REWsPwGq",
+      "caption": "2026 · 官方涂装发布图 · 美国250周年",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "Mapped by year and grand_prix_id in data/f1db.db, not announcement round numbering.",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "ferrari-sf-26-2026-c87e07ba",
+    "chassis": "ferrari-sf-26",
+    "year": 2026,
+    "rounds": [
+      13
+    ],
+    "name": "Schumacher 30周年致敬",
+    "kind": "special",
+    "description": "Monza Schumacher致敬，七颗星及舒马赫标志。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-ferrari-reveal-schumacher-inspired-livery-for-home-grand-prix-at-monza.5burkVG8etBZzPdZrIN7bX",
+    "photo": {
+      "url": "/assets/liveries/special/ferrari-sf-26-2026-r13.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-ferrari-reveal-schumacher-inspired-livery-for-home-grand-prix-at-monza.5burkVG8etBZzPdZrIN7bX",
+      "caption": "2026 · 官方涂装发布图 · Schumacher 30周年致敬",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "mclaren-mcl40-2026-69e93ddb",
+    "chassis": "mclaren-mcl40",
+    "year": 2026,
+    "rounds": [
+      9
+    ],
+    "name": "M2B 传承白绿",
+    "kind": "special",
+    "description": "British GP M2B白绿致敬；McLaren官方What is the significance of the M2B文章明确MCL40。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-check-out-mclarens-heritage-inspired-livery-for-the-british-grand-prix.3LDBOQciM7Exdrist6NacH",
+    "photo": {
+      "url": "/assets/liveries/special/mclaren-mcl40-2026-r9.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-mclarens-heritage-inspired-livery-for-the-british-grand-prix.3LDBOQciM7Exdrist6NacH",
+      "caption": "2026 · 官方涂装发布图 · M2B 传承白绿",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "mercedes-f1-w10-2019-f989951a",
+    "chassis": "mercedes-f1-w10",
+    "year": 2019,
+    "rounds": [
+      11
+    ],
+    "name": "125年赛车运动 · 白银传承",
+    "kind": "special",
+    "description": "W10德国GP白鼻及刮漆露银涂装，纪念125年赛车运动和200次F1出赛。",
+    "source": "https://www.formula1.com/en/latest/article/mercedes-reveal-special-heritage-livery-for-german-grand-prix.1SYTGhGJI0rHOEi0av1TmK",
+    "photo": {
+      "url": "/assets/liveries/special/mercedes-f1-w10-2019-r11.webp",
+      "source": "https://www.formula1.com/en/latest/article/mercedes-reveal-special-heritage-livery-for-german-grand-prix.1SYTGhGJI0rHOEi0av1TmK",
+      "caption": "2019 · 官方现场发布资料图 · 125年赛车运动 · 白银传承",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "ferrari-sf90-2019-6ca49837",
+    "chassis": "ferrari-sf90",
+    "year": 2019,
+    "rounds": [
+      1
+    ],
+    "name": "Scuderia 90周年",
+    "kind": "update",
+    "description": "确认SF90澳洲揭幕站带90 Years纪念标识；仅确认该站使用，不认定该标识为该站独有，也不据此认定Monza特殊涂装。",
+    "source": "https://www.formula1.com/en/latest/article/ferrari-to-race-with-90th-anniversary-livery-in-australia.255xTL5cQdTlvTIq7Tao5P",
+    "photo": {
+      "url": "/assets/liveries/special/ferrari-sf90-2019-r1.webp",
+      "source": "https://www.formula1.com/en/latest/article/ferrari-to-race-with-90th-anniversary-livery-in-australia.255xTL5cQdTlvTIq7Tao5P",
+      "caption": "2019 · 官方涂装发布图 · Scuderia 90周年",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "partial"
+  },
+  {
+    "id": "williams-fw47-2025-44af2c3b",
+    "chassis": "williams-fw47",
+    "year": 2025,
+    "rounds": [
+      19
+    ],
+    "name": "Atlassian Foundation · FW24传承",
+    "kind": "special",
+    "description": "图集明确Williams美国站致敬2002赛车，为Atlassian Foundation筹款。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+    "photo": {
+      "url": "/assets/liveries/special/williams-fw47-2025-r19.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+      "caption": "2025 · 官方涂装发布图 · Atlassian Foundation · FW24传承",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "racing-bulls-vcarb-02-2025-3bc91f26",
+    "chassis": "racing-bulls-vcarb-02",
+    "year": 2025,
+    "rounds": [
+      19
+    ],
+    "name": "Tortoiseshell 玳瑁纹",
+    "kind": "special",
+    "description": "图集明确Racing Bulls美国站玳瑁纹涂装。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+    "photo": {
+      "url": "/assets/liveries/special/racing-bulls-vcarb-02-2025-r19.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+      "caption": "2025 · 官方涂装发布图 · 俯视 · Tortoiseshell 玳瑁纹",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "aston-martin-amr25-2025-f780b3b6",
+    "chassis": "aston-martin-amr25",
+    "year": 2025,
+    "rounds": [
+      19
+    ],
+    "name": "Invisible Science · 科学公式",
+    "kind": "special",
+    "description": "图集明确Aston Martin美国站数学公式涂装。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+    "photo": {
+      "url": "/assets/liveries/special/aston-martin-amr25-2025-r19.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+      "caption": "2025 · 官方涂装发布图 · Invisible Science · 科学公式",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "alpine-a525-2025-a00b2c8e",
+    "chassis": "alpine-a525",
+    "year": 2025,
+    "rounds": [
+      19,
+      20,
+      21
+    ],
+    "name": "Mercado Libre 黄蓝",
+    "kind": "special",
+    "description": "图集明确Alpine美国、墨西哥及圣保罗三站黄色Mercado Libre涂装。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+    "photo": {
+      "url": "/assets/liveries/special/alpine-a525-2025-r19.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+      "caption": "2025 · 官方涂装发布图 · Mercado Libre 黄蓝",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "mclaren-mcl39-2025-5317d802",
+    "chassis": "mclaren-mcl39",
+    "year": 2025,
+    "rounds": [
+      19,
+      20
+    ],
+    "name": "Google Gemini · 虹彩",
+    "kind": "special",
+    "description": "图集明确McLaren美国和墨西哥两站Google Gemini虹彩涂装；McLaren官方2025美国站发布文明确MCL39。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+    "photo": {
+      "url": "/assets/liveries/special/mclaren-mcl39-2025-r19.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+      "caption": "2025 · 官方涂装发布图 · Google Gemini · 虹彩",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "haas-vf-25-2025-ea4d5c61",
+    "chassis": "haas-vf-25",
+    "year": 2025,
+    "rounds": [
+      19
+    ],
+    "name": "Stars and Stripes 星条旗",
+    "kind": "special",
+    "description": "图集明确Haas美国站星条旗涂装。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+    "photo": {
+      "url": "/assets/liveries/special/haas-vf-25-2025-r19.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-racing-bulls-mclaren-haas-and-aston-martins.35IUALywE63IuFKCXqIgw7",
+      "caption": "2025 · 官方涂装发布图 · Stars and Stripes 星条旗",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "williams-fw47-2025-81df2238",
+    "chassis": "williams-fw47",
+    "year": 2025,
+    "rounds": [
+      22
+    ],
+    "name": "Rovo · 黑色",
+    "kind": "special",
+    "description": "图集明确Williams拉斯维加斯Rovo全黑涂装。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-sauber-racing-bulls-and-alpines-special-liveries.18JjRoB0eTKr0PoaxDWENe",
+    "photo": {
+      "url": "/assets/liveries/special/williams-fw47-2025-r22.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-sauber-racing-bulls-and-alpines-special-liveries.18JjRoB0eTKr0PoaxDWENe",
+      "caption": "2025 · 官方涂装发布图 · Rovo · 黑色",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "kick-sauber-c45-2025-bd9c53f6",
+    "chassis": "kick-sauber-c45",
+    "year": 2025,
+    "rounds": [
+      22
+    ],
+    "name": "Stake Final Lap",
+    "kind": "special",
+    "description": "图集明确Sauber拉斯维加斯Stake Final Lap涂装。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-sauber-racing-bulls-and-alpines-special-liveries.18JjRoB0eTKr0PoaxDWENe",
+    "photo": {
+      "url": "/assets/liveries/special/kick-sauber-c45-2025-r22.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-sauber-racing-bulls-and-alpines-special-liveries.18JjRoB0eTKr0PoaxDWENe",
+      "caption": "2025 · 官方涂装发布图 · Stake Final Lap",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "racing-bulls-vcarb-02-2025-cb206737",
+    "chassis": "racing-bulls-vcarb-02",
+    "year": 2025,
+    "rounds": [
+      22
+    ],
+    "name": "Cash App · 全息银",
+    "kind": "special",
+    "description": "图集明确Racing Bulls拉斯维加斯Cash App全息涂装。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-sauber-racing-bulls-and-alpines-special-liveries.18JjRoB0eTKr0PoaxDWENe",
+    "photo": {
+      "url": "/assets/liveries/special/racing-bulls-vcarb-02-2025-r22.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-sauber-racing-bulls-and-alpines-special-liveries.18JjRoB0eTKr0PoaxDWENe",
+      "caption": "2025 · 官方涂装发布图 · Cash App · 全息银",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "ferrari-sf-25-2025-cbe9775e",
+    "chassis": "ferrari-sf-25",
+    "year": 2025,
+    "rounds": [
+      6
+    ],
+    "name": "HP周年 · 红白蓝",
+    "kind": "special",
+    "description": "SF25迈阿密大奖赛采用HP合作一周年非对称红白蓝涂装。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-ferrari-reveal-special-co-designed-livery-for-miami-grand-prix.bIA2nDHqo3SYRp150gl00",
+    "photo": {
+      "url": "/assets/liveries/special/ferrari-sf-25-2025-r6.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-ferrari-reveal-special-co-designed-livery-for-miami-grand-prix.bIA2nDHqo3SYRp150gl00",
+      "caption": "2025 · 官方涂装发布图 · HP周年 · 红白蓝",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "williams-fw48-2026-0bfae6d0",
+    "chassis": "williams-fw48",
+    "year": 2026,
+    "rounds": [
+      9
+    ],
+    "name": "英国国旗 · 主场",
+    "kind": "special",
+    "description": "FW48英国站鼻锥及底盘红白蓝英国国旗涂装。",
+    "source": "https://www.formula1.com/en/latest/article/williams-reveal-special-livery-for-home-race-at-silverstone.6FxNnNqJ3D4OTcBqb6oRe6",
+    "photo": {
+      "url": "/assets/liveries/special/williams-fw48-2026-r9.webp",
+      "source": "https://www.formula1.com/en/latest/article/williams-reveal-special-livery-for-home-race-at-silverstone.6FxNnNqJ3D4OTcBqb6oRe6",
+      "caption": "2026 · 官方涂装发布图 · 英国国旗 · 主场",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "racing-bulls-vcarb-03-2026-1efeb93a",
+    "chassis": "racing-bulls-vcarb-03",
+    "year": 2026,
+    "rounds": [
+      3
+    ],
+    "name": "Spring Edition · 日本书道",
+    "kind": "special",
+    "description": "VCARB03日本站红白Spring Edition涂装，由书道艺术家Bisen Aoyagi设计。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-check-out-racing-bulls-special-livery-for-the-japanese-grand-prix.3xzvEGBKo1rfFJhCEkbOCh",
+    "photo": {
+      "url": "/assets/liveries/special/racing-bulls-vcarb-03-2026-r3.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-racing-bulls-special-livery-for-the-japanese-grand-prix.3xzvEGBKo1rfFJhCEkbOCh",
+      "caption": "2026 · 官方涂装发布图 · Spring Edition · 日本书道",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "racing-bulls-vcarb-03-2026-1aac6fcb",
+    "chassis": "racing-bulls-vcarb-03",
+    "year": 2026,
+    "rounds": [
+      4
+    ],
+    "name": "Summer Edition · 黄柑橘",
+    "kind": "special",
+    "description": "迈阿密整周末使用黄色Sudachi Lime Summer Edition涂装。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-racing-bulls-reveal-vibrant-yellow-livery-for-miami-grand-prix-weekend.3qkktjcjeVnMY6j9hZLPYR",
+    "photo": {
+      "url": "/assets/liveries/special/racing-bulls-vcarb-03-2026-r4.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-racing-bulls-reveal-vibrant-yellow-livery-for-miami-grand-prix-weekend.3qkktjcjeVnMY6j9hZLPYR",
+      "caption": "2026 · 官方涂装发布图 · Summer Edition · 黄柑橘",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "mclaren-mcl40-2026-14f5bb87",
+    "chassis": "mclaren-mcl40",
+    "year": 2026,
+    "rounds": [
+      6,
+      7
+    ],
+    "name": "第1000场 · 金属橙黑",
+    "kind": "special",
+    "description": "Monaco及Barcelona使用第1000场金属橙黑涂装；McLaren官方Monaco 1000th GP发布文确认MCL40。",
+    "source": "https://www.formula1.com/en/latest/article/all-the-liveries-special-helmet-designs-and-eye-catching-looks-for-monaco.B2w22A5AjE8qtqhuIvqnL",
+    "photo": {
+      "url": "/assets/liveries/special/mclaren-mcl40-2026-r6.webp",
+      "source": "https://www.mclaren.com/racing/formula-1/2026/monaco-grand-prix/monaco-1000th-gp-livery-and-grid-moment/",
+      "caption": "2026 · 官方涂装发布图 · 第1000场 · 金属橙黑",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "ferrari-sf-23-2023-4827e048",
+    "chassis": "ferrari-sf-23",
+    "year": 2023,
+    "rounds": [
+      14
+    ],
+    "name": "Le Mans冠军 · 黄黑",
+    "kind": "special",
+    "description": "SF23 Monza黄黑涂装致敬499P勒芒获胜。",
+    "source": "https://www.formula1.com/en/latest/article/ferrari-reveal-special-car-livery-for-italian-gp-weekend-at-monza.7lCwQF5FAGd95mNcz0jp7h",
+    "photo": {
+      "url": "/assets/liveries/special/ferrari-sf-23-2023-r14.webp",
+      "source": "https://www.formula1.com/en/latest/article/ferrari-reveal-special-car-livery-for-italian-gp-weekend-at-monza.7lCwQF5FAGd95mNcz0jp7h",
+      "caption": "2023 · 官方涂装发布图 · Le Mans冠军 · 黄黑",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "mclaren-mcl33-2018-e0921c0c",
+    "chassis": "mclaren-mcl33",
+    "year": 2018,
+    "rounds": [
+      21
+    ],
+    "name": "Alonso 告别纪念",
+    "kind": "special",
+    "description": "仅Fernando Alonso赛车，阿布扎比本站使用头盔配色黄红蓝特别涂装。",
+    "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-one-off-livery-for-alonsos-final-race.8YzX6QexZmqag42OSykw2",
+    "photo": {
+      "url": "/assets/liveries/special/mclaren-mcl33-2018-r21.webp",
+      "source": "https://www.formula1.com/en/latest/article/mclaren-reveal-one-off-livery-for-alonsos-final-race.8YzX6QexZmqag42OSykw2",
+      "caption": "2018 · 官方涂装发布图 · Alonso 告别纪念",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [
+      "fernando-alonso"
+    ],
+    "rangeCompleteness": "specified",
+    "appliesTo": "阿隆索专属"
+  },
+  {
+    "id": "haas-vf-17-2017-15c04981",
+    "chassis": "haas-vf-17",
+    "year": 2017,
+    "rounds": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ],
+    "name": "摩纳哥起 · 深灰配色",
+    "kind": "update",
+    "description": "VF17从Monaco起采用额外灰色替代原先红色，车队确认沿用全年剩余比赛。",
+    "source": "https://www.formula1.com/en/latest/article/haas-unveil-new-livery-ahead-of-monaco.4lnDOpBZbW4scais8ySCQi",
+    "photo": {
+      "url": "/assets/liveries/special/haas-vf-17-2017-r6.webp",
+      "source": "https://www.formula1.com/en/latest/article/haas-unveil-new-livery-ahead-of-monaco.4lnDOpBZbW4scais8ySCQi",
+      "caption": "2017 · 官方涂装发布图 · 摩纳哥起 · 深灰配色",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "red-bull-rb15-2019-d91de225",
+    "chassis": "red-bull-rb15",
+    "year": 2019,
+    "rounds": [
+      10
+    ],
+    "name": "James Bond 007",
+    "kind": "update",
+    "description": "英国站两辆RB15增加007标识和不同Bond电影车牌；属于品牌标识变化。",
+    "source": "https://www.formula1.com/en/latest/article/red-bull-to-celebrate-bond-with-special-silverstone-livery.7hRHuzgwGkcF9M543qfa0B",
+    "photo": {
+      "url": "/assets/liveries/special/red-bull-rb15-2019-r10.webp",
+      "source": "https://www.formula1.com/en/latest/article/red-bull-to-celebrate-bond-with-special-silverstone-livery.7hRHuzgwGkcF9M543qfa0B",
+      "caption": "2019 · 官方现场发布资料图 · James Bond 007",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "alfa-romeo-c38-2019-90b78e49",
+    "chassis": "alfa-romeo-c38",
+    "year": 2019,
+    "rounds": [
+      14
+    ],
+    "name": "意大利三色",
+    "kind": "special",
+    "description": "C38两车Monza单站增加绿色，组成意大利三色。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-alfa-romeo-to-run-special-italian-themed-livery-in-monza.5d0AeepkZcjNMTBkF5R8i0",
+    "photo": {
+      "url": "/assets/liveries/special/alfa-romeo-c38-2019-r14.webp",
+      "source": "https://www.formula1.com/en/latest/article/alfas-giovinazzi-delighted-after-points-finish-at-home.4DRGyBJ2rEgjVojZ2imp9j",
+      "caption": "2019 · 2019 年蒙扎周末实拍 · Antonio Giovinazzi · 意大利三色",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "race"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "complete"
+  },
+  {
+    "id": "haas-vf-25-2025-e99b4c7c",
+    "chassis": "haas-vf-25",
+    "year": 2025,
+    "rounds": [
+      10
+    ],
+    "name": "第200场 · VF16传承",
+    "kind": "special",
+    "description": "加拿大站纪念Haas第200场，复刻2016首季黑灰红设计。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-check-out-haas-special-livery-for-their-200th-grand-prix-in-canada.4Q38Lnr7Gnkyr4tbW3qUVK.4Q38Lnr7Gnkyr4tbW3qUVK.4Q38Lnr7Gnkyr4tbW3qUVK",
+    "photo": {
+      "url": "/assets/liveries/special/haas-vf-25-2025-r10.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-haas-special-livery-for-their-200th-grand-prix-in-canada.4Q38Lnr7Gnkyr4tbW3qUVK.4Q38Lnr7Gnkyr4tbW3qUVK.4Q38Lnr7Gnkyr4tbW3qUVK",
+      "caption": "2025 · 官方涂装发布图 · 第200场 · VF16传承",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "haas-vf-26-2026-18c342af",
+    "chassis": "haas-vf-26",
+    "year": 2026,
+    "rounds": [
+      3
+    ],
+    "name": "Godzilla 哥斯拉",
+    "kind": "special",
+    "description": "日本大奖赛引擎罩哥斯拉主题；只确认日本此款设计，不将未来美国活动当成相同涂装。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-haas-reveal-special-godzilla-themed-livery-for-japanese-grand-prix.7GnmylxXYe0UD4Ei8zLp7L.7GnmylxXYe0UD4Ei8zLp7L",
+    "photo": {
+      "url": "/assets/liveries/special/haas-vf-26-2026-r3.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-haas-reveal-special-godzilla-themed-livery-for-japanese-grand-prix.7GnmylxXYe0UD4Ei8zLp7L.7GnmylxXYe0UD4Ei8zLp7L",
+      "caption": "2026 · 官方涂装发布图 · Godzilla 哥斯拉",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "ferrari-sf-25-2025-b2f36158",
+    "chassis": "ferrari-sf-25",
+    "year": 2025,
+    "rounds": [
+      16
+    ],
+    "name": "Lauda首冠50周年 · 312T传承",
+    "kind": "special",
+    "description": "F1官方2025 Italian GP FP1视频确认Lauda致敬涂装已上赛道；Ferrari官方SF25Monza2025海报说明确认车型与赛事，并明确致敬Lauda。",
+    "source": "https://www.formula1.com/en/video/2025-italian-gp-fp1-first-look-at-ferraris-lauda-inspired-livery-on-track.1842433298059659088",
+    "photo": {
+      "url": "/assets/liveries/special/ferrari-sf-25-2025-r16.webp",
+      "source": "https://www.formula1.com/en/video/2025-italian-gp-fp1-first-look-at-ferraris-lauda-inspired-livery-on-track.1842433298059659088",
+      "caption": "2025 · 官方比赛视频封面 · Lauda首冠50周年 · 312T传承",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "haas-vf-25-2025-040272ae",
+    "chassis": "haas-vf-25",
+    "year": 2025,
+    "rounds": [
+      3
+    ],
+    "name": "Sakura 樱花",
+    "kind": "special",
+    "description": "Haas 官方 2025-03-31 日本站预告明确 VF-25 樱花专属涂装用于第 3 站；Haas 官方 2025-04-06 正赛回顾刊登该涂装实拍。",
+    "source": "https://www.haasf1team.com/news/japanese-grand-prix-preview-2",
+    "photo": {
+      "url": "/assets/liveries/special/haas-vf-25-2025-r3.webp",
+      "source": "https://www.haasf1team.com/news/japanese-grand-prix-race-recap-5",
+      "caption": "2025 · 2025 年日本站实拍 · Esteban Ocon · Sakura 樱花",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "race"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "complete"
+  },
+  {
+    "id": "racing-bulls-vcarb-02-2025-b9a2f6bb",
+    "chassis": "racing-bulls-vcarb-02",
+    "year": 2025,
+    "rounds": [
+      12
+    ],
+    "name": "HUGO x Slawn · 街头涂鸦",
+    "kind": "special",
+    "description": "英国站Slawn与HUGO合作涂鸦涂装；Racing Bulls官方2025 Trackside Art回顾确认本站。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-racing-bulls-unveil-special-livery-for-british-grand-prix.3jvKET9jEaCsGlDw6NIfVK.3jvKET9jEaCsGlDw6NIfVK",
+    "photo": {
+      "url": "/assets/liveries/special/racing-bulls-vcarb-02-2025-r12.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-racing-bulls-unveil-special-livery-for-british-grand-prix.3jvKET9jEaCsGlDw6NIfVK.3jvKET9jEaCsGlDw6NIfVK",
+      "caption": "2025 · 官方涂装发布图 · HUGO x Slawn · 街头涂鸦",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "williams-fw47-2025-9f065035",
+    "chassis": "williams-fw47",
+    "year": 2025,
+    "rounds": [
+      12
+    ],
+    "name": "主场英国国旗标识",
+    "kind": "update",
+    "description": "Williams官方2025-07-01明确FW47在英国站小幅更新，增加红白蓝英国国旗元素。",
+    "source": "https://www.williamsf1.com/articles/85c210a4-b2af-4495-802f-87dcba6f5d4c/home-race-home-colours",
+    "photo": {
+      "url": "/assets/liveries/special/williams-fw47-2025-r12.webp",
+      "source": "https://www.williamsf1.com/articles/85c210a4-b2af-4495-802f-87dcba6f5d4c/home-race-home-colours",
+      "caption": "2025 · 官方涂装发布图 · 主场英国国旗标识",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "specified"
+  },
+  {
+    "id": "alpine-a525-2025-d993f1e1",
+    "chassis": "alpine-a525",
+    "year": 2025,
+    "rounds": [
+      22
+    ],
+    "name": "BWT 粉色",
+    "kind": "special",
+    "description": "确认Alpine在Las Vegas采用粉色设计；原文仅称赛季最后阶段，本记录只列明确确认的Las Vegas，不推定其余场次。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-sauber-racing-bulls-and-alpines-special-liveries.18JjRoB0eTKr0PoaxDWENe",
+    "photo": {
+      "url": "/assets/liveries/special/alpine-a525-2025-r22.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-check-out-williams-sauber-racing-bulls-and-alpines-special-liveries.18JjRoB0eTKr0PoaxDWENe",
+      "caption": "2025 · 官方涂装发布图 · BWT 粉色",
+      "author": "Formula 1 / team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "GP mapped against local F1DB",
+    "status": "published",
+    "driverIds": [],
+    "rangeCompleteness": "partial"
+  },
+  {
+    "id": "mercedes-f1-w17-2026-r16-petronas",
+    "chassis": "mercedes-f1-w17",
+    "year": 2026,
+    "rounds": [
+      16
+    ],
+    "name": "PETRONAS 绿色特别涂装",
+    "kind": "special",
+    "description": "W17在马来西亚雪邦举行的2026年巴林大奖赛使用致敬冠名合作伙伴PETRONAS的特别涂装：在通常的黑色车身上加入大面积绿色。",
+    "source": "https://www.formula1.com/en/latest/article/gallery-mercedes-reveal-special-livery-for-bahrain-grand-prix-in-malaysia.5rOQab3eO0NktK8AJNG9p7",
+    "photo": {
+      "url": "/assets/liveries/special/mercedes-f1-w17-2026-r16.webp",
+      "source": "https://www.formula1.com/en/latest/article/gallery-mercedes-reveal-special-livery-for-bahrain-grand-prix-in-malaysia.5rOQab3eO0NktK8AJNG9p7",
+      "caption": "2026 · F1官方涂装发布图 · W17 PETRONAS 绿色特别涂装（侧前视角）",
+      "author": "Formula 1 / Mercedes team media",
+      "license": "All rights reserved; no free license asserted",
+      "scope": "season"
+    },
+    "evidence": "F1官方2026-09-30图库明确称 Mercedes W17 将于 Malaysia 举办的 Bahrain Grand Prix 使用 PETRONAS 绿色配通常黑色的特别涂装；本地 F1DB 将 2026-10-04 Bahrain GP 映射为第16轮、Sepang 赛道。图片取自该图库第2张 FrontQtr_GR_16_9_v001.webp，1600×900等比保存；目视检查为单辆完整W17侧前视角，车头、两翼、四轮、侧箱和尾翼均未被裁切。"
+  }
+]

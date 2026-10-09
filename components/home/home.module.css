@@ -4,20 +4,20 @@
 .heroGrid { position: relative; max-width: none; margin: 0; padding: 48px var(--gutter) 72px; /* same left/right edges as the race cards below (user) */ display: grid; grid-template-columns: minmax(0, 560px) 1fr 260px; gap: 32px; min-height: 680px; pointer-events: none; }
 .heroGrid > * { pointer-events: auto; }
 .heroMain { grid-column: 1; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 24px; }
-.round { font: 700 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; color: rgba(255,255,255,.7); letter-spacing: 0; }
+.round { font: 700 12px/16px var(--font-cn); text-transform: uppercase; color: rgba(255,255,255,.7); letter-spacing: 0; }
 .place { font-family: var(--font-wide); font-size: clamp(28px, calc((100vw - 168px) * .05), 80px); /* page width minus the year rail, so it never runs under the standings box */ white-space: nowrap; line-height: .95; text-transform: uppercase; margin-top: 14px; }
 .gpZh { display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 700; margin-top: 14px; color: rgba(255,255,255,.88); }
 .gpZh img { width: 24px; height: 16px; object-fit: cover; border-radius: 2px; }
 .count { margin-top: 40px; display: flex; flex-direction: column; gap: 8px; }
-.countLabel { font: 700 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; color: rgba(255,255,255,.7); }
-.countNum { white-space: nowrap; font-family: var(--font-display); font-weight: 900; font-size: clamp(44px, 5.4vw, 80px); line-height: .9; font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+.countLabel { font: 700 12px/16px var(--font-cn); text-transform: uppercase; color: rgba(255,255,255,.7); }
+.countNum { white-space: nowrap; font-family: var(--tech-font); font-weight: 700; font-size: clamp(44px, 5.4vw, 80px); line-height: .9; font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
 .countUnit { font-style: normal; font: 500 16px/1 var(--font-display); text-transform: uppercase; color: rgba(255,255,255,.55); margin: 0 16px 0 6px; letter-spacing: 0; vertical-align: 1.6em; }
 .liveBtn { display: inline-flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 900; }
 .liveBtn i { width: 10px; height: 10px; border-radius: 50%; background: var(--f1-red); }
 .sessions { list-style: none; padding: 1px; margin: 32px 0 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1px; background: rgba(255,255,255,.12); border-radius: 8px; overflow: hidden; max-width: 560px; }
 .sessions li { background: rgba(14,14,20,.88); padding: 10px 12px; display: flex; flex-direction: column; gap: 2px; font-size: 12px; }
 .sessions li > span:first-child { font: 500 13px/16px var(--font-display); color: rgba(255,255,255,.9); }
-.sDow { font: 700 11px/14px "Titillium Web", var(--font-cn); text-transform: uppercase; color: rgba(255,255,255,.55); }
+.sDow { font: 700 11px/14px var(--font-cn); text-transform: uppercase; color: rgba(255,255,255,.55); }
 /* session start times: formula1.com tech digits */
 .sTime { font: 700 18px/20px var(--font-tech); font-variant-numeric: tabular-nums; margin-top: 2px; }
 .sNext { background: var(--f1-red) !important; }
@@ -28,7 +28,7 @@
 .rail { grid-column: 3; align-self: center; background: rgba(14,14,20,.82); border-radius: 8px; padding: 14px 0 10px; backdrop-filter: blur(10px); }
 .railHead { display: flex; justify-content: space-between; align-items: baseline; padding: 0 16px 10px; border-bottom: 1px solid rgba(255,255,255,.08); font: 500 14px/18px var(--font-display); }
 .railHead b { font-weight: 500; }
-.railHead span { font: 700 11px/14px "Titillium Web", var(--font-cn); text-transform: uppercase; color: rgba(255,255,255,.55); }
+.railHead span { font: 700 11px/14px var(--font-cn); text-transform: uppercase; color: rgba(255,255,255,.55); }
 .tower { list-style: none; margin: 0; padding: 4px 0; }
 .tower li { display: grid; grid-template-columns: 20px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 6px 16px; font-size: 13px; }
 .tPos { font: 500 13px/1 var(--font-display); color: rgba(255,255,255,.55); text-align: right; }
@@ -51,7 +51,7 @@
 
 .gridWrap { overflow-x: auto; }
 .grid { display: grid; gap: 2px; min-width: 900px; }
-.gCorner { font: 600 11px/14px "Titillium Web", var(--font-cn); text-transform: uppercase; color: var(--mute); display: flex; align-items: flex-end; padding-bottom: 6px; }
+.gCorner { font: 600 11px/14px var(--font-cn); text-transform: uppercase; color: var(--mute); display: flex; align-items: flex-end; padding-bottom: 6px; }
 .gHead, .gHeadFuture { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 4px; padding-bottom: 6px; font-family: var(--font-data); font-size: 11px; color: var(--mute); }
 .gHead img { width: 18px; height: 12px; object-fit: cover; border-radius: 2px; }
 .gHeadFuture i { width: 4px; height: 4px; border-radius: 50%; background: var(--line); }
@@ -65,11 +65,11 @@
 .grid a.res:hover { outline: 2px solid var(--ink); outline-offset: -2px; }
 .gHeadTodo { opacity: .45; }
 .gHeadTodo:hover { opacity: 1; }
-.gReplayLabel { font: 600 11px/14px "Titillium Web", var(--font-cn); text-transform: uppercase; color: var(--mute); display: flex; align-items: center; padding-left: 4px; height: 22px; }
+.gReplayLabel { font: 600 11px/14px var(--font-cn); text-transform: uppercase; color: var(--mute); display: flex; align-items: center; padding-left: 4px; height: 22px; }
 .gPlay { display: grid; place-items: center; height: 22px; border-radius: 3px; background: var(--carbon); color: #fff; font-size: 9px; transition: background .15s; }
 .gPlay:hover { background: var(--f1-red); }
 .gFuture { height: 26px; border-left: 1px dashed var(--line); margin-left: 4px; }
-.gPts { display: grid; place-items: center end; font-family: var(--font-data); font-weight: 900; font-size: 14px; font-variant-numeric: tabular-nums; }
+.gPts { display: grid; place-items: center end; font-family: var(--num-font); font-weight: var(--num-weight); font-size: 14px; font-variant-numeric: tabular-nums; }
 .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--mute); }
 .legend span { display: inline-flex; gap: 6px; align-items: center; }
 .legend i { width: 18px; height: 14px; min-width: 18px; }
@@ -85,7 +85,7 @@
 .moments { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 56px; }
 .moment { position: relative; display: grid; grid-template-columns: 84px 1fr; grid-template-rows: auto 1fr; column-gap: 20px; row-gap: 6px; padding: 20px 0; border-top: 1px solid var(--line); }
 .momentTitle:hover, .moment > a.num:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
-.moment :global(.num) { grid-row: 1 / 3; font-family: var(--font-display); font-size: 26px; font-weight: 900; line-height: 1; }
+.moment :global(.num) { grid-row: 1 / 3; font-family: var(--num-font); font-size: 26px; font-weight: var(--num-weight); line-height: 1; }
 .moment b { grid-column: 2; font-size: 16px; }
 .moment p { grid-column: 2; font-size: 14px; line-height: 1.85; color: #4a4a52; }
 .units { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; margin-top: 48px; background: #26262f; border-radius: 8px; overflow: hidden; }
@@ -106,7 +106,7 @@
 /* "on this day" race cards: neutral white, the winner as a filled team-colour foot */
 .otdRow { position: relative; background: #fff; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
 .otdHead { display: flex; align-items: baseline; gap: 12px; padding: 16px 18px 14px; }
-.otdHead :global(.num) { font-size: 26px; font-family: var(--font-display); font-weight: 900; line-height: 1; }
+.otdHead :global(.num) { font-size: 26px; font-family: var(--num-font); font-weight: var(--num-weight); line-height: 1; }
 .otdHead b { font-size: 16px; font-weight: 900; }
 .otdHead b a:hover, .otdHead > a.num:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
 .otdWho { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; padding: 12px 18px; font-size: 13px; }
@@ -121,7 +121,7 @@
 .hLink:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
 
 /* live phase: the hero shrinks to ~60% and hands the standings to the last-race block */
-.heroLive .heroGrid { min-height: 410px; padding-bottom: 40px; grid-template-columns: minmax(0, 560px) 1fr; }
+.heroLive .heroGrid { min-height: 410px; padding-bottom: 40px; } /* same 3 columns as off-session: standings stay on the right */
 .liveTag { display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; padding: 8px 16px; border-radius: 999px; background: var(--f1-red); color: #fff; font: 900 20px/24px var(--font-display); }
 .liveTag i { width: 9px; height: 9px; border-radius: 50%; background: #fff; animation: livePulse 1.6s infinite; }
 @keyframes livePulse { 50% { opacity: .35; } }
@@ -135,3 +135,6 @@
 .leader { display: inline-flex; vertical-align: middle; margin-right: 10px; }
 .tPerson { vertical-align: -6px; gap: 6px !important; }
 .tPerson b { font-weight: 900; color: var(--ink); }
+
+/* /live: the banner proper (track + note positioned against it); this weekend's results follow inside the same black section */
+.heroTop { position: relative; }

@@ -792,5 +792,240 @@
     "sources": [
       { "label": "Wikipedia · McLaren MCL39", "url": "https://en.wikipedia.org/wiki/McLaren_MCL39" }
     ]
+  },
+  "red-bull-rb18": {
+    "nameEn": "Red Bull RB18",
+    "year": 2022,
+    "constructor": "red-bull",
+    "designers": [
+      "Adrian Newey"
+    ],
+    "summary": "RB18 是红牛为 2022 年地面效应规则打造的新赛车，由维斯塔潘和佩雷兹驾驶。赛季初它曾遭遇可靠性与重量问题，随后通过升级改善平衡，在高速与不同离地高度下保持竞争力。它赢得全年 22 场大奖赛中的 17 场，帮助维斯塔潘和红牛分别夺得车手、车队冠军。",
+    "tech": [
+      {
+        "label": "动力单元",
+        "value": "Red Bull Powertrains"
+      },
+      {
+        "label": "轮胎",
+        "value": "18 英寸轮胎"
+      },
+      {
+        "label": "悬挂",
+        "value": "前拉杆、后推杆布局"
+      }
+    ],
+    "innovations": [
+      "针对地面效应规则设计底板与扩散器，以底部气流产生下压力",
+      "悬挂与底板协同控制车身离地高度，减轻弹跳问题"
+    ],
+    "record": "2022 赛季 17 胜（维斯塔潘 15 胜、佩雷兹 2 胜）；车手与车队世界冠军",
+    "sources": [
+      {
+        "label": "Red Bull Racing · RB18",
+        "url": "https://www.redbullracing.com/int-en/cars/rb18"
+      },
+      {
+        "label": "Formula1.com · Newey on the RB18",
+        "url": "https://www.formula1.com/en/latest/article/its-a-car-we-can-be-very-proud-of-newey-pinpoints-the-moment-that-catapulted.1zMED2ZxtemKaPUrJcUjGM"
+      },
+      {
+        "label": "Formula1.com · Newey's title-winning cars",
+        "url": "https://www.formula1.com/en/latest/article/insight-a-closer-look-at-the-12-constructors-title-winning-cars-adrian-newey.1QAwEdYMG8hAz76kEHGefF"
+      }
+    ]
+  },
+  "red-bull-rb6": {
+    "nameEn": "Red Bull RB6",
+    "year": 2010,
+    "constructor": "red-bull",
+    "designers": [
+      "Adrian Newey"
+    ],
+    "summary": "RB6 延续前一年的 RB5 设计，进一步发挥双层扩散器的潜力。其车尾布置、较大的车身俯仰角以及赛季中引入的排气吹拂扩散器，使它成为 2010 年速度最强的赛车之一。维特尔与韦伯合计赢得 9 场比赛，红牛首次同时夺得车手和车队冠军。",
+    "tech": [
+      {
+        "label": "发动机",
+        "value": "雷诺 2.4 升 V8"
+      },
+      {
+        "label": "转速上限",
+        "value": "18,000 转/分"
+      }
+    ],
+    "innovations": [
+      "优化双层扩散器与窄变速箱周围的车尾气流",
+      "赛季中引入排气吹拂扩散器，并采用较大的车身俯仰角"
+    ],
+    "record": "2010 赛季 9 胜、15 个杆位；红牛首个车手与车队双冠",
+    "sources": [
+      {
+        "label": "Red Bull Racing · RB6",
+        "url": "https://www.redbullracing.com/int-en/cars/rb6"
+      },
+      {
+        "label": "Formula1.com · 2010 race results",
+        "url": "https://www.formula1.com/en/results/2010/races"
+      },
+      {
+        "label": "Formula1.com · Newey's title-winning cars",
+        "url": "https://www.formula1.com/en/latest/article/insight-a-closer-look-at-the-12-constructors-title-winning-cars-adrian-newey.1QAwEdYMG8hAz76kEHGefF"
+      }
+    ]
+  },
+  "red-bull-rb7": {
+    "nameEn": "Red Bull RB7",
+    "year": 2011,
+    "constructor": "red-bull",
+    "designers": [
+      "Adrian Newey"
+    ],
+    "summary": "RB7 将排气吹拂扩散器的效果推向高峰，同时继续采用较大的车身俯仰角。重新引入的 KERS 将电池布置在变速箱钟形壳体内，配合强大的排位赛速度。它在 19 场比赛中拿下 12 胜、18 个杆位，帮助维特尔与红牛连续第二年包揽两项世界冠军。",
+    "tech": [
+      {
+        "label": "发动机",
+        "value": "雷诺 2.4 升 V8"
+      },
+      {
+        "label": "转速上限",
+        "value": "18,000 转/分"
+      },
+      {
+        "label": "能量回收",
+        "value": "KERS"
+      }
+    ],
+    "innovations": [
+      "低位排气口与扩散器配合，在减速和入弯阶段增强车尾稳定性",
+      "将 KERS 电池置于变速箱钟形壳体内，为油箱与车身布置腾出空间"
+    ],
+    "record": "2011 赛季 12 胜、18 个杆位、27 次领奖台；车手与车队世界冠军",
+    "sources": [
+      {
+        "label": "Red Bull Racing · RB7",
+        "url": "https://www.redbullracing.com/int-en/cars/rb7"
+      },
+      {
+        "label": "Formula1.com · Newey's title-winning cars",
+        "url": "https://www.formula1.com/en/latest/article/insight-a-closer-look-at-the-12-constructors-title-winning-cars-adrian-newey.1QAwEdYMG8hAz76kEHGefF"
+      }
+    ]
+  },
+  "red-bull-rb8": {
+    "nameEn": "Red Bull RB8",
+    "year": 2012,
+    "constructor": "red-bull",
+    "designers": [
+      "Adrian Newey"
+    ],
+    "summary": "2012 年规则限制排气口位置后，RB8 失去了前代在赛季初的压倒性优势。红牛随后利用科恩达效应重新引导侧箱与排气气流，持续改进车尾下压力，维特尔在赛季末连续取胜。RB8 全季赢得 7 场比赛，帮助车队连续第三年拿下车手与车队冠军。",
+    "tech": [
+      {
+        "label": "发动机",
+        "value": "雷诺 2.4 升 V8"
+      },
+      {
+        "label": "转速上限",
+        "value": "18,000 转/分"
+      },
+      {
+        "label": "能量回收",
+        "value": "KERS"
+      }
+    ],
+    "innovations": [
+      "采用阶梯式车鼻以适应 2012 年安全规则",
+      "利用侧箱表面气流的科恩达效应，把排气导向扩散器两侧"
+    ],
+    "record": "2012 赛季 7 胜、14 次领奖台；车手与车队世界冠军",
+    "sources": [
+      {
+        "label": "Red Bull Racing · RB8",
+        "url": "https://www.redbullracing.com/int-en/cars/rb8"
+      },
+      {
+        "label": "Formula1.com · Newey's title-winning cars",
+        "url": "https://www.formula1.com/en/latest/article/insight-a-closer-look-at-the-12-constructors-title-winning-cars-adrian-newey.1QAwEdYMG8hAz76kEHGefF"
+      },
+      {
+        "label": "Formula1.com · Red Bull year by year",
+        "url": "https://www.formula1.com/en/information/red-bull-racing-year-by-year.5gsBMoMf3DhOSBOJ8Cx8Bi"
+      }
+    ]
+  },
+  "mclaren-mp4-23": {
+    "nameEn": "McLaren MP4-23",
+    "year": 2008,
+    "constructor": "mclaren",
+    "designers": [],
+    "summary": "MP4-23 是迈凯伦在 2008 赛季使用的赛车，由汉密尔顿和科瓦莱宁驾驶。它从 MP4-22 发展而来，但前后翼、车身和导流部件都有改动。汉密尔顿驾驶它在巴西站最后一圈锁定个人首个世界冠军；车队全年取得 6 胜，车队积分榜列第二。",
+    "tech": [
+      {
+        "label": "发动机",
+        "value": "梅赛德斯-奔驰 FO 108V，2.4 升 V8"
+      },
+      {
+        "label": "变速箱",
+        "value": "迈凯伦 7 速变速箱"
+      },
+      {
+        "label": "底盘",
+        "value": "碳纤维与铝蜂窝复合材料"
+      }
+    ],
+    "innovations": [
+      "在 MP4-22 基础上全面修改车翼、车身与导流部件"
+    ],
+    "record": "2008 赛季 6 胜（汉密尔顿 5 胜、科瓦莱宁 1 胜）；汉密尔顿获车手世界冠军，车队亚军",
+    "sources": [
+      {
+        "label": "McLaren Racing · MP4-23 heritage",
+        "url": "https://www.mclaren.com/racing/heritage/formula-1/cars/2008-formula-1-mclaren-mp4-23/"
+      },
+      {
+        "label": "McLaren Racing · 2008 wins",
+        "url": "https://www.mclaren.com/racing/heritage/mclaren-tops-the-post-66-grand-prix-wins-list/"
+      },
+      {
+        "label": "Formula1.com · McLaren year by year",
+        "url": "https://www.formula1.com/en/information/mclaren-year-by-year.6Gj22qyOorq5dpniarY3rP"
+      }
+    ]
+  },
+  "mercedes-f1-w08": {
+    "nameEn": "Mercedes-AMG F1 W08 EQ Power+",
+    "year": 2017,
+    "constructor": "mercedes",
+    "designers": [],
+    "summary": "W08 是梅赛德斯针对 2017 年更宽车身与新空气动力规则打造的赛车，由汉密尔顿和博塔斯驾驶。它采用长轴距与紧凑车尾，但在低抓地力和慢速弯的调校上较挑剔，因此被车队称为“天后”。尽管法拉利带来全年挑战，W08 仍赢得 12 场大奖赛，并帮助梅赛德斯连续第四年包揽车手与车队冠军。",
+    "tech": [
+      {
+        "label": "动力单元",
+        "value": "Mercedes-AMG M08 混合动力单元"
+      },
+      {
+        "label": "设计特点",
+        "value": "长轴距、紧凑车尾"
+      }
+    ],
+    "innovations": [
+      "根据 2017 年新空气动力规则重做前后翼、底板及侧箱前方导流区域",
+      "M08 动力单元针对新规增加的空气动力负荷重新设计"
+    ],
+    "record": "2017 赛季 12 胜（汉密尔顿 9 胜、博塔斯 3 胜）；车手与车队世界冠军",
+    "sources": [
+      {
+        "label": "Formula1.com · W08 launch",
+        "url": "https://www.formula1.com/en/latest/article/2017-mercedes-breaks-cover-at-silverstone.3QbgcfwQUU8yY88assSCYk"
+      },
+      {
+        "label": "Formula1.com · 2017 season review",
+        "url": "https://www.formula1.com/en/latest/article/2017-season-review-hamilton-proves-four-midable.6RBy2324iQSEe6Kc0eQA4S"
+      },
+      {
+        "label": "Formula1.com · 2017 race results",
+        "url": "https://www.formula1.com/en/results/2017/races"
+      }
+    ]
   }
 }

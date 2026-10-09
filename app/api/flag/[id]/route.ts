@@ -8,7 +8,11 @@ export async function GET(_req: Request, ctx: { params: Promise<{ id: string }> 
   const { id } = await ctx.params;
   const f = (FLAGS as Record<string, { vb: string; svg: string }>)[id];
   if (f) {
-    const body = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${f.vb}" fill="none">${f.svg}</svg>`;
+    let inner = f.svg;
+    // F1's China asset is a small rectangle on a white disc (unlike every other round flag) and vanishes at 20 px:
+    // keep F1's own stars, but let the red field fill the disc like the other flags.
+    if (id === "china") inner = inner.replace(/<path d="M28\.5081 55\.4193[^"]*" fill="white"\/>/, "").replace(/<rect x="5\.46648" y="12\.3679" width="46\.03" height="30\.6935" fill="#EE1C25"\/>/, '<circle cx="28.5" cy="27.72" r="27.7" fill="#EE1C25"/>');
+    const body = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${f.vb}" fill="none">${inner}</svg>`;
     return new Response(body, { headers: { "content-type": "image/svg+xml", "cache-control": "public, max-age=604800" } });
   }
   const a2 = (COUNTRY_A2 as Record<string, string>)[id];

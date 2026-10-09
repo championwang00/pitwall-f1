@@ -28,21 +28,21 @@ export default function SeasonGrid({ year, replay }: { year: number; replay?: Re
       <div className={s.grid} style={{ gridTemplateColumns: cols }}>
         <div className={s.gCorner}>车手 \ 分站</div>
         {done.map((r: any) => (
-          <EntityLink key={r.round} kind="circuit" id={r.circuit} href={`/races/${year}/${r.round}`} className={s.gHead}>
+          <EntityLink key={r.round} kind="race" id={`${year}-${r.round}`} className={s.gHead}>
             <img src={flag(r.country) ?? ""} alt={gpZh(r.gp)} /><span>{r.round}</span>
           </EntityLink>
         ))}
         {todo.map((r: any) => (
-          <Link key={r.round} href={`/races/${year}/${r.round}`} className={`${s.gHead} ${s.gHeadTodo}`} title={`${gpZh(r.gp)} · 前瞻`}>
+          <EntityLink key={r.round} kind="race" id={`${year}-${r.round}`} className={`${s.gHead} ${s.gHeadTodo}`}>
             <img src={flag(r.country) ?? ""} alt={gpZh(r.gp)} /><span>{r.round}</span>
-          </Link>
+          </EntityLink>
         ))}
         <div className={s.gHead}><span>积分</span></div>
         {replay && (
           <div className={s.gRow}>
             <div className={s.gReplayLabel}>计时回放</div>
             {done.map((r: any) => replay[r.round]
-              ? <ReplayButton key={r.round} sessionKey={replay[r.round]} year={year} className={s.gPlay} title={`回放 · ${year} ${gpZh(r.gp)} 正赛`} />
+              ? <ReplayButton key={r.round} sessionKey={replay[r.round]} year={year} round={r.round} className={s.gPlay} title={`回放 · ${year} ${gpZh(r.gp)} 正赛`} />
               : <span key={r.round} />)}
             {todo.map((r: any) => <span key={r.round} />)}
             <span />
@@ -58,8 +58,8 @@ export default function SeasonGrid({ year, replay }: { year: number; replay?: Re
               const f = by.get(`${d.driver}|${r.round}`);
               if (!f) return <span key={r.round} className="res none" />;
               return (
-                <Link key={r.round} href={`/races/${year}/${r.round}`} title={`${gpZh(r.gp)} · ${f.posText}`}
-                  className={`${resClassServer(f.pos, f.posText)}${f.pole ? " pole" : ""}${f.fl ? " fl" : ""}`}>{f.pos ?? "R"}</Link>
+                <EntityLink key={r.round} kind="race" id={`${year}-${r.round}`} title={`${gpZh(r.gp)} · ${f.posText}`}
+                  className={`${resClassServer(f.pos, f.posText)}${f.pole ? " pole" : ""}${f.fl ? " fl" : ""}`}>{f.pos ?? "R"}</EntityLink>
               );
             })}
             {todo.map((r: any) => <span key={r.round} className={s.gFuture} />)}

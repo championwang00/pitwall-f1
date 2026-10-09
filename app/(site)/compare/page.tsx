@@ -86,13 +86,13 @@ export default async function ComparePage({ searchParams }: { searchParams: Prom
             <Breadcrumb items={CRUMBS} style={{ position: "absolute", top: 20, left: 0, zIndex: 3, margin: 0 }} />
             {[{ d: A, id: a, img: imgA, col: colA, side: "a" as const }, { d: B, id: b, img: imgB, col: colB, side: "b" as const }].map(({ d, id, img, col, side }) => (
               <div key={side} className={`${s.side} ${side === "b" ? s.right : ""}`} style={{ ["--team" as any]: col }}>
-                {img && <img className={driverBust(id) ? s.bust : s.photo} src={img} alt="" />}
+                {img && <EntityLink kind="driver" id={id} preview={false} className="pic-link" title={zh(id, d.name)}><img className={driverBust(id) ? s.bust : s.photo} src={img} alt="" /></EntityLink>}
                 <div className={s.sideText}>
                   <EntityLink kind="driver" id={id} className={s.name} preview={false}>
                     <span className="lat">{d.first_name}</span>
                     <b className="lat" style={d.last_name.length > 8 ? { fontSize: "clamp(24px, 2.7vw, 40px)" } : undefined}>{d.last_name}</b>
                   </EntityLink>
-                  <p className={s.zh}>{flag(d.nationality_country_id) && <img src={flag(d.nationality_country_id)!} alt="" />}{zh(id, d.name)}</p>
+                  <p className={s.zh}>{flag(d.nationality_country_id) && <img src={flag(d.nationality_country_id)!} alt="" />}<EntityLink kind="driver" id={id} preview={false} className="hlink">{zh(id, d.name)}</EntityLink></p>
                   <Picker a={a} b={b} side={side} />
                 </div>
               </div>
@@ -137,11 +137,11 @@ export default async function ComparePage({ searchParams }: { searchParams: Prom
               </div>
               <div className={s.duel}>
                 {h2h.map((r: any) => (
-                  <Link key={r.year + "-" + r.round} href={`/races/${r.year}/${r.round}`} className={`${s.duelCol} ${r.aTeam === r.bTeam ? s.mates : ""}`} title={`${r.year} ${gpZh(r.gp)}`}>
+                  <EntityLink key={r.year + "-" + r.round} kind="race" id={`${r.year}-${r.round}`} className={`${s.duelCol} ${r.aTeam === r.bTeam ? s.mates : ""}`} title={`${r.year} ${gpZh(r.gp)}`}>
                     <span className={resClassServer(r.aPos, r.aText)}>{r.aPos ?? "R"}</span>
                     <span className={resClassServer(r.bPos, r.bText)}>{r.bPos ?? "R"}</span>
                     <em>{String(r.year).slice(2)}</em>
-                  </Link>
+                  </EntityLink>
                 ))}
               </div>
             </div>

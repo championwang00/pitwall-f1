@@ -61,9 +61,9 @@ export default function Explorer({ rows, cols, base, placeholder, defaultSort, f
             {list.slice(0, n).map((r) => (
               <tr key={r.id}>
                 <td>
-                  <EntityLink kind={kind} id={r.id} preview={false} className={s.name}>
+                  <EntityLink kind={kind} id={r.id} className={s.name}>
                     {faces && <img className={`avatar ${s.face}`} src={`/api/face/${r.id}?v=3&s=48`} alt="" loading="lazy" width={24} height={24} />}
-                    {r.logo && <span className={s.badge} style={{ background: r.color }}><img src={`/api/logo/${r.id}?r=3&v=white`} alt="" loading="lazy" /></span>}
+                    {r.logo && <span className={s.badge} style={{ background: r.color }}><img src={`/api/logo/${r.id}?r=11&v=white`} alt="" loading="lazy" /></span>}
                     {r.flag && <img className={s.flag} src={r.flag} alt="" width={20} />}
                     {latinFirst ? <><b className="lat">{r.name}</b>{r.zh && <span>{r.zh}</span>}</> : r.zh ? <><b>{r.zh}</b><span className="lat">{r.name}</span></> : <b className="lat">{r.name}</b>}
                     {r.sub && <em>{r.sub}</em>}
