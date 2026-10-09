@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import { stripTypeScriptTypes } from 'node:module';
+let changed=false;const loaded=[];
+const image={src:'/first-screen.png',currentSrc:'/first-screen.png',getBoundingClientRect:()=>({width:100,height:100,top:0,bottom:100}),decode:async()=>{},set loading(v){changed=true;}};
+globalThis.document={readyState:'complete',images:[image],fonts:{load:async()=>{}}};globalThis.innerHeight=720;
+globalThis.requestAnimationFrame=(cb)=>{cb(0);return 1};
+globalThis.Image=class {set src(v){loaded.push(v)} async decode(){}};
+globalThis.fetch=async()=>({ok:true,arrayBuffer:async()=>new ArrayBuffer(0)});
+const source=(await fs.readFile('lib/initialResources.ts','utf8')).replace('import { preloadReplay } from "./preloadReplay";', 'const preloadReplay = async (report) => report(1);');
+const {prepareInitialResources}=await import('data:text/javascript;base64,'+Buffer.from(stripTypeScriptTypes(source)).toString('base64'));
+await prepareInitialResources();
+assert.equal(changed,false,'Preloading must not mutate HTML that React has not hydrated');
+assert.deepEqual(loaded,['/first-screen.png'],'First-screen images should still be fetched before entry');
+console.log('PASS: image preloading preserves hydration markup');

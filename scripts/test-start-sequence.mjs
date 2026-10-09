@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import { stripTypeScriptTypes } from 'node:module';
+const source=await fs.readFile('lib/startSequence.ts','utf8');
+const {readStartSequence}=await import('data:text/javascript;base64,'+Buffer.from(stripTypeScriptTypes(source)).toString('base64'));
+const storage=(value)=>({getItem:()=>value});
+const prior={lit:3,progress:60,changedAt:1000};
+assert.deepEqual(readStartSequence(storage(JSON.stringify(prior)),1500),prior,'Remounting during light three must continue the same sequence');
+assert.equal(readStartSequence(storage('{broken'),1500),null);
+assert.equal(readStartSequence(storage(JSON.stringify({...prior,lit:6})),1500),null);
+assert.equal(readStartSequence(storage(JSON.stringify(prior)),700000),null,'An abandoned old sequence should not affect a fresh entry');
+assert.equal(readStartSequence({getItem(){throw new Error('storage blocked')}},1500),null);
+console.log('PASS: interrupted sequence resumes; stale and invalid state are ignored');

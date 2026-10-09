@@ -20,7 +20,13 @@ export async function prepareInitialResources(onProgress?: (completed: number, t
     document.fonts.load('700 14px "Formula1"'),
     document.fonts.load('400 20px "Formula1 Wide"'),
     document.fonts.load('500 14px "Noto Sans SC"'),
-    ...images.map((image) => { image.loading = "eager"; return image.decode(); }),
+    ...images.map((image) => {
+      // Some streamed sections have not hydrated yet. Warm the same URL without
+      // changing their server-rendered attributes underneath React.
+      const preload = new Image();
+      preload.src = image.currentSrc || image.src;
+      return preload.decode();
+    }),
     fetch("/sounds/f1-engine-launch.wav", { cache: "force-cache" }).then((response) => {
       if (!response.ok) throw new Error("Engine preload failed");
       return response.arrayBuffer();

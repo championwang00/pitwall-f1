@@ -3,6 +3,7 @@
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { prepareInitialResources } from "@/lib/initialResources";
+import { readStartSequence, START_SEQUENCE_KEY, type StartSequence } from "@/lib/startSequence";
 import s from "./race-loading.module.css";
 import shell from "./shell.module.css";
 
@@ -182,6 +183,7 @@ export default function RaceLoadingProvider({ children }: { children: React.Reac
   const preview = async (home = false) => {
     // Keep the audio context in this document: a reload loses the click's activation.
     if (!mutedRef.current) void unlockAudio();
+    try { sessionStorage.removeItem(START_SEQUENCE_KEY); } catch {}
     setStarted(true);
     setRevealing(false);
     setProgress(0);
@@ -197,10 +199,11 @@ export default function RaceLoadingProvider({ children }: { children: React.Reac
   return (
     <Context.Provider value={{ register, preview }}>
       <div inert={visible || !entryChecked} style={{ visibility: (visible && !revealing) || !entryChecked ? "hidden" : "visible" }}>{children}</div>
+      {!entryChecked && <div className={s.entryCover} aria-hidden="true" />}
       {visible && <RaceLights key={run} pending={pending > 0} started={started} progress={progress} soundOn={!muted && audioReady} soundBlocked={!muted && !audioReady}
         onTone={playTone} onEngine={playEngine} onReveal={() => setRevealing(true)} onSound={toggleSound} onComplete={() => {
           setVisible(false);
-          try { sessionStorage.setItem("pitwall-grid-ready", "yes"); } catch {}
+          try { sessionStorage.setItem("pitwall-grid-ready", "yes"); sessionStorage.removeItem(START_SEQUENCE_KEY); } catch {}
         }} />}
     </Context.Provider>
   );
@@ -210,19 +213,27 @@ function RaceLights({ pending, started, progress, soundOn, soundBlocked, onTone,
   pending: boolean; started: boolean; progress: number; soundOn: boolean; soundBlocked: boolean; onTone: () => void;
   onEngine: () => Promise<void>; onReveal: () => void; onSound: () => void; onComplete: () => void;
 }) {
-  const [lit, setLit] = useState(0);
+  // React may recreate a streamed subtree while its client code arrives. Keep
+  // the ritual's place independently of that subtree, until it has completed.
+  const [resume] = useState(() => {
+    try { return readStartSequence(sessionStorage); } catch { return null; }
+  });
+  const [lit, setLit] = useState(resume?.lit ?? 0);
+  const changedAt = useRef(resume?.changedAt ?? Date.now());
   const [reduced, setReduced] = useState(false);
   const [allLightsHeld, setAllLightsHeld] = useState(false);
-  const [displayProgress, setDisplayProgress] = useState(0);
-  const progressValue = useRef(0);
+  const [displayProgress, setDisplayProgress] = useState(resume?.progress ?? 0);
+  const progressValue = useRef(resume?.progress ?? 0);
   const effectiveLit = reduced && started ? 5 : lit;
-  const targetProgress = Math.min(pending ? progress : 100, effectiveLit * 20);
+  const targetProgress = Math.max(resume?.progress ?? 0, Math.min(pending ? progress : 100, effectiveLit * 20));
   const [lightsOut, setLightsOut] = useState(false);
   const readyToLaunch = started && !pending && allLightsHeld && displayProgress === 100;
   const exiting = lightsOut;
+  const launched = useRef(false);
 
   useEffect(() => {
-    if (!readyToLaunch) return;
+    if (!readyToLaunch || launched.current) return;
+    launched.current = true;
     setLightsOut(true);
     // Begin the reveal with the engine; its tail continues over the arriving page.
     void onEngine().catch(() => {});
@@ -243,16 +254,17 @@ function RaceLights({ pending, started, progress, soundOn, soundBlocked, onTone,
   useEffect(() => {
     if (!started || reduced || lit >= 5) return;
     const timer = setTimeout(() => {
+      changedAt.current = Date.now();
       setLit((n) => n + 1);
       onTone();
-    }, [350, 700, 760, 700, 800][lit]);
+    }, Math.max(0, changedAt.current + [350, 700, 760, 700, 800][lit] - Date.now()));
     return () => clearTimeout(timer);
   }, [started, lit, reduced, onTone]);
 
   useEffect(() => {
     if (!started || effectiveLit < 5) return;
     // Let the last recorded tone finish and keep all five columns visibly lit.
-    const timer = setTimeout(() => setAllLightsHeld(true), 600);
+    const timer = setTimeout(() => setAllLightsHeld(true), Math.max(0, changedAt.current + 600 - Date.now()));
     return () => clearTimeout(timer);
   }, [started, effectiveLit]);
 
@@ -260,16 +272,22 @@ function RaceLights({ pending, started, progress, soundOn, soundBlocked, onTone,
     let frame: number;
     let began: number | undefined;
     const from = progressValue.current;
+    const to = Math.max(from, targetProgress);
     const tick = (time: number) => {
       began ??= time;
       const fraction = Math.min(1, (time - began) / 280);
-      progressValue.current = Math.round(from + (targetProgress - from) * fraction);
+      progressValue.current = Math.round(from + (to - from) * fraction);
       setDisplayProgress(progressValue.current);
       if (fraction < 1) frame = requestAnimationFrame(tick);
     };
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
   }, [targetProgress]);
+
+  useEffect(() => {
+    const saved: StartSequence = { lit: effectiveLit, progress: displayProgress, changedAt: changedAt.current };
+    try { sessionStorage.setItem(START_SEQUENCE_KEY, JSON.stringify(saved)); } catch {}
+  }, [effectiveLit, displayProgress]);
 
   useEffect(() => {
     if (!exiting) return;
