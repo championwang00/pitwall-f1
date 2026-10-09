@@ -64,7 +64,7 @@ export default function RaceLoadingProvider({ children }: { children: React.Reac
     let active = true;
     void prepareInitialResources((completed, total) => {
       if (active) setProgress(Math.round(completed / total * 100));
-    }).catch(() => {}).finally(release);
+    }, (routes) => routes.forEach((route) => router.prefetch(route))).catch(() => {}).finally(release);
     router.prefetch("/cars");
     router.prefetch(`/seasons/${new Date().getFullYear()}`);
     return () => { active = false; release(); };
@@ -190,7 +190,7 @@ export default function RaceLoadingProvider({ children }: { children: React.Reac
     const release = register();
     void prepareInitialResources((completed, total) => {
       setProgress(Math.round(completed / total * 100));
-    }).catch(() => {}).finally(release);
+    }, (routes) => routes.forEach((route) => router.prefetch(route))).catch(() => {}).finally(release);
     if (home) router.push("/live");
   };
 

@@ -1,5 +1,7 @@
+import { preloadReplay } from "./preloadReplay";
+
 /** Warm the current screen without making external assets a hard dependency. */
-export async function prepareInitialResources(onProgress?: (completed: number, total: number) => void) {
+export async function prepareInitialResources(onProgress?: (completed: number, total: number) => void, prefetch: (routes: string[]) => void = () => {}) {
   let timeout: ReturnType<typeof setTimeout> | undefined;
   let stopWaitingForWindow: (() => void) | undefined;
   const loaded = document.readyState === "complete" ? Promise.resolve() : new Promise<void>((resolve) => {
@@ -29,13 +31,16 @@ export async function prepareInitialResources(onProgress?: (completed: number, t
     }),
   ];
   let completed = 0;
-  onProgress?.(completed, tasks.length);
+  let replayFraction = 0;
+  const report = () => onProgress?.(Math.round((0.2 * completed / tasks.length + 0.8 * replayFraction) * 100), 100);
+  report();
+  const replay = preloadReplay((fraction) => { replayFraction = fraction; report(); }, prefetch).catch(() => { replayFraction = 1; report(); });
   const work = Promise.allSettled(tasks.map((task) => Promise.resolve(task).then(
-    (value) => { onProgress?.(++completed, tasks.length); return value; },
-    (error) => { onProgress?.(++completed, tasks.length); throw error; },
+    (value) => { ++completed; report(); return value; },
+    (error) => { ++completed; report(); throw error; },
   )));
   try {
-    await Promise.race([work, new Promise<void>((resolve) => { timeout = setTimeout(resolve, 2500); })]);
+    await Promise.race([Promise.allSettled([work, replay]), new Promise<void>((resolve) => { timeout = setTimeout(resolve, 12000); })]);
   } finally {
     clearTimeout(timeout);
     stopWaitingForWindow?.();

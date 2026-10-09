@@ -1,5 +1,6 @@
 "use client";
 
+import { preparedJSON, peekPreparedJSON } from "@/lib/preparedJSON";
 import Icon from "@/components/ui/Icon";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { DRIVERS_2026 } from "@/lib/assets";
@@ -29,14 +30,14 @@ type Load =
 
 const POLL_MS = 5000;
 
-async function getJSON(url: string): Promise<{ ok: boolean; status: number; data: unknown }> {
-  try {
-    const r = await fetch(url, { cache: "no-store" });
-    const data = await r.json().catch(() => null);
-    return { ok: r.ok, status: r.status, data };
-  } catch {
-    return { ok: false, status: 0, data: null };
-  }
+const getJSON = (url: string, reuse = false) => preparedJSON(url, reuse);
+
+function preparedReplay(key: number | null): Load | null {
+  if (key == null) return null;
+  const responses = ENDPOINTS.map((ep) => peekPreparedJSON(`/api/openf1/${ep}?session_key=${key}`));
+  if (responses.some((r) => !r?.ok)) return null;
+  const raw = Object.fromEntries(ENDPOINTS.map((ep, index) => [ep, Array.isArray(responses[index]!.data) ? responses[index]!.data : []])) as Raw;
+  return raw.laps.length ? { st: "ready", raw } : null;
 }
 
 function fmtTrackDate(iso: string, gmt: string, time = false) {
@@ -91,7 +92,7 @@ export default function LiveTiming({
   }, [weekends]);
   const [key, setKey] = useState<number | null>(initialKey);
   const [notice, setNotice] = useState<string | null>(null);
-  const [load, setLoad] = useState<Load>({ st: "loading" });
+  const [load, setLoad] = useState<Load>(() => (initialKey !== liveKey ? preparedReplay(initialKey) : null) ?? { st: "loading" });
   const [nonce, setNonce] = useState(0);
   const [points, setPoints] = useState<[number, number, number][] | null>(null);
   const [ab, setAb] = useState<{ a: number | null; b: number | null; next: "a" | "b" }>({ a: initialA, b: initialB, next: "b" });
@@ -137,10 +138,12 @@ export default function LiveTiming({
   useEffect(() => {
     if (!session) return;
     let dead = false;
+    const prepared = !live ? preparedReplay(session.session_key) : null;
+    if (prepared) { setLoad(prepared); return; }
     setLoad({ st: "loading" });
     if (!live && Date.parse(session.date_start) > Date.now() + 60e3) { setLoad({ st: "future" }); return; }
     (async () => {
-      const res = await Promise.all(ENDPOINTS.map((ep) => getJSON(`/api/openf1/${ep}?session_key=${session.session_key}`)));
+      const res = await Promise.all(ENDPOINTS.map((ep) => getJSON(`/api/openf1/${ep}?session_key=${session.session_key}`, !live)));
       if (dead) return;
       const by = Object.fromEntries(ENDPOINTS.map((ep, i) => [ep, res[i]])) as Record<Endpoint, (typeof res)[number]>;
       const core = [by.drivers, by.laps];
@@ -267,7 +270,7 @@ export default function LiveTiming({
     if (!circuit) return;
     let dead = false;
     setPoints(null);
-    getJSON(`/api/track/${encodeURIComponent(circuit)}`).then((r) => {
+    getJSON(`/api/track/${encodeURIComponent(circuit)}`, true).then((r) => {
       if (!dead) setPoints(r.ok ? ((r.data as { points: [number, number, number][] }).points ?? null) : null);
     });
     return () => { dead = true; };

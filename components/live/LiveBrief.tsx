@@ -1,5 +1,6 @@
 "use client";
 
+import { preparedJSON } from "@/lib/preparedJSON";
 import { useEffect, useState } from "react";
 import s from "./live.module.css";
 import EntityLink from "@/components/entity/EntityLink";
@@ -19,7 +20,7 @@ export default function LiveBrief({ circuit, a, b, year }: { circuit: string | u
     if (!circuit) return;
     const acr = [a, b].filter(Boolean).join(",");
     let alive = true;
-    fetch(`/api/talk?circuit=${circuit}&acr=${acr}`).then((r) => r.json()).then((d) => alive && setData(d)).catch(() => {});
+    preparedJSON(`/api/talk?circuit=${circuit}&acr=${acr}`).then((r) => { if (alive && r.ok) setData(r.data as Data); }).catch(() => {});
     return () => { alive = false; };
   }, [circuit, a, b]);
   if (!data) return null;
