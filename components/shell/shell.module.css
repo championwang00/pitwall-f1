@@ -1,0 +1,110 @@
+/* formula1.com masthead: 64px carbon bar + original stripe texture + transparent→carbon fade */
+.header { position: sticky; top: 0; z-index: 50; background: var(--carbon); color: #fff; view-transition-name: site-header; }
+.barWrap { position: relative; }
+.texture { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.texture img { position: absolute; left: 200px; top: 0; width: calc(100% - 200px); max-width: none; height: auto; opacity: .15; }
+.fade { position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(180deg, rgb(21 21 30 / 0) 0%, rgb(21 21 30 / 1) 100%); }
+.bar { position: relative; z-index: 2; max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); height: 64px; display: flex; align-items: stretch; gap: 44px; }
+.brand { display: flex; align-items: center; gap: 12px; position: relative; }
+.mark { display: inline-flex; gap: 3px; transform: skewX(-28deg); }
+.mark i { display: block; width: 18px; height: 14px; background: var(--f1-red); border-radius: 1px 6px 1px 1px; }
+.mark i:last-child { width: 10px; }
+.word { font-family: var(--font-wide); font-size: 20px; letter-spacing: .03em; }
+/* nav: Formula1 16px regular, 4/8 padding, 2px bottom rule (white on hover, red when current; weight 500) */
+.nav { display: flex; gap: 32px; position: relative; height: 100%; }
+.nav a { display: flex; align-items: center; gap: 8px; padding: 4px 8px 0; font-family: var(--font-display); font-size: 16px; line-height: 16px; font-weight: 500; color: #fff; border-bottom: 2px solid transparent; transition: border-color .2s; }
+.nav a:hover { border-color: #fff; }
+.navOn { font-weight: 800 !important; border-bottom: 3px solid var(--f1-red) !important; }
+.liveDot, .idleDot { width: 7px; height: 7px; border-radius: 50%; }
+.liveDot { background: var(--f1-red); box-shadow: 0 0 0 0 rgba(225,6,0,.6); animation: pulse 1.6s infinite; }
+.idleDot { background: #606066; }
+@keyframes pulse { 70% { box-shadow: 0 0 0 7px rgba(225,6,0,0); } 100% { box-shadow: 0 0 0 0 rgba(225,6,0,0); } }
+.tools { margin-left: auto; display: flex; align-items: center; gap: 20px; position: relative; }
+.util { font-family: var(--font-display); font-size: 14px; color: #fff; padding: 6px 0; border-bottom: 1px solid transparent; }
+.util:hover { border-color: #fff; }
+.search { display: flex; align-items: center; gap: 8px; font-family: var(--font-display); font-size: 14px; color: #fff; position: relative; padding: 6px 0; border-bottom: 1px solid transparent; }
+.search:hover { border-color: #fff; }
+
+/* event tracker strip (formula1.com, measured): carbon, 1px #303037 bottom rule, py 8, two rows gap 4 —
+   [round flag 12 · GP name Formula1 12/16 · chevron] / [session Formula1 16/22 500 | KH Interference 16 bold digits + 12 unit letters] */
+.ticker { background: var(--carbon); border-top: 1px solid #303037; border-bottom: 1px solid #303037; }
+.tickerIn { max-width: var(--maxw); margin: 0 auto; padding: 8px var(--gutter); min-height: 60px; display: flex; align-items: center; gap: 24px; }
+.tracker { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.tickerGp { display: flex; align-items: center; gap: 4px; font-family: var(--font-display); font-size: 12px; line-height: 16px; font-weight: 400; }
+.tickerGp img { width: 12px; }
+.tickerGp:hover span { text-decoration: underline; text-underline-offset: 3px; }
+.tickerRow { display: flex; align-items: center; gap: 12px; }
+.tickerSession { font-family: var(--font-display); font-size: 16px; line-height: 22px; font-weight: 500; }
+.tickerSep { width: 1px; align-self: stretch; background: #fff; opacity: .2; }
+.tickerCount { display: flex; align-items: flex-end; gap: 2px; }
+.tickerNum { font: 700 16px/16px var(--font-tech); }
+.tickerUnit { font: 400 12px/12px var(--font-tech); font-style: normal; color: #e0dedc; padding-right: 2px; }
+.tickerLive { display: flex; align-items: center; gap: 8px; color: #fff; font-family: var(--font-display); font-weight: 500; font-size: 14px; }
+.tickerLive i { width: 7px; height: 7px; border-radius: 50%; background: var(--f1-red); animation: pulse 1.6s infinite; }
+.tickerCal, .tickerCal2 { font-size: 13px; font-weight: 600; color: #fff; display: inline-flex; align-items: center; gap: 6px; border-bottom: 1px solid transparent; padding: 4px 0; }
+.tickerCal { margin-left: auto; }
+.tickerCal:hover, .tickerCal2:hover { border-color: #fff; }
+
+.kOverlay { position: fixed; inset: 0; z-index: 100; background: rgba(10,10,14,.55); backdrop-filter: blur(6px); display: flex; justify-content: center; padding-top: 12vh; animation: fade .18s ease-out; }
+@keyframes fade { from { opacity: 0; } }
+.k { width: min(680px, calc(100vw - 32px)); max-height: 70vh; display: flex; flex-direction: column; background: #fff; color: var(--ink); border-radius: 14px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.35); animation: pop .22s var(--ease-out); }
+@keyframes pop { from { transform: translateY(8px) scale(.98); opacity: 0; } }
+.kInput { border: 0; outline: 0; font: inherit; font-size: 17px; padding: 20px 22px; border-bottom: 1px solid var(--line); }
+.kList { list-style: none; margin: 0; padding: 6px; overflow: auto; }
+.kList li { display: grid; grid-template-columns: 44px 1fr auto; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 8px; cursor: pointer; }
+.kSel { background: var(--paper); }
+.kKind { font-size: 11px; font-weight: 700; color: var(--mute); }
+.kTitle { display: flex; gap: 10px; align-items: baseline; min-width: 0; }
+.kTitle b { font-weight: 700; }
+.kTitle span { color: var(--mute); font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.kTitle b + span { font-size: 13px; }
+.kMeta { font-size: 12px; color: var(--mute); white-space: nowrap; }
+.kEmpty { color: var(--mute); font-size: 14px; display: block !important; padding: 18px !important; }
+
+.footer { background: #0e0e14; color: #8a8a94; font-size: 13px; line-height: 1.7; }
+.footIn { max-width: var(--maxw); margin: 0 auto; padding: 56px var(--gutter) 40px; display: grid; grid-template-columns: 1.2fr 2fr; gap: 48px; }
+.footBrand { color: #fff; font-family: var(--font-wide); font-size: 18px; }
+.footCols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.footCols h4 { color: #fff; font: 700 14px/16px var(--font-display); margin-bottom: 12px; }
+.footCols a { display: block; color: #8a8a94; }
+.footCols a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.footLine { height: 1px; background: #26262f; }
+
+@media (max-width: 1100px) { .nav { gap: 12px; } .bar { gap: 24px; } }
+/* desktop: header + ticker sit on the page grid — 168px year-rail column, then content padded by --gutter */
+@media (min-width: 961px) {
+  .bar { max-width: none; margin: 0; padding: 0 var(--gutter) 0 0; gap: 0; }
+  /* the brand fits inside the rail column (18px inset like the rail's text, ≤ 140px wide) */
+  .brand { flex: 0 0 168px; width: 168px; min-width: 0; padding-left: 18px; gap: 8px; overflow: hidden; }
+  .mark { gap: 2px; margin-left: 3px; }
+  .mark i { width: 12px; height: 10px; }
+  .mark i:last-child { width: 7px; }
+  .word { font-size: 11px; letter-spacing: .02em; }
+  .nav { margin-left: calc(var(--gutter) - 8px); }
+  /* ticker starts at the logo's left edge (user: same visual start as PITWALL), ends at the content edge */
+  .tickerIn { max-width: none; margin: 0; padding: 8px var(--gutter) 8px 18px; }
+  /* rail hidden (/live — YearRail sets html[data-rail=off]): content starts at --gutter, so the strip does too;
+     the brand keeps its 18px inset */
+  :global(html[data-rail="off"]) .tickerIn { padding-left: var(--gutter); }
+  /* …and the logo too: one left edge for logo, strip and page content (user) */
+  :global(html[data-rail="off"]) .brand { padding-left: var(--gutter); flex-basis: calc(150px + var(--gutter)); width: calc(150px + var(--gutter)); }
+}
+.util, .search span, .tickerGp, .tickerCal, .tickerCal2, .tickerSession { white-space: nowrap; }
+@media (max-width: 860px) {
+  .nav { position: fixed; left: 0; right: 0; bottom: 0; height: 56px; background: var(--carbon); justify-content: space-around; gap: 0; border-top: 1px solid #303037; z-index: 60; }
+  .nav a { font-size: 13px; border-bottom: 0; border-top: 3px solid transparent; padding: 0 4px; }
+  .nav a:hover { border-color: transparent; }
+  .navOn { border-bottom: 0 !important; border-top: 3px solid var(--f1-red) !important; }
+  .tickerCal2 { display: none; }
+  .footIn { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .bar { gap: 16px; }
+  .word { font-size: 16px; }
+  .mark i { width: 14px; height: 11px; }
+  .mark i:last-child { width: 8px; }
+  .tools { gap: 14px; }
+  .search span, .util { display: none; }
+  .tickerIn { gap: 10px; }
+  .texture img { left: 80px; width: calc(100% - 80px); }
+}

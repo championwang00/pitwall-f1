@@ -1,0 +1,22 @@
+/* Year-hub tabs & era page: one light surface system (paper page, white cards radius 8), F1 type for numbers. */
+.eraHead { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 56px; }
+/* key rules: white card, F1 numerals 01 / 02 … */
+.rules { margin: 0; padding: 0; list-style: none; counter-reset: r; display: flex; flex-direction: column; background: #fff; border-radius: 8px; overflow: hidden; }
+.rules li { counter-increment: r; padding: 14px 16px 14px 52px; position: relative; font-size: 14px; line-height: 1.7; }
+.rules li + li { border-top: 1px solid #e0dedc; }
+.rules li::before { content: counter(r, decimal-leading-zero); position: absolute; left: 16px; top: 14px; font: 500 16px/24px var(--font-display); color: #606066; }
+.sources { font-size: 12px; color: var(--mute); margin-top: 12px; display: flex; flex-wrap: wrap; gap: 4px 12px; }
+.sources a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* one-line summary above a tab grid: 「6 位分站冠军 · 1 位新秀」 — numbers in Formula1 */
+.summary { display: flex; flex-wrap: wrap; gap: 10px 28px; margin-bottom: 24px; font-size: 14px; color: var(--mute); }
+.summary b { color: var(--ink); font-family: var(--font-display); font-weight: 500; }
+.summary span > b:first-child:not(:only-child) { margin-right: 2px; }
+.of { font-size: .75em; opacity: .6; margin-left: 1px; }
+.dteams { display: flex; flex-wrap: wrap; gap: 4px 12px; }
+
+/* white card holding a table / chart on the paper page */
+.card { background: #fff; border-radius: 8px; padding: 0 16px 4px; overflow-x: auto; }
+.card :global(.tbl) tr:last-child td { border-bottom: 0; }
+
+@media (max-width: 960px) { .eraHead { grid-template-columns: 1fr; gap: 32px; } }

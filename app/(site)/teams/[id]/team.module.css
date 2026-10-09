@@ -1,0 +1,55 @@
+/* the DRS-D texture covers the lower part of the hero (formula1.com team card / hero), taller than on cards */
+.hero::before { height: 260px !important; opacity: .8 !important; }
+.logoRow { display: flex; align-items: center; gap: 22px; margin-top: 28px; }
+/* formula1.com TeamLogo: round tile in the bright team colour, white logo at 80% */
+.logo { width: 72px; height: 72px; border-radius: 50%; background: var(--c); display: grid; place-items: center; flex: none; box-shadow: 0 0 0 2px rgba(255,255,255,.18); }
+.logo img { width: 70%; height: 70%; object-fit: contain; }
+.lineage { display: flex; flex-wrap: wrap; gap: 8px 0; margin-top: 18px; font-size: 14px; color: rgba(255,255,255,.88); }
+.lineage > span { display: inline-flex; align-items: center; gap: 6px; }
+.arrow { margin: 0 6px; opacity: .6; }
+.lineage em { font-style: normal; font: 500 12px/16px var(--font-display); opacity: .75; }
+.carWrap { position: relative; display: flex; align-items: center; justify-content: center; }
+.carWrap::after { content: ""; position: absolute; left: 10%; right: 10%; bottom: 24%; height: 40px; background: radial-gradient(ellipse at center, rgba(0,0,0,.7), transparent 70%); filter: blur(8px); z-index: 0; }
+.car { position: relative; z-index: 1; }
+.car { width: 100%; max-width: 760px; margin-right: 0; animation: carIn 1.1s var(--ease-out) both; }
+@keyframes carIn { from { transform: translateX(14%); opacity: 0; } }
+
+.years { display: flex; flex-direction: column; }
+.yRow { display: grid; grid-template-columns: 110px minmax(160px, 260px) 1fr; gap: 24px; padding: 14px 0; border-top: 1px solid var(--line); align-items: start; }
+.yYear { display: flex; flex-direction: column; gap: 2px; }
+.yYear .num { font-size: 22px; font-weight: 900; line-height: 26px; }
+.yYear em { font: 500 12px/16px var(--font-display); font-style: normal; color: var(--mute); }
+.yRow { transition: background .12s; }
+.yRow:hover { background: color-mix(in srgb, currentColor 5%, transparent); }
+.yOn { background: #fff; border-radius: 8px; border-top-color: transparent; padding-left: 14px; padding-right: 14px; margin: 0 -14px; }
+.yOn + .yRow { border-top-color: transparent; }
+.yCars { display: flex; flex-direction: column; gap: 6px; }
+.yCar { display: flex; flex-direction: column; }
+.yCar b { font: 500 16px/20px var(--font-display); }
+.yCar:hover b { text-decoration: underline; text-underline-offset: 4px; }
+.yCar span { font-size: 12px; color: var(--mute); }
+.yDrivers { display: flex; flex-wrap: wrap; gap: 8px; }
+.yDriver { display: inline-flex; align-items: center; gap: 8px; background: #fff; border-radius: 999px; padding: 4px 14px 4px 5px; font-size: 13px; transition: box-shadow .15s; max-width: 100%; }
+.yChamp { padding-right: 8px; }
+.yDriver:hover { box-shadow: 0 0 0 4px color-mix(in srgb, var(--ink) 8%, transparent); }
+.yDriver em { font-family: var(--font-display); }
+@media (max-width: 760px) { .yRow { grid-template-columns: 1fr; gap: 8px; } .car { width: 110%; margin-right: 0; } }
+.dec { font: 500 16px/20px var(--font-display); color: var(--mute); padding: 18px 0 6px; list-style: none; }
+details > summary.dec { cursor: pointer; }
+details > summary.dec::-webkit-details-marker { display: none; }
+.dec em { font-family: var(--font-cn); font-style: normal; font-weight: 500; font-size: 12px; margin-left: 10px; }
+details[open] > summary.dec em { display: none; }
+
+/* additions: hero honours, year links, constructor-title laurel next to the year */
+.honours { display: flex; flex-wrap: wrap; gap: 12px 26px; align-items: center; margin-bottom: 24px; }
+.honours > * { flex: none; }
+.yl { color: inherit; }
+.yl:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+.yHead { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; }
+.lt { font-size: 11px; letter-spacing: 0; }
+@media (max-width: 760px) {
+  .logoRow { gap: 14px; }
+  .logo { width: 52px; height: 52px; border-radius: 12px; }
+  .logo img { width: 34px; height: 34px; }
+  .logoRow h1 { font-size: clamp(26px, 8.4vw, 56px) !important; min-width: 0; overflow-wrap: anywhere; }
+}

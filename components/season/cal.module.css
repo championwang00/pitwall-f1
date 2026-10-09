@@ -1,0 +1,37 @@
+/* 赛历 tab — formula1.com Schedule on the light page surface (#F7F4F1, white radius-8 cards).
+   Dark appears only as media: the Next race photo card and the globe card. */
+.feature { padding: 40px var(--gutter) 8px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 24px; align-items: stretch; }
+.feature > :only-child { grid-column: 1 / -1; }
+.col { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.colHead { font: 900 24px/28px var(--font-display); margin-top: 4px; }
+.one { list-style: none; margin: 0; padding: 0; display: flex; flex: 1; }
+.one > li { flex: 1; }
+
+/* Schedule grid */
+.schedule { padding: 48px var(--gutter) 56px; }
+.head { display: flex; align-items: flex-end; justify-content: space-between; gap: 8px 24px; flex-wrap: wrap; margin-bottom: 24px; }
+.sub { font: 600 13px/16px "Titillium Web", var(--font-cn); color: var(--mute); }
+.sub b { font: 500 13px/16px var(--font-display); color: var(--ink); }
+.grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; }
+
+/* globe — a dark media card inside the light page, not a full-bleed black band */
+.globeWrap { padding: 8px var(--gutter) 56px; }
+.globeCard { border-radius: 8px; min-height: 480px; }
+.globeTitle { font: 900 clamp(28px, 3.4vw, 44px)/1.1 var(--font-display), var(--font-cn); margin-top: 10px; }
+.globeTitle b { font-family: var(--font-display); font-weight: 900; }
+
+@media (max-width: 1180px) { .feature { grid-template-columns: 1fr; } }
+@media (max-width: 760px) {
+  .feature { padding: 24px 16px 0; }
+  .schedule { padding: 32px 16px 40px; }
+  .globeWrap { padding: 0 16px 40px; }
+  .grid { grid-template-columns: 1fr; gap: 12px; }
+}
+
+/* /calendar page head (formula1.com: big uppercase Formula1 title, red Add-to-calendar on the right) */
+.pageHead { padding: 40px var(--gutter) 24px; display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+.pageHead > div:first-child { display: flex; flex-direction: column; gap: 12px; max-width: 860px; }
+.pageTitle { font: 900 clamp(32px, 3.6vw, 52px)/1.1 var(--font-display); }
+.pageTitle a:hover { text-decoration: underline; text-underline-offset: 6px; }
+@media (max-width: 760px) { .pageHead { padding: 24px 16px 16px; } }
+.head .kicker, .col .kicker { margin-bottom: 6px; }

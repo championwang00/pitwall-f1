@@ -1,0 +1,2386 @@
+{
+  "melbourne": [
+    {
+      "tag": "最近一次",
+      "title": "皮亚斯特里主场未能发车",
+      "text": "2026年揭幕战排位第五的皮亚斯特里，在驶向发车格的勘察圈中因动力意外激增撞车，未能参加主场比赛，他的发车位空着，迈凯伦只剩诺里斯一辆车出战。",
+      "year": 2026,
+      "gp": "australia",
+      "circuit": "melbourne",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Australian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Australian_Grand_Prix"
+        },
+        {
+          "label": "Speedcafe · How Piastri could break 45-year Australian GP drought",
+          "url": "https://speedcafe.com/how-piastri-could-break-45-year-australian-gp-drought/"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "维斯塔潘末位追到第六",
+      "text": "2026年排位赛维斯塔潘后轴抱死，没有做出成绩，从第20位发车，正赛追到第六并跑出全场最快圈1分22秒091。拉塞尔领先安东内利2.974秒夺冠，并首次领跑车手积分榜。",
+      "year": 2026,
+      "gp": "australia",
+      "circuit": "melbourne",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Australian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Australian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "澳洲车手主场未登台",
+      "text": "澳大利亚大奖赛1985年进入世锦赛以来，从没有澳大利亚车手在主场站上领奖台，最好成绩只是第四名，例如韦伯2012年。2014年里卡多冲线后被取消成绩；2026年皮亚斯特里则没能发车。",
+      "year": null,
+      "gp": null,
+      "circuit": "melbourne",
+      "sources": [
+        {
+          "label": "Speedcafe · How Piastri could break 45-year Australian GP drought",
+          "url": "https://speedcafe.com/how-piastri-could-break-45-year-australian-gp-drought/"
+        },
+        {
+          "label": "Wikipedia · Australian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Australian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "舒马赫四胜最多",
+      "text": "舒马赫在2000至2002年和2004年四次赢得墨尔本的比赛，是阿尔伯特公园夺冠最多的车手；他2004年跑出的1分24秒125，至今仍是改道前旧布局的单圈纪录。",
+      "year": null,
+      "gp": null,
+      "circuit": "melbourne",
+      "sources": [
+        {
+          "label": "Wikipedia · Australian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Australian_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · Albert Park Circuit",
+          "url": "https://en.wikipedia.org/wiki/Albert_Park_Circuit"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "勒克莱尔的单圈纪录",
+      "text": "2022年改道后的正赛单圈纪录是勒克莱尔2024年驾驶法拉利跑出的1分19秒813；排位赛最快圈是诺里斯2025年的1分15秒096。",
+      "year": 2024,
+      "gp": "australia",
+      "circuit": "melbourne",
+      "sources": [
+        {
+          "label": "Wikipedia · Albert Park Circuit",
+          "url": "https://en.wikipedia.org/wiki/Albert_Park_Circuit"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "平时限速40公里",
+      "text": "一年中约九个月，阿尔伯特公园赛道的大部分路段是普通公路，社会车辆可以双向通行，限速多为每小时40公里。湖滨路段划有双实线禁止超车，还常有黑天鹅带着小天鹅横穿马路。",
+      "year": null,
+      "gp": null,
+      "circuit": "melbourne",
+      "sources": [
+        {
+          "label": "Wikipedia · Albert Park Circuit",
+          "url": "https://en.wikipedia.org/wiki/Albert_Park_Circuit"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "三次红旗与45万观众",
+      "text": "2023年澳大利亚站成为F1史上首场在同一节比赛中出现三次红旗的大奖赛。2024年比赛周末观众达到452055人次，创下当地纪录，现行合同延续到2035年。",
+      "year": null,
+      "gp": null,
+      "circuit": "melbourne",
+      "sources": [
+        {
+          "label": "Wikipedia · Australian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Australian_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · Albert Park Circuit",
+          "url": "https://en.wikipedia.org/wiki/Albert_Park_Circuit"
+        }
+      ]
+    }
+  ],
+  "shanghai": [
+    {
+      "tag": "最近一次",
+      "title": "四车没能发车的上海站",
+      "text": "2026年中国站两辆迈凯伦都因动力单元问题未能发车，博托莱托和阿尔本也因液压故障没有起步，维斯塔潘第45圈冷却液泄漏退赛，最终只有15辆车完赛。拉塞尔在前一天的冲刺赛中获胜，正赛则落后安东内利5.515秒获第二。",
+      "year": 2026,
+      "gp": "china",
+      "circuit": "shanghai",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Chinese Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Chinese_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "法拉利首次双车被取消成绩",
+      "text": "2025年皮亚斯特里拿下生涯首个杆位并夺冠，迈凯伦包揽前二。赛后勒克莱尔因赛车重量不足、汉密尔顿因底板磨损超标被取消成绩，这是法拉利首次双车被取消成绩；而汉密尔顿前一天刚为法拉利赢下首个冲刺赛冠军。",
+      "year": 2025,
+      "gp": "china",
+      "circuit": "shanghai",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Chinese Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Chinese_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "汉密尔顿六胜",
+      "text": "汉密尔顿在2008、2011、2014、2015、2017和2019年六次赢下中国站，是这里夺冠最多的车手。梅赛德斯以7胜成为最成功的车队，其中第7胜来自2026年的安东内利。",
+      "year": null,
+      "gp": null,
+      "circuit": "shanghai",
+      "sources": [
+        {
+          "label": "Wikipedia · Chinese Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Chinese_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "舒马赫纪录保持22年",
+      "text": "上海站的正赛单圈纪录仍是舒马赫2004年首届比赛驾驶法拉利F2004跑出的1分32秒238，自2004年保持至今。2006年的中国站也是舒马赫职业生涯的最后一场胜利。",
+      "year": 2004,
+      "gp": "china",
+      "circuit": "shanghai",
+      "sources": [
+        {
+          "label": "Wikipedia · Shanghai International Circuit",
+          "url": "https://en.wikipedia.org/wiki/Shanghai_International_Circuit"
+        },
+        {
+          "label": "Wikipedia · Chinese Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Chinese_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "稻田沼泽上的赛道",
+      "text": "上海国际赛车场所在地原是沼泽和稻田，需要大规模地基处理，施工期间每天约3000名工人作业，工期18个月，预算26亿元人民币。各车队的围场小楼仿照豫园，像湖中亭台一样排列。",
+      "year": null,
+      "gp": null,
+      "circuit": "shanghai",
+      "sources": [
+        {
+          "label": "Wikipedia · Shanghai International Circuit",
+          "url": "https://en.wikipedia.org/wiki/Shanghai_International_Circuit"
+        }
+      ]
+    }
+  ],
+  "suzuka": [
+    {
+      "tag": "最近一次",
+      "title": "安东内利铃鹿夺冠",
+      "text": "2026年安东内利从杆位出发，领先皮亚斯特里13.722秒夺冠，勒克莱尔第三。这是他生涯第二胜，赛后他成为2005年费斯切拉之后首位领跑车手积分榜的意大利车手。",
+      "year": 2026,
+      "gp": "japan",
+      "circuit": "suzuka",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Japanese Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Japanese_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "勺子弯事故引发规则调整",
+      "text": "2026年铃鹿正赛第20圈，贝尔曼在勺子弯为避让驶上草地后失控撞车，引出安全车。事故引发车手对新规则下电池与电能部署的批评，国际汽联随后计划在迈阿密站前调整规则。",
+      "year": 2026,
+      "gp": "japan",
+      "circuit": "suzuka",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Japanese Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Japanese_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "维斯塔潘铃鹿四连胜",
+      "text": "维斯塔潘2022至2025年连续四年在铃鹿从杆位出发夺冠，是首位连续四年赢下这里的车手。2025年他领先诺里斯约1.4秒冲线；2026年他从第11位起步只获第八，连胜就此终止。",
+      "year": null,
+      "gp": null,
+      "circuit": "suzuka",
+      "sources": [
+        {
+          "label": "Flashscore · Verstappen victorious at Japanese GP for fourth consecutive year",
+          "url": "https://www.flashscore.com/news/motorsport-formula-1-max-verstappen-victorious-at-japanese-grand-prix-for-fourth-consecutive-year/SnhXmuSI"
+        },
+        {
+          "label": "Wikipedia · 2026 Japanese Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Japanese_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "舒马赫六胜与13次加冕",
+      "text": "舒马赫六次赢得日本大奖赛，至今最多。日本大奖赛在40届世锦赛比赛中13次决出车手冠军，1987年至2003年间多次成为冠军决胜地。",
+      "year": null,
+      "gp": null,
+      "circuit": "suzuka",
+      "sources": [
+        {
+          "label": "Wikipedia · Japanese Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Japanese_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "新秀创下的圈速纪录",
+      "text": "铃鹿现行布局的正赛单圈纪录是安东内利2025年新秀赛季跑出的1分30秒965。同一场比赛，他还成为F1史上最年轻的领跑者和最年轻的最快圈创造者。",
+      "year": 2025,
+      "gp": "japan",
+      "circuit": "suzuka",
+      "sources": [
+        {
+          "label": "Wikipedia · Suzuka International Racing Course",
+          "url": "https://en.wikipedia.org/wiki/Suzuka_International_Racing_Course"
+        },
+        {
+          "label": "Wikipedia · 2025 Japanese Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Japanese_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "日本车手主场止步季军",
+      "text": "日本车手在主场的最好成绩是第三名：铃木亚久里1990年、小林可梦伟2012年，后者是22年来首位在日本站登上领奖台的日本车手。1990年约有300万人参与抽签，争夺12万张门票。",
+      "year": null,
+      "gp": null,
+      "circuit": "suzuka",
+      "sources": [
+        {
+          "label": "Wikipedia · Japanese Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Japanese_Grand_Prix"
+        }
+      ]
+    }
+  ],
+  "miami": [
+    {
+      "tag": "最近一次",
+      "title": "诺里斯拿下迈阿密冲刺赛",
+      "text": "2026年诺里斯从冲刺赛杆位出发，领先皮亚斯特里3.766秒获胜。正赛首弯安东内利和维斯塔潘都锁死刹车，维斯塔潘碰到勒克莱尔后打转；勒克莱尔最后一圈撞墙，被罚20秒降到第八。",
+      "year": 2026,
+      "gp": "miami",
+      "circuit": "miami",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Miami Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Miami_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "皮亚斯特里第四位起步夺冠",
+      "text": "2025年维斯塔潘拿到杆位但只获第四。皮亚斯特里从第四位起步，领先诺里斯4.630秒夺冠，取得个人连续第三场大奖赛胜利，拉塞尔第三；冲刺赛则由诺里斯获胜。",
+      "year": 2025,
+      "gp": "miami",
+      "circuit": "miami",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Miami Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Miami_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "五届只有一次杆位夺冠",
+      "text": "迈阿密办过的五届比赛中，只有2026年安东内利是杆位夺冠。维斯塔潘2023年从第9位起步获胜，诺里斯2024年和皮亚斯特里2025年也分别从第5位和第4位起步夺冠。",
+      "year": null,
+      "gp": null,
+      "circuit": "miami",
+      "sources": [
+        {
+          "label": "Wikipedia · Miami Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Miami_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2025 Miami Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Miami_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2026 Miami Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Miami_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "五届四位冠军",
+      "text": "迈阿密五届比赛产生了四位不同冠军，只有维斯塔潘赢过两次（2022、2023年）。2024年以来梅赛德斯动力连赢三届：两届迈凯伦、一届梅赛德斯厂队。",
+      "year": null,
+      "gp": null,
+      "circuit": "miami",
+      "sources": [
+        {
+          "label": "Wikipedia · Miami Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Miami_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "维斯塔潘的单圈纪录",
+      "text": "迈阿密国际赛车场的正赛单圈纪录是维斯塔潘2023年驾驶RB19跑出的1分29秒708，那场比赛他正是从第9位起步夺冠。",
+      "year": 2023,
+      "gp": "miami",
+      "circuit": "miami",
+      "sources": [
+        {
+          "label": "Wikipedia · Miami International Autodrome",
+          "url": "https://en.wikipedia.org/wiki/Miami_International_Autodrome"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "75套方案选出的布局",
+      "text": "迈阿密赛道2019年首次提出，设计方考虑过多达75种布局，对其中36种做了模拟。迈阿密花园市议会起初投票反对，2021年4月14日才改为同意；比赛合同现已延长至2041年。",
+      "year": null,
+      "gp": null,
+      "circuit": "miami",
+      "sources": [
+        {
+          "label": "Wikipedia · Miami International Autodrome",
+          "url": "https://en.wikipedia.org/wiki/Miami_International_Autodrome"
+        },
+        {
+          "label": "Wikipedia · Miami Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Miami_Grand_Prix"
+        }
+      ]
+    }
+  ],
+  "montreal": [
+    {
+      "tag": "最近一次",
+      "title": "首场冲刺与四连胜",
+      "text": "2026年蒙特利尔首次举办冲刺赛，拉塞尔从杆位出发获胜。正赛拉塞尔同样首发，但中途因赛车故障退赛，第二位起步的安东内利接过领先，取得个人连续第四胜；汉密尔顿从第5位追到第二。",
+      "year": 2026,
+      "gp": "canada",
+      "circuit": "montreal",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Canadian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Canadian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "福特23年后重返领奖台",
+      "text": "2026年加拿大站维斯塔潘从第6位起步获得第三，这是他和红牛本赛季首个领奖台，也是福特自2003年巴西站乔丹车队夺冠以来首次登上F1领奖台。",
+      "year": 2026,
+      "gp": "canada",
+      "circuit": "montreal",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Canadian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Canadian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "诺里斯撞上队友",
+      "text": "2025年拉塞尔从杆位出发夺冠，维斯塔潘第二，安东内利第三。第66圈诺里斯前翼碰到队友皮亚斯特里的后轮，随后撞墙退赛并公开道歉；红牛就拉塞尔在安全车期间的驾驶提出抗议，被干事驳回。",
+      "year": 2025,
+      "gp": "canada",
+      "circuit": "montreal",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Canadian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Canadian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "舒马赫与汉密尔顿各7胜",
+      "text": "舒马赫（1994至2004年间）和汉密尔顿（2007至2019年间）各赢过7次加拿大大奖赛，并列最多。吉尔·维伦纽夫1978年在蒙特利尔首届比赛中的胜利，至今仍是加拿大车手在主场的唯一冠军。",
+      "year": null,
+      "gp": null,
+      "circuit": "montreal",
+      "sources": [
+        {
+          "label": "Wikipedia · Canadian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Canadian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "博塔斯的单圈纪录",
+      "text": "吉尔·维伦纽夫赛道的正赛单圈纪录是博塔斯2019年跑出的1分13秒078；维特尔同年排位赛的1分10秒240更快，但不计入官方纪录。",
+      "year": 2019,
+      "gp": "canada",
+      "circuit": "montreal",
+      "sources": [
+        {
+          "label": "Wikipedia · Circuit Gilles Villeneuve",
+          "url": "https://en.wikipedia.org/wiki/Circuit_Gilles_Villeneuve"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "奥运赛艇池旁的赛道",
+      "text": "赛道将近一半路段沿着为1976年蒙特利尔奥运会赛艇和皮划艇项目修建的奥林匹克水道。2017年汉密尔顿在这里拿到杆位后，收到塞纳家人赠送的一顶塞纳头盔。",
+      "year": null,
+      "gp": null,
+      "circuit": "montreal",
+      "sources": [
+        {
+          "label": "Wikipedia · Circuit Gilles Villeneuve",
+          "url": "https://en.wikipedia.org/wiki/Circuit_Gilles_Villeneuve"
+        }
+      ]
+    }
+  ],
+  "monaco": [
+    {
+      "tag": "最近一次",
+      "title": "勒克莱尔重启后撞墙",
+      "text": "2026年安东内利杆位出发并跑出最快圈夺冠，汉密尔顿落后6.271秒获第二。主场作战的勒克莱尔在重启后于最后一个弯撞墙退赛，引发红旗；他在排位赛也曾在塔巴克弯碰到护栏。",
+      "year": 2026,
+      "gp": "monaco",
+      "circuit": "monaco",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Monaco Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Monaco_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "首个积分的得与失",
+      "text": "2026年维斯塔潘第一圈就因动力单元问题退赛，诺里斯第43圈因电池失去动力退赛。阿隆索获得第十，为阿斯顿·马丁拿到本季首个积分；冲线第十的佩雷兹因重启时抢跑被罚，凯迪拉克的首个积分得而复失。",
+      "year": 2026,
+      "gp": "monaco",
+      "circuit": "monaco",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Monaco Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Monaco_Grand_Prix"
+        },
+        {
+          "label": "AP via WTOP · Cadillac gets and then loses elusive 1st point as Pérez penalized",
+          "url": "https://wtop.com/news/2026/06/cadillac-gets-and-then-loses-elusive-1st-point-in-f1-as-sergio-perez-penalized/"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "强制两停的摩纳哥",
+      "text": "2025年摩纳哥站要求每车至少进站两次、至少使用三套轮胎。诺里斯杆位出发夺冠，这是迈凯伦2008年后首次赢下摩纳哥；威廉姆斯和Racing Bulls都曾让一车放慢速度，为队友制造进站空间。",
+      "year": 2025,
+      "gp": "monaco",
+      "circuit": "monaco",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Monaco Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Monaco_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "塞纳六胜无人能及",
+      "text": "塞纳在摩纳哥赢过6次，其中1989至1993年五连胜，是这里夺冠最多的车手；格雷厄姆·希尔和舒马赫各5胜。车队方面，迈凯伦以16胜居首。",
+      "year": null,
+      "gp": null,
+      "circuit": "monaco",
+      "sources": [
+        {
+          "label": "Wikipedia · Monaco Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Monaco_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "汉密尔顿的单圈纪录",
+      "text": "摩纳哥现行布局的正赛单圈纪录是汉密尔顿2021年驾驶梅赛德斯W12跑出的1分12秒909。排位赛方面，诺里斯2025年跑出1分09秒954后杆位夺冠。",
+      "year": 2021,
+      "gp": "monaco",
+      "circuit": "monaco",
+      "sources": [
+        {
+          "label": "Wikipedia · Circuit de Monaco",
+          "url": "https://en.wikipedia.org/wiki/Circuit_de_Monaco"
+        },
+        {
+          "label": "Wikipedia · Monaco Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Monaco_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "六周搭建三周拆除",
+      "text": "摩纳哥赛道每年需要六周时间搭建，赛后还要三周拆除。它也是F1唯一一条维修区车库不面向赛道的赛道。比赛合同已确认延长到2035年。",
+      "year": null,
+      "gp": null,
+      "circuit": "monaco",
+      "sources": [
+        {
+          "label": "Wikipedia · Circuit de Monaco",
+          "url": "https://en.wikipedia.org/wiki/Circuit_de_Monaco"
+        },
+        {
+          "label": "Wikipedia · Monaco Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Monaco_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "56岁的参赛纪录",
+      "text": "1955年摩纳哥大奖赛，56岁的摩纳哥本土车手路易·希龙出赛，成为F1世界锦标赛史上参赛时年龄最大的车手。",
+      "year": 1955,
+      "gp": "monaco",
+      "circuit": "monaco",
+      "sources": [
+        {
+          "label": "Wikipedia · Monaco Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Monaco_Grand_Prix"
+        }
+      ]
+    }
+  ],
+  "catalunya": [
+    {
+      "tag": "最近一次",
+      "title": "1968年后首个全英领奖台",
+      "text": "2026年巴塞罗那站汉密尔顿、拉塞尔和诺里斯包揽前三，这是1968年美国大奖赛后首次出现全英国车手领奖台。此前连赢五站的安东内利在末段与拉塞尔争位时前翼受损，最终退赛。",
+      "year": 2026,
+      "gp": "barcelona-catalunya",
+      "circuit": "catalunya",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Barcelona-Catalunya Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Barcelona-Catalunya_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "汉密尔顿第7胜破纪录",
+      "text": "汉密尔顿2026年的胜利是他在加泰罗尼亚赛道的第7胜，超越舒马赫的6胜，独占这条赛道的夺冠纪录。41岁的他也是1994年曼塞尔之后首位40岁以上的分站冠军。",
+      "year": 2026,
+      "gp": "barcelona-catalunya",
+      "circuit": "catalunya",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Barcelona-Catalunya Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Barcelona-Catalunya_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · Spanish Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Spanish_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "维斯塔潘撞拉塞尔被罚",
+      "text": "2025年皮亚斯特里杆位出发，领先诺里斯2.471秒夺冠，勒克莱尔第三。第64圈维斯塔潘在5号弯与拉塞尔碰撞，冲线第五后被罚10秒跌至第十；此前安东内利引擎故障停在10号弯砂石区，引出安全车。",
+      "year": 2025,
+      "gp": "spain",
+      "circuit": "catalunya",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Spanish Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Spanish_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "皮亚斯特里的单圈纪录",
+      "text": "2023年起F1取消末段减速弯，现行布局的正赛单圈纪录是皮亚斯特里2025年跑出的1分15秒743；带减速弯布局的纪录则是维斯塔潘2021年的1分18秒149。",
+      "year": 2025,
+      "gp": "spain",
+      "circuit": "catalunya",
+      "sources": [
+        {
+          "label": "Wikipedia · Circuit de Barcelona-Catalunya",
+          "url": "https://en.wikipedia.org/wiki/Circuit_de_Barcelona-Catalunya"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "阿隆索的两场主场胜利",
+      "text": "阿隆索2006年和2013年两次在加泰罗尼亚赛道夺冠，是世锦赛时代唯一赢得西班牙大奖赛的西班牙车手。2026年他驾驶阿斯顿·马丁在这里因电池故障停在赛道上退赛。",
+      "year": null,
+      "gp": null,
+      "circuit": "catalunya",
+      "sources": [
+        {
+          "label": "Wikipedia · Spanish Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Spanish_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2026 Barcelona-Catalunya Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Barcelona-Catalunya_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "与斯帕隔年轮换",
+      "text": "按现有协议，巴塞罗那-加泰罗尼亚大奖赛在2026至2032年的偶数年举办；比利时大奖赛则在2027至2032年间与它轮换，2027、2029和2031年在斯帕比赛。",
+      "year": null,
+      "gp": null,
+      "circuit": "catalunya",
+      "sources": [
+        {
+          "label": "Wikipedia · Spanish Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Spanish_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · Belgian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Belgian_Grand_Prix"
+        }
+      ]
+    }
+  ],
+  "spielberg": [
+    {
+      "tag": "最近一次",
+      "title": "拉塞尔首个奥地利杆位",
+      "text": "2026年拉塞尔拿到本季第四个、也是个人首个奥地利站杆位，并领先维斯塔潘1.611秒夺冠。排位赛最后一轮维斯塔潘在9号弯撞车，拉塞尔的杆位圈在黄旗下完成，干事认定他已充分减速。",
+      "year": 2026,
+      "gp": "austria",
+      "circuit": "spielberg",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Austrian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Austrian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "首圈相撞送走维斯塔潘",
+      "text": "2025年诺里斯杆位出发，领先皮亚斯特里2.695秒夺冠，勒克莱尔第三。第一圈安东内利在雷穆斯发夹弯锁死刹车撞上维斯塔潘，两人双双退赛，安东内利被罚下一站退后三位；博托莱托拿到生涯首个积分。",
+      "year": 2025,
+      "gp": "austria",
+      "circuit": "spielberg",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Austrian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Austrian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "维斯塔潘红牛环5胜",
+      "text": "维斯塔潘在红牛环赢过5次：2018、2019、2021和2023年的奥地利大奖赛，以及2021年的施蒂利亚大奖赛，2021年那两场都是杆位夺冠。2026年他从第5位起步获得第二。",
+      "year": null,
+      "gp": null,
+      "circuit": "spielberg",
+      "sources": [
+        {
+          "label": "Wikipedia · Austrian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Austrian_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · Red Bull Ring",
+          "url": "https://en.wikipedia.org/wiki/Red_Bull_Ring"
+        },
+        {
+          "label": "Wikipedia · 2026 Austrian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Austrian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "劳达是唯一主场冠军",
+      "text": "劳达1984年在奥地利环赛道夺冠，是世锦赛时代唯一赢得本土大奖赛的奥地利车手。2019年6月30日，红牛环的1号弯被命名为尼基·劳达弯。",
+      "year": 1984,
+      "gp": "austria",
+      "circuit": "spielberg",
+      "sources": [
+        {
+          "label": "Wikipedia · Red Bull Ring",
+          "url": "https://en.wikipedia.org/wiki/Red_Bull_Ring"
+        },
+        {
+          "label": "Wikipedia · Austrian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Austrian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "练习赛撞上一头鹿",
+      "text": "在老奥地利环赛道时期，1987年练习赛中约翰松驾车撞上一头鹿，侥幸没有受重伤；1986年沃里克在博世弯前测得每小时344公里的尾速。",
+      "year": null,
+      "gp": null,
+      "circuit": "spielberg",
+      "sources": [
+        {
+          "label": "Wikipedia · Red Bull Ring",
+          "url": "https://en.wikipedia.org/wiki/Red_Bull_Ring"
+        }
+      ]
+    }
+  ],
+  "silverstone": [
+    {
+      "tag": "最近一次",
+      "title": "最年轻的冲刺赛冠军",
+      "text": "2026年英国站安东内利赢下冲刺赛，成为F1史上最年轻的冲刺赛冠军。正赛末段原计划的重启因软件错误取消，比赛在安全车带领下结束；拉塞尔获得第二，是他在银石的首个领奖台。",
+      "year": 2026,
+      "gp": "great-britain",
+      "circuit": "silverstone",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 British Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_British_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "诺里斯首次赢下主场",
+      "text": "2025年诺里斯从第3位起步赢得首个英国大奖赛冠军，成为第13位在主场夺冠的英国车手，迈凯伦也取得2000年后首个银石一二名。皮亚斯特里因安全车重启前刹车异常被罚10秒，退居第二。",
+      "year": 2025,
+      "gp": "great-britain",
+      "circuit": "silverstone",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 British Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_British_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "汉密尔顿的主场领奖台",
+      "text": "汉密尔顿2025年在银石只获第四，连续12场主场领奖台的纪录就此中断，这是他2013年以来首次在银石无缘领奖台。2026年他代表法拉利获得第三，重回主场领奖台。",
+      "year": null,
+      "gp": null,
+      "circuit": "silverstone",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 British Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_British_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2026 British Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_British_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "维斯塔潘的单圈纪录",
+      "text": "银石现行布局的正赛单圈纪录是维斯塔潘2020年英国大奖赛跑出的1分27秒097。Copse弯通常以七、八挡约每小时290公里通过，Maggotts-Becketts连续弯的横向过载超过5g。",
+      "year": 2020,
+      "gp": "great-britain",
+      "circuit": "silverstone",
+      "sources": [
+        {
+          "label": "Wikipedia · Silverstone Circuit",
+          "url": "https://en.wikipedia.org/wiki/Silverstone_Circuit"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "一只羊引出的首场比赛",
+      "text": "1947年9月，银石的第一场赛车活动是一次自发组织的比赛，因一只羊在机场跑道上被撞死，被人们称作羊肉大奖赛。赛道前身是1943至1946年使用的皇家空军银石基地。",
+      "year": null,
+      "gp": null,
+      "circuit": "silverstone",
+      "sources": [
+        {
+          "label": "Wikipedia · Silverstone Circuit",
+          "url": "https://en.wikipedia.org/wiki/Silverstone_Circuit"
+        }
+      ]
+    }
+  ],
+  "spa-francorchamps": [
+    {
+      "tag": "最近一次",
+      "title": "安东内利斯帕夺冠",
+      "text": "2026年安东内利以0.317秒优势拿下杆位，并赢得本季第六胜。从第4位起步的勒克莱尔借虚拟安全车进站一度领跑，第34圈被安东内利超越，最终落后1.952秒获第二，维斯塔潘第三。",
+      "year": 2026,
+      "gp": "belgium",
+      "circuit": "spa-francorchamps",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Belgian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Belgian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "Les Combes的两次关键",
+      "text": "2026年第一圈拉塞尔在Les Combes与汉密尔顿相撞退赛，汉密尔顿被罚5秒。2025年比赛因降雨推迟到16时20分开始，滚动起步后皮亚斯特里借尾流在凯梅尔直道追上诺里斯，在Les Combes完成超车并夺冠。",
+      "year": 2026,
+      "gp": "belgium",
+      "circuit": "spa-francorchamps",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Belgian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Belgian_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2025 Belgian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Belgian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "舒马赫斯帕六胜",
+      "text": "舒马赫共6次赢得比利时大奖赛（1992年和1995至1997年、2001、2002年），是该赛事夺冠最多的车手；塞纳5胜，吉姆·克拉克和莱科宁各4胜。",
+      "year": null,
+      "gp": null,
+      "circuit": "spa-francorchamps",
+      "sources": [
+        {
+          "label": "Wikipedia · Belgian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Belgian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "第16位起步的冠军",
+      "text": "比利时大奖赛起步位置最靠后的冠军是1995年从第16位出发的舒马赫，其次是2022年从第14位起步夺冠的维斯塔潘。",
+      "year": null,
+      "gp": null,
+      "circuit": "spa-francorchamps",
+      "sources": [
+        {
+          "label": "Wikipedia · Belgian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Belgian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "佩雷兹的单圈纪录",
+      "text": "斯帕现行布局的官方单圈纪录是佩雷兹2024年驾驶红牛RB20跑出的1分44秒701。此后2025和2026年的比赛都没能打破这一纪录。",
+      "year": 2024,
+      "gp": "belgium",
+      "circuit": "spa-francorchamps",
+      "sources": [
+        {
+          "label": "Wikipedia · Circuit de Spa-Francorchamps",
+          "url": "https://en.wikipedia.org/wiki/Circuit_de_Spa-Francorchamps"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "六年只办四届",
+      "text": "根据2025年1月的续约，比利时大奖赛在此后六个赛季中只举办四届，分别是2026、2027、2029和2031年，2027至2032年与巴塞罗那-加泰罗尼亚大奖赛轮换。",
+      "year": null,
+      "gp": null,
+      "circuit": "spa-francorchamps",
+      "sources": [
+        {
+          "label": "Wikipedia · Belgian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Belgian_Grand_Prix"
+        }
+      ]
+    }
+  ],
+  "hungaroring": [
+    {
+      "tag": "最近一次",
+      "title": "诺里斯打破梅赛德斯垄断",
+      "text": "2026年诺里斯拿下杆位，终结梅赛德斯连续10站的杆位纪录，并领先维斯塔潘15.080秒夺冠，这是他和迈凯伦本赛季首胜。安东内利被罚退三位后从第7位起步获得第三，皮亚斯特里变速箱故障退赛。",
+      "year": 2026,
+      "gp": "hungary",
+      "circuit": "hungaroring",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Hungarian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Hungarian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "迈凯伦的第200胜",
+      "text": "2025年勒克莱尔拿下法拉利当年唯一的杆位。诺里斯从第3位起步，凭一停策略赢下首个匈牙利站冠军，也为迈凯伦拿下F1第200个分站冠军；博托莱托获得第六，是他职业生涯最好成绩。",
+      "year": 2025,
+      "gp": "hungary",
+      "circuit": "hungaroring",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Hungarian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Hungarian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "以汉密尔顿命名的2号弯",
+      "text": "汉密尔顿在亨格罗宁赢过8次，是这里夺冠最多的车手，赛道2号弯因此以他的名字命名。迈凯伦以14胜成为最成功的车队，并在2024至2026年取得三连胜。",
+      "year": null,
+      "gp": null,
+      "circuit": "hungaroring",
+      "sources": [
+        {
+          "label": "Wikipedia · Hungaroring",
+          "url": "https://en.wikipedia.org/wiki/Hungaroring"
+        },
+        {
+          "label": "Wikipedia · Hungarian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Hungarian_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2026 Hungarian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Hungarian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "汉密尔顿的单圈纪录",
+      "text": "亨格罗宁现行布局的正赛单圈纪录是汉密尔顿2020年驾驶梅赛德斯W11跑出的1分16秒627。这条赛道当年只用8个月建成，是建造用时最短的F1赛道。",
+      "year": 2020,
+      "gp": "hungary",
+      "circuit": "hungaroring",
+      "sources": [
+        {
+          "label": "Wikipedia · Hungaroring",
+          "url": "https://en.wikipedia.org/wiki/Hungaroring"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "4万欧元的瓷器奖杯",
+      "text": "匈牙利大奖赛的奖杯由海兰德瓷器手工制作，每座约需六个月完成，造价约4万欧元。比赛合同已延长至2032年。",
+      "year": null,
+      "gp": null,
+      "circuit": "hungaroring",
+      "sources": [
+        {
+          "label": "Wikipedia · Hungarian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Hungarian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "曼塞尔第12位逆袭",
+      "text": "1989年曼塞尔驾驶法拉利从第12位起步，一路超车夺冠，是亨格罗宁起步位置第二靠后的冠军，仅次于2006年从第14位起步的巴顿。",
+      "year": 1989,
+      "gp": "hungary",
+      "circuit": "hungaroring",
+      "sources": [
+        {
+          "label": "Wikipedia · Hungarian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Hungarian_Grand_Prix"
+        }
+      ]
+    }
+  ],
+  "zandvoort": [
+    {
+      "tag": "最近一次",
+      "title": "唯一一场荷兰冲刺赛",
+      "text": "2026年荷兰站首次也是最后一次举办冲刺赛，拉塞尔从杆位出发获胜，勒克莱尔第二、诺里斯第三。正赛诺里斯杆位夺冠，安东内利第二、拉塞尔第三，全周末观众约32.5万人次。",
+      "year": 2026,
+      "gp": "netherlands",
+      "circuit": "zandvoort",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Dutch Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Dutch_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "三次安全车的2025年",
+      "text": "2025年荷兰站出现三次安全车：汉密尔顿第22圈在Hugenholtz弯重撞；安东内利与勒克莱尔碰撞后勒克莱尔退赛，安东内利被罚10秒；诺里斯第65圈赛车冒烟，停在马斯特斯弯退赛。",
+      "year": 2025,
+      "gp": "netherlands",
+      "circuit": "zandvoort",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Dutch Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Dutch_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "主场五战全登台",
+      "text": "维斯塔潘是唯一赢得荷兰大奖赛的荷兰车手，2021至2023年三连胜，2024和2025年获亚军，主场五战全部登台。2026年最后一届荷兰站，他第一圈在倾斜的末弯撞墙退赛，这项纪录就此中断。",
+      "year": null,
+      "gp": null,
+      "circuit": "zandvoort",
+      "sources": [
+        {
+          "label": "Wikipedia · Dutch Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Dutch_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2025 Dutch Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Dutch_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2026 Dutch Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Dutch_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "吉姆·克拉克四胜最多",
+      "text": "吉姆·克拉克在1963、1964、1965和1967年四次赢得荷兰大奖赛，至今最多；斯图尔特、劳达和维斯塔潘各3胜。",
+      "year": null,
+      "gp": null,
+      "circuit": "zandvoort",
+      "sources": [
+        {
+          "label": "Wikipedia · Dutch Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Dutch_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "汉密尔顿的单圈纪录",
+      "text": "赞德沃特2020年改造后布局的正赛单圈纪录，是汉密尔顿在2021年荷兰站回归首届比赛中跑出的1分11秒097。",
+      "year": 2021,
+      "gp": "netherlands",
+      "circuit": "zandvoort",
+      "sources": [
+        {
+          "label": "Wikipedia · Circuit Zandvoort",
+          "url": "https://en.wikipedia.org/wiki/Circuit_Zandvoort"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "F1离开后迎来电动方程式",
+      "text": "F1与赞德沃特的合作在2026年结束，推广方选择不再续约。按照赛道的计划，2027年这里将举办电动方程式赞德沃特站。",
+      "year": null,
+      "gp": null,
+      "circuit": "zandvoort",
+      "sources": [
+        {
+          "label": "Wikipedia · Circuit Zandvoort",
+          "url": "https://en.wikipedia.org/wiki/Circuit_Zandvoort"
+        },
+        {
+          "label": "Wikipedia · 2026 Dutch Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Dutch_Grand_Prix"
+        }
+      ]
+    }
+  ],
+  "monza": [
+    {
+      "tag": "最近一次",
+      "title": "勒克莱尔再倒在抛物线弯",
+      "text": "2026年意大利站第3圈，勒克莱尔压过排水格栅后打转，在抛物线弯撞墙退赛，比赛红旗中断约半小时；2020年他也是在同一个弯结束了比赛。汉密尔顿从第4位起步获得第六。",
+      "year": 2026,
+      "gp": "italy",
+      "circuit": "monza",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Italian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Italian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "1983年后最靠后的冠军",
+      "text": "安东内利2026年从第19位起步夺冠，是1983年沃森之后首位从这么靠后的位置赢得比赛的车手，也是1990年帕特雷斯之后首位在意大利本土夺冠的意大利车手。",
+      "year": 2026,
+      "gp": "italy",
+      "circuit": "monza",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Italian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Italian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "史上最快的一场比赛",
+      "text": "2025年维斯塔潘以1分18秒792拿下杆位，平均时速264.681公里，是F1史上最快的单圈。正赛他领先诺里斯19.207秒夺冠，全程平均时速250.706公里，打破舒马赫2003年在此创下的最快比赛纪录。",
+      "year": 2025,
+      "gp": "italy",
+      "circuit": "monza",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Italian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Italian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "史上最快的正赛圈",
+      "text": "2025年诺里斯在最后一圈跑出1分20秒901，平均时速257.781公里，打破巴里切罗2004年的纪录，成为F1史上最快的正赛单圈。同场迈凯伦因诺里斯进站慢，要求皮亚斯特里在第49圈让回位置。",
+      "year": 2025,
+      "gp": "italy",
+      "circuit": "monza",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Italian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Italian_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · Italian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Italian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "舒马赫与汉密尔顿各五胜",
+      "text": "舒马赫和汉密尔顿各赢过5次意大利大奖赛，并列最多。如今代表法拉利的汉密尔顿2026年从第4位起步只获第六。意大利大奖赛合同至少延续到2031年。",
+      "year": null,
+      "gp": null,
+      "circuit": "monza",
+      "sources": [
+        {
+          "label": "Wikipedia · Italian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Italian_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2026 Italian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Italian_Grand_Prix"
+        }
+      ]
+    }
+  ],
+  "madring": [
+    {
+      "tag": "最近一次",
+      "title": "西班牙车手的苦涩主场",
+      "text": "2026年马德林首届比赛，塞恩斯因排位赛阻挡博塔斯被罚退三位，从第20位起步，争夺第17位时与阿隆索相撞，被罚5秒后于第43圈退赛；阿隆索前翼受损，落后两圈只获第17。",
+      "year": 2026,
+      "gp": "spain",
+      "circuit": "madring",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Spanish Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Spanish_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "维斯塔潘首圈让回位置",
+      "text": "2026年首圈维斯塔潘在7号弯超越安东内利，但他此前与汉密尔顿缠斗时驶出过赛道，红牛要求他交还位置，他在第4圈从第二退到第四，最终仍追回第二。",
+      "year": 2026,
+      "gp": "spain",
+      "circuit": "madring",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Spanish Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Spanish_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "首个单圈纪录",
+      "text": "马德林的首个正赛单圈纪录由拉塞尔在2026年首届比赛第49圈创下，成绩为1分35秒587；杆位成绩是诺里斯的1分31秒824。首届比赛周末观众约35.3万人次。",
+      "year": 2026,
+      "gp": "spain",
+      "circuit": "madring",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Spanish Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Spanish_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · Spanish Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Spanish_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · Madring",
+          "url": "https://en.wikipedia.org/wiki/Madring"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "13.5度的倾斜弯",
+      "text": "马德林La Monumental倾斜弯的倾角上限为13.5度，约合24%的坡度。这条赛道还设有F1首个带顶棚的围场，并有两个现代F1少见的附加弯角5A和20A。",
+      "year": null,
+      "gp": null,
+      "circuit": "madring",
+      "sources": [
+        {
+          "label": "Wikipedia · Madring",
+          "url": "https://en.wikipedia.org/wiki/Madring"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "时隔45年回到马德里",
+      "text": "西班牙大奖赛上一次在马德里地区举行，还是1981年的哈拉马赛道，那场比赛由吉尔·维伦纽夫夺冠。马德林的合同延续到2035年，比赛改在9月举行。",
+      "year": null,
+      "gp": null,
+      "circuit": "madring",
+      "sources": [
+        {
+          "label": "Wikipedia · Spanish Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Spanish_Grand_Prix"
+        }
+      ]
+    }
+  ],
+  "baku": [
+    {
+      "tag": "最近一次",
+      "title": "七车未完赛的巴库",
+      "text": "2026年巴库站共有七辆车未能完赛：阿尔本撞墙引出首次安全车，重启时科拉平托撞上加斯利并波及诺里斯，又引出第二次安全车。哈贾尔第三，红牛取得2024年中国站后首个双车领奖台。",
+      "year": 2026,
+      "gp": "azerbaijan",
+      "circuit": "baku",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Azerbaijan Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Azerbaijan_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "维斯塔潘巴库大满贯",
+      "text": "2025年维斯塔潘杆位出发、领跑全程并跑出最快圈，完成个人第6个大满贯。带病出战的拉塞尔获得第二，塞恩斯第三；皮亚斯特里起步抢跑触发防熄火系统跌到末位，随后在第一圈撞墙退赛。",
+      "year": 2025,
+      "gp": "azerbaijan",
+      "circuit": "baku",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Azerbaijan Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Azerbaijan_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "路缘螺栓与井盖",
+      "text": "2016年巴库首次举办F1时，倍耐力发现练习赛中九成后胎被没有打深的路缘螺栓割伤；同年博塔斯因松脱的排水井盖错过第三次练习，2019年拉塞尔撞上松脱井盖，导致第一次练习赛取消。",
+      "year": null,
+      "gp": null,
+      "circuit": "baku",
+      "sources": [
+        {
+          "label": "Wikipedia · Baku City Circuit",
+          "url": "https://en.wikipedia.org/wiki/Baku_City_Circuit"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "佩雷兹首个两胜",
+      "text": "佩雷兹在2021和2023年两次赢得阿塞拜疆大奖赛，是首位在此两度夺冠的车手，维斯塔潘随后以2022和2025年两胜追平。红牛以5胜成为这里最成功的车队。",
+      "year": null,
+      "gp": null,
+      "circuit": "baku",
+      "sources": [
+        {
+          "label": "Wikipedia · Azerbaijan Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Azerbaijan_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "勒克莱尔的单圈纪录",
+      "text": "巴库的正赛单圈纪录是勒克莱尔2019年驾驶法拉利SF90跑出的1分43秒009。2025年维斯塔潘完成大满贯时跑出的全场最快圈为1分43秒388，仍慢了0.379秒。",
+      "year": 2019,
+      "gp": "azerbaijan",
+      "circuit": "baku",
+      "sources": [
+        {
+          "label": "Wikipedia · Baku City Circuit",
+          "url": "https://en.wikipedia.org/wiki/Baku_City_Circuit"
+        },
+        {
+          "label": "Wikipedia · 2025 Azerbaijan Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Azerbaijan_Grand_Prix"
+        }
+      ]
+    }
+  ],
+  "sepang": [
+    {
+      "tag": "最近一次",
+      "title": "拉塞尔退赛分差扩大",
+      "text": "2026年雪邦站拉塞尔跑在第三时，在末段安全车期间因动力单元故障停车。安东内利获得第二，对拉塞尔的领先从66分扩大到84分，汉密尔顿第三。比赛原定56圈，最终缩短为55圈。",
+      "year": 2026,
+      "gp": "bahrain",
+      "circuit": "sepang",
+      "sources": [
+        {
+          "label": "Wikipedia · 2026 Bahrain Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "上一届马来西亚站",
+      "text": "2017年最后一届马来西亚大奖赛，维斯塔潘第4圈超越杆位的汉密尔顿，赢得生涯第二个分站冠军。维特尔从最后一位起步追到第四，赛后回场圈又与斯特罗尔相撞。2026年维斯塔潘再次在雪邦夺冠。",
+      "year": 2017,
+      "gp": "malaysia",
+      "circuit": "sepang",
+      "sources": [
+        {
+          "label": "Wikipedia · 2017 Malaysian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2017_Malaysian_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2026 Bahrain Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "维特尔四胜最多",
+      "text": "维特尔在2010、2011、2013和2015年四次赢得马来西亚大奖赛，是在雪邦夺冠最多的车手；舒马赫和阿隆索各3胜，法拉利以7胜居车队之首。",
+      "year": null,
+      "gp": null,
+      "circuit": "sepang",
+      "sources": [
+        {
+          "label": "Wikipedia · Malaysian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Malaysian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "维特尔的单圈纪录",
+      "text": "雪邦的正赛单圈纪录是维特尔2017年驾驶法拉利SF70H在第41圈跑出的1分34秒080。那场他从最后一位起步追到第四，这项纪录在2026年复办后依然保持。",
+      "year": 2017,
+      "gp": "malaysia",
+      "circuit": "sepang",
+      "sources": [
+        {
+          "label": "Wikipedia · Sepang International Circuit",
+          "url": "https://en.wikipedia.org/wiki/Sepang_International_Circuit"
+        },
+        {
+          "label": "Wikipedia · 2017 Malaysian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2017_Malaysian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "曾在新加坡举行的马来西亚站",
+      "text": "1962至1964年的马来西亚大奖赛在新加坡举行，当时新加坡是马来西亚的一部分。2007年伯尼·埃克莱斯顿还曾形容雪邦设施破旧，像一栋需要重新装修的老房子。",
+      "year": null,
+      "gp": null,
+      "circuit": "sepang",
+      "sources": [
+        {
+          "label": "Wikipedia · Malaysian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Malaysian_Grand_Prix"
+        }
+      ]
+    }
+  ],
+  "marina-bay": [
+    {
+      "tag": "最近一次",
+      "title": "拉塞尔杆位到底赢下2025",
+      "text": "2025年拉塞尔从杆位出发领跑到底，领先维斯塔潘5.430秒夺冠，诺里斯第三。迈凯伦在这场比赛锁定2025年车队冠军，这是他们第10个车队冠军，也是1991年以来首次卫冕。",
+      "year": 2025,
+      "gp": "singapore",
+      "circuit": "marina-bay",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Singapore Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Singapore_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "零退赛也零安全车",
+      "text": "2025年新加坡站20辆车全部完赛，是这项赛事历史上首次没有车手退赛，同时连续第二年没有出动安全车。滨海湾16届比赛累计出动安全车24次，2024年以前每届至少一次。",
+      "year": 2025,
+      "gp": "singapore",
+      "circuit": "marina-bay",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Singapore Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Singapore_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · Singapore Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Singapore_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · Marina Bay Street Circuit",
+          "url": "https://en.wikipedia.org/wiki/Marina_Bay_Street_Circuit"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "维斯塔潘还没赢过的地方",
+      "text": "维斯塔潘在新加坡出战9次，最好成绩是2018、2024和2025年的三个亚军。按2025年赛历，这是他唯一没赢过的赛道；红牛2013年之后在这里也只赢过一次，即2022年的佩雷兹。",
+      "year": null,
+      "gp": null,
+      "circuit": "marina-bay",
+      "sources": [
+        {
+          "label": "Crash.net · Why Singapore remains Verstappen’s only winless F1 track",
+          "url": "https://crash.net/f1/news/1082961/1/why-singapore-grand-prix-remains-max-verstappens-only-winless-f1-track"
+        },
+        {
+          "label": "Wikipedia · 2025 Singapore Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Singapore_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "滨海湾首次迎来冲刺赛",
+      "text": "2026年新加坡站首次采用冲刺赛周末，也是本赛季六场冲刺赛的最后一场。周五只有一节练习赛，晚上进行冲刺排位；周六当地17时跑21圈冲刺赛，21时再进行正赛排位。",
+      "year": 2026,
+      "gp": "singapore",
+      "circuit": "marina-bay",
+      "sources": [
+        {
+          "label": "Wikipedia · Singapore Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Singapore_Grand_Prix"
+        },
+        {
+          "label": "Formula1.com · Singapore Grand Prix 2026 timetable",
+          "url": "https://www.formula1.com/en/latest/article/formula-1-singapore-airlines-singapore-grand-prix-2026.1OXwlTH5jrpTiZX2Dvg7qE"
+        },
+        {
+          "label": "RacingNews365 · F1 confirm 2026 sprint calendar",
+          "url": "https://racingnews365.com/f1-confirm-2026-sprint-calendar-with-major-change"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "维特尔五胜仍是纪录",
+      "text": "维特尔在2011至2013年、2015年和2019年五次赢下新加坡站，至今最多；汉密尔顿以4胜排第二。如今代表法拉利出战的汉密尔顿，再赢一次就能追平这项纪录。",
+      "year": null,
+      "gp": null,
+      "circuit": "marina-bay",
+      "sources": [
+        {
+          "label": "Wikipedia · Singapore Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Singapore_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · Marina Bay Street Circuit",
+          "url": "https://en.wikipedia.org/wiki/Marina_Bay_Street_Circuit"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "单圈纪录属于汉密尔顿",
+      "text": "现行布局的正赛单圈纪录是汉密尔顿2025年驾驶法拉利在第48圈跑出的1分33秒808，但他同场因赛道界限被罚5秒，从第七降到第八。排位赛最快圈是拉塞尔同年的1分29秒158。",
+      "year": 2025,
+      "gp": "singapore",
+      "circuit": "marina-bay",
+      "sources": [
+        {
+          "label": "Wikipedia · Marina Bay Street Circuit",
+          "url": "https://en.wikipedia.org/wiki/Marina_Bay_Street_Circuit"
+        },
+        {
+          "label": "Wikipedia · 2025 Singapore Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Singapore_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "两小时时限不再吃紧",
+      "text": "旧布局下新加坡站经常跑到接近两小时上限，2012、2014、2017和2022年四届因时限没能跑满圈数。2023年绕开浮动平台段后单圈缩短，2025年拉塞尔的夺冠用时为1小时40分22秒。",
+      "year": null,
+      "gp": null,
+      "circuit": "marina-bay",
+      "sources": [
+        {
+          "label": "Wikipedia · Singapore Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Singapore_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2025 Singapore Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Singapore_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "首战正是第800场",
+      "text": "2008年的首届新加坡大奖赛既是F1首场夜赛，也恰好是世界锦标赛历史上的第800场分站赛。11年后的2019年，第1000场比赛在上海举行。",
+      "year": 2008,
+      "gp": "singapore",
+      "circuit": "marina-bay",
+      "sources": [
+        {
+          "label": "Wikipedia · Singapore Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Singapore_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · Chinese Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Chinese_Grand_Prix"
+        }
+      ]
+    }
+  ],
+  "austin": [
+    {
+      "tag": "最近一次",
+      "title": "维斯塔潘包揽奥斯汀周末",
+      "text": "2025年维斯塔潘先赢下冲刺赛，正赛又从杆位出发夺冠，这是他第4个奥斯汀冠军、生涯第68胜。诺里斯落后7.959秒获第二，勒克莱尔第三，诺里斯赛后把与皮亚斯特里的分差缩小到14分。",
+      "year": 2025,
+      "gp": "united-states",
+      "circuit": "austin",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 United States Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_United_States_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "冲刺赛迈凯伦双车出局",
+      "text": "2025年奥斯汀冲刺赛第一圈，皮亚斯特里试图交叉走线超越队友，先碰到霍肯伯格，又被挤向诺里斯，两辆迈凯伦同时退赛。这场冲刺赛由维斯塔潘从杆位出发获胜，拉塞尔和塞恩斯分列二、三。",
+      "year": 2025,
+      "gp": "united-states",
+      "circuit": "austin",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 United States Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_United_States_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "汉密尔顿五胜仍居首",
+      "text": "汉密尔顿在美洲赛道赢过5次（2012年和2014至2017年），加上2007年在印第安纳波利斯的胜利，共6个美国站冠军，是该赛事最多。维斯塔潘在奥斯汀已有4胜，再赢一次即可追平。",
+      "year": null,
+      "gp": null,
+      "circuit": "austin",
+      "sources": [
+        {
+          "label": "Wikipedia · United States Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/United_States_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2025 United States Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_United_States_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "前排起步的十年惯例",
+      "text": "美洲赛道前10届F1比赛全部由前排发车者夺冠。2023年维斯塔潘的杆位圈因赛道界限被删，从第6位起步仍然获胜，打破这一规律；2024年勒克莱尔又从第4位起步夺冠，法拉利包揽前二。",
+      "year": null,
+      "gp": null,
+      "circuit": "austin",
+      "sources": [
+        {
+          "label": "GPFans · United States Grand Prix stats (2022)",
+          "url": "https://www.gpfans.com/en/f1-news/94495/united-states-grand-prix-stats"
+        },
+        {
+          "label": "Wikipedia · 2023 United States Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2023_United_States_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2024 United States Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2024_United_States_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "勒克莱尔的单圈纪录",
+      "text": "美洲赛道的正赛单圈纪录是勒克莱尔2019年驾驶法拉利SF90跑出的1分36秒169，至今无人打破。博塔斯同年排位赛的1分32秒029是这里跑得最快的一圈，但不计入官方纪录。",
+      "year": 2019,
+      "gp": "united-states",
+      "circuit": "austin",
+      "sources": [
+        {
+          "label": "Wikipedia · Circuit of the Americas",
+          "url": "https://en.wikipedia.org/wiki/Circuit_of_the_Americas"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "拼进多处名弯的赛道",
+      "text": "除了复刻银石的高速连续弯和霍根海姆的体育场段，美洲赛道还借鉴了伊斯坦布尔公园的8号弯、英特拉格斯的塞纳S弯，以及印度布德赛道4号弯和巴林9、10号弯的设计。",
+      "year": null,
+      "gp": null,
+      "circuit": "austin",
+      "sources": [
+        {
+          "label": "Wikipedia · Circuit of the Americas",
+          "url": "https://en.wikipedia.org/wiki/Circuit_of_the_Americas"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "三天44万人次",
+      "text": "2022年美国大奖赛三天比赛周末约有44万人次到场，超过2021年同一赛事创下的40万人次纪录；周日正赛当天观众超过15万人。",
+      "year": 2022,
+      "gp": "united-states",
+      "circuit": "austin",
+      "sources": [
+        {
+          "label": "Wikipedia · Circuit of the Americas",
+          "url": "https://en.wikipedia.org/wiki/Circuit_of_the_Americas"
+        },
+        {
+          "label": "GPFans · United States Grand Prix stats (2022)",
+          "url": "https://www.gpfans.com/en/f1-news/94495/united-states-grand-prix-stats"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "2026年告别冲刺赛",
+      "text": "美国站在2023至2025年连续三年采用冲刺赛周末，三场冲刺赛都由维斯塔潘获胜。2026年的六场冲刺赛名单中没有奥斯汀，三年的冲刺赛周期就此结束。",
+      "year": 2026,
+      "gp": "united-states",
+      "circuit": "austin",
+      "sources": [
+        {
+          "label": "RacingNews365 · F1 confirm 2026 sprint calendar",
+          "url": "https://racingnews365.com/f1-confirm-2026-sprint-calendar-with-major-change"
+        },
+        {
+          "label": "Wikipedia · 2023 United States Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2023_United_States_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2024 United States Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2024_United_States_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2025 United States Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_United_States_Grand_Prix"
+        }
+      ]
+    }
+  ],
+  "mexico-city": [
+    {
+      "tag": "最近一次",
+      "title": "诺里斯大胜30秒夺回榜首",
+      "text": "2025年诺里斯从杆位出发，领先勒克莱尔30.324秒夺冠，维斯塔潘第三。这场胜利让诺里斯以357比356的一分优势，重新超过皮亚斯特里登上车手积分榜首。",
+      "year": 2025,
+      "gp": "mexico",
+      "circuit": "mexico-city",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Mexico City Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Mexico_City_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "四车并排冲进1号弯",
+      "text": "2025年起步后诺里斯、勒克莱尔、汉密尔顿和维斯塔潘四车一起冲进1号弯，勒克莱尔切弯短暂领先后交还位置。汉密尔顿随后在4、5号弯切弯被罚10秒，失去争夺领奖台的机会；末段塞恩斯停车冒烟，引出虚拟安全车。",
+      "year": 2025,
+      "gp": "mexico",
+      "circuit": "mexico-city",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Mexico City Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Mexico_City_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "维斯塔潘五胜冠绝墨西哥",
+      "text": "维斯塔潘在2017、2018年和2021至2023年五次赢下墨西哥站，是这项赛事夺冠最多的车手；红牛也以5胜成为最成功的车队。2025年诺里斯在这里拿到当季第6胜。",
+      "year": null,
+      "gp": null,
+      "circuit": "mexico-city",
+      "sources": [
+        {
+          "label": "Wikipedia · Mexican Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Mexican_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2025 Mexico City Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Mexico_City_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "佩雷兹的主场领奖台",
+      "text": "还没有墨西哥车手赢过本土大奖赛。2021年佩雷兹获得第三，成为首位在主场登上领奖台的墨西哥车手，比赛中还一度领跑。2026年他以凯迪拉克车手身份回到主场。",
+      "year": 2021,
+      "gp": "mexico",
+      "circuit": "mexico-city",
+      "sources": [
+        {
+          "label": "Wikipedia · 2021 Mexico City Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2021_Mexico_City_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · Mexican Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Mexican_Grand_Prix"
+        },
+        {
+          "label": "AP via WTOP · Cadillac gets and then loses elusive 1st point as Pérez penalized",
+          "url": "https://wtop.com/news/2026/06/cadillac-gets-and-then-loses-elusive-1st-point-in-f1-as-sergio-perez-penalized/"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "第16名创下的圈速纪录",
+      "text": "现行布局的正赛单圈纪录是博塔斯2021年第69圈跑出的1分17秒774，但他那场只得第16名，没能拿到最快圈加分。维斯塔潘2019年排位赛的1分14秒758更快，但不算官方纪录。",
+      "year": 2021,
+      "gp": "mexico",
+      "circuit": "mexico-city",
+      "sources": [
+        {
+          "label": "Wikipedia · 2021 Mexico City Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2021_Mexico_City_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · Autódromo Hermanos Rodríguez",
+          "url": "https://en.wikipedia.org/wiki/Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "直道末端363公里",
+      "text": "墨西哥城的主直道长约1.2公里，2025年比赛周末的最高速度出现在直道末端，为每小时363公里。涡轮时代最快的赛车在这里约能跑到每小时330公里。",
+      "year": 2025,
+      "gp": "mexico",
+      "circuit": "mexico-city",
+      "sources": [
+        {
+          "label": "Wikipedia · Autódromo Hermanos Rodríguez",
+          "url": "https://en.wikipedia.org/wiki/Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "赛道名字背后的兄弟",
+      "text": "赛道以罗德里格斯兄弟命名。弟弟里卡多在1962年非锦标赛墨西哥大奖赛的练习中，因悬挂失效在佩拉尔塔达弯撞车身亡；哥哥佩德罗九年后也在比赛中丧生，赛道于1979年改用两人的名字。",
+      "year": null,
+      "gp": null,
+      "circuit": "mexico-city",
+      "sources": [
+        {
+          "label": "Wikipedia · Autódromo Hermanos Rodríguez",
+          "url": "https://en.wikipedia.org/wiki/Aut%C3%B3dromo_Hermanos_Rodr%C3%ADguez"
+        },
+        {
+          "label": "Wikipedia · Mexican Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Mexican_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "冲线第一却不是冠军",
+      "text": "1987年墨西哥站比赛中途停赛后重新起跑，成绩按两段用时相加计算。皮奎特第一个冲过终点，但曼塞尔凭借总用时更短赢得比赛。",
+      "year": 1987,
+      "gp": "mexico",
+      "circuit": "mexico-city",
+      "sources": [
+        {
+          "label": "Wikipedia · Mexican Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Mexican_Grand_Prix"
+        }
+      ]
+    }
+  ],
+  "interlagos": [
+    {
+      "tag": "最近一次",
+      "title": "诺里斯包揽圣保罗周末",
+      "text": "2025年诺里斯先赢下冲刺赛，正赛又从杆位出发，领先约10.4秒夺冠。安东内利获得当时个人最好的第二名；维斯塔潘因更换动力单元部件从维修区出发，途中还被扎破轮胎，仍追到第三。",
+      "year": 2025,
+      "gp": "sao-paulo",
+      "circuit": "interlagos",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 São Paulo Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_S%C3%A3o_Paulo_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "巴西车手七次主场夺冠",
+      "text": "菲蒂帕尔迪（1973、1974年）、佩斯（1975年）、塞纳（1991、1993年）和马萨（2006、2008年）共为巴西车手在英特拉格斯赢下7次。2025年博托莱托的首个主场周末冲刺赛重撞，正赛与斯特罗尔接触后撞车退赛。",
+      "year": null,
+      "gp": null,
+      "circuit": "interlagos",
+      "sources": [
+        {
+          "label": "Wikipedia · Brazilian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Brazilian_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2025 São Paulo Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_S%C3%A3o_Paulo_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "舒马赫四胜最多",
+      "text": "舒马赫1994、1995、2000和2002年四次赢得巴西大奖赛，是在英特拉格斯夺冠最多的车手。普罗斯特虽有6个巴西站冠军，但其中5个来自里约热内卢的雅卡雷帕瓜，在英特拉格斯只赢过1990年一次。",
+      "year": null,
+      "gp": null,
+      "circuit": "interlagos",
+      "sources": [
+        {
+          "label": "Wikipedia · Brazilian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Brazilian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "博塔斯的单圈纪录",
+      "text": "英特拉格斯现行布局的正赛单圈纪录是博塔斯2018年驾驶梅赛德斯W09跑出的1分10秒540，至今未被打破。现行4.309公里布局自1999年起使用。",
+      "year": 2018,
+      "gp": "brazil",
+      "circuit": "interlagos",
+      "sources": [
+        {
+          "label": "Wikipedia · Interlagos Circuit",
+          "url": "https://en.wikipedia.org/wiki/Interlagos_Circuit"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "两湖之间的名字",
+      "text": "Interlagos在葡萄牙语中意为两湖之间，因为赛道所在街区位于瓜拉皮兰加和比林斯两座水库之间。这个名字由法国建筑师阿加什提议，灵感来自瑞士的因特拉肯。",
+      "year": null,
+      "gp": null,
+      "circuit": "interlagos",
+      "sources": [
+        {
+          "label": "Wikipedia · Interlagos Circuit",
+          "url": "https://en.wikipedia.org/wiki/Interlagos_Circuit"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "迟到一站的冠军奖杯",
+      "text": "2003年巴西站因韦伯和阿隆索接连撞车被红旗终止，成绩起初判给莱科宁。乔丹车队上诉后，国际汽联4月11日改判第8位起步的费斯切拉夺冠，他在下一站伊莫拉才拿到奖杯，这也是乔丹车队最后一胜。",
+      "year": 2003,
+      "gp": "brazil",
+      "circuit": "interlagos",
+      "sources": [
+        {
+          "label": "Wikipedia · 2003 Brazilian Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2003_Brazilian_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "首次没有冲刺赛",
+      "text": "冲刺赛2021年推出后，英特拉格斯连续五年都是冲刺赛周末。2026年的六场冲刺赛名单中没有圣保罗站，这是该站首次不设冲刺赛。",
+      "year": 2026,
+      "gp": "sao-paulo",
+      "circuit": "interlagos",
+      "sources": [
+        {
+          "label": "RacingNews365 · F1 confirm 2026 sprint calendar",
+          "url": "https://racingnews365.com/f1-confirm-2026-sprint-calendar-with-major-change"
+        },
+        {
+          "label": "The Race · F1 2026 sprint venues revealed",
+          "url": "https://www.the-race.com/formula-1/f1-2026-sprint-venues-revealed-amid-2027-shake-up-talks"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "颠簸路面的旧账",
+      "text": "1980年BBC解说员默里·沃克形容英特拉格斯的路面颠簸得吓人，这是F1离开旧布局的安全顾虑之一。2007年比赛前赛道沥青被整体更换，是35年来规模最大的一次翻修。",
+      "year": null,
+      "gp": null,
+      "circuit": "interlagos",
+      "sources": [
+        {
+          "label": "Wikipedia · Interlagos Circuit",
+          "url": "https://en.wikipedia.org/wiki/Interlagos_Circuit"
+        }
+      ]
+    }
+  ],
+  "las-vegas": [
+    {
+      "tag": "最近一次",
+      "title": "杆位诺里斯首弯冲宽",
+      "text": "2025年排位赛在雨后的湿滑赛道上进行，诺里斯夺得杆位。正赛起步后他在1号弯跑宽丢掉领先，维斯塔潘接过头名，最终领先拉塞尔23.546秒，第二次赢下拉斯维加斯站。",
+      "year": 2025,
+      "gp": "las-vegas",
+      "circuit": "las-vegas",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Las Vegas Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Las_Vegas_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "安东内利第17位登台",
+      "text": "2025年安东内利从第17位发车，还因抢跑被罚5秒，冲线时名列第四。两辆迈凯伦赛后被取消成绩，他递补第三。这一结果让皮亚斯特里与维斯塔潘同为366分，落后诺里斯24分。",
+      "year": 2025,
+      "gp": "las-vegas",
+      "circuit": "las-vegas",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Las Vegas Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Las_Vegas_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "最后一圈刷新纪录",
+      "text": "拉斯维加斯的正赛单圈纪录是维斯塔潘2025年在第50圈、也就是最后一圈跑出的1分33秒365。同年角田裕毅在大道直道末端测得每小时358.3公里的最高速度。",
+      "year": 2025,
+      "gp": "las-vegas",
+      "circuit": "las-vegas",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Las Vegas Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Las_Vegas_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · Las Vegas Strip Circuit",
+          "url": "https://en.wikipedia.org/wiki/Las_Vegas_Strip_Circuit"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "杆位只赢过一次",
+      "text": "拉斯维加斯三届比赛只有2024年拉塞尔是杆位夺冠。2023年勒克莱尔、2025年诺里斯都拿到杆位，却都输给从第二位起步的维斯塔潘；2023年他还因在1号弯把勒克莱尔挤出赛道被罚5秒。",
+      "year": null,
+      "gp": null,
+      "circuit": "las-vegas",
+      "sources": [
+        {
+          "label": "Wikipedia · 2023 Las Vegas Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2023_Las_Vegas_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2024 Las Vegas Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2024_Las_Vegas_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2025 Las Vegas Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Las_Vegas_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "凯撒宫停车场的前传",
+      "text": "F1曾在1981和1982年于凯撒宫酒店停车场的临时赛道比赛，赛道长3.65公里、14个弯，逆时针方向让车手颈部负担很大，现场观众寥寥。两届冠军分别是艾伦·琼斯和阿尔博雷托，之后这里又办了两届CART比赛。",
+      "year": 1981,
+      "gp": "caesars-palace",
+      "circuit": "caesars-palace",
+      "sources": [
+        {
+          "label": "Wikipedia · Caesars Palace Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Caesars_Palace_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "2.4亿美元的停车场",
+      "text": "F1为举办拉斯维加斯站花2.4亿美元买下一块原停车场，改建成维修区和围场建筑。当地县政府批准F1在十年内使用比赛所需的公共道路。",
+      "year": null,
+      "gp": null,
+      "circuit": "las-vegas",
+      "sources": [
+        {
+          "label": "Wikipedia · Las Vegas Strip Circuit",
+          "url": "https://en.wikipedia.org/wiki/Las_Vegas_Strip_Circuit"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "午夜到中午照常通车",
+      "text": "比赛周期间，拉斯维加斯赛道的公共道路从午夜到中午仍对社会车辆开放。2025年起正赛开赛时间从当地22时提前到20时，迈凯伦预计路面因日落后降温时间更短而高出一两度。",
+      "year": 2025,
+      "gp": "las-vegas",
+      "circuit": "las-vegas",
+      "sources": [
+        {
+          "label": "McLaren · The Las Vegas Grand Prix briefing (2025)",
+          "url": "https://www.mclaren.com/racing/formula-1/2025/las-vegas-grand-prix/the-las-vegas-grand-prix-briefing-powered-by-google-cloud/"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "找不到刹车参照物",
+      "text": "迈凯伦的赛道简报指出，拉斯维加斯赛道两侧都是护栏，景物单调，车手很难找到刹车参照点，7号弯以及11号弯进12号弯尤其明显；此前几年低温导致的轮胎颗粒化也曾是这里的大问题。",
+      "year": null,
+      "gp": null,
+      "circuit": "las-vegas",
+      "sources": [
+        {
+          "label": "McLaren · The Las Vegas Grand Prix briefing (2025)",
+          "url": "https://www.mclaren.com/racing/formula-1/2025/las-vegas-grand-prix/the-las-vegas-grand-prix-briefing-powered-by-google-cloud/"
+        }
+      ]
+    }
+  ],
+  "lusail": [
+    {
+      "tag": "最近一次",
+      "title": "25圈轮胎上限改写策略",
+      "text": "2025年倍耐力为卡塔尔站设定每套轮胎全周末最多使用25圈，安全车圈也计入，57圈的比赛至少要进站两次。第7圈霍肯伯格与加斯利碰撞引出安全车，除两辆迈凯伦和奥康外全部进站。",
+      "year": 2025,
+      "gp": "qatar",
+      "circuit": "lusail",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Qatar Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Qatar_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · Qatar Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Qatar_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "酷热中的大满贯",
+      "text": "2023年维斯塔潘在卢赛尔拿下杆位、领跑全部圈数并跑出最快圈，完成个人第四个大满贯。那场比赛的酷热让奥康两次在车内呕吐，斯特罗尔说自己几乎昏厥，拉塞尔也称差点失去意识。",
+      "year": 2023,
+      "gp": "qatar",
+      "circuit": "lusail",
+      "sources": [
+        {
+          "label": "Wikipedia · 2023 Qatar Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2023_Qatar_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "价值两分的超车",
+      "text": "2025年卡塔尔站倒数第二圈，安东内利防守时在10号弯跑宽，诺里斯借机超越拿到第四。第四和第五名相差2分，恰好等于诺里斯在收官战后以423比421夺冠的最终分差。",
+      "year": 2025,
+      "gp": "qatar",
+      "circuit": "lusail",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Qatar Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Qatar_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2025 Abu Dhabi Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Abu_Dhabi_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "皮亚斯特里包揽三场冲刺",
+      "text": "卢赛尔举办过的三场冲刺赛都由皮亚斯特里获胜：2023年是他的首个冲刺赛冠军，2024年再胜，2025年从杆位出发完成三连胜。2026年的冲刺赛名单中没有卡塔尔站。",
+      "year": null,
+      "gp": null,
+      "circuit": "lusail",
+      "sources": [
+        {
+          "label": "Wikipedia · Qatar Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Qatar_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2025 Qatar Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Qatar_Grand_Prix"
+        },
+        {
+          "label": "The Race · F1 2026 sprint venues revealed",
+          "url": "https://www.the-race.com/formula-1/f1-2026-sprint-venues-revealed-amid-2027-shake-up-talks"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "维斯塔潘卡塔尔三连冠",
+      "text": "卡塔尔大奖赛共办过四届，维斯塔潘赢下2023至2025年的三届，汉密尔顿赢得2021年首届。2024年维斯塔潘被罚退一位后从第二位起步获胜，2025年又从第三位起步夺冠，是这里起步位置最靠后的冠军。",
+      "year": null,
+      "gp": null,
+      "circuit": "lusail",
+      "sources": [
+        {
+          "label": "Wikipedia · Qatar Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Qatar_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2025 Qatar Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Qatar_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "诺里斯的单圈纪录",
+      "text": "卢赛尔现行布局的正赛单圈纪录是诺里斯2024年跑出的1分22秒384，排位赛最快圈是皮亚斯特里2025年的1分19秒387。赛道主直道长1.068公里。",
+      "year": 2024,
+      "gp": "qatar",
+      "circuit": "lusail",
+      "sources": [
+        {
+          "label": "Wikipedia · Lusail International Circuit",
+          "url": "https://en.wikipedia.org/wiki/Lusail_International_Circuit"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "不到一年建成的赛道",
+      "text": "卢赛尔赛道由约1000名工人用不到一年时间建成，造价5800万美元，2004年启用。赛道周围铺有人造草皮，用来阻挡沙子侵入路面。卡塔尔大奖赛2023年回归时签下了十年合同。",
+      "year": null,
+      "gp": null,
+      "circuit": "lusail",
+      "sources": [
+        {
+          "label": "Wikipedia · Lusail International Circuit",
+          "url": "https://en.wikipedia.org/wiki/Lusail_International_Circuit"
+        },
+        {
+          "label": "Wikipedia · Qatar Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Qatar_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "世界最大照明工程易主",
+      "text": "卢赛尔2007年加装永久照明时，曾是全球最大的永久性体育场馆照明工程。这一头衔后来被阿布扎比的亚斯码头赛道取代，后者的照明系统与卢赛尔相似。",
+      "year": null,
+      "gp": null,
+      "circuit": "lusail",
+      "sources": [
+        {
+          "label": "Wikipedia · Lusail International Circuit",
+          "url": "https://en.wikipedia.org/wiki/Lusail_International_Circuit"
+        },
+        {
+          "label": "Wikipedia · Yas Marina Circuit",
+          "url": "https://en.wikipedia.org/wiki/Yas_Marina_Circuit"
+        }
+      ]
+    }
+  ],
+  "yas-marina": [
+    {
+      "tag": "最近一次",
+      "title": "赢了比赛却输了冠军",
+      "text": "2025年维斯塔潘拿下生涯第48个杆位并夺冠，领先皮亚斯特里12.594秒。他全年8胜仍是最多，最后10站场场登台，却以2分之差屈居亚军，这是2010年现行积分制以来最小的冠军分差。",
+      "year": 2025,
+      "gp": "abu-dhabi",
+      "circuit": "yas-marina",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Abu Dhabi Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Abu_Dhabi_Grand_Prix"
+        },
+        {
+          "label": "Formula1.com · Facts and stats: 2025 Abu Dhabi Grand Prix",
+          "url": "https://www.formula1.com/en/latest/article/facts-and-stats-verstappen-won-more-piastri-led-longer-but-norris-is.14xcBAi0H4ASrOzunupYFv"
+        }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "一个时代的最后一站",
+      "text": "2025年阿布扎比站是地效赛车时代和DRS的最后一场比赛，也是本田为红牛系车队供应动力、雷诺为阿尔派供应引擎的最后一站。汉密尔顿只拿到第八，职业生涯首次整季没有登上大奖赛领奖台。",
+      "year": 2025,
+      "gp": "abu-dhabi",
+      "circuit": "yas-marina",
+      "sources": [
+        {
+          "label": "Wikipedia · 2025 Abu Dhabi Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Abu_Dhabi_Grand_Prix"
+        },
+        {
+          "label": "Formula1.com · Facts and stats: 2025 Abu Dhabi Grand Prix",
+          "url": "https://www.formula1.com/en/latest/article/facts-and-stats-verstappen-won-more-piastri-led-longer-but-norris-is.14xcBAi0H4ASrOzunupYFv"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "连续11届杆位夺冠",
+      "text": "从2015年到2025年，阿布扎比大奖赛连续11届都由杆位车手夺冠，创下F1单一赛道的纪录。上一次非杆位车手在这里获胜，还是2014年从第二位起步的汉密尔顿。",
+      "year": null,
+      "gp": null,
+      "circuit": "yas-marina",
+      "sources": [
+        {
+          "label": "Formula1.com · Facts and stats: 2025 Abu Dhabi Grand Prix",
+          "url": "https://www.formula1.com/en/latest/article/facts-and-stats-verstappen-won-more-piastri-led-longer-but-norris-is.14xcBAi0H4ASrOzunupYFv"
+        },
+        {
+          "label": "Wikipedia · Abu Dhabi Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Abu_Dhabi_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "汉密尔顿与维斯塔潘各五胜",
+      "text": "汉密尔顿（2011、2014、2016、2018、2019年）和维斯塔潘（2020至2023年、2025年）各在阿布扎比赢过5次，并列最多。2026年收官战维斯塔潘若再胜，将独占这项纪录；红牛以8胜居车队之首。",
+      "year": null,
+      "gp": null,
+      "circuit": "yas-marina",
+      "sources": [
+        {
+          "label": "Wikipedia · Abu Dhabi Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Abu_Dhabi_Grand_Prix"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "哈斯车手保持的纪录",
+      "text": "2021年改道后的正赛单圈纪录是马格努森2024年驾驶哈斯VF-24跑出的1分25秒637。改道前5.554公里布局的纪录则是汉密尔顿2019年的1分39秒283。",
+      "year": 2024,
+      "gp": "abu-dhabi",
+      "circuit": "yas-marina",
+      "sources": [
+        {
+          "label": "Wikipedia · Yas Marina Circuit",
+          "url": "https://en.wikipedia.org/wiki/Yas_Marina_Circuit"
+        }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "来自英格兰的路面石料",
+      "text": "亚斯码头的路面骨料是产自英格兰什罗普郡一处采石场的杂砂岩。车手称赞这种路面抓地力好，但轮胎磨损也因此更高。",
+      "year": null,
+      "gp": null,
+      "circuit": "yas-marina",
+      "sources": [
+        {
+          "label": "Wikipedia · Yas Marina Circuit",
+          "url": "https://en.wikipedia.org/wiki/Yas_Marina_Circuit"
+        }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "13亿美元的赛道",
+      "text": "亚斯码头赛道造价约13.22亿美元，由阿尔达尔地产开发、蒂尔克设计，可容纳6万名观众。赛道最长的直道为1.14公里，其中一处缓冲区设在西看台的下方。",
+      "year": null,
+      "gp": null,
+      "circuit": "yas-marina",
+      "sources": [
+        {
+          "label": "Wikipedia · Yas Marina Circuit",
+          "url": "https://en.wikipedia.org/wiki/Yas_Marina_Circuit"
+        }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "五次在此决出车手冠军",
+      "text": "阿布扎比曾在2010、2014、2016、2021和2025年五次决出车手冠军。2025年是2010年后首次有超过两名车手带着争冠机会来到最后一站。阿布扎比拥有举办赛季收官战的权利至2030年。",
+      "year": null,
+      "gp": null,
+      "circuit": "yas-marina",
+      "sources": [
+        {
+          "label": "Wikipedia · Abu Dhabi Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/Abu_Dhabi_Grand_Prix"
+        },
+        {
+          "label": "Wikipedia · 2025 Abu Dhabi Grand Prix",
+          "url": "https://en.wikipedia.org/wiki/2025_Abu_Dhabi_Grand_Prix"
+        }
+      ]
+    }
+  ]
+}

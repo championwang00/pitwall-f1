@@ -1,0 +1,88 @@
+.hero { position: relative; background: radial-gradient(ellipse 60% 80% at 68% 55%, #191921 0%, #0b0b10 70%); color: #fff; overflow: hidden; min-height: 600px; }
+.hero :global(.track-field) { position: absolute; inset: 0; }
+.photo { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: .22; filter: grayscale(.3); mask-image: linear-gradient(90deg, #000 0%, transparent 70%); }
+.heroIn { position: relative; z-index: 2; max-width: var(--maxw); margin: 0 auto; padding: 56px var(--gutter) 96px; pointer-events: none; }
+.heroIn a { pointer-events: auto; }
+.text { position: relative; z-index: 1; display: flex; flex-direction: column; max-width: 520px; }
+.title { font-family: var(--font-wide); text-transform: uppercase; font-size: clamp(36px, 4.6vw, 68px); margin-top: 24px; line-height: .95; }
+.latin { font-family: var(--font-data); font-size: 15px; color: rgba(255,255,255,.7); margin-top: 8px; text-transform: uppercase; letter-spacing: .02em; }
+.traits { font-size: 13px; color: rgba(255,255,255,.6); margin-top: 10px; line-height: 1.7; }
+.record { font-size: 13px; color: rgba(255,255,255,.75); margin-top: 18px; }
+.record b { color: #fff; font-size: 15px; margin: 0 2px; }
+.record a { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(255,255,255,.35); }
+.track { position: absolute; inset: 0 0 0 34%; z-index: 1; }
+.canvas { position: absolute; inset: 0; }
+.map { width: 100%; height: 100%; object-fit: contain; filter: invert(1) hue-rotate(180deg) brightness(1.1); }
+.note { position: absolute; left: var(--gutter); bottom: 20px; z-index: 2; font: 600 12px/16px "Titillium Web", var(--font-cn); color: rgba(255,255,255,.5); max-width: 420px; }
+.official { position: absolute; right: var(--gutter); bottom: 28px; z-index: 2; margin: 0; width: 300px; background: #fff; border-radius: 10px; padding: 10px 10px 8px; box-shadow: 0 20px 40px rgba(0,0,0,.4); }
+.official img { width: 100%; height: auto; display: block; }
+.official figcaption { font-size: 11px; color: var(--mute); margin-top: 6px; }
+.years { display: grid; grid-template-columns: repeat(auto-fill, minmax(176px, 1fr)); gap: 8px; }
+.yCard { background: #fff; border-radius: 10px; padding: 14px 14px 12px; display: flex; flex-direction: column; gap: 3px; transition: transform .2s var(--ease-out), box-shadow .2s; }
+.yCard:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(21,21,30,.1); }
+.yY { font-family: var(--font-display); font-weight: 900; font-size: 22px; }
+.yGp { font-size: 11px; color: var(--mute); }
+.yW { font-weight: 700; font-size: 14px; margin-top: 6px; }
+.yT { font-size: 12px; color: var(--mute); }
+@media (max-width: 960px) { .hero { min-height: 0; } .track { position: relative; inset: auto; height: 360px; } .official { position: relative; right: auto; bottom: auto; margin: 0 var(--gutter) 24px; width: auto; } .note { position: relative; left: auto; bottom: auto; margin: 0 var(--gutter) 16px; } }
+
+/* past winners = formula1.com results table on a white radius-8 card */
+.list { display: flex; flex-direction: column; background: #fff; border-radius: 8px; padding: 0 24px 8px; }
+.lHead, .lRow { display: grid; grid-template-columns: 70px minmax(0, 1.3fr) minmax(0, 1fr) 80px minmax(0, 1.1fr) minmax(0, 1.4fr); gap: 16px; align-items: center; }
+.lHead { position: sticky; top: var(--head-h); z-index: 2; background: #fff; border-radius: 8px 8px 0 0; font: 600 14px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; color: var(--mute); padding: 20px 4px 16px; }
+.lRow { min-height: 58px; padding: 8px 4px; border-bottom: 1px solid var(--line); font-size: 14px; font-weight: 600; transition: background .15s; }
+.lRow:hover { background: color-mix(in srgb, currentColor 5%, transparent); }
+.lRow .num { font-size: 15px; font-family: var(--font-display); font-weight: 500; }
+.flTime { font: 400 13px/1 var(--font-tech) !important; color: var(--mute); }
+.lRow > span:nth-child(5), .lRow > span:nth-child(6) { color: #4a4a52; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lRow em { font-style: normal; color: var(--mute); font-weight: 400; font-size: 12px; }
+.lTeam { color: #4a4a52; font-size: 13px; display: flex; align-items: center; min-width: 0; }
+.dec { }
+.decLabel { font: 500 16px/20px var(--font-display); color: var(--mute); padding: 20px 4px 8px; list-style: none; cursor: default; border-bottom: 1px solid var(--line); }
+details.dec > summary { cursor: pointer; }
+details.dec > summary::-webkit-details-marker { display: none; }
+.decLabel em { font-family: var(--font-cn); font-style: normal; font-weight: 500; font-size: 12px; margin-left: 10px; }
+details.dec[open] .decLabel em { display: none; }
+@media (max-width: 760px) { .list { padding: 0 12px 4px; } .lHead { display: none; } .lRow { grid-template-columns: 52px 1fr 1fr; } .lRow > span:nth-child(n+4) { display: none; } }
+.storyRow { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 560px); gap: 48px; align-items: start; }
+.storyPhoto { margin: 0; }
+.storyPhoto img { width: 100%; aspect-ratio: 16/10; object-fit: cover; border-radius: 8px; }
+.storyPhoto figcaption { font-size: 11px; color: var(--mute); margin-top: 6px; }
+@media (max-width: 960px) { .storyRow { grid-template-columns: 1fr; } }
+.officialMap { margin: 28px 0 0; background: #fff; border-radius: 8px; padding: 16px; }
+.officialMap img { width: 100%; height: auto; }
+.officialMap figcaption { font-size: 11px; color: var(--mute); margin-top: 8px; }
+
+/* honours in the hero */
+.honours { display: flex; flex-wrap: wrap; gap: 18px 30px; margin-top: 28px; }
+.hon { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; font-size: 14px; }
+.hon :global(.lat) { display: none; }
+.recWho { display: inline-flex; align-items: center; gap: 10px; }
+.recYear { font-family: var(--font-display); font-weight: 500; font-size: 14px; color: rgba(255,255,255,.7); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; text-decoration-color: rgba(255,255,255,.35); }
+.recYear:hover { text-decoration-color: currentColor; text-decoration-thickness: 1.5px; }
+.record { font-size: 11px; color: rgba(255,255,255,.45); margin-top: 12px; }
+
+/* winners list */
+.lYear { font-family: var(--font-display); font-weight: 500; font-size: 16px; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; text-decoration-color: color-mix(in srgb, currentColor 25%, transparent); }
+.lOn { background: var(--paper); border-radius: 4px; }
+.lRow :global(b) { font-size: 14px; font-weight: 700; }
+.lWin { min-width: 0; font-size: 14px; }
+.lRow > span { min-width: 0; }
+.lRow > span:nth-child(5) :global(.lat), .lRow > span:nth-child(6) :global(.lat), .lWin :global(.lat) { display: none; }
+
+/* hosted-years strip */
+.yStrip { margin: 4px 0 8px; padding: 20px 24px 24px; background: #fff; border-radius: 8px; }
+.yHead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; font: 600 14px/20px "Titillium Web", var(--font-cn); color: var(--mute); margin-bottom: 16px; }
+.yHead > b { font: 700 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; color: var(--mute); }
+.yHead span b { color: var(--ink); font-size: 16px; }
+.yHead span :global(.ilink) { color: var(--ink); font-family: var(--font-display); font-weight: 500; font-size: 16px; }
+.yHead em { font-style: normal; font-size: 12px; margin-left: auto; }
+.yChips { display: flex; flex-wrap: wrap; gap: 4px; align-items: center; }
+.yChip { min-width: 46px; height: 24px; padding: 0 6px; display: inline-grid; place-items: center; border-radius: 4px; font-family: var(--font-display); font-weight: 500; font-size: 12px; font-variant-numeric: tabular-nums; background: var(--paper-2); color: var(--ink); transition: transform .15s var(--ease-out), box-shadow .15s; }
+.yChip sup { font-size: 9px; margin-left: 1px; }
+.yChip:hover { transform: translateY(-2px); box-shadow: 0 0 0 2px var(--ink); }
+.yNext { background: transparent; box-shadow: inset 0 0 0 1px var(--line); color: var(--mute); }
+.yTick { width: 2px; height: 16px; background: var(--line); border-radius: 1px; margin: 0 3px; }
+.yGap { display: inline-flex; align-items: center; gap: 6px; font: 600 12px/16px "Titillium Web", var(--font-cn); color: var(--mute); padding: 0 6px; }
+.yGap i { width: 2px; height: 16px; background: var(--line); }
+@media (max-width: 760px) { .yHead em { margin-left: 0; } .yChip { min-width: 40px; } }

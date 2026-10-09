@@ -1,0 +1,1092 @@
+{
+  "max-verstappen": {
+    "nameZh": "马克斯·维斯塔潘",
+    "nameEn": "Max Verstappen",
+    "tagline": "四届世界冠军，多项最年轻纪录保持者",
+    "bio": "荷兰车手，前F1车手约斯·维斯塔潘之子。2015年以17岁166天代表红牛二队完成首秀，成为史上最年轻的正赛车手；次年升入红牛车队后首战即在西班牙夺冠，刷新最年轻分站冠军纪录。2021至2024年连续四次夺得车手总冠军，其中2023赛季在22场比赛中赢下19场。2025年以2分之差屈居年度亚军。2026赛季继续效力红牛车队，与哈贾尔搭档。",
+    "highlights": [
+      {
+        "year": 2015,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "17岁完成F1首秀",
+        "text": "2015年澳大利亚大奖赛，维斯塔潘代表红牛二队（Toro Rosso）完成F1首秀，时年17岁166天，成为F1历史上最年轻的正赛车手。",
+        "sources": [
+          { "label": "Wikipedia · Max Verstappen", "url": "https://en.wikipedia.org/wiki/Max_Verstappen" }
+        ]
+      },
+      {
+        "year": 2016,
+        "gp": "spain",
+        "circuit": "catalunya",
+        "title": "红牛首战即夺冠",
+        "text": "2016年西班牙大奖赛是维斯塔潘升入红牛车队后的第一场比赛，他在这场比赛中夺冠，时年18岁228天，取代维特尔成为F1历史上最年轻的分站冠军。这也是他职业生涯的首个领奖台。",
+        "sources": [
+          { "label": "Wikipedia · Max Verstappen", "url": "https://en.wikipedia.org/wiki/Max_Verstappen" }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": "abu-dhabi",
+        "circuit": "yas-marina",
+        "title": "末圈超车首夺总冠军",
+        "text": "2021年收官战前，维斯塔潘与汉密尔顿同积369.5分。比赛末段安全车出动，赛事总监马西只允许两人之间的套圈车解套，维斯塔潘在最后一圈超越汉密尔顿夺冠，赢得个人首个车手总冠军。这一决定引发争议，马西于次年2月被撤换。",
+        "sources": [
+          { "label": "Wikipedia · 2021 Abu Dhabi Grand Prix", "url": "https://en.wikipedia.org/wiki/2021_Abu_Dhabi_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2023,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "十连胜打破纪录",
+        "text": "2023年意大利大奖赛，维斯塔潘取得个人第十场连胜，打破维特尔保持的九连胜纪录。他在这个赛季赢下19场分站，全年积575分，超过排名第二的队友佩雷兹的两倍。",
+        "sources": [
+          { "label": "Wikipedia · Max Verstappen", "url": "https://en.wikipedia.org/wiki/Max_Verstappen" }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "sao-paulo",
+        "circuit": "interlagos",
+        "title": "第17位发车雨战夺冠",
+        "text": "因超出动力单元配额受罚，维斯塔潘在2024年圣保罗大奖赛从第17位发车。比赛在雨中进行，他在第12圈前已升至第六，最终夺冠，结束了自己和红牛自西班牙站以来的胜利荒。这是F1历史上第三次有车手从第17位发车赢得比赛。",
+        "sources": [
+          { "label": "Wikipedia · 2024 São Paulo Grand Prix", "url": "https://en.wikipedia.org/wiki/2024_S%C3%A3o_Paulo_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "abu-dhabi",
+        "circuit": "yas-marina",
+        "title": "收官战夺冠仍差两分",
+        "text": "2025年收官战阿布扎比大奖赛是2010年以来首次有两名以上车手争夺总冠军的最终站。维斯塔潘从杆位出发赢得比赛，但诺里斯获得第三，以423分对421分夺得总冠军，维斯塔潘以2分之差位列年度亚军。",
+        "sources": [
+          { "label": "Wikipedia · 2025 Abu Dhabi Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Abu_Dhabi_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "bahrain",
+        "circuit": "sepang",
+        "title": "雪邦取得赛季首胜",
+        "text": "受2026年伊朗战争影响，巴林大奖赛移至马来西亚雪邦赛道举行并保留原名。维斯塔潘从杆位出发获胜，取得赛季首胜和职业生涯第72胜。这也是红牛福特动力单元的首场胜利，以及2003年巴西站之后福特动力赛车的首胜。",
+        "sources": [
+          { "label": "Wikipedia · 2026 Bahrain Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "先开F1后拿驾照",
+        "text": "维斯塔潘在F1首秀时还没有公路驾驶执照。他在F1参赛一个多赛季之后，才在18岁生日当天取得驾照，也就是说，他驾驶F1赛车参加正赛早于合法驾驶普通汽车上路。",
+        "sources": [
+          { "label": "Wikipedia · Max Verstappen", "url": "https://en.wikipedia.org/wiki/Max_Verstappen" }
+        ]
+      },
+      {
+        "title": "父母都是车手",
+        "text": "维斯塔潘的父亲约斯·维斯塔潘是荷兰前F1车手，母亲索菲·昆彭是比利时前卡丁车手。父母在他年幼时分开，他随父亲一起生活。",
+        "sources": [
+          { "label": "Wikipedia · Max Verstappen", "url": "https://en.wikipedia.org/wiki/Max_Verstappen" }
+        ]
+      },
+      {
+        "title": "41年来首例",
+        "text": "2024年维斯塔潘赢下9场分站，并提前两站锁定第四个车手总冠军。当年红牛只在车队积分榜排名第三，他因此成为41年来首位驾驶车队积分第三名的赛车夺得车手总冠军的车手。",
+        "sources": [
+          { "label": "Wikipedia · Max Verstappen", "url": "https://en.wikipedia.org/wiki/Max_Verstappen" }
+        ]
+      }
+    ]
+  },
+  "isack-hadjar": {
+    "nameZh": "伊萨克·哈贾尔",
+    "nameEn": "Isack Hadjar",
+    "tagline": "被称作“小普罗斯特”的法国车手",
+    "bio": "法国车手，2004年生于巴黎，持法国和阿尔及利亚双重国籍。2024年代表坎波斯车队获得F2年度亚军，仅次于博尔托莱托。2025年随小红牛车队（Racing Bulls）升入F1，在荷兰大奖赛拿到首个领奖台，以51分位列年度第12。2026年接替角田裕毅升入红牛车队，与维斯塔潘搭档，赛季中曾因手腕受伤缺席三站。",
+    "highlights": [
+      {
+        "year": 2024,
+        "gp": null,
+        "circuit": null,
+        "title": "F2年度亚军",
+        "text": "2024年哈贾尔代表坎波斯车队参加F2，取得4场胜利、8次登台和1个杆位，共积192分，最终以亚军身份输给博尔托莱托；同队队友马蒂全年只拿到62分。",
+        "sources": [
+          { "label": "Wikipedia · Isack Hadjar", "url": "https://en.wikipedia.org/wiki/Isack_Hadjar" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "首秀倒在暖胎圈",
+        "text": "2025年澳大利亚大奖赛，排位第11的哈贾尔在湿滑赛道上的暖胎圈失控撞上护墙，未能发车。回到围场时情绪低落的他得到汉密尔顿的父亲安东尼·汉密尔顿的安慰，对方搂住他的肩膀，鼓励他抬起头来。",
+        "sources": [
+          { "label": "Wikipedia · 2025 Australian Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Australian_Grand_Prix" },
+          { "label": "ESPN · Distraught Isack Hadjar gets words of support from Anthony Hamilton", "url": "https://www.espn.com/f1/story/_/id/44274586/distraught-isack-hadjar-gets-words-support-anthony-hamilton" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "netherlands",
+        "circuit": "zandvoort",
+        "title": "赞德沃特首登领奖台",
+        "text": "2025年荷兰大奖赛，哈贾尔从生涯最佳的第4位发车，诺里斯在比赛末段退赛后他升至第三，取得首个F1领奖台。他由此成为F1史上第五年轻的领奖台车手和首位登上领奖台的阿拉伯车手，这也是Racing Bulls以现名参赛后的首个领奖台。",
+        "sources": [
+          { "label": "Wikipedia · Isack Hadjar", "url": "https://en.wikipedia.org/wiki/Isack_Hadjar" },
+          { "label": "Wikipedia · 2025 Dutch Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Dutch_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "monaco",
+        "circuit": "monaco",
+        "title": "摩纳哥季军失而复得",
+        "text": "2026年摩纳哥大奖赛，哈贾尔冲线第四，因加斯利两次维修区超速被罚而递补第三。Alpine申请复审后处罚一度被撤销，哈贾尔降回第四；9月FIA国际上诉法庭恢复了处罚，他的季军最终得到确认。",
+        "sources": [
+          { "label": "Wikipedia · 2026 Monaco Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Monaco_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "azerbaijan",
+        "circuit": "baku",
+        "title": "伤愈复出即登台",
+        "text": "2026年暑期休赛期间，哈贾尔在训练中手腕受伤，缺席荷兰、意大利和西班牙三站，红牛由劳森顶替。他在阿塞拜疆大奖赛复出，并以第三名完赛，取得个人第三个F1领奖台。",
+        "sources": [
+          { "label": "Wikipedia · Isack Hadjar", "url": "https://en.wikipedia.org/wiki/Isack_Hadjar" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "“小普罗斯特”",
+        "text": "2024年哈贾尔在F2赢得比赛后，《巴黎人报》等法国媒体开始称他为“小普罗斯特”，把他与同为法国人的前世界冠军阿兰·普罗斯特相提并论。",
+        "sources": [
+          { "label": "Wikipedia · Isack Hadjar", "url": "https://en.wikipedia.org/wiki/Isack_Hadjar" }
+        ]
+      },
+      {
+        "title": "物理学家家庭",
+        "text": "哈贾尔在巴黎一个由医生和物理学家组成的阿尔及利亚裔家庭中长大。父亲亚辛·哈贾尔是量子力学研究人员，在他的卡丁车时期还兼任他的技师。",
+        "sources": [
+          { "label": "Wikipedia · Isack Hadjar", "url": "https://en.wikipedia.org/wiki/Isack_Hadjar" }
+        ]
+      }
+    ]
+  },
+  "lando-norris": {
+    "nameZh": "兰多·诺里斯",
+    "nameEn": "Lando Norris",
+    "tagline": "2025年世界冠军，始终效力迈凯伦",
+    "bio": "英国车手，同时持有比利时国籍。2014年成为KF级别最年轻的卡丁车世界冠军，2019年随迈凯伦升入F1，此后一直效力该队。2020年在奥地利首登领奖台，2024年在迈阿密以第110场比赛赢得首胜。2025年他在收官战阿布扎比获得第三，以2分优势力压维斯塔潘，赢得个人首个车手总冠军。2026年以卫冕冠军身份使用1号车参赛。",
+    "highlights": [
+      {
+        "year": 2019,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "19岁迈凯伦首秀",
+        "text": "2019年澳大利亚大奖赛，19岁的诺里斯代表迈凯伦完成F1首秀，排位第八、正赛第十二。下一站巴林大奖赛他以第六名完赛，拿到F1生涯的首批积分。",
+        "sources": [
+          { "label": "Wikipedia · Lando Norris", "url": "https://en.wikipedia.org/wiki/Lando_Norris" }
+        ]
+      },
+      {
+        "year": 2020,
+        "gp": "austria",
+        "circuit": "spielberg",
+        "title": "末圈最快圈登台",
+        "text": "2020年奥地利大奖赛，诺里斯在最后一圈刷新全场最快圈速，以4.802秒之差落后汉密尔顿冲线。汉密尔顿因与阿尔本相撞被罚5秒，诺里斯递补第三，成为当时F1史上第三年轻的领奖台车手。",
+        "sources": [
+          { "label": "Wikipedia · Lando Norris", "url": "https://en.wikipedia.org/wiki/Lando_Norris" }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": "russia",
+        "circuit": "sirius",
+        "title": "索契首杆遇雨",
+        "text": "2021年俄罗斯大奖赛，诺里斯在多变天气中拿下生涯首个杆位，并在比赛中长时间领跑。末段降雨时他坚持使用干胎，提前换上半雨胎的汉密尔顿将他超越，诺里斯被迫进站，最终获得第七并刷新最快圈速。",
+        "sources": [
+          { "label": "Wikipedia · Lando Norris", "url": "https://en.wikipedia.org/wiki/Lando_Norris" }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "miami",
+        "circuit": "miami",
+        "title": "第110场比赛首胜",
+        "text": "2024年迈阿密大奖赛，诺里斯在前车进站后接过领先，借安全车时机完成进站并保住第一，随后在重新起跑时挡住维斯塔潘，赢得生涯首胜。这是他的第110场F1比赛，也是第16个领奖台。",
+        "sources": [
+          { "label": "Wikipedia · Lando Norris", "url": "https://en.wikipedia.org/wiki/Lando_Norris" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "首次领跑积分榜",
+        "text": "2025赛季揭幕战澳大利亚大奖赛在小雨和多变的半湿条件下进行，诺里斯从杆位出发赢得比赛，这是他职业生涯第一次登上车手积分榜榜首。",
+        "sources": [
+          { "label": "Wikipedia · 2025 Australian Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Australian_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "abu-dhabi",
+        "circuit": "yas-marina",
+        "title": "两分优势加冕",
+        "text": "2025年拉斯维加斯站诺里斯与皮亚斯特里双双因底板磨损超标被取消成绩，进入最后两站时他领先队友24分。收官战阿布扎比他获得第三，以423分领先维斯塔潘2分、领先皮亚斯特里13分，赢得首个车手总冠军。",
+        "sources": [
+          { "label": "Wikipedia · Lando Norris", "url": "https://en.wikipedia.org/wiki/Lando_Norris" },
+          { "label": "Wikipedia · 2025 Abu Dhabi Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Abu_Dhabi_Grand_Prix" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "最年轻KF世界冠军",
+        "text": "2014年诺里斯代表Ricky Flynn车队赢得CIK-FIA卡丁车世界锦标赛KF组别冠军，成为该组别历史上最年轻的世界冠军。",
+        "sources": [
+          { "label": "Wikipedia · Lando Norris", "url": "https://en.wikipedia.org/wiki/Lando_Norris" }
+        ]
+      },
+      {
+        "title": "名字由母亲所取",
+        "text": "诺里斯的母亲西斯卡来自比利时弗拉芒地区圣尼古拉斯附近，“兰多”这个名字就是她起的。诺里斯同时持有英国和比利时国籍。",
+        "sources": [
+          { "label": "Wikipedia · Lando Norris", "url": "https://en.wikipedia.org/wiki/Lando_Norris" }
+        ]
+      },
+      {
+        "title": "父亲的商业背景",
+        "text": "诺里斯的父亲亚当·诺里斯曾任英国养老金服务公司Pensions Direct的董事总经理，该公司是Hargreaves Lansdown旗下业务；他后来创办电动滑板车公司Pure Electric并担任首席执行官。",
+        "sources": [
+          { "label": "Wikipedia · Lando Norris", "url": "https://en.wikipedia.org/wiki/Lando_Norris" }
+        ]
+      }
+    ]
+  },
+  "oscar-piastri": {
+    "nameZh": "奥斯卡·皮亚斯特里",
+    "nameEn": "Oscar Piastri",
+    "tagline": "青训三级连冠的澳大利亚车手",
+    "bio": "澳大利亚车手，2001年生于墨尔本。2019至2021年接连赢得雷诺欧洲杯、F3和F2冠军，是首位在相邻赛季连夺这三个级别冠军的车手。2023年加盟迈凯伦升入F1，2024年在匈牙利赢得首胜。2025赛季他取得7胜和16次登台，长时间领跑积分榜，最终以410分位列年度第三。2026年继续效力迈凯伦，与诺里斯搭档。",
+    "highlights": [
+      {
+        "year": 2023,
+        "gp": "japan",
+        "circuit": "suzuka",
+        "title": "新秀赛季首登台",
+        "text": "2023年日本大奖赛，皮亚斯特里从前排发车并获得第三名，取得F1生涯首个领奖台，成为自2017年斯特罗尔之后首位登上领奖台的新秀车手。",
+        "sources": [
+          { "label": "Wikipedia · Oscar Piastri", "url": "https://en.wikipedia.org/wiki/Oscar_Piastri" }
+        ]
+      },
+      {
+        "year": 2023,
+        "gp": "qatar",
+        "circuit": "lusail",
+        "title": "卡塔尔冲刺赛首胜",
+        "text": "2023年卡塔尔站，新秀皮亚斯特里拿下冲刺赛杆位，并在冲刺赛中顶住维斯塔潘的压力取胜，赢得个人首场F1冲刺赛胜利。",
+        "sources": [
+          { "label": "Wikipedia · Oscar Piastri", "url": "https://en.wikipedia.org/wiki/Oscar_Piastri" }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "hungary",
+        "circuit": "hungaroring",
+        "title": "车队指令下的首胜",
+        "text": "2024年匈牙利大奖赛，皮亚斯特里起步后在一号弯超越队友诺里斯领跑。诺里斯借进站策略反超后，迈凯伦要求两人换位，诺里斯在最后两圈让回位置。皮亚斯特里赢得首胜，成为第五位赢得F1分站的澳大利亚车手。",
+        "sources": [
+          { "label": "Wikipedia · Oscar Piastri", "url": "https://en.wikipedia.org/wiki/Oscar_Piastri" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "china",
+        "circuit": "shanghai",
+        "title": "上海首杆并夺冠",
+        "text": "2025年中国大奖赛，皮亚斯特里拿下生涯首个杆位，并在正赛中掌控局面赢得比赛。几站之后的沙特阿拉伯大奖赛后，他升至积分榜首，成为2010年以来首位领跑车手积分榜的澳大利亚车手。",
+        "sources": [
+          { "label": "Wikipedia · Oscar Piastri", "url": "https://en.wikipedia.org/wiki/Oscar_Piastri" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "netherlands",
+        "circuit": "zandvoort",
+        "title": "生涯首个大满贯",
+        "text": "2025年荷兰大奖赛，皮亚斯特里从杆位出发获胜，完成生涯首个大满贯，也是迈凯伦自1998年摩纳哥站以来的首个大满贯。队友诺里斯在比赛末段因漏油退赛，他的积分领先优势扩大到34分。",
+        "sources": [
+          { "label": "Wikipedia · 2025 Dutch Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Dutch_Grand_Prix" },
+          { "label": "Wikipedia · Oscar Piastri", "url": "https://en.wikipedia.org/wiki/Oscar_Piastri" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": null,
+        "circuit": null,
+        "title": "领跑多时终获第三",
+        "text": "皮亚斯特里在2025赛季大部分时间领跑积分榜，但卡塔尔站后跌至第三。他最终以410分位列年度第三，落后冠军诺里斯13分；全年7场胜利和16次登台都创下澳大利亚车手的单赛季纪录。",
+        "sources": [
+          { "label": "Wikipedia · Oscar Piastri", "url": "https://en.wikipedia.org/wiki/Oscar_Piastri" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "拒绝Alpine的推文",
+        "text": "2022年Alpine宣布由皮亚斯特里接替阿隆索，两小时后他在社交媒体上否认，表示下赛季不会为Alpine出战。FIA合同认定委员会裁定Alpine败诉，裁决显示他在Alpine宣布前近一个月已与迈凯伦签约。",
+        "sources": [
+          { "label": "Wikipedia · Oscar Piastri", "url": "https://en.wikipedia.org/wiki/Oscar_Piastri" }
+        ]
+      },
+      {
+        "title": "韦伯担任经纪人",
+        "text": "同为澳大利亚人的前F1车手马克·韦伯自2019年起将皮亚斯特里收入麾下，一直担任他的经纪人，并负责谈判了他进入F1的转会。",
+        "sources": [
+          { "label": "Wikipedia · Oscar Piastri", "url": "https://en.wikipedia.org/wiki/Oscar_Piastri" }
+        ]
+      },
+      {
+        "title": "新秀赛季连夺F3、F2",
+        "text": "皮亚斯特里2020年和2021年代表Prema车队，以新秀身份接连赢得FIA F3和F2冠军，是第六位在新秀赛季夺得GP2/F2冠军的车手。",
+        "sources": [
+          { "label": "Wikipedia · Oscar Piastri", "url": "https://en.wikipedia.org/wiki/Oscar_Piastri" }
+        ]
+      }
+    ]
+  },
+  "george-russell": {
+    "nameZh": "乔治·拉塞尔",
+    "nameEn": "George Russell",
+    "tagline": "从威廉姆斯走出的梅赛德斯主力",
+    "bio": "英国车手，梅赛德斯青训出身。按照沃尔夫设定的目标，他先后夺得2017年GP3和2018年F2冠军，2019年随威廉姆斯升入F1。2022年转投梅赛德斯，同年在巴西赢得首胜。2025年以319分位列年度第四。2026赛季他在揭幕战澳大利亚站夺冠，截至第16站已赢下3场，位列积分榜第二。",
+    "highlights": [
+      {
+        "year": 2020,
+        "gp": "sakhir",
+        "circuit": "bahrain",
+        "title": "顶替汉密尔顿出战",
+        "text": "2020年萨基尔大奖赛，拉塞尔临时顶替感染新冠的汉密尔顿代表梅赛德斯出战，并领跑了大部分比赛。但车队进站时误装了博塔斯的前轮，迫使他连续两次进站，之后又遭遇爆胎，最终获得第九。",
+        "sources": [
+          { "label": "Wikipedia · George Russell (racing driver)", "url": "https://en.wikipedia.org/wiki/George_Russell_(racing_driver)" }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": "belgium",
+        "circuit": "spa-francorchamps",
+        "title": "斯帕首登领奖台",
+        "text": "2021年比利时大奖赛，拉塞尔驾驶威廉姆斯在排位赛中拿到第二。正赛仅在安全车带领下进行了两圈便被终止，他按排位顺序获得第二名，取得F1生涯首个领奖台。",
+        "sources": [
+          { "label": "Wikipedia · George Russell (racing driver)", "url": "https://en.wikipedia.org/wiki/George_Russell_(racing_driver)" }
+        ]
+      },
+      {
+        "year": 2022,
+        "gp": "sao-paulo",
+        "circuit": "interlagos",
+        "title": "英特拉格斯首胜",
+        "text": "2022年是拉塞尔加盟梅赛德斯的第一个赛季。在圣保罗大奖赛周末，他先赢下冲刺赛，又在正赛中夺冠，在英特拉格斯同时取得个人首场冲刺赛胜利和首个分站冠军。",
+        "sources": [
+          { "label": "Wikipedia · George Russell (racing driver)", "url": "https://en.wikipedia.org/wiki/George_Russell_(racing_driver)" }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "belgium",
+        "circuit": "spa-francorchamps",
+        "title": "冲线第一遭取消",
+        "text": "2024年比利时大奖赛，拉塞尔采用一停策略率先冲线，但赛后赛车被查出比798公斤的最低重量轻1.5公斤，成绩被取消，冠军由汉密尔顿递补。他是30年来首位被取消分站冠军的车手，上一次是1994年的舒马赫。",
+        "sources": [
+          { "label": "Wikipedia · 2024 Belgian Grand Prix", "url": "https://en.wikipedia.org/wiki/2024_Belgian_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "canada",
+        "circuit": "montreal",
+        "title": "蒙特利尔全程掌控",
+        "text": "2025年加拿大大奖赛，拉塞尔拿下杆位，从起跑到终点掌控比赛并刷新最快圈速。当年他还在新加坡从杆位出发获胜，最终以319分位列年度第四，领先队友安东内利169分。",
+        "sources": [
+          { "label": "Wikipedia · George Russell (racing driver)", "url": "https://en.wikipedia.org/wiki/George_Russell_(racing_driver)" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "新规首战夺冠",
+        "text": "2026年F1启用新一代技术规则。在揭幕战澳大利亚大奖赛上，拉塞尔与法拉利车手勒克莱尔展开长时间缠斗，最终赢得比赛，为梅赛德斯拿下新规时代的第一场胜利。",
+        "sources": [
+          { "label": "Wikipedia · George Russell (racing driver)", "url": "https://en.wikipedia.org/wiki/George_Russell_(racing_driver)" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "azerbaijan",
+        "circuit": "baku",
+        "title": "巴库领跑全部圈数",
+        "text": "2026年阿塞拜疆大奖赛，拉塞尔拿下杆位并领跑了全部圈数，赢得职业生涯第8场分站胜利，也是他继澳大利亚站和奥地利站之后本赛季的第3胜。",
+        "sources": [
+          { "label": "Wikipedia · George Russell (racing driver)", "url": "https://en.wikipedia.org/wiki/George_Russell_(racing_driver)" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "用PPT推销自己",
+        "text": "少年时期的拉塞尔为了争取梅赛德斯的支持，专门制作了一份PowerPoint演示文稿向车队推销自己，理由是要做一件能让对方记住的事。",
+        "sources": [
+          { "label": "Wikipedia · George Russell (racing driver)", "url": "https://en.wikipedia.org/wiki/George_Russell_(racing_driver)" }
+        ]
+      },
+      {
+        "title": "按目标逐级晋升",
+        "text": "沃尔夫为拉塞尔设定了明确目标：先拿下GP3和F2冠军再谈F1。他2017年以新秀身份赢得GP3冠军并提前两轮锁定，2018年又以领先诺里斯68分的优势夺得F2冠军。",
+        "sources": [
+          { "label": "Wikipedia · George Russell (racing driver)", "url": "https://en.wikipedia.org/wiki/George_Russell_(racing_driver)" }
+        ]
+      },
+      {
+        "title": "车手协会董事",
+        "text": "拉塞尔自2021年起担任大奖赛车手协会（GPDA）董事。2025年塞恩斯接替维特尔加入董事会后，两人与主席武尔茨等人共同组成该协会的董事团队。",
+        "sources": [
+          { "label": "Wikipedia · Grand Prix Drivers' Association", "url": "https://en.wikipedia.org/wiki/Grand_Prix_Drivers%27_Association" }
+        ]
+      }
+    ]
+  },
+  "kimi-antonelli": {
+    "nameZh": "基米·安东内利",
+    "nameEn": "Kimi Antonelli",
+    "tagline": "史上最年轻的杆位得主",
+    "bio": "意大利车手，全名安德烈亚·基米·安东内利，2006年生于博洛尼亚。青训阶段连夺多项方程式冠军后跳过F3直升F2，2025年以18岁之龄加盟梅赛德斯升入F1，新秀赛季以150分位列第七。2026年他在中国站成为史上最年轻的杆位得主并赢得首胜，由此开启五连胜，截至第16站已赢下8场，以84分优势领跑积分榜。",
+    "highlights": [
+      {
+        "year": 2025,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "第16位发车得第四",
+        "text": "2025年澳大利亚大奖赛，18岁203天的安东内利迎来F1首秀，成为史上第三年轻的正赛车手。在雨中多变的条件下，他从第16位发车追回12个位置获得第四，成为史上第二年轻的积分得主。",
+        "sources": [
+          { "label": "Wikipedia · Andrea Kimi Antonelli", "url": "https://en.wikipedia.org/wiki/Andrea_Kimi_Antonelli" },
+          { "label": "Wikipedia · 2025 Australian Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Australian_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "canada",
+        "circuit": "montreal",
+        "title": "蒙特利尔首登台",
+        "text": "2025年加拿大大奖赛，安东内利获得第三名，取得F1生涯首个领奖台，成为史上第三年轻的领奖台车手。同场比赛由梅赛德斯队友拉塞尔赢得冠军。",
+        "sources": [
+          { "label": "Wikipedia · Andrea Kimi Antonelli", "url": "https://en.wikipedia.org/wiki/Andrea_Kimi_Antonelli" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "china",
+        "circuit": "shanghai",
+        "title": "最年轻杆位与首胜",
+        "text": "2026年中国大奖赛，19岁的安东内利拿下杆位，打破维特尔在2008年意大利站创下的纪录，成为史上最年轻的杆位得主。他随后赢得首胜，成为史上第二年轻的分站冠军，也是2006年费斯切拉之后首位赢得分站的意大利车手。",
+        "sources": [
+          { "label": "Wikipedia · 2026 Chinese Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Chinese_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "japan",
+        "circuit": "suzuka",
+        "title": "最年轻的积分领跑者",
+        "text": "2026年日本大奖赛后，安东内利成为史上最年轻的车手积分榜领跑者。他从中国站起连赢中国、日本、迈阿密、加拿大和摩纳哥五站，创下F1车手从首胜开始连胜场次最多的纪录。",
+        "sources": [
+          { "label": "Wikipedia · Andrea Kimi Antonelli", "url": "https://en.wikipedia.org/wiki/Andrea_Kimi_Antonelli" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "monaco",
+        "circuit": "monaco",
+        "title": "摩纳哥大满贯",
+        "text": "2026年摩纳哥大奖赛，安东内利从杆位出发夺冠，成为最年轻的摩纳哥大奖赛冠军，同时成为史上最年轻的大满贯得主。这是他本赛季的第五场胜利，汉密尔顿获得第二。",
+        "sources": [
+          { "label": "Wikipedia · 2026 Monaco Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Monaco_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "蒙扎第19位发车夺冠",
+        "text": "安东内利的连胜在巴塞罗那站因引擎故障中断，此后他又在比利时站从杆位出发获胜，并在意大利大奖赛从第19位发车夺冠。截至第16站巴林大奖赛，他已赢下8场，以84分优势领跑积分榜。",
+        "sources": [
+          { "label": "Wikipedia · Andrea Kimi Antonelli", "url": "https://en.wikipedia.org/wiki/Andrea_Kimi_Antonelli" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "“基米”并非致敬莱科宁",
+        "text": "安东内利的中间名“基米”与芬兰车手莱科宁的名字相同，因此常被联想在一起，但他本人表示，自己并不是以莱科宁的名字命名的。",
+        "sources": [
+          { "label": "Wikipedia · Andrea Kimi Antonelli", "url": "https://en.wikipedia.org/wiki/Andrea_Kimi_Antonelli" }
+        ]
+      },
+      {
+        "title": "父亲经营车队",
+        "text": "安东内利的父亲马尔科·安东内利是一名跑车赛车手，同时拥有总部位于圣马力诺的AKM Motorsport车队，该车队自2022年起参加意大利F4锦标赛。",
+        "sources": [
+          { "label": "Wikipedia · Andrea Kimi Antonelli", "url": "https://en.wikipedia.org/wiki/Andrea_Kimi_Antonelli" }
+        ]
+      },
+      {
+        "title": "跳过F3直升F2",
+        "text": "2022年安东内利以当时创纪录的13场胜利赢得意大利F4冠军，并拿下ADAC F4冠军；2023年又夺得地区方程式中东和欧洲锦标赛冠军。随后他跳过FIA F3，于2024年直接代表Prema升入F2。",
+        "sources": [
+          { "label": "Wikipedia · Andrea Kimi Antonelli", "url": "https://en.wikipedia.org/wiki/Andrea_Kimi_Antonelli" }
+        ]
+      }
+    ]
+  },
+  "charles-leclerc": {
+    "nameZh": "夏尔·勒克莱尔",
+    "nameEn": "Charles Leclerc",
+    "tagline": "法拉利阵中的摩纳哥本土车手",
+    "bio": "摩纳哥车手，法拉利车手学院出身。2016年赢得GP3冠军，2017年以新秀身份夺得首届FIA F2冠军。2018年代表索伯完成F1首秀，2019年加盟法拉利，同年在斯帕赢得首胜，成为首位赢得F1分站的摩纳哥车手。2022年获年度亚军，2024年赢得摩纳哥主场比赛。2026年继续效力法拉利，与汉密尔顿搭档。",
+    "highlights": [
+      {
+        "year": 2019,
+        "gp": "bahrain",
+        "circuit": "bahrain",
+        "title": "巴林首杆痛失胜利",
+        "text": "2019年巴林大奖赛，勒克莱尔拿下生涯首个杆位，成为当时F1史上第二年轻的杆位得主。他领跑了大部分比赛，但在还剩约10圈时赛车出现引擎问题，被两辆梅赛德斯超越，最终获得第三。",
+        "sources": [
+          { "label": "Wikipedia · Charles Leclerc", "url": "https://en.wikipedia.org/wiki/Charles_Leclerc" }
+        ]
+      },
+      {
+        "year": 2019,
+        "gp": "belgium",
+        "circuit": "spa-francorchamps",
+        "title": "斯帕赢得首胜",
+        "text": "2019年比利时大奖赛，21岁的勒克莱尔赢得生涯首胜，成为首位赢得F1分站的摩纳哥车手。前一天F2车手安托万·于贝尔在比赛事故中丧生，勒克莱尔将这场胜利献给了他。",
+        "sources": [
+          { "label": "Wikipedia · Charles Leclerc", "url": "https://en.wikipedia.org/wiki/Charles_Leclerc" }
+        ]
+      },
+      {
+        "year": 2019,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "终结蒙扎九年等待",
+        "text": "斯帕夺冠一周后的2019年意大利大奖赛，勒克莱尔从杆位出发再度获胜，成为2010年阿隆索之后首位在蒙扎夺冠的法拉利车手，结束了法拉利在主场九年不胜的局面。",
+        "sources": [
+          { "label": "Wikipedia · Charles Leclerc", "url": "https://en.wikipedia.org/wiki/Charles_Leclerc" }
+        ]
+      },
+      {
+        "year": 2022,
+        "gp": "bahrain",
+        "circuit": "bahrain",
+        "title": "新规首战夺冠",
+        "text": "2022年F1启用新技术规则，勒克莱尔在揭幕战巴林大奖赛从杆位出发夺冠并刷新最快圈速，与队友塞恩斯为法拉利拿下自2019年新加坡站以来的首个胜利和一二名。这一赛季他最终获得年度亚军。",
+        "sources": [
+          { "label": "Wikipedia · 2022 Bahrain Grand Prix", "url": "https://en.wikipedia.org/wiki/2022_Bahrain_Grand_Prix" },
+          { "label": "Wikipedia · Charles Leclerc", "url": "https://en.wikipedia.org/wiki/Charles_Leclerc" }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "monaco",
+        "circuit": "monaco",
+        "title": "终于赢下主场",
+        "text": "2024年摩纳哥大奖赛，勒克莱尔拿下个人在摩纳哥的第三个杆位并赢得比赛，成为1931年路易·希龙之后首位赢得主场大奖赛的摩纳哥车手。这也是他自2022年奥地利站以来的首场胜利。",
+        "sources": [
+          { "label": "Wikipedia · 2024 Monaco Grand Prix", "url": "https://en.wikipedia.org/wiki/2024_Monaco_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "great-britain",
+        "circuit": "silverstone",
+        "title": "新规时代首胜",
+        "text": "2026年新技术规则实施后，勒克莱尔在揭幕战澳大利亚站与拉塞尔缠斗未能取胜，随后在英国大奖赛赢得本赛季首胜，这是他职业生涯的第9场分站胜利。",
+        "sources": [
+          { "label": "Wikipedia · Charles Leclerc", "url": "https://en.wikipedia.org/wiki/Charles_Leclerc" },
+          { "label": "Wikipedia · George Russell (racing driver)", "url": "https://en.wikipedia.org/wiki/George_Russell_(racing_driver)" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "教父比安奇",
+        "text": "已故F1车手朱尔斯·比安奇是勒克莱尔的教父，也曾是他卡丁车时期的技师。2016年勒克莱尔赢得GP3冠军后，将这座奖杯献给了2015年去世的比安奇。",
+        "sources": [
+          { "label": "Wikipedia · Charles Leclerc", "url": "https://en.wikipedia.org/wiki/Charles_Leclerc" }
+        ]
+      },
+      {
+        "title": "丧父四天后夺冠",
+        "text": "2017年勒克莱尔的父亲埃尔韦去世，终年54岁。四天后，勒克莱尔在F2巴库站拿下杆位并赢得主赛，他把杆位献给了父亲。此前他曾告诉父亲自己已签下2018年的F1合同，而他与索伯正式签约是在当年晚些时候。",
+        "sources": [
+          { "label": "Wikipedia · Charles Leclerc", "url": "https://en.wikipedia.org/wiki/Charles_Leclerc" }
+        ]
+      },
+      {
+        "title": "赛车兄弟",
+        "text": "勒克莱尔的弟弟阿瑟·勒克莱尔同样是职业赛车手，曾获得2022年亚洲地区方程式锦标赛冠军。他还有一位同母异父的哥哥洛伦佐·托洛塔-勒克莱尔。",
+        "sources": [
+          { "label": "Wikipedia · Charles Leclerc", "url": "https://en.wikipedia.org/wiki/Charles_Leclerc" }
+        ]
+      }
+    ]
+  },
+  "lewis-hamilton": {
+    "nameZh": "刘易斯·汉密尔顿",
+    "nameEn": "Lewis Hamilton",
+    "tagline": "七届世界冠军，胜场与杆位纪录保持者",
+    "bio": "英国车手，迈凯伦青训出身。2007年随迈凯伦升入F1，首战即登上领奖台，次年成为当时最年轻的世界冠军。2013年加盟梅赛德斯，此后又赢得六个车手总冠军，以七冠追平舒马赫的纪录，并保持分站胜场、杆位和领奖台次数的历史纪录。2025年转投法拉利，2026年在巴塞罗那-加泰罗尼亚大奖赛取得代表法拉利的首个分站冠军。",
+    "highlights": [
+      {
+        "year": 2007,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "首秀即登领奖台",
+        "text": "2007年澳大利亚大奖赛，汉密尔顿代表迈凯伦完成F1首秀，并在首场比赛中获得第三名。他也是首位参加F1比赛的黑人车手。",
+        "sources": [
+          { "label": "Wikipedia · Lewis Hamilton", "url": "https://en.wikipedia.org/wiki/Lewis_Hamilton" }
+        ]
+      },
+      {
+        "year": 2007,
+        "gp": "canada",
+        "circuit": "montreal",
+        "title": "第六战首杆首胜",
+        "text": "2007年加拿大大奖赛是汉密尔顿的第六场F1比赛，他拿下生涯首个杆位，并从起跑领先到终点赢得首胜，成为首位赢得F1分站的黑人车手，22岁时就登上了积分榜首。",
+        "sources": [
+          { "label": "Wikipedia · 2007 Canadian Grand Prix", "url": "https://en.wikipedia.org/wiki/2007_Canadian_Grand_Prix" },
+          { "label": "Wikipedia · Lewis Hamilton", "url": "https://en.wikipedia.org/wiki/Lewis_Hamilton" }
+        ]
+      },
+      {
+        "year": 2008,
+        "gp": "brazil",
+        "circuit": "interlagos",
+        "title": "最后弯角夺冠",
+        "text": "2008年巴西大奖赛，汉密尔顿在最后一圈的最后几个弯角超越格洛克升至第五，以1分优势赢得车手总冠军，成为当时F1史上最年轻的世界冠军。",
+        "sources": [
+          { "label": "Wikipedia · Lewis Hamilton", "url": "https://en.wikipedia.org/wiki/Lewis_Hamilton" }
+        ]
+      },
+      {
+        "year": 2020,
+        "gp": "portugal",
+        "circuit": "portimao",
+        "title": "第92胜改写纪录",
+        "text": "2020年葡萄牙大奖赛，汉密尔顿取得职业生涯第92场分站胜利，超越舒马赫的91胜，成为F1历史上赢得分站最多的车手。",
+        "sources": [
+          { "label": "Wikipedia · Lewis Hamilton", "url": "https://en.wikipedia.org/wiki/Lewis_Hamilton" }
+        ]
+      },
+      {
+        "year": 2020,
+        "gp": "turkey",
+        "circuit": "istanbul",
+        "title": "七冠追平舒马赫",
+        "text": "2020年土耳其大奖赛，汉密尔顿在还剩三站的情况下提前锁定个人第七个车手总冠军，追平舒马赫保持的总冠军次数纪录。",
+        "sources": [
+          { "label": "Wikipedia · Lewis Hamilton", "url": "https://en.wikipedia.org/wiki/Lewis_Hamilton" }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "great-britain",
+        "circuit": "silverstone",
+        "title": "银石第九次夺冠",
+        "text": "2024年英国大奖赛，汉密尔顿赢得个人第九个英国大奖赛冠军，这是他自2021年以来的首场胜利，结束了长达31个月的胜利荒。",
+        "sources": [
+          { "label": "Wikipedia · Lewis Hamilton", "url": "https://en.wikipedia.org/wiki/Lewis_Hamilton" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "barcelona-catalunya",
+        "circuit": "catalunya",
+        "title": "法拉利首个分站冠军",
+        "text": "2026年汉密尔顿先在中国站拿到代表法拉利的首个正赛领奖台，随后在加拿大和摩纳哥再度登台，并在首届巴塞罗那-加泰罗尼亚大奖赛赢得代表法拉利的首个分站冠军。",
+        "sources": [
+          { "label": "Wikipedia · Lewis Hamilton", "url": "https://en.wikipedia.org/wiki/Lewis_Hamilton" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "十岁时找上丹尼斯",
+        "text": "10岁的汉密尔顿在Autosport颁奖典礼上走到迈凯伦老板罗恩·丹尼斯面前，自我介绍说已赢得英国锦标赛，将来想驾驶他的赛车。丹尼斯在他的签名本上留言，让他九年后再联系。1998年丹尼斯将他签入迈凯伦青年车手计划。",
+        "sources": [
+          { "label": "Wikipedia · Lewis Hamilton", "url": "https://en.wikipedia.org/wiki/Lewis_Hamilton" }
+        ]
+      },
+      {
+        "title": "多项历史纪录",
+        "text": "汉密尔顿保持着F1分站胜场（106场）、杆位（104个）和领奖台（208次）的历史纪录，并在2021年先后于西班牙站和俄罗斯站成为首位达成100个杆位和100场胜利的车手。同年他获授爵士爵位。",
+        "sources": [
+          { "label": "Wikipedia · Lewis Hamilton", "url": "https://en.wikipedia.org/wiki/Lewis_Hamilton" }
+        ]
+      },
+      {
+        "title": "法拉利首季无正赛登台",
+        "text": "汉密尔顿称加盟法拉利是儿时的梦想。2025年他在中国站赢得个人首场冲刺赛，但同站正赛因技术违规被取消成绩；这一年也成为他职业生涯中第一个没有正赛领奖台的赛季。",
+        "sources": [
+          { "label": "Wikipedia · Lewis Hamilton", "url": "https://en.wikipedia.org/wiki/Lewis_Hamilton" }
+        ]
+      }
+    ]
+  },
+  "fernando-alonso": {
+    "nameZh": "费尔南多·阿隆索",
+    "nameEn": "Fernando Alonso",
+    "tagline": "两届世界冠军，F1出赛次数最多",
+    "bio": "西班牙车手，2001年代表米纳尔迪升入F1。2003年效力雷诺期间先后成为当时最年轻的杆位得主和分站冠军，2005年和2006年连夺车手总冠军，是首位来自西班牙的世界冠军。此后曾效力迈凯伦和法拉利，并在F1之外两度赢得勒芒24小时耐力赛。2023年加盟阿斯顿·马丁，2026年继续效力该队，合同至少到2027赛季结束。",
+    "highlights": [
+      {
+        "year": 2001,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "米纳尔迪首秀",
+        "text": "2001年澳大利亚大奖赛，19岁的阿隆索代表米纳尔迪车队完成F1首秀。他从第19位发车，最终以第12名完赛，开启了此后跨越二十多年的F1生涯。",
+        "sources": [
+          { "label": "Wikipedia · Fernando Alonso", "url": "https://en.wikipedia.org/wiki/Fernando_Alonso" }
+        ]
+      },
+      {
+        "year": 2003,
+        "gp": "malaysia",
+        "circuit": "sepang",
+        "title": "当时最年轻杆位",
+        "text": "2003年马来西亚大奖赛，代表雷诺出战的阿隆索拿下生涯首个杆位，成为当时F1史上最年轻的杆位得主，并在正赛中获得第三，取得个人首个领奖台。",
+        "sources": [
+          { "label": "Wikipedia · Fernando Alonso", "url": "https://en.wikipedia.org/wiki/Fernando_Alonso" }
+        ]
+      },
+      {
+        "year": 2003,
+        "gp": "hungary",
+        "circuit": "hungaroring",
+        "title": "打破最年轻冠军纪录",
+        "text": "2003年匈牙利大奖赛，阿隆索从杆位出发赢得生涯首个分站冠军，打破了布鲁斯·迈凯伦保持的最年轻分站冠军纪录。",
+        "sources": [
+          { "label": "Wikipedia · Fernando Alonso", "url": "https://en.wikipedia.org/wiki/Fernando_Alonso" }
+        ]
+      },
+      {
+        "year": 2005,
+        "gp": null,
+        "circuit": null,
+        "title": "西班牙首位世界冠军",
+        "text": "2005年阿隆索代表雷诺赢得车手总冠军，成为首位来自西班牙的F1世界冠军，同时以24岁的年龄成为当时史上最年轻的世界冠军。",
+        "sources": [
+          { "label": "Wikipedia · Fernando Alonso", "url": "https://en.wikipedia.org/wiki/Fernando_Alonso" }
+        ]
+      },
+      {
+        "year": 2006,
+        "gp": "brazil",
+        "circuit": "interlagos",
+        "title": "巴西卫冕",
+        "text": "2006年收官战巴西大奖赛，阿隆索以第二名完赛，锁定个人第二个车手总冠军，代表雷诺成功卫冕，也成为当时最年轻的两届世界冠军。",
+        "sources": [
+          { "label": "Wikipedia · Fernando Alonso", "url": "https://en.wikipedia.org/wiki/Fernando_Alonso" }
+        ]
+      },
+      {
+        "year": 2012,
+        "gp": "europe",
+        "circuit": "valencia",
+        "title": "第11位发车主场夺冠",
+        "text": "2012年欧洲大奖赛在瓦伦西亚举行，阿隆索因法拉利排位策略失误只排在第11位，正赛却赢得比赛。他成为2006年舒马赫之后首位赢得主场比赛的车手，也是当年首位两次夺冠的车手。",
+        "sources": [
+          { "label": "Wikipedia · 2012 European Grand Prix", "url": "https://en.wikipedia.org/wiki/2012_European_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2023,
+        "gp": "bahrain",
+        "circuit": "bahrain",
+        "title": "阿斯顿·马丁首战登台",
+        "text": "2023年巴林大奖赛是阿隆索代表阿斯顿·马丁的首场比赛，他获得第三，为车队带来自2021年阿塞拜疆站维特尔之后的首个领奖台。两周后的沙特站，他成为F1史上第六位达到100个领奖台的车手。",
+        "sources": [
+          { "label": "Wikipedia · Fernando Alonso", "url": "https://en.wikipedia.org/wiki/Fernando_Alonso" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "勒芒双冠与印第500",
+        "text": "阿隆索在F1之外多次跨界参赛：他代表丰田在2018年和2019年两度赢得勒芒24小时耐力赛，夺得2018-19赛季世界耐力锦标赛冠军，还在2017、2019和2020年三度报名印第安纳波利斯500。",
+        "sources": [
+          { "label": "Wikipedia · Fernando Alonso", "url": "https://en.wikipedia.org/wiki/Fernando_Alonso" }
+        ]
+      },
+      {
+        "title": "唯一的本田赛车",
+        "text": "阿隆索保持着F1正赛出赛次数最多的纪录。2026年他驾驶的阿斯顿·马丁是该队首辆使用本田动力的赛车，也是当年围场中唯一一辆搭载本田动力单元的赛车。",
+        "sources": [
+          { "label": "Wikipedia · Fernando Alonso", "url": "https://en.wikipedia.org/wiki/Fernando_Alonso" }
+        ]
+      }
+    ]
+  },
+  "lance-stroll": {
+    "nameZh": "兰斯·斯特罗尔",
+    "nameEn": "Lance Stroll",
+    "tagline": "创下多项最年轻纪录的加拿大车手",
+    "bio": "加拿大车手，2010年加入法拉利车手学院。2016年以创纪录的分差夺得欧洲F3冠军，2017年18岁时代表威廉姆斯升入F1，新秀赛季即在巴库登上领奖台。2019年转投赛点车队，该队2021年起以阿斯顿·马丁名义参赛，现由其父劳伦斯·斯特罗尔拥有。2026年他继续效力阿斯顿·马丁，与阿隆索连续第四个赛季搭档。",
+    "highlights": [
+      {
+        "year": 2017,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "威廉姆斯首秀",
+        "text": "2017年澳大利亚大奖赛，18岁的斯特罗尔代表威廉姆斯完成F1首秀，队友是马萨。他在入队前一年刚刚赢得欧洲F3冠军，首场比赛未能完赛。",
+        "sources": [
+          { "label": "Wikipedia · Lance Stroll", "url": "https://en.wikipedia.org/wiki/Lance_Stroll" }
+        ]
+      },
+      {
+        "year": 2017,
+        "gp": "azerbaijan",
+        "circuit": "baku",
+        "title": "巴库新秀登台",
+        "text": "2017年阿塞拜疆大奖赛，斯特罗尔获得第三名，取得F1首个领奖台。时年18岁239天的他成为史上最年轻的新秀领奖台车手，也是当时第二年轻的领奖台车手。",
+        "sources": [
+          { "label": "Wikipedia · Lance Stroll", "url": "https://en.wikipedia.org/wiki/Lance_Stroll" }
+        ]
+      },
+      {
+        "year": 2017,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "最年轻前排发车",
+        "text": "2017年意大利大奖赛，两位红牛车手受罚后退，斯特罗尔递补至第2位发车，成为当时F1史上最年轻的前排发车车手。",
+        "sources": [
+          { "label": "Wikipedia · Lance Stroll", "url": "https://en.wikipedia.org/wiki/Lance_Stroll" }
+        ]
+      },
+      {
+        "year": 2020,
+        "gp": "turkey",
+        "circuit": "istanbul",
+        "title": "伊斯坦布尔湿地杆位",
+        "text": "2020年土耳其大奖赛，斯特罗尔在湿地排位赛中拿下生涯首个杆位，成为1997年维伦纽夫之后首位获得杆位的加拿大车手。正赛中他受轮胎颗粒化困扰，最终掉到第九。",
+        "sources": [
+          { "label": "Wikipedia · Lance Stroll", "url": "https://en.wikipedia.org/wiki/Lance_Stroll" }
+        ]
+      },
+      {
+        "year": 2020,
+        "gp": "sakhir",
+        "circuit": "bahrain",
+        "title": "萨基尔再登领奖台",
+        "text": "2020年萨基尔大奖赛，斯特罗尔代表赛点车队获得第三名。这是他职业生涯的第三个领奖台，至今仍是他最近一次站上F1领奖台。",
+        "sources": [
+          { "label": "Wikipedia · Lance Stroll", "url": "https://en.wikipedia.org/wiki/Lance_Stroll" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "父亲拥有车队",
+        "text": "斯特罗尔的父亲劳伦斯·斯特罗尔是加拿大亿万富翁商人，现为阿斯顿·马丁的部分所有者兼执行董事长，并拥有阿斯顿·马丁F1车队。",
+        "sources": [
+          { "label": "Wikipedia · Lance Stroll", "url": "https://en.wikipedia.org/wiki/Lance_Stroll" }
+        ]
+      },
+      {
+        "title": "青训三连冠",
+        "text": "斯特罗尔在2014年赢得意大利F4冠军，2015年夺得丰田方程式系列赛冠军，2016年又以领先第二名187分的创纪录优势赢得FIA欧洲F3冠军，连续三年在不同级别夺冠。",
+        "sources": [
+          { "label": "Wikipedia · Lance Stroll", "url": "https://en.wikipedia.org/wiki/Lance_Stroll" }
+        ]
+      },
+      {
+        "title": "骑车摔伤双腕",
+        "text": "2023赛季开始前，斯特罗尔在骑自行车训练时摔车，造成双腕骨折和一根脚趾骨折，因此缺席季前测试，右腕还接受了植入金属螺钉的小手术。",
+        "sources": [
+          { "label": "Wikipedia · Lance Stroll", "url": "https://en.wikipedia.org/wiki/Lance_Stroll" }
+        ]
+      }
+    ]
+  },
+  "alexander-albon": {
+    "nameZh": "亚历山大·阿尔本",
+    "nameEn": "Alexander Albon",
+    "tagline": "代表泰国出战的伦敦出生车手",
+    "bio": "泰英混血车手，生于伦敦，持英国和泰国双重国籍，代表泰国参赛。2019年随红牛二队升入F1，赛季中途升入红牛车队，2020年在托斯卡纳站成为首位登上F1领奖台的泰国车手。2021年失去正式席位转任后备车手，2022年加盟威廉姆斯重返赛场。2025年以73分位列年度第八；2026年继续效力威廉姆斯，合同至少到2027年底。",
+    "highlights": [
+      {
+        "year": 2019,
+        "gp": "belgium",
+        "circuit": "spa-francorchamps",
+        "title": "新秀赛季升入红牛",
+        "text": "2019年阿尔本代表红牛二队完成F1首秀，同年从比利时大奖赛起接替加斯利升入红牛车队。他在新秀赛季排名年度第八，并获得年度最佳新秀奖。",
+        "sources": [
+          { "label": "Wikipedia · Alexander Albon", "url": "https://en.wikipedia.org/wiki/Alexander_Albon" }
+        ]
+      },
+      {
+        "year": 2020,
+        "gp": "tuscany",
+        "circuit": "mugello",
+        "title": "首位登台的泰国车手",
+        "text": "2020年托斯卡纳大奖赛，阿尔本获得第三名，取得个人首个领奖台，成为首位登上F1领奖台的泰国车手。同年他在巴林站再次登台，最终以105分位列年度第七。",
+        "sources": [
+          { "label": "Wikipedia · Alexander Albon", "url": "https://en.wikipedia.org/wiki/Alexander_Albon" }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": null,
+        "circuit": null,
+        "title": "失去席位转战DTM",
+        "text": "2021年红牛将正式席位交给佩雷兹，阿尔本转任后备车手。这一年他参加德国房车大师赛（DTM），在纽博格林赢得一场比赛，成为首位赢得DTM比赛的泰国车手。",
+        "sources": [
+          { "label": "Wikipedia · Alexander Albon", "url": "https://en.wikipedia.org/wiki/Alexander_Albon" }
+        ]
+      },
+      {
+        "year": 2022,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "阑尾炎缺席蒙扎",
+        "text": "2022年阿尔本接替拉塞尔加盟威廉姆斯重返F1。赛季中他因阑尾炎接受手术，缺席了意大利大奖赛；威廉姆斯后来透露，他术后出现了与麻醉相关的呼吸衰竭。",
+        "sources": [
+          { "label": "Wikipedia · Alexander Albon", "url": "https://en.wikipedia.org/wiki/Alexander_Albon" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": null,
+        "circuit": null,
+        "title": "中游车手积分最高",
+        "text": "2025赛季塞恩斯加盟威廉姆斯成为阿尔本的队友。阿尔本全年积73分，排名车手积分榜第八，是中游车队车手中积分最高的一位。",
+        "sources": [
+          { "label": "Wikipedia · Alexander Albon", "url": "https://en.wikipedia.org/wiki/Alexander_Albon" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "伦敦出生的泰国车手",
+        "text": "阿尔本1996年生于伦敦，父亲奈杰尔·阿尔本曾参加英国房车锦标赛（BTCC）和保时捷卡雷拉杯，母亲来自泰国。他持英泰双重国籍，出于赞助方面的原因代表泰国参赛。",
+        "sources": [
+          { "label": "Wikipedia · Alexander Albon", "url": "https://en.wikipedia.org/wiki/Alexander_Albon" }
+        ]
+      },
+      {
+        "title": "被红牛放弃后回归",
+        "text": "阿尔本2008年至2012年是红牛青年车手计划成员，2012年底被红牛放弃。2019年他以红牛二队车手身份进入F1，并在新秀赛季中途就升入红牛车队。",
+        "sources": [
+          { "label": "Wikipedia · Alexander Albon", "url": "https://en.wikipedia.org/wiki/Alexander_Albon" }
+        ]
+      },
+      {
+        "title": "GP3输给勒克莱尔",
+        "text": "2016年阿尔本在GP3赢得四场比赛，获得年度亚军，夺冠的正是当时处于新秀赛季的ART车队队友勒克莱尔。",
+        "sources": [
+          { "label": "Wikipedia · Alexander Albon", "url": "https://en.wikipedia.org/wiki/Alexander_Albon" }
+        ]
+      }
+    ]
+  },
+  "carlos-sainz-jr": {
+    "nameZh": "卡洛斯·塞恩斯",
+    "nameEn": "Carlos Sainz Jr.",
+    "tagline": "两届拉力世界冠军之子",
+    "bio": "西班牙车手，两届世界拉力锦标赛冠军老卡洛斯·塞恩斯之子，2010年起成为红牛青年车手。2015年与维斯塔潘一同代表红牛二队升入F1，此后效力雷诺、迈凯伦和法拉利，在法拉利期间赢得4场分站。2025年加盟威廉姆斯，在阿塞拜疆站为车队登上领奖台，以64分位列年度第九。2026年继续效力威廉姆斯，并于8月宣布续签多年合同。",
+    "highlights": [
+      {
+        "year": 2015,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "与维斯塔潘同场首秀",
+        "text": "2015年澳大利亚大奖赛，塞恩斯与队友维斯塔潘一起代表红牛二队完成F1首秀，并以第九名完赛，首场比赛就拿到积分。",
+        "sources": [
+          { "label": "Wikipedia · Carlos Sainz Jr.", "url": "https://en.wikipedia.org/wiki/Carlos_Sainz_Jr." }
+        ]
+      },
+      {
+        "year": 2019,
+        "gp": "brazil",
+        "circuit": "interlagos",
+        "title": "末位发车登上领奖台",
+        "text": "2019年巴西大奖赛，塞恩斯因排位赛未能做出成绩从第20位发车，冲线第四。赛后汉密尔顿被罚5秒，他递补第三，取得个人首个领奖台，也是迈凯伦自2014年澳大利亚站以来的首个领奖台。由于调查仍在进行，他没能参加颁奖仪式。",
+        "sources": [
+          { "label": "Wikipedia · 2019 Brazilian Grand Prix", "url": "https://en.wikipedia.org/wiki/2019_Brazilian_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2022,
+        "gp": "great-britain",
+        "circuit": "silverstone",
+        "title": "第150场首杆首胜",
+        "text": "2022年英国大奖赛是塞恩斯的第150场F1比赛，他在银石拿下生涯首个杆位，随后在正赛中赢得生涯首个分站冠军，此时他已代表法拉利出战第二个赛季。",
+        "sources": [
+          { "label": "Wikipedia · Carlos Sainz Jr.", "url": "https://en.wikipedia.org/wiki/Carlos_Sainz_Jr." }
+        ]
+      },
+      {
+        "year": 2023,
+        "gp": "singapore",
+        "circuit": "marina-bay",
+        "title": "打破红牛全胜",
+        "text": "2023年新加坡大奖赛，塞恩斯为法拉利赢得比赛。这是2023赛季唯一一场不是由红牛车队赢得的大奖赛，红牛当年赢下了其余全部21场比赛。",
+        "sources": [
+          { "label": "Wikipedia · Carlos Sainz Jr.", "url": "https://en.wikipedia.org/wiki/Carlos_Sainz_Jr." }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "术后两周夺冠",
+        "text": "2024年沙特阿拉伯大奖赛周末，塞恩斯因阑尾炎接受手术并缺席比赛。两周后的澳大利亚大奖赛，他在第2圈超越杆位发车的维斯塔潘，后者随后因刹车故障退赛。塞恩斯领跑大部分比赛并夺冠，与勒克莱尔为法拉利拿下一二名。",
+        "sources": [
+          { "label": "Wikipedia · 2024 Australian Grand Prix", "url": "https://en.wikipedia.org/wiki/2024_Australian_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "azerbaijan",
+        "circuit": "baku",
+        "title": "威廉姆斯首登台",
+        "text": "2025年阿塞拜疆大奖赛，塞恩斯从第2位发车并获得第三名，拿下代表威廉姆斯的首个领奖台。同年在卡塔尔站，他再次为车队登上领奖台。",
+        "sources": [
+          { "label": "Wikipedia · Carlos Sainz Jr.", "url": "https://en.wikipedia.org/wiki/Carlos_Sainz_Jr." }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "父亲是拉力冠军",
+        "text": "塞恩斯的父亲老卡洛斯·塞恩斯在1990年和1992年两度赢得世界拉力锦标赛冠军。父子二人同名，他本人自2010年起加入红牛青年车手计划，走上了场地赛道路。",
+        "sources": [
+          { "label": "Wikipedia · Carlos Sainz Jr.", "url": "https://en.wikipedia.org/wiki/Carlos_Sainz_Jr." }
+        ]
+      },
+      {
+        "title": "接替维特尔进入GPDA",
+        "text": "2025年2月，塞恩斯接替维特尔，被任命为大奖赛车手协会（GPDA）董事，与拉塞尔、主席武尔茨等人共同组成该协会的董事团队。",
+        "sources": [
+          { "label": "Wikipedia · Carlos Sainz Jr.", "url": "https://en.wikipedia.org/wiki/Carlos_Sainz_Jr." },
+          { "label": "Wikipedia · Grand Prix Drivers' Association", "url": "https://en.wikipedia.org/wiki/Grand_Prix_Drivers%27_Association" }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+.page { }
+.head { background: var(--carbon); color: #fff; padding: 48px 0 32px; }
+.headRow { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+.title { font-family: var(--font-display); font-size: clamp(36px, 4.6vw, 64px); font-weight: 900; margin-top: 10px; line-height: 1.1; }
+.facts { color: rgba(255,255,255,.72); }
+.facts b { font-family: var(--font-display); font-weight: 500; color: #fff; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; }
+/* weekend sessions: formula1.com schedule rows — label Formula1, day Titillium, time KH Interference */
+.sessions { list-style: none; margin: 28px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 2px; }
+.sessions li { background: #1f1f27; border-radius: 4px; padding: 10px 14px; display: flex; flex-direction: column; gap: 4px; white-space: nowrap; }
+.sessions li > span:first-child { font: 500 14px/18px var(--font-display); }
+.sWhen { font: 600 12px/16px var(--font-cn); color: rgba(255,255,255,.6); }
+.sDate { font: 400 12px/16px var(--font-tech); }
+.sTime { font: 700 18px/20px var(--font-tech); font-variant-numeric: tabular-nums; }
+.sRace { background: var(--f1-red) !important; }
+.sRace .sWhen { color: rgba(255,255,255,.85); }
+.two { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 56px; }
+.podium { list-style: none; margin: 20px 0 10px; padding: 0; }
+.podium li { display: grid; grid-template-columns: 64px minmax(0, auto) 1fr auto; gap: 14px; align-items: center; padding: 10px 0 10px 10px; border-bottom: 1px solid var(--line); }
+/* last time here: the top three as big team-colour cards */
+.podCards { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 10px; margin: 20px 0 14px; }
+.podium li > b { font-size: 20px; text-align: center; }
+.podium li > a { font-weight: 900; font-size: 16px; }
+.podium li > a :global(.lat) { display: none; }
+.podTeam { font-size: 13px; color: var(--mute); }
+.podium li > em { font-style: normal; font-size: 14px; }
+.small { font-size: 13px; color: var(--mute); margin-bottom: 16px; display: flex; flex-wrap: wrap; gap: 10px 28px; }
+.podMeta { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+.podMeta b { font-weight: 500; }
+.time { font: 400 12px/16px var(--font-tech); }
+.hy2 { color: inherit; }
+.hy2:hover { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+.lastY { margin-left: 4px; color: var(--mute); }
+.lastY:hover { text-decoration: underline; text-underline-offset: 3px; }
+.debut { font: 600 13px/16px "Titillium Web", var(--font-cn); color: var(--mute); }
+.teamTbl td { white-space: nowrap; }
+.hon { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; color: var(--ink); }
+.leaders { display: flex; flex-wrap: wrap; gap: 14px 32px; margin: 18px 0 4px; }
+.leaders .hon { font-weight: 700; }
+.u { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(255,255,255,.35); }
+.u:hover { text-decoration-color: currentColor; text-decoration-thickness: 1.5px; }
+.hy { font-weight: 500; font-size: 9px; opacity: .6; margin-right: 2px; }
+.story { padding: 14px 0; border-top: 1px solid var(--line); }
+.story b { font-size: 15px; }
+.story p { font-size: 14px; line-height: 1.8; color: #3a3a42; margin-top: 4px; }
+.src { display: flex; flex-wrap: wrap; gap: 4px 12px; }
+.src a { font-family: var(--font-data); font-size: 11px !important; color: var(--mute) !important; text-decoration: underline; text-decoration-color: var(--line); }
+.math { font-size: 16px; line-height: 1.8; margin: 16px 0; color: #3a3a42; }
+.math b { color: var(--ink); font-size: 18px; }
+.stand td:first-child { width: 44px; }
+.tableWrap { overflow-x: auto; }
+.table { min-width: 1100px; }
+.table td { vertical-align: top; }
+.name { display: flex; flex-direction: column; }
+.name b { font-weight: 700; }
+.name span { font-size: 11px; color: var(--mute); }
+.zero { color: #c8c6c3 !important; }
+.table em { font-style: normal; color: var(--mute); font-size: 12px; font-weight: 400; }
+.hist { display: flex; flex-wrap: wrap; gap: 3px; max-width: 280px; }
+.hist a { min-width: 22px; text-decoration: none; height: 20px; padding: 0 4px; display: inline-flex; align-items: baseline; justify-content: center; line-height: 20px; font-family: var(--font-data); font-weight: 700; font-size: 11px; border-radius: 3px; background: var(--paper-2); }
+.hWin { background: var(--carbon) !important; color: #fff; }
+.hPod { background: #8a8a92 !important; color: #fff; }
+.hDnf { background: transparent !important; box-shadow: inset 0 0 0 1px #d6d4d1; color: var(--mute); }
+.note { font-size: 13px; color: #3a3a42; width: 240px; line-height: 1.5; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 240px; }
+.note a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.note b { display: block; font-size: 13px; color: var(--ink); }
+.note span { display: block; font-size: 12px; color: #5a5a62; margin-top: 2px; }
+.noteSrc { margin-left: 6px; font-size: 11px; color: var(--mute); text-decoration: underline; }
+.notes { list-style: none; margin: 20px 0 0; padding: 0; }
+.notes li { padding: 14px 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 4px; }
+.notes li b { font-size: 15px; }
+.notes li p { font-size: 14px; line-height: 1.75; color: #3a3a42; }
+.tag { align-self: flex-start; font: 700 11px/16px "Titillium Web", var(--font-cn); padding: 0 6px; border-radius: 4px; background: #fff; color: var(--mute); }
+@media (max-width: 960px) { .two { grid-template-columns: 1fr; } }
+@media print {
+  :global(header), :global(footer), .actions { display: none !important; }
+  .head { background: #fff; color: #000; padding: 0 0 12px; }
+  .sessions { background: #ddd; }
+  .sessions li { background: #fff; }
+  .sessions li { color: #000; }
+  :global(.band) { padding: 16px 0 !important; break-inside: avoid; }
+}
+.storyGrid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+/* story cards: the driver on a solid team-colour header, the note on white below */
+.storyGrid li { position: relative; background: #fff; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; scroll-margin-top: 140px; }
+.storyBody { padding: 12px 16px 16px; }
+.storyGrid b { display: block; font-size: 15px; margin-top: 2px; }
+.storyGrid li:hover .storyBody > b { text-decoration: underline; text-underline-offset: 4px; }
+.storyGrid p { font-size: 13px; line-height: 1.75; color: #3a3a42; margin-top: 4px; }
+.storyWho { display: block; font-size: 15px; padding: 16px; }
+@media (max-width: 960px) { .storyGrid { grid-template-columns: 1fr; } }
+/* .tbl heads stay Titillium even when right-aligned (globals' `.tbl .r` would switch them to Formula1) */
+.page :global(.tbl) th { font-family: "Titillium Web", var(--font-cn); font-weight: 600; }
+.table td:nth-child(6) { white-space: nowrap; }

@@ -1,0 +1,196 @@
+{
+  "eras": [
+    {
+      "id": "front-engine-1950-1960",
+      "years": [1950, 1960],
+      "title": "前置引擎时代",
+      "summary": "1950年国际汽联举办首届F1车手世界锦标赛，阿尔法·罗密欧用战前设计的158几乎包揽了当年所有分站。最初的规则允许4.5升自然吸气或1.5升增压引擎，1954年起改为2.5升自然吸气。1958年设立车队（制造商）锦标赛；库珀把引擎移到车手身后，中置引擎赛车从1959年起开始主导比赛。",
+      "keyRules": [
+        "1950–1953年：4.5升自然吸气或1.5升增压引擎",
+        "1952–1953年：世界锦标赛改按F2规则举行（2升自然吸气或0.75升增压）",
+        "1954–1960年：2.5升自然吸气，增压引擎限750毫升",
+        "1958年起禁止增压，同年设立车队锦标赛"
+      ],
+      "sources": [
+        { "label": "Wikipedia · Formula One engines", "url": "https://en.wikipedia.org/wiki/Formula_One_engines" },
+        { "label": "Wikipedia · History of Formula One", "url": "https://en.wikipedia.org/wiki/History_of_Formula_One" },
+        { "label": "Wikipedia · Alfa Romeo 158/159 Alfetta", "url": "https://en.wikipedia.org/wiki/Alfa_Romeo_158/159_Alfetta" }
+      ]
+    },
+    {
+      "id": "1-5-litre-1961-1965",
+      "years": [1961, 1965],
+      "title": "1.5升时代",
+      "summary": "1961年引擎上限从2.5升降到1.5升自然吸气，并设1.3升的最低排量，增压引擎继续被禁止。中置引擎已成主流，1962年路特斯25用铝制单体壳取代传统钢管车架，被视为F1第一辆全受力单体壳赛车，克拉克凭它在1963年夺冠。",
+      "keyRules": [
+        "引擎：1.5升自然吸气，最低排量1.3升",
+        "禁止增压",
+        "1962年：路特斯25引入铝制单体壳底盘"
+      ],
+      "sources": [
+        { "label": "Wikipedia · Formula One engines", "url": "https://en.wikipedia.org/wiki/Formula_One_engines" },
+        { "label": "Wikipedia · History of Formula One", "url": "https://en.wikipedia.org/wiki/History_of_Formula_One" },
+        { "label": "Wikipedia · Lotus 25", "url": "https://en.wikipedia.org/wiki/Lotus_25" }
+      ]
+    },
+    {
+      "id": "3-litre-turbo-1966-1988",
+      "years": [1966, 1988],
+      "title": "3升与涡轮时代",
+      "summary": "1966年引擎上限提高到3升自然吸气或1.5升增压。1967年路特斯49把福特考斯沃斯DFV引擎作为承力结构，1968年翼片开始出现在F1赛车上。1977年雷诺RS01率先使用1.5升涡轮增压引擎，到1986年规则只允许使用涡轮引擎。1987年3.5升自然吸气引擎回归，涡轮受增压值限制，并在1989年被全面禁止。",
+      "keyRules": [
+        "1966–1985年：3升自然吸气或1.5升增压",
+        "1968年：路特斯49B在摩纳哥站首次使用翼片",
+        "1977年：雷诺RS01引入1.5升涡轮增压引擎",
+        "1984年起禁止比赛中途加油",
+        "1986年：只允许1.5升涡轮引擎",
+        "1987年：3.5升自然吸气回归，涡轮增压值限制为4巴，1988年进一步收紧"
+      ],
+      "sources": [
+        { "label": "Wikipedia · Formula One engines", "url": "https://en.wikipedia.org/wiki/Formula_One_engines" },
+        { "label": "Wikipedia · History of Formula One", "url": "https://en.wikipedia.org/wiki/History_of_Formula_One" },
+        { "label": "Wikipedia · Lotus 49", "url": "https://en.wikipedia.org/wiki/Lotus_49" },
+        { "label": "Wikipedia · Pit stop", "url": "https://en.wikipedia.org/wiki/Pit_stop" }
+      ]
+    },
+    {
+      "id": "ground-effect-1977-1982",
+      "years": [1977, 1982],
+      "title": "第一次地面效应时代",
+      "summary": "1977年路特斯78“翼车”首次把地面效应带入F1，1978年的路特斯79用车底文丘里通道产生大量下压力，帮助安德雷蒂夺冠。同年布拉汉姆BT46B用风扇抽出车底空气，只出赛一次便被禁止。这一时期的地面效应赛车用滑动侧裙封闭车身与地面之间的间隙。80年代初地面效应基本被禁，1983年起强制要求平底。",
+      "keyRules": [
+        "1977年：路特斯78首次应用地面效应",
+        "1978年：风扇车在BT46B获胜后被禁止",
+        "滑动侧裙封闭车身与地面间隙以维持车底低压",
+        "1983年起强制平底"
+      ],
+      "sources": [
+        { "label": "Wikipedia · Ground effect (cars)", "url": "https://en.wikipedia.org/wiki/Ground_effect_(cars)" },
+        { "label": "Wikipedia · Lotus 79", "url": "https://en.wikipedia.org/wiki/Lotus_79" },
+        { "label": "Wikipedia · Brabham BT46", "url": "https://en.wikipedia.org/wiki/Brabham_BT46" }
+      ]
+    },
+    {
+      "id": "na-v10-v12-1989-2005",
+      "years": [1989, 2005],
+      "title": "自然吸气V10/V12时代",
+      "summary": "1989年涡轮被禁，只允许3.5升自然吸气引擎，V8、V10、V12并存，其中V10最受欢迎。1994年禁止主动悬挂等电子驾驶辅助，并恢复进站加油。1995年排量降至3升，法拉利当年使用了最后一台V12；1998年起改用沟槽轮胎，2001年米其林加入，形成与普利司通的轮胎大战。2000年起，为控制成本强制使用V10。",
+      "keyRules": [
+        "1989–1994年：3.5升自然吸气",
+        "1994年：禁止主动悬挂及其他电子驾驶辅助；恢复进站加油（至2009年）",
+        "1995–2005年：3.0升自然吸气",
+        "1998年：引入沟槽轮胎",
+        "2000年：强制使用V10布局"
+      ],
+      "sources": [
+        { "label": "Wikipedia · Formula One engines", "url": "https://en.wikipedia.org/wiki/Formula_One_engines" },
+        { "label": "Wikipedia · Formula One regulations", "url": "https://en.wikipedia.org/wiki/Formula_One_regulations" },
+        { "label": "Wikipedia · Formula One tyres", "url": "https://en.wikipedia.org/wiki/Formula_One_tyres" },
+        { "label": "Wikipedia · Pit stop", "url": "https://en.wikipedia.org/wiki/Pit_stop" }
+      ]
+    },
+    {
+      "id": "v8-2006-2013",
+      "years": [2006, 2013],
+      "title": "2.4升V8时代",
+      "summary": "2006年改用2.4升90度V8自然吸气引擎，转速在2007–2008年限制为19000转，2009年起为18000转。2009年空气动力规则大改，前翼更低更宽、尾翼更高更窄，光头胎回归，车队可选装最大60千瓦的KERS。2010年禁止进站加油，2011年引入DRS可调尾翼，倍耐力成为独家轮胎供应商。2013年是V8引擎的最后一个赛季。",
+      "keyRules": [
+        "2006年：2.4升90度V8自然吸气",
+        "2009年：光头胎回归，可选装KERS（最大60千瓦），空气动力规则重订",
+        "2010年：禁止进站加油",
+        "2011年：引入DRS；倍耐力独家供胎"
+      ],
+      "sources": [
+        { "label": "Wikipedia · Formula One engines", "url": "https://en.wikipedia.org/wiki/Formula_One_engines" },
+        { "label": "Wikipedia · 2009 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2009_Formula_One_World_Championship" },
+        { "label": "Wikipedia · Formula One regulations", "url": "https://en.wikipedia.org/wiki/Formula_One_regulations" },
+        { "label": "Wikipedia · Formula One tyres", "url": "https://en.wikipedia.org/wiki/Formula_One_tyres" },
+        { "label": "Wikipedia · 2013 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2013_Formula_One_World_Championship" }
+      ]
+    },
+    {
+      "id": "hybrid-2014-2021",
+      "years": [2014, 2021],
+      "title": "V6涡轮混动时代",
+      "summary": "2014年F1进入第二个涡轮时代，改用1.6升V6涡轮增压混合动力单元，配备MGU-K和MGU-H两套能量回收系统，燃油流量上限为每小时100公斤。2017年车宽从1800毫米增至2000毫米，轮胎加宽25%，目标是单圈快4至5秒。2018年起强制安装Halo头部保护装置，2021年引入每年1.45亿美元的预算帽。",
+      "keyRules": [
+        "动力单元：1.6升V6涡轮增压，MGU-K（120千瓦）+ MGU-H",
+        "燃油流量上限100公斤/小时，转速上限15000转",
+        "2017年：车宽2000毫米，轮胎加宽25%，最低重量升至728公斤",
+        "2018年：强制安装Halo",
+        "2021年：预算帽1.45亿美元"
+      ],
+      "sources": [
+        { "label": "Wikipedia · Formula One engines", "url": "https://en.wikipedia.org/wiki/Formula_One_engines" },
+        { "label": "Wikipedia · 2017 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2017_Formula_One_World_Championship" },
+        { "label": "Wikipedia · Formula One regulations", "url": "https://en.wikipedia.org/wiki/Formula_One_regulations" },
+        { "label": "Wikipedia · 2021 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2021_Formula_One_World_Championship" },
+        { "label": "Formula1.com · 2026 power unit regulations explained", "url": "https://www.formula1.com/en/latest/article/2026-regulations-explained-all-you-need-to-know-about-f1s-new-power-units.14jfv7a36905uDJDdNyfQd" }
+      ]
+    },
+    {
+      "id": "ground-effect-2022-2025",
+      "years": [2022, 2025],
+      "title": "地面效应回归",
+      "summary": "原定2021年实施的新规因疫情推迟到2022年。新车依靠车底成形通道产生下压力，减少跟车时的性能损失：旧车在三个车身距离后会损失35%下压力，新车在20米处约损失4%，10米处约18%。轮毂从13英寸换成18英寸，并加装轮罩和前轮上方小翼，最低重量从752公斤增至790公斤。",
+      "keyRules": [
+        "车底通道产生地面效应下压力",
+        "18英寸轮毂与低扁平比轮胎",
+        "最低重量790公斤",
+        "取消转速上限，燃料乙醇含量至少10%"
+      ],
+      "sources": [
+        { "label": "Formula1.com · 10 things you need to know about the 2022 F1 car", "url": "https://www.formula1.com/en/latest/article/10-things-you-need-to-know-about-the-all-new-2022-f1-car.4OLg8DrXyzHzdoGrbqp6ye" },
+        { "label": "Wikipedia · 2021 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2021_Formula_One_World_Championship" },
+        { "label": "Wikipedia · Ground effect (cars)", "url": "https://en.wikipedia.org/wiki/Ground_effect_(cars)" },
+        { "label": "Wikipedia · Formula One engines", "url": "https://en.wikipedia.org/wiki/Formula_One_engines" }
+      ]
+    },
+    {
+      "id": "new-era-2026",
+      "years": [2026, 2026],
+      "title": "2026新时代",
+      "summary": "2026年底盘与动力单元规则同时更新。赛车更短、更窄、更轻，前后翼可在直道模式与弯道模式之间切换，DRS被取消。动力单元保留1.6升V6涡轮，但取消MGU-H，电能功率提高到350千瓦，并全面使用先进可持续燃料。本季共有五家动力单元制造商，奥迪与凯迪拉克以新车队身份参赛。",
+      "keyRules": [
+        "取消MGU-H，MGU-K功率提高到350千瓦",
+        "使用先进可持续燃料",
+        "主动空气动力：直道模式与弯道模式",
+        "超车模式取代DRS"
+      ],
+      "sources": [
+        { "label": "FIA · F1's New Era: everything you need to know", "url": "https://www.fia.com/news/f1s-new-era-everything-you-need-know-about-how-fia-making-formula-1-more-competitive-more" },
+        { "label": "Formula1.com · 2026 power unit regulations explained", "url": "https://www.formula1.com/en/latest/article/2026-regulations-explained-all-you-need-to-know-about-f1s-new-power-units.14jfv7a36905uDJDdNyfQd" },
+        { "label": "Formula1.com · 2026 aerodynamics regulations explained", "url": "https://www.formula1.com/en/latest/article/2026-regulations-explained-all-you-need-to-know-about-f1s-new-aerodynamics.7IAt0auc32UkCEFE5ypkTB" }
+      ]
+    }
+  ],
+  "y2026": {
+    "summary": "2026年规则让赛车更小、更轻：轴距缩短200毫米、车宽缩窄100毫米，重量减轻约30公斤，下压力减少约30%，阻力减少约55%。前后翼在直道模式下打开襟翼减阻，在弯道模式下恢复高下压力，所有车手都可使用，不再只限于跟车者。动力单元取消MGU-H，内燃机功率从550–560千瓦降至约400千瓦，电能功率从120千瓦提高到350千瓦，目标接近五五分配。原来的DRS由超车模式取代。赛季中，国际汽联与各方商定调整能量管理规则，自迈阿密站起实施。",
+    "specs": [
+      { "label": "最低重量", "value": "724公斤（不含轮胎），比上一代轻约30公斤" },
+      { "label": "最大轴距", "value": "3400毫米（缩短200毫米）" },
+      { "label": "最大车宽", "value": "1900毫米（缩窄100毫米）" },
+      { "label": "轮胎", "value": "保留18英寸轮毂，胎面宽度前胎减25毫米、后胎减30毫米" },
+      { "label": "空气动力", "value": "下压力减少约30%，阻力减少约55%" },
+      { "label": "内燃机", "value": "1.6升V6涡轮增压，功率约400千瓦（此前550–560千瓦）" },
+      { "label": "MGU-K", "value": "350千瓦（此前120千瓦），约为原来的三倍" },
+      { "label": "MGU-H", "value": "取消" },
+      { "label": "动力分配", "value": "内燃机与电能目标接近50:50" },
+      { "label": "燃料", "value": "先进可持续燃料（来自碳捕集、城市垃圾和非食用生物质等）" },
+      { "label": "主动空气动力", "value": "直道模式：前后翼襟翼打开减阻；弯道模式：恢复高下压力位置。FIA早期方案称为X模式与Z模式" },
+      { "label": "超车模式", "value": "取代DRS。在检测点落后前车1秒以内时，下一圈可额外获得0.5兆焦电能；前车电能输出在290公里/小时后递减，后车可保持350千瓦至337公里/小时" },
+      { "label": "Boost按钮", "value": "车手按下后，动力单元切换到最大功率或车队预设模式" },
+      { "label": "安全", "value": "防滚架测试载荷从16g提高到20g" },
+      { "label": "赛季中调整", "value": "2026年4月20日商定、自迈阿密站起实施：排位赛最大回充能量由8兆焦降至7兆焦，超级削峰（superclip）功率由250千瓦提高到350千瓦；正赛中Boost增幅上限为150千瓦，MGU-K在关键加速区保持350千瓦、其余路段限制为250千瓦" },
+      { "label": "动力单元制造商", "value": "梅赛德斯、法拉利、红牛福特、本田、奥迪，共五家" }
+    ],
+    "sources": [
+      { "label": "FIA · A New Era of Competition: 2026 regulations unveiled", "url": "https://www.fia.com/news/new-era-competition-fia-showcases-future-focused-formula-1-regulations-2026-and-beyond" },
+      { "label": "FIA · F1's New Era: everything you need to know", "url": "https://www.fia.com/news/f1s-new-era-everything-you-need-know-about-how-fia-making-formula-1-more-competitive-more" },
+      { "label": "FIA · Refinements to the 2026 F1 regulations", "url": "https://www.fia.com/news/refinements-2026-fia-formula-1-regulations-agreed-all-stakeholders" },
+      { "label": "Formula1.com · 2026 aerodynamics regulations explained", "url": "https://www.formula1.com/en/latest/article/2026-regulations-explained-all-you-need-to-know-about-f1s-new-aerodynamics.7IAt0auc32UkCEFE5ypkTB" },
+      { "label": "Formula1.com · 2026 power unit regulations explained", "url": "https://www.formula1.com/en/latest/article/2026-regulations-explained-all-you-need-to-know-about-f1s-new-power-units.14jfv7a36905uDJDdNyfQd" },
+      { "label": "Wikipedia · Formula One tyres", "url": "https://en.wikipedia.org/wiki/Formula_One_tyres" }
+    ]
+  }
+}

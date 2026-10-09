@@ -1,0 +1,60 @@
+/* Era intro — one light surface system (formula1.com): paper page, white cards radius 8; the era is the only identity
+   card (.f1-surface in the dominant team's colour) on /eras/[id], a white card inside the year hub's Era tab. */
+.page { background: var(--paper); }
+.top { padding: 24px var(--gutter) 8px; max-width: var(--maxw); margin: 0 auto; }
+.hero, .heroLight { border-radius: 8px; padding: 28px 32px; display: flex; flex-direction: column; gap: 16px; }
+.hero { min-height: 380px; }
+.hero::before { height: 150% !important; right: -8% !important; }
+.heroLight { background: #fff; color: #1c1c25; }
+.kick { font: 700 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; opacity: .8; }
+.heroLight .kick { color: #606066; opacity: 1; }
+.title { font: 900 clamp(36px, 5vw, 64px)/1.1 var(--font-cn); }
+.lede { font-size: 16px; line-height: 1.85; max-width: 820px; opacity: .92; }
+.hero .lede :global(.ilink) { text-decoration-color: color-mix(in srgb, currentColor 45%, transparent); }
+.stats { display: flex; flex-wrap: wrap; gap: 12px 40px; margin: 8px 0 0; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.22); }
+.heroLight .stats { border-top-color: #e0dedc; }
+.stats div { display: flex; flex-direction: column; gap: 6px; }
+.stats dd { margin: 0; font: 900 32px/32px var(--font-display); }
+.stats dt { font: 700 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; opacity: .8; }
+.heroLight .stats dt { color: #606066; opacity: 1; }
+.rulers { display: flex; flex-wrap: wrap; gap: 14px 40px; margin-top: 4px; }
+.ruler { display: inline-flex; align-items: center; gap: 14px; }
+.hero .ruler b { color: #fff; }
+
+.band { padding: 56px 0; }
+.band + .band { border-top: 1px solid var(--line); }
+
+/* moments: white cards, year in Formula1 */
+.events { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
+.events li { display: grid; grid-template-columns: 64px 1fr; gap: 16px; padding: 16px; background: #fff; border-radius: 8px; }
+.evYear { font: 500 20px/24px var(--font-display); align-self: start; }
+.evYear:hover { text-decoration: underline; text-underline-offset: 4px; }
+.events b { font-size: 16px; line-height: 1.5; }
+.events p { font-size: 14px; line-height: 1.8; color: #3a3a44; margin-top: 6px; }
+.src { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; color: var(--mute); margin-top: 6px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; }
+.src:hover { text-decoration-color: currentColor; }
+
+/* wins: two F1 results tables on white */
+.tables { display: flex; flex-direction: column; gap: 16px; }
+.tbl { background: #fff; border-radius: 8px; overflow: hidden; }
+.tbl th:first-child, .tbl td:first-child { padding-left: 16px; }
+.tbl th:last-child, .tbl td:last-child { padding-right: 16px; }
+.tbl tr:last-child td { border-bottom: 0; }
+
+/* pager to the neighbouring eras */
+.pager { display: flex; justify-content: space-between; gap: 16px; padding-top: 32px !important; padding-bottom: 56px !important; }
+.pg { display: inline-flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: 8px; background: #fff; }
+.pg span { display: flex; flex-direction: column; gap: 2px; }
+.pg em { font: 500 12px/16px var(--font-display); font-style: normal; color: var(--mute); }
+.pg b { font-size: 15px; }
+.pg:hover b { text-decoration: underline; text-underline-offset: 3px; }
+.pgNext { text-align: right; }
+.pgNext span { align-items: flex-end; }
+@media (max-width: 760px) {
+  .top { padding: 16px 16px 8px; }
+  .hero, .heroLight { padding: 20px; }
+  .stats { gap: 12px 24px; }
+  .stats dd { font-size: 26px; line-height: 26px; }
+  .band { padding: 40px 0; }
+  .events li { grid-template-columns: 1fr; gap: 6px; }
+}

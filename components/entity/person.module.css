@@ -1,0 +1,8 @@
+.person { display: inline-flex; align-items: center; gap: 10px; min-width: 0; vertical-align: middle; border-radius: 999px; transition: background .15s, box-shadow .15s; }
+.face { flex: none; border-radius: 50%; object-fit: cover; object-position: top; background: var(--paper-2); }
+.text { display: flex; align-items: baseline; gap: 8px; min-width: 0; flex-wrap: wrap; line-height: 1.25; }
+.text b { font-weight: 700; white-space: nowrap; }
+.text span { font-size: 12px; color: var(--mute); white-space: nowrap; }
+.text em { font-style: normal; font-size: 12px; color: var(--mute); }
+/* chip hover (people & teams share it): a soft pill in the surrounding text colour — reads on paper, dark and team-colour surfaces */
+.person:hover { background: color-mix(in srgb, currentColor 10%, transparent); box-shadow: 0 0 0 5px color-mix(in srgb, currentColor 10%, transparent); }

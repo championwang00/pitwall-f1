@@ -1,0 +1,7 @@
+/* Index cards: div + stretched sibling link; the team name and driver chips are their own hover-card links. */
+.card { cursor: pointer; }
+.stretch { position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
+.top, .drivers { position: relative; z-index: 2; pointer-events: none; }
+.top a, .drivers a { pointer-events: auto; }
+.name { color: inherit; }
+.drivers { flex-wrap: wrap; gap: 8px 18px; }

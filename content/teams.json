@@ -1,0 +1,2377 @@
+{
+  "mclaren": {
+    "nameZh": "迈凯伦",
+    "nameEn": "McLaren",
+    "base": "英国沃金",
+    "founded": 1966,
+    "tagline": "仅次于法拉利的老牌现役车队",
+    "bio": "迈凯伦由新西兰车手布鲁斯·迈凯伦于1963年创立，1966年摩纳哥大奖赛首次参加F1，1981年起总部设在英国沃金。车队1968年在比利时取得首胜，1974年首夺车队冠军，截至目前共赢得205场分站赛、10个车队冠军，8名车手为其拿下13个车手冠军，包括塞纳、普罗斯特、哈基宁和汉密尔顿。2024和2025年迈凯伦连夺车队冠军，诺里斯成为2025年世界冠军。2026赛季车队继续使用梅赛德斯动力单元。",
+    "highlights": [
+      {
+        "year": 1968,
+        "gp": "belgium",
+        "circuit": "spa-francorchamps",
+        "title": "斯帕收获车队首胜",
+        "text": "1968年比利时大奖赛，布鲁斯·迈凯伦驾驶自家赛车在斯帕夺冠，为迈凯伦赢得世界锦标赛的第一场分站赛胜利，此时距车队在1966年摩纳哥大奖赛的F1首秀只有两年。",
+        "sources": [
+          {
+            "label": "Wikipedia · McLaren",
+            "url": "https://en.wikipedia.org/wiki/McLaren"
+          }
+        ]
+      },
+      {
+        "year": 1974,
+        "gp": null,
+        "circuit": null,
+        "title": "第一个车队冠军",
+        "text": "1970年布鲁斯·迈凯伦测试事故身亡后，特迪·梅耶尔接掌车队。1974年两年前在莲花夺冠的菲蒂帕尔迪加盟并拿下车手冠军，迈凯伦同年赢得第一个车队冠军，与万宝路的长期赞助也始于这一年。",
+        "sources": [
+          {
+            "label": "Wikipedia · McLaren",
+            "url": "https://en.wikipedia.org/wiki/McLaren"
+          }
+        ]
+      },
+      {
+        "year": 1988,
+        "gp": null,
+        "circuit": null,
+        "title": "16站赢下15站",
+        "text": "与本田合作的第一年，塞纳和普罗斯特搭档几乎包揽全年胜利，迈凯伦在16站比赛中赢下15站，塞纳夺得个人首个世界冠军。迈凯伦与本田在1988至1991年间连续四年获得车队冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · McLaren",
+            "url": "https://en.wikipedia.org/wiki/McLaren"
+          }
+        ]
+      },
+      {
+        "year": 1998,
+        "gp": null,
+        "circuit": null,
+        "title": "纽维与哈基宁的双冠",
+        "text": "迈凯伦凭借梅赛德斯引擎和前威廉姆斯设计师纽维，在1998年技术规则变化后重回争冠行列。哈基宁夺得1998年车手冠军，迈凯伦同年赢得车队冠军，哈基宁1999年成功卫冕车手冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · McLaren",
+            "url": "https://en.wikipedia.org/wiki/McLaren"
+          }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "abu-dhabi",
+        "circuit": "yas-marina",
+        "title": "时隔26年重夺车队冠军",
+        "text": "2024年赛季收官战阿布扎比大奖赛，诺里斯赢得比赛，帮助迈凯伦锁定自1998年以来的第一个车队冠军，这也是车队历史上的第九个车队冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · McLaren",
+            "url": "https://en.wikipedia.org/wiki/McLaren"
+          }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "abu-dhabi",
+        "circuit": "yas-marina",
+        "title": "诺里斯阿布扎比封王",
+        "text": "2025年迈凯伦在24站中赢下14站，诺里斯和皮亚斯特里各胜7场，车队卫冕车队冠军。车手冠军之争延续到收官战阿布扎比，诺里斯获得第三名，拿下个人首个车手冠军，也是迈凯伦自2008年以来的首个车手冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · McLaren",
+            "url": "https://en.wikipedia.org/wiki/McLaren"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "碳纤维底盘的构想",
+        "text": "1981年迈凯伦与罗恩·丹尼斯的Project Four车队合并，丹尼斯出任领队。随他而来的设计师约翰·巴纳德受宝马M1赛车碳纤维尾翼的启发，提出用碳纤维而非传统铝合金整体打造F1底盘的方案。",
+        "sources": [
+          {
+            "label": "Wikipedia · McLaren",
+            "url": "https://en.wikipedia.org/wiki/McLaren"
+          }
+        ]
+      },
+      {
+        "title": "间谍门与1亿美元罚款",
+        "text": "2007年，迈凯伦因持有法拉利赛车的专有技术图纸接受国际汽联调查，最终被判有罪，车队被取消当年车队锦标赛资格，并被处以1亿美元罚款。",
+        "sources": [
+          {
+            "label": "Wikipedia · McLaren",
+            "url": "https://en.wikipedia.org/wiki/McLaren"
+          }
+        ]
+      },
+      {
+        "title": "第1000场大奖赛",
+        "text": "2026年中国大奖赛是迈凯伦参加的第1000场大奖赛，迈凯伦由此成为继法拉利之后第二支达到这一数字的车队。车队随后在摩纳哥和巴塞罗那两站使用特别涂装庆祝这一里程碑。",
+        "sources": [
+          {
+            "label": "Wikipedia · McLaren",
+            "url": "https://en.wikipedia.org/wiki/McLaren"
+          }
+        ]
+      }
+    ]
+  },
+  "mercedes": {
+    "nameZh": "梅赛德斯",
+    "nameEn": "Mercedes",
+    "base": "英国布拉克利",
+    "founded": 1954,
+    "tagline": "八连冠的银箭",
+    "bio": "梅赛德斯-奔驰1954年以厂队身份进入F1，W196帮助方吉奥夺得1954和1955年车手冠军，1955年勒芒惨剧后车队退出赛车运动。2010年梅赛德斯收购布朗GP重返F1，现车队总部位于英国布拉克利，其参赛资格可追溯至泰瑞尔，经BAR、本田和布朗GP传承而来。2014年混合动力规则实施后，梅赛德斯在2014至2021年连夺八届车队冠军。2026赛季车队使用自家动力单元，并向迈凯伦、威廉姆斯和阿尔派供应。",
+    "highlights": [
+      {
+        "year": 1954,
+        "gp": "france",
+        "circuit": "reims",
+        "title": "首秀即包揽冠亚军",
+        "text": "1954年7月4日法国大奖赛，梅赛德斯-奔驰携W196首次参加F1，方吉奥与克林包揽冠亚军，赫尔曼跑出最快圈。方吉奥当年又赢下三站，夺得车手冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Mercedes-Benz in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "year": 2010,
+        "gp": null,
+        "circuit": null,
+        "title": "收购布朗GP回归",
+        "text": "梅赛德斯在2010年买下刚刚包揽2009年双冠的布朗GP并更名，以厂队身份回归F1。车队签下罗斯伯格，并迎来暂别F1三年后复出的七届世界冠军舒马赫。",
+        "sources": [
+          {
+            "label": "Wikipedia · Mercedes-Benz in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One"
+          },
+          {
+            "label": "Wikipedia · Brawn GP",
+            "url": "https://en.wikipedia.org/wiki/Brawn_GP"
+          }
+        ]
+      },
+      {
+        "year": 2012,
+        "gp": "china",
+        "circuit": "shanghai",
+        "title": "时隔57年再获胜利",
+        "text": "2012年中国大奖赛，罗斯伯格取得梅赛德斯自1955年方吉奥之后作为厂队的首个杆位，并在正赛夺冠，这是车队时隔57年再次赢得F1分站赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · Mercedes-Benz in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "gp": null,
+        "circuit": null,
+        "title": "混合动力时代开端",
+        "text": "2014年F1改用涡轮增压混合动力引擎，梅赛德斯以领先第二名红牛296分的优势夺得车队冠军，由此开启2014至2021年的八连冠，车手冠军则在2014至2020年间七连冠，两项均为纪录。",
+        "sources": [
+          {
+            "label": "Wikipedia · Mercedes-Benz in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "新规首战包揽前二",
+        "text": "2026年新技术规则下的首场比赛澳大利亚大奖赛，拉塞尔从杆位出发，领先队友安东内利完成梅赛德斯的第61次一二名。安东内利随后在中国大奖赛取得个人首胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2026 Australian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2026_Australian_Grand_Prix"
+          },
+          {
+            "label": "Wikipedia · Mercedes-Benz in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "勒芒惨剧后的退出",
+        "text": "1955年6月11日的勒芒24小时耐力赛事故造成梅赛德斯车手勒韦格和80多名观众死亡，法国、德国、西班牙和瑞士大奖赛随之取消。赛季结束后，梅赛德斯-奔驰退出了包括F1在内的赛车运动。",
+        "sources": [
+          {
+            "label": "Wikipedia · Mercedes-Benz in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "title": "封闭车轮的胜利",
+        "text": "W196既有传统开轮版本，也有包覆车轮的流线型版本。梅赛德斯1954至1955年共赢得9场比赛，其中三场由流线型的Type Monza赢得，它们是F1历史上仅有的三场由封闭车轮赛车赢得的比赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · Mercedes-Benz in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "title": "罗斯伯格夺冠即退役",
+        "text": "2016年罗斯伯格以5分优势力压队友汉密尔顿，夺得个人唯一一个车手冠军，也是梅赛德斯在2014至2020年间唯一一个不属于汉密尔顿的车手冠军。夺冠后不久，罗斯伯格宣布退役。",
+        "sources": [
+          {
+            "label": "Wikipedia · Mercedes-Benz in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One"
+          }
+        ]
+      }
+    ]
+  },
+  "ferrari": {
+    "nameZh": "法拉利",
+    "nameEn": "Ferrari",
+    "base": "意大利马拉内罗",
+    "founded": 1950,
+    "tagline": "参加过每届世锦赛的车队",
+    "bio": "法拉利车队由恩佐·法拉利于1929年创立，最初为阿尔法·罗密欧参赛，1947年开始制造自己的赛车。车队参加了1950年以来的每一届F1世界锦标赛，是历史最悠久、战绩最好的F1车队，保持16个车队冠军和15个车手冠军的纪录。车队自1943年起以马拉内罗为基地，蒙扎的意大利大奖赛被视为主场。2026赛季车手为勒克莱尔和汉密尔顿，法拉利动力单元同时供应哈斯和凯迪拉克。",
+    "highlights": [
+      {
+        "year": 1951,
+        "gp": "great-britain",
+        "circuit": "silverstone",
+        "title": "银石的第一场胜利",
+        "text": "1951年7月14日英国大奖赛，冈萨雷斯驾驶法拉利在银石夺冠，为车队赢得世界锦标赛的第一场胜利。冈萨雷斯和法拉利在这个周末也都拿到了各自的第一个杆位。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1951 British Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1951_British_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2000,
+        "gp": "japan",
+        "circuit": "suzuka",
+        "title": "铃鹿终结21年等待",
+        "text": "2000年日本大奖赛，舒马赫从杆位出发，在第二轮进站时超越哈基宁并赢得比赛，提前一站锁定车手冠军，成为1979年谢克特之后法拉利的首位车手世界冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2000 Japanese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2000_Japanese_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2004,
+        "gp": null,
+        "circuit": null,
+        "title": "车队冠军六连冠",
+        "text": "舒马赫1996年加盟法拉利，在2000至2004年连续五次夺得车手冠军，为车队赢得72场分站赛。法拉利在1999至2004年连续六年获得车队冠军，这是车队历史上最成功的时期。",
+        "sources": [
+          {
+            "label": "Wikipedia · Scuderia Ferrari",
+            "url": "https://en.wikipedia.org/wiki/Scuderia_Ferrari"
+          }
+        ]
+      },
+      {
+        "year": 2007,
+        "gp": null,
+        "circuit": null,
+        "title": "至今最近的车手冠军",
+        "text": "莱科宁在2007年为法拉利夺得车手冠军，这是车队至今最近的一个车手冠军。法拉利在2008年再获车队冠军，将车队冠军总数提高到创纪录的16个，此后未再夺得车队冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Scuderia Ferrari",
+            "url": "https://en.wikipedia.org/wiki/Scuderia_Ferrari"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "跃马标志的首次亮相",
+        "text": "法拉利车队1929年在博洛尼亚的一次晚宴上酝酿成立，最初为业余车手提供阿尔法·罗密欧赛车参赛。跃马标志首次出现在1932年斯帕24小时耐力赛上，当时车队的两辆阿尔法·罗密欧8C包揽了前两名。",
+        "sources": [
+          {
+            "label": "Wikipedia · Scuderia Ferrari",
+            "url": "https://en.wikipedia.org/wiki/Scuderia_Ferrari"
+          }
+        ]
+      },
+      {
+        "title": "第1000场大奖赛",
+        "text": "2020年在穆杰罗举行的托斯卡纳大奖赛是法拉利参加的第1000场F1大奖赛。2026年迈凯伦成为第二支达到这一数字的车队。",
+        "sources": [
+          {
+            "label": "Wikipedia · Scuderia Ferrari",
+            "url": "https://en.wikipedia.org/wiki/Scuderia_Ferrari"
+          },
+          {
+            "label": "Wikipedia · McLaren",
+            "url": "https://en.wikipedia.org/wiki/McLaren"
+          }
+        ]
+      }
+    ]
+  },
+  "red-bull": {
+    "nameZh": "红牛",
+    "nameEn": "Red Bull",
+    "base": "英国米尔顿凯恩斯",
+    "founded": 2005,
+    "tagline": "从捷豹手中诞生的冠军车队",
+    "bio": "红牛车队的前身是1997年首次参赛的斯图尔特车队，福特在1999年底将其收购并改名捷豹。红牛于2004年11月15日买下捷豹，2005年起以红牛车队名义参赛，基地位于英国米尔顿凯恩斯，持奥地利执照。维特尔在2010至2013年帮助车队连续四年包揽车手和车队冠军，维斯塔潘则在2021至2024年连夺四届车手冠军。与本田的合作结束后，车队2026年起改用红牛与福特合作的动力单元。",
+    "highlights": [
+      {
+        "year": 2009,
+        "gp": "china",
+        "circuit": "shanghai",
+        "title": "上海雨战首胜",
+        "text": "2009年中国大奖赛，维特尔为红牛取得首个杆位，次日在雨中赢得比赛，韦伯获得第二。这是红牛车队的第一场胜利，其前身斯图尔特曾在1999年欧洲大奖赛由赫伯特获胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · Red Bull Racing",
+            "url": "https://en.wikipedia.org/wiki/Red_Bull_Racing"
+          }
+        ]
+      },
+      {
+        "year": 2010,
+        "gp": "abu-dhabi",
+        "circuit": "yas-marina",
+        "title": "第一个双冠赛季",
+        "text": "2010年红牛在巴西大奖赛以一二名锁定车队冠军，成为第一支赢得车队冠军的奥地利车队。收官战阿布扎比大奖赛，维特尔赢得比赛，同时夺得车手冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Red Bull Racing",
+            "url": "https://en.wikipedia.org/wiki/Red_Bull_Racing"
+          }
+        ]
+      },
+      {
+        "year": 2013,
+        "gp": null,
+        "circuit": null,
+        "title": "维特尔四连冠",
+        "text": "红牛在2005年11月聘请迈凯伦技术总监纽维。使用雷诺引擎期间，车队在2010至2013年连续四年包揽车手和车队冠军，四个车手冠军均由维特尔获得。",
+        "sources": [
+          {
+            "label": "Wikipedia · Red Bull Racing",
+            "url": "https://en.wikipedia.org/wiki/Red_Bull_Racing"
+          }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": null,
+        "circuit": null,
+        "title": "维斯塔潘首冠",
+        "text": "红牛2019年开始使用本田引擎，2021年维斯塔潘凭借最后一圈超越汉密尔顿夺得首个车手冠军，并在2022至2024年连续卫冕。红牛也在2022和2023年赢得车队冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Red Bull Racing",
+            "url": "https://en.wikipedia.org/wiki/Red_Bull_Racing"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "gp": null,
+        "circuit": null,
+        "title": "22站赢下21站",
+        "text": "2023年纽维设计的RB19在22站比赛中赢下21站，胜率95.45%，超过了同样使用本田动力的迈凯伦MP4/4，被视为F1历史上最具统治力的赛车之一。",
+        "sources": [
+          {
+            "label": "Wikipedia · Red Bull Racing",
+            "url": "https://en.wikipedia.org/wiki/Red_Bull_Racing"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "象征性的1美元",
+        "text": "据BBC体育报道，福特出售捷豹车队时只象征性要价1美元，条件是买家承诺在三个赛季内向车队投入4亿美元。红牛在出售截止日2004年11月15日达成收购。",
+        "sources": [
+          {
+            "label": "Wikipedia · Red Bull Racing",
+            "url": "https://en.wikipedia.org/wiki/Red_Bull_Racing"
+          }
+        ]
+      },
+      {
+        "title": "从赞助商到车主",
+        "text": "红牛涉足F1并非始于自家车队：1995至2004年它一直赞助索伯，更早在1989年还赞助过伯格。买下自己的车队后，红牛结束了与这支瑞士车队的长期合作。",
+        "sources": [
+          {
+            "label": "Wikipedia · Red Bull Racing",
+            "url": "https://en.wikipedia.org/wiki/Red_Bull_Racing"
+          }
+        ]
+      }
+    ]
+  },
+  "williams": {
+    "nameZh": "威廉姆斯",
+    "nameEn": "Williams",
+    "base": "英国牛津郡格罗夫",
+    "founded": 1977,
+    "tagline": "九夺车队冠军的格罗夫车队",
+    "bio": "威廉姆斯大奖赛工程公司由弗兰克·威廉姆斯和帕特里克·黑德于1977年创立，当年用一辆March赛车参赛，1978年起自制赛车，总部位于英国牛津郡格罗夫。车队在1980至1997年间赢得9个车队冠军，琼斯、凯克·罗斯伯格、皮奎特、曼塞尔、普罗斯特、希尔和维伦纽夫7人在此夺得车手冠军。2020年8月车队被多利顿资本收购，弗兰克·威廉姆斯和女儿克莱尔退出管理层。2026赛季车队使用梅赛德斯动力单元。",
+    "highlights": [
+      {
+        "year": 1979,
+        "gp": "great-britain",
+        "circuit": "silverstone",
+        "title": "雷加佐尼带来首胜",
+        "text": "1979年英国大奖赛，雷加佐尼在银石为威廉姆斯赢得车队历史上的第一场分站赛胜利，此时距车队1977年用March赛车首次参赛仅两年。",
+        "sources": [
+          {
+            "label": "Wikipedia · Williams Racing",
+            "url": "https://en.wikipedia.org/wiki/Williams_Racing"
+          }
+        ]
+      },
+      {
+        "year": 1980,
+        "gp": null,
+        "circuit": null,
+        "title": "琼斯与首个双冠",
+        "text": "1980年琼斯赢下揭幕战阿根廷站，全年共胜5场，以领先布拉汉姆车手皮奎特17分夺得车手冠军。威廉姆斯同年以120分首夺车队冠军，积分几乎是第二名利吉尔的两倍。",
+        "sources": [
+          {
+            "label": "Wikipedia · Williams Racing",
+            "url": "https://en.wikipedia.org/wiki/Williams_Racing"
+          }
+        ]
+      },
+      {
+        "year": 1986,
+        "gp": "australia",
+        "circuit": "adelaide",
+        "title": "阿德莱德的爆胎",
+        "text": "1986年皮奎特和曼塞尔共赢9场，威廉姆斯轻松夺得车队冠军。收官战澳大利亚大奖赛，积分领先的曼塞尔在剩余19圈时于大直道爆胎退赛，车队又召回领跑的皮奎特进站，普罗斯特借机夺冠并拿下车手冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Williams Racing",
+            "url": "https://en.wikipedia.org/wiki/Williams_Racing"
+          }
+        ]
+      },
+      {
+        "year": 1992,
+        "gp": null,
+        "circuit": null,
+        "title": "曼塞尔的纪录赛季",
+        "text": "1992年威廉姆斯保留曼塞尔和帕特雷塞的阵容，曼塞尔以创纪录的速度锁定车手冠军，多场比赛从杆位一路领跑到终点，车队同年夺得车队冠军。1993年普罗斯特又为车队拿下车手冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Williams Racing",
+            "url": "https://en.wikipedia.org/wiki/Williams_Racing"
+          }
+        ]
+      },
+      {
+        "year": 1997,
+        "gp": "great-britain",
+        "circuit": "silverstone",
+        "title": "第100场分站赛胜利",
+        "text": "1997年英国大奖赛，维伦纽夫为威廉姆斯赢得第100场分站赛，车队由此跻身百胜车队之列。维伦纽夫当年共赢7场，力压舒马赫夺得车手冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Williams Racing",
+            "url": "https://en.wikipedia.org/wiki/Williams_Racing"
+          }
+        ]
+      },
+      {
+        "year": 2012,
+        "gp": "spain",
+        "circuit": "catalunya",
+        "title": "马尔多纳多的唯一胜利",
+        "text": "2012年西班牙大奖赛，马尔多纳多赢得个人唯一一场分站赛，也为威廉姆斯带来自2004年巴西大奖赛以来的首场胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · Williams Racing",
+            "url": "https://en.wikipedia.org/wiki/Williams_Racing"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "弗兰克·威廉姆斯的车祸",
+        "text": "1986年3月，弗兰克·威廉姆斯在法国完成季前测试后赶往尼斯机场途中遭遇车祸，导致瘫痪，此后近一年没有回到维修区。尽管他缺席赛场，车队仍迎来最好的赛季之一。",
+        "sources": [
+          {
+            "label": "Wikipedia · Williams Racing",
+            "url": "https://en.wikipedia.org/wiki/Williams_Racing"
+          }
+        ]
+      },
+      {
+        "title": "从一辆March起步",
+        "text": "1977年新成立的威廉姆斯车队买来一辆March 761参赛，由内夫在11场比赛中驾驶，首站是西班牙大奖赛。直到1978年，车队才开始制造自己的赛车。",
+        "sources": [
+          {
+            "label": "Wikipedia · Williams Racing",
+            "url": "https://en.wikipedia.org/wiki/Williams_Racing"
+          }
+        ]
+      }
+    ]
+  },
+  "racing-bulls": {
+    "nameZh": "小红牛",
+    "nameEn": "Racing Bulls",
+    "base": "意大利法恩扎",
+    "founded": 2025,
+    "tagline": "法恩扎的红牛姊妹车队",
+    "bio": "Racing Bulls是红牛集团旗下的第二支F1车队，总部位于意大利法恩扎，并在米尔顿凯恩斯设有基地。车队前身是1985至2005年参赛的米纳尔迪，2006年被红牛收购后改名Toro Rosso（红牛二队），此后又以AlphaTauri（2020–2023）和RB（2024）之名参赛，2025年起改用现名。车队长期承担培养红牛青年车手的任务，维特尔和维斯塔潘都曾在此效力。2026年起改用红牛与福特合作的动力单元。",
+    "highlights": [
+      {
+        "year": 2025,
+        "gp": null,
+        "circuit": null,
+        "title": "劳森与角田互换",
+        "text": "2025赛季前劳森被提拔到红牛主队，F2毕业生哈贾尔接替他在Racing Bulls的位置。但劳森仅跑了两站就被换回Racing Bulls，角田裕毅则升入主队。",
+        "sources": [
+          {
+            "label": "Wikipedia · Racing Bulls",
+            "url": "https://en.wikipedia.org/wiki/Racing_Bulls"
+          }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "netherlands",
+        "circuit": "zandvoort",
+        "title": "哈贾尔赞德沃特登台",
+        "text": "2025年荷兰大奖赛，新秀哈贾尔获得第三名，这是车队以Racing Bulls名义参赛后的首个领奖台，也是这支车队历史上的第六个领奖台，同时是车队使用本田RBPT引擎的最后一个领奖台。",
+        "sources": [
+          {
+            "label": "Wikipedia · Racing Bulls",
+            "url": "https://en.wikipedia.org/wiki/Racing_Bulls"
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "林德布拉德首秀得分",
+        "text": "2026年澳大利亚大奖赛是新规则下的首战，也是福特时隔21年重返F1、通过红牛动力总成为红牛和Racing Bulls供应动力。新秀林德布拉德完成F1首秀并获得第八名。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2026 Australian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2026_Australian_Grand_Prix"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "饱受批评的车队名",
+        "text": "2024赛季车队改名Visa Cash App RB，名字遭到车迷和媒体广泛批评，The Race记者斯特劳称其为F1历史上最糟糕的车队名。2025年车队改以Racing Bulls名义参赛，不再使用RB缩写。",
+        "sources": [
+          {
+            "label": "Wikipedia · Racing Bulls",
+            "url": "https://en.wikipedia.org/wiki/Racing_Bulls"
+          }
+        ]
+      },
+      {
+        "title": "从未夺冠的长寿车队",
+        "text": "算上米纳尔迪、Toro Rosso和AlphaTauri时期，截至2026年这支车队是现役车队中存续时间最长、却从未赢得车手或车队总冠军的一支。",
+        "sources": [
+          {
+            "label": "Wikipedia · Racing Bulls",
+            "url": "https://en.wikipedia.org/wiki/Racing_Bulls"
+          }
+        ]
+      }
+    ]
+  },
+  "aston-martin": {
+    "nameZh": "阿斯顿·马丁",
+    "nameEn": "Aston Martin",
+    "base": "英国银石",
+    "founded": 1959,
+    "tagline": "两度进入F1的英国品牌",
+    "bio": "阿斯顿·马丁最早在1959年以DBR4赛车参加F1，1959和1960两个赛季均未得分，随后退出。2021年，劳伦斯·斯特罗尔掌控的Racing Point车队更名阿斯顿·马丁，品牌由此回归。现车队总部位于英国银石，其传承可追溯至1991年的乔丹车队，先后经历Midland、世爵、印度力量和Racing Point时期。2023年起车手为阿隆索和兰斯·斯特罗尔，2026年起车队与本田建立厂队合作，纽维出任领队。",
+    "highlights": [
+      {
+        "year": 1959,
+        "gp": "netherlands",
+        "circuit": "zandvoort",
+        "title": "DBR4的迟到首秀",
+        "text": "阿斯顿·马丁的首款开轮赛车DBR4早在1957年就已造好，但公司优先研发DBR1跑车，直到1959年荷兰大奖赛才首次参加F1。此时赛车已经落后，萨尔瓦多里和谢尔比都因引擎故障退赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · Aston Martin in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Aston_Martin_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": "azerbaijan",
+        "circuit": "baku",
+        "title": "维特尔巴库亚军",
+        "text": "品牌回归F1的首个赛季，维特尔在2021年阿塞拜疆大奖赛获得第二名，为阿斯顿·马丁带来首个领奖台。他在匈牙利大奖赛再获第二，但因燃油样本问题被取消成绩。",
+        "sources": [
+          {
+            "label": "Wikipedia · Aston Martin in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Aston_Martin_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "gp": "bahrain",
+        "circuit": "bahrain",
+        "title": "阿隆索首战登台",
+        "text": "2023年阿隆索加盟后的首战巴林大奖赛，他获得第三名，为车队带来第二个领奖台。AMR23当年共拿到8个领奖台，最好成绩是摩纳哥、加拿大和荷兰站的三个第二名。",
+        "sources": [
+          {
+            "label": "Wikipedia · Aston Martin AMR23",
+            "url": "https://en.wikipedia.org/wiki/Aston_Martin_AMR23"
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": null,
+        "circuit": null,
+        "title": "本田厂队与纽维",
+        "text": "2026年阿斯顿·马丁开始与本田的厂队合作，获得专门为其底盘设计的动力单元。2024年离开红牛的纽维于2025年3月加盟并成为车队主要股东，2026年起出任领队。",
+        "sources": [
+          {
+            "label": "Wikipedia · Aston Martin in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Aston_Martin_in_Formula_One"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "安特里的意外排位",
+        "text": "1959年英国大奖赛，萨尔瓦多里驾驶DBR4出人意料地排位第二，但正赛只获得第六名，与积分擦肩而过。阿斯顿·马丁在1959和1960年始终没能得分，1960年后退出F1。",
+        "sources": [
+          {
+            "label": "Wikipedia · Aston Martin in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Aston_Martin_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "title": "银石赛道对面的新工厂",
+        "text": "2021年9月，车队在银石基地开工建设新工厂，面积约3.7万平方米，由三座相连的建筑组成，所在的约16公顷地块就在银石赛道正对面。",
+        "sources": [
+          {
+            "label": "Wikipedia · Aston Martin in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Aston_Martin_in_Formula_One"
+          }
+        ]
+      }
+    ]
+  },
+  "haas": {
+    "nameZh": "哈斯",
+    "nameEn": "Haas",
+    "base": "美国北卡罗来纳州坎纳波利斯",
+    "founded": 2016,
+    "tagline": "纳斯卡车队老板的F1车队",
+    "bio": "哈斯车队由纳斯卡杯赛车队老板吉恩·哈斯于2014年4月创立，2016年首次参赛，总部位于美国北卡罗来纳州坎纳波利斯，并在英国班伯里设前方基地、在马拉内罗设设计办公室。车队自成立起使用法拉利动力单元，底盘交由达拉拉制造。施泰纳从建队起担任领队十年，2024年1月由小松礼雄接替。2026赛季车队以TGR哈斯F1车队名义参赛，丰田Gazoo Racing成为冠名赞助商。",
+    "highlights": [
+      {
+        "year": 2016,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "首站即得分",
+        "text": "2016年澳大利亚大奖赛是哈斯的F1首秀，格罗斯让获得第六名拿到8分，哈斯成为第一支在F1首场比赛就得分的美国车队。",
+        "sources": [
+          {
+            "label": "Wikipedia · Haas F1 Team",
+            "url": "https://en.wikipedia.org/wiki/Haas_F1_Team"
+          }
+        ]
+      },
+      {
+        "year": 2018,
+        "gp": null,
+        "circuit": null,
+        "title": "队史最佳的第五名",
+        "text": "2018年是哈斯迄今最好的赛季，车队获得车队积分榜第五名，积分只差1分就达到前一年的两倍。奥地利大奖赛格罗斯让和马格努森分获第四和第五，取得建队以来最好的单场成绩。",
+        "sources": [
+          {
+            "label": "Wikipedia · Haas F1 Team",
+            "url": "https://en.wikipedia.org/wiki/Haas_F1_Team"
+          }
+        ]
+      },
+      {
+        "year": 2022,
+        "gp": "sao-paulo",
+        "circuit": "interlagos",
+        "title": "马格努森的首个杆位",
+        "text": "2022年圣保罗大奖赛的排位赛在多变的天气条件下进行，马格努森力压全场，为哈斯取得车队历史上的首个杆位，这也是哈斯至今唯一的杆位。",
+        "sources": [
+          {
+            "label": "Wikipedia · Haas F1 Team",
+            "url": "https://en.wikipedia.org/wiki/Haas_F1_Team"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "接手玛鲁西亚的基地",
+        "text": "2014年赛季中玛鲁西亚车队倒闭、资产被拍卖，哈斯买下其位于英国班伯里的总部，作为欧洲赛段在比赛间隙整备赛车的前方基地。",
+        "sources": [
+          {
+            "label": "Wikipedia · Haas F1 Team",
+            "url": "https://en.wikipedia.org/wiki/Haas_F1_Team"
+          }
+        ]
+      },
+      {
+        "title": "两个毫无关系的哈斯",
+        "text": "哈斯是2010年US F1计划失败后首支提交参赛申请的美国车队，也是1985至1986年哈斯-罗拉之后首支参赛的美国车队。哈斯-罗拉的老板之一卡尔·哈斯与吉恩·哈斯并无亲属关系。",
+        "sources": [
+          {
+            "label": "Wikipedia · Haas F1 Team",
+            "url": "https://en.wikipedia.org/wiki/Haas_F1_Team"
+          }
+        ]
+      }
+    ]
+  },
+  "audi": {
+    "nameZh": "奥迪",
+    "nameEn": "Audi",
+    "base": "瑞士欣维尔",
+    "founded": 2026,
+    "tagline": "接手索伯的德国厂队",
+    "bio": "奥迪于2022年宣布将在2026年新规则时代进入F1，随后收购索伯车队，2026年以奥迪Revolut F1车队名义首次参赛，并自制动力单元。底盘部门沿用索伯在瑞士欣维尔的总部，动力单元在德国诺伊堡研发，英国比斯特设有技术中心。其前身索伯1993年进入F1，2019至2023年以阿尔法·罗密欧名义参赛，2024和2025年名为Kick Sauber。奥迪的前身汽车联盟曾在1935至1939年参加大奖赛。",
+    "highlights": [
+      {
+        "year": 2022,
+        "gp": null,
+        "circuit": null,
+        "title": "宣布进军F1",
+        "text": "2022年8月，奥迪宣布将在规则大改的2026年以动力单元制造商身份进入F1。同年10月，奥迪确认与索伯合作，入股这家公司，计划对车队进行全面更名。",
+        "sources": [
+          {
+            "label": "Wikipedia · Audi in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Audi_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "首秀即得分",
+        "text": "2026年澳大利亚大奖赛是奥迪的F1首秀，博尔托莱托和霍肯伯格排位第十和第十一。霍肯伯格因技术问题未能起步，博尔托莱托获得第九名，为奥迪拿到F1首个积分。",
+        "sources": [
+          {
+            "label": "Wikipedia · Audi in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Audi_in_Formula_One"
+          },
+          {
+            "label": "Wikipedia · 2026 Australian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2026_Australian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "hungary",
+        "circuit": "hungaroring",
+        "title": "连续得分超越威廉姆斯",
+        "text": "奥迪从英国站开始连续得分，匈牙利大奖赛霍肯伯格获得第九名，拿到个人赛季首分，奥迪由此以1分优势超过威廉姆斯，升至车队积分榜第八。",
+        "sources": [
+          {
+            "label": "Wikipedia · Audi in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Audi_in_Formula_One"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "汽车联盟的大奖赛往事",
+        "text": "奥迪的前身汽车联盟由奥迪、DKW、霍希和漫游者四家企业于1932年合并而成，1935至1939年参加大奖赛，罗森迈尔在1936年夺得欧洲车手锦标赛冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Audi in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Audi_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "title": "首个赛季的领队更替",
+        "text": "车队首任领队惠特利于2026年3月离任，项目负责人比诺托接任领队，后改任首席执行官兼领队；车手发展项目负责人麦克尼什则出任赛事总监，负责比赛周末的赛道运营。",
+        "sources": [
+          {
+            "label": "Wikipedia · Audi in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Audi_in_Formula_One"
+          }
+        ]
+      }
+    ]
+  },
+  "alpine": {
+    "nameZh": "阿尔派",
+    "nameEn": "Alpine",
+    "base": "英国恩斯通",
+    "founded": 2021,
+    "tagline": "恩斯通车队的最新名号",
+    "bio": "阿尔派是恩斯通车队自2021年起使用的名称，取自雷诺旗下跑车品牌Alpine。这支车队1981年以托勒曼之名进入F1，1986年起改称贝纳通，2002年成为雷诺，2012至2015年名为莲花F1，2016至2020年再度以雷诺参赛。车队总部位于英国恩斯通，持法国执照参赛。雷诺在2025赛季后停止F1引擎项目，阿尔派自2026年起改用梅赛德斯的动力单元和变速箱。",
+    "highlights": [
+      {
+        "year": 2021,
+        "gp": "hungary",
+        "circuit": "hungaroring",
+        "title": "奥康的匈牙利胜利",
+        "text": "2021年匈牙利大奖赛，奥康从第八位起步赢得比赛，这是车队以阿尔派名义参赛以来唯一的一场分站赛胜利。阿尔派在首个赛季开局不顺后连续15站得分。",
+        "sources": [
+          {
+            "label": "Wikipedia · Alpine F1 Team",
+            "url": "https://en.wikipedia.org/wiki/Alpine_F1_Team"
+          }
+        ]
+      },
+      {
+        "year": 2022,
+        "gp": null,
+        "circuit": null,
+        "title": "车队积分榜第四",
+        "text": "2022赛季阿尔派虽然没有登上领奖台，但两位车手稳定得分，车队获得车队积分榜第四名，这是阿尔派名下至今最好的车队排名。",
+        "sources": [
+          {
+            "label": "Wikipedia · Alpine F1 Team",
+            "url": "https://en.wikipedia.org/wiki/Alpine_F1_Team"
+          }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "sao-paulo",
+        "circuit": "interlagos",
+        "title": "圣保罗双人登台",
+        "text": "2024年圣保罗大奖赛，奥康获得第二、加斯利获得第三，仅次于冠军维斯塔潘。这次双领奖台让阿尔派在剩余三站时从车队积分榜第九升至第六。",
+        "sources": [
+          {
+            "label": "Wikipedia · Alpine F1 Team",
+            "url": "https://en.wikipedia.org/wiki/Alpine_F1_Team"
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "加斯利蒙扎杆位",
+        "text": "2026年意大利大奖赛，加斯利在蒙扎出人意料地取得个人和阿尔派车队的首个杆位。这是阿尔派改用梅赛德斯动力单元后的第一个赛季。",
+        "sources": [
+          {
+            "label": "Wikipedia · Alpine F1 Team",
+            "url": "https://en.wikipedia.org/wiki/Alpine_F1_Team"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "“恩斯通车队”",
+        "text": "谈及这支车队跨越多个名号的整体历史时，人们通常称其为“恩斯通车队”。车队在恩斯通占地约6.9公顷，设施面积1.7万平方米；2023年5月时约有1000名员工在恩斯通、350人在法国维里-沙蒂永工作。",
+        "sources": [
+          {
+            "label": "Wikipedia · Alpine F1 Team",
+            "url": "https://en.wikipedia.org/wiki/Alpine_F1_Team"
+          }
+        ]
+      }
+    ]
+  },
+  "cadillac": {
+    "nameZh": "凯迪拉克",
+    "nameEn": "Cadillac",
+    "base": "美国印第安纳州菲舍斯",
+    "founded": 2026,
+    "tagline": "F1的第十一支车队",
+    "bio": "凯迪拉克F1车队由通用汽车与TWG赛车合作运营，2026年作为第11支车队加入F1，是2016年哈斯之后首支新加入的独立车队。项目源于2023年1月通用与安德雷蒂全球公司的联合申请，最初遭F1集团否决，2024年11月获初步批准，2025年3月获最终批准。车队总部位于美国印第安纳州菲舍斯，参赛团队设在英国银石。通用计划从2029年起自制引擎，在此之前车队使用法拉利动力单元。",
+    "highlights": [
+      {
+        "year": 2025,
+        "gp": null,
+        "circuit": null,
+        "title": "获得最终批准",
+        "text": "2025年3月，凯迪拉克的参赛申请获得最终批准，得以及时签署最新的《协和协议》，确认成为2026赛季的第11支车队。通用汽车为此支付了4.5亿美元的扩军费，是最初要价的两倍多。",
+        "sources": [
+          {
+            "label": "Wikipedia · Cadillac in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Cadillac_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": null,
+        "circuit": null,
+        "title": "佩雷兹与博塔斯",
+        "text": "2025年，凯迪拉克宣布由曾获车手积分榜亚军的佩雷兹和博塔斯组成首发阵容，看重两人的经验而非赫塔、纽加登等美国车手。赫塔转任测试车手，并在车队支持下转战F2。",
+        "sources": [
+          {
+            "label": "Wikipedia · Cadillac in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Cadillac_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "墨尔本首秀",
+        "text": "2026年澳大利亚大奖赛是凯迪拉克的F1首秀，也是2016年阿布扎比站以来首场有11支车队参赛的比赛。博塔斯在第16圈因机械故障退赛，佩雷兹坚持完赛，为车队取得首次完赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2026 Australian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2026_Australian_Grand_Prix"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "14万份求职申请",
+        "text": "2026年1月，时任领队洛登表示，车队共发布595个职位，收到143265份申请，到2025年底已招聘520名员工。",
+        "sources": [
+          {
+            "label": "Wikipedia · Cadillac in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Cadillac_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "title": "早年与世锦赛的交集",
+        "text": "1950至1960年印第安纳波利斯500计入世界锦标赛期间，1952和1953年曾有车手报名驾驶搭载凯迪拉克引擎的库尔蒂斯-克拉夫特赛车，但都没能获得参赛资格。",
+        "sources": [
+          {
+            "label": "Wikipedia · Cadillac in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Cadillac_in_Formula_One"
+          }
+        ]
+      }
+    ]
+  },
+  "lotus": {
+    "nameZh": "莲花",
+    "nameEn": "Team Lotus",
+    "base": "英国诺福克郡海瑟尔",
+    "founded": 1958,
+    "tagline": "查普曼的技术创新工厂",
+    "bio": "莲花车队由科林·查普曼创立，1954年从莲花工程公司分拆，1958年摩纳哥大奖赛首次参加F1。查普曼兼任首席设计师，莲花25是F1首款单体壳底盘赛车，莲花49把引擎作为承力结构，莲花78和79则以地面效应取得成功。车队在1962至1978年间赢得7个车队冠军和6个车手冠军。查普曼1982年去世后车队仍继续参赛，1994年9月进入破产管理程序。它与2010年后使用莲花名号的车队并非同一支。",
+    "highlights": [
+      {
+        "year": 1960,
+        "gp": "monaco",
+        "circuit": "monaco",
+        "title": "摩纳哥的第一胜",
+        "text": "1960年摩纳哥大奖赛，莫斯驾驶罗布·沃克私人车队的莲花18夺冠，为莲花赛车取得世界锦标赛首胜。莲花厂队的首胜则要等到1961年美国大奖赛，由英尼斯·爱尔兰驾驶莲花21取得。",
+        "sources": [
+          {
+            "label": "Wikipedia · Team Lotus",
+            "url": "https://en.wikipedia.org/wiki/Team_Lotus"
+          }
+        ]
+      },
+      {
+        "year": 1963,
+        "gp": null,
+        "circuit": null,
+        "title": "克拉克七胜封王",
+        "text": "1963年克拉克驾驶F1首款单体壳底盘赛车莲花25赢下7站，夺得车手冠军，莲花首次获得车队冠军。1965年克拉克驾驶莲花33再赢6站，第二次夺得世界冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Team Lotus",
+            "url": "https://en.wikipedia.org/wiki/Team_Lotus"
+          }
+        ]
+      },
+      {
+        "year": 1967,
+        "gp": "netherlands",
+        "circuit": "zandvoort",
+        "title": "莲花49首秀夺冠",
+        "text": "1967年荷兰大奖赛，首款搭载福特-考斯沃斯DFV引擎的F1赛车莲花49首次亮相，克拉克在赞德沃特轻松夺冠。DFV由前莲花员工达克沃斯设计，让莲花重回胜利轨道。",
+        "sources": [
+          {
+            "label": "Wikipedia · Lotus 49",
+            "url": "https://en.wikipedia.org/wiki/Lotus_49"
+          },
+          {
+            "label": "Wikipedia · Team Lotus",
+            "url": "https://en.wikipedia.org/wiki/Team_Lotus"
+          }
+        ]
+      },
+      {
+        "year": 1970,
+        "gp": "united-states",
+        "circuit": "watkins-glen",
+        "title": "林特的身后冠军",
+        "text": "1970年林特驾驶莲花72主导赛季，却在蒙扎因刹车轴断裂发生事故身亡。新秀菲蒂帕尔迪随后在美国大奖赛夺冠，为林特保住冠军，林特成为F1历史上唯一一位身后获得世界冠军的车手。",
+        "sources": [
+          {
+            "label": "Wikipedia · Team Lotus",
+            "url": "https://en.wikipedia.org/wiki/Team_Lotus"
+          }
+        ]
+      },
+      {
+        "year": 1978,
+        "gp": null,
+        "circuit": null,
+        "title": "安德雷蒂与地面效应",
+        "text": "莲花工程师在70年代中期开始研究空气动力地面效应，莲花78及其后继车型莲花79取得巨大成功，1978年安德雷蒂夺得车手冠军，莲花同年赢得第七个车队冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Team Lotus",
+            "url": "https://en.wikipedia.org/wiki/Team_Lotus"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "首支商业涂装厂队",
+        "text": "1968年国际汽联放开赛车商业赞助。同年4月，莲花成为首支把赛车涂成赞助商颜色的厂队，克拉克的莲花48 F2赛车以帝国烟草旗下金叶品牌的红、金、白三色亮相霍根海姆。",
+        "sources": [
+          {
+            "label": "Wikipedia · Team Lotus",
+            "url": "https://en.wikipedia.org/wiki/Team_Lotus"
+          }
+        ]
+      },
+      {
+        "title": "查普曼的离世",
+        "text": "1982年12月，查普曼在开展主动悬挂研发项目期间因心脏病去世，终年54岁。此后车队由其遗孀黑兹尔继续经营、彼得·沃尔管理，1987年塞纳曾驾驶装备主动悬挂的99T赢得摩纳哥和底特律两站。",
+        "sources": [
+          {
+            "label": "Wikipedia · Team Lotus",
+            "url": "https://en.wikipedia.org/wiki/Team_Lotus"
+          }
+        ]
+      }
+    ]
+  },
+  "brabham": {
+    "nameZh": "布拉汉姆",
+    "nameEn": "Brabham",
+    "base": "英国韦布里奇（1977年迁至切辛顿）",
+    "founded": 1962,
+    "tagline": "车手以自己名字的赛车夺冠",
+    "bio": "布拉汉姆（正式名称为赛车发展公司）由澳大利亚车手杰克·布拉汉姆和设计师罗恩·陶拉纳克于1962年创立。车队在1966和1967年连续包揽车手与车队冠军，杰克·布拉汉姆成为唯一一位驾驶以自己名字命名的赛车夺得世界冠军的车手。1971年底埃克莱斯顿买下车队，设计师戈登·默里任职期间，皮奎特在1981和1983年两夺车手冠军。1992年赛季中途，车队因财务崩溃退出。",
+    "highlights": [
+      {
+        "year": 1964,
+        "gp": "france",
+        "circuit": "rouen",
+        "title": "格尼取得首胜",
+        "text": "1964年法国大奖赛，丹·格尼在鲁昂为布拉汉姆赢得世界锦标赛首胜，他在同年的墨西哥大奖赛再次获胜，包办了车队的前两场胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · Brabham",
+            "url": "https://en.wikipedia.org/wiki/Brabham"
+          }
+        ]
+      },
+      {
+        "year": 1966,
+        "gp": null,
+        "circuit": null,
+        "title": "开着自己的赛车夺冠",
+        "text": "1966年布拉汉姆使用澳大利亚Repco公司的V8引擎，杰克·布拉汉姆夺得个人第三个世界冠军，车队首获车队冠军。1967年队友赫尔姆再夺车手冠军，布拉汉姆卫冕车队冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Brabham",
+            "url": "https://en.wikipedia.org/wiki/Brabham"
+          }
+        ]
+      },
+      {
+        "year": 1978,
+        "gp": "sweden",
+        "circuit": "anderstorp",
+        "title": "风扇车一战成名",
+        "text": "1978年瑞典大奖赛，劳达驾驶BT46B风扇车夺冠。这辆赛车用风扇从车底抽气产生巨大下压力，名义上是为了冷却引擎，它只参加了这一场世界锦标赛，随后规则漏洞就被国际汽联堵上。",
+        "sources": [
+          {
+            "label": "Wikipedia · Brabham",
+            "url": "https://en.wikipedia.org/wiki/Brabham"
+          }
+        ]
+      },
+      {
+        "year": 1983,
+        "gp": "south-africa",
+        "circuit": "kyalami",
+        "title": "第一个涡轮冠军",
+        "text": "1983年收官战南非大奖赛，皮奎特从雷诺车手普罗斯特手中夺回积分领先，驾驶宝马涡轮引擎的BT52夺得车手冠军，成为第一位驾驶涡轮增压赛车赢得世界冠军的车手。",
+        "sources": [
+          {
+            "label": "Wikipedia · Brabham",
+            "url": "https://en.wikipedia.org/wiki/Brabham"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "风洞先驱与客户赛车",
+        "text": "布拉汉姆是第一支使用风洞设计赛车的F1车队。它也是全球最大的客户开轮赛车制造商，到1970年已制造超过500辆赛车，使用布拉汉姆赛车的车队曾赢得F2和F3冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Brabham",
+            "url": "https://en.wikipedia.org/wiki/Brabham"
+          }
+        ]
+      },
+      {
+        "title": "埃克莱斯顿时代",
+        "text": "1971年底，伯尼·埃克莱斯顿买下车队母公司，陶拉纳克在1972年初因不满重组离开。埃克莱斯顿拥有车队直到1988年，后来负责F1的商业运营。",
+        "sources": [
+          {
+            "label": "Wikipedia · Brabham",
+            "url": "https://en.wikipedia.org/wiki/Brabham"
+          }
+        ]
+      }
+    ]
+  },
+  "tyrrell": {
+    "nameZh": "泰瑞尔",
+    "nameEn": "Tyrrell",
+    "base": "英国萨里郡奥克姆",
+    "founded": 1970,
+    "tagline": "木棚里走出的冠军车队",
+    "bio": "泰瑞尔车队由肯·泰瑞尔创立，1958年起参加低级别方程式赛事。1968和1969年车队以马特拉国际的名义参加F1，1970年改称泰瑞尔赛车组织，并在当年开始制造自己的赛车。斯图尔特为车队赢得三个车手冠军，车队也在1971年获得车队冠军。1997年车队被英美烟草方面收购，1998年后成为BAR，此后经本田和布朗GP，传承为今天的梅赛德斯车队。",
+    "highlights": [
+      {
+        "year": 1971,
+        "gp": null,
+        "circuit": null,
+        "title": "自制赛车的双冠",
+        "text": "1970年泰瑞尔用March赛车参赛，同时在奥克姆的木棚里打造自己的赛车。1971年几乎相同的泰瑞尔003帮助斯图尔特夺得车手冠军，泰瑞尔同时赢得车队冠军，塞维特也有出色表现。",
+        "sources": [
+          {
+            "label": "Wikipedia · Tyrrell Racing",
+            "url": "https://en.wikipedia.org/wiki/Tyrrell_Racing"
+          }
+        ]
+      },
+      {
+        "year": 1973,
+        "gp": "united-states",
+        "circuit": "watkins-glen",
+        "title": "塞维特之殇",
+        "text": "1973年斯图尔特和塞维特分列车手积分榜第一和第四，但塞维特在赛季最后一站沃特金斯格伦美国大奖赛的练习中身亡，泰瑞尔的冠军赛季以悲剧收尾。",
+        "sources": [
+          {
+            "label": "Wikipedia · Tyrrell Racing",
+            "url": "https://en.wikipedia.org/wiki/Tyrrell_Racing"
+          }
+        ]
+      },
+      {
+        "year": 1976,
+        "gp": "sweden",
+        "circuit": "anderstorp",
+        "title": "六轮车包揽前二",
+        "text": "1976年瑞典大奖赛，谢克特驾驶德里克·加德纳设计的六轮赛车P34夺冠，队友德帕耶获得第二，泰瑞尔包揽前二。P34是F1历史上第一款也是唯一一款取得成功的六轮赛车。",
+        "sources": [
+          {
+            "label": "Wikipedia · Tyrrell Racing",
+            "url": "https://en.wikipedia.org/wiki/Tyrrell_Racing"
+          }
+        ]
+      },
+      {
+        "year": 1983,
+        "gp": "detroit",
+        "circuit": "detroit",
+        "title": "DFV的最后一胜",
+        "text": "1983年底特律大奖赛，阿尔博雷托驾驶泰瑞尔011夺冠，这是经典的福特-考斯沃斯DFV引擎的最后一场胜利。泰瑞尔在70年代至80年代初持续赢得分站赛，但再未达到70年代初的高度。",
+        "sources": [
+          {
+            "label": "Wikipedia · Tyrrell Racing",
+            "url": "https://en.wikipedia.org/wiki/Tyrrell_Racing"
+          }
+        ]
+      },
+      {
+        "year": 1984,
+        "gp": null,
+        "circuit": null,
+        "title": "被逐出1984赛季",
+        "text": "1984年泰瑞尔是唯一使用自然吸气引擎的车队，被指控比赛中补加燃料、使用违规燃料、加装违规油管以及压舱物固定不当，最终被逐出当年世界锦标赛，全年成绩被取消。",
+        "sources": [
+          {
+            "label": "Wikipedia · Tyrrell Racing",
+            "url": "https://en.wikipedia.org/wiki/Tyrrell_Racing"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "木棚车间",
+        "text": "1959年肯·泰瑞尔意识到自己不适合当车手，便借用家族企业泰瑞尔兄弟公司的木棚做车间，经营初级方程式车队。1970年，德里克·加德纳也是在奥克姆的这间木棚里打造第一辆泰瑞尔F1赛车。",
+        "sources": [
+          {
+            "label": "Wikipedia · Tyrrell Racing",
+            "url": "https://en.wikipedia.org/wiki/Tyrrell_Racing"
+          }
+        ]
+      },
+      {
+        "title": "通往梅赛德斯的传承",
+        "text": "BAR以收购泰瑞尔起步，1998年车队仍正式使用泰瑞尔之名，1999年起改为BAR参赛。本田在2005年底取得BAR全部股权，此后车队又经布朗GP时期，最终成为梅赛德斯车队。",
+        "sources": [
+          {
+            "label": "Wikipedia · British American Racing",
+            "url": "https://en.wikipedia.org/wiki/British_American_Racing"
+          },
+          {
+            "label": "Wikipedia · Tyrrell Racing",
+            "url": "https://en.wikipedia.org/wiki/Tyrrell_Racing"
+          }
+        ]
+      }
+    ]
+  },
+  "cooper": {
+    "nameZh": "库珀",
+    "nameEn": "Cooper",
+    "base": "英国萨里郡瑟比顿",
+    "founded": 1950,
+    "tagline": "后置引擎革命的推动者",
+    "bio": "库珀汽车公司由查尔斯·库珀和儿子约翰·库珀于1947年12月创立，起初在瑟比顿的小车库里制造500cc三级方程式赛车，后来成为世界上第一家、也是最大的战后专业赛车制造商。库珀推广了把引擎置于车手身后的布局，1958年阿根廷大奖赛赢得后置引擎赛车在F1的首胜，1959和1960年帮助杰克·布拉汉姆蝉联车手冠军并两获车队冠军。1958年之后的每一位F1世界冠军都坐在引擎前方。",
+    "highlights": [
+      {
+        "year": 1958,
+        "gp": "argentina",
+        "circuit": "buenos-aires",
+        "title": "后置引擎的首胜",
+        "text": "1958年阿根廷大奖赛，大多数英国车队缺席，莫斯驾驶罗布·沃克私人车队的库珀-Climax参赛。对手纷纷进站时莫斯取得领先，意大利车队误以为他也必须进站而放慢节奏，莫斯由此为后置引擎赛车赢得F1首胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · Cooper Car Company",
+            "url": "https://en.wikipedia.org/wiki/Cooper_Car_Company"
+          }
+        ]
+      },
+      {
+        "year": 1959,
+        "gp": null,
+        "circuit": null,
+        "title": "首个后置引擎冠军",
+        "text": "1959年杰克·布拉汉姆与库珀厂队成为第一对驾驶后置引擎赛车赢得F1世界冠军的车手和车队，1960年双方再度卫冕。从此之后，后置引擎成为F1冠军赛车的标准布局。",
+        "sources": [
+          {
+            "label": "Wikipedia · Cooper Car Company",
+            "url": "https://en.wikipedia.org/wiki/Cooper_Car_Company"
+          }
+        ]
+      },
+      {
+        "year": 1967,
+        "gp": "south-africa",
+        "circuit": "kyalami",
+        "title": "罗德里格斯的开季胜利",
+        "text": "1967年佩德罗·罗德里格斯加盟库珀，在揭幕战南非大奖赛驾驶库珀-玛莎拉蒂意外夺冠。不过这一年余下的比赛中，库珀车队的成绩持续下滑。",
+        "sources": [
+          {
+            "label": "Wikipedia · Cooper Car Company",
+            "url": "https://en.wikipedia.org/wiki/Cooper_Car_Company"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "推车过终点",
+        "text": "1957年摩纳哥大奖赛，布拉汉姆驾驶后置引擎的库珀T43一度跑在第三，但第100圈时燃油泵失灵。他滑行到港口附近，随后一路把赛车推过终点线，虽然落后五圈，仍获得第六名。",
+        "sources": [
+          {
+            "label": "Wikipedia · Cooper Car Company",
+            "url": "https://en.wikipedia.org/wiki/Cooper_Car_Company"
+          }
+        ]
+      },
+      {
+        "title": "冲击印第安纳波利斯",
+        "text": "1960年布拉汉姆把夺冠的库珀T53带到印第安纳波利斯赛道测试，随后驾驶以F1赛车为基础的T54参加印地500。几年后，美国赛车界逐渐意识到前置引擎赛车的时代即将结束。",
+        "sources": [
+          {
+            "label": "Wikipedia · Cooper Car Company",
+            "url": "https://en.wikipedia.org/wiki/Cooper_Car_Company"
+          }
+        ]
+      }
+    ]
+  },
+  "benetton": {
+    "nameZh": "贝纳通",
+    "nameEn": "Benetton",
+    "base": "英国恩斯通（1992年前在威特尼）",
+    "founded": 1986,
+    "tagline": "服装品牌打造的冠军车队",
+    "bio": "贝纳通车队由意大利服装企业贝纳通家族拥有，1985年收购托勒曼车队后成立，1986年起以贝纳通名义参赛，1992年从威特尼迁至恩斯通。车队在舒马赫带领下获得1994和1995年车手冠军，并在1995年赢得车队冠军。2000年雷诺收购车队，2002年车队改名雷诺。这支恩斯通车队此后又经历莲花F1和雷诺时期，2021年起以阿尔派名义参赛。",
+    "highlights": [
+      {
+        "year": 1986,
+        "gp": "mexico",
+        "circuit": "mexico-city",
+        "title": "伯格墨西哥首胜",
+        "text": "贝纳通的首个赛季使用宝马涡轮引擎，伯格在1986年墨西哥大奖赛领先第二名近半分钟夺冠，为车队取得首胜。不过这一年赛车可靠性很差，车队共有19次退赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · Benetton Formula",
+            "url": "https://en.wikipedia.org/wiki/Benetton_Formula"
+          }
+        ]
+      },
+      {
+        "year": 1994,
+        "gp": "australia",
+        "circuit": "adelaide",
+        "title": "阿德莱德的争议冠军",
+        "text": "1994年舒马赫驾驶B194赢下前七站中的六站，赛季中两度被取消成绩并遭禁赛两站。收官战澳大利亚大奖赛，他与争冠对手希尔相撞，两人双双退赛，舒马赫以此夺得个人首个世界冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Benetton Formula",
+            "url": "https://en.wikipedia.org/wiki/Benetton_Formula"
+          }
+        ]
+      },
+      {
+        "year": 1995,
+        "gp": null,
+        "circuit": null,
+        "title": "第一个车队冠军",
+        "text": "1995年贝纳通改用雷诺V10厂家引擎，舒马赫在17站中赢下9站卫冕车手冠军，赫伯特赢得英国站和意大利站。贝纳通首次获得车队冠军，终结了威廉姆斯的三连冠。",
+        "sources": [
+          {
+            "label": "Wikipedia · Benetton Formula",
+            "url": "https://en.wikipedia.org/wiki/Benetton_Formula"
+          }
+        ]
+      },
+      {
+        "year": 1997,
+        "gp": "germany",
+        "circuit": "hockenheimring",
+        "title": "伯格的告别胜利",
+        "text": "1997年伯格因病和父亲去世缺席三站，复出后在德国大奖赛从杆位出发，以压倒性优势夺冠。这是贝纳通在F1的最后一场胜利，也是伯格职业生涯第10场、也是最后一场胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · Benetton Formula",
+            "url": "https://en.wikipedia.org/wiki/Benetton_Formula"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "从赞助商到车主",
+        "text": "贝纳通集团最初以赞助商身份进入F1，1983年赞助泰瑞尔，1984和1985年赞助阿尔法·罗密欧，1985年又赞助托勒曼，并在同年买下托勒曼车队。",
+        "sources": [
+          {
+            "label": "Wikipedia · Benetton Formula",
+            "url": "https://en.wikipedia.org/wiki/Benetton_Formula"
+          }
+        ]
+      },
+      {
+        "title": "更换国籍的车队",
+        "text": "贝纳通在1986至1995年持英国执照参赛，1996至2001年改用意大利执照，成为继1976年的Shadow之后第二支正式更改国籍的F1车队。",
+        "sources": [
+          {
+            "label": "Wikipedia · Benetton Formula",
+            "url": "https://en.wikipedia.org/wiki/Benetton_Formula"
+          }
+        ]
+      }
+    ]
+  },
+  "brawn": {
+    "nameZh": "布朗GP",
+    "nameEn": "Brawn GP",
+    "base": "英国布拉克利",
+    "founded": 2009,
+    "tagline": "唯一夺冠率百分之百的车队",
+    "bio": "布朗GP由罗斯·布朗主导的管理层收购组建。本田因2008年金融危机在当年12月宣布退出F1，布朗以象征性的1英镑从本田手中买下车队，2009年3月6日正式成立，并改用梅赛德斯客户引擎。车队只参加了2009年一个赛季，在17站中赢下8站，包揽车手和车队冠军，成为唯一一支夺冠率百分之百的车队。车队前身可追溯至泰瑞尔、BAR和本田，2010年起成为梅赛德斯厂队。",
+    "highlights": [
+      {
+        "year": 2009,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "首秀包揽前二",
+        "text": "2009年澳大利亚大奖赛是布朗GP的首场比赛，巴顿和巴里切罗包揽排位前二，巴顿从头领跑到尾夺冠，巴里切罗获得第二。上一支首秀即包揽前二的车队是1954年法国大奖赛的梅赛德斯。",
+        "sources": [
+          {
+            "label": "Wikipedia · Brawn GP",
+            "url": "https://en.wikipedia.org/wiki/Brawn_GP"
+          }
+        ]
+      },
+      {
+        "year": 2009,
+        "gp": null,
+        "circuit": null,
+        "title": "前七站赢下六站",
+        "text": "巴顿在2009赛季前七站赢下六站。马来西亚站获胜后，布朗GP成为继1950年阿尔法·罗密欧之后，第一支赢下最初两场比赛的新车队。",
+        "sources": [
+          {
+            "label": "Wikipedia · Brawn GP",
+            "url": "https://en.wikipedia.org/wiki/Brawn_GP"
+          }
+        ]
+      },
+      {
+        "year": 2009,
+        "gp": "brazil",
+        "circuit": "interlagos",
+        "title": "巴西锁定双冠",
+        "text": "2009年巴西大奖赛，巴顿从第14位起步追到第五名，锁定车手冠军，布朗GP也在同一场比赛夺得车队冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Brawn GP",
+            "url": "https://en.wikipedia.org/wiki/Brawn_GP"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "双层扩散器之争",
+        "text": "BGP 001的双层扩散器带来明显的下压力优势，曾遭法拉利、红牛和雷诺抗议。赛季首站后赛会干事判定布朗、威廉姆斯和丰田的扩散器合法，经上诉后国际汽联同样认定其合法。",
+        "sources": [
+          {
+            "label": "Wikipedia · Brawn GP",
+            "url": "https://en.wikipedia.org/wiki/Brawn_GP"
+          }
+        ]
+      },
+      {
+        "title": "1英镑的交易",
+        "text": "布朗GP在2009年3月6日正式成立，罗斯·布朗以象征性的1英镑从本田手中买下车队。2009赛季本田仍为车队提供约1亿美元预算，梅赛德斯则以客户合作形式供应引擎。",
+        "sources": [
+          {
+            "label": "Wikipedia · Brawn GP",
+            "url": "https://en.wikipedia.org/wiki/Brawn_GP"
+          }
+        ]
+      }
+    ]
+  },
+  "renault": {
+    "nameZh": "雷诺",
+    "nameEn": "Renault",
+    "base": "法国维里-沙蒂永（1977–1985）；英国恩斯通（2002–2020）",
+    "founded": 1977,
+    "tagline": "把涡轮引擎带进F1",
+    "bio": "雷诺1977年以厂队身份进入F1，把涡轮增压引擎引入这项运动，1985年底退出车队运营。2000年雷诺收购恩斯通的贝纳通车队，2002年起以雷诺之名参赛，阿隆索在2005和2006年帮助车队蝉联车手与车队冠军。此后雷诺出售车队股份，2016年再次买下恩斯通车队，2021年将其改名阿尔派。作为引擎供应商，雷诺共参与赢得12个车队冠军和11个车手冠军。",
+    "highlights": [
+      {
+        "year": 1977,
+        "gp": null,
+        "circuit": null,
+        "title": "“黄色茶壶”",
+        "text": "雷诺RS01搭载1.5升V6涡轮增压引擎，在1977赛季最后五站由雅布耶单车参赛。它可靠性极差，一场都没能完赛，被戏称为“黄色茶壶”，却是F1第一台经常参赛的涡轮引擎。",
+        "sources": [
+          {
+            "label": "Wikipedia · Renault in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Renault_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "year": 1979,
+        "gp": "france",
+        "circuit": "dijon",
+        "title": "第戎的涡轮首胜",
+        "text": "1979年法国大奖赛，两辆雷诺包揽排位前排，杆位的雅布耶赢得比赛，成为首位驾驶涡轮增压赛车获胜的车手。队友阿尔诺与吉尔·维伦纽夫则上演了激烈的第二名之争。",
+        "sources": [
+          {
+            "label": "Wikipedia · Renault in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Renault_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "year": 2003,
+        "gp": "hungary",
+        "circuit": "hungaroring",
+        "title": "阿隆索的首胜",
+        "text": "2003年匈牙利大奖赛，阿隆索为雷诺赢得自1983年奥地利大奖赛以来的首场分站赛胜利，这也是雷诺以恩斯通车队重返车队运营后的第一场胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · Renault in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Renault_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "year": 2005,
+        "gp": "brazil",
+        "circuit": "interlagos",
+        "title": "当时最年轻的世界冠军",
+        "text": "2005年巴西大奖赛，阿隆索锁定车手冠军，成为当时最年轻的世界冠军。随后雷诺在中国站赢得车队冠军，终结法拉利的六连冠，成为第一支赢得车队冠军的法国执照车队。",
+        "sources": [
+          {
+            "label": "Wikipedia · Renault in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Renault_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "year": 2006,
+        "gp": "brazil",
+        "circuit": "interlagos",
+        "title": "蝉联双冠",
+        "text": "2006年雷诺保留阿隆索和费斯切拉的阵容，凭借R26成功卫冕。赛季最后一站巴西大奖赛拿到的积分为雷诺锁定车队冠军，阿隆索也蝉联车手冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Renault in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Renault_in_Formula_One"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "新加坡撞车事件",
+        "text": "2008年新加坡大奖赛，阿隆索得益于队友小皮奎特早早撞车引发的局面，赢得当赛季首胜。事后查明，那次撞车是为帮助阿隆索而故意为之。",
+        "sources": [
+          {
+            "label": "Wikipedia · Renault in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Renault_in_Formula_One"
+          }
+        ]
+      },
+      {
+        "title": "引擎供应商的成功",
+        "text": "雷诺在1989年以引擎供应商身份回归，1992至1997年为威廉姆斯和贝纳通赢得5个车手冠军和6个车队冠军；2010至2013年又帮助红牛连续四年包揽车手和车队冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Renault in Formula One",
+            "url": "https://en.wikipedia.org/wiki/Renault_in_Formula_One"
+          }
+        ]
+      }
+    ]
+  },
+  "jordan": {
+    "nameZh": "乔丹",
+    "nameEn": "Jordan",
+    "base": "英国银石",
+    "founded": 1991,
+    "tagline": "持爱尔兰执照的银石车队",
+    "bio": "乔丹大奖赛车队由爱尔兰商人埃迪·乔丹创立，1991年进入F1，总部位于英国银石，持爱尔兰执照参赛。车队此前在英国F3和国际F3000取得成功，进入F1后为迈克尔·舒马赫和拉尔夫·舒马赫提供了F1首秀机会，共赢得4场分站赛。2005年车队被Midland集团收购，此后依次成为Midland、世爵、印度力量和Racing Point，2021年起以阿斯顿·马丁之名参赛。",
+    "highlights": [
+      {
+        "year": 1991,
+        "gp": "belgium",
+        "circuit": "spa-francorchamps",
+        "title": "舒马赫的F1首秀",
+        "text": "1991年赛季中途，乔丹车手加绍因袭击出租车司机入狱，车队在比利时大奖赛起用迈克尔·舒马赫顶替，这是舒马赫的F1首秀。",
+        "sources": [
+          {
+            "label": "Wikipedia · Jordan Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/Jordan_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1998,
+        "gp": "belgium",
+        "circuit": "spa-francorchamps",
+        "title": "斯帕雨战包揽前二",
+        "text": "1998年比利时大奖赛在大雨中进行，只有六辆车完赛。希尔为乔丹赢得车队首胜，拉尔夫·舒马赫获得第二，事后披露拉尔夫曾接到车队指令，不得超越希尔。",
+        "sources": [
+          {
+            "label": "Wikipedia · Jordan Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/Jordan_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1999,
+        "gp": null,
+        "circuit": null,
+        "title": "弗伦岑的争冠赛季",
+        "text": "1999年弗伦岑为乔丹赢下两场比赛并参与争夺世界冠军，最终位列车手积分榜第三，乔丹也获得车队积分榜第三名。车队此后未能延续这一表现，2000年滑落到第六。",
+        "sources": [
+          {
+            "label": "Wikipedia · Jordan Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/Jordan_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2003,
+        "gp": "brazil",
+        "circuit": "interlagos",
+        "title": "迟到的冠军奖杯",
+        "text": "2003年巴西大奖赛，费斯切拉起初未被判为冠军，几天后国际汽联调查才确认他获胜。他和莱科宁在下一站圣马力诺交换奖杯，罗恩·丹尼斯也把车队奖杯交给埃迪·乔丹。这是乔丹最后一场胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · Jordan Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/Jordan_Grand_Prix"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "从F3起家",
+        "text": "埃迪·乔丹70年代末短暂当过车手，80年代初创立埃迪·乔丹赛车队。1983年英国F3，车队车手布伦德尔与塞纳争冠到最后一轮落败；1989年阿莱西为车队夺得F3000车手冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Jordan Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/Jordan_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "title": "6000万美元出售",
+        "text": "福特决定出售考斯沃斯后，乔丹一度没有2005年的引擎合同。埃迪·乔丹随后以6000万美元把车队卖给Midland集团，车队以乔丹之名跑完2005赛季后更名。",
+        "sources": [
+          {
+            "label": "Wikipedia · Jordan Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/Jordan_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "minardi": {
+    "nameZh": "米纳尔迪",
+    "nameEn": "Minardi",
+    "base": "意大利法恩扎",
+    "founded": 1985,
+    "tagline": "小预算的人气车队",
+    "bio": "米纳尔迪由吉安卡洛·米纳尔迪于1979年在法恩扎创立，1985至2005年参加F1。车队预算有限，21个赛季共获得38个积分，从未登上领奖台，但以友好、亲和、没有大公司做派的氛围赢得了忠实车迷。阿隆索、韦伯、费斯切拉和特鲁利等车手都曾在此效力。2001年澳大利亚商人保罗·斯托达特收购车队，2005年又将其出售给红牛，车队改名Toro Rosso，最终演变为今天的Racing Bulls。",
+    "highlights": [
+      {
+        "year": 1985,
+        "gp": null,
+        "circuit": null,
+        "title": "米纳尔迪的首秀",
+        "text": "1985年米纳尔迪进入F1，原定引擎未能按时完成，车队只得把M185底盘改装成考斯沃斯DFV引擎参加前两站。马蒂尼驾驶赛车完成了车队首秀，后来他为米纳尔迪出赛103场。",
+        "sources": [
+          {
+            "label": "Wikipedia · Minardi",
+            "url": "https://en.wikipedia.org/wiki/Minardi"
+          }
+        ]
+      },
+      {
+        "year": 1988,
+        "gp": "detroit",
+        "circuit": "detroit",
+        "title": "第一个积分",
+        "text": "1988年在底特律举行的美国大奖赛，马蒂尼长时间跑在第五，直到被泰瑞尔的帕尔默超越，最终获得第六名，为米纳尔迪拿到第一个积分。",
+        "sources": [
+          {
+            "label": "Wikipedia · Minardi",
+            "url": "https://en.wikipedia.org/wiki/Minardi"
+          }
+        ]
+      },
+      {
+        "year": 1990,
+        "gp": "united-states",
+        "circuit": "phoenix",
+        "title": "唯一一次前排发车",
+        "text": "1990年美国大奖赛，马蒂尼借助倍耐力的特制轮胎排位第二，这是米纳尔迪唯一一次在前排发车。此前他还在1989年葡萄牙大奖赛领跑过一圈，那是米纳尔迪唯一一次领跑。",
+        "sources": [
+          {
+            "label": "Wikipedia · Minardi",
+            "url": "https://en.wikipedia.org/wiki/Minardi"
+          }
+        ]
+      },
+      {
+        "year": 2002,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "韦伯首秀得分",
+        "text": "2002年澳大利亚大奖赛，韦伯在墨尔本完成F1首秀，在大量退赛的比赛中获得第五名拿到积分，队友尤恩获得第七，仅差一位就能得分。",
+        "sources": [
+          {
+            "label": "Wikipedia · Minardi",
+            "url": "https://en.wikipedia.org/wiki/Minardi"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "以老板缩写命名的赛车",
+        "text": "米纳尔迪的赛车最初以字母M（代表Minardi）加数字命名，2001年斯托达特收购车队后，所有底盘都改以PS开头，即保罗·斯托达特姓名的首字母。",
+        "sources": [
+          {
+            "label": "Wikipedia · Minardi",
+            "url": "https://en.wikipedia.org/wiki/Minardi"
+          }
+        ]
+      },
+      {
+        "title": "19岁的阿隆索",
+        "text": "2001年19岁的阿隆索在米纳尔迪完成F1首秀。他和车队全年都没有得分，但他的表现足以让重组后的雷诺车队签下他。",
+        "sources": [
+          {
+            "label": "Wikipedia · Minardi",
+            "url": "https://en.wikipedia.org/wiki/Minardi"
+          }
+        ]
+      }
+    ]
+  },
+  "sauber": {
+    "nameZh": "索伯",
+    "nameEn": "Sauber",
+    "base": "瑞士欣维尔",
+    "founded": 1993,
+    "tagline": "从耐力赛走进F1的瑞士车队",
+    "bio": "索伯车队由彼得·索伯于1970年创立，先在耐力赛取得成功，曾与梅赛德斯合作赢得1989年勒芒24小时和两届世界耐力锦标赛，1993年进入F1，总部位于瑞士欣维尔。车队1993至2005年作为独立车队参赛，2006至2009年成为宝马厂队，此后由彼得·索伯买回，2019至2023年以阿尔法·罗密欧名义参赛，2024和2025年名为Kick Sauber，随后由奥迪接手。",
+    "highlights": [
+      {
+        "year": 1993,
+        "gp": "south-africa",
+        "circuit": "kyalami",
+        "title": "首秀即得分",
+        "text": "1993年南非大奖赛是索伯的F1首秀，莱赫托排位第六，正赛在高减员的比赛中获得第五名，领先法拉利的伯格，为车队拿到首秀积分。",
+        "sources": [
+          {
+            "label": "Wikipedia · Sauber Motorsport",
+            "url": "https://en.wikipedia.org/wiki/Sauber_Motorsport"
+          }
+        ]
+      },
+      {
+        "year": 1997,
+        "gp": "hungary",
+        "circuit": "hungaroring",
+        "title": "第一个领奖台",
+        "text": "1997年匈牙利大奖赛，索伯获得第三名，取得车队首个领奖台。1997至2005年，车队使用由Sauber Petronas Engineering制造的法拉利设计客户引擎。",
+        "sources": [
+          {
+            "label": "Wikipedia · Sauber Motorsport",
+            "url": "https://en.wikipedia.org/wiki/Sauber_Motorsport"
+          }
+        ]
+      },
+      {
+        "year": 2001,
+        "gp": null,
+        "circuit": null,
+        "title": "力排众议用莱科宁",
+        "text": "2001年索伯起用几乎没有赛车经验的芬兰新人莱科宁，不顾部分车手和国际汽联主席莫斯利等人的反对。莱科宁当年的表现证明了这一决定，他后来在2007年为法拉利夺得世界冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Sauber Motorsport",
+            "url": "https://en.wikipedia.org/wiki/Sauber_Motorsport"
+          }
+        ]
+      },
+      {
+        "year": 2012,
+        "gp": "malaysia",
+        "circuit": "sepang",
+        "title": "佩雷兹雪邦亚军",
+        "text": "2012年马来西亚大奖赛，佩雷兹获得第二名，这是索伯作为独立车队的最好成绩。佩雷兹当年还在加拿大站和意大利站登台，小林可梦伟则在日本站拿到个人首个领奖台。",
+        "sources": [
+          {
+            "label": "Wikipedia · Sauber Motorsport",
+            "url": "https://en.wikipedia.org/wiki/Sauber_Motorsport"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "以妻子名字命名的赛车",
+        "text": "除宝马索伯时期外，索伯的赛车都以字母C加数字命名，以纪念彼得·索伯的妻子克里斯蒂安娜。第一辆C1是在他父母的车库里制造的。",
+        "sources": [
+          {
+            "label": "Wikipedia · Sauber Motorsport",
+            "url": "https://en.wikipedia.org/wiki/Sauber_Motorsport"
+          }
+        ]
+      },
+      {
+        "title": "1欧元买回车队",
+        "text": "宝马在2005年买下索伯，2006至2009年以宝马索伯车队名义参赛。全球金融危机迫使宝马在2009赛季后出售车队，彼得·索伯以1欧元买回了这支以他名字命名的车队。",
+        "sources": [
+          {
+            "label": "Wikipedia · Sauber Motorsport",
+            "url": "https://en.wikipedia.org/wiki/Sauber_Motorsport"
+          }
+        ]
+      }
+    ]
+  },
+  "toro-rosso": {
+    "nameZh": "红牛二队",
+    "nameEn": "Toro Rosso",
+    "base": "意大利法恩扎",
+    "founded": 2006,
+    "tagline": "红牛的青年车手学校",
+    "bio": "红牛二队（Scuderia Toro Rosso）由红牛在2005年底从斯托达特手中买下米纳尔迪后组建，2006至2019年参赛，总部留在意大利法恩扎。车队作为红牛车队的青年队，培养了维特尔、维斯塔潘和塞恩斯等车手，2010年起完全独立于姊妹队运作。车队先后使用考斯沃斯、法拉利、雷诺和本田引擎。2020年车队改名AlphaTauri，以推广红牛旗下的同名时装品牌。",
+    "highlights": [
+      {
+        "year": 2008,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "维特尔蒙扎雨战奇迹",
+        "text": "2008年意大利大奖赛在雨中进行，维特尔先取得个人首个杆位，随后赢得比赛，这是他和红牛二队的首场胜利，也是车队唯一一次杆位和胜利。红牛二队由此成为红牛旗下首支赢得分站赛的车队。",
+        "sources": [
+          {
+            "label": "Wikipedia · Scuderia Toro Rosso",
+            "url": "https://en.wikipedia.org/wiki/Scuderia_Toro_Rosso"
+          },
+          {
+            "label": "Wikipedia · Red Bull Racing",
+            "url": "https://en.wikipedia.org/wiki/Red_Bull_Racing"
+          }
+        ]
+      },
+      {
+        "year": 2015,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "17岁的维斯塔潘",
+        "text": "2015年澳大利亚大奖赛，维斯塔潘以17岁166天的年龄驾驶红牛二队赛车出场，成为F1历史上最年轻的参赛车手。",
+        "sources": [
+          {
+            "label": "Wikipedia · Scuderia Toro Rosso",
+            "url": "https://en.wikipedia.org/wiki/Scuderia_Toro_Rosso"
+          }
+        ]
+      },
+      {
+        "year": 2018,
+        "gp": null,
+        "circuit": null,
+        "title": "牵手本田",
+        "text": "2017年9月15日，红牛二队宣布提前终止与雷诺的客户引擎合同，从2018赛季起与刚和迈凯伦分手的本田建立全厂队动力单元合作。",
+        "sources": [
+          {
+            "label": "Wikipedia · Scuderia Toro Rosso",
+            "url": "https://en.wikipedia.org/wiki/Scuderia_Toro_Rosso"
+          }
+        ]
+      },
+      {
+        "year": 2019,
+        "gp": "germany",
+        "circuit": "hockenheimring",
+        "title": "科维亚特雨中登台",
+        "text": "2019年德国大奖赛在雨中进行，红牛二队凭借明智的策略选择，让科维亚特获得第三名、阿尔本获得第六名，车队收获大量积分。",
+        "sources": [
+          {
+            "label": "Wikipedia · Scuderia Toro Rosso",
+            "url": "https://en.wikipedia.org/wiki/Scuderia_Toro_Rosso"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "伯格的一半股权",
+        "text": "红牛老板马特希茨在2006赛季开始前与前F1车手伯格达成各占一半的共同所有协议。2008年11月下旬，红牛买回伯格的股份，重新全资拥有车队。",
+        "sources": [
+          {
+            "label": "Wikipedia · Scuderia Toro Rosso",
+            "url": "https://en.wikipedia.org/wiki/Scuderia_Toro_Rosso"
+          }
+        ]
+      },
+      {
+        "title": "从青年队到姊妹队",
+        "text": "2020年车队改名AlphaTauri，以推广红牛旗下的时装品牌。据特斯特和马尔科介绍，这次改名也意味着车队已从红牛车队的青年队转变为姊妹队。",
+        "sources": [
+          {
+            "label": "Wikipedia · Racing Bulls",
+            "url": "https://en.wikipedia.org/wiki/Racing_Bulls"
+          }
+        ]
+      }
+    ]
+  },
+  "force-india": {
+    "nameZh": "印度力量",
+    "nameEn": "Force India",
+    "base": "英国银石",
+    "founded": 2008,
+    "tagline": "银石的印度执照车队",
+    "bio": "印度力量车队成立于2007年10月，由印度商人维杰·马尔雅和荷兰商人米希尔·莫尔牵头的财团以8800万欧元收购世爵车队组建，2008至2018年参赛，总部位于英国银石，持印度执照。车队前身是乔丹、Midland和世爵，2016和2017年连续获得车队积分榜第四。2018年车队因财务危机进入破产管理，资产由劳伦斯·斯特罗尔牵头的财团买下，此后发展为Racing Point和阿斯顿·马丁。",
+    "highlights": [
+      {
+        "year": 2009,
+        "gp": "belgium",
+        "circuit": "spa-francorchamps",
+        "title": "费斯切拉斯帕杆位",
+        "text": "2009年比利时大奖赛，费斯切拉在斯帕取得印度力量的首个杆位，正赛获得第二名，为车队拿到首个世界锦标赛积分和首个领奖台。此前车队已连续29场比赛没有得分。",
+        "sources": [
+          {
+            "label": "Wikipedia · Force India",
+            "url": "https://en.wikipedia.org/wiki/Force_India"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "gp": "bahrain",
+        "circuit": "bahrain",
+        "title": "佩雷兹巴林季军",
+        "text": "2014年巴林大奖赛，佩雷兹获得第三名，印度力量自2009年比利时站后再次登上领奖台。佩雷兹此后又在2015年俄罗斯站、2016年摩纳哥站和欧洲站以及2018年阿塞拜疆站获得季军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Force India",
+            "url": "https://en.wikipedia.org/wiki/Force_India"
+          }
+        ]
+      },
+      {
+        "year": 2016,
+        "gp": null,
+        "circuit": null,
+        "title": "力压威廉姆斯获第四",
+        "text": "2016年印度力量以173分获得车队积分榜第四名，从威廉姆斯手中夺得这一位置，创下车队历史最好成绩。2017年车队在墨西哥大奖赛提前锁定第四，连续两年位列第四。",
+        "sources": [
+          {
+            "label": "Wikipedia · Force India",
+            "url": "https://en.wikipedia.org/wiki/Force_India"
+          }
+        ]
+      },
+      {
+        "year": 2018,
+        "gp": "hungary",
+        "circuit": "hungaroring",
+        "title": "进入破产管理",
+        "text": "2018年马尔雅因被控欺诈和贷款违约，无力继续维持车队。7月匈牙利大奖赛前，车队宣布已被伦敦高等法院置于破产管理程序，资产随后由斯特罗尔牵头的Racing Point UK财团买下。",
+        "sources": [
+          {
+            "label": "Wikipedia · Force India",
+            "url": "https://en.wikipedia.org/wiki/Force_India"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "萨哈拉入股",
+        "text": "2011年10月，印度萨哈拉集团以1亿美元购入印度力量42.5%的股份，车队此后以萨哈拉印度力量的名称参赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · Force India",
+            "url": "https://en.wikipedia.org/wiki/Force_India"
+          }
+        ]
+      }
+    ]
+  },
+  "march": {
+    "nameZh": "马奇",
+    "nameEn": "March",
+    "base": "英国牛津郡比斯特",
+    "founded": 1970,
+    "tagline": "四位创始人的姓名缩写",
+    "bio": "马奇工程公司1969年开始运营，名称取自四位创始人马克斯·莫斯利、艾伦·里斯、格雷厄姆·科克和罗宾·赫德的姓名首字母，工厂位于英国牛津郡比斯特。公司1970年同时推出F1、F2、F3等多个级别的客户赛车并运营厂队。马奇在F1只取得有限成功，共赢得3场分站赛，在F2、F3、印地赛车和IMSA跑车赛中则更为成功。车队1990和1991年曾以雷顿之家名义参赛。",
+    "highlights": [
+      {
+        "year": 1970,
+        "gp": "spain",
+        "circuit": "jarama",
+        "title": "第一年即夺冠",
+        "text": "1970年西班牙大奖赛，斯图尔特驾驶March 701夺冠，为马奇赛车取得F1首胜。不过这辆车由泰瑞尔车队使用，马奇厂队自己当年并未赢得大奖赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · March Engineering",
+            "url": "https://en.wikipedia.org/wiki/March_Engineering"
+          },
+          {
+            "label": "Wikipedia · Tyrrell Racing",
+            "url": "https://en.wikipedia.org/wiki/Tyrrell_Racing"
+          }
+        ]
+      },
+      {
+        "year": 1975,
+        "gp": "spain",
+        "circuit": "montjuic",
+        "title": "首位得分的女车手",
+        "text": "1975年西班牙大奖赛，莱拉·隆巴尔迪驾驶马奇赛车获得第六名，成为首位在F1世界锦标赛中拿到积分的女性车手。",
+        "sources": [
+          {
+            "label": "Wikipedia · March Engineering",
+            "url": "https://en.wikipedia.org/wiki/March_Engineering"
+          }
+        ]
+      },
+      {
+        "year": 1975,
+        "gp": "austria",
+        "circuit": "spielberg",
+        "title": "布兰比拉爆冷",
+        "text": "1975年奥地利大奖赛，布兰比拉驾驶Beta Tools赞助的马奇赛车爆冷夺冠，为马奇厂队带来第一场分站赛胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · March Engineering",
+            "url": "https://en.wikipedia.org/wiki/March_Engineering"
+          }
+        ]
+      },
+      {
+        "year": 1976,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "彼得森蒙扎胜利",
+        "text": "1976年彼得森因不满莲花赛车缺乏竞争力，赛季初离队重返马奇，并在蒙扎为马奇厂队赢得第二场、也是最后一场胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · March Engineering",
+            "url": "https://en.wikipedia.org/wiki/March_Engineering"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "错过林特",
+        "text": "设计师赫德最初的F1计划是围绕约亨·林特组建单车车队，但林特对马奇同时开展多个级别项目的庞大规模感到不安，最终决定继续留在莲花车队。",
+        "sources": [
+          {
+            "label": "Wikipedia · March Engineering",
+            "url": "https://en.wikipedia.org/wiki/March_Engineering"
+          }
+        ]
+      }
+    ]
+  },
+  "ligier": {
+    "nameZh": "利吉尔",
+    "nameEn": "Ligier",
+    "base": "法国维希（1976–1988）；法国马尼库尔（1989–1996）",
+    "founded": 1976,
+    "tagline": "第一个全法国组合的冠军",
+    "bio": "利吉尔车队由前橄榄球运动员、前F1车手居伊·利吉尔于1968年创立，最初制造跑车，车型以JS命名，纪念在1968年法国大奖赛遇难的好友乔·施莱塞。1976年车队接收马特拉F1车队的资产后进入F1，是马特拉1972年底退出后首支法国车队，1976至1996年共赢得9场分站赛。80年代中期，凭借好友密特朗的政治支持获得免费雷诺涡轮引擎。1997年2月车队被普罗斯特收购，改为普罗斯特大奖赛车队。",
+    "highlights": [
+      {
+        "year": 1977,
+        "gp": "sweden",
+        "circuit": "anderstorp",
+        "title": "全法国组合首胜",
+        "text": "1977年瑞典大奖赛，拉菲特驾驶搭载马特拉V12引擎的利吉尔赛车夺冠。这通常被视为F1世界锦标赛首个全法国组合的胜利，也是法国执照车队和法国引擎的第一场胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · Équipe Ligier",
+            "url": "https://en.wikipedia.org/wiki/%C3%89quipe_Ligier"
+          }
+        ]
+      },
+      {
+        "year": 1979,
+        "gp": null,
+        "circuit": null,
+        "title": "JS11开季两连胜",
+        "text": "1979年与马特拉的合作结束，利吉尔改用考斯沃斯引擎打造地面效应赛车JS11，拉菲特赢下赛季前两站。但威廉姆斯和法拉利推出改进赛车后，利吉尔余下赛季表现不如开局。",
+        "sources": [
+          {
+            "label": "Wikipedia · Équipe Ligier",
+            "url": "https://en.wikipedia.org/wiki/%C3%89quipe_Ligier"
+          }
+        ]
+      },
+      {
+        "year": 1980,
+        "gp": null,
+        "circuit": null,
+        "title": "车队积分榜亚军",
+        "text": "JS11及其后继车型让利吉尔在80年代初跻身顶尖车队之列。1980年利吉尔获得车队积分榜第二名，仅次于首次夺得车队冠军的威廉姆斯。",
+        "sources": [
+          {
+            "label": "Wikipedia · Équipe Ligier",
+            "url": "https://en.wikipedia.org/wiki/%C3%89quipe_Ligier"
+          },
+          {
+            "label": "Wikipedia · Williams Racing",
+            "url": "https://en.wikipedia.org/wiki/Williams_Racing"
+          }
+        ]
+      },
+      {
+        "year": 1996,
+        "gp": "monaco",
+        "circuit": "monaco",
+        "title": "帕尼斯摩纳哥爆冷",
+        "text": "1996年摩纳哥大奖赛减员严重，帕尼斯为利吉尔赢得比赛。这是1930年以来首个全法国组合的摩纳哥冠军，也是1988至1997年间唯一由四大车队之外的车队赢得的比赛，以及法国制造赛车的最后一场大奖赛胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · Équipe Ligier",
+            "url": "https://en.wikipedia.org/wiki/%C3%89quipe_Ligier"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "JS的由来",
+        "text": "1968年好友乔·施莱塞在法国大奖赛驾驶本田赛车身亡，居伊·利吉尔随后退役并创立车队，首款跑车JS1即以施莱塞的姓名首字母命名，此后利吉尔的车型一律沿用JS前缀。",
+        "sources": [
+          {
+            "label": "Wikipedia · Ligier",
+            "url": "https://en.wikipedia.org/wiki/Ligier"
+          },
+          {
+            "label": "Wikipedia · Équipe Ligier",
+            "url": "https://en.wikipedia.org/wiki/%C3%89quipe_Ligier"
+          }
+        ]
+      }
+    ]
+  },
+  "vanwall": {
+    "nameZh": "范沃尔",
+    "nameEn": "Vanwall",
+    "base": "英国伦敦阿克顿",
+    "founded": 1954,
+    "tagline": "首届车队冠军得主",
+    "bio": "范沃尔由托尼·范德维尔创立，名字结合了他的姓氏与其在伦敦阿克顿工厂生产的Thinwall轴承。范德维尔是BRM最早的支持者之一，50年代初曾以改装法拉利参加自由方程式比赛，1954年起以自制赛车参加F1。1957年英国大奖赛，范沃尔成为第一辆赢得世界锦标赛比赛的英国制造赛车，1958年又赢得首届F1车队冠军。由于范德维尔健康恶化，1958年成为车队最后一个完整赛季。",
+    "highlights": [
+      {
+        "year": 1957,
+        "gp": "great-britain",
+        "circuit": "aintree",
+        "title": "英国赛车的历史性胜利",
+        "text": "1957年英国大奖赛在安特里举行，莫斯和布鲁克斯共用范沃尔VW 5赛车夺冠，这是第一辆赢得世界锦标赛比赛的英国制造赛车。莫斯当年还赢得意大利和佩斯卡拉大奖赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · Vanwall",
+            "url": "https://en.wikipedia.org/wiki/Vanwall"
+          }
+        ]
+      },
+      {
+        "year": 1958,
+        "gp": null,
+        "circuit": null,
+        "title": "首届车队冠军",
+        "text": "1958年范沃尔赢得首届F1车队锦标赛，莫斯在荷兰、葡萄牙和摩洛哥获胜，布鲁克斯在比利时、德国和意大利获胜。但莫斯以一分之差输给霍索恩，屈居车手积分榜第二，布鲁克斯排名第三。",
+        "sources": [
+          {
+            "label": "Wikipedia · Vanwall",
+            "url": "https://en.wikipedia.org/wiki/Vanwall"
+          }
+        ]
+      },
+      {
+        "year": 1958,
+        "gp": "morocco",
+        "circuit": "ain-diab",
+        "title": "冠军赛季的阴影",
+        "text": "1958年赛季最后一站摩洛哥大奖赛，范沃尔车手刘易斯-埃文斯发生事故并伤重不治，车队首夺车队冠军的喜悦因此蒙上阴影。",
+        "sources": [
+          {
+            "label": "Wikipedia · Vanwall",
+            "url": "https://en.wikipedia.org/wiki/Vanwall"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "库珀制造的底盘",
+        "text": "首批范沃尔赛车于1954年在梅登黑德附近的考克斯格林制造，以适应新的F1规则，底盘由欧文·马多克设计、库珀汽车公司制造。这款原为F2设计的赛车在1954年英国大奖赛首次亮相。",
+        "sources": [
+          {
+            "label": "Wikipedia · Vanwall",
+            "url": "https://en.wikipedia.org/wiki/Vanwall"
+          }
+        ]
+      }
+    ]
+  },
+  "brm": {
+    "nameZh": "BRM",
+    "nameEn": "BRM",
+    "base": "英国林肯郡伯恩",
+    "founded": 1951,
+    "tagline": "全英国制造的大奖赛赛车",
+    "bio": "英国赛车公司（BRM）由雷蒙德·梅斯和彼得·伯森于1945年创立，基地设在林肯郡伯恩，初衷是借助英国汽车工业的资金打造一台全英国的大奖赛赛车，后来由鲁伯里·欧文集团的阿尔弗雷德·欧文全面接管。BRM在1951至1977年参加197场大奖赛，赢得17场。1962年格拉汉姆·希尔夺得车手冠军，BRM同时获得车队冠军，并在1963、1964、1965和1971年获得车队积分榜第二。",
+    "highlights": [
+      {
+        "year": 1959,
+        "gp": "netherlands",
+        "circuit": "zandvoort",
+        "title": "P25终获首胜",
+        "text": "BRM P25起初成绩不佳，直到1959年荷兰大奖赛才由博尼耶驾驶取得第一场胜利，这也是BRM在世界锦标赛的首胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · British Racing Motors",
+            "url": "https://en.wikipedia.org/wiki/British_Racing_Motors"
+          }
+        ]
+      },
+      {
+        "year": 1962,
+        "gp": null,
+        "circuit": null,
+        "title": "希尔与P57夺冠",
+        "text": "BRM在1960年推出首款中置引擎赛车，追上其他车队的步伐。1962年格拉汉姆·希尔驾驶P57夺得车手冠军，BRM同时赢得车队冠军，这是车队唯一一次夺得世界冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · British Racing Motors",
+            "url": "https://en.wikipedia.org/wiki/British_Racing_Motors"
+          }
+        ]
+      },
+      {
+        "year": 1965,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "斯图尔特的首胜",
+        "text": "1965年BRM签下斯图尔特与希尔搭档，斯图尔特在新秀赛季于蒙扎赢得个人首场大奖赛。1966年他又驾驶装有塔斯曼2升V8引擎的赛车，赢得新3升规则下的第一场世界锦标赛比赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · British Racing Motors",
+            "url": "https://en.wikipedia.org/wiki/British_Racing_Motors"
+          }
+        ]
+      },
+      {
+        "year": 1972,
+        "gp": "monaco",
+        "circuit": "monaco",
+        "title": "贝尔托伊斯雨战摩纳哥",
+        "text": "1972年摩纳哥大奖赛在雨中进行，贝尔托伊斯驾驶P160赢得比赛，这是BRM在世界锦标赛的最后一场胜利。同年BRM成为第一支获得万宝路赞助的F1车队。",
+        "sources": [
+          {
+            "label": "Wikipedia · British Racing Motors",
+            "url": "https://en.wikipedia.org/wiki/British_Racing_Motors"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "野心勃勃的V16",
+        "text": "战后首批规则允许1.5升增压或4.5升自然吸气引擎，BRM据此设计了一台极具野心的1.5升机械增压V16引擎。由于设计难题重重，这台引擎直到1949年6月才首次点火。",
+        "sources": [
+          {
+            "label": "Wikipedia · British Racing Motors",
+            "url": "https://en.wikipedia.org/wiki/British_Racing_Motors"
+          }
+        ]
+      },
+      {
+        "title": "车头的橙色条纹",
+        "text": "60年代，阿尔弗雷德·欧文的弟弟欧内斯特希望把赛车涂成欧文集团的橙色。工程负责人鲁德指出橙色是荷兰的赛车代表色，最终60年代大部分时间BRM只在车头涂一圈欧文橙色。",
+        "sources": [
+          {
+            "label": "Wikipedia · British Racing Motors",
+            "url": "https://en.wikipedia.org/wiki/British_Racing_Motors"
+          }
+        ]
+      }
+    ]
+  },
+  "matra": {
+    "nameZh": "马特拉",
+    "nameEn": "Matra",
+    "base": "法国韦利济-维拉库布莱",
+    "founded": 1968,
+    "tagline": "法国制造商的首个F1冠军",
+    "bio": "马特拉公司的赛车部门成立于1965年，60年代中期在F3和F2赛场取得成功，1968年进入F1，F1车队设在巴黎西南郊的韦利济-维拉库布莱。1969年马特拉没有派出厂队，而是全力支持肯·泰瑞尔运营的马特拉国际车队，斯图尔特驾驶MS80夺得车手冠军，马特拉同时赢得车队冠军，成为第一个赢得F1冠军的法国制造商。1972年后马特拉不再参赛，其V12引擎此后为Shadow和利吉尔提供动力。",
+    "highlights": [
+      {
+        "year": 1968,
+        "gp": null,
+        "circuit": null,
+        "title": "MS10与结构式油箱",
+        "text": "马特拉1968年进入F1，斯图尔特驾驶泰瑞尔运营的MS10赢得多场比赛。MS10采用源自航空的结构式油箱，底盘轻约15公斤且更坚固，但国际汽联认为不安全，自1970年起禁用。",
+        "sources": [
+          {
+            "label": "Wikipedia · Equipe Matra Sports",
+            "url": "https://en.wikipedia.org/wiki/Equipe_Matra_Sports"
+          }
+        ]
+      },
+      {
+        "year": 1969,
+        "gp": null,
+        "circuit": null,
+        "title": "法国制造商首冠",
+        "text": "1969年斯图尔特驾驶由迪卡鲁热和布瓦耶设计的MS80轻松夺得车手冠军，马特拉同时赢得车队冠军。这是法国制造商的首个F1冠军，至今仍是唯一由法国制造的赛车赢得的冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · Equipe Matra Sports",
+            "url": "https://en.wikipedia.org/wiki/Equipe_Matra_Sports"
+          }
+        ]
+      },
+      {
+        "year": 1969,
+        "gp": "canada",
+        "circuit": "mosport",
+        "title": "四驱赛车的唯一积分",
+        "text": "1969年加拿大大奖赛，塞尔沃兹-加文驾驶四轮驱动的马特拉MS84获得第六名，成为唯一一位驾驶四驱赛车在F1拿到积分的车手。",
+        "sources": [
+          {
+            "label": "Wikipedia · Equipe Matra Sports",
+            "url": "https://en.wikipedia.org/wiki/Equipe_Matra_Sports"
+          }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "没有厂队的冠军",
+        "text": "马特拉是唯一一个没有派出自家厂队就赢得车队冠军的制造商。法国也由此成为继英国和意大利之后，第三个诞生F1冠军车队的国家。",
+        "sources": [
+          {
+            "label": "Wikipedia · Equipe Matra Sports",
+            "url": "https://en.wikipedia.org/wiki/Equipe_Matra_Sports"
+          }
+        ]
+      },
+      {
+        "title": "与泰瑞尔分道扬镳",
+        "text": "1970年马特拉与西姆卡合作后，要求泰瑞尔改用马特拉V12引擎。但泰瑞尔的预算很大一部分来自福特，赞助商埃尔夫又与雷诺有协议、不能支持西姆卡的合作方，双方合作因此结束。",
+        "sources": [
+          {
+            "label": "Wikipedia · Equipe Matra Sports",
+            "url": "https://en.wikipedia.org/wiki/Equipe_Matra_Sports"
+          }
+        ]
+      }
+    ]
+  }
+}

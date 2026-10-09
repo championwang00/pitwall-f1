@@ -1,0 +1,15 @@
+node_modules
+.next
+.cache
+_data_raw/*.zip
+next-env.d.ts
+*.tsbuildinfo
+shots
+
+.vercel
+.env*
+!.env.example
+.DS_Store
+.claude
+outputs
+_data_raw

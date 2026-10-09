@@ -1,0 +1,45 @@
+/* Year hub — one light surface system (formula1.com): #F7F4F1 page throughout; the season itself is a single big
+   identity card (champion's team colour + F1 DRS texture via the global .f1-surface); tabs sit on the same paper. */
+.page { background: var(--paper); min-height: 60vh; }
+.top { padding: 24px var(--gutter) 24px; }
+
+.hero { border-radius: 8px; display: grid; grid-template-columns: minmax(0, 1fr) auto; min-height: 420px; }
+.hero.hero::before { height: 150%; right: -8%; }
+.text { position: relative; display: flex; flex-direction: column; gap: 18px; padding: 28px 32px 28px; min-width: 0; }
+.kick { font: 700 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; opacity: .8; }
+.year { font-family: var(--font-year); font-weight: 400; font-size: clamp(96px, 12vw, 176px); line-height: .8; letter-spacing: 0; margin-top: 4px; }
+.dek { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 28px; }
+.dekItem { display: inline-flex; align-items: center; gap: 10px; font-size: 15px; }
+.dekItem > em { font-style: normal; font: 700 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; opacity: .75; }
+/* chips on the colour: the shared soft-pill hover (Person / Team), names in the F1 bold cut, never recoloured */
+.chip b { font-family: var(--font-display); font-weight: 700; font-size: 18px; color: #fff; }
+.chip { padding: 2px 10px 2px 2px; }
+.pts { font: 900 22px/24px var(--font-display); display: inline-flex; align-items: baseline; gap: 4px; }
+.pts i { font: 700 11px/12px "Titillium Web"; font-style: normal; opacity: .75; }
+.over { font-size: 13px; opacity: .85; }
+.overName { text-decoration: underline; text-decoration-color: rgba(255,255,255,.4); text-underline-offset: 3px; }
+.overName:hover { text-decoration-color: #fff; }
+.stats { display: flex; flex-wrap: wrap; gap: 12px 40px; margin: auto 0 0; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.22); }
+.stats div { display: flex; flex-direction: column; gap: 6px; }
+.stats dd { margin: 0; font: 900 32px/32px var(--font-display); }
+.stats dt { font: 700 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; opacity: .8; display: flex; gap: 8px; }
+.stats dt span { text-transform: none; opacity: .85; }
+
+.cut, .photo { position: relative; margin: 0; align-self: end; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 0 32px 0 0; }
+.cut img { height: 420px; width: auto; mask-image: linear-gradient(180deg, #000 80%, transparent); }
+.photo { align-self: center; padding: 28px 32px 28px 0; }
+.photo img { width: 300px; aspect-ratio: 4/5; object-fit: cover; object-position: top; border-radius: 8px; }
+.cut figcaption { position: absolute; right: 32px; bottom: 14px; }
+.cut figcaption, .photo figcaption { font: 600 12px/16px "Titillium Web", var(--font-cn); opacity: .85; }
+
+.twoTables { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; }
+@media (max-width: 1100px) { .cut img { height: 340px; } .photo img { width: 240px; } }
+@media (max-width: 960px) { .twoTables { grid-template-columns: 1fr; } }
+@media (max-width: 760px) {
+  .top { padding: 16px 16px 16px; }
+  .hero { grid-template-columns: 1fr; min-height: 0; }
+  .text { padding: 20px; }
+  .cut, .photo { display: none; }
+  .stats { gap: 12px 24px; }
+  .stats dd { font-size: 26px; line-height: 26px; }
+}

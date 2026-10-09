@@ -1,0 +1,22 @@
+.strip { display: flex; align-items: flex-end; gap: 3px; height: 74px; padding-bottom: 20px; }
+.chip { flex: 1; min-width: 6px; position: relative; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; }
+.chip i { display: block; height: 30px; background: var(--c); border-radius: 1px; opacity: .75; transition: height .25s var(--ease-out), opacity .2s; }
+.chip:hover i { height: 52px; opacity: 1; }
+.chip span { position: absolute; bottom: -20px; left: 0; font-family: var(--font-data); font-size: 11px; color: var(--mute); white-space: nowrap; }
+.on i { height: 54px; opacity: 1; box-shadow: 0 0 0 2px #fff, 0 0 0 3px var(--ink); }
+.on span { color: var(--ink); font-weight: 900; }
+.stripDark .chip span { color: #8a8a94; }
+.stripDark .on span { color: #fff; }
+.stripDark .on i { box-shadow: 0 0 0 2px var(--carbon), 0 0 0 3px #fff; }
+
+.chart { width: 100%; height: auto; display: block; overflow: visible; }
+.grid { stroke: var(--line); stroke-width: 1; }
+.axis { font-family: var(--font-data); font-size: 11px; fill: var(--mute); }
+.endLabel { font-family: var(--font-cn); font-size: 12px; font-weight: 700; fill: var(--ink); }
+.endPts { font-family: var(--font-data); font-weight: 900; fill: var(--mute); }
+@media (max-width: 760px) {
+  .strip { gap: 1px; }
+  .chip { min-width: 0; }
+  .chip span { font-size: 9px; }
+  .chip:not(.on) span { display: none; }
+}

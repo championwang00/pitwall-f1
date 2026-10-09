@@ -1,0 +1,615 @@
+{
+  "mercedes": [
+    {
+      "tag": "最近一次",
+      "title": "雪邦拉塞尔退赛，分差拉大",
+      "text": "10月4日移师雪邦举行的巴林大奖赛，安东内利从第三位发车获得第二。跑在第三的拉塞尔在比赛后段安全车期间因动力单元故障退赛，按完成圈数列第20。安东内利对队友的领先由66分扩大到84分，还剩七站。",
+      "year": 2026, "gp": "bahrain", "circuit": "sepang",
+      "sources": [{ "label": "Wikipedia · 2026 Bahrain Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix" }]
+    },
+    {
+      "tag": "最近一次",
+      "title": "最近一胜和杆位都在巴库",
+      "text": "梅赛德斯最近一场胜利和最近一个杆位都来自9月26日的阿塞拜疆大奖赛。拉塞尔杆位出发、领跑全部圈数，以0.196秒力压维斯塔潘，这是2002年美国站巴里切罗险胜舒马赫之后最小的胜负差。",
+      "year": 2026, "gp": "azerbaijan", "circuit": "baku",
+      "sources": [{ "label": "Wikipedia · 2026 Azerbaijan Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Azerbaijan_Grand_Prix" }]
+    },
+    {
+      "tag": "数字",
+      "title": "16站场场有人登台",
+      "text": "2026年前16站，梅赛德斯每一站都至少有一名车手登上领奖台，合计21次。上一次梅赛德斯无人登台还是2025年收官战阿布扎比站，当时拉塞尔第四、安东内利第14。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Wikipedia · 2026 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship" },
+        { "label": "Wikipedia · 2025 Abu Dhabi Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Abu_Dhabi_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "里程碑",
+      "title": "11胜已超前四年总和",
+      "text": "梅赛德斯本赛季16站赢下11场，安东内利8胜、拉塞尔3胜，已超过车队2022至2025年四个赛季的胜场总和7场（分别为1、0、4、2场）。再赢一场，就将追平2017年全年的12胜。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Wikipedia · Mercedes-Benz in Formula One", "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_in_Formula_One" },
+        { "label": "Wikipedia · 2026 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship" }
+      ]
+    },
+    {
+      "tag": "故事线",
+      "title": "压缩比新检测前后",
+      "text": "2026年2月FIA修改压缩比条款，6月1日起16.0的上限还要在130°C工况下检测。此前的争议主要指向梅赛德斯，但从未被证实。新检测生效前梅赛德斯赢下全部五站，生效后的11站赢了6站。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "PlanetF1 · FIA closes compression ratio loophole (2026-02-28)", "url": "https://www.planetf1.com/news/fia-compression-ratio-rule-change-f1-2026-mercedes" },
+        { "label": "Wikipedia · 2026 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship" }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "滨海湾五胜，各队最多",
+      "text": "新加坡站2008年成为F1分站以来，梅赛德斯在这里5次夺冠（2014、2016、2017、2018、2025年），是各队最多，另有4个杆位。去年拉塞尔杆位出发获胜，安东内利获得第五。",
+      "year": 2025, "gp": "singapore", "circuit": "marina-bay",
+      "sources": [
+        { "label": "Wikipedia · Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/Singapore_Grand_Prix" },
+        { "label": "Wikipedia · 2025 Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Singapore_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "五场冲刺赛赢下四场",
+      "text": "本周新加坡站首次采用冲刺赛赛制。今年前五场冲刺赛梅赛德斯赢下四场，拉塞尔三胜、安东内利一胜，只有迈阿密站被诺里斯拿走。车队积分556分，领先第二名法拉利151分。",
+      "year": 2026, "gp": "singapore", "circuit": "marina-bay",
+      "sources": [
+        { "label": "Wikipedia · Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/Singapore_Grand_Prix" },
+        { "label": "Wikipedia · 2026 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship" },
+        { "label": "Formula1.com · 2026 Team Standings", "url": "https://www.formula1.com/en/results/2026/team" }
+      ]
+    }
+  ],
+  "ferrari": [
+    {
+      "tag": "最近一次",
+      "title": "汉密尔顿从第18追上领奖台",
+      "text": "雪邦站汉密尔顿从第二位发车，一度掉到第18位，第13圈安全车时留在赛道上，第31圈结束才换胎，最终追回第三。勒克莱尔与霍肯伯格碰撞、换前翼后获得第四。法拉利由此结束连续五站无缘领奖台。",
+      "year": 2026, "gp": "bahrain", "circuit": "sepang",
+      "sources": [{ "label": "Wikipedia · 2026 Bahrain Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix" }]
+    },
+    {
+      "tag": "里程碑",
+      "title": "银石拿下第250胜",
+      "text": "法拉利最近一场胜利是7月5日的英国大奖赛，勒克莱尔在安全车下冲线，领先拉塞尔0.427秒。这是法拉利的第250场分站胜利，也是车队自2022年后首次在银石获胜。此后法拉利已连续七站没有赢过。",
+      "year": 2026, "gp": "great-britain", "circuit": "silverstone",
+      "sources": [{ "label": "Arab News (AFP) · Leclerc delivers Ferrari's 250th win (2026-07-05)", "url": "https://www.arabnews.pk/node/2649767/sport" }]
+    },
+    {
+      "tag": "数字",
+      "title": "连续26站没有杆位",
+      "text": "法拉利最近一个杆位是2025年匈牙利站的勒克莱尔，那也是车队当年唯一的杆位，此后已连续26站与杆位无缘。2026年前15个杆位全部属于梅赛德斯动力赛车，直到雪邦站才被维斯塔潘打破。",
+      "year": 2025, "gp": "hungary", "circuit": "hungaroring",
+      "sources": [
+        { "label": "Wikipedia · 2025 Hungarian Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Hungarian_Grand_Prix" },
+        { "label": "Wikipedia · 2026 Bahrain Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "已超去年全季总分",
+      "text": "法拉利16站积405分，已经超过2025年24站的398分，场均得分由约16.6分升到约25.3分。车队目前排名第二，领先迈凯伦89分，落后梅赛德斯151分。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Formula1.com · 2026 Team Standings", "url": "https://www.formula1.com/en/results/2026/team" },
+        { "label": "Formula1.com · 2025 Team Standings", "url": "https://www.formula1.com/en/results/2025/team" }
+      ]
+    },
+    {
+      "tag": "故事线",
+      "title": "汉密尔顿积分压过队友",
+      "text": "法拉利两位车手本赛季各赢一场，汉密尔顿在巴塞罗那、勒克莱尔在银石。积分上汉密尔顿以214分排名车手榜第三，领先勒克莱尔23分，距离第二名拉塞尔只差22分。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Formula1.com · 2026 Driver Standings", "url": "https://www.formula1.com/en/results/2026/drivers" },
+        { "label": "Wikipedia · 2026 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship" }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "滨海湾7个杆位最多",
+      "text": "新加坡站自2008年起的16场F1比赛中，法拉利拿到7个杆位，各队最多，但只赢了4场。去年勒克莱尔获得第六，汉密尔顿冲线第七，因超出赛道界限被罚5秒降到第八。",
+      "year": 2025, "gp": "singapore", "circuit": "marina-bay",
+      "sources": [
+        { "label": "Wikipedia · Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/Singapore_Grand_Prix" },
+        { "label": "Wikipedia · 2025 Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Singapore_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "阿布扎比一胜未得",
+      "text": "阿布扎比大奖赛自2009年以来已举办17届，法拉利从未在这里赢过，红牛8胜、梅赛德斯6胜、迈凯伦2胜、路特斯1胜。法拉利车手在这里拿过多次领奖台，最好成绩是第二。",
+      "year": null, "gp": "abu-dhabi", "circuit": "yas-marina",
+      "sources": [{ "label": "Wikipedia · Abu Dhabi Grand Prix", "url": "https://en.wikipedia.org/wiki/Abu_Dhabi_Grand_Prix" }]
+    }
+  ],
+  "mclaren": [
+    {
+      "tag": "最近一次",
+      "title": "巴库零分，雪邦只得10分",
+      "text": "阿塞拜疆站诺里斯被加斯利的赛车撞出局，皮亚斯特里防守时锁死冲进缓冲区，只得第13，迈凯伦自2025年拉斯维加斯站双车被取消成绩后首次整站零分。雪邦站皮亚斯特里第六，诺里斯冲进砂石区后获第九。",
+      "year": 2026, "gp": "bahrain", "circuit": "sepang",
+      "sources": [
+        { "label": "Wikipedia · 2026 Azerbaijan Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Azerbaijan_Grand_Prix" },
+        { "label": "Wikipedia · 2026 Bahrain Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix" },
+        { "label": "Wikipedia · 2025 Las Vegas Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Las_Vegas_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "最近一胜在赞德沃特",
+      "text": "诺里斯在匈牙利站拿下迈凯伦本赛季首个杆位和首胜，荷兰站再次杆位夺冠，这是车队最近一场胜利。最近一次杆位和登台都在9月13日的马德里，诺里斯杆位出发获第三，此后两站无缘领奖台。",
+      "year": 2026, "gp": "netherlands", "circuit": "zandvoort",
+      "sources": [
+        { "label": "Wikipedia · 2026 Hungarian Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Hungarian_Grand_Prix" },
+        { "label": "Wikipedia · 2026 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship" }
+      ]
+    },
+    {
+      "tag": "故事线",
+      "title": "卫冕冠军守第三",
+      "text": "卫冕双冠的迈凯伦目前以316分排名车队榜第三。红牛在巴库和雪邦两站拿到68分，迈凯伦只有10分，双方差距从马德里站后的76分缩小到18分，季军之争进入最后七站。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Formula1.com · 2026 Team Standings", "url": "https://www.formula1.com/en/results/2026/team" },
+        { "label": "Wikipedia · 2026 Azerbaijan Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Azerbaijan_Grand_Prix" },
+        { "label": "Wikipedia · 2026 Bahrain Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "场均积分少了四成多",
+      "text": "2025年迈凯伦24站积833分，场均约34.7分；2026年16站积316分，场均约19.8分，下降四成多。新规首年迈凯伦至今只赢了两场，都由诺里斯取得。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Formula1.com · 2025 Team Standings", "url": "https://www.formula1.com/en/results/2025/team" },
+        { "label": "Formula1.com · 2026 Team Standings", "url": "https://www.formula1.com/en/results/2026/team" }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "第1000场双车未发车",
+      "text": "2026年中国大奖赛是迈凯伦的第1000场大奖赛，但诺里斯和皮亚斯特里都因动力单元故障没能发车，迈凯伦那个周末只在冲刺赛拿到8分。",
+      "year": 2026, "gp": "china", "circuit": "shanghai",
+      "sources": [{ "label": "Wikipedia · 2026 Chinese Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Chinese_Grand_Prix" }]
+    },
+    {
+      "tag": "最近一次",
+      "title": "去年在新加坡锁定车队冠军",
+      "text": "2025年新加坡站诺里斯第三、皮亚斯特里第四，迈凯伦提前锁定第十个车队冠军，是1991年后首次卫冕，也是新加坡站第一次决出车队冠军。迈凯伦在新加坡赢过两次，最近一次是2024年诺里斯。",
+      "year": 2025, "gp": "singapore", "circuit": "marina-bay",
+      "sources": [
+        { "label": "Wikipedia · 2025 Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Singapore_Grand_Prix" },
+        { "label": "Wikipedia · 2024 Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/2024_Singapore_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "拉斯维加斯从未登台",
+      "text": "拉斯维加斯是2026年赛历中迈凯伦唯一从未登上领奖台的赛道，3次参赛最好成绩只是第六。去年诺里斯拿到杆位，但赛后两车都因底板滑块磨损超标被取消成绩。",
+      "year": 2025, "gp": "las-vegas", "circuit": "las-vegas",
+      "sources": [{ "label": "Wikipedia · 2025 Las Vegas Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Las_Vegas_Grand_Prix" }]
+    }
+  ],
+  "red-bull": [
+    {
+      "tag": "最近一次",
+      "title": "雪邦结束15场不胜",
+      "text": "维斯塔潘在雪邦从杆位出发获胜，红牛结束了自2025年阿布扎比站以来的15场不胜，这也是2026年第一个不属于梅赛德斯动力赛车的杆位。哈贾尔排位第三，因换上第七台内燃机罚退五位，从第八追到第五。",
+      "year": 2026, "gp": "bahrain", "circuit": "sepang",
+      "sources": [{ "label": "Wikipedia · 2026 Bahrain Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix" }]
+    },
+    {
+      "tag": "故事线",
+      "title": "福特动力慢热后提速",
+      "text": "红牛与福特合作的自家动力单元首个赛季，开局三站只得16分，直到第五站加拿大才由维斯塔潘拿到首个领奖台，那也是福特动力2003年后首次登台。自意大利站起，红牛已连续四站有车手登台。",
+      "year": 2026, "gp": "canada", "circuit": "montreal",
+      "sources": [
+        { "label": "Wikipedia · 2026 Canadian Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Canadian_Grand_Prix" },
+        { "label": "Wikipedia · 2026 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship" }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "两站进账68分",
+      "text": "巴库站维斯塔潘第二、伤愈复出的哈贾尔第三，是红牛自2024年中国站以来首次双人登台；一周后在雪邦又拿35分。两站合计68分，是红牛本赛季得分最多的连续两站，车队榜上与迈凯伦只差18分。",
+      "year": 2026, "gp": "azerbaijan", "circuit": "baku",
+      "sources": [
+        { "label": "Wikipedia · 2026 Azerbaijan Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Azerbaijan_Grand_Prix" },
+        { "label": "Wikipedia · 2026 Bahrain Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "连续29站得分",
+      "text": "红牛已连续29场大奖赛拿到积分。上一次颗粒无收是2025年奥地利站：维斯塔潘第一圈就被锁死的安东内利撞出局，角田裕毅从第18位发车只获得第16。",
+      "year": 2025, "gp": "austria", "circuit": "spielberg",
+      "sources": [{ "label": "Wikipedia · 2025 Austrian Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Austrian_Grand_Prix" }]
+    },
+    {
+      "tag": "纪录",
+      "title": "滨海湾仍缺维斯塔潘一胜",
+      "text": "红牛在新加坡4次夺冠，维特尔2011至2013年三连胜，佩雷兹2022年再胜。维斯塔潘在这里出战9次从未赢过，2024和2025年都是亚军，分别输给诺里斯和拉塞尔。",
+      "year": 2025, "gp": "singapore", "circuit": "marina-bay",
+      "sources": [
+        { "label": "Wikipedia · Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/Singapore_Grand_Prix" },
+        { "label": "Wikipedia · 2024 Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/2024_Singapore_Grand_Prix" },
+        { "label": "Wikipedia · 2025 Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Singapore_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "剩余七站中四站卫冕",
+      "text": "今年剩下的七条赛道，去年有四条由维斯塔潘为红牛夺冠：奥斯汀、拉斯维加斯、卡塔尔和阿布扎比。阿布扎比站红牛共赢8次，是该站胜场最多的车队。",
+      "year": null, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Wikipedia · 2025 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2025_Formula_One_World_Championship" },
+        { "label": "Wikipedia · Abu Dhabi Grand Prix", "url": "https://en.wikipedia.org/wiki/Abu_Dhabi_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "雪邦最近两场都是维斯塔潘",
+      "text": "2017年10月1日的马来西亚大奖赛是雪邦此前最后一场F1，维斯塔潘为红牛赢下生涯第二胜。时隔九年F1回到雪邦，赢家仍是维斯塔潘和红牛。",
+      "year": 2017, "gp": "malaysia", "circuit": "sepang",
+      "sources": [
+        { "label": "Wikipedia · 2017 Malaysian Grand Prix", "url": "https://en.wikipedia.org/wiki/2017_Malaysian_Grand_Prix" },
+        { "label": "Wikipedia · 2026 Bahrain Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix" }
+      ]
+    }
+  ],
+  "racing-bulls": [
+    {
+      "tag": "最近一次",
+      "title": "林德布拉德末位追进前十",
+      "text": "雪邦站林德布拉德因动力单元部件超额被罚退30位，从第22位发车，最后一圈超过霍肯伯格获得第十。劳森从第11位发车获得第七。Racing Bulls已连续四站得分，排名车队榜第五。",
+      "year": 2026, "gp": "bahrain", "circuit": "sepang",
+      "sources": [{ "label": "Wikipedia · 2026 Bahrain Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix" }]
+    },
+    {
+      "tag": "最近一次",
+      "title": "最近一次登台已隔25站",
+      "text": "Racing Bulls最近一次登上领奖台是2025年8月31日荷兰站，哈贾尔获得第三，此后已连续25站无缘前三。这支法恩扎车队只赢过两场，2008年维特尔和2020年加斯利，都在蒙扎。",
+      "year": 2025, "gp": "netherlands", "circuit": "zandvoort",
+      "sources": [
+        { "label": "Wikipedia · 2025 Dutch Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Dutch_Grand_Prix" },
+        { "label": "Wikipedia · 2020 Italian Grand Prix", "url": "https://en.wikipedia.org/wiki/2020_Italian_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "差2分追平去年全季",
+      "text": "Racing Bulls目前90分，只差2分就追平2025年24站的92分，还剩七站。若保住车队榜第五，将是这支法恩扎车队算上米纳尔迪、Toro Rosso和AlphaTauri时期的最好排名，此前最好是第六。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Formula1.com · 2026 Team Standings", "url": "https://www.formula1.com/en/results/2026/team" },
+        { "label": "Formula1.com · 2025 Team Standings", "url": "https://www.formula1.com/en/results/2025/team" },
+        { "label": "Wikipedia · Racing Bulls", "url": "https://en.wikipedia.org/wiki/Racing_Bulls" }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "连续四站双车得分",
+      "text": "从摩纳哥到英国，Racing Bulls连续四站两车都进入积分区，创下车队纪录。其中摩纳哥站劳森第五、林德布拉德第六，一站拿到18分，是车队本赛季单站最高。",
+      "year": 2026, "gp": "monaco", "circuit": "monaco",
+      "sources": [
+        { "label": "Wikipedia · Racing Bulls", "url": "https://en.wikipedia.org/wiki/Racing_Bulls" },
+        { "label": "Wikipedia · 2026 Monaco Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Monaco_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "故事线",
+      "title": "第五名之争拉开差距",
+      "text": "Racing Bulls在匈牙利站双车得分，反超阿尔派升至车队榜第五，阿尔派方面把双方的竞争称为“研发战”。最近两站阿尔派颗粒无收，Racing Bulls拿到13分，领先优势扩大到22分。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Wikipedia · Racing Bulls", "url": "https://en.wikipedia.org/wiki/Racing_Bulls" },
+        { "label": "PlanetF1 · Alpine half-season review (2026-08-09)", "url": "https://www.planetf1.com/features/alpine-f1-2026-half-season-review" },
+        { "label": "Formula1.com · 2026 Team Standings", "url": "https://www.formula1.com/en/results/2026/team" }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "滨海湾最好成绩是第四",
+      "text": "法恩扎车队在新加坡的最好成绩，是2017年塞恩斯为Toro Rosso拿到的第四名，那也是他当时的生涯最好成绩。2008年首届新加坡夜赛，维特尔曾为Toro Rosso获得第五。",
+      "year": 2017, "gp": "singapore", "circuit": "marina-bay",
+      "sources": [
+        { "label": "Wikipedia · 2017 Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/2017_Singapore_Grand_Prix" },
+        { "label": "Wikipedia · 2008 Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/2008_Singapore_Grand_Prix" }
+      ]
+    }
+  ],
+  "alpine": [
+    {
+      "tag": "最近一次",
+      "title": "雪邦再次颗粒无收",
+      "text": "雪邦站加斯利从第九位发车，在安全车带领的第一圈就用干胎打滑，最终只获得第16。科拉平托因巴库撞车和更换动力单元部件被罚退15位，从第21位追到第13。阿尔派已连续两站没有得分。",
+      "year": 2026, "gp": "bahrain", "circuit": "sepang",
+      "sources": [{ "label": "Wikipedia · 2026 Bahrain Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix" }]
+    },
+    {
+      "tag": "最近一次",
+      "title": "巴库队友相撞双双出局",
+      "text": "阿塞拜疆站第35圈，科拉平托在1号弯内线锁死，撞上队友加斯利，加斯利的赛车又撞到诺里斯，三人都退赛。布里亚托雷表示“极度失望”，并向诺里斯和迈凯伦道歉。",
+      "year": 2026, "gp": "azerbaijan", "circuit": "baku",
+      "sources": [{ "label": "Wikipedia · 2026 Azerbaijan Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Azerbaijan_Grand_Prix" }]
+    },
+    {
+      "tag": "纪录",
+      "title": "恩斯通17年来首个杆位",
+      "text": "加斯利9月5日在蒙扎以0.060秒力压拉塞尔夺得杆位，这是恩斯通车队自2009年匈牙利站阿隆索之后的首个杆位，中间隔了17年。科拉平托同场排位第八，阿尔派两车都进入前十。",
+      "year": 2026, "gp": "italy", "circuit": "monza",
+      "sources": [{ "label": "GrandPrix.com · Italian GP 2026 qualifying report", "url": "https://www.grandprix.com/races/italian-gp-2026-qualifying-report.html" }]
+    },
+    {
+      "tag": "数字",
+      "title": "积分已是去年三倍",
+      "text": "阿尔派2025年只得22分，排名车队榜末位。2026年改用梅赛德斯动力单元后，16站已拿68分，是去年全年的三倍多，场均从约0.9分升到约4.3分，目前排名第六。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Formula1.com · 2025 Team Standings", "url": "https://www.formula1.com/en/results/2025/team" },
+        { "label": "Formula1.com · 2026 Team Standings", "url": "https://www.formula1.com/en/results/2026/team" },
+        { "label": "PlanetF1 · Alpine half-season review (2026-08-09)", "url": "https://www.planetf1.com/features/alpine-f1-2026-half-season-review" }
+      ]
+    },
+    {
+      "tag": "故事线",
+      "title": "摩纳哥裁决拿走9分",
+      "text": "暑期休赛时阿尔派积61分，当时加斯利的摩纳哥季军已经恢复。9月国际上诉法庭重新判罚，加斯利退回第七，车队少了9分。如今阿尔派68分，落后第五名Racing Bulls 22分。",
+      "year": 2026, "gp": "monaco", "circuit": "monaco",
+      "sources": [
+        { "label": "PlanetF1 · Alpine half-season review (2026-08-09)", "url": "https://www.planetf1.com/features/alpine-f1-2026-half-season-review" },
+        { "label": "Wikipedia · 2026 Monaco Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Monaco_Grand_Prix" },
+        { "label": "Wikipedia · 2026 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship" },
+        { "label": "Formula1.com · 2026 Team Standings", "url": "https://www.formula1.com/en/results/2026/team" }
+      ]
+    }
+  ],
+  "haas": [
+    {
+      "tag": "最近一次",
+      "title": "巴库双车得分后再归零",
+      "text": "阿塞拜疆站奥康第八、贝尔曼第九，哈斯自2025年拉斯维加斯站后首次双车得分，也结束了从巴塞罗那到马德里连续八站零分。随后的雪邦站贝尔曼第14、奥康第15，没有得分。",
+      "year": 2026, "gp": "azerbaijan", "circuit": "baku",
+      "sources": [
+        { "label": "Wikipedia · 2026 Azerbaijan Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Azerbaijan_Grand_Prix" },
+        { "label": "Wikipedia · 2026 Bahrain Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix" },
+        { "label": "Wikipedia · 2025 Las Vegas Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Las_Vegas_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "故事线",
+      "title": "贝尔曼事故与能量新规",
+      "text": "日本站第20圈，贝尔曼比前方提前减少电能释放的科拉平托快约45公里/小时，避让时冲上草地失控撞墙，车手们随后质疑能量规则。FIA在4月20日通过调整，自迈阿密站起排位赛最大回收能量由8兆焦降至7兆焦。",
+      "year": 2026, "gp": "japan", "circuit": "suzuka",
+      "sources": [
+        { "label": "Wikipedia · 2026 Japanese Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Japanese_Grand_Prix" },
+        { "label": "FIA · Refinements to the 2026 F1 regulations (2026-04-20)", "url": "https://www.fia.com/news/refinements-2026-fia-formula-1-regulations-agreed-all-stakeholders" }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "27分中17分来自前两站",
+      "text": "哈斯本赛季27分中有17分是在前两站拿到的：澳大利亚站贝尔曼第七得6分，中国站冲刺赛加正赛再得11分。场均约1.7分，低于2025年的约3.3分，目前排名车队榜第七。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Formula1.com · 2026 Team Standings", "url": "https://www.formula1.com/en/results/2026/team" },
+        { "label": "Formula1.com · 2025 Team Standings", "url": "https://www.formula1.com/en/results/2025/team" },
+        { "label": "Wikipedia · 2026 Chinese Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Chinese_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "新加坡连续三年得分",
+      "text": "哈斯在新加坡已连续三年拿到积分：2023年马格努森第十，2024年霍肯伯格第九，2025年贝尔曼第九。车队在滨海湾8次参赛，最好成绩就是第九。",
+      "year": 2025, "gp": "singapore", "circuit": "marina-bay",
+      "sources": [
+        { "label": "Wikipedia · 2023 Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/2023_Singapore_Grand_Prix" },
+        { "label": "Wikipedia · 2024 Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/2024_Singapore_Grand_Prix" },
+        { "label": "Wikipedia · 2025 Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Singapore_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "冷知识",
+      "title": "丰田名字重回F1",
+      "text": "哈斯2026年以TGR Haas F1 Team的名义参赛，丰田Gazoo Racing取代MoneyGram成为冠名伙伴。这是丰田2009年退出F1后，旗下品牌首次出现在F1车队的参赛名称中。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Speedcafe · Haas title sponsor change (2025-12-04)", "url": "https://speedcafe.com/f1-news-2025-haas-title-sponsor-name-change-2026-toyota-gazoo-racing-tgr/" },
+        { "label": "GPFans · Haas new name for 2026 (2026-01-01)", "url": "https://www.gpfans.com/en/f1-news/1072147/new-name-haas-f1-toyota-revamp-2026/" }
+      ]
+    }
+  ],
+  "audi": [
+    {
+      "tag": "最近一次",
+      "title": "雪邦两车无缘积分",
+      "text": "雪邦站博尔托莱托排位第十，正赛在2号弯与塞恩斯相撞被罚10秒，最终第18。霍肯伯格从第15位发车，最后一圈被林德布拉德超过，以第11名与积分擦肩。奥迪已连续两站没有得分。",
+      "year": 2026, "gp": "bahrain", "circuit": "sepang",
+      "sources": [{ "label": "Wikipedia · 2026 Bahrain Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix" }]
+    },
+    {
+      "tag": "故事线",
+      "title": "动力单元升级等到明年",
+      "text": "奥迪在巴塞罗那站用上首个动力单元升级，霍肯伯格说主要改善的是驾驶性。8月初麦克尼什表示，本赛季动力单元不会再有大改动，因为要改的主要是硬件，需要等到明年。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [{ "label": "Autosport · Audi won't upgrade F1 power unit again until 2027 (2026-08-01)", "url": "https://www.autosport.com/f1/news/audi-wont-upgrade-f1-power-unit-again-until-2027/10843491/" }]
+    },
+    {
+      "tag": "数字",
+      "title": "第八名的攻防",
+      "text": "奥迪16站积17分，排名车队榜第八，落后哈斯10分，领先威廉姆斯5分、阿斯顿·马丁10分。作为前身的索伯车队2025年积70分，排名第九。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Formula1.com · 2026 Team Standings", "url": "https://www.formula1.com/en/results/2026/team" },
+        { "label": "Formula1.com · 2025 Team Standings", "url": "https://www.formula1.com/en/results/2025/team" }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "三次第八是最好成绩",
+      "text": "奥迪首个赛季的最好正赛成绩是第八，共三次：博尔托莱托在英国站和比利时站，霍肯伯格在荷兰站。车队17分中，博尔托莱托贡献10分，霍肯伯格7分。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Wikipedia · 2026 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship" },
+        { "label": "Formula1.com · 2026 Driver Standings", "url": "https://www.formula1.com/en/results/2026/drivers" }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "索伯体系新加坡最佳第六",
+      "text": "奥迪本周首次以厂队身份出战新加坡。它的前身索伯体系在滨海湾从未进入过前五，最好成绩是2008年首届夜赛海德菲尔德为宝马索伯获得的第六。",
+      "year": 2008, "gp": "singapore", "circuit": "marina-bay",
+      "sources": [{ "label": "Wikipedia · 2008 Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/2008_Singapore_Grand_Prix" }]
+    }
+  ],
+  "williams": [
+    {
+      "tag": "最近一次",
+      "title": "雪邦阿尔本变速箱退赛",
+      "text": "雪邦站阿尔本因变速箱故障退赛，塞恩斯被博尔托莱托撞得打转，只获得第17。前一站巴库，塞恩斯从第14位追到第十拿到1分，这是威廉姆斯在摩纳哥站阿尔本第八之后，连续八站零分后的首分。",
+      "year": 2026, "gp": "bahrain", "circuit": "sepang",
+      "sources": [
+        { "label": "Wikipedia · 2026 Bahrain Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix" },
+        { "label": "Wikipedia · 2026 Azerbaijan Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Azerbaijan_Grand_Prix" },
+        { "label": "Wikipedia · 2026 Monaco Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Monaco_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "故事线",
+      "title": "缺席巴塞罗那测试",
+      "text": "2026年1月，威廉姆斯宣布因FW48项目延误，放弃参加巴塞罗那的闭门测试，改为进行虚拟测试，直接备战巴林季前测试。报道称延误源于新车早期未能顺利通过FIA碰撞测试。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [{ "label": "PlanetF1 · Williams confirms Barcelona test absence (2026-01-23)", "url": "https://www.planetf1.com/news/williams-issues-statement-confirming-barcelona-test-absence" }]
+    },
+    {
+      "tag": "数字",
+      "title": "从第五跌到第九",
+      "text": "威廉姆斯2025年以137分获得车队榜第五，场均约5.7分；2026年16站只有12分，场均0.75分，排名第九，落后奥迪5分，只领先阿斯顿·马丁5分。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Formula1.com · 2025 Team Standings", "url": "https://www.formula1.com/en/results/2025/team" },
+        { "label": "Formula1.com · 2026 Team Standings", "url": "https://www.formula1.com/en/results/2026/team" }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "最近一次登台在卡塔尔",
+      "text": "威廉姆斯最近一次登台是2025年11月30日的卡塔尔站，塞恩斯从第七位发车获得第三，成为2015年以来首位单赛季多次登台的威廉姆斯车手。车队最近一个杆位则要追溯到2014年奥地利站的马萨。",
+      "year": 2025, "gp": "qatar", "circuit": "lusail",
+      "sources": [
+        { "label": "Wikipedia · 2025 Qatar Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Qatar_Grand_Prix" },
+        { "label": "Wikipedia · 2014 Austrian Grand Prix", "url": "https://en.wikipedia.org/wiki/2014_Austrian_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "新加坡只登台过一次",
+      "text": "威廉姆斯在新加坡16次参赛从未赢过，唯一一次登台是2008年罗斯伯格获得第二。去年两车都因技术违规被取消排位成绩，塞恩斯从第18位发车追到第十。",
+      "year": 2025, "gp": "singapore", "circuit": "marina-bay",
+      "sources": [
+        { "label": "Wikipedia · 2008 Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/2008_Singapore_Grand_Prix" },
+        { "label": "Wikipedia · 2025 Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Singapore_Grand_Prix" }
+      ]
+    }
+  ],
+  "aston-martin": [
+    {
+      "tag": "最近一次",
+      "title": "雪邦取得赛季最佳",
+      "text": "雪邦站两辆阿斯顿·马丁本赛季首次同时进入Q2。阿隆索从第12位发车获得第八，拿到4分，斯特罗尔第12，都是两人本赛季最好成绩。前一站巴库，两车分别被罚退30位和20位，又都因水压问题退赛。",
+      "year": 2026, "gp": "bahrain", "circuit": "sepang",
+      "sources": [
+        { "label": "Wikipedia · 2026 Bahrain Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix" },
+        { "label": "Wikipedia · 2026 Azerbaijan Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Azerbaijan_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "故事线",
+      "title": "揭幕战只剩两块电池",
+      "text": "本田动力单元的剧烈振动拖累了阿斯顿·马丁的季前准备。墨尔本揭幕战前车队只剩装在车上的两块电池，本田没有备件；阿隆索错过首次练习赛，斯特罗尔只跑了三圈慢圈。纽维说振动问题耗尽了各方面的精力。",
+      "year": 2026, "gp": "australia", "circuit": "melbourne",
+      "sources": [{ "label": "The Race · Aston Martin down to last two batteries (2026-03-06)", "url": "https://www.the-race.com/formula-1/aston-martin-down-to-last-two-batteries-amid-new-honda-problem" }]
+    },
+    {
+      "tag": "数字",
+      "title": "32次出赛17次未完赛",
+      "text": "阿斯顿·马丁本赛季32次出赛有17次没能完赛，是各队最多；两车同时完赛只有四站：迈阿密、英国、匈牙利和雪邦。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Wikipedia · 2026 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship" },
+        { "label": "Wikipedia · 2026 Azerbaijan Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Azerbaijan_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "数字",
+      "title": "7分全部来自阿隆索",
+      "text": "阿斯顿·马丁的7分全部由阿隆索取得，斯特罗尔至今0分，与凯迪拉克两位车手是车手榜上仅有的三名零分车手。车队的首分直到第六站摩纳哥才出现。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Formula1.com · 2026 Driver Standings", "url": "https://www.formula1.com/en/results/2026/drivers" },
+        { "label": "Wikipedia · 2026 Monaco Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Monaco_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "最近一次",
+      "title": "最近一次登台在巴西",
+      "text": "阿斯顿·马丁最近一次登上领奖台是2023年11月5日的圣保罗大奖赛，阿隆索在最后一圈超过佩雷兹，以0.053秒优势获得第三。此后车队已连续66场大奖赛无缘领奖台，第20站将重返英特拉格斯。",
+      "year": 2023, "gp": "sao-paulo", "circuit": "interlagos",
+      "sources": [{ "label": "Wikipedia · 2023 São Paulo Grand Prix", "url": "https://en.wikipedia.org/wiki/2023_S%C3%A3o_Paulo_Grand_Prix" }]
+    }
+  ],
+  "cadillac": [
+    {
+      "tag": "最近一次",
+      "title": "雪邦博塔斯第7圈打转",
+      "text": "雪邦站博塔斯第7圈打转退赛，佩雷兹在第一圈和第二圈结束后两次进站，最终第19。前一站巴库佩雷兹第14，博塔斯虽在第49圈撞车，但完成了90%以上赛程，仍被列为第16。",
+      "year": 2026, "gp": "bahrain", "circuit": "sepang",
+      "sources": [
+        { "label": "Wikipedia · 2026 Bahrain Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix" },
+        { "label": "Wikipedia · 2026 Azerbaijan Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Azerbaijan_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "故事线",
+      "title": "赛季中途更换领队",
+      "text": "8月12日，凯迪拉克宣布由曾在雷诺任职的布德科夫斯基接替洛登出任领队，从荷兰站起生效。首席执行官托里斯说这是他本人的决定，车队则称这是从组建阶段转向追求赛道表现的计划内过渡。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [{ "label": "The Race · Cadillac makes abrupt F1 team principal change (2026-08-12)", "url": "https://the-race.com/formula-1/cadillac-abrupt-f1-team-principal-change-lowdon-out-budkowski-in/" }]
+    },
+    {
+      "tag": "冷知识",
+      "title": "首个积分得而复失",
+      "text": "摩纳哥站佩雷兹冲线时排在第十，本可为凯迪拉克拿到F1首分，但他因重新起步时的站位违规被加罚10秒，降到第15。这1分最终落到阿隆索手里，也成了阿斯顿·马丁的赛季首分。",
+      "year": 2026, "gp": "monaco", "circuit": "monaco",
+      "sources": [{ "label": "Wikipedia · 2026 Monaco Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Monaco_Grand_Prix" }]
+    },
+    {
+      "tag": "数字",
+      "title": "12次退赛，刹车成心病",
+      "text": "凯迪拉克是唯一还没得分的车队，最好成绩是中国站博塔斯的第13。32次出赛有12次未完赛，刹车屡出问题：奥地利站两车在前四圈内因刹车过热退赛，匈牙利站博塔斯的左前刹车冒烟起火。",
+      "year": 2026, "gp": null, "circuit": null,
+      "sources": [
+        { "label": "Wikipedia · 2026 Chinese Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Chinese_Grand_Prix" },
+        { "label": "Wikipedia · 2026 Austrian Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Austrian_Grand_Prix" },
+        { "label": "Wikipedia · 2026 Hungarian Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Hungarian_Grand_Prix" }
+      ]
+    },
+    {
+      "tag": "纪录",
+      "title": "阵中有新加坡冠军",
+      "text": "凯迪拉克两位车手都在新加坡登过台：佩雷兹2022年为红牛赢得新加坡站，那场比赛因雷暴推迟一个多小时开始；博塔斯2017年为梅赛德斯获得第三。",
+      "year": 2022, "gp": "singapore", "circuit": "marina-bay",
+      "sources": [
+        { "label": "Wikipedia · 2022 Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/2022_Singapore_Grand_Prix" },
+        { "label": "Wikipedia · 2017 Singapore Grand Prix", "url": "https://en.wikipedia.org/wiki/2017_Singapore_Grand_Prix" }
+      ]
+    }
+  ]
+}

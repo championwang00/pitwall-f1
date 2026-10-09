@@ -1,0 +1,246 @@
+/* Official F1 faces (proxied from formula1.com, local demo only — see README). Weights follow formula1.com's
+   own fonts.css: Bold is the 500 cut, so 500–800 all map to it; Black is 900. */
+@font-face { font-family: "Formula1"; src: url("/f1fonts/Formula1-Regular.woff2") format("woff2"); font-weight: 100 400; font-display: swap; }
+@font-face { font-family: "Formula1"; src: url("/f1fonts/Formula1-Bold.woff2") format("woff2"); font-weight: 500 800; font-display: swap; }
+@font-face { font-family: "Formula1"; src: url("/f1fonts/Formula1-Black.woff2") format("woff2"); font-weight: 900; font-display: swap; }
+@font-face { font-family: "Formula1"; src: url("/f1fonts/Formula1-Italic.woff2") format("woff2"); font-weight: 100 900; font-style: italic; font-display: swap; }
+@font-face { font-family: "Formula1 Wide"; src: url("/f1fonts/Formula1-Wide.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "Formula1 Digits"; src: url("/f1fonts/Formula1-Year.woff2") format("woff2"); font-weight: 100 900; font-display: swap; }
+@font-face { font-family: "KH Interference F1"; src: url("/f1fonts/KHInterferenceF1-Regular.woff2") format("woff2"); font-weight: 100 500; font-display: swap; }
+@font-face { font-family: "KH Interference F1"; src: url("/f1fonts/KHInterferenceF1-Bold.woff2") format("woff2"); font-weight: 600 900; font-display: swap; }
+
+:root {
+  --f1-red: #e10600;
+  --hot-red: #e91711;
+  --carbon: #15151e;
+  --carbon-2: #1f1f27;
+  --carbon-3: #303037;
+  --ink: #15151e;
+  --paper: #f7f4f1;
+  --paper-2: #edebe9;
+  --mute: #606066;
+  --mute-2: #aaaaaa;
+  --line: #e0dedc;
+  --purple: #a020f0;
+  --green: #1a8930;
+  --yellow: #ffd800;
+
+  --font-display: "Formula1", "Titillium Web", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", system-ui, sans-serif;
+  --font-wide: "Formula1 Wide", "Formula1", "Titillium Web", "PingFang SC", sans-serif;
+  --font-digits: "Formula1", "Titillium Web", system-ui, sans-serif;
+  --font-tech: "KH Interference F1", "Formula1", "Titillium Web", ui-monospace, sans-serif;
+  --font-year: "Formula1 Digits", "Formula1", "Titillium Web", sans-serif;
+  --font-data: "Formula1", "Titillium Web", "Noto Sans SC", "PingFang SC", system-ui, sans-serif;
+  --font-body: "Titillium Web", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", system-ui, sans-serif;
+  --font-cn: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--font-body); color: var(--ink); background: var(--paper); -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; padding: 0; }
+h1, h2, h3, h4, p { margin: 0; }
+:focus-visible { outline: 2px solid var(--f1-red); outline-offset: 2px; }
+.tnum { font-variant-numeric: tabular-nums; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+
+/* ───────────── Site design system ───────────── */
+:root {
+  --font-cn: "Noto Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  --gutter: 48px;
+  --maxw: none; /* content spans the full width with gutters on every page (alignment rule) */
+  --r: 10px;
+  --res-p1: #15151e; --res-p1-ink: #fff;
+  --res-pod: #606066; --res-pod-ink: #fff;
+  --res-pts: #e0dedc; --res-pts-ink: #15151e;
+  --res-out: #f3f3f4; --res-out-ink: #8a8a92;
+  --res-dnf: transparent; --res-dnf-ink: #8a8a92;
+}
+@media (max-width: 760px) { :root { --gutter: 16px; } }
+
+body { font-family: var(--font-cn); }
+.wrap { max-width: none; margin: 0; padding: 0 var(--gutter); } /* one edge for everything: content, header, cards (user: align left/right starts) */
+.band { padding: 80px 0; }
+.band-dark { background: var(--carbon); color: #fff; }
+.band-ink { background: #0e0e14; color: #fff; }
+.band-paper { background: var(--paper); }
+.band-white { background: var(--paper); }
+.band-paper + .band-white, .band-white + .band-paper, .band-white + .band-white, .band-paper + .band-paper { border-top: 1px solid var(--line); }
+.lat { font-family: var(--font-display); }
+.wide { font-family: var(--font-wide); text-transform: uppercase; letter-spacing: .01em; }
+.num { font-family: var(--font-display); font-weight: 500; font-variant-numeric: tabular-nums; }
+/* kicker = formula1.com's "ROUND 12" label (body-2-xs-bold, uppercase, text-3 grey). English where simple. */
+.kicker { font-family: "Titillium Web", var(--font-cn); font-size: 12px; line-height: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0; color: var(--mute); }
+.band-dark .kicker, .band-ink .kicker, .on-color .kicker { color: inherit; opacity: .72; }
+.mute { color: var(--mute); }
+.cn-h1 { font-family: var(--font-cn); font-weight: 900; font-size: clamp(32px, 4vw, 52px); letter-spacing: -.01em; line-height: 1.1; }
+/* Section heads: formula1.com display face (Formula1 Black, 32/38 = display-2xl-black); CJK falls through to Noto. */
+.cn-h2 { font-family: var(--font-display); font-weight: 900; font-size: clamp(24px, 2.4vw, 32px); letter-spacing: 0; line-height: 1.19; }
+.cn-h3 { font-family: var(--font-display); font-weight: 500; font-size: 20px; line-height: 24px; }
+.sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; margin-bottom: 28px; flex-wrap: wrap; }
+.sec-head .sub { font-size: 13px; color: var(--mute); }
+.band-dark .sec-head .sub, .band-ink .sec-head .sub { color: #9a9aa6; }
+.link-arrow { font-size: 14px; font-weight: 700; display: inline-flex; gap: 6px; align-items: center; }
+.link-arrow::after { content: ""; width: 16px; height: 16px; background: currentColor; -webkit-mask: var(--i-chevron-right) center / contain no-repeat; mask: var(--i-chevron-right) center / contain no-repeat; transition: transform .2s var(--ease-out); }
+.link-arrow:hover::after { transform: translateX(3px); }
+/* Solid team-colour surfaces (big cards, winner blocks): white text, or ink on light colours (.on-light).
+   Re-points the shared tokens so Person / mute text / faces read on the colour without per-component overrides. */
+.on-color { background: var(--c, var(--team, #3a3a44)); color: #fff; --mute: color-mix(in srgb, currentColor 80%, transparent); --line: color-mix(in srgb, currentColor 24%, transparent); --paper-2: color-mix(in srgb, currentColor 16%, transparent); --f1-red: currentColor; }
+.on-color.on-light { color: var(--ink); }
+.on-color a:hover b, .on-color a.ilink:hover { text-decoration: underline; text-underline-offset: 4px; }
+/* whole-card click target: a stretched sibling <a class="card-link"> (never a wrapper, so inner links stay un-nested);
+   content that holds its own links sits above it in .over-link and passes clicks through except on those links */
+.card-link { position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
+.over-link { position: relative; z-index: 2; pointer-events: none; }
+.over-link a, .over-link button, .over-link summary { pointer-events: auto; }
+/* small solid team swatch next to a team name in tables / lists (replaces the old left hairline) */
+.team-sq { display: inline-block; width: 10px; height: 10px; border-radius: 3px; background: var(--team, #606066); flex: none; margin-right: 8px; vertical-align: 0; }
+
+/* Tables — formula1.com results table: uppercase grey 14/16 semibold heads with no rule, 16/24 semibold rows on a
+   #E0DEDC hairline, numbers in the F1 display face. Row hover = .row-hover / .rowlink tint. */
+.tbl { width: 100%; border-collapse: collapse; font-size: 15px; color: #1c1c25; }
+.tbl th { text-align: left; font-family: "Titillium Web", var(--font-cn); font-weight: 600; font-size: 14px; line-height: 16px; text-transform: uppercase; color: var(--mute); padding: 16px 12px 16px 4px; white-space: nowrap; }
+.tbl td { padding: 14px 12px 14px 4px; border-bottom: 1px solid var(--line); vertical-align: middle; font-weight: 600; line-height: 24px; }
+.tbl td.num, .tbl td.r, .tbl td.c { font-family: var(--font-display); font-weight: 700; }
+.tbl tr.rowlink { cursor: pointer; }
+.tbl tr.rowlink:hover td { background: rgba(21,21,30,.03); }
+.tbl .r { text-align: right; }
+.tbl .c { text-align: center; }
+.band-dark .tbl, .band-ink .tbl { color: #fff; }
+.band-dark .tbl th, .band-ink .tbl th { color: #8a8a94; }
+.band-dark .tbl td, .band-ink .tbl td { border-color: #303037; }
+
+/* Pills / tabs */
+.seg { display: inline-flex; gap: 2px; background: var(--paper-2); border-radius: 999px; padding: 3px; }
+.seg button, .seg a { font-size: 13px; font-weight: 700; padding: 7px 16px; border-radius: 999px; color: var(--mute); transition: background .2s, color .2s; white-space: nowrap; }
+.seg .on { background: var(--carbon); color: #fff; }
+.band-dark .seg, .band-ink .seg { background: #1f1f27; }
+.band-dark .seg .on, .band-ink .seg .on { background: #fff; color: var(--carbon); }
+.chip { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; padding: 4px 10px; border-radius: 999px; background: var(--paper-2); color: var(--ink); white-space: nowrap; }
+.chip.dark { background: #26262f; color: #fff; }
+.btn { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; padding: 11px 20px; border-radius: 999px; transition: transform .15s, background .2s; white-space: nowrap; }
+.btn:active { transform: scale(.98); }
+.btn-red { background: var(--f1-red); color: #fff; }
+.btn-red:hover { background: #c70500; }
+.btn-line { box-shadow: inset 0 0 0 1px currentColor; }
+.btn-ink { background: var(--carbon); color: #fff; }
+
+/* Result cells (shared by every matrix) */
+.res { display: grid; place-items: center; height: 26px; min-width: 26px; border-radius: 3px; font-family: var(--font-data); font-weight: 700; font-size: 13px; font-variant-numeric: tabular-nums; position: relative; }
+.res.p1 { background: var(--res-p1); color: var(--res-p1-ink); }
+.res.pod { background: var(--res-pod); color: var(--res-pod-ink); }
+.res.pts { background: var(--res-pts); color: var(--res-pts-ink); }
+.res.out { background: var(--res-out); color: var(--res-out-ink); }
+.res.dnf { background: var(--res-dnf); color: #b3b1ae; font-weight: 500; }
+.res.none { background: transparent; }
+.res.pole::before { content: ""; position: absolute; top: 2px; right: 2px; width: 6px; height: 6px; border-radius: 50%; background: var(--f1-red); box-shadow: 0 0 0 1px #fff; }
+.res.fl::after { content: ""; position: absolute; bottom: 2px; left: 50%; width: 12px; margin-left: -6px; height: 3px; border-radius: 1px; background: var(--purple); }
+.dark-res { --res-p1: #fff; --res-p1-ink: #15151e; --res-pod: #8a8a94; --res-pod-ink: #0e0e14; --res-pts: #303037; --res-pts-ink: #fff; --res-out: #1b1b22; --res-out-ink: #6a6a74; --res-dnf-ink: #8a8a94; }
+
+/* Page hero (object pages) */
+.obj-hero { position: relative; background: var(--carbon); color: #fff; overflow: hidden; }
+.obj-hero .wrap { position: relative; z-index: 1; }
+
+/* View transition defaults */
+::view-transition-group(.morph) { animation-duration: 520ms; animation-timing-function: var(--ease-out); }
+::view-transition-image-pair(.morph) { animation-name: vt-blur; }
+@keyframes vt-blur { 40% { filter: blur(4px); } }
+::view-transition-old(.nav-forward) { animation: 180ms var(--ease-in-out) both vt-out-left; }
+::view-transition-new(.nav-forward) { animation: 360ms var(--ease-out) both vt-in-right; }
+::view-transition-old(.nav-back) { animation: 180ms var(--ease-in-out) both vt-out-right; }
+::view-transition-new(.nav-back) { animation: 360ms var(--ease-out) both vt-in-left; }
+::view-transition-old(.page) { animation: 160ms ease-out both vt-fade-out; }
+::view-transition-new(.page) { animation: 380ms var(--ease-out) both vt-rise; }
+@keyframes vt-out-left { to { opacity: 0; transform: translateX(-48px); } }
+@keyframes vt-in-right { from { opacity: 0; transform: translateX(64px); } }
+@keyframes vt-out-right { to { opacity: 0; transform: translateX(48px); } }
+@keyframes vt-in-left { from { opacity: 0; transform: translateX(-64px); } }
+@keyframes vt-fade-out { to { opacity: 0; } }
+@keyframes vt-rise { from { opacity: 0; transform: translateY(18px); clip-path: inset(0 0 12% 0); } to { clip-path: inset(0 0 0 0); } }
+
+@keyframes rise-in { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.rise { animation: rise-in .6s var(--ease-out) both; }
+.rise-2 { animation: rise-in .6s .08s var(--ease-out) both; }
+.rise-3 { animation: rise-in .6s .16s var(--ease-out) both; }
+
+@keyframes sweep { 0% { transform: translateX(-100%); } 100% { transform: translateX(340%); } }
+
+/* The home hero carries the countdown; drop the duplicate ticker there */
+body:has([data-page="home"]) header > div:nth-child(2) { display: none; }
+
+/* Hero lockup: Latin display line over a heavy CJK line (used by every object hero) */
+.cx { font-family: var(--font-cn); font-weight: 900; font-size: clamp(26px, 3.1vw, 46px); line-height: 1.1; letter-spacing: .04em; margin-top: 14px; }
+.meta-line { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; font-size: 14px; color: rgba(255,255,255,.72); margin-top: 12px; }
+.meta-line img { width: 22px; height: 15px; object-fit: cover; border-radius: 2px; }
+html, body { overflow-x: clip; }
+
+/* inline entity link inside prose / tables: quiet underline, hover card on hover */
+.ilink { color: inherit; text-decoration: underline; text-decoration-color: color-mix(in srgb, currentColor 28%, transparent); text-decoration-thickness: 1px; text-underline-offset: 3px; transition: color .15s, text-decoration-color .15s; }
+.ilink:hover { text-decoration-color: currentColor; text-decoration-thickness: 1.5px; }
+
+:root { --head-h: 64px; }
+:root:has([data-ticker]) { --head-h: 125px; }
+
+/* One hover language for every card (user: whole card clickable; never recolour text on hover — red cards went invisible).
+   Lift + shadow, and a slight darken for solid-colour cards. Text keeps its colour. */
+.lift { transition: transform .25s var(--ease-out), box-shadow .25s var(--ease-out), filter .25s; cursor: pointer; }
+.lift:hover { transform: translateY(-3px); box-shadow: 0 14px 30px -10px rgba(21,21,30,.35); filter: brightness(.96) saturate(1.05); }
+.lift:active { transform: translateY(-1px); }
+
+/* Hover by REGION (user rule: consistent inside a region, each region its own best form):
+   prose links (.ilink) = underline · person/team chips = soft pill · cards = .lift · rail/menus = row highlight ·
+   table rows = .row-hover tint. Never recolour text on hover. */
+.row-hover tr, .row-hover > li { transition: background .12s; }
+.row-hover tr:hover, .row-hover > li:hover { background: color-mix(in srgb, currentColor 5%, transparent); }
+
+/* solid identity-colour surfaces expose their colour to medal laurels (see laurel.module.css) */
+.on-color { --surface: var(--c); }
+[data-surface] { --surface: var(--c, var(--team)); }
+
+/* ───────────── formula1.com type scale (names follow its typography module) ─────────────
+   display = Formula1 (its "bold" cut covers 500–800; we write 700 so CJK fallbacks in the same run get a matching bold), tech = KH Interference F1 (timing / dates), wide = Formula1 Wide.
+   Use for English labels, numbers, codes; CJK in the same element falls through to the CJK stack. */
+.d-4xl { font: 900 48px/52px var(--font-display); }
+.d-3xl { font: 700 40px/44px var(--font-display); }
+.d-2xl { font: 900 32px/38px var(--font-display); }
+.d-xl { font: 700 24px/28px var(--font-display); }
+.d-l { font: 700 20px/24px var(--font-display); }
+.d-l-r { font: 400 20px/24px var(--font-display); }
+.d-m { font: 700 16px/22px var(--font-display); }
+.d-s { font: 700 12px/16px var(--font-display); }
+.d-s-r { font: 400 12px/16px var(--font-display); }
+.t-xl { font: 700 24px/24px var(--font-tech); }
+.t-l { font: 700 20px/20px var(--font-tech); }
+.t-m { font: 700 16px/16px var(--font-tech); }
+.t-m-r { font: 400 16px/16px var(--font-tech); }
+.t-s { font: 400 14px/14px var(--font-tech); }
+.t-xs { font: 400 12px/12px var(--font-tech); }
+.t-2xs { font: 400 11px/11px var(--font-tech); }
+.b-2xs { font: 700 12px/16px "Titillium Web", var(--font-cn); }
+.b-xs { font: 600 14px/16px "Titillium Web", var(--font-cn); }
+.upper { text-transform: uppercase; }
+:root {
+  --i-chevron-right: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m13.2 12.123-4.6-4.6 1.4-1.4 6 6-6 6-1.4-1.4z'/%3E%3C/svg%3E");
+  --i-chevron-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='m18 9.4-6 6-6-6L7.4 8l4.6 4.6L16.6 8z'/%3E%3C/svg%3E");
+}
+/* every country flag is formula1.com's round flag (/api/flag) — crop bitmap fallbacks to the same circle */
+img[src^="/api/flag/"] { height: auto !important; aspect-ratio: 1; border-radius: 50% !important; object-fit: cover; flex: none; }
+
+/* formula1.com driver avatar: round, official portrait on the team colour (`style={{ background }}`) */
+.avatar { display: block; flex: none; border-radius: 50%; object-fit: cover; object-position: center top; background: var(--paper-2); }
+
+/* Identity surfaces (driver / team cards): F1's dark "accessible" variant of the team colour as the base,
+   the official DRS halftone mask in the bright colour on top (proxied original asset, /f1asset). */
+.f1-surface { position: relative; isolation: isolate; overflow: hidden; --acc: color-mix(in srgb, var(--c, #3a3a44) 46%, #000); background: var(--acc); color: #fff; }
+.f1-surface::before { content: ""; position: absolute; z-index: -1; top: 50%; right: 0; height: 316px; aspect-ratio: 2.02845; transform: translateY(-50%); background: var(--c, #3a3a44); -webkit-mask: url(/f1asset/drs-g.webp) center / contain no-repeat; mask: url(/f1asset/drs-g.webp) center / contain no-repeat; }
+.f1-surface::after { content: ""; position: absolute; z-index: -1; inset: 0 auto 0 0; width: min(479px, 72%); background: linear-gradient(269.74deg, color-mix(in srgb, var(--acc) 0%, transparent) 20.12%, var(--acc) 89.81%); }
+.f1-surface.team-drs { background: var(--c, #3a3a44); }
+.f1-surface.team-drs::before { top: auto; bottom: -2px; height: 150px; aspect-ratio: 6.09816; transform: none; opacity: .7; -webkit-mask-image: url(/f1asset/drs-d.webp); mask-image: url(/f1asset/drs-d.webp); }
+.f1-surface.team-drs::after { width: max(494px, 100%); background: linear-gradient(315deg, color-mix(in srgb, var(--acc) 0%, transparent) 0%, var(--acc) 100%); }

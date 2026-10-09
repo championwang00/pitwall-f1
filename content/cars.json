@@ -1,0 +1,796 @@
+{
+  "mclaren-mcl40": {
+    "nameEn": "McLaren MCL40",
+    "year": 2026,
+    "constructor": "mclaren",
+    "designers": ["Rob Marshall"],
+    "summary": "迈凯伦按2026年新规打造的首款赛车，由首席设计师罗布·马歇尔主导，开发工作始于2024年。车队以2025年车手与车队双冠的身份进入新规则周期，继续搭载梅赛德斯M17动力单元，车手为诺里斯和皮亚斯特里。马歇尔表示，车身缩小后，散热器与电气元件的布置是设计中的主要难点。中国站两车均因动力单元问题未能起步，首胜直到第11站匈牙利站才到来。",
+    "tech": [
+      { "label": "发动机", "value": "Mercedes-AMG F1 M17 E Performance" },
+      { "label": "排量/布局", "value": "1.6升 V6 涡轮增压混合动力，直喷，转速上限15000转" },
+      { "label": "变速箱", "value": "迈凯伦8速无缝序列式半自动（另有1个倒挡），拨片换挡" },
+      { "label": "底盘结构", "value": "碳纤维复合材料" },
+      { "label": "轮胎", "value": "倍耐力" }
+    ],
+    "innovations": [
+      "围绕更小的2026年车身重新布置散热器与电气盒",
+      "车身涂装改用贴膜而非喷漆"
+    ],
+    "record": "截至2026赛季第16站：2胜（诺里斯，匈牙利站、荷兰站）、3个杆位、7次登上领奖台；车队积分榜第3（316分）",
+    "sources": [
+      { "label": "Wikipedia · McLaren MCL40", "url": "https://en.wikipedia.org/wiki/McLaren_MCL40" },
+      { "label": "Formula1.com · 2026 power unit regulations explained", "url": "https://www.formula1.com/en/latest/article/2026-regulations-explained-all-you-need-to-know-about-f1s-new-power-units.14jfv7a36905uDJDdNyfQd" }
+    ]
+  },
+  "mercedes-f1-w17": {
+    "nameEn": "Mercedes-AMG F1 W17 E Performance",
+    "year": 2026,
+    "constructor": "mercedes",
+    "designers": ["James Allison", "Simone Resta", "John Owen", "Jarrod Murphy", "Hywel Thomas"],
+    "summary": "梅赛德斯按2026年规则设计的首款赛车，由技术总监詹姆斯·艾利森主持开发，比前代W16更轻、更小、更窄。揭幕战澳大利亚站拉塞尔与安东内利包揽前排并取得1-2，安东内利随后在中国站以19岁6个月成为史上最年轻的杆位得主，并拿下个人首个分站冠军。赛季初，梅赛德斯与红牛动力部门被指利用压缩比仅在常温下检测的规则漏洞，引发争议。",
+    "tech": [
+      { "label": "发动机", "value": "Mercedes-AMG F1 M17 E Performance" },
+      { "label": "排量/布局", "value": "1.6升 V6 涡轮增压混合动力" },
+      { "label": "变速箱", "value": "8速液压驱动序列式半自动（另有1个倒挡）" },
+      { "label": "悬挂", "value": "前后均为碳纤维叉臂，推杆驱动弹簧与减震器" },
+      { "label": "车重", "value": "772公斤（含车手、冷却液和机油）" },
+      { "label": "尺寸", "value": "长5505毫米，宽1900毫米，轴距3400毫米" },
+      { "label": "轮胎", "value": "倍耐力" }
+    ],
+    "innovations": [
+      "梅赛德斯首款2026规则赛车，整体比W16更轻、更小、更窄",
+      "前后悬挂均采用推杆布局",
+      "日本站使用专门的前翼"
+    ],
+    "record": "截至2026赛季第16站：11胜（安东内利8胜、拉塞尔3胜）、11个杆位、21次登上领奖台、3次包揽前二；车队积分榜第1（556分）",
+    "sources": [
+      { "label": "Wikipedia · Mercedes W17", "url": "https://en.wikipedia.org/wiki/Mercedes_W17" },
+      { "label": "Formula1.com · 2026 power unit regulations explained", "url": "https://www.formula1.com/en/latest/article/2026-regulations-explained-all-you-need-to-know-about-f1s-new-power-units.14jfv7a36905uDJDdNyfQd" }
+    ]
+  },
+  "ferrari-sf-26": {
+    "nameEn": "Ferrari SF-26",
+    "year": 2026,
+    "constructor": "ferrari",
+    "designers": ["Loïc Serra", "Enrico Gualtieri", "Fabio Montecchi", "Corrado Onorato", "Diego Tondi"],
+    "summary": "法拉利2026赛季赛车，内部代号678项目，由底盘技术总监洛伊克·塞拉和动力单元技术总监恩里科·瓜尔蒂耶里领衔设计，2026年1月23日在菲奥拉诺赛道试车时首次亮相。最受关注的是被称为“Macarena”的旋转尾翼：主动空气动力启用时，尾翼襟翼会翻转到倒置位置。该尾翼季前测试即已出现，迈阿密站首次正式参赛。汉密尔顿在巴塞罗那站拿下加盟法拉利后的首场分站胜利。",
+    "tech": [
+      { "label": "发动机", "value": "Ferrari 067/6" },
+      { "label": "排量/布局", "value": "1.6升 V6 涡轮增压混合动力，直喷，转速上限15000转" },
+      { "label": "变速箱", "value": "8速（另有1个倒挡）" },
+      { "label": "底盘结构", "value": "碳纤维复合材料，生存舱与蜂窝结构" },
+      { "label": "悬挂", "value": "前后双叉臂推杆" },
+      { "label": "车重", "value": "770公斤（含车手、冷却液和机油）" },
+      { "label": "轮胎", "value": "倍耐力" }
+    ],
+    "innovations": [
+      "主动空气动力启用时尾翼襟翼翻转至倒置位置",
+      "车尾设置“排气翼”，用于引导废气并延伸扩散器气流",
+      "迈阿密站一次带来11项升级"
+    ],
+    "record": "截至2026赛季第16站：2胜（汉密尔顿巴塞罗那站、勒克莱尔英国站）、0个杆位、10次登上领奖台；车队积分榜第2（405分）",
+    "sources": [
+      { "label": "Wikipedia · Ferrari SF-26", "url": "https://en.wikipedia.org/wiki/Ferrari_SF-26" },
+      { "label": "Formula1.com · Inside Ferrari and Red Bull's 'Macarena' rear wings", "url": "https://www.formula1.com/en/latest/article/tech-weekly-inside-ferrari-and-red-bulls-innovative-macarena-rear-wings-used-in-miami.Dyov5zQ7LegtifcVpjcIv" }
+    ]
+  },
+  "red-bull-rb22": {
+    "nameEn": "Red Bull RB22",
+    "year": 2026,
+    "constructor": "red-bull",
+    "designers": ["Pierre Waché", "Ben Hodgkinson", "Craig Skinner", "Enrico Balbo", "Paul Monaghan"],
+    "summary": "红牛车队2026赛季赛车，也是红牛首款搭载与福特合作研发的自家动力单元的赛车，动力单元型号为DM01。2026年1月15日，RB22与姊妹车队的VCARB 03一起在底特律发布，技术团队由皮埃尔·瓦谢领导。车手为维斯塔潘和从小红牛升上来的哈贾尔，荷兰站哈贾尔因手腕受伤由劳森替补。红牛也开发了自己的旋转尾翼，在迈阿密站首次公开使用。",
+    "tech": [
+      { "label": "发动机", "value": "Red Bull Ford DM01" },
+      { "label": "排量/布局", "value": "1.6升 V6 涡轮增压混合动力，直喷，转速上限15000转" },
+      { "label": "悬挂", "value": "前多连杆拉杆，后双叉臂推杆，前后均有防倾杆" },
+      { "label": "车重", "value": "770公斤（含车手、冷却液和机油）" },
+      { "label": "轮胎", "value": "倍耐力" }
+    ],
+    "innovations": [
+      "红牛首款搭载与福特合作自研动力单元的赛车",
+      "迈阿密站启用旋转式尾翼",
+      "前拉杆、后推杆的悬挂组合"
+    ],
+    "record": "截至2026赛季第16站：1胜（维斯塔潘，第16站巴林大奖赛，比赛在马来西亚雪邦举行）、1个杆位、10次登上领奖台；车队积分榜第4（298分）",
+    "sources": [
+      { "label": "Wikipedia · Red Bull Racing RB22", "url": "https://en.wikipedia.org/wiki/Red_Bull_Racing_RB22" },
+      { "label": "Formula1.com · Red Bull unveil 2026 livery in Detroit", "url": "https://www.formula1.com/en/latest/article/first-look-red-bull-unveil-striking-new-livery-for-2026-f1-season.61MNwo6zMoxUtOAjS8JH0S" },
+      { "label": "Formula1.com · Inside Ferrari and Red Bull's 'Macarena' rear wings", "url": "https://www.formula1.com/en/latest/article/tech-weekly-inside-ferrari-and-red-bulls-innovative-macarena-rear-wings-used-in-miami.Dyov5zQ7LegtifcVpjcIv" }
+    ]
+  },
+  "aston-martin-amr26": {
+    "nameEn": "Aston Martin AMR26",
+    "year": 2026,
+    "constructor": "aston-martin",
+    "designers": ["Adrian Newey", "Enrico Cardile", "Bob Bell", "Duncan Elliott", "Eric Blandin"],
+    "summary": "阿斯顿·马丁2026赛季赛车，是阿德里安·纽维与恩里科·卡尔迪莱为该队设计的第一款赛车。它搭载本田RA626H，这是本田2026年以完整引擎制造商身份回归后的首款动力单元，也是阿斯顿·马丁首次使用本田动力。季前测试里程少于其他车队，本田承认引擎振动损伤了电池系统，阿隆索在揭幕战因引擎问题退赛，车队直到摩纳哥站才拿到首个积分。",
+    "tech": [
+      { "label": "发动机", "value": "Honda RA626H" },
+      { "label": "排量/布局", "value": "1.6升 V6 涡轮增压混合动力，后中置" },
+      { "label": "变速箱", "value": "阿斯顿·马丁自制8速无缝序列式半自动（另有1个倒挡）" },
+      { "label": "底盘结构", "value": "碳纤维复合材料，生存舱与蜂窝结构" },
+      { "label": "车重", "value": "770公斤（含车手，不含燃油）" },
+      { "label": "轮胎", "value": "倍耐力，Fondmetal 18英寸锻造镁合金轮毂" }
+    ],
+    "innovations": [
+      "纽维与卡尔迪莱合作设计的首款阿斯顿·马丁",
+      "首次使用本田厂商动力单元",
+      "变速箱由车队自行制造"
+    ],
+    "record": "截至2026赛季第16站：最好成绩第8名（阿隆索，第16站），首个积分来自摩纳哥站；车队积分榜第10（7分）",
+    "sources": [
+      { "label": "Wikipedia · Aston Martin AMR26", "url": "https://en.wikipedia.org/wiki/Aston_Martin_AMR26" },
+      { "label": "Formula1.com · 2026 power unit regulations explained", "url": "https://www.formula1.com/en/latest/article/2026-regulations-explained-all-you-need-to-know-about-f1s-new-power-units.14jfv7a36905uDJDdNyfQd" }
+    ]
+  },
+  "williams-fw48": {
+    "nameEn": "Williams FW48",
+    "year": 2026,
+    "constructor": "williams",
+    "designers": ["Pat Fry", "Matt Harman", "Angelos Tsiaparas", "Juan Molina"],
+    "summary": "威廉姆斯2026赛季赛车，由首席技术官帕特·弗莱领衔开发，继续使用梅赛德斯动力单元和变速箱。生产延误使车队错过1月底的巴塞罗那闭门测试，只能先用模拟器配合梅赛德斯动力单元完成约500圈准备，2月4日才在银石首次试车。外界一度传出车重超标，车队随后公布772.4公斤的数据。阿塞拜疆站起，车队换用B规格的FW48B。",
+    "tech": [
+      { "label": "发动机", "value": "Mercedes-AMG F1 M17" },
+      { "label": "排量/布局", "value": "1.6升 V6 涡轮增压混合动力" },
+      { "label": "变速箱", "value": "梅赛德斯-AMG 8速无缝序列式半自动（另有1个倒挡），电液换挡" },
+      { "label": "底盘结构", "value": "碳纤维单体壳，碳纤维环氧树脂与蜂窝层压" },
+      { "label": "悬挂", "value": "前双叉臂拉杆，后多连杆推杆" },
+      { "label": "车重", "value": "772.4公斤（含车手，不含燃油）" },
+      { "label": "轮胎", "value": "倍耐力" }
+    ],
+    "innovations": [
+      "前拉杆、后多连杆推杆的悬挂组合",
+      "阿塞拜疆站推出B规格FW48B"
+    ],
+    "record": "截至2026赛季第16站：最好成绩第8名；车队积分榜第9（12分）",
+    "sources": [
+      { "label": "Wikipedia · Williams FW48", "url": "https://en.wikipedia.org/wiki/Williams_FW48" }
+    ]
+  },
+  "audi-r26": {
+    "nameEn": "Audi R26",
+    "year": 2026,
+    "constructor": "audi",
+    "designers": ["Mattia Binotto", "James Key", "Stefan Dreyer", "Eric Gandelin", "Stefano Sangiorgi"],
+    "summary": "奥迪以车队身份参加F1的第一款赛车，2026年1月20日在柏林正式发布，此前已于2025年12月19日在瑞士欣维尔首次点火。它搭载奥迪自研的AFR 26 Hybrid动力单元，电机、电池和8速变速箱也由奥迪自行开发。项目由马蒂亚·比诺托负责，詹姆斯·基任技术总监，车手为博托莱托和霍肯伯格，两人都是在该车队的第二个赛季。",
+    "tech": [
+      { "label": "发动机", "value": "Audi AFR 26 Hybrid" },
+      { "label": "排量/布局", "value": "1.6升 V6 涡轮增压直喷，奥迪动能回收电机与锂离子电池" },
+      { "label": "变速箱", "value": "奥迪自制8速钛合金序列式半自动（另有1个倒挡），带限滑差速器" },
+      { "label": "底盘结构", "value": "碳纤维复合材料，生存舱与蜂窝结构" },
+      { "label": "悬挂", "value": "前后双叉臂推杆" },
+      { "label": "车重", "value": "770公斤" },
+      { "label": "轮胎", "value": "倍耐力" }
+    ],
+    "innovations": [
+      "动力单元、电机、电池与变速箱均为奥迪自研",
+      "使用BP Ultimate可持续燃料"
+    ],
+    "record": "截至2026赛季第16站：最好成绩第8名（博托莱托、霍肯伯格）；车队积分榜第8（17分）",
+    "sources": [
+      { "label": "Wikipedia · Audi R26", "url": "https://en.wikipedia.org/wiki/Audi_R26" },
+      { "label": "Formula1.com · 2026 power unit regulations explained", "url": "https://www.formula1.com/en/latest/article/2026-regulations-explained-all-you-need-to-know-about-f1s-new-power-units.14jfv7a36905uDJDdNyfQd" }
+    ]
+  },
+  "alpine-a526": {
+    "nameEn": "Alpine A526",
+    "year": 2026,
+    "constructor": "alpine",
+    "designers": ["David Sanchez", "Joe Burnell", "Ciaron Pilbeam"],
+    "summary": "阿尔派2026赛季赛车，最大的变化是改用梅赛德斯动力单元，这是恩斯通车队自2015年的路特斯E23 Hybrid之后，首次使用梅赛德斯动力。新车于2026年1月21日在银石完成试车，技术团队由执行技术总监戴维·桑切斯领衔，车手为加斯利和科拉皮托。科拉皮托在加拿大站取得第6名，加斯利在意大利站为车队拿下本季杆位。",
+    "tech": [
+      { "label": "发动机", "value": "Mercedes-AMG F1 M17" },
+      { "label": "排量/布局", "value": "1.6升 V6 涡轮增压混合动力，后中置" },
+      { "label": "变速箱", "value": "8速（另有1个倒挡）" },
+      { "label": "底盘结构", "value": "碳纤维复合材料，生存舱与蜂窝结构" },
+      { "label": "悬挂", "value": "前双叉臂拉杆，后双叉臂推杆" },
+      { "label": "车重", "value": "770公斤（含车手、冷却液和机油）" },
+      { "label": "轮胎", "value": "倍耐力" }
+    ],
+    "innovations": [
+      "恩斯通车队自2015年后首次改用梅赛德斯动力",
+      "前拉杆、后推杆的悬挂组合"
+    ],
+    "record": "截至2026赛季第16站：1个杆位（加斯利，意大利站），最好成绩第6名；车队积分榜第6（68分）",
+    "sources": [
+      { "label": "Wikipedia · Alpine A526", "url": "https://en.wikipedia.org/wiki/Alpine_A526" },
+      { "label": "Formula1.com · 2026 power unit regulations explained", "url": "https://www.formula1.com/en/latest/article/2026-regulations-explained-all-you-need-to-know-about-f1s-new-power-units.14jfv7a36905uDJDdNyfQd" }
+    ]
+  },
+  "cadillac-ca01": {
+    "nameEn": "Cadillac MAC-26",
+    "year": 2026,
+    "constructor": "cadillac",
+    "designers": ["Nick Chester", "John McQuilliam", "Rob Stubbings", "Pat Symonds"],
+    "summary": "凯迪拉克进入F1后的第一款赛车，使2026年围场扩大到11支车队。车型名MAC-26于2026年2月27日公布，意为“Mario Andretti Cadillac 26”，向1978年世界冠军马里奥·安德雷蒂致敬（F1DB中记作CA01）。赛车使用法拉利067/6客户动力单元，通用汽车自研动力单元计划在2029赛季启用。车手为佩雷兹和博塔斯，首发涂装左右不对称。",
+    "tech": [
+      { "label": "发动机", "value": "Ferrari 067/6（客户动力单元）" },
+      { "label": "排量/布局", "value": "1.6升 V6 涡轮增压混合动力，直喷，转速上限15000转" },
+      { "label": "变速箱", "value": "8速（另有1个倒挡）" },
+      { "label": "轮胎", "value": "倍耐力" }
+    ],
+    "innovations": [
+      "首发涂装是1999年BAR 01之后首个左右不对称的F1涂装",
+      "1月先后在银石和巴塞罗那完成闭门试车"
+    ],
+    "record": "截至2026赛季第16站：尚未得分，最好成绩第13名；车队积分榜第11",
+    "sources": [
+      { "label": "Wikipedia · Cadillac MAC-26", "url": "https://en.wikipedia.org/wiki/Cadillac_MAC-26" },
+      { "label": "The Race · Cadillac names first F1 car after Andretti", "url": "https://www.the-race.com/formula-1/cadillac-names-first-f1-car-mac-26-after-mario-andretti" },
+      { "label": "Formula1.com · 2026 power unit regulations explained", "url": "https://www.formula1.com/en/latest/article/2026-regulations-explained-all-you-need-to-know-about-f1s-new-power-units.14jfv7a36905uDJDdNyfQd" }
+    ]
+  },
+  "haas-vf-26": {
+    "nameEn": "Haas VF-26",
+    "year": 2026,
+    "constructor": "haas",
+    "designers": ["Andrea De Zordo", "Damien Brayshaw", "Tom Coupland", "Davide Paganelli"],
+    "summary": "哈斯2026赛季赛车，2026年1月19日以线上方式发布，继续使用法拉利动力单元和变速箱，技术总监为安德烈亚·德佐尔多。与丰田Gazoo Racing的合作扩大为冠名合作，赛车采用白红涂装，车队名称也加入TGR。车手为奥康和贝尔曼，两人都在该队进入第二个赛季，贝尔曼在中国站取得第5名，是车队本季最好成绩。",
+    "tech": [
+      { "label": "发动机", "value": "Ferrari 067/6" },
+      { "label": "排量/布局", "value": "1.6升 V6 涡轮增压混合动力，直喷，转速上限15000转" },
+      { "label": "变速箱", "value": "法拉利8速（另有1个倒挡）" },
+      { "label": "底盘结构", "value": "碳纤维与蜂窝复合结构" },
+      { "label": "车重", "value": "770公斤（含车手，不含燃油）" },
+      { "label": "尺寸", "value": "宽1900毫米，轴距3400毫米" },
+      { "label": "轮胎", "value": "倍耐力" }
+    ],
+    "innovations": [
+      "与丰田Gazoo Racing的合作扩大为冠名",
+      "六活塞卡钳配碳纤维刹车盘"
+    ],
+    "record": "截至2026赛季第16站：最好成绩第5名（贝尔曼，中国站）；车队积分榜第7（27分）",
+    "sources": [
+      { "label": "Wikipedia · Haas VF-26", "url": "https://en.wikipedia.org/wiki/Haas_VF-26" },
+      { "label": "Formula1.com · 2026 power unit regulations explained", "url": "https://www.formula1.com/en/latest/article/2026-regulations-explained-all-you-need-to-know-about-f1s-new-power-units.14jfv7a36905uDJDdNyfQd" }
+    ]
+  },
+  "racing-bulls-vcarb-03": {
+    "nameEn": "Racing Bulls VCARB 03",
+    "year": 2026,
+    "constructor": "racing-bulls",
+    "designers": ["Tim Goss", "Guillaume Cattelani", "Andrea Landi", "Paolo Marabini", "Jody Egginton"],
+    "summary": "小红牛车队2026赛季赛车，2026年1月与红牛RB22一同在底特律发布，同样搭载红牛福特DM01动力单元。这是法恩扎车队自2017年后首款不使用本田动力的赛车，也是2004年米纳尔迪PS04B之后首辆使用福特品牌引擎的F1赛车。设计基础由前技术总监乔迪·埃金顿奠定，后续由首席技术官蒂姆·戈斯领导。车手为劳森和新秀林德布拉德。",
+    "tech": [
+      { "label": "发动机", "value": "Red Bull Ford DM01" },
+      { "label": "排量/布局", "value": "1.6升 V6 涡轮增压混合动力" },
+      { "label": "变速箱", "value": "红牛技术8速（另有1个倒挡），液压碳纤维多片离合器" },
+      { "label": "底盘结构", "value": "碳纤维单体壳" },
+      { "label": "车重", "value": "770公斤（含车手，不含燃油）" },
+      { "label": "轮胎", "value": "倍耐力" }
+    ],
+    "innovations": [
+      "涂装增加裸露碳纤维面积以减重",
+      "布雷博6活塞铝锂合金卡钳"
+    ],
+    "record": "截至2026赛季第16站：最好成绩第5名（劳森，摩纳哥站）；车队积分榜第5（90分）",
+    "sources": [
+      { "label": "Wikipedia · Racing Bulls VCARB 03", "url": "https://en.wikipedia.org/wiki/Racing_Bulls_VCARB_03" }
+    ]
+  },
+  "alfa-romeo-158": {
+    "nameEn": "Alfa Romeo 158 Alfetta",
+    "year": 1950,
+    "constructor": "alfa-romeo",
+    "designers": ["Gioacchino Colombo"],
+    "summary": "阿尔法·罗密欧158于1937至1938年间设计制造，工程由焦阿基诺·科隆博负责，1938年8月首次参赛。它沿用战前1.5升增压小排量赛车的规格，凭机械增压直列八缸引擎在二战后继续保持竞争力。1950年首届F1世界锦标赛，158在参加的所有分站中全部获胜，法里纳成为首位世界冠军；1951年发展型159延续了这一优势。",
+    "tech": [
+      { "label": "发动机", "value": "阿尔法·罗密欧1.5升直列八缸，罗茨式机械增压" },
+      { "label": "排量/布局", "value": "1479毫升，前置" },
+      { "label": "底盘结构", "value": "钢管车架" },
+      { "label": "车重", "value": "约700公斤（158/50干重）" },
+      { "label": "轮胎", "value": "倍耐力" },
+      { "label": "燃料", "value": "壳牌甲醇混合燃料（98.5%甲醇）" }
+    ],
+    "innovations": [
+      "战前设计的机械增压直列八缸引擎，此后不断换装更大的增压器",
+      "使用以甲醇为主的燃料，油耗远高于同期对手"
+    ],
+    "record": "1950年：参加6站全部获胜，6个杆位，4次包揽前二；法里纳夺得首届车手冠军（车队冠军1958年才设立）",
+    "sources": [
+      { "label": "Wikipedia · Alfa Romeo 158/159 Alfetta", "url": "https://en.wikipedia.org/wiki/Alfa_Romeo_158/159_Alfetta" },
+      { "label": "Wikipedia · History of Formula One", "url": "https://en.wikipedia.org/wiki/History_of_Formula_One" }
+    ]
+  },
+  "mercedes-w196": {
+    "nameEn": "Mercedes-Benz W196",
+    "year": 1954,
+    "constructor": "mercedes",
+    "designers": ["Rudolf Uhlenhaut"],
+    "summary": "梅赛德斯-奔驰按1954年起的2.5升规则打造的赛车，1954年法国站首秀即由范吉奥和克林包揽前二。它采用直列八缸引擎、强制开闭（desmodromic）气门机构和源自航空引擎的燃油直喷，车身有封闭车轮的流线型版本和开轮版本两种。范吉奥驾驶它赢得1954、1955年车手冠军；1955赛季结束后，梅赛德斯退出赛车运动长达三十年。",
+    "tech": [
+      { "label": "发动机", "value": "梅赛德斯M196 2.5升直列八缸自然吸气" },
+      { "label": "排量/布局", "value": "2497毫升，前置" },
+      { "label": "功率", "value": "约257马力（1954年法国站）" },
+      { "label": "变速箱", "value": "5速手动变速驱动桥" },
+      { "label": "底盘结构", "value": "铝管空间车架，Elektron镁合金车身" },
+      { "label": "车重", "value": "约700公斤（干重）" },
+      { "label": "轮胎", "value": "大陆" }
+    ],
+    "innovations": [
+      "强制开闭（desmodromic）气门机构",
+      "源自DB 601航空引擎的燃油直喷",
+      "高速赛道使用封闭车轮的流线型“Monza”车身"
+    ],
+    "record": "1954–1955年：参加12站赢得9场；范吉奥连夺1954、1955年车手冠军",
+    "sources": [
+      { "label": "Wikipedia · Mercedes-Benz W196", "url": "https://en.wikipedia.org/wiki/Mercedes-Benz_W196" }
+    ]
+  },
+  "lotus-25": {
+    "nameEn": "Lotus 25",
+    "year": 1963,
+    "constructor": "lotus",
+    "designers": ["Colin Chapman"],
+    "summary": "路特斯25由科林·查普曼设计，1962年荷兰站首秀。它用铝制单体壳取代传统钢管车架，被视为F1第一辆全受力单体壳赛车，底盘重量只有路特斯24的一半；车手几乎平躺驾驶，赛车因此得名“浴缸”。克拉克驾驶它在1963年赢得7站并夺得车手冠军，路特斯同年获车队冠军。该车在1962至1965年间共赢得14站。",
+    "tech": [
+      { "label": "发动机", "value": "考文垂·克莱麦克斯FWMV 1.5升V8自然吸气" },
+      { "label": "排量/布局", "value": "1496毫升，90度V8，中置" },
+      { "label": "变速箱", "value": "ZF 5DS10 5速手动" },
+      { "label": "底盘结构", "value": "铝制单体壳" },
+      { "label": "轮胎", "value": "邓禄普" }
+    ],
+    "innovations": [
+      "F1第一辆全受力单体壳底盘",
+      "车手大角度后仰的驾驶姿势"
+    ],
+    "record": "1963年：10站赢得7场（均为克拉克）、7个杆位；克拉克夺得车手冠军，路特斯获车队冠军",
+    "sources": [
+      { "label": "Wikipedia · Lotus 25", "url": "https://en.wikipedia.org/wiki/Lotus_25" },
+      { "label": "Wikipedia · History of Formula One", "url": "https://en.wikipedia.org/wiki/History_of_Formula_One" }
+    ]
+  },
+  "lotus-49": {
+    "nameEn": "Lotus 49",
+    "year": 1967,
+    "constructor": "lotus",
+    "designers": ["Colin Chapman", "Maurice Philippe"],
+    "summary": "路特斯49是首款搭载福特考斯沃斯DFV V8引擎的赛车，引擎直接作为承力结构，一端连接单体壳，另一端连接后悬挂和变速箱。克拉克在1967年荷兰站首秀即获胜。1968年的49B在摩纳哥站首次使用直接安装在轮毂上的翼片，同年西班牙站起换上金叶烟草的红白金赞助涂装。格雷厄姆·希尔凭49系列获得1968年车手冠军，该系列共赢得12站。",
+    "tech": [
+      { "label": "发动机", "value": "福特考斯沃斯DFV 3.0升V8自然吸气" },
+      { "label": "排量/布局", "value": "2998毫升，中置，引擎为承力结构" },
+      { "label": "功率", "value": "约420–440马力（9000–10000转）" },
+      { "label": "变速箱", "value": "Hewland-Lotus 5速手动" },
+      { "label": "底盘结构", "value": "铝制单体壳" },
+      { "label": "车重", "value": "501公斤" },
+      { "label": "轮胎", "value": "凡士通、邓禄普" }
+    ],
+    "innovations": [
+      "DFV引擎作为承力结构件",
+      "49B首次使用直接装在轮毂上的翼片（后因断裂事故被禁）",
+      "1968年换上金叶烟草赞助涂装"
+    ],
+    "record": "1967年：第3站荷兰站首秀，赢得4站（均为克拉克）、9个杆位；49系列1967至1970年共赢得12站",
+    "sources": [
+      { "label": "Wikipedia · Lotus 49", "url": "https://en.wikipedia.org/wiki/Lotus_49" },
+      { "label": "Wikipedia · History of Formula One", "url": "https://en.wikipedia.org/wiki/History_of_Formula_One" }
+    ]
+  },
+  "lotus-72d": {
+    "nameEn": "Lotus 72D",
+    "year": 1972,
+    "constructor": "lotus",
+    "designers": ["Colin Chapman", "Maurice Philippe", "Tony Rudd"],
+    "summary": "路特斯72于1970年西班牙站首秀，楔形车身、两侧散热器和内置刹车让它与同期赛车明显不同。72D是托尼·拉德在1971年改进后悬挂和尾翼的版本，1972年换上黑金色JPS涂装，菲蒂帕尔迪驾驶它赢得5站，成为当时最年轻的世界冠军。72系列一直参赛到1975年，共赢得20站，并为路特斯拿下1970、1972、1973年三个车队冠军。",
+    "tech": [
+      { "label": "发动机", "value": "福特考斯沃斯DFV 3.0升V8自然吸气" },
+      { "label": "排量/布局", "value": "2993毫升，中置纵置" },
+      { "label": "功率", "value": "约440–465马力" },
+      { "label": "变速箱", "value": "Hewland FG400 5速手动" },
+      { "label": "底盘结构", "value": "铝制单体壳" },
+      { "label": "轮胎", "value": "凡士通（1970–1972）" }
+    ],
+    "innovations": [
+      "楔形车身",
+      "散热器移至车身两侧",
+      "内置式刹车"
+    ],
+    "record": "1972年：12站赢得5场（均为菲蒂帕尔迪）、3个杆位；菲蒂帕尔迪夺得车手冠军，路特斯获车队冠军",
+    "sources": [
+      { "label": "Wikipedia · Lotus 72", "url": "https://en.wikipedia.org/wiki/Lotus_72" }
+    ]
+  },
+  "tyrrell-p34": {
+    "nameEn": "Tyrrell P34",
+    "year": 1976,
+    "constructor": "tyrrell",
+    "designers": ["Derek Gardner"],
+    "summary": "泰瑞尔P34是F1最著名的六轮赛车，由德里克·加德纳设计。四个10英寸小前轮可以完全藏在前翼后方，以减少阻力并为后翼提供更干净的气流，再用四个前轮弥补小轮胎接地面积不足。1976年瑞典站谢克特和德帕耶包揽前二，这是它唯一的胜利。1977年成绩下滑，车队归咎于车重增加，也有人认为固特异没有充分开发小尺寸前胎，泰瑞尔在1978年放弃了这一设计。",
+    "tech": [
+      { "label": "发动机", "value": "福特考斯沃斯DFV 3.0升V8自然吸气" },
+      { "label": "排量/布局", "value": "2993毫升，90度V8，中置纵置" },
+      { "label": "变速箱", "value": "Hewland FG400，1976年5速、1977年6速" },
+      { "label": "底盘结构", "value": "铝制单体壳" },
+      { "label": "车重", "value": "595公斤（1976年）" },
+      { "label": "轮胎", "value": "固特异，前轮为特制10英寸" }
+    ],
+    "innovations": [
+      "四个小前轮藏于前翼后方以减少阻力",
+      "以四个前轮增加抓地与制动面积"
+    ],
+    "record": "1976年：第4站西班牙站首秀，瑞典站获杆位并包揽前二，这是该车唯一的胜利；1976–1977年共出赛30场，14次登上领奖台",
+    "sources": [
+      { "label": "Wikipedia · Tyrrell P34", "url": "https://en.wikipedia.org/wiki/Tyrrell_P34" }
+    ]
+  },
+  "ferrari-312t": {
+    "nameEn": "Ferrari 312T",
+    "year": 1975,
+    "constructor": "ferrari",
+    "designers": ["Mauro Forghieri"],
+    "summary": "法拉利312T由毛罗·福尔吉耶里为1975赛季设计，车名中的“T”代表意大利语Trasversale，即横置变速箱。底盘采用钢管空间车架外覆铝板，搭配3升水平对置12缸引擎。1975年南非站首秀后，劳达在赛季中段五站赢下四场并夺得车手冠军，法拉利获得1964年之后的首个车队冠军。312T系列（T至T5）共赢得27站，拿下4个车队冠军和3个车手冠军。",
+    "tech": [
+      { "label": "发动机", "value": "法拉利Tipo 015 3.0升水平对置12缸" },
+      { "label": "排量/布局", "value": "2992毫升，中置" },
+      { "label": "变速箱", "value": "横置变速箱" },
+      { "label": "底盘结构", "value": "钢管空间车架外覆铝板" },
+      { "label": "车重", "value": "575公斤（干重）" },
+      { "label": "轮胎", "value": "固特异" }
+    ],
+    "innovations": [
+      "横置变速箱，车名中的“T”即由此而来",
+      "钢管空间车架外覆铝板的底盘结构"
+    ],
+    "record": "1975年：第3站南非站首秀，此后赢得6站（劳达5胜、雷加佐尼1胜）、9个杆位，劳达夺得车手冠军，法拉利获车队冠军；1976年前三站再胜3场",
+    "sources": [
+      { "label": "Wikipedia · Ferrari 312T", "url": "https://en.wikipedia.org/wiki/Ferrari_312T" }
+    ]
+  },
+  "lotus-79": {
+    "nameEn": "Lotus 79",
+    "year": 1978,
+    "constructor": "lotus",
+    "designers": ["Colin Chapman", "Tony Rudd", "Peter Wright", "Tony Southgate", "Martin Ogilvie", "Geoff Aldridge"],
+    "summary": "路特斯79被认为是第一辆充分利用地面效应的F1赛车：车底的文丘里通道把低压区均匀分布在整个车底，产生大量下压力。因黑金色JPS涂装，它被称为“黑美人”。1978年比利时站首秀，安德雷蒂以超过1秒的优势拿下杆位并获胜，当季该车赢得6站，安德雷蒂夺得车手冠军。1979年对手纷纷推出地面效应赛车，路特斯79未再获胜。",
+    "tech": [
+      { "label": "发动机", "value": "福特考斯沃斯DFV 3.0升V8自然吸气" },
+      { "label": "排量/布局", "value": "2993毫升，中置纵置" },
+      { "label": "功率", "value": "约475–495马力（11000转）" },
+      { "label": "变速箱", "value": "Hewland FG400 5速手动" },
+      { "label": "底盘结构", "value": "铝蜂窝单体壳，针对地面效应负载加强" },
+      { "label": "轮胎", "value": "固特异" }
+    ],
+    "innovations": [
+      "车底文丘里通道，把低压区均匀分布在车底",
+      "单体壳针对地面效应负载加强"
+    ],
+    "record": "1978年：第6站比利时站首秀，赢得6站、10个杆位；安德雷蒂夺得车手冠军，路特斯获车队冠军；1979年未获胜",
+    "sources": [
+      { "label": "Wikipedia · Lotus 79", "url": "https://en.wikipedia.org/wiki/Lotus_79" },
+      { "label": "Wikipedia · Ground effect (cars)", "url": "https://en.wikipedia.org/wiki/Ground_effect_(cars)" }
+    ]
+  },
+  "brabham-bt46b": {
+    "nameEn": "Brabham BT46B",
+    "year": 1978,
+    "constructor": "brabham",
+    "designers": ["Gordon Murray", "David Cox"],
+    "summary": "布拉汉姆BT46B是著名的“风扇车”。车尾的大型风扇通过离合器与引擎相连，车队称其用于散热，实际上它同时把空气从车底抽出，配合封闭车身与地面间隙的滑动侧裙产生吸附力，引擎转速越高吸力越强。它只在1978年瑞典站出赛一次，劳达获胜。因其他车队强烈反对，埃克莱斯通撤下该车，随后风扇车被禁止，但这场胜利保留有效。",
+    "tech": [
+      { "label": "发动机", "value": "阿尔法·罗密欧115-12 3.0升水平对置12缸" },
+      { "label": "排量/布局", "value": "2995毫升，中置" },
+      { "label": "功率", "value": "约520马力（12000转）" },
+      { "label": "变速箱", "value": "6速（布拉汉姆设计壳体，Hewland齿轮）" },
+      { "label": "底盘结构", "value": "铝合金单体壳，梯形截面" },
+      { "label": "轮胎", "value": "固特异" }
+    ],
+    "innovations": [
+      "车尾风扇把空气从车底抽出以产生下压力",
+      "滑动侧裙封闭车身与地面之间的间隙"
+    ],
+    "record": "仅出赛1场：1978年瑞典站劳达获胜，队友沃森退赛",
+    "sources": [
+      { "label": "Wikipedia · Brabham BT46", "url": "https://en.wikipedia.org/wiki/Brabham_BT46" },
+      { "label": "Wikipedia · Ground effect (cars)", "url": "https://en.wikipedia.org/wiki/Ground_effect_(cars)" }
+    ]
+  },
+  "williams-fw07": {
+    "nameEn": "Williams FW07",
+    "year": 1979,
+    "constructor": "williams",
+    "designers": ["Patrick Head", "Frank Dernie", "Neil Oatley"],
+    "summary": "威廉姆斯FW07由帕特里克·海德、弗兰克·德尼和尼尔·奥特利设计，以路特斯79为蓝本，并与它共用伦敦帝国理工学院的风洞。1979年西班牙站首秀，雷加佐尼在英国站为威廉姆斯赢得车队历史首胜，琼斯随后连胜三站。改进型FW07B帮助琼斯和威廉姆斯赢得1980年车手与车队双冠，FW07系列共赢得15站。",
+    "tech": [
+      { "label": "发动机", "value": "福特考斯沃斯DFV 3.0升V8自然吸气" },
+      { "label": "排量/布局", "value": "2993毫升，中置" },
+      { "label": "变速箱", "value": "Hewland FGB 5速手动（1979年）" },
+      { "label": "底盘结构", "value": "铝制单体壳" },
+      { "label": "车重", "value": "579公斤（1979年）" },
+      { "label": "轮胎", "value": "固特异" }
+    ],
+    "innovations": [
+      "参照路特斯79的地面效应车底设计",
+      "在帝国理工学院风洞完成空气动力研发"
+    ],
+    "record": "1979年：第5站西班牙站首秀，赢得5站（雷加佐尼1胜、琼斯4胜）、3个杆位，威廉姆斯获车队亚军",
+    "sources": [
+      { "label": "Wikipedia · Williams FW07", "url": "https://en.wikipedia.org/wiki/Williams_FW07" }
+    ]
+  },
+  "mclaren-mp4-4": {
+    "nameEn": "McLaren MP4/4",
+    "year": 1988,
+    "constructor": "mclaren",
+    "designers": ["Steve Nichols", "Gordon Murray"],
+    "summary": "迈凯伦MP4/4是涡轮引擎被禁前最后一个赛季的冠军车，由史蒂夫·尼科尔斯担任首席设计、戈登·默里任技术总监，车身明显低于前代MP4/3，车手采用后仰坐姿。本田RA168E涡轮引擎专为1988年增压值从4.0巴降至2.5巴、每场限油150升的规则开发。塞纳与普罗斯特驾驶它在16站中赢下15场，只有意大利站由法拉利的伯格获胜。",
+    "tech": [
+      { "label": "发动机", "value": "本田RA168E 1.5升80度V6涡轮增压" },
+      { "label": "排量/布局", "value": "1494毫升，增压上限2.5巴，中置纵置" },
+      { "label": "变速箱", "value": "Weismann-McLaren 6速手动" },
+      { "label": "底盘结构", "value": "碳纤维蜂窝单体壳" },
+      { "label": "车重", "value": "540公斤" },
+      { "label": "轮胎", "value": "固特异" }
+    ],
+    "innovations": [
+      "低矮车身与后仰的驾驶姿势",
+      "本田引擎针对2.5巴增压上限与150升油量限制开发"
+    ],
+    "record": "1988年：16站赢得15场、15个杆位、10次包揽前二；塞纳夺得车手冠军，迈凯伦以199分获车队冠军",
+    "sources": [
+      { "label": "Wikipedia · McLaren MP4/4", "url": "https://en.wikipedia.org/wiki/McLaren_MP4/4" },
+      { "label": "Wikipedia · Formula One engines", "url": "https://en.wikipedia.org/wiki/Formula_One_engines" }
+    ]
+  },
+  "williams-fw14b": {
+    "nameEn": "Williams FW14B",
+    "year": 1992,
+    "constructor": "williams",
+    "designers": ["Adrian Newey", "Patrick Head"],
+    "summary": "威廉姆斯FW14B由阿德里安·纽维设计、帕特里克·海德任技术总监，是电子辅助时代的代表车型，集成了半自动变速箱、主动悬挂和牵引力控制，并短暂使用过防抱死刹车。动力来自雷诺3.5升V10。1992年曼塞尔以当时纪录的单季9胜夺得车手冠军，威廉姆斯赢得车队冠军；英国站曼塞尔的杆位成绩比队友帕特雷塞快了整整2秒。",
+    "tech": [
+      { "label": "发动机", "value": "雷诺RS3C/RS4 3.5升V10自然吸气" },
+      { "label": "排量/布局", "value": "3493毫升，67度V10" },
+      { "label": "功率", "value": "约700–750马力" },
+      { "label": "变速箱", "value": "威廉姆斯6速序列式半自动" },
+      { "label": "底盘结构", "value": "碳纤维与蜂窝复合材料" },
+      { "label": "轮胎", "value": "固特异" }
+    ],
+    "innovations": [
+      "主动悬挂（由弗兰克·德尼开发）",
+      "牵引力控制",
+      "半自动变速箱",
+      "短期使用防抱死刹车"
+    ],
+    "record": "1992年：16站赢得10场（曼塞尔9胜、帕特雷塞1胜）、15个杆位；曼塞尔夺得车手冠军，威廉姆斯获车队冠军",
+    "sources": [
+      { "label": "Wikipedia · Williams FW14", "url": "https://en.wikipedia.org/wiki/Williams_FW14" }
+    ]
+  },
+  "benetton-b194": {
+    "nameEn": "Benetton B194",
+    "year": 1994,
+    "constructor": "benetton",
+    "designers": ["Rory Byrne", "Ross Brawn", "Pat Symonds"],
+    "summary": "贝纳通B194由罗里·拜恩设计、罗斯·布朗任技术总监，在B192和B193基础上针对1994年禁用电子辅助的新规重新设计，车身轻巧，在弯道多的赛道尤其有竞争力。舒马赫在前7站赢下6场，之后在英国站和比利时站被取消成绩，赛季末在澳大利亚与希尔发生争议性碰撞后，以1分优势夺得个人首个车手冠军。国际汽联曾在车载电脑中发现起步控制程序，但无法证明其被使用。",
+    "tech": [
+      { "label": "发动机", "value": "福特EC Zetec-R 3.5升V8自然吸气" },
+      { "label": "排量/布局", "value": "3498毫升，75度V8，中置纵置" },
+      { "label": "功率", "value": "约730–740马力（14500转）" },
+      { "label": "变速箱", "value": "贝纳通横置6速序列式半自动" },
+      { "label": "底盘结构", "value": "碳纤维单体壳" },
+      { "label": "车重", "value": "515公斤" },
+      { "label": "轮胎", "value": "固特异" }
+    ],
+    "innovations": [
+      "针对禁用电子辅助的1994年新规重新设计",
+      "加拿大站起在尾翼下层加装下反角翼片"
+    ],
+    "record": "1994年：16站赢得8场（均为舒马赫）、6个杆位；舒马赫以1分优势夺得车手冠军，贝纳通获车队亚军",
+    "sources": [
+      { "label": "Wikipedia · Benetton B194", "url": "https://en.wikipedia.org/wiki/Benetton_B194" }
+    ]
+  },
+  "ferrari-f2002": {
+    "nameEn": "Ferrari F2002",
+    "year": 2002,
+    "constructor": "ferrari",
+    "designers": ["Rory Byrne", "Ross Brawn", "Paolo Martinelli", "Aldo Costa"],
+    "summary": "法拉利F2002由罗里·拜恩负责底盘概念设计、保罗·马丁内利负责引擎、罗斯·布朗任技术总监统筹。钛合金变速箱壳体和重心很低的Tipo 051 V10让它明显轻于F2001。该车在2002年巴西站首秀即获胜，当季参加的15站中只有摩纳哥未胜，舒马赫在第11站法国站就锁定车手冠军，法拉利的得分与其余十支车队总和相同。",
+    "tech": [
+      { "label": "发动机", "value": "法拉利Tipo 051 3.0升V10自然吸气" },
+      { "label": "功率", "value": "初期约835马力（17800转）" },
+      { "label": "变速箱", "value": "钛合金壳体，无离合直接换挡" },
+      { "label": "轮胎", "value": "普利司通（为该车专门开发）" }
+    ],
+    "innovations": [
+      "钛合金变速箱壳体，减重最多15%并降低重心",
+      "无需离合的直接换挡技术",
+      "普利司通为该车专门开发轮胎"
+    ],
+    "record": "2002年：第3站巴西站首秀，参加15站赢得14场（舒马赫10胜、巴里切罗4胜）；舒马赫在第11站法国站锁定车手冠军，法拉利以221分获车队冠军",
+    "sources": [
+      { "label": "Wikipedia · Ferrari F2002", "url": "https://en.wikipedia.org/wiki/Ferrari_F2002" }
+    ]
+  },
+  "ferrari-f2004": {
+    "nameEn": "Ferrari F2004",
+    "year": 2004,
+    "constructor": "ferrari",
+    "designers": ["Rory Byrne", "Ross Brawn", "Aldo Costa", "Paolo Martinelli"],
+    "summary": "法拉利F2004是F1历史上统治力最强的赛车之一。针对前代F2003-GA的轮胎磨损问题，它加大了尾翼、重新设计后悬挂，并采用更小、更靠近中线的潜望式排气；按当年规则，一台引擎需要撑满整个比赛周末。2004年它赢下18站中的15场，舒马赫取得13胜并夺得个人第7个车手冠军，法拉利连续第6年获车队冠军，它创下的多项赛道单圈纪录保持多年。",
+    "tech": [
+      { "label": "发动机", "value": "法拉利Tipo 053 3.0升90度V10自然吸气" },
+      { "label": "功率", "value": "正赛约865马力（18300转）" },
+      { "label": "变速箱", "value": "法拉利7速序列式半自动，拨片换挡" },
+      { "label": "底盘结构", "value": "碳纤维与蜂窝复合材料" },
+      { "label": "车重", "value": "605公斤" },
+      { "label": "轮胎", "value": "普利司通，BBS 13英寸轮毂" }
+    ],
+    "innovations": [
+      "更小、更靠近中线的潜望式排气",
+      "加大尾翼并重新设计后悬挂以降低轮胎磨损",
+      "引擎可撑满整个比赛周末"
+    ],
+    "record": "2004年：18站赢得15场（舒马赫13胜、巴里切罗2胜）、12个杆位；舒马赫夺得车手冠军，法拉利获车队冠军",
+    "sources": [
+      { "label": "Wikipedia · Ferrari F2004", "url": "https://en.wikipedia.org/wiki/Ferrari_F2004" }
+    ]
+  },
+  "renault-r25": {
+    "nameEn": "Renault R25",
+    "year": 2005,
+    "constructor": "renault",
+    "designers": ["Bob Bell", "James Allison", "Tim Densham", "Dino Toso", "Pat Symonds"],
+    "summary": "雷诺R25由鲍勃·贝尔、詹姆斯·艾利森、蒂姆·登沙姆和迪诺·托索设计，帕特·西蒙兹统筹，搭载72度夹角的RS25 V10引擎，赛季后段又在悬挂中加入调谐质量阻尼器。阿隆索驾驶它夺得车手冠军，雷诺同时获得车队冠军，结束了法拉利连续6年的车队冠军纪录。它也是1991年以来第一辆并非出自纽维或拜恩之手的车队冠军赛车。",
+    "tech": [
+      { "label": "发动机", "value": "雷诺RS25 3.0升72度V10自然吸气" },
+      { "label": "功率", "value": "约800–900马力（19000转）" },
+      { "label": "变速箱", "value": "雷诺6速序列式半自动" },
+      { "label": "底盘结构", "value": "碳纤维单体壳" },
+      { "label": "车重", "value": "605公斤（含车手、摄像机与配重）" },
+      { "label": "轮胎", "value": "米其林" }
+    ],
+    "innovations": [
+      "72度宽夹角V10引擎",
+      "2005年巴西站起使用调谐质量阻尼器，后被国际上诉法庭认定为可动空气动力装置而禁止"
+    ],
+    "record": "2005年：19站赢得8场（阿隆索7胜、费斯切拉1胜）、7个杆位；阿隆索夺得车手冠军，雷诺获车队冠军",
+    "sources": [
+      { "label": "Wikipedia · Renault R25", "url": "https://en.wikipedia.org/wiki/Renault_R25" },
+      { "label": "Wikipedia · Ferrari F2004", "url": "https://en.wikipedia.org/wiki/Ferrari_F2004" }
+    ]
+  },
+  "brawn-bgp-001": {
+    "nameEn": "Brawn BGP 001",
+    "year": 2009,
+    "constructor": "brawn",
+    "designers": ["Loïc Bigois"],
+    "summary": "布朗BGP 001源自本田车队在2008年赛季早期开始研发的新车。本田在2008年12月宣布退出F1后，罗斯·布朗买下车队，并为赛车改装梅赛德斯V8引擎。它的双层扩散器遭到多支车队抗议，最终被国际上诉法庭裁定合法。该车首秀即在澳大利亚包揽前二，巴顿凭6场胜利夺得车手冠军，布朗GP在唯一的参赛赛季拿下车队冠军。",
+    "tech": [
+      { "label": "发动机", "value": "梅赛德斯FO 108W 2.4升V8自然吸气" },
+      { "label": "功率", "value": "约750马力（转速上限18000转）" },
+      { "label": "变速箱", "value": "自制7速半自动（另有1个倒挡）" },
+      { "label": "底盘结构", "value": "碳纤维与蜂窝复合材料单体壳" },
+      { "label": "轮胎", "value": "普利司通" }
+    ],
+    "innovations": [
+      "双层扩散器",
+      "未装备KERS，以换取布局与重量上的优势",
+      "全季只制造了3台底盘"
+    ],
+    "record": "2009年：17站赢得8场（巴顿6胜、巴里切罗2胜）、5个杆位；巴顿夺得车手冠军，布朗GP获车队冠军",
+    "sources": [
+      { "label": "Wikipedia · Brawn BGP 001", "url": "https://en.wikipedia.org/wiki/Brawn_BGP_001" },
+      { "label": "Wikipedia · 2009 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2009_Formula_One_World_Championship" }
+    ]
+  },
+  "red-bull-rb9": {
+    "nameEn": "Red Bull RB9",
+    "year": 2013,
+    "constructor": "red-bull",
+    "designers": ["Adrian Newey", "Rob Marshall", "Peter Prodromou"],
+    "summary": "红牛RB9是RB8的演进版，纽维在发布会上称它是一辆“进化型”赛车，并认为当年最大的变化不是规则，而是倍耐力的新轮胎。它搭载雷诺RS27 V8引擎和KERS，引擎作为全受力结构件。维特尔驾驶它以9连胜结束赛季，追平舒马赫单季13胜的纪录，夺得个人第4个车手冠军。2013年是2.4升V8引擎的最后一个赛季，RB9也是这一时代最后的冠军车。",
+    "tech": [
+      { "label": "发动机", "value": "雷诺RS27-2013 2.4升90度V8自然吸气" },
+      { "label": "功率", "value": "约750马力（转速上限18000转）" },
+      { "label": "变速箱", "value": "7速纵置半自动，液压换挡" },
+      { "label": "底盘结构", "value": "复合材料单体壳，引擎为全受力结构" },
+      { "label": "轮胎", "value": "倍耐力" }
+    ],
+    "innovations": [
+      "在RB8基础上精修的演进设计",
+      "配备KERS动能回收系统"
+    ],
+    "record": "2013年：19站赢得13场（均为维特尔）、11个杆位；维特尔以9连胜收官并夺得车手冠军，红牛获车队冠军",
+    "sources": [
+      { "label": "Wikipedia · Red Bull RB9", "url": "https://en.wikipedia.org/wiki/Red_Bull_RB9" },
+      { "label": "Autosport · Newey says RB9 an evolutionary car", "url": "https://www.autosport.com/f1/news/105382/newey-rb9-an-evolutionary-car" },
+      { "label": "Wikipedia · 2013 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2013_Formula_One_World_Championship" }
+    ]
+  },
+  "mercedes-f1-w07": {
+    "nameEn": "Mercedes F1 W07 Hybrid",
+    "year": 2016,
+    "constructor": "mercedes",
+    "designers": ["Paddy Lowe", "Aldo Costa", "Geoff Willis", "John Owen", "Andy Cowell"],
+    "summary": "梅赛德斯F1 W07 Hybrid是V6混动时代早期梅赛德斯统治力的代表，由帕迪·洛维任技术总监。PU106C Hybrid动力单元配备MGU-K和MGU-H，据估计输出超过同期法拉利、雷诺和本田。2016年它在21站中赢得19场、拿下20个杆位，车队以765分创下单季积分纪录；罗斯伯格以5分优势击败汉密尔顿夺得冠军，随后宣布退役。",
+    "tech": [
+      { "label": "发动机", "value": "梅赛德斯PU106C Hybrid" },
+      { "label": "排量/布局", "value": "1.6升90度V6涡轮增压，MGU-K与MGU-H，转速上限15000转" },
+      { "label": "变速箱", "value": "与Xtrac合作开发的8速无缝换挡序列式半自动" },
+      { "label": "底盘结构", "value": "碳纤维与蜂窝复合材料" },
+      { "label": "车重", "value": "702公斤" },
+      { "label": "轮胎", "value": "倍耐力，13英寸锻造镁合金轮毂" }
+    ],
+    "innovations": [
+      "S形导流管（S-duct）",
+      "L形导流片",
+      "加拿大站起使用碗形尾翼"
+    ],
+    "record": "2016年：21站赢得19场、20个杆位、33次登上领奖台；罗斯伯格夺得车手冠军，梅赛德斯以765分获车队冠军",
+    "sources": [
+      { "label": "Wikipedia · Mercedes F1 W07 Hybrid", "url": "https://en.wikipedia.org/wiki/Mercedes_F1_W07_Hybrid" }
+    ]
+  },
+  "mercedes-f1-w11": {
+    "nameEn": "Mercedes-AMG F1 W11 EQ Performance",
+    "year": 2020,
+    "constructor": "mercedes",
+    "designers": ["James Allison", "John Owen", "Mike Elliott", "Hywel Thomas"],
+    "summary": "梅赛德斯W11由詹姆斯·艾利森领导设计，被视为史上最出色的赛车之一，创下多项赛道纪录。它最受关注的装置是双轴转向系统（DAS），车手可借此调整前轮束角，该装置在2021年被禁止。由于赛季因疫情推迟、加上反种族歧视运动的影响，赛车改用以黑色为主的涂装。2020年汉密尔顿驾驶它夺得个人第7个车手冠军，追平舒马赫的纪录。",
+    "tech": [
+      { "label": "发动机", "value": "Mercedes-AMG F1 M11 EQ Performance" },
+      { "label": "排量/布局", "value": "1.6升90度V6涡轮增压混合动力，转速上限15000转" },
+      { "label": "变速箱", "value": "与Xtrac合作的8速无缝换挡序列式半自动" },
+      { "label": "车重", "value": "746公斤" },
+      { "label": "轮胎", "value": "倍耐力" }
+    ],
+    "innovations": [
+      "双轴转向系统（DAS），可调整前轮束角，2021年起被禁",
+      "改用以黑色为主的涂装"
+    ],
+    "record": "2020年：17站赢得13场（汉密尔顿11胜、博塔斯2胜）、15个杆位；汉密尔顿夺得车手冠军，梅赛德斯连续第7年获车队冠军",
+    "sources": [
+      { "label": "Wikipedia · Mercedes-AMG F1 W11 EQ Performance", "url": "https://en.wikipedia.org/wiki/Mercedes-AMG_F1_W11_EQ_Performance" }
+    ]
+  },
+  "red-bull-rb19": {
+    "nameEn": "Red Bull RB19",
+    "year": 2023,
+    "constructor": "red-bull",
+    "designers": ["Adrian Newey", "Pierre Waché", "Enrico Balbo"],
+    "summary": "红牛RB19是地面效应规则第二年的冠军车，在已经很强的RB18基础上全面改进。它在22站中赢下21场，胜率95.45%，打破迈凯伦MP4/4自1988年保持的单季胜率纪录，并领跑了86.7%的比赛圈数。维斯塔潘驾驶它赢得19场分站赛，创下单季胜场纪录；唯一一场失利是新加坡站，由法拉利的塞恩斯获胜。",
+    "tech": [
+      { "label": "发动机", "value": "本田RBPTH001" },
+      { "label": "排量/布局", "value": "1.6升 V6 涡轮增压混合动力，直喷，转速上限15000转" },
+      { "label": "悬挂", "value": "前多连杆拉杆，后双叉臂推杆" },
+      { "label": "车重", "value": "798公斤" },
+      { "label": "轮胎", "value": "倍耐力" }
+    ],
+    "innovations": [
+      "前拉杆、后推杆的悬挂组合",
+      "阿塞拜疆站前的升级集中修改侧箱进气口形状，以改善散热气流"
+    ],
+    "record": "2023年：22站赢得21场（维斯塔潘19胜、佩雷兹2胜）、14个杆位；维斯塔潘夺得车手冠军，红牛获车队冠军",
+    "sources": [
+      { "label": "Wikipedia · Red Bull Racing RB19", "url": "https://en.wikipedia.org/wiki/Red_Bull_Racing_RB19" },
+      { "label": "Wikipedia · 2023 Formula One World Championship", "url": "https://en.wikipedia.org/wiki/2023_Formula_One_World_Championship" }
+    ]
+  },
+  "mclaren-mcl39": {
+    "nameEn": "McLaren MCL39",
+    "year": 2025,
+    "constructor": "mclaren",
+    "designers": ["Rob Marshall", "Neil Houldey"],
+    "summary": "迈凯伦MCL39由首席设计师罗布·马歇尔主导设计，是2022–2025年地面效应规则周期最后一年的冠军车。它的后刹车风道让后胎温度控制明显优于对手，红牛提出质疑后，国际汽联确认其完全合规。迈凯伦在新加坡站提前锁定车队冠军，诺里斯在阿布扎比以第3名完赛，夺得个人首个车手冠军，这是迈凯伦自1998年后首次在同一赛季包揽双冠。",
+    "tech": [
+      { "label": "发动机", "value": "Mercedes-AMG F1 M16 E Performance" },
+      { "label": "排量/布局", "value": "1.6升 V6 涡轮增压混合动力，直喷，转速上限15000转" },
+      { "label": "变速箱", "value": "迈凯伦8速无缝序列式半自动（另有1个倒挡）" },
+      { "label": "底盘结构", "value": "碳纤维复合材料" },
+      { "label": "悬挂", "value": "前拉杆、后推杆，内置扭杆与减震器" },
+      { "label": "车重", "value": "800公斤（含车手，不含燃油）" },
+      { "label": "轮胎", "value": "倍耐力" }
+    ],
+    "innovations": [
+      "后刹车风道帮助控制后胎温度",
+      "悬挂加入抗点头（anti-dive）设计",
+      "巴林站加装前刹车风道小翼"
+    ],
+    "record": "2025年：24站赢得14场（诺里斯、皮亚斯特里各7胜）、13个杆位、34次登上领奖台；诺里斯夺得车手冠军，迈凯伦获车队冠军",
+    "sources": [
+      { "label": "Wikipedia · McLaren MCL39", "url": "https://en.wikipedia.org/wiki/McLaren_MCL39" }
+    ]
+  }
+}

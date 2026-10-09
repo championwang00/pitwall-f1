@@ -1,0 +1,133 @@
+/* Shared pieces for the year layer on unit pages (spec §4): the 「Y 赛季 / Y 年在这里」 band, era-span line, missing state. */
+
+/* hero line: 「横跨 N 个时代：…」 */
+.eras { margin-top: 14px; font-size: 14px; color: rgba(255,255,255,.78); display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 0; }
+.eras b { font-weight: 700; color: #fff; margin-right: 6px; }
+.eras a { color: #fff; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; text-decoration-color: rgba(255,255,255,.4); }
+.eras a:hover { text-decoration-color: #fff; text-decoration-thickness: 1.5px; }
+.eras span { white-space: nowrap; }
+.eras i { font-style: normal; opacity: .5; margin: 0 8px; }
+/* hero line: 「2008 · 迈凯伦 · MP4-23 · 世界冠军 · 98 分」 */
+.yLine { margin-top: 12px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 15px; font-weight: 700; color: #fff; }
+.yLine > span:not(.yBadge) { opacity: .55; font-weight: 400; }
+.yLine a { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; text-decoration-color: rgba(255,255,255,.4); }
+.yLine a:hover { text-decoration-color: #fff; text-decoration-thickness: 1.5px; }
+.yBadge { font-family: var(--font-display); font-weight: 900; font-size: 15px; background: #fff; color: var(--ink); padding: 2px 8px; border-radius: 4px; }
+
+/* the band */
+.band { background: var(--paper); padding: 56px 0 64px; }
+.head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px 24px; flex-wrap: wrap; margin-bottom: 24px; }
+.title { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.title b { font-family: var(--font-display); font-weight: 900; font-size: clamp(44px, 6vw, 76px); line-height: .9; letter-spacing: -.02em; }
+.title span { font-family: var(--font-cn); font-weight: 900; font-size: clamp(22px, 2.4vw, 30px); }
+.sub { font-size: 13px; color: var(--mute); margin-top: 8px; }
+.clear { font-size: 13px; font-weight: 700; color: var(--mute); text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.clear:hover { text-decoration-thickness: 1.5px; }
+.h3 { font: 900 20px/24px var(--font-display); margin: 36px 0 14px; }
+
+/* season summary card: solid team colour, period photo bleeding off the right, stats + laurels */
+/* season summary: formula1.com identity surface (.f1-surface, his team colour THAT year), period photo bleeding off the right */
+.season { border-radius: 8px; min-height: 256px; display: grid; grid-template-columns: minmax(0, 1fr) 260px; }
+.sBody { position: relative; z-index: 1; padding: 24px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+.sKick { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; font-size: 15px; font-weight: 700; }
+.sKick a { font: 500 16px/20px var(--font-display); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px; transition: text-decoration-color .15s; }
+.sKick a:hover { text-decoration-color: currentColor; }
+.sKick em { font-style: normal; font-weight: 400; opacity: .8; font-size: 13px; }
+.stats { display: flex; flex-wrap: wrap; gap: 14px 28px; align-items: center; margin-top: auto; }
+.stat { display: flex; flex-direction: column; gap: 2px; }
+.stat b { font: 900 32px/32px var(--font-display); }
+.stat span { font: 700 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; opacity: .8; }
+.sPhoto { position: relative; align-self: end; height: 100%; min-height: 240px; }
+.sPhoto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 12%; -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 40%); mask-image: linear-gradient(90deg, transparent 0, #000 40%); }
+
+/* round-by-round strip */
+.strip { display: grid; grid-template-columns: repeat(auto-fill, minmax(64px, 1fr)); gap: 6px; }
+.rc { position: relative; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 4px 7px; border-radius: 4px; background: #fff; color: var(--ink); font-size: 11px; line-height: 1.1; }
+.rc img { width: 16px; }
+.rc b { font: 500 20px/22px var(--font-display); }
+.rc em { font: 500 11px/12px var(--font-display); font-style: normal; color: var(--mute); }
+.rc i { position: absolute; top: 4px; right: 5px; font-style: normal; font-size: 9px; font-weight: 900; }
+.p1 { background: #c9a227; color: #15151e; }
+.p2 { background: #b8bec4; color: #15151e; }
+.p3 { background: #b0703a; color: #fff; }
+.p1 em, .p2 em { color: rgba(21,21,30,.6); } .p3 em { color: rgba(255,255,255,.75); }
+.pts { background: var(--carbon); color: #fff; }
+.pts em { color: rgba(255,255,255,.55); }
+.dnf b { color: var(--mute); font-size: 14px; padding: 3px 0; }
+.out { background: transparent; box-shadow: inset 0 0 0 1px var(--line); color: var(--mute); }
+.out b { font-size: 14px; padding: 3px 0; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 12px; color: var(--mute); margin-top: 10px; }
+.legend span { display: inline-flex; align-items: center; gap: 6px; }
+.legend i { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+
+/* team-mate comparison */
+.mates { display: flex; flex-direction: column; gap: 10px; }
+.mate { background: #fff; border-radius: 8px; padding: 14px 18px; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 16px; }
+.mate > :last-child { justify-self: end; text-align: right; }
+.side { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.mate > :last-child .side, .mate .right { align-items: flex-end; }
+.side small { font: 500 12px/16px var(--font-display); color: var(--mute); }
+.h2h { display: grid; grid-template-columns: auto auto auto; gap: 2px 10px; align-items: baseline; font-family: var(--font-data); }
+.h2h b { font: 500 20px/24px var(--font-display); text-align: center; }
+.h2h span { font-size: 11px; color: var(--mute); text-align: center; font-family: var(--font-cn); }
+.h2h .win { color: var(--ink); }
+.h2h .lose { color: var(--mute); font-weight: 500; }
+
+/* cars (team band) */
+.cars { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+/* a car of that team-year: formula1.com team-card surface (.f1-surface.team-drs), name in Formula1 24/28 */
+.car { border-radius: 8px; padding: 20px 24px; display: flex; flex-direction: column; gap: 4px; min-height: 140px; background: var(--c) !important; }
+.car b { font: 500 24px/28px var(--font-display); }
+.car span { font: 600 14px/16px "Titillium Web", var(--font-cn); opacity: .9; }
+.car img { height: 112px; width: auto; max-width: none; align-self: flex-start; margin-top: auto; padding-top: 12px; box-sizing: content-box; }
+.car:hover b { text-decoration: underline; text-underline-offset: 4px; }
+.teamStats { display: flex; flex-wrap: wrap; gap: 14px 32px; align-items: center; margin-bottom: 8px; }
+.teamStats { background: #fff; border-radius: 8px; padding: 20px 24px; }
+.teamStats .stat b { color: var(--ink); }
+.teamStats .stat span { color: var(--mute); opacity: 1; }
+
+/* circuit band: one race */
+.race + .race { margin-top: 40px; }
+.raceHead { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 16px; margin-bottom: 16px; }
+.raceHead h3 { font: 500 24px/28px var(--font-display); display: inline-flex; align-items: center; gap: 12px; }
+.raceHead h3 img { width: 24px; }
+.raceHead h3 a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.raceMeta { display: inline-flex; align-items: center; gap: 12px; color: var(--mute); }
+.raceMeta b { font: 700 12px/16px "Titillium Web"; text-transform: uppercase; }
+.raceMeta em { font-style: normal; font-size: 13px; }
+.podium { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.extras { display: flex; flex-wrap: wrap; gap: 14px 36px; align-items: center; margin-top: 20px; }
+.extra { display: inline-flex; align-items: center; gap: 12px; }
+.extra em { font-style: normal; color: var(--mute); }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.replay { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; padding: 10px 18px; border-radius: 999px; background: var(--f1-red); color: #fff; }
+.replay:hover { filter: brightness(.92); }
+.full { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; padding: 10px 18px; border-radius: 999px; background: var(--carbon); color: #fff; }
+.full:hover { filter: brightness(1.2); }
+
+/* missing year */
+.missing { background: #fff; border-radius: 8px; padding: 28px 28px 26px; display: flex; flex-direction: column; gap: 14px; }
+.missing p { font-size: 15px; color: #4a4a52; line-height: 1.7; }
+.near { display: flex; flex-wrap: wrap; gap: 10px; }
+.near a { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border-radius: 999px; background: var(--carbon); color: #fff; font-size: 14px; font-weight: 700; }
+.near a b { font-family: var(--font-display); font-size: 18px; }
+.near a:hover { filter: brightness(1.25); }
+.lineage { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; font-size: 14px; }
+.lineage em { font: 500 12px/16px var(--font-display); font-style: normal; color: var(--mute); margin-left: 6px; }
+
+/* year-highlight used by career strips / tables on the same page */
+.cur { box-shadow: 0 0 0 2px var(--paper), 0 0 0 4px var(--ink) !important; }
+
+@media (max-width: 760px) {
+  .band { padding: 40px 0 48px; }
+  .season { grid-template-columns: minmax(0, 1fr) 120px; min-height: 200px; }
+  .sPhoto { min-height: 200px; }
+  .sBody { padding: 18px 16px; }
+  .stat b { font-size: 26px; }
+  .stats { gap: 12px 20px; }
+  .podium { grid-template-columns: 1fr; }
+  .mate { grid-template-columns: 1fr; gap: 10px; }
+  .mate > :last-child { justify-self: start; text-align: left; }
+  .mate > :last-child .side { align-items: flex-start; }
+  .strip { grid-template-columns: repeat(auto-fill, minmax(52px, 1fr)); }
+}

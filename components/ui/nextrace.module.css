@@ -1,0 +1,43 @@
+/* Next: formula1.com "up next" photo card, widened to carry the countdown + session times */
+.nextCard { position: relative; flex: 1; border-radius: 8px; overflow: hidden; background: #15151e; color: #fff; min-height: 312px; isolation: isolate; }
+.nextPhoto { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; }
+.nextFade { position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(0,0,0,.82) 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,.25) 100%), linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,.6) 100%); }
+.nextIn { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 360px); gap: 24px; padding: 24px; height: 100%; align-items: end; }
+.nextMain { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.nextRound { font: 700 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; display: inline-flex; gap: 8px; align-items: center; }
+.nextRound em { font-style: normal; font-size: 10px; line-height: 14px; padding: 1px 6px; border-radius: 4px; background: rgba(255,255,255,.18); }
+.nextTitle { display: flex; align-items: center; gap: 12px; font: 500 40px/44px var(--font-display); }
+.nextTitle img { width: 28px; }
+.nextTitle a:hover { text-decoration: underline; text-underline-offset: 6px; text-decoration-thickness: 2px; }
+.nextMeta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 16px; font: 600 14px/16px "Titillium Web", var(--font-cn); color: rgba(255,255,255,.85); }
+.nextDates { font: 400 16px/16px var(--font-tech); text-transform: uppercase; color: #fff; }
+.nextCirc { text-decoration: underline; text-decoration-color: rgba(255,255,255,.35); text-underline-offset: 3px; }
+.nextCirc:hover { text-decoration-color: #fff; }
+.count { display: flex; align-items: center; gap: 12px; margin-top: 10px; }
+.count > b { font: 500 24px/28px var(--font-display); }
+.countSep { width: 1px; align-self: stretch; background: #fff; opacity: .25; }
+.countNum { display: flex; align-items: flex-end; gap: 3px; }
+.countDigits { font: 700 36px/32px var(--font-tech); }
+.countUnit { font: 400 16px/16px var(--font-tech); font-style: normal; color: #e0dedc; padding-right: 6px; }
+.liveNow { display: inline-flex; align-items: center; gap: 8px; font: 500 16px/22px var(--font-display); }
+.liveNow i { width: 8px; height: 8px; border-radius: 50%; background: var(--f1-red); }
+.nextBtns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.btnGhost { box-shadow: inset 0 0 0 1px rgba(255,255,255,.7); color: #fff; }
+.btnGhost:hover { background: rgba(255,255,255,.12); }
+
+.sessions { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+.sessions li { display: grid; grid-template-columns: minmax(0, 1fr) 36px 52px 48px auto; gap: 10px; align-items: center; padding: 10px 14px; border-radius: 4px; background: rgba(21,21,30,.72); backdrop-filter: blur(6px); }
+.sessions b { font: 500 14px/16px var(--font-display); }
+.sDow { font: 400 12px/12px var(--font-tech); text-transform: uppercase; color: rgba(255,255,255,.7); }
+.sDate { font: 400 12px/12px var(--font-tech); text-transform: uppercase; }
+.sTime { font: 700 14px/14px var(--font-tech); text-align: right; }
+.sessOn { background: var(--f1-red) !important; }
+.sessPast { opacity: .5; }
+
+@media (max-width: 1180px) { .nextIn { grid-template-columns: 1fr; } }
+@media (max-width: 760px) {
+  .nextTitle { font-size: 28px; line-height: 32px; }
+  .countDigits { font-size: 26px; line-height: 24px; }
+  .sessions li { grid-template-columns: minmax(0, 1fr) 32px 48px 44px; }
+  .sessions li > a { display: none; }
+}

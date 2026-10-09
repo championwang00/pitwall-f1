@@ -1,0 +1,9 @@
+node_modules
+.next
+.cache
+_data_raw
+outputs
+shots
+.claude
+.git
+*.tsbuildinfo

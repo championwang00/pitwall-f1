@@ -1,0 +1,65 @@
+/* Object-page hero shared by driver / team pages — formula1.com driver / team hero: the team colour IS the surface
+   (dark "accessible" variant as the base, the bright colour in the halftone field / DRS texture on top). */
+.hero { position: relative; isolation: isolate; background: color-mix(in srgb, var(--surface, #15151e) 46%, #000); color: #fff; overflow: hidden; min-height: 560px; }
+.heroBg { position: absolute; inset: 0; }
+.heroIn { position: relative; z-index: 1; max-width: var(--maxw); margin: 0 auto; padding: 48px var(--gutter) 40px; min-height: 560px; display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px; }
+.heroIn > * { min-width: 0; }
+.heroText { position: relative; z-index: 2; display: flex; flex-direction: column; justify-content: space-between; gap: 32px; }
+.first { display: block; font-family: var(--font-display); font-size: clamp(22px, 2.4vw, 32px); font-weight: 400; line-height: 1; }
+.last { font-family: var(--font-wide); font-size: clamp(44px, 6.4vw, 96px); line-height: .92; text-transform: uppercase; margin-top: 6px; }
+.tagline { font-size: 15px; color: rgba(255,255,255,.88); margin-top: 18px; max-width: 520px; line-height: 1.6; }
+.portrait { position: relative; align-self: stretch; min-height: 460px; display: flex; justify-content: center; align-items: flex-end; margin: -48px calc(-1 * var(--gutter)) -40px 0; }
+.cut { position: relative; z-index: 1; height: calc(100% - 40px); max-height: 600px; width: auto; max-width: none; object-fit: contain; object-position: bottom; }
+.photo { width: 100%; max-width: 400px; aspect-ratio: 4/5; object-fit: cover; object-position: top; border-radius: 8px; }
+.numberArt { position: absolute; right: -4%; top: 10%; width: 72%; opacity: .38; z-index: 0; }
+
+/* formula1.com statistics block: label (Titillium 14/16 600) over the value (Formula1 Black) */
+.stats { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 0 16px; margin: 0; border-top: 1px solid rgba(255,255,255,.2); max-width: 760px; }
+.stats > div { padding: 16px 0 0; display: flex; flex-direction: column; gap: 8px; }
+.stats dt { font: 600 14px/16px "Titillium Web", var(--font-cn); color: rgba(255,255,255,.72); white-space: nowrap; }
+.stats dt em { font-style: normal; margin-left: 4px; opacity: .8; }
+.stats dd { margin: 0; font-family: var(--font-display); font-size: 28px; font-weight: 900; line-height: 32px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+/* Career strip */
+.career { overflow-x: auto; padding-bottom: 6px; }
+.cGrid { display: flex; gap: 6px; padding: 4px; }
+
+/* Moments / anecdotes: white formula1.com cards (radius 8) on the paper band — no rules, no accent lines */
+.mList { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.mItem { display: grid; grid-template-columns: 92px 1fr; gap: 20px; padding: 20px 24px; background: #fff; border-radius: 8px; }
+.mYear { display: flex; flex-direction: column; gap: 6px; align-self: start; border-radius: 4px; }
+.mYear .num { font-family: var(--font-display); font-size: 24px; font-weight: 900; line-height: 28px; }
+.mYear em { font: 700 12px/16px "Titillium Web", var(--font-cn); font-style: normal; text-transform: uppercase; color: var(--mute); }
+.mYear:hover .num { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.mBody p { font-size: 15px; line-height: 1.8; color: #3a3a42; margin-top: 8px; }
+.src { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 8px !important; }
+.src a { font: 600 12px/16px "Titillium Web", var(--font-cn); color: var(--mute); text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 2px; }
+.src a:hover { text-decoration-color: currentColor; }
+
+.aGrid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.aCard { background: #fff; border-radius: 8px; padding: 20px 24px; display: flex; flex-direction: column; gap: 8px; }
+.aCard p { font-size: 14px; line-height: 1.8; color: #3a3a42; }
+
+.bio { font-size: 16px; line-height: 1.95; color: #2a2a32; max-width: 760px; }
+.twoCol { display: grid; grid-template-columns: minmax(0, 1fr) 320px; gap: 56px; }
+.side { display: flex; flex-direction: column; gap: 8px; }
+.sideBox { background: #fff; border-radius: 8px; padding: 16px 20px 20px; }
+/* box titles = formula1.com label (Titillium 12/16 700 uppercase #606066) */
+.sideBox h3 { font: 700 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; color: var(--mute); margin-bottom: 12px; }
+.kv { display: grid; grid-template-columns: auto 1fr; gap: 10px 16px; font-size: 14px; margin: 0; }
+.kv dt { font: 600 14px/20px "Titillium Web", var(--font-cn); color: var(--mute); }
+.kv dd { margin: 0; font-weight: 700; line-height: 20px; }
+.kv dd :global(.num) { font-family: var(--font-display); font-weight: 500; }
+
+@media (max-width: 960px) {
+  .heroIn { grid-template-columns: minmax(0, 1fr); }
+  .last { font-size: clamp(34px, 11vw, 60px) !important; }
+  .portrait { min-height: 320px; margin: 0; }
+  .cut { height: 340px; }
+  .mList { grid-template-columns: 1fr; }
+  .mItem { grid-template-columns: 72px 1fr; gap: 14px; padding: 16px; }
+  .aGrid { grid-template-columns: 1fr; }
+  .twoCol { grid-template-columns: 1fr; gap: 32px; }
+}
+.srcInline { margin-left: 6px; font: 600 12px/16px "Titillium Web", var(--font-cn); color: var(--mute); text-decoration: underline; text-underline-offset: 2px; text-decoration-color: var(--line); }
+.srcInline:hover { text-decoration-color: currentColor; }

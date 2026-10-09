@@ -1,0 +1,20 @@
+.laurel { --leaf: transparent; display: inline-flex; align-items: center; gap: 2px; color: var(--tone); line-height: 1; vertical-align: middle; }
+.branch { flex: none; display: block; } /* inline svg sat on the text baseline → looked low in pills */
+.text { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: inherit; }
+.text b { font-family: var(--font-display); font-weight: 900; font-size: calc(var(--size) * 0.36); letter-spacing: .02em; white-space: nowrap; }
+.text b :global(.num), .text b .n { font-family: var(--font-display); }
+.text em { font-style: normal; font-family: var(--font-display); font-weight: 700; font-size: calc(var(--size) * 0.3); margin-top: 2px; white-space: nowrap; }
+.row { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; }
+/* on solid colour cards: white (or ink) outlines with see-through leaves */
+.onColor { --leaf: transparent; }
+.mini { display: inline-flex; align-items: center; gap: 0; color: inherit; --leaf: transparent; }
+
+/* Global rule (user): on a coloured surface, medal colours stay in the SURFACE's OKLCH hue family — gold / silver / bronze
+   differ by lightness + chroma, not by clashing hues. Ancestors opt in with data-surface (+ --surface) or .on-color.
+   Without relative-colour support → white. */
+.medal { --m-gold: oklch(from var(--surface) 0.94 0.13 h); --m-silver: oklch(from var(--surface) 0.90 0.02 h); --m-bronze: oklch(from var(--surface) 0.80 0.10 h); --m-hi: oklch(from var(--surface) 0.97 0.03 h); }
+:global([data-surface]) .medal, :global(.on-color) .medal { color: #fff; }
+:global([data-surface]) .gold, :global(.on-color) .gold { color: var(--m-gold, #fff); }
+:global([data-surface]) .silver, :global(.on-color) .silver { color: var(--m-silver, #fff); }
+:global([data-surface]) .bronze, :global(.on-color) .bronze { color: var(--m-bronze, #fff); }
+:global([data-surface]) .hi, :global(.on-color) .hi { color: var(--m-hi, #fff); }

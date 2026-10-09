@@ -1,0 +1,51 @@
+.hero { color: #fff; }
+.hero::before { height: 280px !important; opacity: .75 !important; }
+.heroIn { position: relative; z-index: 1; max-width: var(--maxw); margin: 0 auto; padding: 48px var(--gutter) 40px; display: flex; flex-direction: column; gap: 20px; }
+.text { position: relative; z-index: 1; }
+.name { font-family: var(--font-wide); font-size: clamp(48px, 7vw, 108px); line-height: .95; text-transform: uppercase; margin-top: 24px; }
+.full { font: 400 16px/20px var(--font-display); text-transform: uppercase; color: rgba(255,255,255,.75); margin-top: 10px; }
+.dek { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-top: 16px; }
+.teamChip :global(b) { font-size: 22px; font-weight: 900; }
+.dekYears { font: 900 22px/1 var(--font-display); }
+.sub { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; font: 600 14px/20px "Titillium Web", var(--font-cn); color: rgba(255,255,255,.9); margin-top: 14px; }
+.stage { position: relative; height: 420px; display: flex; align-items: center; justify-content: center; }
+.tunnel { position: absolute; inset: 0 -48px; }
+.photo { max-height: 400px; max-width: 100%; object-fit: contain; border-radius: 8px; }
+.warn { font-size: 12px; color: rgba(255,255,255,.6); }
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: 56px; }
+.inno { margin: 12px 0 0; padding-left: 20px; display: grid; gap: 8px; font-size: 15px; line-height: 1.7; }
+.inno li::marker { color: var(--mute); }
+.record { margin-top: 28px; font-size: 15px; line-height: 1.8; display: flex; flex-direction: column; gap: 4px; }
+.designers { font-size: 13px; color: var(--mute); margin-top: 12px; }
+.specs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 48px; background: #fff; border-radius: 8px; padding: 8px 24px; }
+.specs div { display: grid; grid-template-columns: 120px 1fr; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.specs span { font: 600 14px/20px "Titillium Web", var(--font-cn); color: var(--mute); }
+.specs b { font-size: 14px; line-height: 1.7; font-weight: 500; }
+.races { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 0 12px; background: #fff; border-radius: 8px; padding: 8px 16px; }
+.race { display: flex; align-items: center; gap: 10px; padding: 10px 8px; border-bottom: 1px solid var(--line); font-size: 12px; }
+.race > span:last-child { display: flex; flex-direction: column; line-height: 1.3; min-width: 0; }
+.race b { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.race em { font-style: normal; color: var(--mute); font-size: 11px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.race { transition: background .12s; }
+.race:hover { background: color-mix(in srgb, currentColor 5%, transparent); }
+.lineage { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 6px; }
+.lineage { padding-top: 4px; }
+.lineage a { flex: none; display: flex; flex-direction: column; gap: 4px; padding: 12px 16px; border-radius: 8px; background: #fff; min-width: 120px; }
+.lineage .num { font-size: 12px; line-height: 16px; color: var(--mute); }
+.lineage b { font: 500 16px/20px var(--font-display); }
+.cur { background: var(--carbon) !important; color: #fff; }
+.cur .num { color: rgba(255,255,255,.6) !important; }
+@media (max-width: 960px) { .grid { grid-template-columns: 1fr; } .stage { height: 260px; } }
+.era { margin-top: 40px; padding: 20px 24px; background: #fff; border-radius: 8px; display: flex; flex-direction: column; gap: 6px; max-width: 720px; }
+.era b { font-size: 18px; font-weight: 700; }
+.era p { font-size: 14px; line-height: 1.85; color: #4a4a52; }
+
+/* cross-link additions */
+.yl { color: inherit; }
+.yl:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+.honours { display: flex; flex-wrap: wrap; gap: 12px 26px; align-items: center; margin-top: 22px; }
+.honours > * { flex: none; }
+.people { display: flex; flex-direction: column; gap: 10px; font-size: 14px; }
+.person { display: inline-flex; align-items: center; gap: 10px; max-width: 100%; }
+.gp { min-width: 0; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lt { font-size: 11px; letter-spacing: 0; }

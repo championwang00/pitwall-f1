@@ -1,0 +1,6 @@
+/* Car cards: div + stretched sibling link; team, year and prose mentions inside are their own hover-card links. */
+.card { position: relative; cursor: pointer; }
+.stretch { position: absolute; inset: 0; z-index: 1; border-radius: inherit; }
+.text { position: relative; z-index: 2; pointer-events: none; }
+.text a { pointer-events: auto; }
+.name { align-self: flex-start; }

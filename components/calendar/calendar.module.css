@@ -1,0 +1,81 @@
+.hero { position: relative; background: #0b0b10; color: #fff; overflow: hidden; min-height: 600px; }
+.globe { position: absolute; inset: 0 -6% 0 38%; }
+.globe :global(.route-globe) { position: absolute; inset: 0; }
+.heroIn { position: relative; z-index: 1; max-width: var(--maxw); margin: 0 auto; padding: 72px var(--gutter); pointer-events: none; }
+.heroIn > * { pointer-events: auto; }
+.title { font-size: clamp(40px, 5vw, 72px); font-weight: 900; line-height: 1.05; margin-top: 16px; letter-spacing: -.01em; }
+.dek { font-size: 15px; color: rgba(255,255,255,.7); margin-top: 18px; max-width: 460px; line-height: 1.8; }
+.sub { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; max-width: 620px; }
+.copy { color: rgba(255,255,255,.75); padding-left: 8px; padding-right: 8px; }
+.copy:hover { text-decoration: underline; text-underline-offset: 3px; }
+.hint { width: 100%; font-size: 12px; color: rgba(255,255,255,.5); margin-top: 6px; line-height: 1.7; }
+
+.next { background: #0b0b10; padding: 0 0 72px; }
+.nextCard { position: relative; border-radius: 16px; overflow: hidden; background-size: cover; background-position: center; color: #fff; }
+.nextShade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,11,16,.94) 0%, rgba(11,11,16,.7) 48%, rgba(11,11,16,.35) 100%); }
+.nextIn { position: relative; display: grid; grid-template-columns: 1fr minmax(0, 480px); gap: 40px; padding: 44px; align-items: end; }
+.nextTitle { font-size: clamp(36px, 4vw, 56px); font-weight: 900; margin-top: 10px; }
+.nextMeta { display: flex; align-items: center; gap: 10px; font-size: 14px; color: rgba(255,255,255,.8); margin-top: 10px; }
+.nextMeta img { width: 22px; height: 15px; object-fit: cover; border-radius: 2px; }
+.count { display: flex; flex-direction: column; gap: 6px; margin-top: 28px; }
+.count > span:first-child { font-size: 13px; color: rgba(255,255,255,.7); }
+.countNum { font-family: var(--font-display); font-weight: 900; font-size: clamp(40px, 5vw, 64px); line-height: 1; font-variant-numeric: tabular-nums; }
+.countUnit { font-style: normal; font-family: var(--font-cn); font-size: 14px; font-weight: 400; color: rgba(255,255,255,.6); margin: 0 12px 0 4px; }
+.nextBtns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+
+.sessions { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1px; background: rgba(255,255,255,.1); border-radius: 10px; overflow: hidden; }
+.sessions li { display: grid; grid-template-columns: 1fr 40px 54px 54px 84px; gap: 10px; align-items: center; padding: 12px 16px; background: rgba(15,15,21,.9); font-size: 14px; }
+.sessions .dow { color: rgba(255,255,255,.55); font-size: 12px; }
+.sessions .time { font-family: var(--font-data); font-weight: 900; text-align: right; font-variant-numeric: tabular-nums; }
+.sessions .race { background: var(--f1-red); }
+.sessions .past { opacity: .45; }
+.gLink { font-size: 12px; text-align: right; color: rgba(255,255,255,.7); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(255,255,255,.3); }
+.gLink:hover { text-decoration-color: currentColor; }
+
+.list { display: flex; flex-direction: column; gap: 6px; }
+.row { background: #fff; border-radius: 10px; overflow: hidden; }
+.row summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: 52px 120px minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1.2fr); gap: 16px; align-items: center; padding: 14px 20px; min-height: 64px; }
+.row summary::-webkit-details-marker { display: none; }
+.row summary:hover { background: #fbfaf9; }
+.rnd { font-family: var(--font-data); font-weight: 900; color: var(--mute); }
+.dates { font-family: var(--font-data); font-weight: 700; font-size: 14px; display: flex; gap: 4px; }
+.dates i { font-style: normal; color: var(--mute); }
+.gp { display: flex; align-items: center; gap: 10px; }
+.gp img { width: 22px; height: 15px; object-fit: cover; border-radius: 2px; }
+.gp b { font-size: 16px; font-weight: 900; }
+.circ { font-size: 13px; color: var(--mute); }
+.state { font-size: 13px; color: var(--mute); text-align: right; }
+.state b { color: var(--ink); }
+/* finished round: winner as a solid team-colour pill (face + name), no edge strip */
+.winPill { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px 4px 4px; border-radius: 999px; max-width: 100%; text-align: left; }
+.winPill img { width: 28px; height: 28px; border-radius: 50%; object-fit: cover; object-position: top; background: var(--paper-2); flex: none; }
+.state .winPill b { color: inherit; font-size: 13px; white-space: nowrap; }
+.winPill em { font-style: normal; font-size: 12px; opacity: .8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.nextTag { color: var(--f1-red) !important; }
+.next .row { }
+.future summary { }
+.detail { display: grid; grid-template-columns: 220px minmax(0, 520px) 1fr; gap: 28px; padding: 8px 20px 22px 92px; align-items: start; }
+.detail .sessions { background: var(--line); }
+.detail .sessions li { background: var(--paper); color: var(--ink); }
+.detail .sessions .race { background: var(--carbon); color: #fff; }
+.detail .gLink { color: var(--mute); text-decoration-color: var(--line); }
+.detail .sessions .race .gLink { color: rgba(255,255,255,.7); }
+.detail .dow { color: var(--mute) !important; }
+.map { width: 100%; }
+.rowLinks { display: flex; flex-direction: column; gap: 10px; }
+@media (max-width: 960px) {
+  .globe { inset: 40% -30% -10% -30%; opacity: .6; }
+  .nextIn { grid-template-columns: 1fr; padding: 24px; }
+  .row summary { grid-template-columns: 40px 1fr; }
+  .circ, .state, .dates { grid-column: 2; text-align: left; }
+  .detail { grid-template-columns: 1fr; padding: 8px 16px 18px; }
+  .sessions li { grid-template-columns: 1fr 36px 50px 50px; }
+  .gLink { display: none; }
+}
+
+/* Subscribe on the light page */
+.subLight { margin-top: 0; }
+.subLight :global(.btn-line) { color: var(--ink); }
+.subLight .copy { color: var(--mute); }
+.subLight .hint { color: var(--mute); }
+.sessions .time, .rnd, .dates { font-family: var(--font-tech); }

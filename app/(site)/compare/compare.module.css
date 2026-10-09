@@ -1,0 +1,15 @@
+/* Compare page additions: face + name headers over the bar chart and the circuit table */
+.barHeads { padding-bottom: 6px; margin-bottom: 4px; border-bottom: 1px solid var(--line); }
+.heads { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.heads .pa { padding-bottom: 6px; }
+.heads .pb { flex-direction: row-reverse; padding-bottom: 6px; }
+.unit { font: 600 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; color: var(--mute); margin-left: 6px; }
+.tblWrap :global(.tbl) th { font-family: "Titillium Web", var(--font-cn); font-weight: 600; }
+th .thA { flex-direction: row-reverse; }
+th .thP { color: var(--ink); font-size: 14px; }
+.tblWrap { overflow-x: auto; }
+@media (max-width: 760px) {
+  .tblWrap th { white-space: normal; }
+  th .thP b { white-space: normal; }
+  th .thP { gap: 6px; }
+}

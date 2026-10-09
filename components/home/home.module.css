@@ -1,0 +1,137 @@
+.hero { position: relative; background: radial-gradient(ellipse 70% 80% at 62% 55%, #1a1a23 0%, #0b0b10 70%); color: #fff; overflow: hidden; }
+.track { position: absolute; inset: 10% 22% 10% 40%; }
+.track :global(.home-track) { position: absolute; inset: 0; }
+.heroGrid { position: relative; max-width: none; margin: 0; padding: 48px var(--gutter) 72px; /* same left/right edges as the race cards below (user) */ display: grid; grid-template-columns: minmax(0, 560px) 1fr 260px; gap: 32px; min-height: 680px; pointer-events: none; }
+.heroGrid > * { pointer-events: auto; }
+.heroMain { grid-column: 1; display: flex; flex-direction: column; justify-content: flex-start; padding-top: 24px; }
+.round { font: 700 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; color: rgba(255,255,255,.7); letter-spacing: 0; }
+.place { font-family: var(--font-wide); font-size: clamp(28px, calc((100vw - 168px) * .05), 80px); /* page width minus the year rail, so it never runs under the standings box */ white-space: nowrap; line-height: .95; text-transform: uppercase; margin-top: 14px; }
+.gpZh { display: flex; align-items: center; gap: 10px; font-size: 16px; font-weight: 700; margin-top: 14px; color: rgba(255,255,255,.88); }
+.gpZh img { width: 24px; height: 16px; object-fit: cover; border-radius: 2px; }
+.count { margin-top: 40px; display: flex; flex-direction: column; gap: 8px; }
+.countLabel { font: 700 12px/16px "Titillium Web", var(--font-cn); text-transform: uppercase; color: rgba(255,255,255,.7); }
+.countNum { white-space: nowrap; font-family: var(--font-display); font-weight: 900; font-size: clamp(44px, 5.4vw, 80px); line-height: .9; font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+.countUnit { font-style: normal; font: 500 16px/1 var(--font-display); text-transform: uppercase; color: rgba(255,255,255,.55); margin: 0 16px 0 6px; letter-spacing: 0; vertical-align: 1.6em; }
+.liveBtn { display: inline-flex; align-items: center; gap: 10px; font-size: 22px; font-weight: 900; }
+.liveBtn i { width: 10px; height: 10px; border-radius: 50%; background: var(--f1-red); }
+.sessions { list-style: none; padding: 1px; margin: 32px 0 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1px; background: rgba(255,255,255,.12); border-radius: 8px; overflow: hidden; max-width: 560px; }
+.sessions li { background: rgba(14,14,20,.88); padding: 10px 12px; display: flex; flex-direction: column; gap: 2px; font-size: 12px; }
+.sessions li > span:first-child { font: 500 13px/16px var(--font-display); color: rgba(255,255,255,.9); }
+.sDow { font: 700 11px/14px "Titillium Web", var(--font-cn); text-transform: uppercase; color: rgba(255,255,255,.55); }
+/* session start times: formula1.com tech digits */
+.sTime { font: 700 18px/20px var(--font-tech); font-variant-numeric: tabular-nums; margin-top: 2px; }
+.sNext { background: var(--f1-red) !important; }
+.sRace > span:first-child { color: #fff; }
+.sPast { opacity: .4; }
+.ctas { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+
+.rail { grid-column: 3; align-self: center; background: rgba(14,14,20,.82); border-radius: 8px; padding: 14px 0 10px; backdrop-filter: blur(10px); }
+.railHead { display: flex; justify-content: space-between; align-items: baseline; padding: 0 16px 10px; border-bottom: 1px solid rgba(255,255,255,.08); font: 500 14px/18px var(--font-display); }
+.railHead b { font-weight: 500; }
+.railHead span { font: 700 11px/14px "Titillium Web", var(--font-cn); text-transform: uppercase; color: rgba(255,255,255,.55); }
+.tower { list-style: none; margin: 0; padding: 4px 0; }
+.tower li { display: grid; grid-template-columns: 20px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 6px 16px; font-size: 13px; }
+.tPos { font: 500 13px/1 var(--font-display); color: rgba(255,255,255,.55); text-align: right; }
+.tName { font-weight: 700; white-space: nowrap; overflow: hidden; gap: 8px !important; }
+.tName b { overflow: hidden; text-overflow: ellipsis; }
+.tGap { font: 500 13px/1 var(--font-display); font-variant-numeric: tabular-nums; color: rgba(255,255,255,.8); }
+.railMore { display: block; padding: 8px 16px 2px; font-size: 12px; color: rgba(255,255,255,.6); }
+.railMore:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+.railInline { background: var(--carbon); color: #fff; backdrop-filter: none; }
+.trackNote { position: absolute; right: var(--gutter); bottom: 20px; font-size: 12px; color: rgba(255,255,255,.42); display: flex; gap: 14px; align-items: baseline; }
+.trackNote a { color: #fff; font-weight: 700; font-size: 13px; }
+.trackNote a:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+
+.podium { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+/* podium = three DriverCards (bigcard.module.css); meta line = team logo + name, then time */
+.podium > * { min-height: 100%; }
+.pMeta { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; }
+.pMeta .num { font-family: var(--font-data); font-weight: 700; font-variant-numeric: tabular-nums; }
+.standingsBelow { margin-top: 28px; max-width: 420px; }
+
+.gridWrap { overflow-x: auto; }
+.grid { display: grid; gap: 2px; min-width: 900px; }
+.gCorner { font: 600 11px/14px "Titillium Web", var(--font-cn); text-transform: uppercase; color: var(--mute); display: flex; align-items: flex-end; padding-bottom: 6px; }
+.gHead, .gHeadFuture { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 4px; padding-bottom: 6px; font-family: var(--font-data); font-size: 11px; color: var(--mute); }
+.gHead img { width: 18px; height: 12px; object-fit: cover; border-radius: 2px; }
+.gHeadFuture i { width: 4px; height: 4px; border-radius: 50%; background: var(--line); }
+.gRow { display: contents; }
+.gName { display: grid; grid-template-columns: 22px minmax(0, 1fr); align-items: center; gap: 8px; height: 26px; padding-left: 4px; font-size: 13px; }
+.gName .num { color: var(--mute); font-size: 12px; text-align: right; }
+.gName b { font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.gPerson { gap: 8px !important; overflow: hidden; }
+.gPerson > span { flex-wrap: nowrap !important; min-width: 0; }
+.gName em { font-size: 11px; padding-right: 8px; }
+.grid a.res:hover { outline: 2px solid var(--ink); outline-offset: -2px; }
+.gHeadTodo { opacity: .45; }
+.gHeadTodo:hover { opacity: 1; }
+.gReplayLabel { font: 600 11px/14px "Titillium Web", var(--font-cn); text-transform: uppercase; color: var(--mute); display: flex; align-items: center; padding-left: 4px; height: 22px; }
+.gPlay { display: grid; place-items: center; height: 22px; border-radius: 3px; background: var(--carbon); color: #fff; font-size: 9px; transition: background .15s; }
+.gPlay:hover { background: var(--f1-red); }
+.gFuture { height: 26px; border-left: 1px dashed var(--line); margin-left: 4px; }
+.gPts { display: grid; place-items: center end; font-family: var(--font-data); font-weight: 900; font-size: 14px; font-variant-numeric: tabular-nums; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 12px; color: var(--mute); }
+.legend span { display: inline-flex; gap: 6px; align-items: center; }
+.legend i { width: 18px; height: 14px; min-width: 18px; }
+.teams { columns: 3 260px; column-gap: 40px; margin-top: 48px; }
+.teams > a { break-inside: avoid; }
+.teams > a > b { transition: color .15s; }
+.team { display: grid; grid-template-columns: 24px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.team .num:first-child { color: var(--mute); font-size: 13px; }
+.team .num:last-child { font-size: 15px; }
+
+
+.past { background: var(--paper); padding: 0 0 88px; }
+.moments { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 56px; }
+.moment { position: relative; display: grid; grid-template-columns: 84px 1fr; grid-template-rows: auto 1fr; column-gap: 20px; row-gap: 6px; padding: 20px 0; border-top: 1px solid var(--line); }
+.momentTitle:hover, .moment > a.num:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+.moment :global(.num) { grid-row: 1 / 3; font-family: var(--font-display); font-size: 26px; font-weight: 900; line-height: 1; }
+.moment b { grid-column: 2; font-size: 16px; }
+.moment p { grid-column: 2; font-size: 14px; line-height: 1.85; color: #4a4a52; }
+.units { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; margin-top: 48px; background: #26262f; border-radius: 8px; overflow: hidden; }
+.unit { background: var(--carbon); padding: 22px; display: flex; flex-direction: column; gap: 6px; transition: background .2s; }
+.unit:hover { background: #1f1f27; }
+.unit b { font-size: 20px; font-weight: 900; }
+.unit span { font-size: 13px; color: #9a9aa6; }
+.unit b::after { content: ""; display: inline-block; width: 18px; height: 18px; margin-left: 4px; vertical-align: -3px; background: var(--f1-red); -webkit-mask: var(--i-chevron-right) center / contain no-repeat; mask: var(--i-chevron-right) center / contain no-repeat; }
+
+@media (max-width: 1100px) { .heroGrid, .heroLive .heroGrid { grid-template-columns: minmax(0, 1fr); max-height: none; } .rail { grid-column: 1; } .track { inset: 30% -20% 0 -20%; opacity: .55; } }
+@media (max-width: 760px) {
+  .sessions { grid-template-columns: repeat(3, 1fr); }
+  .podium { grid-template-columns: 1fr; }
+  .units { grid-template-columns: 1fr 1fr; }
+  .trackNote { display: none; }
+}
+.otd { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); gap: 12px; }
+/* "on this day" race cards: neutral white, the winner as a filled team-colour foot */
+.otdRow { position: relative; background: #fff; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+.otdHead { display: flex; align-items: baseline; gap: 12px; padding: 16px 18px 14px; }
+.otdHead :global(.num) { font-size: 26px; font-family: var(--font-display); font-weight: 900; line-height: 1; }
+.otdHead b { font-size: 16px; font-weight: 900; }
+.otdHead b a:hover, .otdHead > a.num:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+.otdWho { margin-top: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 12px; padding: 12px 18px; font-size: 13px; }
+.title { font-size: 18px; line-height: 1.8; color: #3a3a42; margin: -8px 0 28px; max-width: 900px; }
+.title > b { color: var(--ink); font-weight: 900; }
+.title .num { font-family: var(--font-display); font-size: 20px; margin: 0 2px; }
+
+/* entity links that sit in already-styled headings / hero lines */
+.heroLink { color: inherit; text-decoration: underline; text-decoration-color: rgba(255,255,255,.3); text-underline-offset: 4px; text-decoration-thickness: 1px; }
+.heroLink:hover { text-decoration-color: currentColor; text-decoration-thickness: 1.5px; }
+.hLink { color: inherit; }
+.hLink:hover { text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 4px; }
+
+/* live phase: the hero shrinks to ~60% and hands the standings to the last-race block */
+.heroLive .heroGrid { min-height: 410px; padding-bottom: 40px; grid-template-columns: minmax(0, 560px) 1fr; }
+.liveTag { display: inline-flex; align-items: center; gap: 10px; align-self: flex-start; padding: 8px 16px; border-radius: 999px; background: var(--f1-red); color: #fff; font: 900 20px/24px var(--font-display); }
+.liveTag i { width: 9px; height: 9px; border-radius: 50%; background: #fff; animation: livePulse 1.6s infinite; }
+@keyframes livePulse { 50% { opacity: .35; } }
+/* offseason hero */
+.champs { display: flex; flex-wrap: wrap; gap: 20px 40px; margin-top: 32px; }
+.champ { display: inline-flex; align-items: center; gap: 14px; font-size: 18px; }
+/* /live?year= replay mode title strip */
+.replayHead { background: var(--carbon); color: #fff; padding: 48px 0 8px; }
+.replayHead :global(.cn-h1) { margin-top: 10px; }
+.replaySub { margin-top: 14px; font-size: 14px; color: rgba(255,255,255,.7); display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.leader { display: inline-flex; vertical-align: middle; margin-right: 10px; }
+.tPerson { vertical-align: -6px; gap: 6px !important; }
+.tPerson b { font-weight: 900; color: var(--ink); }

@@ -1,0 +1,38 @@
+{
+  "name": "pitwall-f1",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3210",
+    "build": "next build",
+    "start": "next start -p 3210",
+    "shot": "node scripts/shot.mjs",
+    "update-data": "node scripts/update-data.mjs",
+    "tracks": "node scripts/build-tracks.mjs",
+    "wiki-map": "node --no-warnings scripts/build-wiki-map.mjs",
+    "zh-names": "node scripts/build-zh-names.mjs && node scripts/refine-zh-names.mjs",
+    "validate": "node --no-warnings scripts/validate-content.mjs"
+  },
+  "dependencies": {
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.1",
+    "next": "^16.4.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "three": "^0.186.1",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.186.0",
+    "@types/topojson-client": "^3.1.5",
+    "playwright": "^1.64.0",
+    "typescript": "^7.0.2"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}

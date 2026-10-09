@@ -1,0 +1,908 @@
+{
+  "pierre-gasly": {
+    "nameZh": "皮埃尔·加斯利",
+    "nameEn": "Pierre Gasly",
+    "tagline": "在蒙扎夺冠也在蒙扎夺杆的法国人",
+    "bio": "1996年生于法国鲁昂，2016年夺得GP2冠军，2017年马来西亚站代表小红牛完成F1首秀。2019年升入红牛，仅12站后被调回小红牛，同年在巴西站拿到首个领奖台。2020年驾驶阿尔法塔利赢得意大利站，成为1996年以来首位赢得分站的法国车手。2023年起效力阿尔派，2026赛季继续为换装梅赛德斯动力的阿尔派出战，并在蒙扎拿下生涯首个杆位。",
+    "highlights": [
+      {
+        "year": 2018,
+        "gp": "bahrain",
+        "circuit": "bahrain",
+        "title": "巴林站第四拿下首批积分",
+        "text": "2018年巴林站，加斯利驾驶小红牛排位第六，因汉密尔顿受罚升至第五位发车，正赛在莱科宁退赛后获得第四名，拿到个人F1生涯的首批积分。",
+        "sources": [
+          { "label": "Wikipedia · Pierre Gasly", "url": "https://en.wikipedia.org/wiki/Pierre_Gasly" }
+        ]
+      },
+      {
+        "year": 2019,
+        "gp": null,
+        "circuit": null,
+        "title": "升入红牛后被调回",
+        "text": "2019赛季加斯利升入红牛车队搭档维斯塔潘，但只跑了12站：匈牙利站后他被调回小红牛，红牛从比利时站起改由阿尔本顶替他的席位。",
+        "sources": [
+          { "label": "Wikipedia · Pierre Gasly", "url": "https://en.wikipedia.org/wiki/Pierre_Gasly" }
+        ]
+      },
+      {
+        "year": 2019,
+        "gp": "brazil",
+        "circuit": "interlagos",
+        "title": "巴西站收获首个领奖台",
+        "text": "2019年巴西站，加斯利从第六位发车。末段汉密尔顿与阿尔本相撞后，他在冲线时以0.062秒力压汉密尔顿获得第二，拿到首个领奖台。维斯塔潘夺冠，本田动力赛车自1991年以来首次包揽前二。",
+        "sources": [
+          { "label": "Wikipedia · 2019 Brazilian Grand Prix", "url": "https://en.wikipedia.org/wiki/2019_Brazilian_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2020,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "蒙扎赢得生涯首胜",
+        "text": "2020年意大利站，加斯利从第十位发车，因安全车前及时进站、汉密尔顿受罚而升至领跑，红旗后重新发车仍守住优势，以0.415秒领先塞恩斯夺冠，成为1996年帕尼斯之后首位赢得分站的法国车手。",
+        "sources": [
+          { "label": "Wikipedia · 2020 Italian Grand Prix", "url": "https://en.wikipedia.org/wiki/2020_Italian_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "sao-paulo",
+        "circuit": "interlagos",
+        "title": "雨战与奥康双双登台",
+        "text": "2024年圣保罗站雨战，加斯利从第13位发车，红旗期间换上全雨胎后名次大幅上升，最终获得第三；队友奥康获得第二，阿尔派车队首次实现双人登上领奖台。",
+        "sources": [
+          { "label": "Wikipedia · 2024 São Paulo Grand Prix", "url": "https://en.wikipedia.org/wiki/2024_S%C3%A3o_Paulo_Grand_Prix" },
+          { "label": "Wikipedia · Esteban Ocon", "url": "https://en.wikipedia.org/wiki/Esteban_Ocon" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "蒙扎拿下生涯首个杆位",
+        "text": "2026年意大利站排位赛，加斯利以1:21.786夺得个人首个杆位，这是阿尔派车队的首个杆位，他也成为1997年阿莱西之后首位拿到杆位的法国车手。正赛他获得第七名。",
+        "sources": [
+          { "label": "Wikipedia · 2026 Italian Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Italian_Grand_Prix" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "以半分之差错失日本冠军",
+        "text": "2017年加斯利在日本超级方程式为Team Mugen出战，曾连赢两站。收官战因台风“兰”取消，他最终以半分之差排在石浦宏明之后，获得年度亚军。",
+        "sources": [
+          { "label": "Wikipedia · Pierre Gasly", "url": "https://en.wikipedia.org/wiki/Pierre_Gasly" }
+        ]
+      },
+      {
+        "title": "与于贝尔一同长大",
+        "text": "加斯利与安托万·于贝尔从七岁起一起练卡丁车，两人就读同一所学校并合住多年。2019年于贝尔在斯帕的F2正赛事故中身亡，加斯利出席了葬礼，并在2020年比利时站戴上致敬头盔。",
+        "sources": [
+          { "label": "Wikipedia · Pierre Gasly", "url": "https://en.wikipedia.org/wiki/Pierre_Gasly" },
+          { "label": "Wikipedia · Anthoine Hubert", "url": "https://en.wikipedia.org/wiki/Anthoine_Hubert" }
+        ]
+      },
+      {
+        "title": "背水一战拿下GP2冠军",
+        "text": "2016年加斯利代表Prema与吉奥维纳齐激烈争夺GP2总冠军，红牛当时向他施压，要求他必须夺冠，否则可能被放弃。他最终拿下冠军，次年获得F1机会。",
+        "sources": [
+          { "label": "Wikipedia · Pierre Gasly", "url": "https://en.wikipedia.org/wiki/Pierre_Gasly" }
+        ]
+      }
+    ]
+  },
+  "franco-colapinto": {
+    "nameZh": "弗朗哥·科拉平托",
+    "nameEn": "Franco Colapinto",
+    "tagline": "2001年后首位阿根廷F1车手",
+    "bio": "2003年生于阿根廷皮拉尔，14岁独自前往意大利发展，2019年夺得西班牙F4冠军。2024年意大利站接替萨金特为威廉姆斯完成F1首秀，成为2001年以来首位参加F1的阿根廷车手，第二场比赛便拿到积分。2025年从伊莫拉站起取代杜汉为阿尔派出战，全年未能得分。2026赛季继续为阿尔派全职出战，在加拿大站获得生涯最佳的第六名。",
+    "highlights": [
+      {
+        "year": 2024,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "接替萨金特完成首秀",
+        "text": "2024年意大利站，科拉平托接替萨金特为威廉姆斯出战赛季余下比赛，成为2001年圣马力诺站马扎卡内之后首位参加F1的阿根廷车手。首秀他从第18位发车，获得第12名。",
+        "sources": [
+          { "label": "Wikipedia · Franco Colapinto", "url": "https://en.wikipedia.org/wiki/Franco_Colapinto" }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "azerbaijan",
+        "circuit": "baku",
+        "title": "巴库第八拿下首分",
+        "text": "2024年阿塞拜疆站，科拉平托在第二场F1比赛中从第八位发车并以第八名完赛，拿到4分，成为1982年罗伊特曼之后首位在F1得分的阿根廷车手。",
+        "sources": [
+          { "label": "Wikipedia · 2024 Azerbaijan Grand Prix", "url": "https://en.wikipedia.org/wiki/2024_Azerbaijan_Grand_Prix" },
+          { "label": "Wikipedia · Franco Colapinto", "url": "https://en.wikipedia.org/wiki/Franco_Colapinto" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "emilia-romagna",
+        "circuit": "imola",
+        "title": "伊莫拉起接替杜汉",
+        "text": "科拉平托2025年以测试及后备车手身份加盟阿尔派，迈阿密站后接过杜汉的比赛席位，从伊莫拉站开始出战。他全年最好成绩是荷兰站第11名，赛季未能拿到积分。",
+        "sources": [
+          { "label": "Wikipedia · Franco Colapinto", "url": "https://en.wikipedia.org/wiki/Franco_Colapinto" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "canada",
+        "circuit": "montreal",
+        "title": "蒙特利尔刷新最好成绩",
+        "text": "2026年加拿大站，科拉平托从第十位发车，最终落后一圈获得第六名，拿到8分，创下个人F1最好成绩。队友加斯利同场获得第八，阿尔派两车均进入积分区。",
+        "sources": [
+          { "label": "Wikipedia · 2026 Canadian Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Canadian_Grand_Prix" },
+          { "label": "Wikipedia · Franco Colapinto", "url": "https://en.wikipedia.org/wiki/Franco_Colapinto" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "great-britain",
+        "circuit": "silverstone",
+        "title": "银石从第19位追至第九",
+        "text": "2026年英国站，科拉平托排位赛止步Q1，从第19位发车。他第一圈在Club弯出现半打滑，之后一路追赶，最终获得第九名，拿到2分。",
+        "sources": [
+          { "label": "Wikipedia · 2026 British Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_British_Grand_Prix" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "14岁独自远赴意大利",
+        "text": "科拉平托9岁开始练卡丁车，14岁时独自移居意大利继续赛车生涯。为了支付他2018和2019年的参赛费用，他的父亲卖掉了自家的房子。",
+        "sources": [
+          { "label": "Wikipedia · Franco Colapinto", "url": "https://en.wikipedia.org/wiki/Franco_Colapinto" }
+        ]
+      },
+      {
+        "title": "青奥会卡丁车表演赛冠军",
+        "text": "2018年夏季青年奥运会设有卡丁车表演赛，科拉平托赢得了这项比赛。次年他代表Drivex车队以11场胜利、10个杆位夺得西班牙F4冠军。",
+        "sources": [
+          { "label": "Wikipedia · Franco Colapinto", "url": "https://en.wikipedia.org/wiki/Franco_Colapinto" }
+        ]
+      }
+    ]
+  },
+  "esteban-ocon": {
+    "nameZh": "埃斯特班·奥康",
+    "nameEn": "Esteban Ocon",
+    "tagline": "曾以房车为家的分站冠军",
+    "bio": "1996年生于法国埃夫勒，2014年力压维斯塔潘夺得欧洲F3冠军，次年拿下GP3冠军。2016年比利时站代表马诺完成F1首秀，随后效力印度力量；2019年失去席位，转任梅赛德斯后备车手。2020年随雷诺回归，2021年在匈牙利站为阿尔派赢得车队首胜。2025年转投哈斯，2026赛季仍效力哈斯，并已宣布将在赛季结束后离队。",
+    "highlights": [
+      {
+        "year": 2016,
+        "gp": "belgium",
+        "circuit": "spa-francorchamps",
+        "title": "斯帕完成F1首秀",
+        "text": "2016赛季下半程，奥康接替哈里安托加盟马诺车队，在比利时站完成F1首秀。他排位第18，正赛获得第16名。",
+        "sources": [
+          { "label": "Wikipedia · Esteban Ocon", "url": "https://en.wikipedia.org/wiki/Esteban_Ocon" }
+        ]
+      },
+      {
+        "year": 2020,
+        "gp": "sakhir",
+        "circuit": "bahrain",
+        "title": "萨基尔站首登领奖台",
+        "text": "2020年萨基尔大奖赛，回归雷诺的奥康从第11位发车获得第二，拿到个人首个F1领奖台，这也是雷诺车队自2010年以来的最好成绩。同场比赛佩雷斯赢得生涯首胜。",
+        "sources": [
+          { "label": "Wikipedia · 2020 Sakhir Grand Prix", "url": "https://en.wikipedia.org/wiki/2020_Sakhir_Grand_Prix" },
+          { "label": "Wikipedia · Esteban Ocon", "url": "https://en.wikipedia.org/wiki/Esteban_Ocon" }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": "hungary",
+        "circuit": "hungaroring",
+        "title": "匈牙利站收获首胜",
+        "text": "2021年匈牙利站，奥康从第八位发车，第一圈多车相撞后升至前列，红旗后重新起步并接过领先，顶住维特尔的压力赢得生涯首胜。这是阿尔派车队首胜，也是恩斯通车队自2013年以来的首个分站冠军。",
+        "sources": [
+          { "label": "Wikipedia · 2021 Hungarian Grand Prix", "url": "https://en.wikipedia.org/wiki/2021_Hungarian_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2023,
+        "gp": "monaco",
+        "circuit": "monaco",
+        "title": "摩纳哥站获得第三",
+        "text": "2023年摩纳哥站，奥康因勒克莱尔受罚而从第三位发车，进站后一度被拉塞尔超越，又在对手失误并受罚后重回第三，拿到生涯第三个领奖台，并当选车手之日。",
+        "sources": [
+          { "label": "Wikipedia · Esteban Ocon", "url": "https://en.wikipedia.org/wiki/Esteban_Ocon" }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "sao-paulo",
+        "circuit": "interlagos",
+        "title": "圣保罗雨战获得亚军",
+        "text": "2024年圣保罗站雨战，奥康从第四位发车并一度领跑，后被维斯塔潘超越，最终获得第二；队友加斯利获得第三，阿尔派实现车队首次双人登台。",
+        "sources": [
+          { "label": "Wikipedia · 2024 São Paulo Grand Prix", "url": "https://en.wikipedia.org/wiki/2024_S%C3%A3o_Paulo_Grand_Prix" },
+          { "label": "Wikipedia · Esteban Ocon", "url": "https://en.wikipedia.org/wiki/Esteban_Ocon" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": null,
+        "circuit": null,
+        "title": "宣布赛季末离开哈斯",
+        "text": "2026年9月30日，奥康宣布将在赛季结束后离开哈斯，并表示自己的F1生涯并未结束。此前他为哈斯参加了39场大奖赛，12次进入积分区，最好成绩是2025年中国站第五。",
+        "sources": [
+          { "label": "Formula1.com · Ocon confirms he will leave Haas at end of 2026 season", "url": "https://www.formula1.com/en/latest/article/ocon-confirms-he-will-leave-haas-at-end-of-2026-season.cJjg9W9Om5ZW6Mn9GZ75v" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "卖掉房子住进房车",
+        "text": "奥康的父亲是汽修厂老板。为了支付卡丁车开销，父母卖掉了连同修车厂在内的家宅，一家人搬进一辆房车，它同时充当赶赴比赛的移动营地。奥康曾说自己差点放弃赛车去麦当劳打工。",
+        "sources": [
+          { "label": "Wikipedia · Esteban Ocon", "url": "https://en.wikipedia.org/wiki/Esteban_Ocon" }
+        ]
+      },
+      {
+        "title": "欧洲F3力压维斯塔潘",
+        "text": "2014年奥康代表Prema参加欧洲F3锦标赛，在33场比赛中赢得9场、拿下15个杆位，最终力压布隆奎斯特和维斯塔潘夺冠。次年他又代表ART拿下GP3冠军。",
+        "sources": [
+          { "label": "Wikipedia · Esteban Ocon", "url": "https://en.wikipedia.org/wiki/Esteban_Ocon" }
+        ]
+      },
+      {
+        "title": "与加斯利的童年交情",
+        "text": "奥康与加斯利自幼相识，但两人的关系在卡丁车时期逐渐恶化。2023年两人在阿尔派成为队友，2024年圣保罗站又一同登上领奖台。",
+        "sources": [
+          { "label": "Wikipedia · Pierre Gasly", "url": "https://en.wikipedia.org/wiki/Pierre_Gasly" },
+          { "label": "Wikipedia · 2024 São Paulo Grand Prix", "url": "https://en.wikipedia.org/wiki/2024_S%C3%A3o_Paulo_Grand_Prix" }
+        ]
+      }
+    ]
+  },
+  "oliver-bearman": {
+    "nameZh": "奥利弗·贝尔曼",
+    "nameEn": "Oliver Bearman",
+    "tagline": "为法拉利出战的最年轻车手",
+    "bio": "2005年生于英国，16岁离开学校加入法拉利车手学院，2021年同时夺得意大利F4和德国ADAC F4冠军。2024年沙特站临时顶替患阑尾炎的塞恩斯完成F1首秀并获得第七，同年又两度代表哈斯出战。2025年成为哈斯正式车手，在墨西哥城站获得第四，追平车队历史最好成绩。2026赛季继续效力哈斯，在澳大利亚站获得第七、中国站获得第五。",
+    "highlights": [
+      {
+        "year": 2024,
+        "gp": "saudi-arabia",
+        "circuit": "jeddah",
+        "title": "临危受命顶替塞恩斯",
+        "text": "2024年沙特站，塞恩斯因阑尾炎退出，18岁的法拉利后备车手贝尔曼从第三次练习赛起顶替出战。他排位第11，正赛获得第七，成为为法拉利出战的最年轻车手，并当选车手之日。",
+        "sources": [
+          { "label": "Wikipedia · 2024 Saudi Arabian Grand Prix", "url": "https://en.wikipedia.org/wiki/2024_Saudi_Arabian_Grand_Prix" },
+          { "label": "Wikipedia · Oliver Bearman", "url": "https://en.wikipedia.org/wiki/Oliver_Bearman" }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "azerbaijan",
+        "circuit": "baku",
+        "title": "为哈斯代打再度得分",
+        "text": "2024年阿塞拜疆站，马格努森因累积处罚分被禁赛一场，贝尔曼代表哈斯出战，从第十位发车获得第十。他由此成为首位在前两场F1比赛中为两支不同车队得分的车手。",
+        "sources": [
+          { "label": "Wikipedia · 2024 Azerbaijan Grand Prix", "url": "https://en.wikipedia.org/wiki/2024_Azerbaijan_Grand_Prix" },
+          { "label": "Wikipedia · Oliver Bearman", "url": "https://en.wikipedia.org/wiki/Oliver_Bearman" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "mexico",
+        "circuit": "mexico-city",
+        "title": "墨西哥城获得第四",
+        "text": "2025年墨西哥城站，贝尔曼从第九位发车，在维斯塔潘与汉密尔顿缠斗时顺势上升，收官阶段顶住皮亚斯特里的追击获得第四，追平格罗斯让2018年为哈斯创下的车队最好成绩。",
+        "sources": [
+          { "label": "Wikipedia · 2025 Mexico City Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Mexico_City_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "china",
+        "circuit": "shanghai",
+        "title": "上海站跑进前五",
+        "text": "2026年中国站，贝尔曼先在冲刺赛获得第八拿到1分，正赛又从第十位发车获得第五名。此前的揭幕战澳大利亚站，他从第12位发车获得第七。",
+        "sources": [
+          { "label": "Wikipedia · Oliver Bearman", "url": "https://en.wikipedia.org/wiki/Oliver_Bearman" },
+          { "label": "Wikipedia · 2026 Australian Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Australian_Grand_Prix" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "一年包揽两项F4冠军",
+        "text": "2021年贝尔曼代表Van Amersfoort车队同时参加意大利F4和德国ADAC F4，两项均夺得冠军，成为首位在同一年连夺两个F4冠军的车手。",
+        "sources": [
+          { "label": "Wikipedia · Oliver Bearman", "url": "https://en.wikipedia.org/wiki/Oliver_Bearman" }
+        ]
+      },
+      {
+        "title": "16岁辍学去摩德纳",
+        "text": "贝尔曼16岁时离开学校，前往摩德纳加入法拉利车手学院。他在F1使用的87号，是他在卡丁车时期就开始使用的号码。",
+        "sources": [
+          { "label": "Wikipedia · Oliver Bearman", "url": "https://en.wikipedia.org/wiki/Oliver_Bearman" }
+        ]
+      },
+      {
+        "title": "距离禁赛仅差两分",
+        "text": "2025年意大利站，贝尔曼与塞恩斯发生碰撞，被罚10秒并被记2个处罚分，累计达到10分，距离触发禁赛的12分只差两分。",
+        "sources": [
+          { "label": "Wikipedia · Oliver Bearman", "url": "https://en.wikipedia.org/wiki/Oliver_Bearman" }
+        ]
+      }
+    ]
+  },
+  "nico-hulkenberg": {
+    "nameZh": "尼科·霍肯伯格",
+    "nameEn": "Nico Hülkenberg",
+    "tagline": "第239次发车终登领奖台",
+    "bio": "1987年生于德国埃默里希，2009年在GP2首个赛季即夺冠，2010年随威廉姆斯升入F1，此后效力印度力量、索伯、雷诺等队，2015年以现役F1车手身份赢得勒芒24小时。2020和2022年多次临时替补出战，2023年随哈斯重返全职。2025年回到索伯，在英国站第239次发车时首登领奖台。2026赛季代表奥迪厂队出战。",
+    "highlights": [
+      {
+        "year": 2010,
+        "gp": "brazil",
+        "circuit": "interlagos",
+        "title": "新秀赛季巴西夺杆",
+        "text": "2010年巴西站排位赛受雨水影响，新秀霍肯伯格驾驶威廉姆斯领先维特尔1.049秒夺得杆位，这是威廉姆斯自2005年欧洲站以来的首个杆位。正赛他获得第八。",
+        "sources": [
+          { "label": "Wikipedia · Nico Hülkenberg", "url": "https://en.wikipedia.org/wiki/Nico_H%C3%BClkenberg" }
+        ]
+      },
+      {
+        "year": 2015,
+        "gp": null,
+        "circuit": null,
+        "title": "勒芒首秀即夺冠",
+        "text": "2015年霍肯伯格与班伯、坦迪驾驶保时捷19号919 Hybrid赢得勒芒24小时，成为1991年以来首位夺得勒芒总冠军的现役F1车手，也是1998年以来首位首次参赛即夺冠的车手。",
+        "sources": [
+          { "label": "Wikipedia · 2015 24 Hours of Le Mans", "url": "https://en.wikipedia.org/wiki/2015_24_Hours_of_Le_Mans" }
+        ]
+      },
+      {
+        "year": 2020,
+        "gp": "eifel",
+        "circuit": "nurburgring",
+        "title": "临时顶替跑进前八",
+        "text": "2020年埃菲尔大奖赛，斯托尔在第三次练习赛前身体不适，担任赛点后备车手的霍肯伯格临时顶替出战。他从第20位发车，正赛追至第八名，拿到4分。",
+        "sources": [
+          { "label": "Wikipedia · 2020 Eifel Grand Prix", "url": "https://en.wikipedia.org/wiki/2020_Eifel_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "great-britain",
+        "circuit": "silverstone",
+        "title": "第239场终登领奖台",
+        "text": "2025年英国站雨战，霍肯伯格驾驶索伯从第19位发车获得第三，在第239次发车时拿到生涯首个领奖台，创下等待领奖台最久的纪录，也是索伯自2012年日本站以来的首个领奖台。",
+        "sources": [
+          { "label": "Wikipedia · 2025 British Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_British_Grand_Prix" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "“绿巨人”绰号的由来",
+        "text": "霍肯伯格的绰号“The Hulk”由前经纪人威利·韦伯所起，指他一坐进赛车就性格大变。他早年还曾在父亲的物流公司接受过货运代理培训。",
+        "sources": [
+          { "label": "Wikipedia · Nico Hülkenberg", "url": "https://en.wikipedia.org/wiki/Nico_H%C3%BClkenberg" }
+        ]
+      },
+      {
+        "title": "A1GP新秀赛季九胜",
+        "text": "2006–07赛季，霍肯伯格首次参加A1大奖赛便赢下九场比赛，帮助德国队夺得总冠军。此前他在2005年拿下德国宝马方程式ADAC冠军，2008年又赢得F3欧洲系列赛冠军。",
+        "sources": [
+          { "label": "Wikipedia · Nico Hülkenberg", "url": "https://en.wikipedia.org/wiki/Nico_H%C3%BClkenberg" }
+        ]
+      },
+      {
+        "title": "无胜出场最多的车手",
+        "text": "霍肯伯格是F1史上登上领奖台前出场次数最多的车手，共等了239场；截至2026年巴林站，他已完成265次发车仍未赢得分站冠军，这同样是F1纪录。",
+        "sources": [
+          { "label": "Wikipedia · Nico Hülkenberg", "url": "https://en.wikipedia.org/wiki/Nico_H%C3%BClkenberg" }
+        ]
+      }
+    ]
+  },
+  "gabriel-bortoleto": {
+    "nameZh": "加布里埃尔·博尔托莱托",
+    "nameEn": "Gabriel Bortoleto",
+    "tagline": "连夺F3与F2冠军的巴西车手",
+    "bio": "2004年生于巴西奥萨斯库，11岁移居欧洲，由阿隆索创办的A14经纪公司管理。2023年夺得FIA F3冠军，2024年以新秀身份赢得F2冠军。2025年随索伯完成F1首秀，奥地利站拿到首个积分，匈牙利站获得第六。2026年索伯转为奥迪厂队，他在揭幕战澳大利亚站获得第九，为奥迪拿下F1首个积分。",
+    "highlights": [
+      {
+        "year": 2024,
+        "gp": null,
+        "circuit": null,
+        "title": "连夺F3与F2冠军",
+        "text": "博尔托莱托2023年代表Trident夺得FIA F3冠军，2024年加盟Invicta后以新秀身份赢得F2冠军，成为继勒克莱尔、拉塞尔和皮亚斯特里之后，F2时代第四位连续两年拿下F3和F2冠军的车手。",
+        "sources": [
+          { "label": "Wikipedia · Gabriel Bortoleto", "url": "https://en.wikipedia.org/wiki/Gabriel_Bortoleto" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "墨尔本完成F1首秀",
+        "text": "2025年澳大利亚站，博尔托莱托为索伯完成F1首秀，排位赛闯入Q2并压过队友霍肯伯格，但正赛在多变的赛道条件下撞车退赛。",
+        "sources": [
+          { "label": "Wikipedia · Gabriel Bortoleto", "url": "https://en.wikipedia.org/wiki/Gabriel_Bortoleto" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "austria",
+        "circuit": "spielberg",
+        "title": "奥地利站首次得分",
+        "text": "2025年奥地利站，博尔托莱托从第八位发车，末段与阿隆索争夺第七未果，以第八名完赛，拿到个人首个F1积分，也是2017年以来首位在F1得分的巴西车手。",
+        "sources": [
+          { "label": "Wikipedia · 2025 Austrian Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Austrian_Grand_Prix" },
+          { "label": "Wikipedia · Gabriel Bortoleto", "url": "https://en.wikipedia.org/wiki/Gabriel_Bortoleto" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "hungary",
+        "circuit": "hungaroring",
+        "title": "匈牙利站获得第六",
+        "text": "2025年匈牙利站，博尔托莱托排位第七闯入Q3，正赛获得第六名，拿到8分，创下个人F1最好成绩，也帮助索伯把连续得分的场次延长到六场。",
+        "sources": [
+          { "label": "Wikipedia · 2025 Hungarian Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Hungarian_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "为奥迪拿下首个积分",
+        "text": "2026年澳大利亚站是奥迪以自家动力单元参加F1的首场比赛，博尔托莱托从第十位发车获得第九，为奥迪拿下F1首个积分；队友霍肯伯格因机械问题未能发车。",
+        "sources": [
+          { "label": "Wikipedia · 2026 Australian Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Australian_Grand_Prix" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "阿隆索的门生",
+        "text": "博尔托莱托自2022年9月起由阿隆索拥有的A14经纪公司管理，被视为阿隆索的门生。2023至2024年他还曾是迈凯伦车手发展计划成员，并在红牛环试驾过迈凯伦MCL36。",
+        "sources": [
+          { "label": "Wikipedia · Gabriel Bortoleto", "url": "https://en.wikipedia.org/wiki/Gabriel_Bortoleto" }
+        ]
+      },
+      {
+        "title": "蒙扎从最后一位夺冠",
+        "text": "2024年F2蒙扎站正赛，新秀博尔托莱托从最后一位发车最终夺冠，成为首位从最后一位发车赢得F2比赛的车手。这一年他最终拿下F2年度冠军。",
+        "sources": [
+          { "label": "Wikipedia · Gabriel Bortoleto", "url": "https://en.wikipedia.org/wiki/Gabriel_Bortoleto" }
+        ]
+      },
+      {
+        "title": "11岁远赴欧洲",
+        "text": "博尔托莱托2011年10月开始练卡丁车，11岁移居欧洲，2018年在OK-Junior组别的欧洲锦标赛和世界锦标赛中均获得第三。他的赛车偶像是塞纳。",
+        "sources": [
+          { "label": "Wikipedia · Gabriel Bortoleto", "url": "https://en.wikipedia.org/wiki/Gabriel_Bortoleto" }
+        ]
+      }
+    ]
+  },
+  "sergio-perez": {
+    "nameZh": "塞尔吉奥·佩雷斯",
+    "nameEn": "Sergio Pérez",
+    "tagline": "第190场比赛才等来首胜",
+    "bio": "1990年生于墨西哥瓜达拉哈拉，2011年随索伯完成F1首秀，次年在马来西亚站首登领奖台。效力迈凯伦一年后，长期为印度力量及其后身赛点出战，2020年萨基尔站在第190场比赛中赢得首胜。2021至2024年效力红牛，再添5个分站冠军，2023年获得年度亚军。2024赛季后离开红牛，休战一年后于2026年随新军凯迪拉克回归。",
+    "highlights": [
+      {
+        "year": 2012,
+        "gp": "malaysia",
+        "circuit": "sepang",
+        "title": "雪邦紧逼阿隆索",
+        "text": "2012年马来西亚站，佩雷斯驾驶索伯一度追到阿隆索身后0.5秒，但在14号弯冲出赛道，最终落后2.2秒获得第二，拿到个人首个F1领奖台。",
+        "sources": [
+          { "label": "Wikipedia · Sergio Pérez", "url": "https://en.wikipedia.org/wiki/Sergio_P%C3%A9rez" }
+        ]
+      },
+      {
+        "year": 2020,
+        "gp": "sakhir",
+        "circuit": "bahrain",
+        "title": "萨基尔站从队尾夺冠",
+        "text": "2020年萨基尔大奖赛，佩雷斯从第五位发车，开局在4号弯被勒克莱尔撞到打转，掉到队尾，此后一路追赶并在第64圈接过领先，赢得第190场比赛中的首胜，也是1970年以来首位赢得分站的墨西哥车手。",
+        "sources": [
+          { "label": "Wikipedia · 2020 Sakhir Grand Prix", "url": "https://en.wikipedia.org/wiki/2020_Sakhir_Grand_Prix" },
+          { "label": "Wikipedia · Sergio Pérez", "url": "https://en.wikipedia.org/wiki/Sergio_P%C3%A9rez" }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": "abu-dhabi",
+        "circuit": "yas-marina",
+        "title": "阿布扎比拖住汉密尔顿",
+        "text": "2021年阿布扎比站，佩雷斯在两位争冠者进站后领跑，并被要求拖住汉密尔顿，帮助维斯塔潘把差距从约11秒缩小到1.3秒左右。他本人在比赛末段因油压故障退赛。",
+        "sources": [
+          { "label": "Wikipedia · 2021 Abu Dhabi Grand Prix", "url": "https://en.wikipedia.org/wiki/2021_Abu_Dhabi_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2022,
+        "gp": "monaco",
+        "circuit": "monaco",
+        "title": "摩纳哥站夺冠",
+        "text": "2022年摩纳哥站，佩雷斯从第三位发车赢得比赛，这是他为红牛赢得的第二个分站冠军。同一赛季他还在沙特站拿到生涯首个杆位，并在新加坡站再度夺冠，年终排名第三。",
+        "sources": [
+          { "label": "Wikipedia · Sergio Pérez", "url": "https://en.wikipedia.org/wiki/Sergio_P%C3%A9rez" }
+        ]
+      },
+      {
+        "year": 2023,
+        "gp": null,
+        "circuit": null,
+        "title": "年度亚军",
+        "text": "2023赛季佩雷斯赢得沙特和阿塞拜疆两站，全年获得285分，以车手积分榜第二完成赛季，仅次于队友维斯塔潘，这是他职业生涯最好的年终排名。",
+        "sources": [
+          { "label": "Wikipedia · Sergio Pérez", "url": "https://en.wikipedia.org/wiki/Sergio_P%C3%A9rez" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": null,
+        "circuit": null,
+        "title": "签约凯迪拉克回归",
+        "text": "2024赛季结束后佩雷斯与红牛协议解约，2025年休战一年。同年8月，凯迪拉克宣布由他与博塔斯搭档参加车队2026年的首个F1赛季，他继续使用11号。",
+        "sources": [
+          { "label": "Wikipedia · Sergio Pérez", "url": "https://en.wikipedia.org/wiki/Sergio_P%C3%A9rez" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "首秀成绩被取消",
+        "text": "2011年澳大利亚站，新秀佩雷斯以第七名冲线，但两辆索伯赛车均因尾翼违规被取消成绩，他的F1首秀因此没有留下积分。",
+        "sources": [
+          { "label": "Wikipedia · Sergio Pérez", "url": "https://en.wikipedia.org/wiki/Sergio_P%C3%A9rez" }
+        ]
+      },
+      {
+        "title": "推动印度力量破产管理",
+        "text": "2018年7月匈牙利站期间，包括佩雷斯在内的一批债权人推动印度力量进入破产管理程序。佩雷斯表示，此举是为避免税务部门的清盘申请令车队倒闭。随后斯托尔牵头的财团收购了车队资产。",
+        "sources": [
+          { "label": "Wikipedia · Force India", "url": "https://en.wikipedia.org/wiki/Force_India" }
+        ]
+      },
+      {
+        "title": "曾是法拉利青训成员",
+        "text": "2010至2012年佩雷斯是法拉利车手学院成员，在此期间以索伯车手身份进入F1。更早的2007年，他还获得英国F3国家组冠军。",
+        "sources": [
+          { "label": "Wikipedia · Sergio Pérez", "url": "https://en.wikipedia.org/wiki/Sergio_P%C3%A9rez" }
+        ]
+      }
+    ]
+  },
+  "valtteri-bottas": {
+    "nameZh": "瓦尔特利·博塔斯",
+    "nameEn": "Valtteri Bottas",
+    "tagline": "10胜20杆的芬兰车手",
+    "bio": "1989年生于芬兰纳斯托拉，2011年夺得GP3冠军，2013年随威廉姆斯完成F1首秀，次年以6个领奖台获得年度第四。2017年接替退役的罗斯伯格加盟梅赛德斯，五个赛季赢得10个分站冠军，2019和2020年两度获得年度亚军。2022至2024年效力阿尔法·罗密欧和索伯，2025年回到梅赛德斯担任后备车手，2026年与佩雷斯搭档加盟凯迪拉克。",
+    "highlights": [
+      {
+        "year": 2014,
+        "gp": "austria",
+        "circuit": "spielberg",
+        "title": "奥地利站首登领奖台",
+        "text": "2014年奥地利站，博塔斯驾驶威廉姆斯获得第三，拿到生涯首个领奖台。这一年他共6次登台，以186分排名车手榜第四，领先维特尔和阿隆索。",
+        "sources": [
+          { "label": "Wikipedia · Valtteri Bottas", "url": "https://en.wikipedia.org/wiki/Valtteri_Bottas" }
+        ]
+      },
+      {
+        "year": 2016,
+        "gp": "europe",
+        "circuit": "baku",
+        "title": "巴库跑出378公里时速",
+        "text": "2016年在巴库举行的欧洲大奖赛排位赛中，博塔斯驾驶威廉姆斯跑出378公里/小时的速度，创下F1非官方的最高速纪录。正赛他获得第六名。",
+        "sources": [
+          { "label": "Wikipedia · Valtteri Bottas", "url": "https://en.wikipedia.org/wiki/Valtteri_Bottas" }
+        ]
+      },
+      {
+        "year": 2017,
+        "gp": "russia",
+        "circuit": "sirius",
+        "title": "索契收获首胜",
+        "text": "2017年俄罗斯站，博塔斯从第三位发车，起步后在2号弯前连超两辆法拉利，最终以0.617秒领先维特尔夺冠，成为第五位赢得F1分站冠军的芬兰车手。",
+        "sources": [
+          { "label": "Wikipedia · 2017 Russian Grand Prix", "url": "https://en.wikipedia.org/wiki/2017_Russian_Grand_Prix" },
+          { "label": "Wikipedia · Valtteri Bottas", "url": "https://en.wikipedia.org/wiki/Valtteri_Bottas" }
+        ]
+      },
+      {
+        "year": 2019,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "墨尔本揭幕战大胜",
+        "text": "2019年澳大利亚站，博塔斯从第二位发车，第一个弯超越汉密尔顿后一路领先，以20.886秒优势夺冠，并凭最快圈拿到新规下的首个附加积分。赛后他在无线电中以“To whom it may concern”开头爆了粗口，后来解释是说给自己和批评者听的。",
+        "sources": [
+          { "label": "Wikipedia · 2019 Australian Grand Prix", "url": "https://en.wikipedia.org/wiki/2019_Australian_Grand_Prix" },
+          { "label": "Wikipedia · Valtteri Bottas", "url": "https://en.wikipedia.org/wiki/Valtteri_Bottas" }
+        ]
+      },
+      {
+        "year": 2019,
+        "gp": null,
+        "circuit": null,
+        "title": "两度年度亚军",
+        "text": "2019年博塔斯以326分获得年度亚军，2020年再以223分获得亚军，两年的冠军都是队友汉密尔顿。他职业生涯共得1797分，在未获得世界冠军的车手中排名第二。",
+        "sources": [
+          { "label": "Wikipedia · Valtteri Bottas", "url": "https://en.wikipedia.org/wiki/Valtteri_Bottas" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": null,
+        "circuit": null,
+        "title": "签约凯迪拉克",
+        "text": "2025年博塔斯回到梅赛德斯担任后备车手，并婉拒了IndyCar的邀约。同年8月，凯迪拉克宣布签下他与佩雷斯，搭档参加车队2026年的首个F1赛季，他继续使用77号。",
+        "sources": [
+          { "label": "Wikipedia · Valtteri Bottas", "url": "https://en.wikipedia.org/wiki/Valtteri_Bottas" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "创办砾石骑行赛事",
+        "text": "博塔斯与女友、澳大利亚自行车手蒂法尼·克罗姆韦尔等人共同创办了在芬兰拉赫蒂举行的砾石骑行赛事FNLD GRVL。2024年他参加UCI砾石世锦赛35至39岁组，在233人中排名第134。",
+        "sources": [
+          { "label": "Wikipedia · Valtteri Bottas", "url": "https://en.wikipedia.org/wiki/Valtteri_Bottas" }
+        ]
+      },
+      {
+        "title": "裸照日历做慈善",
+        "text": "2023年博塔斯推出名为“BOTTASS 2024”的裸体日历，为男性健康慈善项目Movember筹得15万美元；此前一张他在科罗拉多州阿斯彭溪流中的裸照义卖也筹得超过5万欧元。",
+        "sources": [
+          { "label": "Wikipedia · Valtteri Bottas", "url": "https://en.wikipedia.org/wiki/Valtteri_Bottas" }
+        ]
+      },
+      {
+        "title": "金酒与咖啡生意",
+        "text": "2022年4月，博塔斯与克罗姆韦尔推出高端金酒品牌Oath，寓意两人在澳大利亚与芬兰的家族传承。他还是拉赫蒂一家咖啡烘焙店的共同所有人，并持有当地冰球队Lahti Pelicans的10%股份。",
+        "sources": [
+          { "label": "Wikipedia · Valtteri Bottas", "url": "https://en.wikipedia.org/wiki/Valtteri_Bottas" }
+        ]
+      }
+    ]
+  },
+  "liam-lawson": {
+    "nameZh": "利亚姆·劳森",
+    "nameEn": "Liam Lawson",
+    "tagline": "两度被调入红牛的新西兰人",
+    "bio": "2002年生于新西兰黑斯廷斯，2019年夺得丰田方程式系列赛冠军，2021年获DTM亚军，2023年获日本超级方程式亚军。2023年代替受伤的里卡多完成F1首秀，2024年赛季末接过其席位。2025年升入红牛仅两站便被换回Racing Bulls。2026年作为Racing Bulls车手出战，第12至14站因哈贾尔手腕受伤临时回到红牛。",
+    "highlights": [
+      {
+        "year": 2023,
+        "gp": "netherlands",
+        "circuit": "zandvoort",
+        "title": "赞德沃特临危首秀",
+        "text": "2023年荷兰站，里卡多撞车导致手部骨折，劳森临时为阿尔法塔利出战。他排位第20，正赛获得第13名，完成F1首秀。",
+        "sources": [
+          { "label": "Wikipedia · Liam Lawson", "url": "https://en.wikipedia.org/wiki/Liam_Lawson" }
+        ]
+      },
+      {
+        "year": 2023,
+        "gp": "singapore",
+        "circuit": "marina-bay",
+        "title": "新加坡淘汰维斯塔潘",
+        "text": "2023年新加坡站，劳森在排位赛第二节把维斯塔潘挤出前十，以生涯最佳的第十位发车，正赛获得第九名，拿到个人首个F1积分。",
+        "sources": [
+          { "label": "Wikipedia · Liam Lawson", "url": "https://en.wikipedia.org/wiki/Liam_Lawson" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": null,
+        "circuit": null,
+        "title": "红牛两站即被换下",
+        "text": "2025年劳森升入红牛接替佩雷斯、搭档维斯塔潘，但在澳大利亚站撞车退赛，中国站冲刺赛和正赛排位均垫底。仅两站后他便与角田裕毅对调，从日本站起回到Racing Bulls。",
+        "sources": [
+          { "label": "Wikipedia · Liam Lawson", "url": "https://en.wikipedia.org/wiki/Liam_Lawson" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "azerbaijan",
+        "circuit": "baku",
+        "title": "巴库排位第三",
+        "text": "2025年阿塞拜疆站排位赛出现创纪录的六次红旗，劳森为Racing Bulls排到第三，正赛获得第五名，拿到10分，这是他当时的个人最好成绩。",
+        "sources": [
+          { "label": "Wikipedia · 2025 Azerbaijan Grand Prix", "url": "https://en.wikipedia.org/wiki/2025_Azerbaijan_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "netherlands",
+        "circuit": "zandvoort",
+        "title": "代替哈贾尔重返红牛",
+        "text": "2026年暑期哈贾尔手腕骨折，劳森从荷兰站起代他为红牛出战三站。他在荷兰站排位第八、正赛获得第七，西班牙站获得第六，阿塞拜疆站回到Racing Bulls。",
+        "sources": [
+          { "label": "Wikipedia · Liam Lawson", "url": "https://en.wikipedia.org/wiki/Liam_Lawson" },
+          { "label": "Wikipedia · 2026 Dutch Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Dutch_Grand_Prix" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "DTM最年轻分站冠军",
+        "text": "2021年劳森参加DTM，在蒙扎揭幕战夺冠，成为该系列赛最年轻的分站冠军。他在一场有争议的收官战后以亚军结束赛季，随后表示不会继续留在DTM。",
+        "sources": [
+          { "label": "Wikipedia · Liam Lawson", "url": "https://en.wikipedia.org/wiki/Liam_Lawson" }
+        ]
+      },
+      {
+        "title": "超级方程式首战夺冠",
+        "text": "2023年劳森转战日本超级方程式，代表Team Mugen在首场比赛即夺冠，是1978年以来首位在日本顶级方程式首秀就获胜的车手。他全年赢下3场，获得年度亚军。",
+        "sources": [
+          { "label": "Wikipedia · Liam Lawson", "url": "https://en.wikipedia.org/wiki/Liam_Lawson" }
+        ]
+      },
+      {
+        "title": "30号的来历",
+        "text": "劳森在F1使用的30号，是他从8岁起就使用的号码，用以纪念他的卡丁车导师。为了支持他的赛车事业，他的父母曾卖掉家里的房子。",
+        "sources": [
+          { "label": "Wikipedia · Liam Lawson", "url": "https://en.wikipedia.org/wiki/Liam_Lawson" }
+        ]
+      }
+    ]
+  },
+  "arvid-lindblad": {
+    "nameZh": "阿尔维德·林德布拉德",
+    "nameEn": "Arvid Lindblad",
+    "tagline": "英国最年轻的F1车手",
+    "bio": "2007年生于英国萨里郡，父亲是瑞典人，母亲是英籍印度裔。2021年起受红牛青训支持，先后成为FIA F3最年轻的正赛冠军和F2最年轻的分站冠军，17岁时经FIA特批获得超级驾照。2025年12月签约Racing Bulls，2026年在澳大利亚站完成F1首秀，成为F1史上第四年轻、英国最年轻的正赛车手，并在首战拿到积分。",
+    "highlights": [
+      {
+        "year": 2025,
+        "gp": null,
+        "circuit": null,
+        "title": "改写F2最年轻冠军纪录",
+        "text": "2024年林德布拉德成为FIA F3历史上最年轻的正赛冠军；2025年F2吉达站冲刺赛，维斯霍尔受罚后胜利判给了他，他以17岁254天成为F2史上最年轻的分站冠军，首个F2赛季获得年度第六。",
+        "sources": [
+          { "label": "Wikipedia · Arvid Lindblad", "url": "https://en.wikipedia.org/wiki/Arvid_Lindblad" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "great-britain",
+        "circuit": "silverstone",
+        "title": "银石为红牛参加练习赛",
+        "text": "2025年英国站，林德布拉德在练习赛中顶替角田裕毅为红牛出战，跑出第14快。此后他又在墨西哥城站顶替维斯塔潘、在阿布扎比站顶替角田参加练习赛，其中墨西哥城站排名第六。",
+        "sources": [
+          { "label": "Wikipedia · Arvid Lindblad", "url": "https://en.wikipedia.org/wiki/Arvid_Lindblad" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "18岁首秀即得分",
+        "text": "2026年澳大利亚站，18岁的林德布拉德为Racing Bulls完成F1首秀，排位第九，正赛一度跑在领奖台位置，最终获得第八。他成为F1史上第四年轻的正赛车手，也超过贝尔曼成为最年轻的英国车手。",
+        "sources": [
+          { "label": "Wikipedia · Arvid Lindblad", "url": "https://en.wikipedia.org/wiki/Arvid_Lindblad" },
+          { "label": "Wikipedia · 2026 Australian Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Australian_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "great-britain",
+        "circuit": "silverstone",
+        "title": "英国站获得第七",
+        "text": "2026年英国大奖赛，林德布拉德冲刺赛获得第十，正赛排位第九闯入Q3，最终获得第七名，拿到6分；队友劳森同场获得第六，Racing Bulls两车均进入积分区。",
+        "sources": [
+          { "label": "Wikipedia · 2026 British Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_British_Grand_Prix" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "17岁获特批超级驾照",
+        "text": "林德布拉德17岁时，FIA应红牛请求特批向他发放超级驾照，与2024年安东内利获得的批准类似。他还凭借夺得2025年新西兰FRO地区方程式冠军获得18个超级驾照积分。",
+        "sources": [
+          { "label": "Wikipedia · Arvid Lindblad", "url": "https://en.wikipedia.org/wiki/Arvid_Lindblad" }
+        ]
+      },
+      {
+        "title": "瑞典与印度血统",
+        "text": "林德布拉德的父亲是瑞典人，母亲是英籍印度裔，外祖父母出生于印巴分治前的旁遮普地区。他同时拥有英国和瑞典国籍，并表示自己为身为英国人而自豪。",
+        "sources": [
+          { "label": "Wikipedia · Arvid Lindblad", "url": "https://en.wikipedia.org/wiki/Arvid_Lindblad" }
+        ]
+      },
+      {
+        "title": "41号的含义",
+        "text": "林德布拉德使用41号参赛，部分原因是这个数字形似他名字的首字母“AL”。他患有阅读障碍和乳糜泻，并完成了数学和化学两门A-level课程。",
+        "sources": [
+          { "label": "Wikipedia · Arvid Lindblad", "url": "https://en.wikipedia.org/wiki/Arvid_Lindblad" }
+        ]
+      }
+    ]
+  },
+  "yuki-tsunoda": {
+    "nameZh": "角田裕毅",
+    "nameEn": "Yuki Tsunoda",
+    "tagline": "本田与红牛共同培养的日本车手",
+    "bio": "2000年生于日本相模原，2016年起获本田方程式梦想计划支持，2019年加入红牛青训。2020年以新秀身份获得F2年度第三，2021年为阿尔法塔利完成F1首秀并拿到积分。在红牛二队效力四个多赛季后，2025年从日本站起升入红牛搭档维斯塔潘。2026年转任红牛与Racing Bulls的测试及后备车手，第12至14站代替劳森为Racing Bulls出战。",
+    "highlights": [
+      {
+        "year": 2021,
+        "gp": "bahrain",
+        "circuit": "bahrain",
+        "title": "首秀即拿到积分",
+        "text": "2021年揭幕战巴林站，角田裕毅为阿尔法塔利完成F1首秀，从第13位发车获得第九名，拿到积分。罗斯·布朗赛后称他是“多年来F1最好的新秀”。",
+        "sources": [
+          { "label": "Wikipedia · Yuki Tsunoda", "url": "https://en.wikipedia.org/wiki/Yuki_Tsunoda" }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": "abu-dhabi",
+        "circuit": "yas-marina",
+        "title": "阿布扎比获得第四",
+        "text": "2021年收官战阿布扎比站，角田裕毅从第八位发车获得第四名，拿到12分，这是他F1生涯的最好正赛成绩。他的新秀赛季以32分排名车手榜第14。",
+        "sources": [
+          { "label": "Wikipedia · 2021 Abu Dhabi Grand Prix", "url": "https://en.wikipedia.org/wiki/2021_Abu_Dhabi_Grand_Prix" },
+          { "label": "Wikipedia · Yuki Tsunoda", "url": "https://en.wikipedia.org/wiki/Yuki_Tsunoda" }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "japan",
+        "circuit": "suzuka",
+        "title": "铃鹿主场拿到积分",
+        "text": "2024年日本站，角田裕毅从第十位发车获得第十名，成为自2012年小林可梦伟登上领奖台之后，首位在本土大奖赛拿到积分的日本车手。",
+        "sources": [
+          { "label": "Wikipedia · 2024 Japanese Grand Prix", "url": "https://en.wikipedia.org/wiki/2024_Japanese_Grand_Prix" }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "japan",
+        "circuit": "suzuka",
+        "title": "主场升入红牛",
+        "text": "2025赛季仅进行两站，红牛便将角田裕毅与劳森对调，让他从日本站起搭档维斯塔潘。他在铃鹿的红牛首秀获得第12名，在巴林站拿到为红牛效力后的首个积分，全年以33分排名第17。",
+        "sources": [
+          { "label": "Wikipedia · Yuki Tsunoda", "url": "https://en.wikipedia.org/wiki/Yuki_Tsunoda" }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "临时回到Racing Bulls",
+        "text": "2026年哈贾尔手腕受伤，劳森被调往红牛，后备车手角田裕毅代替劳森为Racing Bulls出战荷兰、意大利和西班牙三站。他在蒙扎从第15位发车获得第十，拿到1分。",
+        "sources": [
+          { "label": "Wikipedia · 2026 Italian Grand Prix", "url": "https://en.wikipedia.org/wiki/2026_Italian_Grand_Prix" },
+          { "label": "Wikipedia · Yuki Tsunoda", "url": "https://en.wikipedia.org/wiki/Yuki_Tsunoda" }
+        ]
+      }
+    ],
+    "anecdotes": [
+      {
+        "title": "本田梦想计划出身",
+        "text": "角田裕毅2016年起获得本田方程式梦想计划支持，2018年代表该计划车队在茂木锁定日本F4冠军，领先名取铁平14分。2019年他在本田项目之外又加入了红牛青训。",
+        "sources": [
+          { "label": "Wikipedia · Yuki Tsunoda", "url": "https://en.wikipedia.org/wiki/Yuki_Tsunoda" }
+        ]
+      },
+      {
+        "title": "F2新秀赛季排名第三",
+        "text": "2020年角田裕毅代表Carlin参加F2，以新秀身份获得年度第三，并获得颁给F2最佳新秀的安托万·于贝尔奖，随后于2021年升入F1。",
+        "sources": [
+          { "label": "Wikipedia · Yuki Tsunoda", "url": "https://en.wikipedia.org/wiki/Yuki_Tsunoda" },
+          { "label": "Wikipedia · Anthoine Hubert", "url": "https://en.wikipedia.org/wiki/Anthoine_Hubert" }
+        ]
+      }
+    ]
+  }
+}

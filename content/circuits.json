@@ -1,0 +1,3569 @@
+{
+  "melbourne": {
+    "nameZh": "阿尔伯特公园赛道",
+    "nameEn": "Albert Park Circuit",
+    "tagline": "环湖而建的公园街道赛道",
+    "summary": "阿尔伯特公园赛道位于墨尔本，由环绕阿尔伯特公园湖的公共道路封闭而成，兼具街道赛与常设赛道的特点。1996年起接替阿德莱德承办澳大利亚大奖赛，2020与2021年因新冠疫情停办。2022年回归前赛道经过改造，取消原9、10号弯并拓宽多处弯角。现布局全长5.278公里、14个弯角，顺时针行驶。",
+    "traits": [
+      "公园街道赛道",
+      "环湖布局",
+      "顺时针",
+      "2022年布局改造"
+    ],
+    "moments": [
+      {
+        "year": 1996,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "阿尔伯特公园首秀",
+        "text": "澳大利亚大奖赛首次在墨尔本举行，并作为赛季揭幕战。雅克·维伦纽夫在个人首场F1比赛中夺得杆位并长时间领跑，后因漏油被队友达蒙·希尔超越，威廉姆斯包揽前两名。马丁·布伦德尔首圈翻滚撞车，比赛一度中断。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1996 Australian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1996_Australian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2009,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "布朗GP首战包揽前二",
+        "text": "由本田车队改组而来的布朗GP首次参赛，巴顿从杆位起步领跑全程夺冠，巴里切罗获得第二。布朗GP成为继1954年法国大奖赛的梅赛德斯之后，首支在处子赛即拿下杆位并获胜的车队。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2009 Australian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2009_Australian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2022,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "改造后重返日历",
+        "text": "停办两年后澳大利亚大奖赛回归，赛道在赛前完成多处重大改造并重铺路面。法拉利车手勒克莱尔从杆位起步，领跑全部圈数并刷新最快圈速，拿下个人首个大满贯；维斯塔潘因燃油问题退赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2022 Australian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2022_Australian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "诺里斯雨中揭幕战夺冠",
+        "text": "哈贾尔在编队圈撞车，比赛缩短一圈。诺里斯在湿滑多变的条件下从杆位起步夺冠，领先维斯塔潘不到1秒，迈凯伦自2012年后首次在澳大利亚获胜。主场作战的皮亚斯特里一度滑出赛道，最终第九。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2025 Australian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2025_Australian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "australia",
+        "circuit": "melbourne",
+        "title": "新规则时代首战",
+        "text": "2026赛季揭幕战，也是新底盘与动力单元规则下的首场比赛。拉塞尔从杆位起步夺冠，安东内利第二，梅赛德斯包揽前两名。凯迪拉克以第11支车队身份首次参赛，奥迪车手博托莱托获得第九名，为车队拿下首个积分。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2026 Australian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2026_Australian_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "shanghai": {
+    "nameZh": "上海国际赛车场",
+    "nameEn": "Shanghai International Circuit",
+    "tagline": "形似“上”字的蒂尔克赛道",
+    "summary": "上海国际赛车场位于上海嘉定区，由赫尔曼·蒂尔克设计，2004年启用并于同年举办首届中国大奖赛，是中国首条专为F1建造的赛道。布局灵感来自上海的“上”字，全长5.451公里、16个弯角。开局的1、2号弯不断收紧，13号弯后接约1.2公里的长直道。中国大奖赛2020至2023年停办，2024年回归。",
+    "traits": [
+      "“上”字形布局",
+      "T1-T2收紧弯",
+      "1.2公里长直道",
+      "顺时针"
+    ],
+    "moments": [
+      {
+        "year": 2004,
+        "gp": "china",
+        "circuit": "shanghai",
+        "title": "首届中国大奖赛",
+        "text": "F1首次在中国比赛。法拉利车手巴里切罗从杆位起步夺冠，巴顿和莱科宁分获二、三名。舒马赫排位赛冲出赛道，又因更换引擎受罚，最终从维修区起步，仅获第12名。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2004 Chinese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2004_Chinese_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2007,
+        "gp": "china",
+        "circuit": "shanghai",
+        "title": "汉密尔顿维修区入口搁浅",
+        "text": "新秀汉密尔顿本有机会在此提前锁定车手冠军，但轮胎严重磨损，他在驶入维修区的左弯时滑进碎石区无法脱困，这是他F1生涯首次退赛。莱科宁夺冠，阿隆索第二，马萨第三。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2007 Chinese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2007_Chinese_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2012,
+        "gp": "china",
+        "circuit": "shanghai",
+        "title": "罗斯伯格生涯首胜",
+        "text": "尼科·罗斯伯格在第111场比赛中拿下生涯首个杆位和首场胜利，领先迈凯伦的巴顿和汉密尔顿20余秒。这是梅赛德斯自1955年意大利大奖赛后首次以厂商车队身份夺冠，他也成为首位驾驶德国赛车获胜的德国车手。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2012 Chinese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2012_Chinese_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2019,
+        "gp": "china",
+        "circuit": "shanghai",
+        "title": "F1第1000场比赛",
+        "text": "这是F1世界锦标赛历史上第1000场比赛。博塔斯以0.023秒优势力压队友汉密尔顿夺得杆位，正赛由汉密尔顿获胜，博塔斯第二，梅赛德斯本赛季第三次包揽前两名，法拉利的维特尔第三。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2019 Chinese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2019_Chinese_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "china",
+        "circuit": "shanghai",
+        "title": "停办四年后回归",
+        "text": "2020至2023年的中国大奖赛均因疫情取消，2024年回归并成为当季首个冲刺赛周末。周冠宇成为首位在主场参赛的中国F1车手，从第16位起步获得第14名；维斯塔潘包揽冲刺赛与正赛冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2024 Chinese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2024_Chinese_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "china",
+        "circuit": "shanghai",
+        "title": "安东内利首胜",
+        "text": "19岁的安东内利从杆位起步拿下个人首个分站冠军，拉塞尔第二，汉密尔顿第三。他由此成为史上最年轻的杆位得主和第二年轻的分站冠军，也是2006年费斯切拉之后首位赢得大奖赛的意大利车手。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2026 Chinese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2026_Chinese_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "suzuka": {
+    "nameZh": "铃鹿赛道",
+    "nameEn": "Suzuka Circuit",
+    "tagline": "本田旗下的8字形赛道",
+    "summary": "铃鹿赛道位于日本三重县铃鹿市，1962年由荷兰人约翰·胡根霍尔茨作为本田测试场设计，至今归本田所有。赛道采用少见的8字形布局，后直道经立交桥跨越前半段，德格纳弯、130R等弯角闻名。1987年首办F1日本大奖赛，2007、2008年比赛移至富士，2009年回归。现布局全长5.807公里、18个弯角。",
+    "traits": [
+      "8字形布局",
+      "立交桥交叉",
+      "高速弯130R",
+      "冠军决胜地"
+    ],
+    "moments": [
+      {
+        "year": 1988,
+        "gp": "japan",
+        "circuit": "suzuka",
+        "title": "塞纳首夺世界冠军",
+        "text": "迈凯伦包揽头排，杆位的塞纳起步时熄火，一度跌至第14位，随后一路向前追赶，最终领先队友普罗斯特13秒冲线，赢下比赛的同时锁定个人首个世界冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1988 Japanese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1988_Japanese_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1989,
+        "gp": "japan",
+        "circuit": "suzuka",
+        "title": "塞纳普罗斯特减速弯相撞",
+        "text": "第47圈塞纳在减速弯从内线进攻，与迈凯伦队友普罗斯特相撞，普罗斯特退赛。塞纳在工作人员帮助下重新启动并率先冲线，但因未经减速弯返回赛道被取消成绩，南尼尼获胜，普罗斯特锁定世界冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1989 Japanese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1989_Japanese_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1990,
+        "gp": "japan",
+        "circuit": "suzuka",
+        "title": "首弯相撞决出冠军",
+        "text": "塞纳不满杆位被设在赛道较脏的一侧，调换请求被驳回。起步后法拉利的普罗斯特领先，两人在第一个弯角相撞双双退赛，塞纳锁定第二个世界冠军。贝纳通包揽前二，铃木亚久里成为首位登上领奖台的日本车手。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1990 Japanese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1990_Japanese_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2005,
+        "gp": "japan",
+        "circuit": "suzuka",
+        "title": "莱科宁第17位起步夺冠",
+        "text": "排位赛在湿滑赛道上进行，多名强手被打乱到后方，莱科宁从第17位起步。他一路追击，在最后一圈的1号弯超越长时间领跑的雷诺车手费斯切拉夺冠；同样从后方出发的阿隆索从第16位追到第三。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2005 Japanese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2005_Japanese_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "gp": "japan",
+        "circuit": "suzuka",
+        "title": "比安奇事故",
+        "text": "大雨中比赛在安全车带领下起步。苏蒂尔在7号弯邓禄普弯冲出赛道后，比安奇在同一位置失控，撞上正在拖移赛车的吊车，比赛随后以红旗提前结束。比安奇于2015年7月伤重离世，事故调查促成虚拟安全车的引入。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2014 Japanese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2014_Japanese_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2022,
+        "gp": "japan",
+        "circuit": "suzuka",
+        "title": "维斯塔潘雨中卫冕",
+        "text": "暴雨中塞恩斯撞车引发红旗，恢复后只完成28圈便因触及3小时时限结束。由于规则措辞漏洞，比赛仍发放全额积分；勒克莱尔因切弯被罚5秒降至第三，维斯塔潘夺冠并锁定第二个世界冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2022 Japanese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2022_Japanese_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "miami": {
+    "nameZh": "迈阿密国际赛车场",
+    "nameEn": "Miami International Autodrome",
+    "tagline": "硬石体育场旁的临时赛道",
+    "summary": "迈阿密国际赛车场位于美国佛罗里达州迈阿密花园市，利用硬石体育场周边的私人场地与道路搭建，每个比赛周末临时组装、赛后拆除，不占用公共街道。赛道由Apex Circuit Design设计，2022年迎来首届迈阿密大奖赛。全长5.412公里、19个弯角，逆时针行驶。",
+    "traits": [
+      "临时赛道",
+      "逆时针",
+      "硬石体育场周边",
+      "19个弯角"
+    ],
+    "moments": [
+      {
+        "year": 2022,
+        "gp": "miami",
+        "circuit": "miami",
+        "title": "首届迈阿密大奖赛",
+        "text": "迈阿密大奖赛首次举办，是2022赛季第五站。勒克莱尔与塞恩斯为法拉利包揽头排，这是法拉利自2019年墨西哥站后首次包揽头排。维斯塔潘从第三位起步夺冠，勒克莱尔和塞恩斯分列二、三名。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2022 Miami Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2022_Miami_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "gp": "miami",
+        "circuit": "miami",
+        "title": "维斯塔潘第九位起步夺冠",
+        "text": "红牛车手佩雷兹拿下生涯第三个杆位，队友维斯塔潘只排在第九位发车。正赛中维斯塔潘从第九位一路追至最前并夺冠，佩雷兹第二，阿斯顿·马丁的阿隆索第三。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2023 Miami Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2023_Miami_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "miami",
+        "circuit": "miami",
+        "title": "诺里斯生涯首胜",
+        "text": "诺里斯从第五位起步，在第110次出赛中拿下个人首胜，也是迈凯伦自2021年意大利站后的首场胜利。萨金特与马格努森相撞后出动安全车，诺里斯借机进站换胎，重启后保有轮胎优势；维斯塔潘第二，勒克莱尔第三。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2024 Miami Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2024_Miami_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "miami",
+        "circuit": "miami",
+        "title": "安东内利三连胜",
+        "text": "安东内利从杆位起步，以3.264秒优势力压诺里斯夺冠，皮亚斯特里第三。这是他连续第三站获胜，他成为继达蒙·希尔和哈基宁之后，第三位职业生涯前三场胜利均在连续比赛中取得的车手。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2026 Miami Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2026_Miami_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "montreal": {
+    "nameZh": "吉尔·维伦纽夫赛道",
+    "nameEn": "Circuit Gilles Villeneuve",
+    "tagline": "圣劳伦斯河人工岛上的赛道",
+    "summary": "吉尔·维伦纽夫赛道位于蒙特利尔圣母岛，这座圣劳伦斯河上的人工岛大部分为1967年世博会而建。1978年起承办加拿大大奖赛，最初名为圣母岛赛道，1982年为纪念当年去世的吉尔·维伦纽夫而更名。赛道由早期的技术型布局逐渐演变为重视直线速度的高速赛道，10号弯为180度发夹弯，末弯出口的“冠军之墙”闻名。现长4.361公里、14个弯角。",
+    "traits": [
+      "人工岛",
+      "直线速度优先",
+      "发夹弯重刹车",
+      "冠军之墙"
+    ],
+    "moments": [
+      {
+        "year": 1978,
+        "gp": "canada",
+        "circuit": "montreal",
+        "title": "吉尔·维伦纽夫主场首胜",
+        "text": "加拿大大奖赛首次移师蒙特利尔新建的圣母岛赛道，作为1978赛季收官战。杆位的雅里耶起步后一路领跑，后因漏油退赛，从第三位起步的法拉利车手吉尔·维伦纽夫在主场观众面前夺冠，这是加拿大车手的首个F1分站冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1978 Canadian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1978_Canadian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1982,
+        "gp": "canada",
+        "circuit": "montreal",
+        "title": "帕莱蒂起跑事故",
+        "text": "杆位的皮罗尼在起跑时熄火，后方车手纷纷避让，奥塞拉车手帕莱蒂以约180公里时速撞上其法拉利尾部，送医后不久身亡，这是他第二次参加F1正赛。比赛由布拉汉姆的皮奎特获胜，为宝马引擎赛车的首场F1胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1982 Canadian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1982_Canadian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1999,
+        "gp": "canada",
+        "circuit": "montreal",
+        "title": "冠军之墙",
+        "text": "末弯出口的护墙在这场比赛中先后撞停4辆赛车，其中包括世界冠军达蒙·希尔、舒马赫和雅克·维伦纽夫，领跑的舒马赫在第30圈撞墙出局。哈基宁趁势夺冠，比赛在安全车带领下结束，这在F1尚属首次。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1999 Canadian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1999_Canadian_Grand_Prix"
+          },
+          {
+            "label": "Wikipedia · Circuit Gilles Villeneuve",
+            "url": "https://en.wikipedia.org/wiki/Circuit_Gilles_Villeneuve"
+          }
+        ]
+      },
+      {
+        "year": 2007,
+        "gp": "canada",
+        "circuit": "montreal",
+        "title": "汉密尔顿生涯首胜",
+        "text": "汉密尔顿在个人第六场F1比赛中拿下首个杆位并赢得首胜。安全车4次出动，库比卡在驶向发夹弯时追尾特鲁利后剧烈撞击，仅受脚踝扭伤和脑震荡；马萨与费斯切拉因红灯时驶出维修区被取消资格。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2007 Canadian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2007_Canadian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2008,
+        "gp": "canada",
+        "circuit": "montreal",
+        "title": "库比卡唯一分站冠军",
+        "text": "汉密尔顿在维修区出口追尾因红灯停车的莱科宁，两人双双退赛。从第二位起步的库比卡夺冠，海德菲尔德第二，宝马索伯包揽前二。这是库比卡与车队唯一的分站冠军，也是波兰车手唯一的F1胜利，他由此首次领跑车手积分榜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2008 Canadian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2008_Canadian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2011,
+        "gp": "canada",
+        "circuit": "montreal",
+        "title": "史上最长比赛",
+        "text": "暴雨使比赛中断超过两小时，总用时4小时4分39秒，为F1史上最长的比赛。巴顿先后与汉密尔顿、阿隆索相撞，进站5次并受罚一次通过维修区，一度跌至末位，最后一圈趁维特尔在6号弯跑宽超越夺冠。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2011 Canadian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2011_Canadian_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "monaco": {
+    "nameZh": "摩纳哥赛道",
+    "nameEn": "Circuit de Monaco",
+    "tagline": "环绕港湾的经典街道赛",
+    "summary": "摩纳哥赛道穿行于蒙特卡洛与拉孔达米讷的街道，环绕摩纳哥港湾。首届摩纳哥大奖赛于1929年举行，1950年列入F1世锦赛，1955年起成为常设分站，仅2020年停办。赛道狭窄、超车极难，拥有F1最慢的费尔蒙特发夹弯和明暗骤变的隧道。全长3.337公里、19个弯角，是赛车运动“三冠王”赛事之一。",
+    "traits": [
+      "街道赛道",
+      "超车困难",
+      "费尔蒙特发夹弯",
+      "隧道",
+      "三冠王赛事"
+    ],
+    "moments": [
+      {
+        "year": 1950,
+        "gp": "monaco",
+        "circuit": "monaco",
+        "title": "塔巴克弯连环撞车",
+        "text": "F1世锦赛第二站。首圈港湾涌来的浪花打湿塔巴克弯路面，法里纳在此失控，19辆发车赛车中包括他在内共有9辆撞车退赛。从杆位起步的方吉奥避开混乱并夺冠，这是他在F1世锦赛的首场胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1950 Monaco Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1950_Monaco_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1955,
+        "gp": "monaco",
+        "circuit": "monaco",
+        "title": "阿斯卡里冲入港湾",
+        "text": "梅赛德斯的方吉奥与莫斯先后因故障退出领先争夺，接过领先的蓝旗亚车手阿斯卡里在隧道出口的减速弯判断失误，冲进港湾后游泳脱险，四天后在蒙扎试车时遇难。从第九位起步的特兰蒂尼昂为法拉利夺冠，这是他的首胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1955 Monaco Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1955_Monaco_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1984,
+        "gp": "monaco",
+        "circuit": "monaco",
+        "title": "大雨中提前终止",
+        "text": "大雨中，第32圈结束时比赛被红旗中止，成绩按第31圈计算，普罗斯特获胜，驾驶托勒曼从第13位起步的塞纳屈居第二。因完成距离不足75%，车手只获一半积分，年底普罗斯特以半分之差不敌劳达。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1984 Monaco Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1984_Monaco_Grand_Prix"
+          },
+          {
+            "label": "Wikipedia · 1984 Formula One World Championship",
+            "url": "https://en.wikipedia.org/wiki/1984_Formula_One_World_Championship"
+          }
+        ]
+      },
+      {
+        "year": 1988,
+        "gp": "monaco",
+        "circuit": "monaco",
+        "title": "塞纳波蒂埃弯撞墙",
+        "text": "塞纳大幅领先队友普罗斯特拿下杆位，正赛中一路稳居领先，却在第67圈于波蒂埃弯撞上护栏退赛，随后径直回到在摩纳哥的住所。普罗斯特五年内第四次在此夺冠，法拉利的伯格落后约20秒获得第二。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1988 Monaco Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1988_Monaco_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1996,
+        "gp": "monaco",
+        "circuit": "monaco",
+        "title": "仅三车完赛",
+        "text": "比赛在湿滑赛道上开始，杆位的舒马赫开赛不久便在下米拉波弯出口撞墙。从第14位起步的利吉尔车手帕尼斯赢得生涯唯一一场胜利，也是利吉尔车队最后一胜。比赛因两小时时限只进行75圈，仅前三名跑完全程。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1996 Monaco Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1996_Monaco_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "monaco",
+        "circuit": "monaco",
+        "title": "勒克莱尔主场夺冠",
+        "text": "勒克莱尔从杆位起步赢得主场比赛，成为1931年路易·希龙之后首位赢得主场大奖赛的摩纳哥车手。首圈佩雷兹、马格努森和霍肯伯格相撞引发红旗；前十名完赛顺序与发车顺序完全一致，为世锦赛史上首次。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2024 Monaco Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2024_Monaco_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "catalunya": {
+    "nameZh": "巴塞罗那-加泰罗尼亚赛道",
+    "nameEn": "Circuit de Barcelona-Catalunya",
+    "tagline": "车队最熟悉的全能型赛道",
+    "summary": "位于西班牙巴塞罗那地区的蒙特梅洛，1991年启用，同年首次承办西班牙大奖赛。长直道与多种弯角组合使其被视为全能型赛道，对空气动力学要求高，车队也因长期在此测试而对它十分熟悉。2007年末段加入慢速减速弯，2023年起恢复为高速弯。现行布局长4.657公里、14个弯。2026年西班牙大奖赛移师马德里，此地改办巴塞罗那-加泰罗尼亚大奖赛。",
+    "traits": [
+      "全能型布局",
+      "考验空气动力学",
+      "超车点 T1",
+      "超车困难",
+      "常用测试场"
+    ],
+    "moments": [
+      {
+        "year": 1991,
+        "gp": "spain",
+        "circuit": "catalunya",
+        "title": "曼塞尔与塞纳直道并驾",
+        "text": "加泰罗尼亚赛道首次承办西班牙大奖赛，赛前下雨，起跑时赛道仍湿。曼塞尔在主直道与塞纳并排飞驰、相距仅毫厘，最终完成超越，并从第二位发车赢得比赛，普罗斯特和帕特雷斯分列二三位。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1991 Spanish Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1991_Spanish_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1996,
+        "gp": "spain",
+        "circuit": "catalunya",
+        "title": "舒马赫的法拉利首胜",
+        "text": "暴雨中的西班牙站，从第三位发车的舒马赫起步不佳，第13圈从雅克·维伦纽夫手中夺得领先，每圈比其余车手快三秒以上，最终领先阿莱西45.302秒完赛，取得加盟法拉利后的首场胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1996 Spanish Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1996_Spanish_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2012,
+        "gp": "spain",
+        "circuit": "catalunya",
+        "title": "马尔多纳多杆位夺冠",
+        "text": "汉密尔顿因排位赛后无法提供燃油样本被移至发车末位，马尔多纳多递补获得生涯首个杆位，正赛中顶住阿隆索的追击夺冠。这是委内瑞拉车手迄今唯一的分站胜利，也是威廉姆斯自2004年巴西站以来的首胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2012 Spanish Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2012_Spanish_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2016,
+        "gp": "spain",
+        "circuit": "catalunya",
+        "title": "维斯塔潘18岁夺冠",
+        "text": "梅赛德斯的汉密尔顿与罗斯伯格首圈在4号弯相撞，双双退赛。刚从小红牛升入红牛的维斯塔潘从第四位发车，顶住莱科宁的追击夺冠，以18岁228天成为最年轻的分站冠军，也是首位赢得大奖赛的荷兰车手。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2016 Spanish Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2016_Spanish_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "barcelona-catalunya",
+        "circuit": "catalunya",
+        "title": "汉密尔顿的法拉利首胜",
+        "text": "西班牙大奖赛移师马德里后，此地改办巴塞罗那-加泰罗尼亚大奖赛。汉密尔顿从第二位发车，凭三停策略和虚拟安全车时机击败杆位的拉塞尔，取得加盟法拉利后首场大奖赛胜利，41岁的他成为1970年杰克·布拉巴姆之后最年长的分站冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2026 Barcelona-Catalunya Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2026_Barcelona-Catalunya_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "spielberg": {
+    "nameZh": "红牛环赛道",
+    "nameEn": "Red Bull Ring",
+    "tagline": "施蒂利亚山间的短程赛道",
+    "summary": "位于奥地利施蒂利亚州施皮尔贝格，1969年以奥地利环赛道之名启用，1970至1987年承办奥地利大奖赛，后因安全问题停用。赫尔曼·蒂尔克在原址将其改建为长4.326公里的A1赛道，1997至2003年重返F1。此后赛道被红牛联合创始人马特希茨收购并重建，以红牛环之名于2014年回归F1。现行布局仅10个弯，依山而建、起伏明显。",
+    "traits": [
+      "弯道少、单圈短",
+      "高低起伏",
+      "直道接重刹车",
+      "顺时针"
+    ],
+    "moments": [
+      {
+        "year": 1975,
+        "gp": "austria",
+        "circuit": "spielberg",
+        "title": "布兰比拉雨中折桂",
+        "text": "大雨使比赛在原定54圈中的第29圈结束，只发放一半积分。驾驶马奇赛车的布兰比拉从第八位发车，赢得生涯唯一一场F1分站胜利，他在冲过终点时随即撞上护栏。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1975 Austrian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1975_Austrian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1982,
+        "gp": "austria",
+        "circuit": "spielberg",
+        "title": "德安杰利斯0.05秒险胜",
+        "text": "从第七位发车的莲花车手德安杰利斯与第六位起步的凯凯·罗斯伯格一路缠斗至终点，以0.05秒、不到半个车身的优势取得生涯首胜，这也是莲花自1978年荷兰站以来的首场胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1982 Austrian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1982_Austrian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2002,
+        "gp": "austria",
+        "circuit": "spielberg",
+        "title": "法拉利车队指令风波",
+        "text": "杆位出发的巴里切罗领跑大半场，法拉利在最后一圈下达车队指令，他在终点前减速让舒马赫夺冠，看台嘘声一片。领奖台上舒马赫把巴里切罗推上最高位，车队与两人因此被罚共100万美元，国际汽联随后自2003年起禁止干预比赛结果的车队指令。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2002 Austrian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2002_Austrian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2019,
+        "gp": "austria",
+        "circuit": "spielberg",
+        "title": "维斯塔潘助本田重夺冠",
+        "text": "从第二位发车的维斯塔潘起步时因防熄火系统介入跌至第八，随后一路追赶，在还剩3圈时于2号弯与杆位的勒克莱尔发生碰触并完成超越。干事审议后认定超车合法，这是2006年匈牙利站之后本田动力的首场胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2019 Austrian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2019_Austrian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2020,
+        "gp": "austria",
+        "circuit": "spielberg",
+        "title": "疫情赛季闭门揭幕",
+        "text": "因新冠疫情推迟的赛季在此闭门揭幕，博塔斯杆位出发、全程领跑夺冠，诺里斯收获生涯首个领奖台。一周后同一赛道再办施蒂利亚大奖赛，这是F1史上首次在同一场地、同一布局连续两周举行世锦赛分站。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2020 Austrian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2020_Austrian_Grand_Prix"
+          },
+          {
+            "label": "Wikipedia · 2020 Styrian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2020_Styrian_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "silverstone": {
+    "nameZh": "银石赛道",
+    "nameEn": "Silverstone Circuit",
+    "tagline": "F1世界锦标赛诞生地",
+    "summary": "坐落于英格兰北安普敦郡与白金汉郡交界处，前身是二战时期的皇家空军轰炸机基地，1948年首办英国大奖赛。1950年5月13日，F1世界锦标赛首场比赛在此举行，1987年起英国大奖赛固定落户于此。赛道以高速著称，Copse弯与Maggotts-Becketts连续弯最具代表性。2010年启用Arena布局，现长5.891公里、18个弯。",
+    "traits": [
+      "高速",
+      "Maggotts-Becketts连续弯",
+      "前空军基地改建",
+      "顺时针"
+    ],
+    "moments": [
+      {
+        "year": 1950,
+        "gp": "great-britain",
+        "circuit": "silverstone",
+        "title": "世锦赛首场比赛",
+        "text": "1950年5月13日，F1世界锦标赛首场比赛在银石举行，英王乔治六世到场观赛，这是英国唯一一场有在位君主观看的大奖赛。法里纳从史上首个杆位出发赢得70圈比赛，阿尔法·罗密欧包揽前三。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1950 British Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1950_British_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1987,
+        "gp": "great-britain",
+        "circuit": "silverstone",
+        "title": "曼塞尔追回29秒",
+        "text": "第35圈威廉姆斯召曼塞尔进站换胎，他回到赛道时落后队友皮奎特约29秒，仅剩28圈。曼塞尔八次刷新单圈纪录，在第63圈完成超越夺冠，冲线后赛车停在赛道上，被涌入的观众团团围住。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1987 British Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1987_British_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1998,
+        "gp": "great-britain",
+        "circuit": "silverstone",
+        "title": "在维修通道里夺冠",
+        "text": "雨战末段，舒马赫因在安全车期间超车被判10秒处罚。法拉利在最后一圈召他进站，他在抵达维修位之前便于维修通道内越过终点线，赢下比赛。迈凯伦的抗议被驳回，这一处罚最终被撤销。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1998 British Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1998_British_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": "great-britain",
+        "circuit": "silverstone",
+        "title": "Copse弯的碰撞",
+        "text": "维斯塔潘赢得冲刺排位赛获得杆位。正赛首圈他与汉密尔顿在Copse弯相撞，以51g冲击力撞上护栏退赛，比赛红旗中断。汉密尔顿被罚10秒，仍在第50圈超越勒克莱尔，赢得第八个英国大奖赛冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2021 British Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2021_British_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "great-britain",
+        "circuit": "silverstone",
+        "title": "汉密尔顿第九冠",
+        "text": "在先干后湿的多变天气中，汉密尔顿从第二位发车，击败维斯塔潘和诺里斯，赢得自2008年以来的第九个英国大奖赛冠军，刷新单一赛道获胜次数纪录，也是他自2021年沙特站以来的首胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2024 British Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2024_British_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "great-britain",
+        "circuit": "silverstone",
+        "title": "法拉利第250胜",
+        "text": "勒克莱尔从第二位发车，起步即取得领先，最终在安全车带领下冲线，赢得个人首个英国站冠军，也为法拉利拿下第250个世锦赛分站胜利。杆位的安东内利因左前轮部件损坏多次进站。本站周末观众达56.4万人次，创F1赛事纪录。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2026 British Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2026_British_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "spa-francorchamps": {
+    "nameZh": "斯帕-弗朗科尔尚赛道",
+    "nameEn": "Circuit de Spa-Francorchamps",
+    "tagline": "阿登森林里的高速长赛道",
+    "summary": "位于比利时阿登山区的斯塔沃洛弗朗科尔尚，1950年首个世锦赛赛季即承办比利时大奖赛。早期为约14公里的公路赛道，出于安全考虑被缩短，F1自1983年起使用约7公里的新布局。现行赛道长7.004公里、19个弯，La Source发夹弯后的Eau Rouge/Raidillon上坡连续弯最为知名。这里天气多变，常出现赛道一段晴朗、另一段下雨的情况。",
+    "traits": [
+      "高速长赛道",
+      "Eau Rouge/Raidillon",
+      "天气多变",
+      "顺时针"
+    ],
+    "moments": [
+      {
+        "year": 1992,
+        "gp": "belgium",
+        "circuit": "spa-francorchamps",
+        "title": "舒马赫生涯首胜",
+        "text": "一年前舒马赫在斯帕完成F1首秀，这是他的第18场比赛。在时雨时晴的比赛中，贝纳通车手舒马赫从第三位发车，领先第二名曼塞尔36秒多赢得生涯首胜；帕特雷斯第三，为威廉姆斯锁定车队冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1992 Belgian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1992_Belgian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1998,
+        "gp": "belgium",
+        "circuit": "spa-francorchamps",
+        "title": "乔丹车队首胜",
+        "text": "暴雨中起跑后库特哈德失控撞墙并弹回车阵，引发多车连环相撞，比赛重启已是近一小时后。领跑的舒马赫套圈时撞上库特哈德赛车尾部退赛，从第三位发车的达蒙·希尔夺冠，拉尔夫·舒马赫第二，乔丹车队以一二名收获首胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1998 Belgian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1998_Belgian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2000,
+        "gp": "belgium",
+        "circuit": "spa-francorchamps",
+        "title": "哈基宁借套圈超车",
+        "text": "杆位出发的哈基宁第13圈在Stavelot弯打滑，领先被舒马赫夺走。第40圈他尝试超车时两人发生接触；第41圈两人同时套圈BAR车手宗塔，哈基宁借机在Les Combes弯完成超越，重夺领先并最终夺冠。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2000 Belgian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2000_Belgian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2008,
+        "gp": "belgium",
+        "circuit": "spa-francorchamps",
+        "title": "汉密尔顿冲线后被罚",
+        "text": "末段降雨，杆位出发的汉密尔顿在Bus Stop减速弯切弯后把位置还给莱科宁，随即再次超越，率先冲线。干事认定其切弯获利，追加25秒罚时，他跌至第三，马萨获胜。迈凯伦的上诉被裁定不予受理。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2008 Belgian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2008_Belgian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": "belgium",
+        "circuit": "spa-francorchamps",
+        "title": "只算一圈的比赛",
+        "text": "持续大雨使正赛延误三个多小时，赛车只在安全车带领下跑了两圈便被红旗终止，成绩按第一圈结束时计算，仅发放一半积分。维斯塔潘获胜，拉塞尔为威廉姆斯拿下生涯首个领奖台。这场比赛成为F1史上距离最短的分站赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2021 Belgian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2021_Belgian_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "hungaroring": {
+    "nameZh": "亨格罗宁赛道",
+    "nameEn": "Hungaroring",
+    "tagline": "没有护栏的摩纳哥",
+    "summary": "位于布达佩斯近郊的莫焦罗德，1986年建成并承办匈牙利大奖赛，那是首场在铁幕后举行的F1比赛。赛道坐落在山谷中，观众视野开阔。路面多弯且颠簸，干地超车非常困难，因而被称为没有护栏的摩纳哥。比赛在盛夏举行，常伴高温，赛道也容易积尘。2003年主直道加长约200米，现行布局长4.381公里、14个弯。",
+    "traits": [
+      "弯多直道短",
+      "干地超车困难",
+      "盛夏高温",
+      "山谷看台",
+      "顺时针"
+    ],
+    "moments": [
+      {
+        "year": 1986,
+        "gp": "hungary",
+        "circuit": "hungaroring",
+        "title": "铁幕后的首场F1",
+        "text": "这是匈牙利大奖赛自1936年后首次重办，也是首场在铁幕后举行的F1比赛，吸引约20万名观众。塞纳为莲花夺得杆位，从第二位发车的威廉姆斯车手皮奎特在1号弯外线超越塞纳，最终夺冠。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1986 Hungarian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1986_Hungarian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1997,
+        "gp": "hungary",
+        "circuit": "hungaroring",
+        "title": "达蒙·希尔功亏一篑",
+        "text": "驾驶箭头-雅马哈的达蒙·希尔从第三位发车，第11圈超越舒马赫领跑，一度领先超过35秒。最后三圈液压泵故障，赛车卡在三挡，最后一圈被雅克·维伦纽夫超越，以9.079秒之差获得第二。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1997 Hungarian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1997_Hungarian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2006,
+        "gp": "hungary",
+        "circuit": "hungaroring",
+        "title": "巴顿第14位起步夺冠",
+        "text": "这是首场雨中开赛的匈牙利大奖赛。因更换引擎被罚退后十位的巴顿从第14位发车，赢得生涯首胜，这也是本田自1967年意大利站以来首次以车队身份夺冠。德拉罗萨获得第二，那是他生涯唯一一次登上领奖台。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2006 Hungarian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2006_Hungarian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": "hungary",
+        "circuit": "hungaroring",
+        "title": "奥康意外首胜",
+        "text": "首圈博塔斯晚刹车引发多车相撞，比赛红旗中断。重新起跑时其余车手都进站换了干胎，只有汉密尔顿留在发车格。从第八位发车的奥康借机领跑，取得个人和阿尔派车队的首胜。维特尔冲线第二，但因燃油样本不足被取消成绩。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2021 Hungarian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2021_Hungarian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "hungary",
+        "circuit": "hungaroring",
+        "title": "皮亚斯特里首胜",
+        "text": "诺里斯夺得杆位，迈凯伦包揽头排。皮亚斯特里起步取得领先，诺里斯后来凭进站时机反超。车队要求两人换位，诺里斯在第68圈于主直道减速让出领先，皮亚斯特里由此赢得生涯首胜，迈凯伦包揽前两名。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2024 Hungarian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2024_Hungarian_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "zandvoort": {
+    "nameZh": "赞德沃特赛道",
+    "nameEn": "Circuit Zandvoort",
+    "tagline": "北海沙丘间的倾斜弯赛道",
+    "summary": "位于荷兰北海沿岸赞德沃特以北的沙丘中，距阿姆斯特丹约35公里，二战后利用德军占领期间修建的道路建成，1948年举行首场比赛。1952年荷兰大奖赛首次成为世锦赛分站，此后在此举办至1985年。2021年荷兰大奖赛回归，3号弯与最后弯道改建为大角度倾斜弯。现行布局长4.259公里、14个弯，与F1的合作在2026年结束。",
+    "traits": [
+      "沙丘环绕",
+      "倾斜弯",
+      "超车点 Tarzan弯",
+      "高速连续弯",
+      "顺时针"
+    ],
+    "moments": [
+      {
+        "year": 1952,
+        "gp": "netherlands",
+        "circuit": "zandvoort",
+        "title": "荷兰站首入世锦赛",
+        "text": "荷兰大奖赛首次作为世锦赛分站举行，当年世锦赛按F2规则进行。两周前已锁定车手冠军的阿斯卡里杆位出发获胜，法拉利包揽前三。这是他的第七场世锦赛分站胜利，超过方吉奥成为当时获胜次数最多的车手。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1952 Dutch Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1952_Dutch_Grand_Prix"
+          },
+          {
+            "label": "Wikipedia · Circuit Zandvoort",
+            "url": "https://en.wikipedia.org/wiki/Circuit_Zandvoort"
+          }
+        ]
+      },
+      {
+        "year": 1967,
+        "gp": "netherlands",
+        "circuit": "zandvoort",
+        "title": "莲花49首秀夺冠",
+        "text": "莲花49与福特-考斯沃斯DFV引擎在此首次亮相。格雷厄姆·希尔夺得杆位，但领跑时因变速箱故障退赛；刚接触新车、排位赛受机械问题影响只排第八的克拉克一路追上，让这辆新车首秀即夺冠。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1967 Dutch Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1967_Dutch_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1985,
+        "gp": "netherlands",
+        "circuit": "zandvoort",
+        "title": "劳达的最后一胜",
+        "text": "这是此后36年间的最后一届荷兰大奖赛。迈凯伦车手劳达从第十位发车，在最后十二圈与队友普罗斯特缠斗，以0.232秒优势取胜，这是三届世界冠军劳达生涯第25场、也是最后一场分站胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1985 Dutch Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1985_Dutch_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": "netherlands",
+        "circuit": "zandvoort",
+        "title": "维斯塔潘主场夺冠",
+        "text": "荷兰大奖赛时隔36年重返赞德沃特，赛道已按新标准改造，约19.5万名观众到场。维斯塔潘杆位出发获胜，成为首位在本土大奖赛登上领奖台的荷兰车手，并以224.5比221.5分反超汉密尔顿升至积分榜首。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2021 Dutch Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2021_Dutch_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "netherlands",
+        "circuit": "zandvoort",
+        "title": "荷兰站的告别战",
+        "text": "推广方决定不再续约，这成为按计划的最后一届荷兰大奖赛。维斯塔潘首圈末在倾斜的最后弯道重撞，比赛红旗中断。杆位出发的诺里斯重启后一度落后安东内利，延长倒数第二段赛程换取轮胎优势，在第54圈重夺领先并获胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2026 Dutch Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2026_Dutch_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "monza": {
+    "nameZh": "蒙扎赛道",
+    "nameEn": "Autodromo Nazionale Monza",
+    "tagline": "长直道串联减速弯的“速度圣殿”",
+    "summary": "位于米兰以北的蒙扎皇家别墅公园内，1922年启用，因长直道和高速弯被称为“速度圣殿”。F1世界锦标赛自1950年起，意大利大奖赛除1980年外均在此举行；1955、1956、1960和1961年曾使用带倾斜弯的公路与椭圆组合赛道。1972年加入减速弯以压低车速，现行布局全长5.793公里、11个弯，原抛物线弯已更名为阿尔博雷托弯。",
+    "traits": [
+      "高速",
+      "长直道",
+      "减速弯",
+      "顺时针",
+      "1922年启用"
+    ],
+    "moments": [
+      {
+        "year": 1971,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "0.01秒的冲线",
+        "text": "从第11位起步的BRM车手彼得·盖辛以0.01秒力压罗尼·彼得森夺冠，这也是他唯一的分站胜利。前五名仅相差0.61秒，被视为F1史上最接近的冲线，不过当年计时只精确到百分之一秒。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1971 Italian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1971_Italian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1988,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "迈凯伦当季唯一失手",
+        "text": "迈凯伦此前包揽当季11站冠军。普罗斯特因引擎故障退赛，领跑的塞纳在还剩两圈时套圈威廉姆斯车手施莱瑟，两车相撞。法拉利的格哈德·伯格和阿尔博雷托收获1-2，这是迈凯伦1988年唯一未赢的比赛，也是恩佐·法拉利去世后的首场意大利大奖赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1988 Italian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1988_Italian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2008,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "维特尔雨中首胜",
+        "text": "21岁的维特尔在湿滑赛道上驾驶小红牛从杆位出发夺冠，同时成为当时最年轻的杆位得主和分站冠军。这是由米纳尔迪改组而来的小红牛车队首胜，也是1957年后首次有法拉利以外的意大利车队赢得分站。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2008 Italian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2008_Italian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2020,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "加斯利意外夺冠",
+        "text": "从第10位起步的加斯利借安全车前的及时进站前移，领跑的汉密尔顿则因在维修区关闭时进站被罚停站10秒。加斯利接过领先，以0.415秒力压塞恩斯，为阿尔法托利赢得首胜，也是1996年帕尼斯之后法国车手的首场胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2020 Italian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2020_Italian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "争冠双雄同场出局",
+        "text": "汉密尔顿出站后与维斯塔潘在第一减速弯缠斗，维斯塔潘的红牛赛车骑上梅赛德斯赛车，两人双双退赛，维斯塔潘被判下站退后三位发车。里卡多从第2位起步夺冠，为迈凯伦带来2012年巴西站后的首胜和2010年加拿大站后的首个1-2。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2021 Italian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2021_Italian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "italy",
+        "circuit": "monza",
+        "title": "安东内利第19位逆转",
+        "text": "安东内利因超出动力单元配额被罚退30位，从第19位发车，最终领先队友拉塞尔3.857秒夺冠，成为1966年斯卡菲奥蒂之后首位赢得意大利大奖赛的意大利车手。杆位由阿尔派车手加斯利取得，这是他和车队的首个杆位。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2026 Italian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2026_Italian_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "madring": {
+    "nameZh": "马德林赛道",
+    "nameEn": "Circuito de Madring",
+    "tagline": "马德里会展中心周边的混合赛道",
+    "summary": "位于西班牙马德里巴拉哈斯机场附近，围绕IFEMA会展中心修建，部分使用公共道路、部分使用非公共场地，是一条街道与封闭场地结合的混合赛道。F1于2024年宣布西班牙大奖赛2026至2035年移师马德里，2026年9月在此首次举行。赛道约5.4公里、22个弯，设有倾斜弯“La Monumental”和两段穿过高架公路下方的隧道。",
+    "traits": [
+      "街道混合赛道",
+      "顺时针",
+      "倾斜弯 La Monumental",
+      "隧道路段",
+      "2026年新赛道"
+    ],
+    "moments": [
+      {
+        "year": 2026,
+        "gp": "spain",
+        "circuit": "madring",
+        "title": "马德林首届大奖赛",
+        "text": "这是马德林举办的首场大奖赛，也是西班牙大奖赛首次在此进行。从第2位起步的安东内利起步后一度切过首个减速弯并交还位置，最终夺冠，取得本赛季第八胜；维斯塔潘和诺里斯分列二、三。汉密尔顿因刹车问题在第6圈退赛，结束本季场场完赛的纪录。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2026 Spanish Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2026_Spanish_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "spain",
+        "circuit": "madring",
+        "title": "诺里斯杆位旁落",
+        "text": "诺里斯以本季第三个杆位领跑，但斯特罗尔刹车故障引出虚拟安全车时，他恰好已驶过维修区入口，随后进站又因换胎缓慢耗时约7秒，失去领先。倒数第二圈维斯塔潘超越慢车时切过5号弯减速弯，诺里斯提出异议，干事未予处罚，维斯塔潘保住第二。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2026 Spanish Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2026_Spanish_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "baku": {
+    "nameZh": "巴库城市赛道",
+    "nameEn": "Baku City Circuit",
+    "tagline": "古城窄巷与超长直道并存",
+    "summary": "位于阿塞拜疆首都巴库，由蒂尔克设计，从自由广场旁出发、环绕老城铺设，逆时针行驶。全长6.003公里、20个弯，老城一侧有宽仅约7.6米的上坡窄道，沿石油工人大街返回起点的约2.2公里路段则让赛车跑出极高尾速。2016年以欧洲大奖赛名义首次举办F1，2017年起改称阿塞拜疆大奖赛。",
+    "traits": [
+      "街道赛",
+      "逆时针",
+      "长直道高尾速",
+      "老城狭窄上坡段",
+      "蒂尔克设计"
+    ],
+    "moments": [
+      {
+        "year": 2016,
+        "gp": "europe",
+        "circuit": "baku",
+        "title": "巴库首秀",
+        "text": "阿塞拜疆首次举办F1分站，赛事以欧洲大奖赛名义进行。罗斯伯格从杆位出发夺冠，维特尔和佩雷兹分列二、三位；汉密尔顿在排位赛中撞墙损坏前悬挂，只能从第10位起步，最终获得第五。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2016 European Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2016_European_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2017,
+        "gp": "azerbaijan",
+        "circuit": "baku",
+        "title": "混乱中里卡多夺冠",
+        "text": "安全车期间维特尔追尾汉密尔顿后又侧向撞向对方，被罚停站10秒；比赛一度红旗中断，汉密尔顿也因头枕松动被迫进站。从第10位起步的里卡多最终夺冠，博塔斯从落后一圈追回第二，斯特罗尔获得个人首个领奖台。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2017 Azerbaijan Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2017_Azerbaijan_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": "azerbaijan",
+        "circuit": "baku",
+        "title": "维斯塔潘领跑时爆胎",
+        "text": "领跑的维斯塔潘在比赛末段于主直道左后胎爆裂撞墙，比赛红旗中断后以静止起步进行最后两圈。汉密尔顿重启时误选刹车模式，在1号弯冲入缓冲区跌至末位；从第6位起步的佩雷兹夺冠，维特尔和加斯利登上领奖台。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2021 Azerbaijan Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2021_Azerbaijan_Grand_Prix"
+          },
+          {
+            "label": "Formula1.com · Perez beats Vettel to Baku victory after Verstappen crashes out from lead",
+            "url": "https://www.formula1.com/en/latest/article/perez-beats-vettel-to-baku-victory-after-verstappen-crashes-out-from-lead.aLIxuNGxwBFgZ4Z8OhuRw"
+          }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "azerbaijan",
+        "circuit": "baku",
+        "title": "皮亚斯特里击败杆位",
+        "text": "勒克莱尔连续第四年在巴库拿下杆位，第2位起步的皮亚斯特里超越他后守住领先，以10.910秒优势取得个人第二胜。佩雷兹与塞恩斯在倒数第二圈争夺第三时相撞退赛，迈凯伦借此反超红牛，自2014年澳大利亚站后首次领跑车队积分榜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2024 Azerbaijan Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2024_Azerbaijan_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "azerbaijan",
+        "circuit": "baku",
+        "title": "周六正赛与大满贯",
+        "text": "应主办方请求，为配合阿塞拜疆的纪念日，正赛提前一天改在9月26日周六举行。拉塞尔从杆位出发、领跑全程并跑出最快圈，以0.196秒力压从第8位起步的维斯塔潘夺冠，取得个人首个大满贯。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2026 Azerbaijan Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2026_Azerbaijan_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "sepang": {
+    "nameZh": "雪邦国际赛道",
+    "nameEn": "Sepang International Circuit",
+    "tagline": "双直道夹发夹弯的宽阔赛道",
+    "summary": "位于马来西亚雪兰莪州雪邦，靠近吉隆坡国际机场，由蒂尔克设计，1999年启用。赛道路面宽阔、弯道流畅，约0.93公里长的后直道与主直道并行，由一个急发夹弯相连。马来西亚大奖赛在此举办至2017年，后因举办费用上涨和门票销量下滑退出赛历；2026年巴林大奖赛因中东冲突移师于此。全长5.543公里、15个弯。",
+    "traits": [
+      "赛道宽阔",
+      "双直道接发夹弯",
+      "顺时针",
+      "蒂尔克设计"
+    ],
+    "moments": [
+      {
+        "year": 1999,
+        "gp": "malaysia",
+        "circuit": "sepang",
+        "title": "舒马赫复出助攻",
+        "text": "首届马来西亚大奖赛上，在英国站摔断腿后复出的舒马赫拿下杆位，比赛中多次放慢速度帮助队友伊尔文夺冠。赛后两辆法拉利因导流板违规被取消成绩，上诉后恢复，伊尔文带着领先哈基宁4分的优势进入最后一站。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1999 Malaysian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1999_Malaysian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2003,
+        "gp": "malaysia",
+        "circuit": "sepang",
+        "title": "莱科宁生涯首胜",
+        "text": "阿隆索以21岁7个月成为当时最年轻的杆位得主，并收获个人首个领奖台。从第7位起步的迈凯伦车手莱科宁取得生涯首胜，巴里切罗第二；舒马赫首圈撞到特鲁利被罚通过维修区，最终仅获第六。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2003 Malaysian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2003_Malaysian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2009,
+        "gp": "malaysia",
+        "circuit": "sepang",
+        "title": "暴雨中止只计半分",
+        "text": "暴雨迫使比赛在第33圈中止，成绩按第31圈结束时计算。由于未完成75%赛程，前八名只获得一半积分，这是1991年澳大利亚站后首次出现半分。布朗GP车手巴顿杆位夺冠，海德菲尔德和格洛克分列二、三。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2009 Malaysian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2009_Malaysian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2013,
+        "gp": "malaysia",
+        "circuit": "sepang",
+        "title": "“Multi 21”车队指令",
+        "text": "红牛在第45圈要求两车保持位置、保护轮胎，维特尔无视指令在下一圈超越韦伯夺冠，韦伯赛后对他说出“Multi 21”这一指令代码。梅赛德斯则拒绝了罗斯伯格超越汉密尔顿的请求，汉密尔顿第三、罗斯伯格第四。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2013 Malaysian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2013_Malaysian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2016,
+        "gp": "malaysia",
+        "circuit": "sepang",
+        "title": "汉密尔顿领跑时引擎失效",
+        "text": "汉密尔顿在第41圈领跑时引擎失效退赛，里卡多带领维斯塔潘为红牛拿下2013年巴西站后的首个1-2。首圈被维特尔撞到打转的罗斯伯格追回第三，将积分领先扩大到23分，这次退赛成为当年争冠的关键节点。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2016 Malaysian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2016_Malaysian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2026,
+        "gp": "bahrain",
+        "circuit": "sepang",
+        "title": "巴林大奖赛移师雪邦",
+        "text": "原定4月在巴林举行的比赛因2026年伊朗战争被取消，后保留巴林大奖赛名称改在雪邦举行，这是2017年后雪邦首场F1。暴雨使发车推迟93分钟并在安全车后开始，维斯塔潘杆位夺冠，为红牛拿下本赛季首胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2026 Bahrain Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix"
+          },
+          {
+            "label": "Wikipedia · Sepang International Circuit",
+            "url": "https://en.wikipedia.org/wiki/Sepang_International_Circuit"
+          }
+        ]
+      }
+    ]
+  },
+  "marina-bay": {
+    "nameZh": "滨海湾街道赛道",
+    "nameEn": "Marina Bay Street Circuit",
+    "tagline": "F1首个夜赛舞台",
+    "summary": "位于新加坡滨海湾一带，2008年启用并举办了F1首场夜间比赛，约1600盏专用照明灯照亮赛道。逆时针街道赛弯道密集，比赛在湿热环境中进行，对车手体能要求很高；2013年取消“新加坡司令”减速弯，2023年起以新直道取代原浮动平台路段。现行布局全长4.927公里、19个弯，2024年以前每届比赛都出现过安全车。",
+    "traits": [
+      "夜赛",
+      "街道赛",
+      "逆时针",
+      "湿热高强度",
+      "安全车多发"
+    ],
+    "moments": [
+      {
+        "year": 2008,
+        "gp": "singapore",
+        "circuit": "marina-bay",
+        "title": "首场夜赛与撞车门",
+        "text": "F1首场夜间比赛中，阿隆索从第15位起步，因在安全车出动前进站而夺冠。引出安全车的是雷诺队友小皮奎特第14圈的撞墙，2009年雷诺承认这是故意制造的事故，车队被判缓期两年执行的取消资格，布里亚托雷遭终身禁赛，后被法国法院推翻。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2008 Singapore Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2008_Singapore_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2017,
+        "gp": "singapore",
+        "circuit": "marina-bay",
+        "title": "法拉利首圈双双出局",
+        "text": "首场湿地夜赛开赛即发生连环碰撞，杆位的维特尔与队友莱科宁、维斯塔潘全部退赛，这是两辆法拉利首次同在第一圈出局。从第5位起步的汉密尔顿首圈取得领先并夺冠，车手积分领先扩大到28分。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2017 Singapore Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2017_Singapore_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2019,
+        "gp": "singapore",
+        "circuit": "marina-bay",
+        "title": "维特尔生涯最后一胜",
+        "text": "维特尔从第3位起步，在第19圈结束时率先进站，反超杆位起步的队友勒克莱尔后夺冠，法拉利取得2017年匈牙利站后首个1-2。这是他自2018年比利时站后的首胜，也是其F1生涯最后一场胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2019 Singapore Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2019_Singapore_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "gp": "singapore",
+        "circuit": "marina-bay",
+        "title": "塞恩斯终结红牛连胜",
+        "text": "红牛双车止步Q2，维斯塔潘从第11位起步。塞恩斯杆位出发领跑全程夺冠，终结红牛创纪录的15连胜和维斯塔潘的10连胜；他有意让诺里斯留在DRS范围内牵制梅赛德斯，诺里斯和汉密尔顿分列二、三，拉塞尔则在最后一圈撞墙。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2023 Singapore Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2023_Singapore_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "singapore",
+        "circuit": "marina-bay",
+        "title": "首次没有安全车",
+        "text": "诺里斯从杆位出发领跑全程，领先维斯塔潘约20.9秒夺冠。这是新加坡大奖赛首次全程没有出现安全车或黄旗。里卡多跑出最快圈，但仅列第18位而无法获得加分，这也是他F1生涯的最后一场比赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2024 Singapore Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2024_Singapore_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "austin": {
+    "nameZh": "美洲赛道",
+    "nameEn": "Circuit of the Americas",
+    "tagline": "美国首条F1专用赛道",
+    "summary": "位于美国得克萨斯州奥斯汀，2012年启用，是美国第一条专为F1修建的赛道，由推广人赫尔蒙德与摩托车世界冠军施万茨构思、蒂尔克协助设计。逆时针行驶，约5.5公里、20个弯，全程落差约41米，发车后以超过11%的坡度爬向1号弯。3至6号弯复刻银石的高速连续弯，最后一段体育场式弯道参考霍根海姆。",
+    "traits": [
+      "逆时针",
+      "1号弯陡坡",
+      "仿银石高速连续弯",
+      "体育场式弯道段"
+    ],
+    "moments": [
+      {
+        "year": 2012,
+        "gp": "united-states",
+        "circuit": "austin",
+        "title": "美洲赛道首秀",
+        "text": "这是2007年后的首场美国大奖赛，也是美洲赛道首场比赛。汉密尔顿在第42圈借DRS超越杆位的维特尔夺冠，这也是他为迈凯伦拿下的最后一胜；维特尔第二，红牛借此锁定车队冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2012 United States Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2012_United_States_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2015,
+        "gp": "united-states",
+        "circuit": "austin",
+        "title": "汉密尔顿第三冠",
+        "text": "雨水打乱周末赛程，排位赛延至周日上午进行且Q3取消。正赛第48圈领跑的罗斯伯格失误滑出，汉密尔顿接过领先夺冠，提前三站锁定个人第三个世界冠军；从第13位起步的维特尔获得第三。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2015 United States Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2015_United_States_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2018,
+        "gp": "united-states",
+        "circuit": "austin",
+        "title": "莱科宁终结114场不胜",
+        "text": "莱科宁从第2位起步夺冠，结束自2013年澳大利亚站以来长达114场的不胜纪录，这也是他F1生涯最后一胜。从第18位起步的维斯塔潘获得第二，杆位出发的汉密尔顿仅获第三，未能在此提前锁定冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2018 United States Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2018_United_States_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2019,
+        "gp": "united-states",
+        "circuit": "austin",
+        "title": "汉密尔顿第六冠",
+        "text": "博塔斯从杆位出发夺冠，从第5位起步的汉密尔顿获得第二，就此锁定个人第六个世界冠军，维斯塔潘第三。法拉利的维特尔在第8圈因右后悬挂失效退赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2019 United States Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2019_United_States_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "gp": "united-states",
+        "circuit": "austin",
+        "title": "两车底板磨损被取消",
+        "text": "维斯塔潘从第6位起步夺冠，取得本赛季第15胜。赛后第二名汉密尔顿和杆位起步的勒克莱尔因底板滑块磨损超标被取消成绩，诺里斯和塞恩斯递补第二、第三，萨金特借此拿到个人唯一的F1积分。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2023 United States Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2023_United_States_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "mexico-city": {
+    "nameZh": "罗德里格斯兄弟赛道",
+    "nameEn": "Autódromo Hermanos Rodríguez",
+    "tagline": "高原稀薄空气中的体育场赛道",
+    "summary": "位于墨西哥城东南部的马格达莱纳·米斯华卡公园，海拔2238米，稀薄空气减少阻力，车队可用高下压力设定而少损直道速度。1962年举办非锦标赛，1963年进入世界锦标赛，1970年后与1992年后两度因安全问题停办。2015年经蒂尔克改造回归，赛道穿越福罗索尔体育场并绕开半段佩拉尔塔达弯。现长4.304公里，17个弯，以罗德里格斯兄弟命名。",
+    "traits": [
+      "高海拔2238米",
+      "空气稀薄",
+      "体育场路段",
+      "长直道高速"
+    ],
+    "moments": [
+      {
+        "year": 1964,
+        "gp": "mexico",
+        "circuit": "mexico-city",
+        "title": "苏蒂斯一分险胜夺冠",
+        "text": "收官战三人争冠。积分领先的格雷厄姆·希尔遭班迪尼追尾打转，领跑的克拉克在最后一圈前因油管故障引擎卡死。古尔尼赢下比赛，驾驶以北美NART车队名义参赛、涂成蓝白色的法拉利的苏蒂斯获得第二，以40比39一分险胜希尔夺得车手冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1964 Mexican Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1964_Mexican_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1965,
+        "gp": "mexico",
+        "circuit": "mexico-city",
+        "title": "金瑟为本田赢下首胜",
+        "text": "1.5升引擎时代的最后一场比赛，里奇·金瑟驾驶本田赛车夺冠。这是本田在F1世界锦标赛的首个分站冠军和首个领奖台，也是金瑟职业生涯唯一一场胜利，同时是固特异轮胎在F1的首胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1965 Mexican Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1965_Mexican_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1986,
+        "gp": "mexico",
+        "circuit": "mexico-city",
+        "title": "伯格与贝纳通首胜",
+        "text": "F1时隔16年重返墨西哥城。格哈德·伯格驾驶贝纳通-宝马从第四位起步，凭借倍耐力轮胎全程不进站换胎赢下比赛，这是他本人和贝纳通车队的首个分站冠军。曼塞尔只获第五，冠军争夺延续到阿德莱德。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1986 Mexican Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1986_Mexican_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2015,
+        "gp": "mexico",
+        "circuit": "mexico-city",
+        "title": "时隔23年回归",
+        "text": "墨西哥大奖赛自1992年后首次重返赛历，改造后的赛道从12号弯起穿越福罗索尔体育场。尼科·罗斯伯格从杆位出发获胜，汉密尔顿第二，梅赛德斯包揽前二，比赛日现场观众达134850人。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2015 Mexican Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2015_Mexican_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2017,
+        "gp": "mexico",
+        "circuit": "mexico-city",
+        "title": "汉密尔顿锁定第四冠",
+        "text": "第一圈维特尔先后与维斯塔潘、汉密尔顿发生接触，维特尔前翼受损、汉密尔顿爆胎，两位争冠者都跌到队尾。维斯塔潘夺冠，汉密尔顿追回第九，维特尔只拿到第四，汉密尔顿提前两站锁定个人第四个世界冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2017 Mexican Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2017_Mexican_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2018,
+        "gp": "mexico",
+        "circuit": "mexico-city",
+        "title": "汉密尔顿追平方吉奥",
+        "text": "里卡多夺得杆位，队友维斯塔潘从第二位起步，连续第二年在墨西哥城夺冠。汉密尔顿以第四名完赛，锁定个人第五个车手冠军，追平方吉奥的五届冠军纪录。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2018 Mexican Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2018_Mexican_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "interlagos": {
+    "nameZh": "英特拉格斯赛道",
+    "nameEn": "Autódromo José Carlos Pace",
+    "tagline": "起伏多雨的逆时针经典赛道",
+    "summary": "位于巴西圣保罗市，赛道顺着丘陵地势起伏，逆时针行驶，当地阵雨频繁。1972年举办非锦标赛，1973年起承办巴西大奖赛。原7.96公里布局使用到1980年，此后F1移师里约热内卢，1990年赛道缩短改造后回归。1985年更名纪念1977年死于空难的车手何塞·卡洛斯·佩斯。现长4.309公里，15个弯。",
+    "traits": [
+      "逆时针",
+      "地势起伏",
+      "阵雨多发",
+      "塞纳S弯"
+    ],
+    "moments": [
+      {
+        "year": 1975,
+        "gp": "brazil",
+        "circuit": "interlagos",
+        "title": "佩斯唯一的分站冠军",
+        "text": "圣保罗本地车手卡洛斯·佩斯驾驶布拉汉姆从第六位起步夺冠，菲蒂帕尔迪第二，巴西车手首次在F1包揽前二。这是佩斯职业生涯唯一一场胜利，两年后他死于空难，赛道在1985年以他的名字命名。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1975 Brazilian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1975_Brazilian_Grand_Prix"
+          },
+          {
+            "label": "Wikipedia · Interlagos Circuit",
+            "url": "https://en.wikipedia.org/wiki/Interlagos_Circuit"
+          }
+        ]
+      },
+      {
+        "year": 1991,
+        "gp": "brazil",
+        "circuit": "interlagos",
+        "title": "塞纳首次赢下主场",
+        "text": "塞纳从杆位出发，变速箱先丢失四挡，最后几圈又失去五挡和三挡，只能依赖六挡行驶，仍以2.9秒领先帕特雷斯冲线。这是他在第八个F1赛季首次赢得主场比赛，赛后因体力透支被人从车内抬出。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1991 Brazilian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1991_Brazilian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2008,
+        "gp": "brazil",
+        "circuit": "interlagos",
+        "title": "最后一圈决出冠军",
+        "text": "马萨从杆位出发赢得主场比赛。只需第五名的汉密尔顿在雨中被维特尔超越，最后一圈的最后几个弯道又超越坚持干胎的格洛克，重回第五，以一分优势夺冠，并以23岁300天成为当时最年轻的车手冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2008 Brazilian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2008_Brazilian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2012,
+        "gp": "brazil",
+        "circuit": "interlagos",
+        "title": "维特尔开局打转仍卫冕",
+        "text": "维特尔第一圈与布鲁诺·塞纳相撞打转，一度跌到第22位，随后追回第六。阿隆索获得第二，但维特尔以281比278三分领先，成为最年轻的三届车手冠军。巴顿赢下比赛，这也是舒马赫的最后一场比赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2012 Brazilian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2012_Brazilian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": "sao-paulo",
+        "circuit": "interlagos",
+        "title": "汉密尔顿从第十位逆袭",
+        "text": "汉密尔顿因DRS违规被取消排位成绩，冲刺赛从末位出发；正赛又因超用引擎部件被罚退五位，从第十位起步。他一路追上并超越领跑的维斯塔潘取胜。这是该站首次以圣保罗大奖赛为名举行。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2021 São Paulo Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2021_S%C3%A3o_Paulo_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "sao-paulo",
+        "circuit": "interlagos",
+        "title": "维斯塔潘第17位起步夺冠",
+        "text": "恶劣天气迫使排位赛推迟到周日早上。维斯塔潘因超出动力单元配额被罚退五位，从第17位起步，在湿地比赛中夺冠，结束自西班牙站以来的胜利荒。阿尔派的奥康与加斯利分获第二、第三，杆位得主诺里斯只获第六。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2024 São Paulo Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2024_S%C3%A3o_Paulo_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "las-vegas": {
+    "nameZh": "拉斯维加斯街道赛道",
+    "nameEn": "Las Vegas Strip Circuit",
+    "tagline": "拉斯维加斯大道上的夜间街道赛",
+    "summary": "环绕拉斯维加斯大道一带的街道赛道，位于内华达州帕拉代斯，2023年11月首次承办F1，首届正赛于当地时间周六22时开赛。赛道长6.201公里，17个弯，逆时针行驶，沿大道延伸约1.9公里的长直道途经众多酒店与赌场，并绕过球形场馆Sphere。这是F1自1982年凯撒宫大奖赛之后首次重返拉斯维加斯。",
+    "traits": [
+      "街道赛",
+      "夜间比赛",
+      "逆时针",
+      "1.9公里长直道"
+    ],
+    "moments": [
+      {
+        "year": 2023,
+        "gp": "las-vegas",
+        "circuit": "las-vegas",
+        "title": "首练遭遇井盖事故",
+        "text": "首届比赛周末的第一节练习赛中，塞恩斯的法拉利压上松脱的金属盖板，底板严重受损，练习赛被红旗中止。他因此更换储能单元，被罚退十位；第二节练习赛则因检查排水井盖推迟约两个半小时。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2023 Las Vegas Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2023_Las_Vegas_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "gp": "las-vegas",
+        "circuit": "las-vegas",
+        "title": "首届正赛",
+        "text": "勒克莱尔夺得首届比赛杆位。维斯塔潘从第二位起步最终夺冠，勒克莱尔在最后一圈超越佩雷兹拿下第二。这是F1自1982年凯撒宫大奖赛之后，首次在拉斯维加斯举行正赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2023 Las Vegas Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2023_Las_Vegas_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "las-vegas",
+        "circuit": "las-vegas",
+        "title": "维斯塔潘锁定四连冠",
+        "text": "拉塞尔从杆位出发获胜，汉密尔顿从第十位追到第二，梅赛德斯拿下2022年圣保罗站以来首个一二名。维斯塔潘以第五名完赛并领先诺里斯，提前两站锁定连续第四个车手冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2024 Las Vegas Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2024_Las_Vegas_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "las-vegas",
+        "circuit": "las-vegas",
+        "title": "迈凯伦双车被取消成绩",
+        "text": "排位赛在湿滑赛道上开始，诺里斯夺得杆位。维斯塔潘从第二位起步，第二次赢得拉斯维加斯站。赛后检查发现迈凯伦两车底板滑块磨损超标，诺里斯与皮亚斯特里均被取消成绩，拉塞尔和安东内利分获第二、第三。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2025 Las Vegas Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2025_Las_Vegas_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "lusail": {
+    "nameZh": "卢赛尔国际赛道",
+    "nameEn": "Lusail International Circuit",
+    "tagline": "多哈以北的灯光赛道",
+    "summary": "位于卡塔尔多哈以北的卢赛尔城外，2004年启用，2007年加装用于夜赛的永久照明，2008年承办了MotoGP历史上首场夜赛。2021年它替代因新冠疫情取消的澳大利亚站，举办首届卡塔尔大奖赛；2022年因卡塔尔主办世界杯停办一年，2023年重返赛历。现长5.419公里，16个弯，顺时针行驶。",
+    "traits": [
+      "顺时针",
+      "永久照明",
+      "轮胎负荷高",
+      "MotoGP首场夜赛举办地"
+    ],
+    "moments": [
+      {
+        "year": 2021,
+        "gp": "qatar",
+        "circuit": "lusail",
+        "title": "首届卡塔尔大奖赛",
+        "text": "这场比赛替代因新冠疫情取消的澳大利亚站。汉密尔顿从杆位出发领跑每一圈夺冠；维斯塔潘因无视双黄旗被罚退五位，从第七位追到第二；阿隆索获得第三，是他自2014年匈牙利站后的首个领奖台。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2021 Qatar Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2021_Qatar_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2023,
+        "gp": "qatar",
+        "circuit": "lusail",
+        "title": "冲刺赛中锁定三冠",
+        "text": "周六冲刺赛中佩雷兹撞车退赛，维斯塔潘以冲刺赛第二锁定第三个车手冠军，皮亚斯特里为迈凯伦赢得首个冲刺赛冠军。正赛因轮胎隐患实行每套胎最多18圈的限制，酷热令萨金特中暑退赛，维斯塔潘从杆位出发获胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2023 Qatar Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2023_Qatar_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "qatar",
+        "circuit": "lusail",
+        "title": "维斯塔潘被罚后仍取胜",
+        "text": "维斯塔潘排位赛最快，但因在Q3中不必要地慢速行驶被罚退一位，拉塞尔继承杆位。维斯塔潘起步后夺回领先并获胜，勒克莱尔第二、皮亚斯特里第三；一度位居第二的诺里斯因无视黄旗被罚10秒停站，最终第十。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2024 Qatar Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2024_Qatar_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "qatar",
+        "circuit": "lusail",
+        "title": "安全车下的策略失误",
+        "text": "皮亚斯特里夺得杆位。第7圈出现安全车时迈凯伦没有让两车进站，赛后承认决策错误；维斯塔潘从第三位起步夺冠，皮亚斯特里第二、塞恩斯第三、诺里斯第四。诺里斯仍领先维斯塔潘12分，冠军之争留到阿布扎比。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2025 Qatar Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2025_Qatar_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "yas-marina": {
+    "nameZh": "亚斯码头赛道",
+    "nameEn": "Yas Marina Circuit",
+    "tagline": "黄昏开赛的赛季收官舞台",
+    "summary": "位于阿布扎比亚斯岛，由赫尔曼·蒂尔克设计，2009年起承办赛季收官的阿布扎比大奖赛，首届即为F1首场昼夜交替的比赛。赛道从W酒店下方穿过，维修区出口经隧道从赛道下方穿出。2021年改造将4至6号弯合并为一个发夹弯，11至14号弯改为带倾角的弯道。现长5.281公里，16个弯，逆时针行驶。",
+    "traits": [
+      "昼夜交替比赛",
+      "赛季收官站",
+      "维修区出口隧道",
+      "逆时针"
+    ],
+    "moments": [
+      {
+        "year": 2009,
+        "gp": "abu-dhabi",
+        "circuit": "yas-marina",
+        "title": "首场昼夜交替比赛",
+        "text": "首届阿布扎比大奖赛作为赛季收官战，当地17时开赛，日落后结束，成为F1首场昼夜交替的比赛。杆位得主汉密尔顿因右后刹车问题退赛，维特尔领衔红牛包揽前二，韦伯第二。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2009 Abu Dhabi Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2009_Abu_Dhabi_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2010,
+        "gp": "abu-dhabi",
+        "circuit": "yas-marina",
+        "title": "维特尔后来居上首夺冠",
+        "text": "四人进入收官战争冠，维特尔赛前排第三，落后阿隆索15分。他从杆位出发获胜；阿隆索为应对韦伯提前进站，此后长时间被困在彼得罗夫的雷诺之后，仅获第七。维特尔以4分优势夺冠，以23岁134天成为最年轻的车手冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2010 Abu Dhabi Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2010_Abu_Dhabi_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "gp": "abu-dhabi",
+        "circuit": "yas-marina",
+        "title": "双倍积分决战",
+        "text": "F1首次对单场比赛实行双倍积分。杆位的罗斯伯格起步被汉密尔顿超越，随后ERS系统故障，最终仅获第十四。汉密尔顿从第二位起步赢下比赛，领先第二名马萨2.5秒，夺得个人第二个车手冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2014 Abu Dhabi Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2014_Abu_Dhabi_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2016,
+        "gp": "abu-dhabi",
+        "circuit": "yas-marina",
+        "title": "罗斯伯格五分夺冠",
+        "text": "汉密尔顿从杆位出发，比赛后段刻意放慢节奏，让维特尔和维斯塔潘逼近队友罗斯伯格，并多次拒绝车队提速的要求。罗斯伯格稳住第二，以385比380夺得生涯唯一的车手冠军，一周后宣布退役。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2016 Abu Dhabi Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2016_Abu_Dhabi_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": "abu-dhabi",
+        "circuit": "yas-marina",
+        "title": "安全车争议决出冠军",
+        "text": "维斯塔潘与汉密尔顿赛前同积369.5分。汉密尔顿领跑大半场，拉蒂菲撞车引出安全车后，赛事总监马西只让两人之间的套圈车辆超车，安全车提前一圈回站。换上新软胎的维斯塔潘在最后一圈超越汉密尔顿，夺得首个车手冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2021 Abu Dhabi Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2021_Abu_Dhabi_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "abu-dhabi",
+        "circuit": "yas-marina",
+        "title": "诺里斯两分登顶",
+        "text": "诺里斯、维斯塔潘和皮亚斯特里三人在收官战争冠，诺里斯赛前领先维斯塔潘12分。维斯塔潘从杆位出发获胜，皮亚斯特里第二，诺里斯以第三名完赛，最终以423比421两分优势夺得个人首个车手冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2025 Abu Dhabi Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2025_Abu_Dhabi_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "bahrain": {
+    "nameZh": "巴林国际赛道",
+    "nameEn": "Bahrain International Circuit",
+    "tagline": "中东地区首座F1赛道",
+    "summary": "位于巴林萨基尔的沙漠之中，由赫尔曼·蒂尔克设计，2004年承办了中东地区第一场F1大奖赛。为防止风沙吹上赛道，主办方曾在周边沙地喷洒黏合剂。2010年F1使用6.299公里的耐力赛布局，2014年起改在灯光下夜赛，2020年萨基尔大奖赛则启用3.543公里的外环布局。大奖赛布局长5.412公里，15个弯。",
+    "traits": [
+      "沙漠赛道",
+      "灯光夜赛",
+      "多种布局",
+      "顺时针"
+    ],
+    "moments": [
+      {
+        "year": 2004,
+        "gp": "bahrain",
+        "circuit": "bahrain",
+        "title": "中东首场大奖赛",
+        "text": "巴林大奖赛首次举办，这是F1第一次在巴林乃至中东地区比赛。舒马赫驾驶法拉利从杆位出发获胜，队友巴里切罗第二，法拉利包揽前二，巴顿为BAR-本田拿下第三。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2004 Bahrain Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2004_Bahrain_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2014,
+        "gp": "bahrain",
+        "circuit": "bahrain",
+        "title": "梅赛德斯队友夜战缠斗",
+        "text": "巴林站首次在夜间举行。汉密尔顿从第二位起步，与杆位队友罗斯伯格多次轮对轮争夺领先。安全车抹平了汉密尔顿十多秒的优势，换上软胎的罗斯伯格最后阶段紧追不舍，汉密尔顿最终以1.085秒优势获胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2014 Bahrain Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2014_Bahrain_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2020,
+        "gp": "bahrain",
+        "circuit": "bahrain",
+        "title": "格罗斯让火海脱险",
+        "text": "第一圈格罗斯让的哈斯赛车与科维亚特接触后撞上护栏，车身断成两截并起火。他在火焰中坚持约28秒后脱身，双手二度烧伤、没有骨折，halo装置被认为保护了他。比赛中断80分钟，汉密尔顿从杆位出发获胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2020 Bahrain Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2020_Bahrain_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2020,
+        "gp": "sakhir",
+        "circuit": "bahrain",
+        "title": "外环赛道上的佩雷兹首胜",
+        "text": "萨基尔大奖赛在3.543公里外环布局上跑87圈。顶替感染新冠的汉密尔顿出战的拉塞尔排位第二并长时间领跑，但梅赛德斯进站装错轮胎，他又遭遇爆胎，只获第九。第一圈被勒克莱尔撞到打转、换胎后排在队尾的佩雷兹逆转夺冠，取得生涯第190场比赛的首胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2020 Sakhir Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2020_Sakhir_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "jeddah": {
+    "nameZh": "吉达滨海赛道",
+    "nameEn": "Jeddah Corniche Circuit",
+    "tagline": "红海之滨的高速街道赛",
+    "summary": "位于沙特阿拉伯吉达的滨海大道，毗邻红海，由赫尔曼·蒂尔克之子卡斯滕·蒂尔克设计，2021年12月承办首届沙特阿拉伯大奖赛，首届正赛于当地时间20时30分开赛。赛道长6.174公里，有27个弯，被视为速度最快的街道赛道，2025年杆位圈创下每小时254.6公里的平均速度纪录。",
+    "traits": [
+      "街道赛",
+      "最快街道赛道",
+      "27个弯",
+      "红海沿岸",
+      "夜间比赛"
+    ],
+    "moments": [
+      {
+        "year": 2021,
+        "gp": "saudi-arabia",
+        "circuit": "jeddah",
+        "title": "两度红旗的争冠战",
+        "text": "首届沙特站两度出示红旗。汉密尔顿从杆位出发获胜；维斯塔潘第37圈突然重刹，汉密尔顿撞上其左后轮，赛后维斯塔潘被追加10秒罚时，仍列第二。两人带着相同的369.5分进入收官战，为1974年以来首次。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2021 Saudi Arabian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2021_Saudi_Arabian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2022,
+        "gp": "saudi-arabia",
+        "circuit": "jeddah",
+        "title": "袭击阴影下照常开赛",
+        "text": "第一节练习赛期间，距赛道约16公里的沙特阿美油库遭导弹和无人机袭击起火，车手讨论约4.5小时后同意参赛。佩雷兹拿到生涯首个杆位，维斯塔潘从第四位起步，与勒克莱尔反复利用DRS周旋后以0.549秒险胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2022 Saudi Arabian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2022_Saudi_Arabian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2024,
+        "gp": "saudi-arabia",
+        "circuit": "jeddah",
+        "title": "贝尔曼替补首秀得分",
+        "text": "塞恩斯因阑尾炎退出，法拉利预备车手贝尔曼从第三节练习赛起顶替出战。18岁的他排位第11，正赛获得第七并拿到个人首个积分，成为法拉利史上最年轻的参赛车手。维斯塔潘从杆位出发获胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2024 Saudi Arabian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2024_Saudi_Arabian_Grand_Prix"
+          },
+          {
+            "label": "Wikipedia · Oliver Bearman",
+            "url": "https://en.wikipedia.org/wiki/Oliver_Bearman"
+          }
+        ]
+      },
+      {
+        "year": 2025,
+        "gp": "saudi-arabia",
+        "circuit": "jeddah",
+        "title": "皮亚斯特里登顶积分榜",
+        "text": "维斯塔潘打破赛道纪录夺得杆位，但起步后切过2号弯被罚5秒。皮亚斯特里从第二位起步获胜，生涯首次登上车手积分榜榜首；维斯塔潘第二，勒克莱尔第三，为法拉利拿下当季首个大奖赛领奖台。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2025 Saudi Arabian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2025_Saudi_Arabian_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "imola": {
+    "nameZh": "伊莫拉赛道",
+    "nameEn": "Autodromo Internazionale Enzo e Dino Ferrari",
+    "tagline": "圣马力诺大奖赛的故乡",
+    "summary": "位于意大利艾米利亚-罗马涅大区伊莫拉，距博洛尼亚约40公里，逆时针运行。1980年首次承办F1世锦赛分站（意大利大奖赛），1981至2006年每年举办圣马力诺大奖赛。1994年事故后坦布雷罗等弯道被大幅改造。2020年以艾米利亚-罗马涅大奖赛之名回归，2023年因洪水取消，合同于2025年到期后未续约。现布局长4.909公里，19个弯。",
+    "traits": [
+      "逆时针",
+      "老派窄赛道",
+      "起伏地形",
+      "坦布雷罗弯",
+      "Variante Alta重刹车"
+    ],
+    "moments": [
+      {
+        "year": 1982,
+        "gp": "san-marino",
+        "circuit": "imola",
+        "title": "皮罗尼违令超越维伦纽夫",
+        "text": "因FOCA车队集体抵制，仅14辆车参赛。法拉利示意两车减速，吉尔·维伦纽夫理解为保持名次，皮罗尼却在最后一圈于Tosa弯内线超越夺冠。维伦纽夫赛后表示再也不与皮罗尼说话，两周后在比利时大奖赛排位赛中丧生。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1982 San Marino Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1982_San_Marino_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1994,
+        "gp": "san-marino",
+        "circuit": "imola",
+        "title": "伊莫拉黑色周末",
+        "text": "周五练习赛巴里切罗撞车昏迷，周六排位赛拉岑伯格在Villeneuve弯撞墙身亡。正赛第7圈，杆位出发的塞纳在坦布雷罗弯以211公里时速撞上混凝土墙遇难，舒马赫赢得比赛。此后大奖赛车手协会重组，赛道也被大幅改造。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1994 San Marino Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1994_San_Marino_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2005,
+        "gp": "san-marino",
+        "circuit": "imola",
+        "title": "阿隆索力阻舒马赫",
+        "text": "排位赛失误的舒马赫从第13位发车，一路追至第二，冲线时仅落后雷诺车手阿隆索0.215秒。杆位的莱科宁第9圈因传动轴故障退赛；冲线第三的巴顿因赛车低于最低重量，BAR车队两车成绩被取消。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2005 San Marino Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2005_San_Marino_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2020,
+        "gp": "emilia-romagna",
+        "circuit": "imola",
+        "title": "时隔14年重返伊莫拉",
+        "text": "这是2006年圣马力诺大奖赛后伊莫拉首次举办F1正赛，赛事压缩为两天，仅在周六上午安排一节练习赛。博塔斯夺得杆位，汉密尔顿从第二位起步获胜，梅赛德斯锁定创纪录的连续第七个车队总冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2020 Emilia Romagna Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2020_Emilia_Romagna_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "nurburgring": {
+    "nameZh": "纽博格林赛道",
+    "nameEn": "Nürburgring",
+    "tagline": "从绿色地狱到现代GP赛道",
+    "summary": "位于德国莱茵兰-普法尔茨州艾费尔山区的纽博格林。1951至1976年F1使用全长约22.8公里的北环（Nordschleife），斯图尔特称之为“绿色地狱”。1976年后F1不再使用北环，1984年新建的GP赛道启用，先后以德国、欧洲、卢森堡和艾费尔大奖赛之名承办F1。现GP布局长5.148公里，15个弯。",
+    "traits": [
+      "北环",
+      "艾费尔山区",
+      "1984年新GP赛道",
+      "多个赛事名称"
+    ],
+    "moments": [
+      {
+        "year": 1957,
+        "gp": "germany",
+        "circuit": "nurburgring",
+        "title": "方吉奥逆转夺第五冠",
+        "text": "方吉奥驾驶玛莎拉蒂采用半箱油加软胎策略，第13圈领先进站，但换胎拖延，出站时落后第二名柯林斯48秒。他随后多次刷新圈速纪录，第21圈接连超越柯林斯和霍索恩夺冠，提前两站锁定第五个世界冠军，这也是他最后一场F1胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1957 German Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1957_German_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1968,
+        "gp": "germany",
+        "circuit": "nurburgring",
+        "title": "斯图尔特雾雨中大胜",
+        "text": "比赛在大雨和浓雾中进行。从第六位发车的斯图尔特驾驶马特拉赛车，以领先第二名格雷厄姆·希尔4分多钟的优势获胜。正是在这场胜利之后，斯图尔特用“绿色地狱”来形容北环赛道。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1968 German Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1968_German_Grand_Prix"
+          },
+          {
+            "label": "Wikipedia · Nürburgring",
+            "url": "https://en.wikipedia.org/wiki/N%C3%BCrburgring"
+          }
+        ]
+      },
+      {
+        "year": 1976,
+        "gp": "germany",
+        "circuit": "nurburgring",
+        "title": "劳达北环烈火事故",
+        "text": "卫冕冠军劳达在Bergwerk弯前的高速左弯失控，赛车穿过护栏撞上土坡后起火。爱德华兹、伦格、埃特尔和梅尔扎里奥停车将他救出，劳达严重烧伤。亨特赢得比赛，这也是F1最后一次在北环比赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1976 German Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1976_German_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1999,
+        "gp": "europe",
+        "circuit": "nurburgring",
+        "title": "赫伯特为斯图尔特车队夺冠",
+        "text": "多变天气下，弗伦岑、库特哈德、费斯切拉和拉尔夫·舒马赫先后在领跑时退赛或掉队。从第14位发车的赫伯特驾驶斯图尔特-福特赛车获胜，这是斯图尔特车队唯一的分站冠军；特鲁利获得生涯首个领奖台，巴里切罗第三。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1999 European Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1999_European_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "hockenheimring": {
+    "nameZh": "霍根海姆赛道",
+    "nameEn": "Hockenheimring",
+    "tagline": "从森林高速赛道到紧凑新布局",
+    "summary": "位于德国巴登-符腾堡州霍根海姆附近的莱茵河谷。1970年车手要求改善纽博格林安全后，德国大奖赛临时移师此地，1977年起成为该站的主要场地。旧布局以穿越森林的长直道和Motodrom体育场路段著称，末期长6.823公里；2002年经赫尔曼·蒂尔克改建为4.574公里、17个弯的新布局。2019年为最后一次举办F1。",
+    "traits": [
+      "Motodrom体育场路段",
+      "2002年改建",
+      "旧版森林长直道",
+      "德国大奖赛主场"
+    ],
+    "moments": [
+      {
+        "year": 1970,
+        "gp": "germany",
+        "circuit": "hockenheimring",
+        "title": "霍根海姆首办德国站",
+        "text": "车手们要求改善纽博格林的安全条件后，德国大奖赛临时迁至已装设护栏的霍根海姆。从第二位发车的林特驾驶莲花赛车以0.7秒险胜伊克斯，这是他生涯最后一场胜利，同年他在意大利大奖赛中丧生。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1970 German Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1970_German_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2000,
+        "gp": "germany",
+        "circuit": "hockenheimring",
+        "title": "巴里切罗第18位发车夺冠",
+        "text": "巴里切罗从第18位发车，首圈即升至第10。一名闯入赛道的观众引出安全车，随后赛道部分路段下雨，他坚持使用干地光头胎并取得领先，赢得生涯首胜。舒马赫开赛第一弯与费斯切拉相撞，双双退赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2000 German Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2000_German_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2018,
+        "gp": "germany",
+        "circuit": "hockenheimring",
+        "title": "维特尔领跑时冲出赛道",
+        "text": "杆位出发的维特尔一路领跑，第52圈小雨中在第12弯刹车抱死冲进护墙退赛。排位赛因液压故障只能从第14位发车的汉密尔顿最终获胜，并从维特尔手中夺回车手积分榜领先位置。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2018 German Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2018_German_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2019,
+        "gp": "germany",
+        "circuit": "hockenheimring",
+        "title": "霍根海姆混乱雨战",
+        "text": "大雨中开赛，全场出动四次安全车。勒克莱尔冲出赛道退赛，杆位的汉密尔顿也在第29圈撞坏前翼。维斯塔潘获胜，从最后一位起步的维特尔获得第二，克维亚特为小红牛拿到2008年意大利站后的首个领奖台。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2019 German Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2019_German_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "kyalami": {
+    "nameZh": "基亚拉米赛道",
+    "nameEn": "Kyalami Racing Circuit",
+    "tagline": "南非大奖赛的主场",
+    "summary": "位于南非豪登省米德兰，约翰内斯堡以北，名称源自祖鲁语“Khaya lami”，意为“我的家”。1967年首次举办F1世锦赛南非大奖赛，多次担任赛季揭幕站。1985年后因种族隔离政策引发的制裁停办，1992年在改建后的新布局上回归，1993年因推广商破产再度告别F1。改建后的F1布局长4.261公里，13个弯。",
+    "traits": [
+      "逆时针",
+      "赛季揭幕站",
+      "1989年改建",
+      "长直道（旧布局）"
+    ],
+    "moments": [
+      {
+        "year": 1967,
+        "gp": "south-africa",
+        "circuit": "kyalami",
+        "title": "首站即迎墨西哥首胜",
+        "text": "基亚拉米首次承办世锦赛分站，并作为1967赛季揭幕战。库珀车手佩德罗·罗德里格斯从第四位发车获胜，成为首位赢得世锦赛分站的墨西哥车手；本地私人车手约翰·洛夫一度领跑，最终获得第二。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1967 South African Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1967_South_African_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1977,
+        "gp": "south-africa",
+        "circuit": "kyalami",
+        "title": "普赖斯与工作人员罹难",
+        "text": "佐尔齐的赛车停在主直道边起火，两名工作人员横穿赛道救援，19岁的扬森·范武伦被高速驶来的汤姆·普赖斯赛车撞中，两人均不幸身亡。劳达赢得比赛，这是他1976年纽博格林事故后的首胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1977 South African Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1977_South_African_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1982,
+        "gp": "south-africa",
+        "circuit": "kyalami",
+        "title": "车手罢赛风波",
+        "text": "劳达和皮罗尼牵头的车手协会以罢赛抗议新超级驾照条款，该条款可能将车手与一支车队绑定最多三年，最终双方在最后时刻妥协，比赛如期进行。普罗斯特领跑时爆胎，从落后一圈多追回并夺冠；复出首战的劳达获得第四。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1982 South African Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1982_South_African_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1985,
+        "gp": "south-africa",
+        "circuit": "kyalami",
+        "title": "种族隔离阴影下停办",
+        "text": "因种族隔离问题带来的国际压力，雷诺和利吉耶两队缺席本站，万宝路等赞助商也要求撤下标识。曼塞尔从杆位出发为威廉姆斯-本田夺冠，罗斯伯格第二。此后南非大奖赛停办，直到1992年才重返赛历。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1985 South African Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1985_South_African_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "adelaide": {
+    "nameZh": "阿德莱德街道赛道",
+    "nameEn": "Adelaide Street Circuit",
+    "tagline": "八九十年代的赛季收官站",
+    "summary": "位于南澳大利亚州阿德莱德市中心东侧的公园地带，维修区直道设在维多利亚公园内，是一条临时街道赛道。1985至1995年连续承办澳大利亚大奖赛，每年都是赛季收官站，1986年和1994年的车手冠军均在此决出。约900米的布拉汉姆直道上赛车速度极高。赛道长3.78公里，16个弯，1996年起澳大利亚站移至墨尔本。",
+    "traits": [
+      "街道赛道",
+      "赛季收官站",
+      "布拉汉姆长直道",
+      "冠军决胜场"
+    ],
+    "moments": [
+      {
+        "year": 1986,
+        "gp": "australia",
+        "circuit": "adelaide",
+        "title": "曼塞尔爆胎，普罗斯特卫冕",
+        "text": "曼塞尔赛前领跑积分榜，只需第三即可封王，但第64圈在布拉汉姆直道以约290公里时速爆胎退赛。威廉姆斯出于谨慎召皮奎特进站换胎，普罗斯特领先至终点，赢得个人第二个世界冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1986 Australian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1986_Australian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1991,
+        "gp": "australia",
+        "circuit": "adelaide",
+        "title": "暴雨中仅计14圈",
+        "text": "暴雨导致比赛在完成16圈后被红旗终止，成绩按第14圈结束时计算，因完赛距离不足75%只发放一半积分。塞纳获胜，曼塞尔第二、伯格第三；曼塞尔在第16圈打滑撞车后被送往医院，未能出席颁奖。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1991 Australian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1991_Australian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1994,
+        "gp": "australia",
+        "circuit": "adelaide",
+        "title": "舒马赫与希尔相撞定冠",
+        "text": "赛前舒马赫以92比91领先希尔1分。第36圈舒马赫在East Terrace弯冲出赛道，随后在下一个弯与希尔相撞当场退赛，希尔也因悬挂损坏退出，舒马赫夺得首个世界冠军。曼塞尔获胜，这是他最后一场F1胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1994 Australian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1994_Australian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1995,
+        "gp": "australia",
+        "circuit": "adelaide",
+        "title": "阿德莱德告别战",
+        "text": "赛前已宣布这是阿德莱德街道赛道的最后一场F1比赛。希尔从杆位出发，以领先两圈的优势获胜，这在F1历史上仅是第二次；23名首发车手中只有8人完赛，帕尼斯和莫尔比德利分获第二、第三。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1995 Australian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1995_Australian_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "watkins-glen": {
+    "nameZh": "沃特金斯格伦赛道",
+    "nameEn": "Watkins Glen International",
+    "tagline": "美国大奖赛的二十年主场",
+    "summary": "位于美国纽约州五指湖地区南部、塞内卡湖南端的沃特金斯格伦村附近，昵称“The Glen”。1961至1980年连续承办F1美国大奖赛。1971年增加名为“Boot”的四弯路段，赛道延长至5.435公里、11个弯。因安全问题及拖欠车队80万美元，F1在1980年后离开，赛道于1981年破产关闭。",
+    "traits": [
+      "Boot路段",
+      "Esses上坡弯",
+      "纽约州五指湖地区",
+      "高速起伏"
+    ],
+    "moments": [
+      {
+        "year": 1961,
+        "gp": "united-states",
+        "circuit": "watkins-glen",
+        "title": "莲花车队首胜",
+        "text": "沃特金斯格伦首次承办美国大奖赛，新科冠军菲尔·希尔所在的法拉利没有参赛。英尼斯·爱尔兰从第八位发车，在莫斯的莲花赛车引擎故障后取得领先并获胜，这是查普曼的莲花车队首个世锦赛分站冠军，也是爱尔兰生涯唯一胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1961 United States Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1961_United_States_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1973,
+        "gp": "united-states",
+        "circuit": "watkins-glen",
+        "title": "塞韦特殒命，斯图尔特告别",
+        "text": "周六排位赛最后几分钟，泰瑞尔车手塞韦特在上坡的Esses弯道剧烈撞车身亡。泰瑞尔为悼念他退出正赛，已锁定第三个冠军的斯图尔特原计划以此作为第100场也是最后一场比赛，最终以99场告别F1。彼得森从杆位出发获胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1973 United States Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1973_United_States_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1979,
+        "gp": "united-states",
+        "circuit": "watkins-glen",
+        "title": "吉尔·维伦纽夫雨中折桂",
+        "text": "周五大雨中只有六辆车做出圈速，吉尔·维伦纽夫比其他人快了九秒多。正赛开始前约20分钟降雨，他从第三位发车，驾驶法拉利在湿滑路面上获胜；一度领跑的艾伦·琼斯进站后右后轮脱落退赛，阿努获得第二。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1979 United States Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1979_United_States_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1980,
+        "gp": "united-states",
+        "circuit": "watkins-glen",
+        "title": "沃特金斯格伦F1终章",
+        "text": "这是F1最后一次在沃特金斯格伦比赛。贾科梅利拿下生涯唯一杆位；新科世界冠军艾伦·琼斯从第五位起步，首弯冲出赛道后首圈仅列第14，最终仍赢得比赛。这也是菲蒂帕尔迪和舍克特的最后一场大奖赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1980 United States Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1980_United_States_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "brands-hatch": {
+    "nameZh": "布兰兹哈奇赛道",
+    "nameEn": "Brands Hatch",
+    "tagline": "与银石轮流举办英国站",
+    "summary": "位于英格兰肯特郡西金斯当，地形起伏明显：发车后即冲下坡度约8%的Paddock Hill右弯，随后上坡制动进入Druids发夹弯。1964至1986年与银石轮流承办英国大奖赛，1983年和1985年另承办欧洲大奖赛。1976年起的F1布局长4.207公里，9个弯，1986年后不再举办F1。",
+    "traits": [
+      "Paddock Hill下坡弯",
+      "Druids发夹弯",
+      "起伏地形",
+      "英国站轮换"
+    ],
+    "moments": [
+      {
+        "year": 1964,
+        "gp": "great-britain",
+        "circuit": "brands-hatch",
+        "title": "布兰兹哈奇首办英国站",
+        "text": "英国大奖赛首次在肯特郡的布兰兹哈奇举行，这场比赛同时冠名欧洲大奖赛。克拉克驾驶莲花25从杆位出发获胜，领先BRM车手格雷厄姆·希尔2.8秒冲线。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1964 British Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1964_British_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1976,
+        "gp": "great-britain",
+        "circuit": "brands-hatch",
+        "title": "亨特冲线夺冠后被取消成绩",
+        "text": "开赛第一弯雷加佐尼与劳达相碰引发连环事故，比赛被红旗中断。亨特起初被裁定不能重赛，观众抗议后干事改判允许。重赛中亨特超越劳达冲线第一，但9月国际汽联支持法拉利的申诉，取消亨特成绩，胜利改判给劳达。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1976 British Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1976_British_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1985,
+        "gp": "europe",
+        "circuit": "brands-hatch",
+        "title": "曼塞尔第72场出赛首胜",
+        "text": "曼塞尔从第三位发车，驾驶威廉姆斯-本田在生涯第72次出赛中赢得首个分站冠军。第7圈罗斯伯格试图超越杆位的塞纳时被逼至打转，皮奎特随后撞上他。普罗斯特获得第四，提前锁定个人首个世界冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1985 European Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1985_European_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1986,
+        "gp": "great-britain",
+        "circuit": "brands-hatch",
+        "title": "布兰兹哈奇的F1终章",
+        "text": "开赛时多车相撞，拉菲特双腿骨折，F1生涯就此结束，这是他追平格雷厄姆·希尔纪录的第176次出赛。比赛中断约50分钟后重开，曼塞尔力压队友皮奎特获胜。这是布兰兹哈奇最后一次举办英国大奖赛和F1比赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1986 British Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1986_British_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "istanbul": {
+    "nameZh": "伊斯坦布尔公园赛道",
+    "nameEn": "TOSFED İstanbul Park",
+    "tagline": "以八号弯闻名的逆时针赛道",
+    "summary": "位于伊斯坦布尔亚洲一侧的图兹拉区，由赫尔曼·蒂尔克设计，逆时针运行，赛道横跨四个不同高度层面。拥有四个弯心的高速八号弯对车手颈部和轮胎都是严峻考验。2005至2011年承办土耳其大奖赛，因费用分歧停办，2020和2021年作为疫情期间替补站回归。2026年4月宣布将于2027至2031年重返赛历。全长5.338公里，14个弯。",
+    "traits": [
+      "逆时针",
+      "八号弯四弯心",
+      "高低落差大",
+      "蒂尔克设计"
+    ],
+    "moments": [
+      {
+        "year": 2005,
+        "gp": "turkey",
+        "circuit": "istanbul",
+        "title": "首届土耳其大奖赛",
+        "text": "伊斯坦布尔公园首次举办F1，莱科宁从杆位出发并领跑全部圈数获胜。蒙托亚在倒数第二圈与蒙泰罗的乔丹赛车相碰，最后一圈又在八号弯冲出，阿隆索借机升至第二，积分领先扩大到24分。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2005 Turkish Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2005_Turkish_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2006,
+        "gp": "turkey",
+        "circuit": "istanbul",
+        "title": "马萨生涯首胜",
+        "text": "马萨收获生涯首个杆位并赢得首个分站冠军。安全车期间法拉利两车同时进站，舒马赫排在马萨身后等待，被阿隆索超越，此后追到最后一个弯也未能反超，屈居第三。颁奖环节引发外交争议，组委会被国际汽联罚款500万美元。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2006 Turkish Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2006_Turkish_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2010,
+        "gp": "turkey",
+        "circuit": "istanbul",
+        "title": "红牛队友相撞",
+        "text": "第40圈，切换节油模式的领跑者韦伯被维特尔在驶向第12弯时追至并排，两车高速相碰，维特尔打转后因轮胎刺破退赛，韦伯带伤完赛获得第三。迈凯伦两车随后一度互换位置，汉密尔顿从第二位起步获胜，巴顿第二。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2010 Turkish Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2010_Turkish_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2020,
+        "gp": "turkey",
+        "circuit": "istanbul",
+        "title": "汉密尔顿雨战封王",
+        "text": "重新铺装的赛道抓地力极低，赛前降雨令开赛时路面湿滑。斯特罗尔拿下生涯首个杆位；汉密尔顿从第六位发车，一套中性胎跑了50圈获胜，夺得个人第七个车手总冠军，追平舒马赫的纪录。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2020 Turkish Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2020_Turkish_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "estoril": {
+    "nameZh": "埃斯托里尔赛道",
+    "nameEn": "Autódromo do Estoril",
+    "tagline": "葡萄牙大奖赛的老主场",
+    "summary": "位于里斯本以西的阿尔卡比德谢，距埃斯托里尔约9公里，1972年建成。1984至1996年承办葡萄牙大奖赛，拥有约986米的发车直道，也是许多车队冬季测试的常用场地。1994年增设减速弯后，F1布局延长至4.360公里、13个弯。1997年起被移出F1赛历。",
+    "traits": [
+      "长发车直道",
+      "冬季测试场地",
+      "冠军决胜场",
+      "1994年加设减速弯"
+    ],
+    "moments": [
+      {
+        "year": 1984,
+        "gp": "portugal",
+        "circuit": "estoril",
+        "title": "劳达以半分之差夺冠",
+        "text": "赛季收官战，普罗斯特从第二位发车获胜，从第11位起步的劳达只需拿到第二。曼塞尔在剩余18圈时因刹车故障打转退赛，劳达升至第二，以72比71.5的半分优势力压队友普罗斯特，夺得第三个世界冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1984 Portuguese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1984_Portuguese_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1985,
+        "gp": "portugal",
+        "circuit": "estoril",
+        "title": "塞纳雨中首胜",
+        "text": "比赛在越下越大的雨中进行，驾驶莲花-雷诺的塞纳以生涯首个杆位出发，赢得首个分站冠军。除第二名阿尔博雷托外，其余车手都被他套圈，阿尔博雷托也落后超过1分02秒。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1985 Portuguese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1985_Portuguese_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1993,
+        "gp": "portugal",
+        "circuit": "estoril",
+        "title": "普罗斯特第四次封王",
+        "text": "普罗斯特在赛前周五宣布赛季结束后退役，正赛他稳妥拿到第二，锁定个人第四个世界冠军。舒马赫从第六位发车，驾驶贝纳通-福特获胜。排位赛中新加盟迈凯伦的哈基宁以不到0.05秒力压队友塞纳。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1993 Portuguese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1993_Portuguese_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1996,
+        "gp": "portugal",
+        "circuit": "estoril",
+        "title": "雅克·维伦纽夫外线超越",
+        "text": "雅克·维伦纽夫在最后一个弯从外线超越舒马赫，当时两人正准备套圈拉瓦焦的米纳尔迪。他最终赢得赛季第四胜，希尔第二、舒马赫第三，车手冠军之争由此延续到三周后的日本收官战。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1996 Portuguese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1996_Portuguese_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "magny-cours": {
+    "nameZh": "马尼库尔赛道",
+    "nameEn": "Circuit de Nevers Magny-Cours",
+    "tagline": "法国中部的法国站旧址",
+    "summary": "马尼库尔赛道位于法国中部讷韦尔附近，距巴黎约250公里，1960年启用。1991年至2008年接替保罗·里卡德承办F1法国大奖赛。许多弯角仿照并借用埃斯托里尔、阿德莱德等名赛道的名字，慢速发卡弯与高速减速弯交替，超车机会少。2003年修改末段弯角和减速弯。因地处偏远、交通和住宿不足，2008年后告别F1。现行布局全长4.411公里，17个弯角。",
+    "traits": [
+      "发卡弯与高速减速弯交替",
+      "超车困难",
+      "路面平整",
+      "弯角借名赛道命名"
+    ],
+    "moments": [
+      {
+        "year": 1991,
+        "gp": "france",
+        "circuit": "magny-cours",
+        "title": "法国站首次移师马尼库尔",
+        "text": "这是首届在马尼库尔举行的法国大奖赛。威廉姆斯的曼塞尔从第4位起步，第21圈在发卡弯晚刹车超越法拉利的普罗斯特，因换胎耽误一度落后，第54圈又在同一发卡弯外线完成超车，最终领先5.003秒赢得赛季首胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1991 French Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1991_French_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1999,
+        "gp": "france",
+        "circuit": "magny-cours",
+        "title": "弗伦岑雨中一停取胜",
+        "text": "巴里切罗为斯图尔特车队拿下杆位。比赛第21圈开始下雨，乔丹车队在弗伦岑唯一一次进站换雨胎时加足了跑完全程的燃油，他从第5位起步夺冠；哈基宁从第14位追到第二，舒马赫因电气故障只获得第五。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1999 French Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1999_French_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2004,
+        "gp": "france",
+        "circuit": "magny-cours",
+        "title": "舒马赫四停战术取胜",
+        "text": "阿隆索为雷诺夺得杆位并在开局领跑。舒马赫采用四次进站策略，分别在第11、28、42和57圈进站，靠更快的圈速完成反超，最终领先阿隆索8.329秒获胜，这是他当季第九场胜利，巴里切罗获得第三。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2004 French Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2004_French_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2008,
+        "gp": "france",
+        "circuit": "magny-cours",
+        "title": "马尼库尔的最后一战",
+        "text": "莱科宁为法拉利拿下车队第200个杆位，但比赛过半前右侧排气管断裂、动力下降，第39圈被队友马萨超越。马萨夺冠并首次领跑车手积分榜，特鲁利为丰田拿下季军。这是马尼库尔最后一次举办法国大奖赛，该赛事随后停办十年。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2008 French Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2008_French_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "paul-ricard": {
+    "nameZh": "保罗·里卡德赛道",
+    "nameEn": "Circuit Paul Ricard",
+    "tagline": "米斯特拉尔直道与蓝红缓冲区",
+    "summary": "保罗·里卡德赛道位于法国南部瓦尔省勒卡斯特莱，靠近马赛，由茴香酒商人保罗·里卡德出资兴建，1970年启用。1971年至1990年间多次承办法国大奖赛，2018年至2022年再度回归。1986年德安杰利斯在此测试身亡后赛道被缩短。标志是长约1.8公里的米斯特拉尔直道和大面积蓝红色铺装缓冲区。现行布局在直道中段设减速弯，全长5.842公里，15个弯角。",
+    "traits": [
+      "米斯特拉尔长直道",
+      "大面积铺装缓冲区",
+      "地势平坦",
+      "常用作测试场",
+      "布局可变"
+    ],
+    "moments": [
+      {
+        "year": 1971,
+        "gp": "france",
+        "circuit": "paul-ricard",
+        "title": "保罗·里卡德首办法国站",
+        "text": "这是首届在新建的保罗·里卡德赛道举行的法国大奖赛。泰瑞尔的斯图尔特从杆位出发夺冠，并在第2圈创下最快圈，法国车手塞韦特在主场获得第二，为泰瑞尔拿下一二名；车祸受伤的菲蒂帕尔迪带伤获得第三。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1971 French Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1971_French_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1990,
+        "gp": "france",
+        "circuit": "paul-ricard",
+        "title": "雷顿之家险些爆冷",
+        "text": "雷顿之家是唯一尝试不换胎跑完比赛的车队。领跑者进站后，卡佩利升至第一并守住领先，直到全场80圈中的第77圈才被法拉利的普罗斯特超越，最终获得第二。普罗斯特这场胜利是法拉利车队的第100场大奖赛胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1990 French Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1990_French_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2018,
+        "gp": "france",
+        "circuit": "paul-ricard",
+        "title": "法国站时隔十年回归",
+        "text": "法国大奖赛自2008年后首次回到赛历，保罗·里卡德也是1990年后首次承办。新布局在米斯特拉尔直道中段加入减速弯。汉密尔顿杆位起步夺冠，维斯塔潘第二；维特尔开局撞上博塔斯，两车都需维修，维特尔随后受罚。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2018 French Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2018_French_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2022,
+        "gp": "france",
+        "circuit": "paul-ricard",
+        "title": "勒克莱尔领跑中撞墙",
+        "text": "勒克莱尔从杆位出发领跑，第18圈因自身失误赛车尾部失控，打转后撞上轮胎墙退赛，维斯塔潘接过领先夺冠。汉密尔顿在个人第300场比赛中获得第二，拉塞尔第三。这是迄今最后一届法国大奖赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2022 French Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2022_French_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "fuji": {
+    "nameZh": "富士赛道",
+    "nameEn": "Fuji Speedway",
+    "tagline": "富士山脚下的长直道赛道",
+    "summary": "富士赛道位于日本静冈县小山町，地处富士山东麓，1966年启用，原计划建成美式高速椭圆赛道，最终改为公路赛道。1976年举办日本首场F1比赛，1977年事故后F1离开，后转往铃鹿。丰田控股后由赫尔曼·蒂尔克重新设计，2005年重新开放，2007年和2008年承办日本大奖赛。约1.5公里的主直道是其标志，现行布局全长4.563公里，16个弯角。",
+    "traits": [
+      "约1.5公里主直道",
+      "富士山脚",
+      "多场雨战",
+      "蒂尔克改建"
+    ],
+    "moments": [
+      {
+        "year": 1976,
+        "gp": "japan",
+        "circuit": "fuji",
+        "title": "雨雾中决出年度冠军",
+        "text": "日本首场F1比赛在大雨和浓雾中开赛。劳达认为条件过于危险，第2圈驶回维修区退赛。亨特只需获得第四即可夺冠，最终跑到第三，以69比68一分之差赢得车手总冠军；莲花的安德雷蒂杆位起步获胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1976 Japanese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1976_Japanese_Grand_Prix"
+          },
+          {
+            "label": "Wikipedia · Fuji Speedway",
+            "url": "https://en.wikipedia.org/wiki/Fuji_Speedway"
+          }
+        ]
+      },
+      {
+        "year": 1977,
+        "gp": "japan",
+        "circuit": "fuji",
+        "title": "事故致两人遇难",
+        "text": "第6圈，法拉利的吉尔·维伦纽夫与驾驶泰瑞尔P34的彼得森相撞，事故造成站在禁止区域内的两人遇难。亨特赢得个人最后一场F1胜利。此后日本大奖赛停办，直到1987年才移至铃鹿重开。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1977 Japanese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1977_Japanese_Grand_Prix"
+          },
+          {
+            "label": "Wikipedia · Fuji Speedway",
+            "url": "https://en.wikipedia.org/wiki/Fuji_Speedway"
+          }
+        ]
+      },
+      {
+        "year": 2007,
+        "gp": "japan",
+        "circuit": "fuji",
+        "title": "暴雨中汉密尔顿夺冠",
+        "text": "F1时隔30年重返改建后的富士。暴雨中比赛在安全车带领下开始，前19圈均由安全车领跑。汉密尔顿杆位起步赢得比赛并创最快圈；第45圈安全车期间，维特尔追尾位列第二的韦伯，两人双双退赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2007 Japanese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2007_Japanese_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2008,
+        "gp": "japan",
+        "circuit": "fuji",
+        "title": "阿隆索第四位起步获胜",
+        "text": "汉密尔顿起步后在第一弯严重锁死冲宽，第二圈又被马萨碰撞打转，两人都受到处罚。雷诺的阿隆索从第4位起步，领先库比卡约5秒夺冠，取得连续第二场胜利。此后日本大奖赛回到铃鹿举行。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2008 Japanese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2008_Japanese_Grand_Prix"
+          },
+          {
+            "label": "Wikipedia · Fuji Speedway",
+            "url": "https://en.wikipedia.org/wiki/Fuji_Speedway"
+          }
+        ]
+      }
+    ]
+  },
+  "indianapolis": {
+    "nameZh": "印第安纳波利斯赛车场",
+    "nameEn": "Indianapolis Motor Speedway",
+    "tagline": "椭圆赛场里的F1赛道",
+    "summary": "印第安纳波利斯赛车场位于美国印第安纳州斯皮德韦镇，1909年启用，昵称“砖厂”。1950年至1960年间，印第安纳波利斯500英里赛计入世界锦标赛。2000年至2007年F1美国大奖赛在此举行，场内公路赛道借用椭圆赛道的主直道和西南弯，2000年美国站也是该场地首次顺时针办赛。F1布局全长4.192公里，13个弯角。",
+    "traits": [
+      "部分借用椭圆赛道",
+      "顺时针行驶",
+      "起终点保留砖带",
+      "昵称砖厂"
+    ],
+    "moments": [
+      {
+        "year": 1950,
+        "gp": "indianapolis",
+        "circuit": "indianapolis",
+        "title": "印第500计入锦标赛",
+        "text": "1950年印第安纳波利斯500英里赛作为世界锦标赛第3站举行。原定200圈的比赛因降雨在第138圈提前结束，约翰尼·帕森斯获胜并拿到9个积分，沃尔特·福克纳以创纪录的速度获得杆位。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1950 Indianapolis 500",
+            "url": "https://en.wikipedia.org/wiki/1950_Indianapolis_500"
+          }
+        ]
+      },
+      {
+        "year": 2000,
+        "gp": "united-states",
+        "circuit": "indianapolis",
+        "title": "美国大奖赛移师印第",
+        "text": "美国大奖赛在1991年后首次回归F1，移师印第安纳波利斯的场内公路赛道，约25万名观众到场。舒马赫杆位起步夺冠，哈基宁第26圈因引擎故障退赛，巴里切罗落后12.1秒获得第二。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2000 United States Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2000_United_States_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2002,
+        "gp": "united-states",
+        "circuit": "indianapolis",
+        "title": "相差0.011秒的冲线",
+        "text": "法拉利包办前二。杆位出发的舒马赫在最后两个弯放慢速度，让队友巴里切罗追到身旁，试图并排冲线，结果巴里切罗以0.011秒之差获胜。舒马赫赛后表示本想同时过线，但没有做到。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2002 United States Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2002_United_States_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2005,
+        "gp": "united-states",
+        "circuit": "indianapolis",
+        "title": "只有六车出发的比赛",
+        "text": "练习赛中拉尔夫·舒马赫因左后胎失效在13号弯重撞，米其林无法保证轮胎安全，国际汽联拒绝加设减速弯。14辆米其林赛车跑完暖胎圈后退回维修区，仅6辆普利司通赛车比赛，舒马赫获胜，乔丹车手蒙泰罗获第三。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2005 United States Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2005_United_States_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "long-beach": {
+    "nameZh": "长滩赛道",
+    "nameEn": "Long Beach Street Circuit",
+    "tagline": "加州海滨街道赛",
+    "summary": "长滩赛道是美国加州长滩市区的街道赛道，位于洛杉矶市中心以南约40公里，由推广人克里斯·普克受摩纳哥启发创办，1975年以F5000赛事首办。1976年至1983年以美国西部大奖赛之名举办F1。赛道以急发卡弯接沿海滨大道的长直道收尾。F1赛事观众踊跃却难以盈利，1984年起改办CART印第赛车。F1末期布局全长3.275公里，18个弯角。",
+    "traits": [
+      "街道赛道",
+      "发卡弯接长直道",
+      "海滨",
+      "顺时针"
+    ],
+    "moments": [
+      {
+        "year": 1976,
+        "gp": "united-states-west",
+        "circuit": "long-beach",
+        "title": "雷加佐尼首战大满贯",
+        "text": "首届长滩美国西部大奖赛，法拉利的雷加佐尼包揽杆位、最快圈和冠军并领跑全程，完成大满贯，队友劳达获得第二。这一年美国在长滩和沃特金斯格伦各办一站，成为继意大利之后第二个一年举办两场锦标赛的国家。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1976 United States Grand Prix West",
+            "url": "https://en.wikipedia.org/wiki/1976_United_States_Grand_Prix_West"
+          }
+        ]
+      },
+      {
+        "year": 1977,
+        "gp": "united-states-west",
+        "circuit": "long-beach",
+        "title": "安德雷蒂本土夺冠",
+        "text": "沃尔夫车队的舍克特从第3位起步抢到领先，第58圈右前胎慢撒气，美国车手安德雷蒂在第77圈完成超越，最终领先杆位的劳达0.773秒获胜。这也是莲花78地面效应赛车的首场胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1977 United States Grand Prix West",
+            "url": "https://en.wikipedia.org/wiki/1977_United_States_Grand_Prix_West"
+          }
+        ]
+      },
+      {
+        "year": 1982,
+        "gp": "united-states-west",
+        "circuit": "long-beach",
+        "title": "劳达复出第三战夺冠",
+        "text": "结束两年退休后，劳达在复出后的第三场比赛为迈凯伦赢得生涯第18胜。德切萨里斯拿下杆位，成为当时最年轻的杆位得主；吉尔·维伦纽夫冲线第三，但法拉利的分段式后翼被判违规，成绩遭取消。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1982 United States Grand Prix West",
+            "url": "https://en.wikipedia.org/wiki/1982_United_States_Grand_Prix_West"
+          }
+        ]
+      },
+      {
+        "year": 1983,
+        "gp": "united-states-west",
+        "circuit": "long-beach",
+        "title": "沃森第22位起步夺冠",
+        "text": "迈凯伦使用的米其林轮胎在排位赛中表现很差，沃森和劳达只排在第22和第23位。正赛两人一路追赶包揽前二，沃森从第22位起步获胜，这是F1历史上起步位置最靠后的夺冠。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1983 United States Grand Prix West",
+            "url": "https://en.wikipedia.org/wiki/1983_United_States_Grand_Prix_West"
+          }
+        ]
+      }
+    ]
+  },
+  "jacarepagua": {
+    "nameZh": "雅卡雷帕瓜赛道",
+    "nameEn": "Autódromo Internacional Nelson Piquet",
+    "tagline": "里约热内卢的湿热赛场",
+    "summary": "雅卡雷帕瓜赛道位于巴西里约热内卢雅卡雷帕瓜区，建在填平的沼泽地上，1978年1月启用。1978年及1981年至1989年承办巴西大奖赛，1988年以皮奎特之名重新命名，1990年比赛回到英特拉格斯。赛道地势平坦，长直道搭配中低速弯，比赛常在湿热天气中进行。全长5.031公里，11个弯角，逆时针行驶，2012年为里约奥运会拆除。",
+    "traits": [
+      "逆时针",
+      "地势平坦",
+      "湿热天气",
+      "长直道",
+      "已拆除"
+    ],
+    "moments": [
+      {
+        "year": 1978,
+        "gp": "brazil",
+        "circuit": "jacarepagua",
+        "title": "雅卡雷帕瓜首场F1",
+        "text": "雅卡雷帕瓜首场F1比赛在极端天气中进行。法拉利的罗伊特曼从第4位起步，从头领跑到尾夺冠，这也是米其林轮胎的首场胜利。菲蒂帕尔迪驾驶自家车队赛车获得第二，为菲蒂帕尔迪车队带来首个领奖台。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1978 Brazilian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1978_Brazilian_Grand_Prix"
+          },
+          {
+            "label": "Wikipedia · Autódromo Internacional Nelson Piquet",
+            "url": "https://en.wikipedia.org/wiki/Aut%C3%B3dromo_Internacional_Nelson_Piquet"
+          }
+        ]
+      },
+      {
+        "year": 1982,
+        "gp": "brazil",
+        "circuit": "jacarepagua",
+        "title": "前两名均被取消成绩",
+        "text": "皮奎特和凯凯·罗斯伯格冲线位列前二，赛后均因赛车重量不足被取消成绩。两车装有名义上用于冷却刹车的水箱，赛中排空、赛后加满以通过检查。冠军归属雷诺的普罗斯特，七周后上诉法庭维持原判。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1982 Brazilian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1982_Brazilian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1989,
+        "gp": "brazil",
+        "circuit": "jacarepagua",
+        "title": "曼塞尔法拉利首秀夺冠",
+        "text": "曼塞尔对新车可靠性缺乏信心，赛前订了当天下午的回程航班。结果他从第6位起步，在法拉利首秀中领先普罗斯特7.809秒获胜。法拉利640由此成为首辆赢得比赛的半自动变速箱赛车。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1989 Brazilian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1989_Brazilian_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "buenos-aires": {
+    "nameZh": "布宜诺斯艾利斯赛道",
+    "nameEn": "Autódromo Juan y Oscar Gálvez",
+    "tagline": "阿根廷大奖赛的主场",
+    "summary": "布宜诺斯艾利斯赛道位于阿根廷首都，1952年庇隆执政时期建于沼泽地上，曾名“10月17日赛道”，现以加尔维斯兄弟命名。1953年承办南美洲首场世界锦标赛，此后在1950年代、1970年代至1981年以及1995年至1998年间承办阿根廷大奖赛，先后使用多种布局。1998年后因资金不足退出F1。现行布局全长4.259公里，19个弯角。",
+    "traits": [
+      "多种布局",
+      "夏季高温",
+      "南美首个锦标赛赛场",
+      "方吉奥主场"
+    ],
+    "moments": [
+      {
+        "year": 1953,
+        "gp": "argentina",
+        "circuit": "buenos-aires",
+        "title": "南美首战与观众惨剧",
+        "text": "这是南美洲首场世界锦标赛。法里纳第31圈冲入人群，造成13名观众死亡，随后的混乱中还有一名男孩遇难。法拉利的阿斯卡里从杆位出发领跑全程夺冠，取得个人连续第七场锦标赛胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1953 Argentine Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1953_Argentine_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1955,
+        "gp": "argentina",
+        "circuit": "buenos-aires",
+        "title": "酷暑中方吉奥独自完赛",
+        "text": "比赛在阿根廷盛夏高温中进行，多辆赛车由两到三名车手轮换驾驶。梅赛德斯的方吉奥从第3位起步，独自跑完全部96圈夺冠并创最快圈；他的腿因贴着被排气加热的车架而严重烧伤。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1955 Argentine Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1955_Argentine_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1958,
+        "gp": "argentina",
+        "circuit": "buenos-aires",
+        "title": "后置引擎赛车首胜",
+        "text": "莫斯驾驶罗布·沃克私人车队的库珀从第7位起步，冒险不进站换胎，轮胎几近磨穿仍领先法拉利的穆索2.7秒获胜。这是后置引擎赛车的首个F1胜利，也是私人车队和库珀车队的首胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1958 Argentine Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1958_Argentine_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1998,
+        "gp": "argentina",
+        "circuit": "buenos-aires",
+        "title": "迄今最后一届阿根廷站",
+        "text": "库特哈德拿下杆位，第2位起步的舒马赫与他发生碰撞，库特哈德滑出赛道后以第六位重回。舒马赫在尾段小雨中一度冲出赛道，仍为法拉利夺冠，伊尔文第三。这是迄今最后一届阿根廷大奖赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1998 Argentine Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1998_Argentine_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "reims": {
+    "nameZh": "兰斯-格厄赛道",
+    "nameEn": "Reims-Gueux",
+    "tagline": "香槟产区的高速三角公路赛道",
+    "summary": "兰斯-格厄赛道位于法国东北部香槟地区，距兰斯约8公里，由格厄与蒂约瓦之间的乡村公路围成三角形，1926年起举办赛事。1950年至1966年间多次承办F1法国大奖赛。两条长直道带来极高的极速，也造就了许多尾流缠斗。1972年因财务困难关闭，旧维修区建筑和看台至今保留。F1最后布局全长8.302公里，7个弯角。",
+    "traits": [
+      "公路赛道",
+      "三角形布局",
+      "长直道",
+      "尾流缠斗",
+      "已关闭"
+    ],
+    "moments": [
+      {
+        "year": 1953,
+        "gp": "france",
+        "circuit": "reims",
+        "title": "霍索恩与方吉奥世纪之战",
+        "text": "法拉利的霍索恩与玛莎拉蒂的方吉奥缠斗60圈，末段多次互换领先，有时一圈不止一次。霍索恩从第7位起步，最终以1秒之差击败方吉奥赢得生涯首胜，冈萨雷斯再落后0.4秒获得第三。这场比赛被称为世纪之战。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1953 French Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1953_French_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1961,
+        "gp": "france",
+        "circuit": "reims",
+        "title": "巴盖蒂首秀即夺冠",
+        "text": "意大利车手巴盖蒂驾驶法拉利从第12位起步，以0.1秒领先丹·格尼获胜，成为继法里纳和帕森斯之后，第三位在世界锦标赛首战即夺冠的车手。这也是他职业生涯唯一一场锦标赛胜利。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1961 French Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1961_French_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1966,
+        "gp": "france",
+        "circuit": "reims",
+        "title": "布拉汉姆驾自家赛车夺冠",
+        "text": "杆位的班迪尼开局领跑，后因油门联动装置断裂退赛。杰克·布拉汉姆从第4位起步获胜，成为首位驾驶自己车队赛车赢得锦标赛大奖赛的车手。这也是兰斯-格厄举办的最后一场F1比赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1966 French Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1966_French_Grand_Prix"
+          },
+          {
+            "label": "Wikipedia · Reims-Gueux",
+            "url": "https://en.wikipedia.org/wiki/Reims-Gueux"
+          }
+        ]
+      }
+    ]
+  },
+  "mugello": {
+    "nameZh": "穆杰罗赛道",
+    "nameEn": "Autodromo Internazionale del Mugello",
+    "tagline": "法拉利旗下的托斯卡纳赛道",
+    "summary": "穆杰罗赛道位于意大利托斯卡纳大区斯卡尔佩里亚-圣皮耶罗，靠近佛罗伦萨，1974年启用。自1988年起归法拉利所有，长期用作F1测试场，也是MotoGP意大利站的固定场地。2012年多数F1车队曾在此进行赛季中测试。2020年承办托斯卡纳大奖赛，这是该赛道唯一一场F1比赛。赛道以高速弯众多著称，全长5.245公里，15个弯角。",
+    "traits": [
+      "高速弯众多",
+      "法拉利测试场",
+      "MotoGP意大利站",
+      "顺时针"
+    ],
+    "moments": [
+      {
+        "year": 2020,
+        "gp": "tuscany",
+        "circuit": "mugello",
+        "title": "首场F1与法拉利千场",
+        "text": "2020年托斯卡纳大奖赛是穆杰罗首次举办F1世界锦标赛，也被法拉利作为车队第1000场大奖赛来纪念；按车队出赛统计实为第999场。这场比赛中，法拉利成绩最好的勒克莱尔从第5位起步，最终获得第八。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2020 Tuscan Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2020_Tuscan_Grand_Prix"
+          },
+          {
+            "label": "Wikipedia · Mugello Circuit",
+            "url": "https://en.wikipedia.org/wiki/Mugello_Circuit"
+          }
+        ]
+      },
+      {
+        "year": 2020,
+        "gp": "tuscany",
+        "circuit": "mugello",
+        "title": "两次红旗与阿尔本首登台",
+        "text": "第6圈安全车离场后的重启事故令塞恩斯等四人退赛并引出红旗，第45圈斯特罗尔爆胎撞墙后再次红旗。汉密尔顿杆位起步赢得生涯第90胜，博塔斯第二，阿尔本获得首个领奖台，成为首位登台的泰国车手。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2020 Tuscan Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2020_Tuscan_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "portimao": {
+    "nameZh": "阿尔加维国际赛道",
+    "nameEn": "Algarve International Circuit",
+    "tagline": "起伏剧烈的过山车赛道",
+    "summary": "位于葡萄牙南部阿尔加维地区的波尔蒂芒，2008年建成，由里卡多·皮纳设计。全长4.653公里、15个弯，地形连续起伏，常被比作老纽博格林和斯帕，最后一段大落差下坡冲向末弯。2020年受新冠疫情影响临时加入赛历，成为1996年以来首场葡萄牙大奖赛，2021年再度举办。F1已宣布2027与2028年重返此地。",
+    "traits": [
+      "高低落差大",
+      "连续起伏",
+      "末弯下坡",
+      "顺时针"
+    ],
+    "moments": [
+      {
+        "year": 2020,
+        "gp": "portugal",
+        "circuit": "portimao",
+        "title": "汉密尔顿第92胜破纪录",
+        "text": "葡萄牙大奖赛时隔24年回归，首次落户波尔蒂芒。开赛后中性胎起步的梅赛德斯车手一度落后，第7位发车的塞恩斯在第2圈后领跑。杆位出发的汉密尔顿最终领先博塔斯25.592秒夺冠，以第92胜超越舒马赫，成为分站胜场最多的车手。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2020 Portuguese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2020_Portuguese_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": "portugal",
+        "circuit": "portimao",
+        "title": "汉密尔顿连续超车夺冠",
+        "text": "博塔斯摘得杆位，汉密尔顿第2位发车。第7圈安全车重启时汉密尔顿被维斯塔潘超越，第11圈反超回来，第20圈在1号弯超越博塔斯取得领先，最终领先维斯塔潘29.148秒拿下生涯第97胜。维斯塔潘最后一圈的最快圈速因超出赛道界限被取消。",
+        "sources": [
+          {
+            "label": "Formula1.com · Hamilton takes victory in Portugal after crucial overtakes on Verstappen and Bottas",
+            "url": "https://www.formula1.com/en/latest/article/hamilton-takes-victory-in-portugal-after-crucial-overtakes-on-verstappen-and.5jxpjolcJnFSJ38iarOgg6"
+          },
+          {
+            "label": "Wikipedia · 2021 Portuguese Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2021_Portuguese_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "yeongam": {
+    "nameZh": "韩国国际赛道",
+    "nameEn": "Korea International Circuit",
+    "tagline": "灵岩港区的韩国站赛道",
+    "summary": "位于韩国全罗南道灵岩郡，邻近港口城市木浦，由赫尔曼·蒂尔克设计。赛道采用永久与临时路段结合的方案，临时部分沿港区布置。全长5.615公里、18个弯，逆时针行驶，开头几个弯后接一段1.16公里的长直道。2010年至2013年举办韩国大奖赛，此后退出F1赛历。",
+    "traits": [
+      "逆时针",
+      "1.16公里长直道",
+      "永久与临时路段结合",
+      "T17盲弯"
+    ],
+    "moments": [
+      {
+        "year": 2010,
+        "gp": "korea",
+        "circuit": "yeongam",
+        "title": "首届韩国站雨中收官",
+        "text": "赛道临近比赛才通过验收。正赛因雨在安全车后起跑，随后红旗中断超过45分钟。韦伯第19圈失误撞墙并带走罗斯伯格，领跑的维特尔后段引擎故障退赛。第3位发车的阿隆索在渐暗的天色中夺冠，登上车手积分榜首位。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2010 Korean Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2010_Korean_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2011,
+        "gp": "korea",
+        "circuit": "yeongam",
+        "title": "红牛锁定车队冠军",
+        "text": "汉密尔顿夺得杆位，终结红牛自2010年阿布扎比站起连续16场的杆位纪录。正赛中第2位发车的维特尔拿下赛季第10胜，汉密尔顿和韦伯分列二三位。凭借双车登台，红牛在还剩3站时提前锁定2011年车队总冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2011 Korean Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2011_Korean_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "buddh": {
+    "nameZh": "布德国际赛道",
+    "nameEn": "Buddh International Circuit",
+    "tagline": "南亚首个F1赛场",
+    "summary": "位于印度北方邦大诺伊达，由赫尔曼·蒂尔克设计，2011年10月启用。全长5.125公里、16个弯，前三个弯道爬升约14米，T10至T12为带倾角的多弯心组合，主直道长1.06公里。2011年至2013年的印度大奖赛均由维特尔从杆位出发夺冠，之后因与北方邦政府的税务纠纷退出赛历。",
+    "traits": [
+      "高低落差",
+      "T10-T12倾角多弯心",
+      "1.06公里主直道",
+      "顺时针"
+    ],
+    "moments": [
+      {
+        "year": 2011,
+        "gp": "india",
+        "circuit": "buddh",
+        "title": "首届印度站维特尔大满贯",
+        "text": "南亚首场F1大奖赛，周五一练曾因流浪狗闯入赛道中断。维特尔从杆位出发领跑全部圈数，并在最后一圈刷新全场最快圈速，完成生涯首个大满贯，巴顿和阿隆索分列二三位。汉密尔顿与马萨在5号弯再度相撞。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2011 Indian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2011_Indian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2013,
+        "gp": "india",
+        "circuit": "buddh",
+        "title": "维特尔在此加冕四连冠",
+        "text": "维特尔从杆位出发，第2圈末进站换上中性胎，最终领先罗斯伯格29.823秒夺冠，锁定个人第四个连续车手冠军，成为继方吉奥、普罗斯特和舒马赫之后第四位赢得至少四座车手冠军的车手。红牛同场锁定车队四连冠。这也是最后一届印度大奖赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2013 Indian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2013_Indian_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "sirius": {
+    "nameZh": "索契赛道",
+    "nameEn": "Sochi Autodrom (Sirius Autodrom)",
+    "tagline": "冬奥园区里的赛道",
+    "summary": "位于俄罗斯黑海之滨索契附近的天狼星镇，由赫尔曼·蒂尔克设计，围绕2014年冬奥会奥林匹克公园场馆修建，同年9月启用。F1布局全长5.848公里、18个弯，超长的3号弯常被比作伊斯坦布尔公园赛道8号弯，收尾为两个90度右弯。2014至2021年举办俄罗斯大奖赛，合同因俄罗斯入侵乌克兰在2022年前终止，2024年更名为天狼星赛车场。",
+    "traits": [
+      "冬奥园区",
+      "超长3号弯",
+      "末段两个直角右弯",
+      "顺时针"
+    ],
+    "moments": [
+      {
+        "year": 2014,
+        "gp": "russia",
+        "circuit": "sirius",
+        "title": "梅赛德斯首夺车队冠军",
+        "text": "俄罗斯大奖赛时隔百年重办，并首次成为世界锦标赛分站。罗斯伯格起步锁死前轮，首圈被迫进站，随后从队尾追至第二。汉密尔顿从杆位出发领跑全部圈数夺冠，并将胜利献给一周前在铃鹿受伤的比安奇。梅赛德斯提前三站首夺车队总冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2014 Russian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2014_Russian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2017,
+        "gp": "russia",
+        "circuit": "sirius",
+        "title": "博塔斯生涯首胜",
+        "text": "维特尔和莱科宁包揽头排，这是法拉利自2008年法国站以来首次包揽头排。第3位发车的博塔斯起步后在2号弯前连超两辆法拉利取得领先，比赛末段顶住维特尔的追击，以0.617秒优势拿下生涯首个分站冠军。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2017 Russian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2017_Russian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2021,
+        "gp": "russia",
+        "circuit": "sirius",
+        "title": "汉密尔顿第100胜",
+        "text": "诺里斯拿下生涯首个杆位并长时间领跑。比赛尾声开始降雨，他不听车队建议坚持干胎，第51圈在5号弯滑出，最终仅获第七。第4位发车的汉密尔顿夺冠，成为F1历史上首位赢得100场分站赛的车手；因更换动力单元组件从队尾出发的维斯塔潘追至第二。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2021 Russian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2021_Russian_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "valencia": {
+    "nameZh": "瓦伦西亚街道赛道",
+    "nameEn": "Valencia Street Circuit",
+    "tagline": "港口边的高速街道赛",
+    "summary": "位于西班牙瓦伦西亚，沿城市港口和美洲杯帆船赛港区的道路铺设，由赫尔曼·蒂尔克设计。全长5.419公里、25个弯，途经一座140米长的平转桥，极速约323公里/小时，但超车机会稀少。2008至2012年承办欧洲大奖赛，此后再未举办F1比赛，赛道现已荒废。",
+    "traits": [
+      "街道赛",
+      "平转桥",
+      "高速",
+      "超车困难"
+    ],
+    "moments": [
+      {
+        "year": 2008,
+        "gp": "europe",
+        "circuit": "valencia",
+        "title": "首场比赛马萨夺冠",
+        "text": "瓦伦西亚街道赛道迎来首场F1比赛。马萨以1:38.989夺得杆位，正赛夺冠并跑出全场最快圈。进站时法拉利将他放行到苏蒂尔赛车前方，被认定为危险放行，车队被罚款1万欧元，但马萨的胜利得以保留。汉密尔顿和库比卡分列二三位。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2008 European Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2008_European_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2010,
+        "gp": "europe",
+        "circuit": "valencia",
+        "title": "韦伯赛车腾空翻滚",
+        "text": "第9圈，韦伯在争夺第17位时撞上科瓦莱宁赛车的右后轮，红牛赛车腾空撞向广告牌并翻滚，落地后高速冲进12号弯缓冲区，韦伯未受伤。安全车出动时汉密尔顿超越安全车，被罚通过维修区。维特尔从杆位出发夺冠。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2010 European Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2010_European_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 2012,
+        "gp": "europe",
+        "circuit": "valencia",
+        "title": "阿隆索第11位发车夺冠",
+        "text": "领跑的维特尔因交流发电机故障退赛，从第11位发车的阿隆索赢得主场比赛，成为本赛季首位两胜车手。莱科宁获得第二，舒马赫从第12位追至第三，这是他复出后首次也是生涯最后一次登上领奖台。这也是瓦伦西亚举办的最后一场F1比赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 2012 European Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/2012_European_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  },
+  "zolder": {
+    "nameZh": "佐尔德赛道",
+    "nameEn": "Circuit Zolder",
+    "tagline": "比利时站的另一处主场",
+    "summary": "位于比利时赫斯登-佐尔德，1963年启用，由约翰·胡根霍尔茨设计，地形起伏。1973年、1975至1982年及1984年承办比利时大奖赛，其间1974年移至尼韦勒、1983年在斯帕举行；F1时期布局长4.262公里、15个弯。1982年吉尔·维伦纽夫在此排位赛中丧生。1985年起比利时大奖赛固定在斯帕举行。",
+    "traits": [
+      "地形起伏",
+      "顺时针",
+      "1960年代老赛道",
+      "维伦纽夫罹难地"
+    ],
+    "moments": [
+      {
+        "year": 1973,
+        "gp": "belgium",
+        "circuit": "zolder",
+        "title": "赛前整条赛道重铺",
+        "text": "赛前一周整条赛道不得不重新铺设路面，塞韦特、菲蒂帕尔迪和斯图尔特一度因安全问题拒绝上道。彼得森夺得杆位，正赛中斯图尔特驾驶泰瑞尔006从第6位发车夺冠，队友塞韦特落后31.84秒获得第二。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1973 Belgian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1973_Belgian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1977,
+        "gp": "belgium",
+        "circuit": "zolder",
+        "title": "尼尔森唯一一胜",
+        "text": "比赛在雨后湿滑的赛道上开始，赛道逐渐变干。杆位的安德雷蒂在减速弯锁死，撞上沃森的布拉汉姆，两人退赛。莲花车手冈纳·尼尔森从第3位发车夺冠，劳达第二、彼得森第三。这是尼尔森唯一一场F1胜利，他于次年10月因癌症去世。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1977 Belgian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1977_Belgian_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1982,
+        "gp": "belgium",
+        "circuit": "zolder",
+        "title": "吉尔·维伦纽夫罹难",
+        "text": "最后一节排位赛中，吉尔·维伦纽夫的法拉利撞上约亨·马斯的马奇赛车尾部后被抛向空中，他被甩出车外，不幸身亡，法拉利随即退出比赛。正赛中第10位发车的沃森在倒数第二圈超越轮胎磨损的凯凯·罗斯伯格夺冠。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1982 Belgian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1982_Belgian_Grand_Prix"
+          },
+          {
+            "label": "Wikipedia · Circuit Zolder",
+            "url": "https://en.wikipedia.org/wiki/Circuit_Zolder"
+          }
+        ]
+      },
+      {
+        "year": 1984,
+        "gp": "belgium",
+        "circuit": "zolder",
+        "title": "阿尔博雷托的27号法拉利",
+        "text": "阿尔博雷托驾驶27号法拉利拿下生涯首个杆位并夺冠，这是他的第三场分站胜利，他也成为1966年斯卡菲奥蒂之后首位为法拉利赢得比赛的意大利车手。27号正是吉尔·维伦纽夫生前的车号。这也是佐尔德最后一次举办F1比赛。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1984 Belgian Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1984_Belgian_Grand_Prix"
+          },
+          {
+            "label": "Wikipedia · Circuit Zolder",
+            "url": "https://en.wikipedia.org/wiki/Circuit_Zolder"
+          }
+        ]
+      }
+    ]
+  },
+  "dijon": {
+    "nameZh": "第戎-普雷努瓦赛道",
+    "nameEn": "Dijon-Prenois",
+    "tagline": "起伏高速的法国老赛道",
+    "summary": "位于法国科多尔省普雷努瓦，靠近第戎，1972年启用。最初布局仅3.289公里，单圈不到一分钟，赛道拥堵严重，1976年加建延伸段，延长至3.801公里、12个弯。赛道起伏明显，高速弯连贯。1974、1977、1979、1981和1984年承办法国大奖赛，1982年还借用此地举办瑞士大奖赛。",
+    "traits": [
+      "高低起伏",
+      "高速连续弯",
+      "单圈短",
+      "顺时针"
+    ],
+    "moments": [
+      {
+        "year": 1979,
+        "gp": "france",
+        "circuit": "dijon",
+        "title": "涡轮增压首胜",
+        "text": "雅布耶驾驶雷诺从杆位出发夺冠，这是涡轮增压赛车在F1的首场胜利，也是雷诺的首胜。最后几圈，吉尔·维伦纽夫与阿努为争夺第二名多次车轮相碰、反复易位，维伦纽夫最终领先不到0.25秒守住亚军，阿努第三。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1979 French Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1979_French_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1981,
+        "gp": "france",
+        "circuit": "dijon",
+        "title": "普罗斯特生涯首胜",
+        "text": "比赛在第58圈后因大雨中断，重新开赛后按两段总时间计算成绩。普罗斯特驾驶雷诺从第3位发车，在主场拿下生涯首个分站冠军，这是他日后51场胜利中的第一场。沃森获得第二，中断时领跑的皮奎特获得第三。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1981 French Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1981_French_Grand_Prix"
+          }
+        ]
+      },
+      {
+        "year": 1982,
+        "gp": "switzerland",
+        "circuit": "dijon",
+        "title": "法国土地上的瑞士站",
+        "text": "瑞士在1955年勒芒惨剧后禁止赛车运动，这场瑞士大奖赛因此在法国第戎举行，也是迄今最后一届瑞士大奖赛。普罗斯特从杆位出发获得第二，第8位发车的凯凯·罗斯伯格为威廉姆斯夺得生涯首胜，这也是他当年夺得世界冠军赛季的唯一一胜。",
+        "sources": [
+          {
+            "label": "Wikipedia · 1982 Swiss Grand Prix",
+            "url": "https://en.wikipedia.org/wiki/1982_Swiss_Grand_Prix"
+          }
+        ]
+      }
+    ]
+  }
+}

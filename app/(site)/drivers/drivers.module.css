@@ -1,0 +1,8 @@
+/* Index cards: the card is a div; a stretched sibling link makes the whole card clickable while
+   the driver name / team inside are their own hover-card links. */
+.card { cursor: pointer; }
+.stretch { position: absolute; inset: 0; z-index: 3; }
+.text { z-index: 4 !important; pointer-events: none; }
+.text a { pointer-events: auto; }
+.name { display: flex; flex-direction: column; }
+.team { text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(255,255,255,.45); }

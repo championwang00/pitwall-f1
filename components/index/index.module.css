@@ -1,0 +1,86 @@
+.head { background: var(--paper); padding: 64px 0 32px; }
+/* formula1.com index title ("F1 DRIVERS 2026"): Formula1 Black; the Chinese name follows small */
+.h1 { font: 900 clamp(32px, 4vw, 48px)/1.1 var(--font-display); letter-spacing: 0; margin-top: 8px; }
+.h1 span { font: 700 clamp(18px, 2vw, 24px)/1 var(--font-cn); text-transform: none; margin-left: 14px; color: var(--mute); vertical-align: middle; }
+.lede { font-size: 15px; color: #4a4a52; margin-top: 12px; max-width: 640px; line-height: 1.8; }
+
+/* formula1.com team listing card (see TeamCard.tsx) */
+.teamCards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr)); gap: 16px; }
+.team { border-radius: 8px; min-height: 256px; padding: 24px; display: flex; color: #fff; }
+.team:global(.f1-surface) { background: var(--c); }
+.teamCompact { min-height: 0; }
+.teamCompact .teamSub { margin-top: 8px; }
+.teamIn { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.teamTop { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; }
+.teamHead { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.teamName { align-self: flex-start; font: 500 24px/28px var(--font-display); color: inherit; }
+.teamLatin { font: 400 14px/16px var(--font-display); opacity: .8; margin-left: 10px; }
+.team:hover .teamName { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+.teamDrivers { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.teamDriver { display: inline-flex; align-items: center; gap: 8px; font: 400 14px/16px "Titillium Web", var(--font-cn); border-radius: 4px; }
+.teamDriver b { font-weight: 700; text-transform: uppercase; }
+.teamDriver:hover span { text-decoration: underline; text-underline-offset: 3px; }
+.teamDriver img { width: 20px; height: 20px; }
+.teamMore { font: 500 14px/20px var(--font-display); opacity: .8; }
+.teamLogo { flex: none; width: 48px; height: 48px; border-radius: 50%; background: var(--acc); display: grid; place-items: center; padding: 9px; }
+.teamLogo img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.teamLogoLight { background: #fff; }
+.teamStats { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; }
+.teamStats > span { display: inline-flex; align-items: baseline; gap: 6px; }
+.teamStats b { font: 500 20px/24px var(--font-display); }
+.teamStats em { font: 700 12px/16px "Titillium Web", var(--font-cn); font-style: normal; text-transform: uppercase; opacity: .8; }
+.teamEngine { font: 600 14px/16px "Titillium Web", var(--font-cn); opacity: .85; }
+.teamCar { position: relative; display: block; height: 112px; margin-top: auto; }
+.teamCar img { position: absolute; left: 0; bottom: 0; height: 112px; width: auto; max-width: none; }
+.teamSub { margin-top: auto; font: 600 14px/20px "Titillium Web", var(--font-cn); opacity: .9; }
+.teamSub a { text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: text-decoration-color .15s; }
+.teamSub a:hover { text-decoration-color: currentColor; }
+@media (max-width: 560px) { .team { padding: 16px; } .teamCar, .teamCar img { height: 96px; } }
+
+.explorer { }
+.controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 16px; }
+.search { font: inherit; font-size: 15px; padding: 11px 18px; border-radius: 999px; border: 1px solid var(--line); background: #fff; min-width: 300px; outline: none; }
+.search:focus { border-color: var(--carbon); }
+.decades { display: flex; flex-wrap: wrap; gap: 2px; background: var(--paper-2); border-radius: 999px; padding: 3px; }
+.decades button { font-family: var(--font-data); font-size: 12px; font-weight: 700; padding: 6px 10px; border-radius: 999px; color: var(--mute); }
+.decades .on { background: var(--carbon); color: #fff; }
+.flagOn { background: var(--carbon) !important; color: #fff !important; }
+.count { margin-left: auto; font-size: 13px; color: var(--mute); }
+.tableWrap { overflow-x: auto; }
+.tableCard { background: #fff; border-radius: 8px; padding: 0 16px 4px; }
+.tableCard :global(.tbl) tr:last-child td { border-bottom: 0; }
+.thIn { display: inline-flex; align-items: center; gap: 2px; }
+.sortTh { cursor: pointer; }
+.sorted { color: var(--ink) !important; font-weight: 700 !important; }
+.name { display: inline-flex; align-items: center; gap: 10px; }
+.name .flag { width: 20px; }
+.name .face { width: 24px; height: 24px; }
+/* formula1.com TeamLogo (20px): white logo in a round tile of the team colour */
+.badge { flex: none; width: 24px; height: 24px; border-radius: 50%; padding: 4px; display: grid; place-items: center; }
+.badge img { width: 100%; height: 100%; object-fit: contain; }
+.yLink { color: inherit; }
+.name b { font-weight: 600; }
+.name:hover b { text-decoration: underline; text-underline-offset: 3px; }
+.name span { color: var(--mute); font-size: 12px; }
+.name em { font-style: normal; color: var(--mute); font-size: 12px; }
+.zero { color: #c8c6c3 !important; }
+.more { margin: 20px auto 0; display: flex; }
+
+/* car cards (CarCard.tsx): white card, team-colour media block, Formula1 name */
+.carGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 16px; }
+.car { position: relative; background: #fff; color: #1c1c25; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; }
+.carStage { height: 168px; display: flex; align-items: flex-end; justify-content: center; background: var(--c) !important; }
+.carSide { position: relative; height: 112px; width: auto; max-width: 96%; object-fit: contain; margin-bottom: 16px; }
+.carPhoto { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.carPh { align-self: center; margin: auto; font: 400 56px/1 var(--font-year); color: #fff; opacity: .9; }
+.carText { padding: 16px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.carKick { display: flex; align-items: center; gap: 8px; font: 500 12px/16px var(--font-display); color: #606066; }
+.carKick a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.carRank { color: #1c1c25; }
+.carName { align-self: flex-start; font: 500 24px/28px var(--font-display); }
+.car:hover .carName { text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 2px; }
+.carTeam { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; font-size: 14px; }
+.carTeam em { font-style: normal; font-size: 13px; color: #606066; }
+.carDrivers { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 14px; margin-top: 2px; }
+.carText p { font-size: 13px; color: #4a4a52; line-height: 1.7; margin-top: 4px; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+@media (max-width: 960px) { .search { min-width: 0; width: 100%; } }
