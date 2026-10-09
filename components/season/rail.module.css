@@ -78,7 +78,7 @@ a.group:hover { background: #23232d; }
 .rail { padding-top: 10px !important; }
 
 /* object home row (overview) on top of a subject timeline */
-.home { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin: 2px 0 8px; padding: 10px 12px 10px 16px; color: #e4e4ea; border-bottom: 1px solid #26262f; position: relative; }
+.home { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin: 0 0 8px; padding: 10px 12px 10px 16px; color: #e4e4ea; border-bottom: 1px solid #26262f; position: relative; }
 .home b { font-size: 14px; font-weight: 900; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .home em { font-style: normal; font-size: 11px; color: #8a8a94; flex: none; }
 .home:hover { background: #23232d; color: #fff; }
@@ -89,3 +89,10 @@ a.group:hover { background: #23232d; }
 .subject .eraOn.group { background: #fff; color: var(--ink); position: relative; }
 .subject .eraOn.group::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--f1-red); }
 .subject .eraOn.group > span b { color: var(--mute) !important; }
+
+/* group headers show their whole label, wrapping onto a second line if needed — never cut off with … (user: 让它展示完整) */
+.group, .group > span { white-space: normal; overflow: visible; text-overflow: clip; }
+.group > span { overflow-wrap: anywhere; }
+/* a rail that starts with the object's 总览 row: that row sits right under the header, no empty band above it (user: 上面为什么会空一节) */
+.rail:has(> .home) { padding-top: 0 !important; }
+.home b { white-space: normal; overflow: visible; text-overflow: clip; }
