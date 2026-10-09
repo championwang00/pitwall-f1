@@ -281,7 +281,7 @@ export function Radio({ model, clock }: { model: Model; clock: Clock }) {
             </li>
           );
         })}
-        {!list.length && <li className={s.empty}>回放时间之前暂无无线电</li>}
+        {!list.length && <li className={s.empty}>{model.radio.length ? "回放时间之前暂无无线电" : "本站暂无车队无线电录音数据"}</li>}
       </ul>
     </div>
   );
