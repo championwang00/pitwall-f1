@@ -124,7 +124,11 @@ export default function RaceLoadingProvider({ children }: { children: React.Reac
     if (!visible) return;
     // The ritual never waits for browser audio permission or audio downloads.
     setStarted(true);
-    const enableSound = () => { if (!mutedRef.current) void unlockAudio(); };
+    const enableSound = (event?: Event) => {
+      // The sound button handles its own gesture so enabling does not immediately toggle off.
+      if (event?.target instanceof Element && event.target.closest("[data-race-sound-toggle]")) return;
+      if (!mutedRef.current) void unlockAudio();
+    };
     enableSound();
     document.addEventListener("pointerdown", enableSound);
     document.addEventListener("keydown", enableSound);
