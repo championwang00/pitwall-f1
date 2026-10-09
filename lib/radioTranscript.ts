@@ -10,7 +10,7 @@ import { textScore } from "./radioSpeakerText";
 
 export type Segment = { start: number; end: number; text: string; speaker?: "driver" | "team"; spk?: "voice" };
 export type Transcript = { text: string; segments: Segment[]; model: string; at: string; v: number };
-/** bump when the clean-up rules change: older cache entries are transcribed again */
+/** Format of newly generated transcripts; readable older records remain available. */
 const VERSION = 3; // v3: sentence-level lines + speaker (voice clustering within the clip, labelled by phrasing)
 
 const FILE = path.join(process.cwd(), "data/radio-transcripts.json");
@@ -60,7 +60,10 @@ async function save(url: string, t: Transcript) {
 
 export function cached(url: string): Transcript | null {
   const t = store()[url];
-  return t && t.v === VERSION ? t : null;
+  // Older records still contain valid timed text. A speaker-format upgrade must
+  // not erase subtitles on hosts that cannot run the local Whisper pipeline.
+  return t && typeof t.text === "string" && Array.isArray(t.segments)
+    && t.segments.every((s) => Number.isFinite(s.start) && Number.isFinite(s.end) && typeof s.text === "string") ? t : null;
 }
 
 // ── one whisper job at a time, process-wide (survives HMR via globalThis) ──

@@ -11,6 +11,7 @@ export async function GET(req: Request) {
   const q = new URL(req.url).searchParams;
   const url = radioUrl(q.get("url"));
   if (!url) return Response.json({ error: "url must be an OpenF1 team-radio mp3 on livetiming.formula1.com" }, { status: 400 });
+  if (process.env.VERCEL && !cached(url)) return Response.json({ error: "transcript_not_prepared" }, { status: 503 });
   try {
     const t = await transcribe(url, q.get("p") === "1", req.signal);
     return Response.json({ text: t.text, segments: t.segments }, { headers: { "cache-control": "public, max-age=86400" } });

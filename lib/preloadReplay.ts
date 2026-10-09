@@ -38,6 +38,7 @@ export async function preloadReplay(report: (fraction: number) => void, prefetch
     const people = talk.ok ? Object.values((talk.data as { drivers: Record<string, { id: string } | null> }).drivers).filter((d): d is { id: string } => Boolean(d)) : [];
     const urls = [...avatars, ...people.map((person) => `/api/face/${person.id}?v=3&s=36&year=${plan.year}`)];
     const extras = urls.map(async (url) => { const image = new Image(); image.src = url; await image.decode(); });
+    extras.push(import("@/components/live/radioTranscripts").then(({ peekAll }) => peekAll(raw.team_radio.map((clip) => clip.recording_url).filter(Boolean))));
     let extraDone = 0;
     await Promise.allSettled(extras.map((job) => job.finally(() => report(0.8 + 0.2 * ++extraDone / Math.max(1, extras.length)))));
   }
