@@ -2,6 +2,11 @@
 
 以 **年份 × 赛道 × 车手 × 车队** 四个基础单元构建的 F1 信息站（赛车挂在「车队 × 年份」上）。任何一个对象页都是这个数据立方体的一个切片：固定一个维度，其余三个维度可以切换视图、筛选、透视，任意格子都能下钻到「那一年在那条赛道」的单场页。
 
+## 在线访问
+
+- 网站：https://pitwall-f1-nine.vercel.app
+- 公开仓库：https://github.com/championwang00/pitwall-f1
+
 ## 运行
 
 ```bash
@@ -54,12 +59,14 @@ npm run dev        # http://localhost:3210
 
 ## 注意
 
-- 非官方项目，与 Formula 1 / FIA 无关联。车手、车队、赛车、赛道图片直接引用 formula1.com 媒体服务器（未转存）；Formula1 字体经本地路由代理、仅缓存在 `.cache/`，**只适合本地演示**，公开部署前请换成自有字体与图片授权。
+- 非官方项目，与 Formula 1 / FIA 无关联。车手、车队、赛车、赛道图片直接引用 formula1.com 媒体服务器（未转存）；Formula1 字体通过同域路由代理；本地缓存在 `.cache/`、云端缓存在 `/tmp`。第三方品牌、字体、图片与起跑音效不属于项目代码的授权；商业使用需另行确认权利。
 - OpenF1 的实时数据在比赛进行中可能需要付费授权；未授权时页面会提示并回退到最近一节已完成的会话回放。
-- 订阅地址指向本机（`webcal://localhost:3210/api/calendar`），本机服务关闭后日历不会再更新；部署到公网后即为可长期订阅的地址。
+- 日历订阅地址跟随访问域名，线上订阅可持续使用，本地订阅依赖本机服务。
 
 ## 部署
 
 Vercel 使用 Node 22；数据库与 JSON 内容由 Next 文件追踪显式打包。云端临时缓存写入 `/tmp/pitwall`。本地缓存、设计评审输出与开发器配置不提交。GitHub 推送可触发 Vercel 自动部署。
 
 起跑灯录音来源与处理见 `public/sounds/f1-start-light.source.md`；引擎录音为 rfhache 的 F1 BR 06 Engine Starts 2（CC BY 4.0），改编与归属见 `public/sounds/f1-engine-launch.source.md`。项目为非官方展示，不拥有 F1 品牌、字体与媒体资产。车模功能暂不接入。
+
+云端无线电转录可读取已缓存的内容；新音频的本地 Whisper 转录需要 Python、ffmpeg 与模型，Vercel 当前不提供该本机环境。
