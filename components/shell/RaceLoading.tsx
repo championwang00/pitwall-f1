@@ -37,6 +37,7 @@ export default function RaceLoadingProvider({ children }: { children: React.Reac
   const [revealing, setRevealing] = useState(false);
   const [progress, setProgress] = useState(0);
   const [muted, setMuted] = useState(false);
+  const [audioReady, setAudioReady] = useState(false);
   const [started, setStarted] = useState(false);
   const [run, setRun] = useState(0);
   const audio = useRef<AudioContext | null>(null);
@@ -94,9 +95,11 @@ export default function RaceLoadingProvider({ children }: { children: React.Reac
         } finally { clearTimeout(timer); }
       }
       const running = audio.current === context && context.state === "running";
+      setAudioReady(running);
       return running;
     } catch {
       decoding.current = null;
+      setAudioReady(false);
       // A failed audio request must never block the page.
       return false;
     }
@@ -161,6 +164,10 @@ export default function RaceLoadingProvider({ children }: { children: React.Reac
   }), []);
 
   const toggleSound = async () => {
+    if (!muted && !audioReady) {
+      await unlockAudio();
+      return;
+    }
     const nextMuted = !muted;
     mutedRef.current = nextMuted;
     setMuted(nextMuted);
@@ -186,7 +193,7 @@ export default function RaceLoadingProvider({ children }: { children: React.Reac
   return (
     <Context.Provider value={{ register, preview }}>
       <div inert={visible || !entryChecked} style={{ visibility: (visible && !revealing) || !entryChecked ? "hidden" : "visible" }}>{children}</div>
-      {visible && <RaceLights key={run} pending={pending > 0} started={started} progress={progress} soundOn={!muted}
+      {visible && <RaceLights key={run} pending={pending > 0} started={started} progress={progress} soundOn={!muted && audioReady} soundBlocked={!muted && !audioReady}
         onTone={playTone} onEngine={playEngine} onReveal={() => setRevealing(true)} onSound={toggleSound} onComplete={() => {
           setVisible(false);
           try { sessionStorage.setItem("pitwall-grid-ready", "yes"); } catch {}
@@ -195,8 +202,8 @@ export default function RaceLoadingProvider({ children }: { children: React.Reac
   );
 }
 
-function RaceLights({ pending, started, progress, soundOn, onTone, onEngine, onReveal, onSound, onComplete }: {
-  pending: boolean; started: boolean; progress: number; soundOn: boolean; onTone: () => void;
+function RaceLights({ pending, started, progress, soundOn, soundBlocked, onTone, onEngine, onReveal, onSound, onComplete }: {
+  pending: boolean; started: boolean; progress: number; soundOn: boolean; soundBlocked: boolean; onTone: () => void;
   onEngine: () => Promise<void>; onReveal: () => void; onSound: () => void; onComplete: () => void;
 }) {
   const [lit, setLit] = useState(0);
@@ -296,7 +303,7 @@ function RaceLights({ pending, started, progress, soundOn, onTone, onEngine, onR
           <path d="M11 5 6 9H3v6h3l5 4V5Z" />
           {soundOn ? <><path d="M15 8a6 6 0 0 1 0 8M18 5a10 10 0 0 1 0 14" /></> : <path d="m16 9 5 6m0-6-5 6" />}
         </svg>
-        <span lang="en">{soundOn ? "SOUND ON" : "SOUND OFF"}</span>
+        <span lang="en">{soundBlocked ? "ENABLE SOUND" : soundOn ? "SOUND ON" : "SOUND OFF"}</span>
       </button>
     </div>
   );
