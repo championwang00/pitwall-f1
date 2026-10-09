@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Clock, useClockT } from "./clock";
 import { fmtTrackTime, lastAt, type Model } from "./model";
 import { rcZh, type RcKind } from "./names";
@@ -115,7 +115,11 @@ export function Radio({ model, clock }: { model: Model; clock: Clock }) {
   const year = new Date(model.session.date_start).getUTCFullYear();
   const gmt = model.session.gmt_offset;
   const upto = lastAt(model.radio, t);
-  const list = model.radio.slice(0, upto + 1).reverse().slice(0, 60);
+  // the whole session's radio stays listed (user: 一开始有好几条，后面突然只剩一条): what the replay has reached, newest
+  // first — then, under 「稍后」, what is still ahead, in order, dimmed and without its transcript (no spoilers)
+  const heard = model.radio.slice(0, upto + 1).reverse().slice(0, 60);
+  const ahead = model.radio.slice(upto + 1, upto + 1 + 40);
+  const list = [...heard, ...ahead];
   const people = useMemo(() => {
     const m = new Map<number, RadioPerson>();
     for (const r of model.radio) if (!m.has(r.driver_number)) m.set(r.driver_number, radioPerson(model.drivers.get(r.driver_number), r.driver_number));
@@ -222,16 +226,18 @@ export function Radio({ model, clock }: { model: Model; clock: Clock }) {
 
   return (
     <div className={s.panel}>
-      <div className={s.panelHead}><h3>车队无线电</h3><small><span className={s.tech}>{list.length ? upto + 1 : ""}</span>{list.length ? " 条" : ""}</small></div>
+      <div className={s.panelHead}><h3>车队无线电</h3><small><span className={s.tech}>{model.radio.length ? `${upto + 1} / ${model.radio.length}` : ""}</span>{model.radio.length ? " 条" : ""}</small></div>
       <ul className={s.radioList} ref={listRef}>
-        {list.map((r) => {
+        {list.map((r, idx) => {
+          const later = idx >= heard.length;
+          const sep = later && idx === heard.length ? <li key="sep" className={s.rSep} aria-hidden>稍后</li> : null;
           const p = people.get(r.driver_number)!;
           const d = model.drivers.get(r.driver_number);
           const on = clip?.url === r.recording_url;
           const lap = lapAt(r.driver_number, r.t);
           const tx = txLine(r.recording_url);
           return (
-            <li key={r.recording_url} data-url={r.recording_url}>
+            <Fragment key={r.recording_url}>{sep}<li data-url={r.recording_url}>
               {on && clip ? (
                 <RadioCard
                   key={clip.url}
@@ -255,9 +261,10 @@ export function Radio({ model, clock }: { model: Model; clock: Clock }) {
               ) : (
               <button
                 type="button"
-                className={`${s.rRow} ${on ? s.rOn : ""}`}
+                className={`${s.rRow} ${on ? s.rOn : ""} ${later ? s.rAhead : ""}`}
                 style={{ ["--team" as string]: d?.color ?? "#8a8a94" }}
-                onClick={() => play(r)}
+                // a clip still ahead: jump the replay to it, then play it
+                onClick={() => { if (later) clock.seek(r.t); play(r); }}
                 aria-label={on && playing ? `暂停 ${p.zh} 的无线电` : `播放 ${p.zh} 的无线电`}
                 title={tx.text ?? undefined}
               >
@@ -268,7 +275,7 @@ export function Radio({ model, clock }: { model: Model; clock: Clock }) {
                     <i className={`${s.rCode} lat`}>{d?.acr ?? r.driver_number}</i>
                     <span className={`${s.rMeta} ${s.tech}`}>{lap ? `L${lap} · ` : ""}{fmtTrackTime(r.t, gmt).slice(0, 5)}</span>
                   </span>
-                  {tx.text ? (() => {
+                  {later ? <span className={s.rWait}>尚未播到 · 点击跳到这里</span> : tx.text ? (() => {
                     // preview coloured by speaker too: driver = team colour, team = white
                     const segs = txOf(r.recording_url).t?.segments ?? [];
                     const who = speakers(segs, [p.latin.split(" ")[0], p.last]);
@@ -278,7 +285,7 @@ export function Radio({ model, clock }: { model: Model; clock: Clock }) {
                 <span className={s.rPlay}><Icon name={on && playing ? "pause" : "play"} size={12} /></span>
               </button>
               )}
-            </li>
+            </li></Fragment>
           );
         })}
         {!list.length && <li className={s.empty}>{model.radio.length ? "回放时间之前暂无无线电" : "本站暂无车队无线电录音数据"}</li>}

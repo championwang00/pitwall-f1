@@ -198,7 +198,10 @@ export function buildModel(session: SessionInfo, raw: Raw, live = false): Model 
   const chequer = chequers.length ? chequers[chequers.length - 1].t : null;
   const raceStart = kind === "race" ? firstLap : null;
   const t0 = firstLap - (kind === "race" ? 120e3 : 60e3);
-  const t1 = Math.max(lastLap, chequer ?? 0) + 60e3;
+  // the replay runs until the last team-radio clip too: the cool-down-lap chatter after the flag is part of the session
+  // (it was unreachable past the old end, so the radio list hid it) — within 20 min of the last lap only
+  const radioEnd = raw.team_radio.reduce((m, r) => { const x = ms(r.date); return Number.isFinite(x) && x < lastLap + 20 * 60e3 ? Math.max(m, x) : m; }, 0);
+  const t1 = Math.max(Math.max(lastLap, chequer ?? 0) + 60e3, radioEnd + 20e3);
 
   // leader lap starts (first car to start each lap)
   const lapStartMap = new Map<number, number>();

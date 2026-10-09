@@ -466,3 +466,8 @@
 .rKeyDriver, .rKeyTeam { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin: 0 4px 0 0; vertical-align: 0; }
 .rKeyDriver { background: color-mix(in oklch, var(--team) 72%, white); }
 .rKeyTeam { background: #fff; margin-left: 2px; }
+
+/* team radio: clips the replay has not reached yet — listed under 「稍后」, dimmed (click = jump there and play) */
+.rSep { list-style: none; padding: 10px 12px 4px; font: 700 11px/14px var(--font-cn); color: rgba(255,255,255,.45); letter-spacing: .04em; }
+.rAhead { opacity: .45; transition: opacity .15s; }
+.rAhead:hover, .rAhead:focus-visible { opacity: .85; }

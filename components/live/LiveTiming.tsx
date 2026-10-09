@@ -256,8 +256,11 @@ export default function LiveTiming({
       clock.setRange(model.t0, Math.max(model.t1, Date.now() - clock.delay), first ? undefined : clock.t);
       if (first) clock.goLive();
     } else {
-      clock.setRange(model.t0, model.t1, first ? model.defaultT : clock.t);
-      if (first) clock.pause();
+      // the viewer pressed ▶ while the session was still loading: keep playing from the start instead of resetting
+      // to the default position and pausing (that swallowed the click)
+      const pressed = first && clock.playing;
+      clock.setRange(model.t0, model.t1, first ? (pressed ? model.t0 : model.defaultT) : clock.t);
+      if (first && !pressed) clock.pause();
     }
   }, [model, live, clock]);
 

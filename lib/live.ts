@@ -152,6 +152,9 @@ async function sessionDone(x: DoneIn, year: number, round: number | null, grid: 
     cachedJSON<unknown[] | null>(`${OF1}/laps?session_key=${x.session_key}`, settled(x) ? Infinity : 60).catch(() => null),
   ]);
   const replay = round != null && Array.isArray(laps) && laps.length > 0 && Array.isArray(drv) && drv.length > 0 ? raceReplayPath(year, round, x.session_key) : null;
+  // warm everything else the replay panel loads (fire and forget), so 「计时回放」 opens instantly the first time too
+  if (replay) for (const ep of ["intervals", "position", "stints", "pit", "race_control", "weather", "team_radio"])
+    cachedJSON(`${OF1}/${ep}?session_key=${x.session_key}`, settled(x) ? Infinity : 60).catch(() => null);
   if (!Array.isArray(res) || !res.length) return { rows: null, replay };
   const kind = kindOf(x.session_name);
   const byNum = new Map((Array.isArray(drv) ? drv : []).map((d) => [d.driver_number, d]));
@@ -200,7 +203,10 @@ async function meetingResults(sessions: DoneIn[], meetingKey: number, year: numb
   await Promise.all(out.map(async (x) => {
     const hit = memoOk(x.session_key, x);
     // stale-while-revalidate: an expired answer is served at once and refreshed behind the page (no 2.5 s wait each minute)
-    const stale = hit ? null : doneMemo.get(x.session_key)?.v ?? null;
+    // — but only a stale answer WITH results: a stale "not published yet" is refetched now. On serverless (Vercel) the
+    // background refresh may never finish once the response is sent, so a stale null would stick for good.
+    const prev = doneMemo.get(x.session_key)?.v;
+    const stale = hit ? null : prev?.rows ? prev : null;
     if (stale) fetchDone(x).catch(() => {});
     const v = hit ?? stale ?? await within(fetchDone(x), RESULTS_BUDGET);
     if (!v) return; // timed out: 数据整理中 now; the fetch keeps going and fills the cache for the next load
@@ -215,7 +221,8 @@ async function feedOk(key: number): Promise<boolean> {
   const c = feedCache.get(key);
   if (c && Date.now() - c.at < 60e3) return c.ok;
   // stale-while-revalidate: answer with the last probe now, re-probe in the background
-  if (c) { feedCache.set(key, { at: Date.now() - 50e3, ok: c.ok }); probeFeed(key).catch(() => {}); return c.ok; }
+  // (only a stale "available": a stale "refused" is re-probed now — on serverless a background probe may never finish)
+  if (c?.ok) { feedCache.set(key, { at: Date.now() - 50e3, ok: c.ok }); probeFeed(key).catch(() => {}); return c.ok; }
   return probeFeed(key);
 }
 async function probeFeed(key: number): Promise<boolean> {
