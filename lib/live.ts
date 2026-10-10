@@ -115,7 +115,9 @@ export type ResultRow = {
   grid: number | null;
   laps: number | null; points: number | null; status: "DNF" | "DNS" | "DSQ" | null;
 };
-export type DoneSession = SessionLite & { kind: DoneKind; rows: ResultRow[] | null; replay: string | null };
+export type DoneSession = SessionLite & { kind: DoneKind; rows: ResultRow[] | null; replay: string | null;
+  /** OpenF1 could not be asked this time (rate limit / network / budget) — not the same as "not published" */
+  failed?: boolean };
 
 const OF1 = "https://api.openf1.org/v1";
 const RESULTS_BUDGET = 2500; // ms: never hold the page on a slow OpenF1 — whatever is not back by then reads 数据整理中
@@ -190,7 +192,7 @@ const doneMemo = new Map<number, { at: number; v: { rows: ResultRow[] | null; re
 const doneFlight = new Map<number, Promise<{ rows: ResultRow[] | null; replay: string | null }>>();
 
 async function meetingResults(sessions: DoneIn[], meetingKey: number, year: number, round: number | null, budget = RESULTS_BUDGET): Promise<DoneSession[]> {
-  const out = sessions.map((x) => ({ ...x, kind: kindOf(x.session_name), rows: null as ResultRow[] | null, replay: null as string | null }));
+  const out = sessions.map((x) => ({ ...x, kind: kindOf(x.session_name), rows: null as ResultRow[] | null, replay: null as string | null, failed: false }));
   const memoOk = (k: number, x: SessionLite) => { const m = doneMemo.get(k); return m && Date.now() - m.at < (settled(x) && m.v.rows && m.v.replay ? 1800e3 : 60e3) ? m.v : null; };
   let grid: Promise<GridRow[] | null> | null = null;
   const gridOnce = () => (grid ??= cachedJSON<GridRow[] | null>(`${OF1}/starting_grid?meeting_key=${meetingKey}`, 60).catch(() => null));
@@ -213,7 +215,7 @@ async function meetingResults(sessions: DoneIn[], meetingKey: number, year: numb
     const stale = hit ? null : prev?.rows ? prev : null;
     if (stale) fetchDone(x).catch(() => {});
     const v = hit ?? stale ?? await within(fetchDone(x).catch(() => null), budget);
-    if (!v) return; // timed out: 数据整理中 now; the fetch keeps going and fills the cache for the next load
+    if (!v) { x.failed = true; return; } // could not ask / timed out: 「暂时没取到」, the next visit asks again
     x.rows = v.rows; x.replay = v.replay;
   }));
   return out.reverse(); // newest first

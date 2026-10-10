@@ -46,7 +46,7 @@ export default function WeekendResults({ sessions, year, dark, loading }: { sess
             {sessions.map((x) => (
               <label key={x.session_key} htmlFor={`wr-${x.session_key}`} className={w.tab}>
                 <b>{SESSION_ZH[x.session_name] ?? x.session_name}</b>
-                <span>{x.rows ? "成绩已发布" : loading ? "加载中" : "数据整理中"}</span>
+                <span>{x.rows ? "成绩已发布" : loading ? "加载中" : x.failed ? "暂时没取到" : "数据整理中"}</span>
               </label>
             ))}
           </div>
@@ -82,7 +82,7 @@ function Block({ x, year, loading }: { x: DoneSession; year: number; loading?: b
         {x.replay && <span className={w.pAct}><CardAction href={x.replay} icon="play">计时回放</CardAction></span>}
       </header>
       {!rows ? (
-        <p className={w.pending}><i aria-hidden />{loading ? "成绩加载中…" : "数据整理中 · 通常在节次结束后约 30–60 分钟发布"}</p>
+        <p className={w.pending}><i aria-hidden />{loading ? "成绩加载中…" : x.failed ? "暂时没取到成绩 · 刷新页面重试" : "数据整理中 · 通常在节次结束后约 30–60 分钟发布"}</p>
       ) : (
         <>
           {podium.length > 0 && <div className={w.podium}><PodiumCells podium={podium} /></div>}
