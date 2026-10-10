@@ -47,11 +47,19 @@ export async function cachedJSON<T = any>(url: string, ttl: number, init?: Reque
       await spaced(host);
       try {
         if (wm) await slot(); // Wikimedia: one serialized queue for the whole process, paused after a 429 (lib/wmGate)
-        const r = await fetch(url, { ...init, headers: { "user-agent": "pitwall-f1-demo/0.1", ...(init?.headers || {}) }, cache: "no-store" });
+        // On Vercel every server instance has its own memory and /tmp: OpenF1 answers go through Vercel's shared Data Cache
+        // instead, so one successful fetch serves every instance (separate instances hitting OpenF1 at once tripped its rate
+        // limit and the weekend results read 「暂时没取到」). Same expiry as here; local dev keeps no-store + the disk cache.
+        const shared = !!process.env.VERCEL && !wm;
+        const r = await fetch(url, {
+          ...init, headers: { "user-agent": "pitwall-f1-demo/0.1", ...(init?.headers || {}) },
+          ...(shared ? { next: { revalidate: ttl === Infinity ? 31536000 : Math.max(5, Math.round(ttl)) } } : { cache: "no-store" as RequestCache }),
+        } as RequestInit);
         if (wm && r.status === 429) { pause(+(r.headers.get("retry-after") ?? 0)); const e: any = new Error(`429 ${url}`); e.fatal = true; throw e; }
         if (wm && r.ok) wmOk();
         if (r.status === 404) return null;
         if (r.status === 401 || r.status === 403) { const e: any = new Error(`${r.status} ${url}`); e.status = r.status; e.fatal = true; throw e; }
+        if (r.status === 429) { const wait = Math.min(5, +(r.headers.get("retry-after") ?? 1) || 1); await new Promise((res) => setTimeout(res, wait * 1000)); throw new Error(`429 ${url}`); }
         if (!r.ok) throw new Error(`${r.status} ${url}`);
         const data = await r.json();
         const entry = { t: Date.now(), data };
