@@ -1,4 +1,5 @@
 import { preparedJSON } from "./preparedJSON";
+import { PRELOAD_SIG, planSig } from "./preloadSig";
 import { buildModel, ENDPOINTS, type Raw } from "@/components/live/model";
 import type { SessionLite } from "@/components/live/LiveTiming";
 
@@ -45,5 +46,8 @@ export async function preloadReplay(report: (fraction: number) => void, prefetch
     let extraDone = 0;
     await Promise.allSettled(extras.map((job) => job.finally(() => report(0.8 + 0.2 * ++extraDone / Math.max(1, extras.length)))));
   }
+  // remember what this loader prepared: the logo link re-runs the loader only when the plan has changed since (user: 有新数据
+  // 要拉取，就进一下加载页面；没有就直接进)
+  try { localStorage.setItem(PRELOAD_SIG, planSig(all)); } catch {}
   report(1);
 }

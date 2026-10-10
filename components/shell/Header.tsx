@@ -1,6 +1,7 @@
 import Link from "next/link";
 import s from "./shell.module.css";
 import NavLinks from "./NavLinks";
+import LogoLink from "./LogoLink";
 import SearchButton from "./SearchButton";
 import Countdown from "@/components/ui/Countdown";
 import Icon from "@/components/ui/Icon";
@@ -22,10 +23,10 @@ export default function Header({ next }: { next: NextSession }) {
         <div className={s.texture} aria-hidden><img src="/f1/header-stripes.svg" alt="" /></div>
         <div className={s.fade} aria-hidden />
         <div className={s.bar}>
-          <Link href="/live" className={s.brand} aria-label="PITWALL · 实时">
+          <LogoLink className={s.brand}>
             <span className={s.mark} aria-hidden><i /><i /></span>
             <span className={s.word}>PITWALL</span>
-          </Link>
+          </LogoLink>
           <NavLinks live={!!live} />
           <div className={s.tools}>
             <Link href="/compare" className={s.util}>对比</Link>
