@@ -1,6 +1,6 @@
 import l from "./livepage.module.css";
 import w from "./weekendresults.module.css";
-import type { DoneSession, ResultRow } from "@/lib/live";
+import { weekendResults, type DoneSession, type LiveState, type ResultRow } from "@/lib/live";
 import { SESSION_ZH } from "@/lib/openf1";
 import { fmtLap } from "./model";
 import { PodiumCells, CardAction } from "@/components/ui/RaceCard";
@@ -26,7 +26,9 @@ const fmtGap = (g: number | string | null) => (g == null ? "" : typeof g === "st
 
 /** this weekend's finished sessions: classification + 计时回放 when OpenF1 serves it, else 数据整理中 (user: 非实时直播…刚结束…能展示的就展示).
  *  `dark`: rendered inside the black next-race banner it belongs to. */
-export default function WeekendResults({ sessions, year, dark }: { sessions: DoneSession[]; year: number; dark?: boolean }) {
+export default function WeekendResults({ sessions, year, dark, loading }: { sessions: DoneSession[]; year: number; dark?: boolean;
+  /** the <Suspense> placeholder while the classifications stream in: 成绩加载中, not 数据整理中 */
+  loading?: boolean }) {
   if (!sessions.length) return null;
   const tabs = sessions.length > 1;
   return (
@@ -44,20 +46,20 @@ export default function WeekendResults({ sessions, year, dark }: { sessions: Don
             {sessions.map((x) => (
               <label key={x.session_key} htmlFor={`wr-${x.session_key}`} className={w.tab}>
                 <b>{SESSION_ZH[x.session_name] ?? x.session_name}</b>
-                <span>{x.rows ? "成绩已发布" : "数据整理中"}</span>
+                <span>{x.rows ? "成绩已发布" : loading ? "加载中" : "数据整理中"}</span>
               </label>
             ))}
           </div>
         )}
         <div className={w.panels}>
-          {sessions.map((x) => <Block key={x.session_key} x={x} year={year} />)}
+          {sessions.map((x) => <Block key={x.session_key} x={x} year={year} loading={loading} />)}
         </div>
       </div>
     </section>
   );
 }
 
-function Block({ x, year }: { x: DoneSession; year: number }) {
+function Block({ x, year, loading }: { x: DoneSession; year: number; loading?: boolean }) {
   const name = SESSION_ZH[x.session_name] ?? x.session_name;
   const rows = x.rows;
   const hasGrid = x.kind === "quali" && !!rows?.some((r) => r.grid != null);
@@ -80,7 +82,7 @@ function Block({ x, year }: { x: DoneSession; year: number }) {
         {x.replay && <span className={w.pAct}><CardAction href={x.replay} icon="play">计时回放</CardAction></span>}
       </header>
       {!rows ? (
-        <p className={w.pending}><i aria-hidden />数据整理中 · 通常在节次结束后约 30–60 分钟发布</p>
+        <p className={w.pending}><i aria-hidden />{loading ? "成绩加载中…" : "数据整理中 · 通常在节次结束后约 30–60 分钟发布"}</p>
       ) : (
         <>
           {podium.length > 0 && <div className={w.podium}><PodiumCells podium={podium} /></div>}
@@ -142,4 +144,11 @@ function Row({ r, x, year, hasGrid, leaderLaps }: { r: ResultRow; x: DoneSession
       {x.kind === "race" && <span role="cell" className={`${w.cN} num`}>{r.points ? r.points : ""}</span>}
     </div>
   );
+}
+
+/** Streams the classifications in after the page (wrap in <Suspense> with `WeekendResults loading` as the fallback):
+ *  the page never waits on OpenF1, and a cold server shows the results once they arrive, not a premature 数据整理中. */
+export async function WeekendResultsLive({ st, dark }: { st: LiveState; dark?: boolean }) {
+  const sessions = await weekendResults(st);
+  return <WeekendResults sessions={sessions} year={st.year} dark={dark} />;
 }

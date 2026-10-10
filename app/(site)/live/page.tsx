@@ -30,7 +30,8 @@ function ab(sp: SP) {
  */
 export default async function Live({ searchParams }: { searchParams: Promise<SP> }) {
   const sp = await searchParams;
-  const st = await liveState({ debugPhase: one(sp.debugPhase) ?? null, debugLive: one(sp.debugLive) ?? null, debugWeekend: one(sp.debugWeekend) ?? null });
+  // results: false — the weekend's classifications stream in under <Suspense> (LivePage), the page never waits on OpenF1
+  const st = await liveState({ debugPhase: one(sp.debugPhase) ?? null, debugLive: one(sp.debugLive) ?? null, debugWeekend: one(sp.debugWeekend) ?? null, results: false });
   const asked = num(sp.session);
   const askedYear = num(sp.year);
   const live = st.phase === "live" ? st.liveSession : null;

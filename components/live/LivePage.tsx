@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ViewTransition } from "react";
+import { Suspense, ViewTransition } from "react";
 import l from "./livepage.module.css";
 import h from "@/components/home/home.module.css";
 import { driverStandingsAfter, constructorStandingsAfter } from "@/lib/f1";
@@ -25,7 +25,7 @@ import Laurel from "@/components/entity/Laurel";
 import LiveTiming, { type Weekend } from "./LiveTiming";
 import TimingHashRedirect from "./TimingHashRedirect";
 import RoundStrip from "./RoundStrip";
-import WeekendResults from "./WeekendResults";
+import WeekendResults, { WeekendResultsLive } from "./WeekendResults";
 import Breadcrumb, { type Crumb } from "@/components/shell/Breadcrumb";
 
 const dn = (id: string, latin?: string) => DRIVERS_2026[id]?.nameZh ?? zhName.driver(id) ?? latin ?? id;
@@ -232,7 +232,12 @@ export default function LivePage({ st, panel }: { st: LiveState; panel: PanelPro
         {/* replaying a past session (▶ deep link): the viewer is focused on that race — no next-race banner (user) */}
         {panel.focus && !live ? null : off
           ? <SeasonOverHero year={st.lastRace.year} standings={standings} teams={constructorStandingsAfter(st.lastRace.year)} />
-          : <NextRaceHero st={st} standings={standings} standingsRound={st.lastRace.round} after={<WeekendResults sessions={st.meetingDone} year={st.year} dark />} />}
+          : <NextRaceHero st={st} standings={standings} standingsRound={st.lastRace.round} after={
+            // streamed: the banner renders at once, the classifications fill in when OpenF1 answers
+            <Suspense fallback={<WeekendResults sessions={[...st.meetingDone].reverse()} year={st.year} dark loading />}>
+              <WeekendResultsLive st={st} dark />
+            </Suspense>
+          } />}
         {((live && st.liveFeed) || panel.focus) && <div className={l.panelTop}><Panel {...panel} archive={archive} /></div>}
         <RoundCards year={st.year} schedule={st.schedule} title={<><EntityLink kind="year" id={String(st.year)} className="hlink">{st.year}</EntityLink> 赛季 · 全部分站</>} nextRound={off ? null : next.round} weekend={st.phase === "live" || st.phase === "weekend"} />
       </div>

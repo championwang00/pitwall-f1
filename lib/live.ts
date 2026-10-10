@@ -93,6 +93,9 @@ export type LiveState = {
   /** the current weekend's (liveSession ?? nextSession) sessions past their scheduled end, newest first, each with its
    *  OpenF1 classification when published (rows: null = 数据整理中) and a replay link only when OpenF1 serves its laps */
   meetingDone: DoneSession[];
+  /** the weekend's OpenF1 meeting and its F1DB round (for `weekendResults`, streamed in after the page) */
+  meetingKey: number | null;
+  meetingRound: number | null;
 };
 
 /* ───────── this weekend's finished sessions (/live 「本站已结束节次」) ───────── */
@@ -185,7 +188,7 @@ async function sessionDone(x: DoneIn, year: number, round: number | null, grid: 
 const doneMemo = new Map<number, { at: number; v: { rows: ResultRow[] | null; replay: string | null } }>();
 const doneFlight = new Map<number, Promise<{ rows: ResultRow[] | null; replay: string | null }>>();
 
-async function meetingResults(sessions: DoneIn[], meetingKey: number, year: number, round: number | null): Promise<DoneSession[]> {
+async function meetingResults(sessions: DoneIn[], meetingKey: number, year: number, round: number | null, budget = RESULTS_BUDGET): Promise<DoneSession[]> {
   const out = sessions.map((x) => ({ ...x, kind: kindOf(x.session_name), rows: null as ResultRow[] | null, replay: null as string | null }));
   const memoOk = (k: number, x: SessionLite) => { const m = doneMemo.get(k); return m && Date.now() - m.at < (settled(x) && m.v.rows && m.v.replay ? 1800e3 : 60e3) ? m.v : null; };
   let grid: Promise<GridRow[] | null> | null = null;
@@ -208,7 +211,7 @@ async function meetingResults(sessions: DoneIn[], meetingKey: number, year: numb
     const prev = doneMemo.get(x.session_key)?.v;
     const stale = hit ? null : prev?.rows ? prev : null;
     if (stale) fetchDone(x).catch(() => {});
-    const v = hit ?? stale ?? await within(fetchDone(x), RESULTS_BUDGET);
+    const v = hit ?? stale ?? await within(fetchDone(x), budget);
     if (!v) return; // timed out: 数据整理中 now; the fetch keeps going and fills the cache for the next load
     x.rows = v.rows; x.replay = v.replay;
   }));
@@ -301,5 +304,15 @@ export async function liveState(opts: { debugPhase?: string | null; debugLive?: 
     : opts.results === false ? ended.map((x) => ({ ...x, kind: kindOf(x.session_name), rows: null, replay: null }))
     : await meetingResults(ended, meetingKey, year, round);
 
-  return { phase, realPhase, year, nextRace: next, nextSession, liveSession, latestDoneSession, lastRace, schedule, weekends, panelYear, fallbackSession, liveFeed, weekendDone, meetingDone };
+  return { phase, realPhase, year, nextRace: next, nextSession, liveSession, latestDoneSession, lastRace, schedule, weekends, panelYear, fallbackSession, liveFeed, weekendDone, meetingDone, meetingKey: meetingKey ?? null, meetingRound: round };
+}
+
+/**
+ * This weekend's classifications, for the /live section streamed in under <Suspense> (the page itself never waits for
+ * OpenF1): a generous budget, so a cold serverless instance fetching from scratch shows the results instead of a
+ * premature 数据整理中. `st` comes from liveState({ results: false }).
+ */
+export async function weekendResults(st: LiveState, budget = 15000): Promise<DoneSession[]> {
+  if (!st.meetingDone.length || st.meetingKey == null) return [];
+  return meetingResults(st.meetingDone, st.meetingKey, st.year, st.meetingRound, budget);
 }

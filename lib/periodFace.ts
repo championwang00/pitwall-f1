@@ -152,6 +152,8 @@ export function judge(f: Pick<CommonsFile, "title" | "width" | "height" | "categ
   const title = f.title.replace(/^File:/, "").replace(/\.[a-z]+$/i, "");
   const t = ascii(title), me = ascii(c.last);
   if (BAD.test(title)) return null;
+  // a different year written in the file name is evidence against "this season" (even inside a per-year category)
+  { const fy = fileYear(title); if (fy && fy !== c.year) return null; }
   // another series (Alonso at the 2017 Indy 500, Le Mans, Dakar…) is not his F1 season; Indianapolis itself hosted F1 2000–07
   const all3 = `${title} | ${f.categories.join(" | ")} | ${f.description}`;
   if (OTHER_SERIES.test(all3) || (/indianapolis/i.test(all3) && !/grand prix|formula (1|one)|\bf1\b/i.test(all3))) return null;
