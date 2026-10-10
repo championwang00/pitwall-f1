@@ -148,16 +148,17 @@ const fin = (v: unknown) => (typeof v === "number" && Number.isFinite(v) ? v : n
 /** one finished session → classification rows (null = OpenF1 has not published it) + replay link (null = laps not served) */
 async function sessionDone(x: DoneIn, year: number, round: number | null, grid: Promise<GridRow[] | null>) {
   const ttl = settled(x) ? 1800 : 60;
+  // "could not ask" (429 rate limit / network) must not read as "not published": it throws, so nothing is memoised and the
+  // next visit asks again (on Vercel a 429 burst made Singapore sprint qualifying read 数据整理中 for minutes)
+  const FAIL = Symbol("fail");
   const [res, drv, laps] = await Promise.all([
-    cachedJSON<RawResult[] | null>(`${OF1}/session_result?session_key=${x.session_key}`, ttl).catch(() => null),
+    cachedJSON<RawResult[] | null>(`${OF1}/session_result?session_key=${x.session_key}`, ttl).catch(() => FAIL),
     cachedJSON<RawDriver[] | null>(`${OF1}/drivers?session_key=${x.session_key}`, 3600).catch(() => null),
-    // the replay panel's own request (same URL + TTL policy as /api/openf1): a link only when it will load — and it warms that cache
-    cachedJSON<unknown[] | null>(`${OF1}/laps?session_key=${x.session_key}`, settled(x) ? Infinity : 60).catch(() => null),
+    // a small probe (lap 1 only) for "will the replay load" — the full laps are the replay's own (preloaded by the first-visit loader)
+    cachedJSON<unknown[] | null>(`${OF1}/laps?session_key=${x.session_key}&lap_number=1`, settled(x) ? Infinity : 60).catch(() => null),
   ]);
+  if (res === FAIL) throw new Error(`session_result ${x.session_key}: could not ask`);
   const replay = round != null && Array.isArray(laps) && laps.length > 0 && Array.isArray(drv) && drv.length > 0 ? raceReplayPath(year, round, x.session_key) : null;
-  // warm everything else the replay panel loads (fire and forget), so 「计时回放」 opens instantly the first time too
-  if (replay) for (const ep of ["intervals", "position", "stints", "pit", "race_control", "weather", "team_radio"])
-    cachedJSON(`${OF1}/${ep}?session_key=${x.session_key}`, settled(x) ? Infinity : 60).catch(() => null);
   if (!Array.isArray(res) || !res.length) return { rows: null, replay };
   const kind = kindOf(x.session_name);
   const byNum = new Map((Array.isArray(drv) ? drv : []).map((d) => [d.driver_number, d]));
@@ -211,7 +212,7 @@ async function meetingResults(sessions: DoneIn[], meetingKey: number, year: numb
     const prev = doneMemo.get(x.session_key)?.v;
     const stale = hit ? null : prev?.rows ? prev : null;
     if (stale) fetchDone(x).catch(() => {});
-    const v = hit ?? stale ?? await within(fetchDone(x), budget);
+    const v = hit ?? stale ?? await within(fetchDone(x).catch(() => null), budget);
     if (!v) return; // timed out: 数据整理中 now; the fetch keeps going and fills the cache for the next load
     x.rows = v.rows; x.replay = v.replay;
   }));
