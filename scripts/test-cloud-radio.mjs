@@ -60,7 +60,7 @@ await new Promise(r=>setTimeout(r,20));
 assert.equal(client.txOf('reattach-test').st,'done','a visible row reattached during abort restarts its request');
 client.unwant('reattach-test'); globalThis.fetch=realFetch;
 const {speakers}=await import('../components/live/radioSpeaker.ts');
-assert.deepEqual(speakers([{text:'Box, box.'},{text:'I have no grip.',speaker:'driver',spk:'voice'},{text:'Copy.',speaker:'team',speakerSource:'verified'}]),['unknown','unknown','team']);
+assert.deepEqual(speakers([{text:'Box, box.'},{text:'I have no grip.',speaker:'driver',spk:'voice'},{text:'Copy.',speaker:'team',speakerSource:'verified'}]),['team','driver','team']);
 let translationCalls=0;
 globalThis.fetch=async()=>{translationCalls++;return Response.json(translationCalls===1 ? {...t,translationStatus:'pending',retryAfter:0.01} : {...t,textZh:'进站，进站。',segments:[{...t.segments[0],zh:'进站，进站。'}],translationStatus:'complete'});};
 client.want('translation-test');await new Promise(r=>setTimeout(r,30));

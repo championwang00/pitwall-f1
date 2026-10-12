@@ -22,10 +22,14 @@ class TranslationTests(unittest.TestCase):
     def test_mismatch_never_partially_overwrites(self):
         with self.assertRaises(RuntimeError):m.process(self.root,m.discover(self.root),80,lambda _:[])
         self.assertEqual(m.radio.load_pack(self.root,URL)['transcripts'][URL],self.tx)
-    def test_radio_context_is_narrow(self):
-        self.assertEqual(m.translation_input("No, but you're pushing it.",'Track limits.'),'No, but you are close to exceeding the track limits.')
-        self.assertEqual(m.translation_input("No, but you're pushing it.",'Keep going.'),"No, but you're pushing it.")
-        self.assertEqual(m.translation_input('Did you get one?','Track limits.'),'Did you receive a track limits warning?')
+    def test_deepseek_output_alignment_and_validation(self):
+        def response(rows,finish='stop'): return {'choices':[{'finish_reason':finish,'message':{'content':json.dumps({'translations':rows})}}]}
+        self.assertEqual(m.decode_response(response([{'id':1,'zh':'收到'},{'id':0,'zh':'进站'}]),2),['进站','收到'])
+        for rows in [[{'id':0,'zh':'进站'},{'id':0,'zh':'重复'}],[{'id':0,'zh':''},{'id':1,'zh':'收到'}]]:
+            with self.assertRaises(ValueError):m.decode_response(response(rows),2)
+        with self.assertRaises(ValueError):m.decode_response(response([{'id':0,'zh':'进站'}],'length'),1)
+    def test_old_translations_are_reprocessed(self):
+        self.assertFalse(m.complete({**self.tx,'textZh':'进站','segments':[{'start':1,'end':2,'text':'Box','zh':'进站'}],'translationVersion':1,'translationRevision':2,'translationModel':'Helsinki-NLP/opus-mt-en-zh'}))
     def test_session_filter(self): self.assertEqual(m.discover(self.root,999),[])
     def test_empty_speech_needs_no_model(self):
         m.radio.save_pack(self.root,URL,{'version':1,'transcripts':{URL:{'text':'','segments':[]}}})

@@ -1,5 +1,7 @@
-export type Speaker = "driver" | "team" | "unknown";
-/** Voice clusters and wording identify neither person's role. Only verified roles receive colours. */
-export function speakers(segments: { text: string; speaker?: string; speakerSource?: string }[], _names: string[] = []): Speaker[] {
-  return segments.map(s => s.speakerSource === "verified" && (s.speaker === "driver" || s.speaker === "team") ? s.speaker : "unknown");
+import { speakers as inferSpeakers, type Speaker } from "@/lib/radioSpeakerText";
+export type { Speaker };
+/** Keep the driver/team colour convention; verified roles override contextual automatic inference. */
+export function speakers(segments: { text: string; speaker?: string; speakerSource?: string }[], names: string[] = []): Speaker[] {
+  const inferred = inferSpeakers(segments, names);
+  return segments.map((s,i) => s.speakerSource === "verified" && (s.speaker === "driver" || s.speaker === "team") ? s.speaker : inferred[i]);
 }
