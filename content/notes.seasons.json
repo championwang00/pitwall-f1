@@ -2793,25 +2793,7 @@
   ],
   "2026": [
     {
-      "tag": "故事线",
-      "title": "安东内利领先84分",
-      "text": "截至第16站，安东内利以320分领跑，领先队友拉塞尔84分、汉密尔顿106分，赛季还剩7站。他16站赢下8场，日本站后成为史上最年轻的积分榜领跑者。",
-      "year": 2026,
-      "gp": null,
-      "circuit": null,
-      "sources": [
-        {
-          "label": "Wikipedia · 2026 Formula One World Championship",
-          "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship"
-        },
-        {
-          "label": "Wikipedia · 2026 Bahrain Grand Prix",
-          "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix"
-        }
-      ]
-    },
-    {
-      "tag": "数字",
+      "tag": "历史回声",
       "title": "16站6位冠军",
       "text": "2026年前16站共有6位分站冠军：安东内利8胜，拉塞尔3胜，诺里斯2胜，汉密尔顿、勒克莱尔和维斯塔潘各1胜。梅赛德斯一家就拿下其中11场。",
       "year": 2026,
@@ -2822,10 +2804,15 @@
           "label": "Wikipedia · 2026 Formula One World Championship",
           "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship"
         }
-      ]
+      ],
+      "asOfRace": {
+        "year": 2026,
+        "round": 16
+      },
+      "temporal": "snapshot"
     },
     {
-      "tag": "数字",
+      "tag": "历史回声",
       "title": "杆位垄断被打破",
       "text": "梅赛德斯包揽本季前10个杆位，匈牙利站诺里斯以0.012秒打破垄断；蒙扎站加斯利拿到生涯首个杆位，第16站维斯塔潘的杆位则是本季首个非梅赛德斯动力的杆位。",
       "year": 2026,
@@ -2840,7 +2827,12 @@
           "label": "Wikipedia · 2026 Bahrain Grand Prix",
           "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix"
         }
-      ]
+      ],
+      "asOfRace": {
+        "year": 2026,
+        "round": 16
+      },
+      "temporal": "snapshot"
     },
     {
       "tag": "冷知识",
@@ -2854,7 +2846,12 @@
           "label": "Wikipedia · 2026 Formula One World Championship",
           "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship"
         }
-      ]
+      ],
+      "asOfRace": {
+        "year": 2026,
+        "round": 16
+      },
+      "temporal": "snapshot"
     },
     {
       "tag": "故事线",
@@ -2868,7 +2865,12 @@
           "label": "Wikipedia · 2026 Formula One World Championship",
           "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship"
         }
-      ]
+      ],
+      "asOfRace": {
+        "year": 2026,
+        "round": 16
+      },
+      "temporal": "snapshot"
     },
     {
       "tag": "最近一次",
@@ -2890,7 +2892,12 @@
           "label": "Wikipedia · 2026 Bahrain Grand Prix",
           "url": "https://en.wikipedia.org/wiki/2026_Bahrain_Grand_Prix"
         }
-      ]
+      ],
+      "asOfRace": {
+        "year": 2026,
+        "round": 16
+      },
+      "temporal": "snapshot"
     },
     {
       "tag": "冷知识",
@@ -2908,7 +2915,12 @@
           "label": "Wikipedia · 2026 Formula One World Championship",
           "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship"
         }
-      ]
+      ],
+      "asOfRace": {
+        "year": 2026,
+        "round": 16
+      },
+      "temporal": "snapshot"
     },
     {
       "tag": "里程碑",
@@ -2926,12 +2938,17 @@
           "label": "Wikipedia · 2026 Formula One World Championship",
           "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship"
         }
-      ]
+      ],
+      "asOfRace": {
+        "year": 2026,
+        "round": 16
+      },
+      "temporal": "snapshot"
     },
     {
       "tag": "里程碑",
       "title": "奥迪与凯迪拉克",
-      "text": "奥迪接手索伯，成为自带动力单元的厂队，博尔托莱托在揭幕战就为车队拿到积分，16站后累计17分。第11支车队凯迪拉克使用法拉利动力，由佩雷兹和博塔斯搭档，至今仍未得分。",
+      "text": "奥迪接手索伯，成为自带动力单元的厂队，博尔托莱托在揭幕战就为车队拿到积分，16站后累计17分。第11支车队凯迪拉克使用法拉利动力，由佩雷兹和博塔斯搭档，截至雪邦站当时尚未得分。",
       "year": 2026,
       "gp": null,
       "circuit": null,
@@ -2940,7 +2957,12 @@
           "label": "Wikipedia · 2026 Formula One World Championship",
           "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship"
         }
-      ]
+      ],
+      "asOfRace": {
+        "year": 2026,
+        "round": 16
+      },
+      "temporal": "snapshot"
     },
     {
       "tag": "纪录",
@@ -2954,7 +2976,12 @@
           "label": "Wikipedia · 2026 Formula One World Championship",
           "url": "https://en.wikipedia.org/wiki/2026_Formula_One_World_Championship"
         }
-      ]
+      ],
+      "asOfRace": {
+        "year": 2026,
+        "round": 16
+      },
+      "temporal": "snapshot"
     }
   ]
 }

@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { all } from "@/lib/db";
 import { circuitTalk, driverTalk } from "@/lib/talk";
 import { driverRecordsAt } from "@/lib/brief";
@@ -7,6 +8,7 @@ import { linkParts } from "@/lib/linkify";
 
 // GET /api/talk?circuit=marina-bay&acr=VER,ANT — commentator cards for the live page.
 export async function GET(req: Request) {
+  await ensureFreshDatabase();
   const u = new URL(req.url);
   const circuit = u.searchParams.get("circuit") ?? "";
   const acrs = (u.searchParams.get("acr") ?? "").split(",").filter(Boolean).slice(0, 4);

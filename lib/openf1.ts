@@ -14,8 +14,8 @@ export type OF1Meeting = {
   is_cancelled?: boolean; country_flag?: string; circuit_image?: string; gmt_offset: string;
 };
 
-export const sessionsForYear = (year: number) => cachedJSON<OF1Session[]>(`${BASE}/sessions?year=${year}`, 3600).then((r) => r || []);
-export const meetingsForYear = (year: number) => cachedJSON<OF1Meeting[]>(`${BASE}/meetings?year=${year}`, 3600).then((r) => r || []);
+export const sessionsForYear = (year: number) => cachedJSON<OF1Session[]>(`${BASE}/sessions?year=${year}`, year === new Date().getUTCFullYear() ? 60 : 3600).then((r) => r || []);
+export const meetingsForYear = (year: number) => cachedJSON<OF1Meeting[]>(`${BASE}/meetings?year=${year}`, year === new Date().getUTCFullYear() ? 60 : 3600).then((r) => r || []);
 
 /** Sessions grouped per meeting, cancelled meetings and testing dropped. */
 export async function weekendSessions(year: number) {

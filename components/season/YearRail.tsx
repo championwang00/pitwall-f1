@@ -119,9 +119,9 @@ export default function YearRail({ eras, latest }: { eras: RailEra[]; latest: nu
     };
   };
   const dimYear = (y: number) => !subject && !!scope.years && !scope.years.includes(y);
-  const gapText = (a: number, b: number) => {
+  const gapRange = (a: number, b: number) => {
     const range = a === b ? String(a) : `${a}–${String(b).slice(String(a).slice(0, 2) === String(b).slice(0, 2) ? 2 : 0)}`;
-    return (scope.gap ?? "{a}–{b}").replace("{a}–{b}", range);
+    return range;
   };
 
   // the rail and sticky bars sit under the site header, whose height varies (ticker row or not): measure it
@@ -173,9 +173,14 @@ export default function YearRail({ eras, latest }: { eras: RailEra[]; latest: nu
             : <div key={`e${it.id}${k}`} className={cls}>{body}</div>;
         }
         if (it.t === "gap") {
+          const label = scope.gap?.split("·").at(-1)?.trim() ?? "未举办";
+          const on = current != null && current >= it.a && current <= it.b;
           return (
-            <Link key={`g${it.a}`} href={hrefFor(it.a)} className={s.gap} scroll={false}>
-              {gapText(it.a, it.b)}
+            <Link key={`g${it.a}`} href={hrefFor(it.a)} className={`${s.y} ${s.missingYear} ${on ? s.on : ""}`} scroll={false}
+              style={{ ["--c" as string]: "#4a4a55" }} title={`${gapRange(it.a, it.b)} · ${label}`}>
+              <i data-on={on ? "" : undefined} />
+              <span className={s.num}>{gapRange(it.a, it.b)}</span>
+              <em>{label}</em>
             </Link>
           );
         }

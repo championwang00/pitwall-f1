@@ -1,9 +1,11 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { liveState, timingWeekends, doneSessions } from "@/lib/live";
 import { CIRCUIT_ID } from "@/components/live/names";
 
 export const dynamic = "force-dynamic";
 
 export async function GET(request: Request) {
+  await ensureFreshDatabase();
   const query = new URL(request.url).searchParams;
   const state = await liveState({ results: false });
   const askedYear = Number(query.get("year"));

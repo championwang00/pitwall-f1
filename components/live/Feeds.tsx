@@ -105,7 +105,8 @@ type Clip = { url: string; num: number; t: number };
 function txLine(url: string): { text: string | null; status: string | null } {
   const x = txOf(url);
   if (x.st === "done") return x.t!.text ? { text: x.t!.text, status: null } : { text: null, status: "未识别出清晰语音" };
-  if (x.st === "error") return { text: null, status: "转写暂不可用" };
+  if (x.st === "error") return { text: null, status: "转写暂不可用，正在重试" };
+  if (x.st === "pending") return { text: null, status: x.retrying ? "转写失败，正在重试…" : "字幕正在生成…" };
   return { text: null, status: x.st === "idle" ? "待转写" : "转写中…" };
 }
 
@@ -189,11 +190,16 @@ export function Radio({ model, clock }: { model: Model; clock: Clock }) {
     window.addEventListener("keydown", on);
     return () => window.removeEventListener("keydown", on);
   }, [clip, close]);
+  useEffect(() => {
+    if (!clip) return;
+    want(clip.url, true);
+    return () => unwant(clip.url, true);
+  }, [clip]);
   // another session: stop
   useEffect(() => close, [model.session.session_key, close]);
   useEffect(() => () => { audio.current?.pause(); graph.current?.ctx.close().catch(() => {}); }, []);
 
-  // transcripts: one cache lookup for the session, then Whisper only for rows that are actually on screen
+  // Session cache lookup, then keep pending subtitles up to date for visible rows.
   useEffect(() => { peekAll(model.radio.map((r) => r.recording_url)); }, [model.radio]);
   const listRef = useRef<HTMLUListElement>(null);
   const keys = list.map((r) => r.recording_url).join("|");
@@ -208,7 +214,10 @@ export function Radio({ model, clock }: { model: Model; clock: Clock }) {
       }
     }, { root, rootMargin: "40px 0px" });
     root.querySelectorAll<HTMLElement>("li[data-url]").forEach((el) => io.observe(el));
-    return () => io.disconnect();
+    return () => {
+      io.disconnect();
+      root.querySelectorAll<HTMLElement>("li[data-url]").forEach(el => { if (el.dataset.url) unwant(el.dataset.url); });
+    };
   }, [keys]);
 
   const lapAt = (num: number, at: number) => {
@@ -384,7 +393,8 @@ function RadioCard({ clip, person, color, acr, year, lap, pos, time, playing, en
         {tx.st === "done" && segs.length > 0 && !visible.length && <p className={s.rHint}>…</p>}
         {tx.st === "done" && !segs.length && <p className={s.rHint} lang="zh">未识别出清晰语音</p>}
         {(tx.st === "queued" || tx.st === "loading" || tx.st === "idle") && <p className={s.rHint} lang="zh">转写中<span className={s.dots} /></p>}
-        {tx.st === "error" && <p className={s.rHint} lang="zh">转写暂不可用</p>}
+        {tx.st === "pending" && <p className={s.rHint} lang="zh">{tx.retrying ? "转写失败，正在重试" : "字幕正在生成"}<span className={s.dots} /></p>}
+        {tx.st === "error" && <p className={s.rHint} lang="zh">转写暂不可用，正在重试</p>}
       </div>
       <div className={s.rFoot}>
         <span className={s.rTrack}><i ref={bar} /></span>

@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { ViewTransition } from "react";
 import YearDriversGrid from "@/components/unit/YearDriversGrid";
 import RailScope from "@/components/season/RailScope";
@@ -6,6 +7,7 @@ export const dynamic = "force-dynamic";
 
 /** Drivers tab: everyone who raced this year, by championship position (same block as /drivers?year=Y). */
 export default async function YearDrivers({ params }: { params: Promise<{ year: string }> }) {
+  await ensureFreshDatabase();
   const year = +(await params).year;
   return (
     <ViewTransition enter="page" exit="page" default="none">

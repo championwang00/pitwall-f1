@@ -1,0 +1,627 @@
+[
+  {
+    "topic": "audi-singapore-peranakan-2026",
+    "tag": "新涂装",
+    "dimension": "visual",
+    "title": "把新加坡纹样穿上车",
+    "text": "奥迪为2026年新加坡站推出特别涂装，把土生华人传统纹样放在R26的侧箱和尾翼，霍肯伯格、博托莱托的赛服也同步采用。配色以新加坡从白昼进入暮色为灵感，这次变化可以从赛车一路看到车手身上。",
+    "year": 2026,
+    "gp": "singapore",
+    "circuit": "marina-bay",
+    "related": {
+      "teams": [
+        "audi"
+      ],
+      "circuits": [
+        "marina-bay"
+      ],
+      "races": [
+        "2026/17"
+      ]
+    },
+    "temporal": "event",
+    "status": "confirmed",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "F1 官方图集",
+        "url": "https://www.formula1.com/en/latest/article/gallery-audi-unveil-special-livery-for-singapore-grand-prix.5Z07QWFA7vVqCPC1jb6AIq"
+      }
+    ],
+    "publishedAt": "2026-10-05"
+  },
+  {
+    "topic": "haas-godzilla-japan-2026",
+    "tag": "新涂装",
+    "dimension": "visual",
+    "title": "哥斯拉来到铃鹿",
+    "text": "2026年日本站，哈斯把哥斯拉图案带上VF-26，并在东京由奥康、比尔曼和小松礼雄一起揭幕。这是车队首次与娱乐IP合作，也是与东宝全年合作的开场；对拥有丰田冠名伙伴的哈斯，日本站多了一层主场意味。",
+    "year": 2026,
+    "gp": "japan",
+    "circuit": "suzuka",
+    "related": {
+      "teams": [
+        "haas"
+      ],
+      "circuits": [
+        "suzuka"
+      ],
+      "races": [
+        "2026/3"
+      ]
+    },
+    "temporal": "event",
+    "status": "confirmed",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "哈斯官方日本站预览",
+        "url": "https://www.haasf1team.com/news/japanese-grand-prix-race-preview"
+      }
+    ],
+    "publishedAt": "2026-03-24"
+  },
+  {
+    "topic": "williams-fw48-heritage-livery-2026",
+    "tag": "涂装故事",
+    "dimension": "visual",
+    "title": "一条线接回冠军年代",
+    "text": "威廉姆斯2026年FW48以亮面蓝色为主，侧箱、前翼和尾翼加入更多白色。车身上的红白细线呼应FW14B和FW18的冠军涂装：远看是新赛车，近看仍能找到曼塞尔和达蒙·希尔年代的线索。",
+    "year": 2026,
+    "gp": null,
+    "circuit": null,
+    "related": {
+      "teams": [
+        "williams"
+      ],
+      "seasons": [
+        2026
+      ]
+    },
+    "temporal": "event",
+    "status": "confirmed",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "F1 官方发布报道",
+        "url": "https://www.formula1.com/en/latest/article/first-look-williams-show-off-their-new-livery-for-2026-f1-season.4tY1qBa2lWI35hqxV6AH1g"
+      }
+    ],
+    "publishedAt": "2026-02-03"
+  },
+  {
+    "topic": "norris-mclaren-contract-gift-2026",
+    "tag": "职业动向",
+    "dimension": "career",
+    "title": "续约还附赠冠军赛车",
+    "text": "2026年8月，诺里斯在迈凯伦工厂的亲友开放日亲自宣布续约，合同至少延续至2030年底。车队还宣布将赠给他一辆2025年夺冠赛季使用的MCL39，给这次长期承诺留下一件能摸得到的纪念。",
+    "year": 2026,
+    "gp": null,
+    "circuit": null,
+    "related": {
+      "drivers": [
+        "lando-norris"
+      ],
+      "teams": [
+        "mclaren"
+      ],
+      "seasons": [
+        2026
+      ]
+    },
+    "temporal": "event",
+    "status": "confirmed",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "迈凯伦官方续约公告",
+        "url": "https://www.mclaren.com/racing/formula-1/2026/lando-norris-contract-extension-2030/"
+      }
+    ],
+    "publishedAt": "2026-08-29"
+  },
+  {
+    "topic": "hamilton-met-gala-2025",
+    "tag": "场外故事",
+    "dimension": "personality",
+    "title": "走到红毯的另一侧",
+    "text": "2025年Met Gala，汉密尔顿以联合主席身份参与这场时尚盛会。他与设计师Grace Wales Bonner共同打造象牙白礼服，把家族与文化背景融进细节；围场里的穿搭兴趣，在这里成了一次有明确主题的合作。",
+    "year": 2025,
+    "gp": null,
+    "circuit": null,
+    "related": {
+      "drivers": [
+        "lewis-hamilton"
+      ]
+    },
+    "temporal": "event",
+    "status": "confirmed",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "F1 官方本人采访",
+        "url": "https://www.formula1.com/en/latest/article/hamilton-reflects-on-really-special-moment-as-co-chair-of-2025-met-gala.4WtmIKncsWEmVfaVHCzxrd"
+      }
+    ],
+    "publishedAt": "2025-05-16"
+  },
+  {
+    "topic": "antonelli-hamilton-letter-2025",
+    "tag": "人物关系",
+    "dimension": "relationships",
+    "title": "墙上的接班人留言",
+    "text": "2025年伊莫拉站前，安东内利谈到汉密尔顿留在车手房间里的留言：里面既有鼓励，也有建议。他说自己把留言留在墙上，每次走进房间都能看到。对刚接下梅赛德斯席位的新秀，这是前任留下的一份支持。",
+    "year": 2025,
+    "gp": null,
+    "circuit": null,
+    "related": {
+      "drivers": [
+        "kimi-antonelli",
+        "lewis-hamilton"
+      ],
+      "teams": [
+        "mercedes"
+      ]
+    },
+    "temporal": "event",
+    "status": "statement",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "FIA 官方发布会文字实录（F1 官网）",
+        "url": "https://www.formula1.com/en/latest/article/fia-thursday-press-conference-emilia-romagna-2025.4EF0llxwXDasDqbv4hW2nV.4EF0llxwXDasDqbv4hW2nV"
+      }
+    ],
+    "publishedAt": "2025-05-15"
+  },
+  {
+    "topic": "verstappen-nurburgring24-debut-2026",
+    "tag": "场外故事",
+    "dimension": "personality",
+    "title": "红牛车手的另一台赛车",
+    "text": "2026年5月，维斯塔潘首次参加纽博格林24小时赛，驾驶的是梅赛德斯AMG GT3。他的车组一度领跑，后来遭遇传动轴故障而退出争胜。F1周末之外，他已经把对耐力赛的兴趣带进了另一种比赛。",
+    "year": 2026,
+    "gp": null,
+    "circuit": null,
+    "related": {
+      "drivers": [
+        "max-verstappen"
+      ]
+    },
+    "temporal": "event",
+    "status": "confirmed",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "F1 官方赛后图集与报告",
+        "url": "https://www.formula1.com/en/latest/article/gallery-verstappen-makes-nurburgring-24-hours-debut.55Q7Aybsm6zpWdS8qVAq1A"
+      }
+    ],
+    "publishedAt": "2026-05-18"
+  },
+  {
+    "topic": "usa-weekend-format-2026",
+    "tag": "周末前瞻",
+    "dimension": "weekend",
+    "title": "重新有三节练习",
+    "text": "2026年美国站采用常规周末：周五两节练习，周六先练习再排位，周日正赛。来到奥斯汀，车队重新有三节练习调整赛车；看长距离表现和调校选择时，也要记得这与新加坡的一练冲刺周末不同。",
+    "year": 2026,
+    "gp": "united-states",
+    "circuit": "austin",
+    "related": {
+      "circuits": [
+        "austin"
+      ],
+      "races": [
+        "2026/18"
+      ]
+    },
+    "temporal": "preview",
+    "status": "confirmed",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "F1 官方美国站赛程",
+        "url": "https://www.formula1.com/en/racing/2026/united-states"
+      }
+    ],
+    "race": {
+      "year": 2026,
+      "round": 18
+    },
+    "validUntil": "2026-10-26T00:00:00Z"
+  },
+  {
+    "topic": "norris-rossi-goodwood-2026",
+    "tag": "人物关系",
+    "dimension": "relationships",
+    "title": "和童年偶像站上阳台",
+    "text": "2026年古德伍德速度节，诺里斯先驾驶迈凯伦赛车完成爬山展示，随后与罗西一同站上古德伍德庄园阳台。过去在采访里谈起的偶像，这次成了身旁一起向车迷挥手的人，赛车之外的联系也有了新的画面。",
+    "year": 2026,
+    "gp": null,
+    "circuit": null,
+    "related": {
+      "drivers": [
+        "lando-norris"
+      ]
+    },
+    "temporal": "event",
+    "status": "confirmed",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "F1 官方速度节回顾",
+        "url": "https://www.formula1.com/en/latest/article/from-norris-and-rossi-to-hills-williams-reunion-the-top-5-highlights-from-the-goodwood-festival-of-speed.5Hpi6iewEgteFPjD9Hsb43"
+      }
+    ],
+    "publishedAt": "2026-07-13"
+  },
+  {
+    "topic": "hamilton-singapore-vsc-decision-2026",
+    "tag": "策略复盘",
+    "dimension": "tech",
+    "title": "错过进站后的一停决定",
+    "text": "2026年新加坡站，汉密尔顿用中胎起步，随后率先换上软胎。虚拟安全车期间，车队叫他进站，但他错过入口后决定留在赛道保住位置。末段轮胎衰退让他连丢三位，赛后他承认这是自己的决定，并向车队道歉。",
+    "year": 2026,
+    "gp": "singapore",
+    "circuit": "marina-bay",
+    "related": {
+      "drivers": [
+        "lewis-hamilton"
+      ],
+      "teams": [
+        "ferrari"
+      ],
+      "circuits": [
+        "marina-bay"
+      ],
+      "races": [
+        "2026/17"
+      ]
+    },
+    "temporal": "event",
+    "status": "statement",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "F1 官方赛后采访",
+        "url": "https://www.formula1.com/en/latest/article/a-painful-lesson-hamilton-apologises-as-he-takes-responsibility-for-strategy-gamble-in-singapore.6NUbQvdet1DQa5ElDtonw1"
+      }
+    ],
+    "publishedAt": "2026-10-11"
+  },
+  {
+    "topic": "mclaren-singapore-sprint-clash-2026",
+    "tag": "队内关系",
+    "dimension": "relationships",
+    "title": "碰撞未罚，车队仍要追问",
+    "text": "2026年新加坡冲刺赛最后一圈，诺里斯与皮亚斯特里相撞。干事认定双方都不承担全部或主要责任，没有处罚，但斯特拉认为事故造成了实质损失，不能接受。他在赛后强调车队利益优先，并表示还会与两位车手讨论如何避免重演。",
+    "year": 2026,
+    "gp": "singapore",
+    "circuit": "marina-bay",
+    "related": {
+      "drivers": [
+        "lando-norris",
+        "oscar-piastri"
+      ],
+      "teams": [
+        "mclaren"
+      ],
+      "races": [
+        "2026/17"
+      ]
+    },
+    "temporal": "event",
+    "status": "statement",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "F1 官方斯特拉采访",
+        "url": "https://www.formula1.com/en/latest/article/it-is-serious-stella-disappointed-by-norris-and-piastris-clash-in-singapore-sprint.7hW2cxQgohHZfu4wgvtfRQ"
+      }
+    ],
+    "publishedAt": "2026-10-10"
+  },
+  {
+    "topic": "mercedes-singapore-upgrade-comparison-2026",
+    "tag": "技术变化",
+    "dimension": "tech",
+    "title": "新旧套件对照有了结果",
+    "text": "梅赛德斯在2026年新加坡站用两辆车对照新旧套件。赛后工程主管舒夫林表示，周末结束时，安东内利使用的套件已明显更快。安东内利也认为赛车仍未处于理想调校窗口，希望在奥斯汀进一步释放升级的潜力。",
+    "year": 2026,
+    "gp": "singapore",
+    "circuit": "marina-bay",
+    "related": {
+      "drivers": [
+        "kimi-antonelli"
+      ],
+      "teams": [
+        "mercedes"
+      ],
+      "races": [
+        "2026/17",
+        "2026/18"
+      ]
+    },
+    "temporal": "preview",
+    "status": "statement",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "梅赛德斯官方赛后报告",
+        "url": "https://www.mercedesamgf1.com/reports/race-report-fighting-sunday-in-singapore-nets-podium-for-kimi-and-points-with-george"
+      },
+      {
+        "label": "F1 官方赛后引述",
+        "url": "https://www.formula1.com/en/latest/article/what-the-teams-said-race-day-in-singapore-2026.3lLHolVW3aIRAl7Ohxlxf6"
+      }
+    ],
+    "publishedAt": "2026-10-11",
+    "race": {
+      "year": 2026,
+      "round": 18
+    },
+    "validUntil": "2026-10-23T17:30:00Z"
+  },
+  {
+    "topic": "singapore-unused-hard-tyre-2026",
+    "tag": "轮胎策略",
+    "dimension": "tech",
+    "title": "硬胎为何无人选择",
+    "text": "2026年新加坡正赛只用到了软胎和中胎，没有车手选择硬胎。倍耐力解释，中胎已几乎没有明显衰退，硬胎却少了抓地力，难以带来策略收益。软胎则能维持很长的赛段，汉密尔顿同一套软胎累计跑了44圈。",
+    "year": 2026,
+    "gp": "singapore",
+    "circuit": "marina-bay",
+    "related": {
+      "circuits": [
+        "marina-bay"
+      ],
+      "races": [
+        "2026/17"
+      ]
+    },
+    "temporal": "event",
+    "status": "confirmed",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "倍耐力官方新加坡复盘",
+        "url": "https://press.pirelli.com/max-rules-in-singapore-en-plein-with-a-one-stop-strategy/"
+      }
+    ],
+    "publishedAt": "2026-10-11"
+  },
+  {
+    "topic": "usa-tyre-nomination-2026",
+    "tag": "周末前瞻",
+    "dimension": "weekend",
+    "title": "硬胎重新进入讨论",
+    "text": "倍耐力确认，2026年美国站使用C2硬胎、C3中胎和C4软胎。去年奥斯汀选用C1硬胎，但车队更多使用两款较软配方。今年硬胎改选C2，中胎和软胎编号保持不变，值得关注硬胎会不会重新进入策略。",
+    "year": 2026,
+    "gp": "united-states",
+    "circuit": "austin",
+    "related": {
+      "circuits": [
+        "austin"
+      ],
+      "races": [
+        "2026/18"
+      ]
+    },
+    "temporal": "preview",
+    "status": "confirmed",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "倍耐力官方美洲三站轮胎公告",
+        "url": "https://press.pirelli.com/the-compound-selection-for-austin-mexico-city-and-so-paulo/"
+      }
+    ],
+    "publishedAt": "2026-10-09",
+    "race": {
+      "year": 2026,
+      "round": 18
+    },
+    "validUntil": "2026-10-26T00:00:00Z"
+  },
+  {
+    "topic": "racing-bulls-lineup-statement-2026-10",
+    "tag": "职业动向",
+    "dimension": "career",
+    "title": "三人竞争两个席位",
+    "text": "2026年新加坡周末，Racing Bulls领队佩尔曼表示，2027年阵容将在未来几周决定，但没有给出具体日期。劳森和林德布拉德之外，F2车手尼古拉·佐洛夫也在考虑之中。车队既看眼前速度，也要考虑年轻车手的发展。",
+    "year": 2026,
+    "gp": null,
+    "circuit": null,
+    "related": {
+      "drivers": [
+        "liam-lawson",
+        "arvid-lindblad"
+      ],
+      "teams": [
+        "racing-bulls"
+      ],
+      "seasons": [
+        2026
+      ]
+    },
+    "temporal": "snapshot",
+    "status": "statement",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "F1 官方佩尔曼采访",
+        "url": "https://www.formula1.com/en/latest/article/permane-states-racing-bulls-will-select-their-2027-driver-line-up-in-the-coming-weeks.39Cso2HINAEU5KViOulOZb"
+      }
+    ],
+    "publishedAt": "2026-10-11",
+    "validUntil": "2026-10-22T00:00:00Z",
+    "asOfRace": {
+      "year": 2026,
+      "round": 17
+    }
+  },
+  {
+    "topic": "norris-lawnmower-childhood-2024",
+    "tag": "场外故事",
+    "dimension": "personality",
+    "title": "驾驶从割草机开始",
+    "text": "诺里斯在2024年的官方访谈中说，自己小时候每天主动剪草，只为能开家里的割草机。但他体重太轻，触发不了启动装置，只好搬来哑铃垫在座椅上再坐上去。他笑称，自己的驾驶故事就是从割草机开始的。",
+    "year": 2024,
+    "gp": null,
+    "circuit": null,
+    "related": {
+      "drivers": [
+        "lando-norris"
+      ]
+    },
+    "temporal": "evergreen",
+    "status": "statement",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "F1 官方人物访谈",
+        "url": "https://www.formula1.com/en/latest/article/getting-to-know-the-real-lando-norris.2EVseCJNzII9R4XSJRMLzT"
+      }
+    ],
+    "publishedAt": "2024-09-08"
+  },
+  {
+    "topic": "leclerc-lec-ice-cream-origin-2024",
+    "tag": "场外故事",
+    "dimension": "personality",
+    "title": "午饭聊出的冰淇淋品牌",
+    "text": "勒克莱尔原本想在家乡蒙特卡洛开一家冰淇淋店，午饭时把这个想法告诉了朋友。后来，他与Grom的两位创办人及经纪人尼古拉·托德一起推出LEC品牌。这个2024年问世的项目，起点就是他对冰淇淋的喜爱。",
+    "year": 2024,
+    "gp": null,
+    "circuit": null,
+    "related": {
+      "drivers": [
+        "charles-leclerc"
+      ]
+    },
+    "temporal": "event",
+    "status": "confirmed",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "勒克莱尔本人官网的项目介绍",
+        "url": "https://charlesleclerc.com/en/news/charles-leclerc-federico-grom-guido-martinetti-and-nicolas-todt-together-for-a-great-project-irresistible-ice-cream-that-overcomes-feelings-of-guilt-lec-why-resist/"
+      }
+    ],
+    "publishedAt": "2024-04-11"
+  },
+  {
+    "topic": "albon-singapore-helmet-charity-2025",
+    "tag": "头盔故事",
+    "dimension": "visual",
+    "title": "头盔在赛后继续帮忙",
+    "text": "阿尔本把2025年新加坡站使用的特别版头盔拿去公益拍卖，支持联合国儿童基金会在泰国的工作。这件比赛装备还有另一段赛后故事：车手把在赛道上使用的物件，变成帮助儿童的筹款方式。",
+    "year": 2025,
+    "gp": "singapore",
+    "circuit": "marina-bay",
+    "related": {
+      "drivers": [
+        "alexander-albon"
+      ],
+      "circuits": [
+        "marina-bay"
+      ]
+    },
+    "temporal": "event",
+    "status": "confirmed",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "F1 官方公益回顾",
+        "url": "https://www.formula1.com/en/latest/article/how-albon-is-writing-the-latest-chapter-in-southeast-asias-f1-story.2rR5O22JOxDK9tRq5SgGDF"
+      },
+      {
+        "label": "官方拍卖实物页",
+        "url": "https://us.f1authentics.com/products/alex-albon-2025-signed-race-used-helmet-singapore-gp"
+      }
+    ],
+    "publishedAt": "2026-03-23"
+  },
+  {
+    "topic": "sainz-netflix-cup-trophy-2023",
+    "tag": "场外故事",
+    "dimension": "personality",
+    "title": "领奖时摔了高尔夫奖杯",
+    "text": "2023年拉斯维加斯大奖赛前，塞恩斯与高尔夫球手贾斯廷·托马斯搭档，赢下首届Netflix杯。他们先击败诺里斯组合，再在决胜环节战胜加斯利组合。领奖时出了个小插曲：塞恩斯失手把奖杯掉到地上，奖杯当场摔坏。",
+    "year": 2023,
+    "gp": "las-vegas",
+    "circuit": "las-vegas",
+    "related": {
+      "drivers": [
+        "carlos-sainz-jr"
+      ],
+      "circuits": [
+        "las-vegas"
+      ]
+    },
+    "temporal": "event",
+    "status": "confirmed",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "F1 官方活动报道",
+        "url": "https://www.formula1.com/en/latest/article/carlos-sainz-and-justin-thomas-score-victory-at-the-inaugural-netflix-cup-in.1S375lfKynq6p3Y2ipH7ok"
+      }
+    ],
+    "publishedAt": "2023-11-15"
+  },
+  {
+    "topic": "bottas-hockey-childhood-2020",
+    "tag": "场外故事",
+    "dimension": "personality",
+    "title": "赛车之外的十年冰球",
+    "text": "博塔斯在2020年接受F1官方采访时说，如果不当赛车手，他会想成为冰球运动员。小时候，冰球是他仅次于卡丁车的第二大爱好，他在冬季参加过十年的冰球比赛。这是赛车之外，另一项从小认真投入过的运动。",
+    "year": 2020,
+    "gp": null,
+    "circuit": null,
+    "related": {
+      "drivers": [
+        "valtteri-bottas"
+      ]
+    },
+    "temporal": "evergreen",
+    "status": "statement",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "F1 官方人物访谈",
+        "url": "https://www.formula1.com/en/latest/article/punk-rock-and-pizzas-getting-to-know-the-real-valtteri-bottas.46gSAuC9ASQrZ2rIuL1hmZ"
+      }
+    ],
+    "publishedAt": "2020-09-27"
+  },
+  {
+    "topic": "alonso-oviedo-stem-students-2024",
+    "tag": "场外故事",
+    "dimension": "personality",
+    "title": "给学生上一堂赛车课",
+    "text": "2024年西班牙大奖赛前，阿隆索在家乡奥维耶多接待了30多名西班牙学生。活动地点是以他命名的博物馆和卡丁车场，学生先参加科学与工程工作坊，再体验卡丁车；德拉罗萨和杰西卡·霍金斯也来到现场与学生交流。",
+    "year": 2024,
+    "gp": null,
+    "circuit": null,
+    "related": {
+      "drivers": [
+        "fernando-alonso"
+      ],
+      "teams": [
+        "aston-martin"
+      ]
+    },
+    "temporal": "event",
+    "status": "confirmed",
+    "verifiedAt": "2026-10-12",
+    "sources": [
+      {
+        "label": "阿斯顿·马丁官方活动记录",
+        "url": "https://www.astonmartinf1.com/en-GB/news/announcement/inspiring-the-next-generation-with-fernando-and-aramco-ahead-of-the-spanish-gp"
+      }
+    ],
+    "publishedAt": "2024-06-19"
+  }
+]

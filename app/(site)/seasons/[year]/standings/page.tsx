@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { ViewTransition } from "react";
 import y from "../season.module.css";
 import { seasonRaces, seasonDriverStandings, seasonConstructorStandings, driverStandingsAfter, constructorStandingsAfter, pointsProgression } from "@/lib/f1";
@@ -19,6 +20,7 @@ export const dynamic = "force-dynamic";
 
 /** 积分榜 tab: title fight chart, driver × round matrix, both championships. */
 export default async function YearStandings({ params, searchParams }: { params: Promise<{ year: string }>; searchParams: Promise<Record<string, string>> }) {
+  await ensureFreshDatabase();
   const year = +(await params).year;
   const sp = await searchParams;
   const races = seasonRaces(year);

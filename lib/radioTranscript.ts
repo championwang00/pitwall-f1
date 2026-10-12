@@ -28,7 +28,7 @@ export function radioUrl(raw: string | null): string | null {
     const u = new URL(raw);
     if (u.protocol !== "https:" || u.hostname !== "livetiming.formula1.com") return null;
     if (!u.pathname.startsWith("/static/") || !/\/TeamRadio\/[\w.-]+\.mp3$/i.test(u.pathname) || u.pathname.includes("..")) return null;
-    if (u.search || u.hash || u.username || u.port) return null;
+    if (u.search || u.hash || u.username || u.password || u.port) return null;
     return u.toString();
   } catch {
     return null;

@@ -1,3 +1,5 @@
+import { publishedResults } from "./publishedResults";
+import { ensureFreshDatabase } from "./db";
 import { nextRace, lastCompletedRace, getRaceByYearRound } from "./f1";
 import { weekendSessions } from "./openf1";
 import { seasonSchedule, type ScheduledRace, type Sess } from "./schedule";
@@ -149,6 +151,11 @@ const fin = (v: unknown) => (typeof v === "number" && Number.isFinite(v) ? v : n
 
 /** one finished session → classification rows (null = OpenF1 has not published it) + replay link (null = laps not served) */
 async function sessionDone(x: DoneIn, year: number, round: number | null, grid: Promise<GridRow[] | null>) {
+  const published = publishedResults(year, round, x.session_name);
+  if (published) {
+    const laps = await within(cachedJSON<unknown[] | null>(`${OF1}/laps?session_key=${x.session_key}&lap_number=1`, settled(x) ? Infinity : 60), 1000);
+    return { rows: published, replay: round != null && Array.isArray(laps) && laps.length ? raceReplayPath(year, round, x.session_key) : null };
+  }
   const ttl = settled(x) ? 1800 : 60;
   // "could not ask" (429 rate limit / network) must not read as "not published": it throws, so nothing is memoised and the
   // next visit asks again (on Vercel a 429 burst made Singapore sprint qualifying read 数据整理中 for minutes)
@@ -214,7 +221,8 @@ async function meetingResults(sessions: DoneIn[], meetingKey: number, year: numb
     const prev = doneMemo.get(x.session_key)?.v;
     const stale = hit ? null : prev?.rows ? prev : null;
     if (stale) fetchDone(x).catch(() => {});
-    const v = hit ?? stale ?? await within(fetchDone(x).catch(() => null), budget);
+    const v = hit ?? stale ?? await within(fetchDone(x).catch(() => null), budget)
+      ?? (publishedResults(year, round, x.session_name) ? { rows: publishedResults(year, round, x.session_name), replay: null } : null);
     if (!v) { x.failed = true; return; } // could not ask / timed out: 「暂时没取到」, the next visit asks again
     x.rows = v.rows; x.replay = v.replay;
   }));
@@ -245,6 +253,7 @@ async function probeFeed(key: number): Promise<boolean> {
 export async function liveState(opts: { debugPhase?: string | null; debugLive?: string | null; debugWeekend?: string | null;
   /** false: skip this weekend's OpenF1 classifications (callers that never render them, e.g. /api/initial-load) */
   results?: boolean } = {}): Promise<LiveState> {
+  await ensureFreshDatabase();
   const now = Date.now();
   const next = nextRace() ?? null;
   const lastRef = lastCompletedRace();
@@ -294,6 +303,8 @@ export async function liveState(opts: { debugPhase?: string | null; debugLive?: 
 
   // this weekend = the live session's meeting, else the next session's; dev-only ?debugWeekend=<meeting_key> points at a past one
   let meetingKey = liveSession?.meeting_key ?? meetingOf(nextSession?.key);
+  // Between weekends, retain the latest finished race rather than selecting an empty future meeting.
+  if (!liveSession && realPhase !== "weekend") meetingKey = doneSessions(weekendsThis, now).race?.meeting_key ?? meetingKey;
   if (process.env.NODE_ENV !== "production" && opts.debugWeekend && all.some((x) => String(x.meeting_key) === String(opts.debugWeekend))) meetingKey = Number(opts.debugWeekend);
   const mine = meetingKey == null ? [] : all.filter((x) => x.meeting_key === meetingKey).sort((a, b) => a.date_start.localeCompare(b.date_start));
   // past its scheduled end = finished (the hero already reads 「刚结束」 then), even inside the 15-min overrun window

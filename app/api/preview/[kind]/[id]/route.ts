@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { logoRev } from "@/lib/logoRev";
 import { get, all } from "@/lib/db";
 import { getDriver, getConstructor, getCircuit, getChassis, facts, getRaceByYearRound, raceResults } from "@/lib/f1";
@@ -43,6 +44,7 @@ const joinParts = (groups: (Part[] | null | undefined | false)[]): Part[] => {
 const span = (a?: number | null, b?: number | null) => (a ? (a === b || !b ? `${a}` : `${a}–${b}`) : "");
 
 export async function GET(_req: Request, ctx: { params: Promise<{ kind: string; id: string }> }) {
+  await ensureFreshDatabase();
   const { kind, id } = await ctx.params;
   const y = Number(new URL(_req.url).searchParams.get("year"));
   const year = Number.isInteger(y) && y >= 1950 && y <= 2100 ? y : undefined;

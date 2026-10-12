@@ -1,14 +1,14 @@
+import { ensureFreshDatabase, get } from "@/lib/db";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import Breadcrumb from "@/components/shell/Breadcrumb";
 import { ViewTransition } from "react";
 import b from "./brief.module.css";
-import { getRaceByYearRound, driverStandingsAfter, constructorStandingsAfter, lastCompletedRace } from "@/lib/f1";
-import { circuitTalk } from "@/lib/talk";
+import { getRaceByYearRound, driverStandingsAfter, constructorStandingsAfter } from "@/lib/f1";
+import { racePreview } from "@/lib/talk";
 import { driverRecordsAt, teamRecordsAt, lastRaceAt } from "@/lib/brief";
-import { circuitRecords } from "@/lib/records";
 import { seasonSchedule } from "@/lib/schedule";
-import { notes, circuits as cContent, momentsFor } from "@/lib/content";
+import { notes, circuits as cContent, momentsFor, type Note } from "@/lib/content";
 import { teamColor, flag } from "@/lib/assets";
 import { gpZh } from "@/lib/names";
 import { zhName } from "@/lib/zh";
@@ -23,6 +23,7 @@ import { isLight } from "@/lib/color";
 import { Linked } from "@/lib/linkify";
 import LocalTime from "@/components/ui/LocalTime";
 import TalkingPoints from "@/components/entity/TalkingPoints";
+import { noteDate, partitionNotes } from "@/lib/editorial";
 import PrintButton from "./PrintButton";
 import RailScope from "@/components/season/RailScope";
 import { briefRail } from "@/lib/railData";
@@ -32,6 +33,7 @@ export const dynamic = "force-dynamic";
 
 /** 解说手册 = one race's document (IA spec v5 §0.5.4): /races/Y/R/brief, a child of the race hub. /brief redirects here. */
 export default async function BriefPage({ params }: { params: Promise<{ year: string; round: string }> }) {
+  await ensureFreshDatabase();
   const { year: ys, round: rs } = await params;
   const year = +ys, round = +rs;
   const race = getRaceByYearRound(year, round);
@@ -39,23 +41,33 @@ export default async function BriefPage({ params }: { params: Promise<{ year: st
   const gp = gpZh(race.grand_prix_id);
   const cid = race.circuit_id;
   const cz = cContent()[cid];
-  const last = lastCompletedRace();
-  // standings going into this race: latest for the current season, otherwise after the previous round of that year
-  const pre = year === last.year ? undefined : Math.max(1, round - 1);
-  const standings = pre ? driverStandingsAfter(year, pre) : driverStandingsAfter(last.year);
-  const teams = constructorStandingsAfter(year === last.year ? last.year : year);
+  // The brief describes the state going into this target race, even after later races are published.
+  const pre = get<any>("select r.round from race r where r.year=? and r.round<? and exists(select 1 from race_driver_standing s where s.race_id=r.id) order by r.round desc limit 1", year, round)?.round;
+  const standings = pre ? driverStandingsAfter(year, pre) : [];
+  const teams = constructorStandingsAfter(year, pre ?? 0);
   const sched = (await seasonSchedule(year)).find((r) => r.round === round);
   const lr = lastRaceAt(cid, { year, round });
   const lrMoments = lr ? momentsFor({ year: lr.race.year, circuit: cid }) : [];
   const drivers = standings.map((d: any) => d.driver);
-  const recs = driverRecordsAt(cid, drivers, pre ? year : 9999);
-  const trecs = teamRecordsAt(cid, teams.map((t: any) => t.team), pre ? year : 9999);
+  const recs = driverRecordsAt(cid, drivers, year);
+  const trecs = teamRecordsAt(cid, teams.map((t: any) => t.team), year);
   const leader = standings[0], p2 = standings[1];
-  const left = year === last.year ? (await seasonSchedule(last.year)).filter((r) => !r.winner) : (await seasonSchedule(year)).filter((r) => r.round >= round);
-  const maxLeft = left.length * 25 + left.filter((r) => r.sprint).length * 8;
-  const dNote = (id: string) => notes.driver(id).find((n) => n.tag === "故事线") ?? notes.driver(id)[0];
-  const seasonNotes = notes.season(year).slice(0, 6);
-  const hasNotes = drivers.some((id: string) => !!dNote(id));
+  const left = (await seasonSchedule(year)).filter((r) => r.round >= round);
+  const maxLeft = year >= 2025 ? left.length * 25 + left.filter((r) => r.sprint).length * 8 : null;
+  const completed = !!get("select 1 from race_result where race_id=? limit 1", race.id);
+  const beforeRace = (n: Note) => (n.year == null || n.year <= year) && (!n.publishedAt || n.publishedAt <= race.date) && (!n.asOfRace || n.asOfRace.year < year || (n.asOfRace.year === year && n.asOfRace.round < round));
+  const groups = partitionNotes([
+    notes.race(year, round, { completed }),
+    notes.circuit(cid).filter(beforeRace),
+    ...drivers.map((id: string) => notes.driver(id).filter(beforeRace)),
+    notes.season(year).filter(beforeRace),
+  ]);
+  const [raceNotes, circuitNotes] = groups;
+  const byDriver = new Map<string, Note[]>(drivers.map((id: string, i: number) => [id, groups[i + 2]]));
+  const driverNotes = (id: string) => byDriver.get(id) ?? [];
+  const dNote = (id: string) => driverNotes(id)[0];
+  const seasonNotes = groups.at(-1)!;
+  const hasNotes = drivers.some((id: string) => driverNotes(id).length > 0);
   const dn = (id: string, name?: string) => zhName.driver(id) ?? name ?? id;
   const tn = (id: string, name?: string) => zhName.team(id) ?? name ?? id;
   const D = (id: string, name: string | undefined, size = 24, sub?: string, team?: string) => <Person id={id} year={year} name={dn(id, name)} size={size} sub={sub} color={team ? teamColor(team) : undefined} />;
@@ -102,7 +114,8 @@ export default async function BriefPage({ params }: { params: Promise<{ year: st
           </div>
         </header>
 
-        <TalkingPoints auto={circuitTalk(cid)} notes={notes.circuit(cid)} subject={cz?.nameZh ?? race.circuitName} title="赛道要点" records={circuitRecords(cid)} year={year} skipRace={`${year}/${round}`} />
+        <TalkingPoints auto={racePreview(year, round)} notes={raceNotes} subject={`${year} ${gp}`} title={completed ? "本站赛前档案与赛后话题" : "本站解说要点"} year={year} skipRace={`${year}/${round}`} />
+        <TalkingPoints auto={[]} notes={circuitNotes} subject={cz?.nameZh ?? race.circuitName} title="赛道要点" year={year} skipRace={`${year}/${round}`} />
 
         <section className="band band-paper">
           <div className="wrap">
@@ -131,14 +144,14 @@ export default async function BriefPage({ params }: { params: Promise<{ year: st
               )}
               <div>
                 <p className="kicker">Standings</p>
-                <h2 className="cn-h2">冠军形势</h2>
+                <h2 className="cn-h2">本站赛前冠军形势</h2>
                 {(leader || teamLeader) && (
                   <div className={b.leaders}>
                     {leader && <span className={b.hon}><Laurel tone="gold" size={34} top="车手积分领跑" bottom={`${leader.points} 分`} />{D(leader.driver, leader.name, 28, undefined, leader.team)}</span>}
                     {teamLeader && <span className={b.hon}><Laurel tone="gold" size={34} top="车队积分领跑" bottom={`${teamLeader.points} 分`} /><Team id={teamLeader.team} name={tn(teamLeader.team, teamLeader.name)} size={24} year={year} badge /></span>}
                   </div>
                 )}
-                {leader && p2 && <p className={b.math}><EntityLink kind="driver" id={leader.driver} year={year} className="ilink">{dn(leader.driver, leader.name)}</EntityLink> 领先 <EntityLink kind="driver" id={p2.driver} year={year} className="ilink">{dn(p2.driver, p2.name)}</EntityLink> <b className="num">{leader.points - p2.points}</b> 分；还剩 <b className="num">{left.length}</b> 站，最多 <b className="num">{maxLeft}</b> 分可争。</p>}
+                {leader && p2 && <p className={b.math}><EntityLink kind="driver" id={leader.driver} year={year} className="ilink">{dn(leader.driver, leader.name)}</EntityLink> 领先 <EntityLink kind="driver" id={p2.driver} year={year} className="ilink">{dn(p2.driver, p2.name)}</EntityLink> <b className="num">{leader.points - p2.points}</b> 分；还剩 <b className="num">{left.length}</b> 站{maxLeft != null ? <>，最多 <b className="num">{maxLeft}</b> 分可争。</> : "。"}</p>}
                 <table className={`tbl row-hover ${b.stand}`}>
                   <thead><tr><th>名次</th><th>车手</th><th className="r">积分</th></tr></thead>
                   <tbody>
@@ -156,7 +169,7 @@ export default async function BriefPage({ params }: { params: Promise<{ year: st
 
         <section className="band band-paper">
           <div className="wrap">
-            <div className="sec-head"><h2 className="cn-h2">每位车手在<EntityLink kind="circuit" id={cid} year={year} className="ilink">{zhName.circuit(cid) ?? race.circuitName}</EntityLink></h2><span className="sub">按当前积分排序；历史成绩点开即那一年</span></div>
+            <div className="sec-head"><h2 className="cn-h2">每位车手在<EntityLink kind="circuit" id={cid} year={year} className="ilink">{zhName.circuit(cid) ?? race.circuitName}</EntityLink></h2><span className="sub">按本站赛前积分排序；历史成绩点开即那一年</span></div>
             <div className={b.tableWrap}>
               <table className={`tbl ${b.table}`}>
                 <thead><tr><th>车手</th><th className="r">出赛</th><th className="r">胜</th><th className="r">领奖台</th><th className="r">杆位</th><th>最好</th><th>历年</th>{hasNotes && <th>一句话</th>}</tr></thead>
@@ -188,25 +201,24 @@ export default async function BriefPage({ params }: { params: Promise<{ year: st
         {hasNotes && (
           <section className="band band-paper">
             <div className="wrap">
-              <div className="sec-head"><h2 className="cn-h2">车手故事线</h2><span className="sub"><Linked text="每人一条，来自核实过的 2026 报道" /></span></div>
+              <div className="sec-head"><h2 className="cn-h2">车手故事线</h2><span className="sub"><Linked text="人物、关系与职业动向，均保留事件年份" /></span></div>
               <ol className={b.storyGrid}>
-                {recs.map((r) => {
-                  const n = dNote(r.id);
+                {recs.flatMap((r) => driverNotes(r.id).map((n, i) => {
                   const st = standings.find((x: any) => x.driver === r.id);
                   if (!n) return null;
                   return (
-                    <li key={r.id} id={`note-${r.id}`} className="lift">
+                    <li key={`${r.id}-${n.topic ?? i}`} id={i === 0 ? `note-${r.id}` : undefined} className="lift">
                       <Link href={`/drivers/${r.id}?year=${year}`} className="card-link" aria-label={dn(r.id, st?.name ?? nameOf.get(r.id))} tabIndex={-1} />
                       <span className={`${b.storyWho} over-link on-color ${isLight(teamColor(st?.team, "#3a3a44")) ? "on-light" : ""}`} style={{ ["--c" as any]: teamColor(st?.team, "#3a3a44") }}>
                         <Person id={r.id} year={year} name={dn(r.id, st?.name ?? nameOf.get(r.id))} size={40} sub={`P${st?.pos ?? "—"}`} color={teamColor(st?.team, "#3a3a44")} />
                       </span>
                       <div className={`${b.storyBody} over-link`}>
-                        <b><Linked text={n.title} skip={r.id} year={year} /></b>
-                        <p><Linked text={n.text} skip={r.id} year={year} /> <a href={n.sources[0]?.url} className={b.noteSrc}>来源</a></p>
+                        <b><Linked text={n.title} skip={r.id} year={n.year ?? year} /></b>
+                        <p><Linked text={n.text} skip={r.id} year={n.year ?? year} /> {n.sources.map((src) => <a key={src.url} href={src.url} className={b.noteSrc}>{src.label}</a>)} <span className={b.noteSrc}>{noteDate(n)}</span></p>
                       </div>
                     </li>
                   );
-                })}
+                }))}
               </ol>
             </div>
           </section>
@@ -237,7 +249,7 @@ export default async function BriefPage({ params }: { params: Promise<{ year: st
                   <h2 className="cn-h2">{Y(year, undefined, undefined, b.hy2)} 赛季看点</h2>
                   <ol className={b.notes}>
                     {seasonNotes.map((n, i) => (
-                      <li key={i}><span className={b.tag}>{n.tag}</span><b><Linked text={n.title} year={year} /></b><p><Linked text={n.text} year={year} /></p><p className={b.src}>{n.sources.map((x, j) => <a key={j} href={x.url}>{x.label}</a>)}</p></li>
+                      <li key={i}><span className={b.tag}>{n.tag}</span><b><Linked text={n.title} year={year} /></b><p><Linked text={n.text} year={year} /></p><p className={b.src}>{n.sources.map((x, j) => <a key={j} href={x.url}>{x.label}</a>)} {noteDate(n)}</p></li>
                     ))}
                   </ol>
                 </div>

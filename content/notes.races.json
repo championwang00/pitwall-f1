@@ -1,0 +1,69 @@
+{
+  "2026/18": [
+    {
+      "topic": "weekend-format:2026/18",
+      "tag": "周末前瞻",
+      "dimension": "weekend",
+      "title": "重新有三节练习",
+      "text": "2026年美国站采用常规周末：周五两节练习，周六先练习再排位，周日正赛。来到奥斯汀，车队重新有三节练习调整赛车；看长距离表现和调校选择时，也要记得这与新加坡的一练冲刺周末不同。",
+      "year": 2026,
+      "gp": "united-states",
+      "circuit": "austin",
+      "related": {
+        "circuits": [
+          "austin"
+        ],
+        "races": [
+          "2026/18"
+        ]
+      },
+      "temporal": "preview",
+      "status": "confirmed",
+      "verifiedAt": "2026-10-12",
+      "sources": [
+        {
+          "label": "F1 官方美国站赛程",
+          "url": "https://www.formula1.com/en/racing/2026/united-states"
+        }
+      ],
+      "race": {
+        "year": 2026,
+        "round": 18
+      },
+      "validUntil": "2026-10-26T00:00:00Z"
+    },
+    {
+      "topic": "usa-tyre-nomination-2026",
+      "tag": "周末前瞻",
+      "dimension": "weekend",
+      "title": "硬胎重新进入讨论",
+      "text": "倍耐力确认，2026年美国站使用C2硬胎、C3中胎和C4软胎。去年奥斯汀选用C1硬胎，但车队更多使用两款较软配方。今年硬胎改选C2，中胎和软胎编号保持不变，值得关注硬胎会不会重新进入策略。",
+      "year": 2026,
+      "gp": "united-states",
+      "circuit": "austin",
+      "related": {
+        "circuits": [
+          "austin"
+        ],
+        "races": [
+          "2026/18"
+        ]
+      },
+      "temporal": "preview",
+      "status": "confirmed",
+      "verifiedAt": "2026-10-12",
+      "sources": [
+        {
+          "label": "倍耐力官方美洲三站轮胎公告",
+          "url": "https://press.pirelli.com/the-compound-selection-for-austin-mexico-city-and-so-paulo/"
+        }
+      ],
+      "publishedAt": "2026-10-09",
+      "race": {
+        "year": 2026,
+        "round": 18
+      },
+      "validUntil": "2026-10-26T00:00:00Z"
+    }
+  ]
+}

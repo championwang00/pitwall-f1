@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { teamLogoAtKnown } from "@/lib/teamLogo";
 import { baseAsset } from "@/lib/baseAssets";
 import { entityOverview, overviewSource } from "@/lib/overview";
@@ -49,6 +50,7 @@ const teamRecordsShown = (id: string) => {
 export const dynamic = "force-dynamic";
 
 export default async function TeamPage({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<Record<string, string>> }) {
+  await ensureFreshDatabase();
   const { id } = await params;
   const sp = await searchParams;
   const c = getConstructor(id);

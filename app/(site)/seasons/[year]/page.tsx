@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { ViewTransition } from "react";
 import { notes } from "@/lib/content";
 import { seasonTalk } from "@/lib/talk";
@@ -11,6 +12,7 @@ export const dynamic = "force-dynamic";
 /** 总览 tab (/seasons/Y, v5.1): the whole-season introduction — the season card (champion / leader, laurels, stats),
  *  the 赛季综述 and the season's talking points. Every other tab shows only its own content under the tab bar. */
 export default async function YearOverview({ params }: { params: Promise<{ year: string }> }) {
+  await ensureFreshDatabase();
   const year = +(await params).year;
   return (
     <ViewTransition enter="page" exit="page" default="none">

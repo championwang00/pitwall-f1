@@ -1,9 +1,23 @@
 import path from "node:path";
+import { latestDatabase } from "./databaseRefresh";
 
 type Row = Record<string, any>;
 type Stmt = { all: (...p: unknown[]) => Row[]; get: (...p: unknown[]) => Row | undefined };
 
-let _db: { prepare: (sql: string) => Stmt } | null = null;
+let _db: { prepare: (sql: string) => Stmt; close: () => void } | null = null;
+let databasePath = path.join(process.cwd(), "data/f1db.db");
+/** Release files are immutable; a new path denotes a new verified database snapshot. */
+export const databaseRevision = () => databasePath;
+
+export async function ensureFreshDatabase() {
+  const file = await latestDatabase();
+  if (file !== databasePath) {
+    _db?.close();
+    _db = null;
+    stmts.clear();
+    databasePath = file;
+  }
+}
 const stmts = new Map<string, Stmt>();
 
 function open() {
@@ -16,7 +30,7 @@ function open() {
     };
     // getBuiltinModule keeps the bundler from trying to resolve node:sqlite
     const { DatabaseSync } = (process as any).getBuiltinModule("node:sqlite");
-    _db = new DatabaseSync(path.join(process.cwd(), "data/f1db.db"), { readOnly: true });
+    _db = new DatabaseSync(databasePath, { readOnly: true });
     materialize(_db as any);
   }
   return _db!;

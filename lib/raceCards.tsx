@@ -61,11 +61,11 @@ export function ScheduleCard({ r, state, podium, replay, tag, sessions, href: ca
       tag={tag ?? (state === "next" ? "下一站" : undefined)}
       photo={state === "next" ? raceCard(r.gp, 960) : null}
       outline={state === "future" ? trackOutline(r.circuit) ?? trackMap(r.circuit, 160) : null}
-      when={state === "done" ? undefined
+      when={state === "done" ? (!r.winner ? "比赛已结束 · 成绩同步中" : undefined)
         : sessions && r.sessions.length ? <SessionTimes r={r} />
         : race ? <>正赛 <LocalTime iso={race.start} format="weekday" /> <LocalTime iso={race.start} format="time" /></> : "时间待定"}
       actions={state === "done"
-        ? (replay ? <><CardAction href={replay} icon="play">计时回放</CardAction><CardAction href={href} icon="chevron-right">本站档案</CardAction></> : undefined)
+        ? (replay ? <><CardAction href={replay} icon="play">计时回放</CardAction><CardAction href={href} icon="chevron-right">本站档案</CardAction></> : <CardAction href={href} icon="chevron-right">本站档案</CardAction>)
         : <><CardAction href={href} icon="chevron-right">前瞻</CardAction><CardAction href={`/api/calendar?year=${r.year}&round=${r.round}&download=1`} icon="calendar-add" download>加入日历</CardAction></>} />
   );
 }

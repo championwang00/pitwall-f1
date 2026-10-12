@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { ViewTransition } from "react";
 import { permanentRedirect } from "next/navigation";
 import s from "@/components/calendar/calendar.module.css";
@@ -17,6 +18,7 @@ export const dynamic = "force-dynamic";
 /** /calendar — formula1.com Schedule: title + Add-to-calendar, the next race as the big photo card, every round as a
  *  race card (same component as /live and /seasons/[year]), the globe as a dark media card at the end. */
 export default async function CalendarPage({ searchParams }: { searchParams: Promise<{ year?: string | string[] }> }) {
+  await ensureFreshDatabase();
   const sp = await searchParams;
   const year = new Date().getUTCFullYear();
   // v5 §0.5.5: /calendar is this season only (it belongs to 实时); past seasons' calendars live in the year hub

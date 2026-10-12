@@ -977,7 +977,7 @@ export async function raceHero(year: number, round: number): Promise<HeroModel |
   const tiles = upcoming ? [] : await raceTiles(race.id, year, { id: winner.driver_id, name: winner.driverName, team: winner.constructor_id, time: winner.time },
     pole ? { id: pole.driver_id, name: pole.driverName, team: pole.constructor_id } : null, null, "race");
   const tail: Chip[][] = upcoming
-    ? [[T("尚未进行"), DOT, T("查看"), yearChip(year, { style: "link" }), T("赛程与日历订阅")]]
+    ? [[T(Date.now() > Date.parse(`${race.date}T${race.time ?? "12:00"}:00Z`) + 2 * 3600_000 ? "比赛已结束 · 成绩同步中" : "尚未进行"), DOT, T("查看"), yearChip(year, { style: "link" }), T("赛程与日历订阅")]]
     : [];
   const replay = upcoming ? null : await replayOf(year, round);
   // ⑨ race honours grouped by driver (a hat-trick = one face with all its laurels)

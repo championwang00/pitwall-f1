@@ -8,7 +8,7 @@ import { gpZh, TEAM_ZH } from "./names";
 import { drivers as dContent, circuits as cContent } from "./content";
 import { zhName } from "./zh";
 
-export type Talk = { tag: string; title: string; text: string; href?: string; source?: string };
+export type Talk = { tag: string; title: string; text: string; href?: string; source?: string; topic?: string; dimension?: import("./content").EditorialDimension; asOfRace?: { year: number; round: number } };
 
 const zh = (id: string, name: string) => zhName.driver(id) ?? name;
 const tz = (id: string, name?: string) => zhName.team(id) ?? TEAM_ZH[id] ?? name ?? id;
@@ -75,6 +75,8 @@ function circuitTalk_(cid: string): Talk[] {
       ? { tag: "冷知识", title: `上一位本土冠军：${home.year} 年`, text: `上一次有本国车手在这里夺冠是 ${home.year} 年的${zh(home.wid, home.wname)}。`, href: `/races/${home.year}/${home.round}`, source: "F1DB" }
       : { tag: "冷知识", title: "从未有本土车手在此夺冠", text: `在这条赛道举办的 ${races.length} 场正赛中，还没有一位本国车手赢过。`, source: "F1DB" });
   }
+  const upcoming = nextRaceRow();
+  if (upcoming?.circuit_id === cid) out.unshift(...racePreview(upcoming.year, upcoming.round));
   return out;
 }
 
@@ -150,6 +152,7 @@ function driverTalk_(id: string): Talk[] {
     const age = (new Date(date).getTime() - new Date(d.date_of_birth).getTime()) / 3.15576e10;
     out.push({ tag: "冷知识", title: `首胜时 ${Math.floor(age)} 岁`, text: `第一场胜利是 ${fw.year} 年${gpZh(fw.gp)}，生涯第 ${res.indexOf(fw) + 1} 场出赛，当时 ${Math.floor(age)} 岁 ${Math.floor((age % 1) * 365)} 天。`, href: `/races/${fw.year}/${fw.round}`, source: "F1DB" });
   }
+  if (nr) out.unshift(...racePreview(nr.year, nr.round).filter((t) => t.dimension === "performance" && (t.title + t.text).includes(zh(id, d.name))));
   return out;
 }
 
@@ -190,6 +193,10 @@ function teamTalk_(id: string): Talk[] {
   // milestone race count
   const n = res.length, m = Math.ceil((n + 1) / 100) * 100;
   if (m - n <= 5) out.push({ tag: "里程碑", title: `即将迎来第 ${m} 场比赛`, text: `车队已出赛 ${n} 场，再 ${m - n} 场就是第 ${m} 场。`, source: "F1DB" });
+  if (nr) {
+    const members = all<any>("select sed.driver_id id, d.name from season_entrant_driver sed join driver d on d.id=sed.driver_id where sed.year=? and sed.constructor_id=? and sed.test_driver=0", nr.year, id);
+    out.unshift(...racePreview(nr.year,nr.round).filter((t) => t.dimension === "performance" && members.some((d) => (t.title + t.text).includes(zh(d.id,d.name)))));
+  }
   return out;
 }
 
@@ -223,6 +230,8 @@ function seasonTalk_(year: number): Talk[] {
   // poles
   const poles = all<any>("select rr.driver_id id, d.name, count(*) n from race_result rr join race r on r.id = rr.race_id join driver d on d.id = rr.driver_id where r.year = ? and rr.pole_position = 1 group by rr.driver_id order by n desc limit 1", year);
   if (poles[0]) out.push({ tag: "数字", title: `杆位王：${zh(poles[0].id, poles[0].name)} ${poles[0].n} 次`, text: `本季拿到最多杆位的是${zh(poles[0].id, poles[0].name)}，共 ${poles[0].n} 次。`, href: `/drivers/${poles[0].id}`, source: "F1DB" });
+  const upcoming = nextRaceRow();
+  if (upcoming?.year === year) out.unshift(...racePreview(year, upcoming.round));
   return out;
 }
 
@@ -252,3 +261,44 @@ export const driverTalk = memo(driverTalk_);
 export const teamTalk = memo(teamTalk_);
 export const seasonTalk = memo(seasonTalk_);
 export const raceTalk = memo(raceTalk_);
+
+/** A target race's preview is reproducible from the results strictly before that round. */
+function racePreview_(year: number, round: number): Talk[] {
+  const r = get<any>('select * from race where year = ? and round = ?',year,round);
+  if (!r) return [];
+  const completed = !!get('select 1 from race_result where race_id = ? limit 1',r.id);
+  const tag = (current: string) => completed ? '赛前档案' : current;
+  const prefix = completed ? `${year} 年本站赛前，` : '';
+  const cutoff = get<any>(`select r.id, r.round from race r where r.year=? and r.round<? and exists (select 1 from race_driver_standing s where s.race_id=r.id) order by r.round desc limit 1`,year,round);
+  const asOfRace = cutoff ? {year,round:cutoff.round} : undefined;
+  const out: Talk[] = [];
+  out.push({tag:tag('周末前瞻'),topic:`weekend-format:${year}/${round}`,dimension:'weekend',title: r.sprint_race_date ? '冲刺周末：练习时间更紧' : '常规周末：三节练习调整赛车',text:`${prefix}${gpZh(r.grand_prix_id)}${r.sprint_race_date ? '采用冲刺赛制，一节练习后就进入冲刺排位，调校窗口更短。' : '采用常规赛制，三节练习后进入排位与正赛，车队可以比较调校与长距离表现。'}`,href:`/races/${year}/${round}`,source:'F1DB'});
+  if (cutoff) {
+    const standings=all<any>(`select s.driver_id id,d.name,s.points from race_driver_standing s join driver d on d.id=s.driver_id where s.race_id=? order by s.position_display_order`,cutoff.id);
+    const [leader,p2]=standings;
+    if (leader && p2) {
+      const remaining=all<any>('select round,sprint_race_date from race where year=? and round>=?',year,round);
+      // Since 2025 there is no fastest-lap bonus; modern sprint victories award eight points.
+      const max=year>=2025 ? remaining.length*25+remaining.filter(x=>x.sprint_race_date).length*8 : null;
+      const after=max==null?null:max-25-(r.sprint_race_date?8:0);
+      const gap=leader.points-p2.points;
+      out.push({tag:tag('冠军形势'),topic:'championship',dimension:'performance',title:`${zh(leader.id,leader.name)}领先 ${gap} 分`,text:`${prefix}截至 ${year} 年第 ${cutoff.round} 站，${zh(leader.id,leader.name)}以 ${leader.points} 分领跑，${zh(p2.id,p2.name)}有 ${p2.points} 分。${max==null?'':`从本站起剩 ${remaining.length} 场正赛、${remaining.filter(x=>x.sprint_race_date).length} 场冲刺，单人最多可取 ${max} 分（按全额积分）。${after!=null && gap+25+(r.sprint_race_date?8:0)<=after?'本站仍无法提前锁定冠军。':after!=null?`本站后领先需超过 ${after} 分，才可不依赖同分规则提前夺冠。`:''}`}`,href:`/seasons/${year}`,source:'F1DB',asOfRace});
+      const recent=all<any>('select id,round from race where year=? and round<? and exists(select 1 from race_result rr where rr.race_id=race.id) order by round desc limit 3',year,round);
+      const form=[leader,p2].map(d=>{
+        const rows=all<any>(`select rr.points,rr.position_number pos from race_result rr join race rx on rx.id=rr.race_id where rx.year=? and rx.round<? and rr.driver_id=? order by rx.round desc limit 3`,year,round,d.id);
+        return `${zh(d.id,d.name)} ${rows.reduce((sum,x)=>sum+(x.points??0),0)} 分、${rows.filter(x=>x.pos===1).length} 胜`;
+      });
+      if(recent.length)out.push({tag:tag('近期状态'),topic:'recent-form',dimension:'performance',title:'争冠两人的近期走势',text:`${prefix}截至第 ${cutoff.round} 站，近 ${recent.length} 场正赛：${form.join('；')}。这是正赛得分，不计冲刺；来到${cname(r.circuit_id)}，两人能否延续这段表现是一个观察点。`,href:`/seasons/${year}`,source:'F1DB',asOfRace});
+    }
+  }
+  const history=all<any>(`select rx.year,rx.round,rr.driver_id id,d.name from race rx join race_result rr on rr.race_id=rx.id and rr.position_number=1 join driver d on d.id=rr.driver_id where rx.circuit_id=? and (rx.year<? or (rx.year=? and rx.round<?)) order by rx.year desc,rx.round desc`,r.circuit_id,year,year,round);
+  if(history[0]){
+    const last=history[0],wins=history.filter(x=>x.id===last.id).length;
+    const entered = completed
+      ? !!get('select 1 from race_result where race_id=? and driver_id=?',r.id,last.id)
+      : !!get('select 1 from season_entrant_driver where year=? and driver_id=? and test_driver=0',year,last.id);
+    out.push({tag:tag('历史回声'),topic:'venue-question',dimension:'heritage',title:`${cname(r.circuit_id)}：${entered ? '上届冠军能否再赢' : '上届冠军的赛道记录'}`,text:`${prefix}${last.year} 年在${cname(r.circuit_id)}获胜的是${zh(last.id,last.name)}；在本站之前，他已在这里赢过 ${wins} 次。${entered ? '再来到这条赛道，上届的优势能否延续，是比单看总积分更具体的悬念。' : '这是一段历史成绩，本站参赛车手需要创造自己的纪录。'}`,href:`/races/${last.year}/${last.round}`,source:'F1DB',asOfRace});
+  }
+  return out;
+}
+export const racePreview = memo(racePreview_);

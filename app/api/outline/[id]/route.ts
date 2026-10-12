@@ -1,8 +1,10 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { get } from "@/lib/db";
 import { layoutSvg } from "@/lib/circuitImage";
 
 /** One circuit-season layout source for chips, cards and detail pages; round disambiguates double headers. */
 export async function GET(req: Request, ctx: { params: Promise<{ id: string }> }) {
+  await ensureFreshDatabase();
   const { id } = await ctx.params;
   const q = new URL(req.url).searchParams;
   const year = Number(q.get("year"));

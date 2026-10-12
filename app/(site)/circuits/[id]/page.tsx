@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { entityOverview, overviewSource } from "@/lib/overview";
 import { reliefInfo } from "@/components/three/relief";
 import Link from "next/link";
@@ -44,6 +45,7 @@ export const dynamic = "force-dynamic";
 
 
 export default async function CircuitPage({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<Record<string, string>> }) {
+  await ensureFreshDatabase();
   const { id } = await params;
   const sp = await searchParams;
   const ci = getCircuit(id);

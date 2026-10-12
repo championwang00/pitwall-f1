@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import Link from "next/link";
 import EntityLink from "@/components/entity/EntityLink";
 import { ViewTransition } from "react";
@@ -23,7 +24,8 @@ export const dynamic = "force-dynamic";
  * each with its character and every season's champion. The current era opens with a "2026 现在" row.
  * No year controls here: the left rail is the only one.
  */
-export default function SeasonsIndex() {
+export default async function SeasonsIndex() {
+  await ensureFreshDatabase();
   const seasons = allSeasons();
   const list = eras();
   const latest = seasons[0].year;

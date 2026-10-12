@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { notFound } from "next/navigation";
 import y from "./season.module.css";
 import { seasonRaces } from "@/lib/f1";
@@ -18,6 +19,7 @@ async function replayIndex(year: number) {
 }
 
 export default async function YearLayout({ params, children }: { params: Promise<{ year: string }>; children: React.ReactNode }) {
+  await ensureFreshDatabase();
   const { year: ys } = await params;
   const year = +ys;
   const races = seasonRaces(year);

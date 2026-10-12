@@ -1,3 +1,4 @@
+import { raceFinished } from "@/lib/raceStatus";
 import Link from "next/link";
 import { Suspense, ViewTransition } from "react";
 import l from "./livepage.module.css";
@@ -196,15 +197,15 @@ export function RoundCards({ year, schedule, title, nextRound, calendar = true, 
   weekend?: boolean }) {
   if (!schedule.length) return null;
   const pod = seasonPodiums(year);
-  const done = schedule.filter((r) => r.winner).length;
-  const latest = schedule.filter((r) => r.winner).at(-1)?.round;
+  const done = schedule.filter((r) => raceFinished(r)).length;
+  const latest = schedule.filter((r) => raceFinished(r)).at(-1)?.round;
   // the strip opens on the current race: this weekend's / the next one, else (season over) the last one
   const focus = Math.max(0, schedule.findIndex((r) => r.round === (nextRound ?? latest)));
   return (
     <section className={l.section}>
       <div className={l.head}><div><p className="kicker"><EntityLink kind="year" id={String(year)} className="hlink">{year}</EntityLink> Season · {schedule.length} Rounds</p><h2 className="cn-h2">{title}</h2></div><span className={l.sub}>已赛 <b>{done}</b> 站 · 时间按你所在时区显示{calendar && <> · <Link href="/calendar" className={l.subLink}>全年赛历与订阅<Icon name="chevron-right" size={14} /></Link></>}</span></div>
       <RoundStrip focus={focus}>
-        {schedule.map((r) => r.winner
+        {schedule.map((r) => raceFinished(r)
           ? <ScheduleCard key={r.round} r={r} state="done" podium={pod(r.round)} replay={replayHref(r)} tag={r.round === latest && nextRound ? "上一站" : undefined} />
           : r.round === nextRound
             // its session times are the banner's own table right above: not repeated on the card (spec §0.8)
@@ -232,12 +233,17 @@ export default function LivePage({ st, panel }: { st: LiveState; panel: PanelPro
         {/* replaying a past session (▶ deep link): the viewer is focused on that race — no next-race banner (user) */}
         {panel.focus && !live ? null : off
           ? <SeasonOverHero year={st.lastRace.year} standings={standings} teams={constructorStandingsAfter(st.lastRace.year)} />
-          : <NextRaceHero st={st} standings={standings} standingsRound={st.lastRace.round} after={
+          : <NextRaceHero st={st} standings={standings} standingsRound={st.lastRace.round} after={(st.phase === "live" || st.phase === "weekend") ?
             // streamed: the banner renders at once, the classifications fill in when OpenF1 answers
             <Suspense fallback={<WeekendResults sessions={[...st.meetingDone].reverse()} year={st.year} dark loading />}>
               <WeekendResultsLive st={st} dark />
-            </Suspense>
+            </Suspense> : undefined
           } />}
+        {(st.phase === "between" || off) && st.meetingDone.length > 0 && (
+          <Suspense fallback={<WeekendResults sessions={st.meetingDone} year={st.year} loading title={`上一站 · ${gpZh(st.schedule.find((r) => r.round === st.meetingRound)?.gp ?? "")}`} />}>
+            <WeekendResultsLive st={st} title={`上一站 · ${gpZh(st.schedule.find((r) => r.round === st.meetingRound)?.gp ?? "")}`} />
+          </Suspense>
+        )}
         {((live && st.liveFeed) || panel.focus) && <div className={l.panelTop}><Panel {...panel} archive={archive} /></div>}
         <RoundCards year={st.year} schedule={st.schedule} title={<><EntityLink kind="year" id={String(st.year)} className="hlink">{st.year}</EntityLink> 赛季 · 全部分站</>} nextRound={off ? null : next.round} weekend={st.phase === "live" || st.phase === "weekend"} />
       </div>

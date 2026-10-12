@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { ViewTransition } from "react";
 import s from "@/components/index/index.module.css";
 import { allConstructors, constructorStandingsAfter, lastCompletedRace } from "@/lib/f1";
@@ -20,6 +21,7 @@ import YearSpan from "@/components/entity/YearSpan";
 export const dynamic = "force-dynamic";
 
 export default async function TeamsIndex({ searchParams }: { searchParams: Promise<Record<string, string>> }) {
+  await ensureFreshDatabase();
   // ?year=Y switches the top block to 「Y 年的 N 支车队」 (spec §4.7)
   const latest = allSeasons()[0].year as number;
   const year = parseYear((await searchParams).year);

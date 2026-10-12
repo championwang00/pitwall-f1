@@ -1,96 +1,102 @@
 "use client";
-// Client side of the team-radio transcripts: a tiny shared store + a fetch queue that never runs more than 2 requests
-// (the server itself runs one Whisper job at a time). Visible rows ask for theirs; the clip being played jumps the queue.
 import { useSyncExternalStore } from "react";
 
 export type Segment = { start: number; end: number; text: string };
 export type Transcript = { text: string; segments: Segment[] };
-export type TxState = { st: "idle" | "queued" | "loading" | "done" | "error"; t?: Transcript };
-
+export type TxState = { st: "idle" | "queued" | "loading" | "pending" | "done" | "error"; t?: Transcript; retrying?: boolean };
 const MAX = 2;
 const store = new Map<string, TxState>();
 const subs = new Set<() => void>();
 let version = 0;
 const queue: string[] = [];
 let running = 0;
+const visible = new Set<string>();
 const urgentSet = new Set<string>();
-
+const timers = new Map<string, ReturnType<typeof setTimeout>>();
+const attempts = new Map<string, number>();
+const ctl = new Map<string, AbortController>();
 function emit() { version++; for (const f of subs) f(); }
 function set(url: string, v: TxState) { store.set(url, v); emit(); }
-
+function active(url: string) { return visible.has(url) || urgentSet.has(url); }
 export function txOf(url: string): TxState { return store.get(url) ?? { st: "idle" }; }
-
-/** Re-render whenever any transcript changes. */
 export function useTxVersion() {
   return useSyncExternalStore((f) => { subs.add(f); return () => { subs.delete(f); }; }, () => version, () => 0);
 }
-
-/** One cache-only lookup for a whole session, so already-transcribed clips show text immediately. */
 const peeked = new Set<string>();
 export async function peekAll(urls: string[]) {
-  const todo = urls.filter((u) => !peeked.has(u) && !store.has(u));
-  if (!todo.length) return;
-  todo.forEach((u) => peeked.add(u));
+  const todo = urls.filter(u => !peeked.has(u) && txOf(u).st !== "done");
+  todo.forEach(u => peeked.add(u));
   for (let i = 0; i < todo.length; i += 200) {
+    const batch = todo.slice(i, i + 200);
     try {
-      const r = await fetch("/api/radio/transcript", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ urls: todo.slice(i, i + 200) }) });
-      if (!r.ok) continue;
-      const data = (await r.json()) as Record<string, Transcript | null>;
-      let changed = false;
-      for (const [u, t] of Object.entries(data)) if (t && txOf(u).st !== "done") { store.set(u, { st: "done", t }); changed = true; }
-      if (changed) emit();
-    } catch { /* offline: rows just ask one by one */ }
+      const r = await fetch("/api/radio/transcript", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ urls: batch }) });
+      if (!r.ok) throw new Error(String(r.status));
+      const data = await r.json() as Record<string, Transcript | null>;
+      for (const [u, t] of Object.entries(data)) if (t && typeof t.text === "string" && Array.isArray(t.segments)) {
+        clearTimeout(timers.get(u)); timers.delete(u);
+        set(u, { st: "done", t });
+      }
+    } catch { batch.forEach(u => peeked.delete(u)); }
   }
 }
-
-const ctl = new Map<string, AbortController>();
-
-function load(url: string, urgent: boolean) {
-  const c = new AbortController();
-  ctl.get(url)?.abort();
-  ctl.set(url, c);
-  running++;
-  set(url, { st: "loading" });
-  fetch(`/api/radio/transcript?url=${encodeURIComponent(url)}${urgent ? "&p=1" : ""}`, { signal: c.signal })
-    .then((r) => (r.ok ? r.json() : Promise.reject(new Error(String(r.status)))))
-    .then((t: Transcript) => set(url, { st: "done", t: { text: t.text ?? "", segments: t.segments ?? [] } }))
-    .catch(() => { if (!c.signal.aborted) set(url, { st: "error" }); })
-    .finally(() => { running--; if (ctl.get(url) === c) ctl.delete(url); pump(); });
+function retry(url: string, after: number) {
+  if (!active(url) || timers.has(url)) return;
+  const n = (attempts.get(url) ?? 0) + 1;
+  attempts.set(url, n);
+  const delay = Math.min(120, Math.max(1, after) * Math.min(4, 2 ** (n - 1)));
+  timers.set(url, setTimeout(() => {
+    timers.delete(url);
+    if (active(url) && txOf(url).st !== "done") enqueue(url);
+  }, delay * 1000));
 }
-
+function load(url: string) {
+  const c = new AbortController();
+  ctl.set(url, c); running++;
+  set(url, { st: "loading" });
+  fetch(`/api/radio/transcript?url=${encodeURIComponent(url)}${urgentSet.has(url) ? "&p=1" : ""}`, { signal: c.signal })
+    .then(async r => {
+      const data = await r.json();
+      if (c.signal.aborted || txOf(url).st === "done") return;
+      if (r.status === 202) {
+        set(url, { st: "pending", retrying: data.status === "retrying" });
+        retry(url, Number(data.retryAfter) || Number(r.headers.get("retry-after")) || 30);
+        return;
+      }
+      if (!r.ok || typeof data.text !== "string" || !Array.isArray(data.segments)) throw new Error(String(r.status));
+      attempts.delete(url); set(url, { st: "done", t: data });
+    })
+    .catch(() => { if (!c.signal.aborted && txOf(url).st !== "done") { set(url, { st: "error" }); retry(url, 30); } })
+    .finally(() => {
+      running--;
+      if (ctl.get(url) === c) ctl.delete(url);
+      if (c.signal.aborted && active(url) && txOf(url).st !== "done") enqueue(url);
+      pump();
+    });
+}
 function pump() {
   while (running < MAX && queue.length) {
     const url = queue.shift()!;
-    load(url, urgentSet.has(url));
+    if (active(url) && txOf(url).st !== "done") load(url);
   }
 }
-
-/** Ask for a transcript. `urgent` (the clip now playing) goes to the front of the queue. */
-export function want(url: string, urgent = false) {
-  const cur = txOf(url).st;
-  if (cur === "done") return;
-  if (cur === "loading") {
-    // already being fetched as a background row: re-ask as urgent so the server moves the job up
-    if (urgent && !urgentSet.has(url)) { urgentSet.add(url); load(url, true); }
-    return;
-  }
-  if (cur === "queued") {
-    if (urgent) { const i = queue.indexOf(url); if (i >= 0) queue.splice(i, 1); urgentSet.add(url); load(url, true); }
-    return;
-  }
-  // idle, or a failed attempt being retried; the playing clip never waits for a slot
-  if (urgent) { urgentSet.add(url); load(url, true); return; }
-  queue.push(url);
-  set(url, { st: "queued" });
-  pump();
-}
-
-/** A row scrolled out of view before its turn: give the slot to something visible. */
-export function unwant(url: string) {
-  if (urgentSet.has(url)) return;
+function enqueue(url: string) {
+  if (txOf(url).st === "done" || ctl.has(url)) return;
   const i = queue.indexOf(url);
-  if (i >= 0) { queue.splice(i, 1); set(url, { st: "idle" }); return; }
-  // in flight: let go of it (the server drops the job if it has not started; a started one still lands in its cache)
-  const c = ctl.get(url);
-  if (c && txOf(url).st === "loading") { c.abort(); set(url, { st: "idle" }); }
+  if (i >= 0) queue.splice(i, 1);
+  if (urgentSet.has(url)) queue.unshift(url); else queue.push(url);
+  set(url, { st: "queued" }); pump();
+}
+/** Visible rows and the open audio card retain polling until they leave the screen. */
+export function want(url: string, urgent = false) {
+  if (urgent) urgentSet.add(url); else visible.add(url);
+  if (txOf(url).st === "done" || ctl.has(url) || timers.has(url)) return;
+  enqueue(url);
+}
+export function unwant(url: string, urgent = false) {
+  if (urgent) urgentSet.delete(url); else visible.delete(url);
+  if (active(url)) return;
+  clearTimeout(timers.get(url)); timers.delete(url); attempts.delete(url);
+  const i = queue.indexOf(url); if (i >= 0) queue.splice(i, 1);
+  ctl.get(url)?.abort();
+  if (txOf(url).st !== "done") set(url, { st: "idle" });
 }

@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { permanentRedirect, redirect } from "next/navigation";
 import { seasonSchedule } from "@/lib/schedule";
 import { replayHref, sessionReplayHref } from "@/lib/raceCards";
@@ -15,6 +16,7 @@ const num = (v: string | string[] | undefined) => { const n = Number(one(v)); re
  * ?session=K (old deep link) → the replay page of the race weekend that owns K, keeping a / b.
  */
 export default async function ReplayIndexPage({ params, searchParams }: { params: Promise<{ year: string }>; searchParams: Promise<SP> }) {
+  await ensureFreshDatabase();
   const year = +(await params).year;
   const sp = await searchParams;
   const latest = new Date().getUTCFullYear();

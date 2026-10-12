@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ViewTransition } from "react";
@@ -15,7 +16,7 @@ import { cornerLayer } from "@/lib/corners";
 import TrackField from "@/components/entity/TrackField";
 import { zhName } from "@/lib/zh";
 import TalkingPoints from "@/components/entity/TalkingPoints";
-import { raceTalk, circuitTalk } from "@/lib/talk";
+import { raceTalk, racePreview } from "@/lib/talk";
 import { notes } from "@/lib/content";
 import EntityLink from "@/components/entity/EntityLink";
 import Person from "@/components/entity/Person";
@@ -49,6 +50,7 @@ const RETIRED_ZH: Record<string, string> = {
 };
 
 export default async function RacePage({ params }: { params: Promise<{ year: string; round: string }> }) {
+  await ensureFreshDatabase();
   const { year: ys, round: rs } = await params;
   const year = +ys, round = +rs;
   const race = getRaceByYearRound(year, round);
@@ -88,7 +90,8 @@ export default async function RacePage({ params }: { params: Promise<{ year: str
   const teamById = new Map<string, string>(results.map((x: any) => [x.driver_id, x.constructor_id]));
   const second = results.find((x: any) => x.position_number === 2);
   const third = results.find((x: any) => x.position_number === 3);
-  const upcoming = !results.length;
+  const raceEnd = Date.parse(`${race.date}T${race.time ?? "12:00"}:00Z`) + 2 * 3600_000;
+  const upcoming = !results.length && Date.now() < raceEnd;
   const story = wiki.zh?.extract ?? wiki.en?.extract;
 
 
@@ -151,8 +154,8 @@ export default async function RacePage({ params }: { params: Promise<{ year: str
         </nav>
 
         <TalkingPoints
-          auto={upcoming ? circuitTalk(race.circuit_id) : raceTalk(race.id)}
-          notes={notes.circuit(race.circuit_id).filter((n) => upcoming || n.year === year)}
+          auto={upcoming ? racePreview(year, round) : raceTalk(race.id)}
+          notes={notes.race(year, round, { completed: !upcoming })}
           subject={`${year} ${gpZh(race.grand_prix_id)}`}
           title={upcoming ? "赛前解说要点" : "解说要点"}
           year={year} skipRace={`${year}/${round}`}
@@ -170,10 +173,10 @@ export default async function RacePage({ params }: { params: Promise<{ year: str
                       {!wiki.zh && wiki.en && <p className={r.enNote}>这一站暂无中文维基条目，以下为英文维基摘要</p>}
                       <p className={r.story} lang={wiki.zh ? "zh" : "en"}><Linked text={story} skipRace={`${year}/${round}`} year={year} /></p>
                       {wiki.zh && wiki.en && (
-                        <details className={r.en}>
-                          <summary><Icon name="chevron-down" size={16} />英文维基摘要（通常更详细）</summary>
+                        <div className={r.en}>
+                          <h3>英文维基摘要（通常更详细）</h3>
                           <p lang="en"><Linked text={wiki.en.extract} skipRace={`${year}/${round}`} year={year} /></p>
-                        </details>
+                        </div>
                       )}
                       <p className={e.src}>
                         {wiki.zh && <a href={wiki.zh.content_urls?.desktop.page} target="_blank" rel="noreferrer">维基百科 · {wiki.zh.title}</a>}
@@ -222,6 +225,7 @@ export default async function RacePage({ params }: { params: Promise<{ year: str
                 <div>
                   <div className="sec-head"><div><p className="kicker">Results</p><h2 className="cn-h2">正赛成绩</h2></div><span className="sub">悬停车手 / 车队看简介，点击进入其页面</span></div>
                   <div className={r.tblCard}>
+                    {!results.length && <p>比赛已结束 · 成绩同步中，请稍后刷新。</p>}
                     <table className={`tbl row-hover ${r.tbl}`}>
                       <thead><tr><th>名次</th><th>车手</th><th className={r.hideS}>车队</th><th className={`r ${r.hideS}`}>圈数</th><th className="r">用时 / 状态</th><th className={`r ${r.hideS}`}>发车</th><th className="r">积分</th></tr></thead>
                       <tbody>
@@ -270,6 +274,7 @@ export default async function RacePage({ params }: { params: Promise<{ year: str
                 <div className={r.block}>
                   <div className="sec-head"><div><p className="kicker">Qualifying</p><h2 className="cn-h2">排位赛</h2></div></div>
                   <div className={r.tblCard}>
+                    {!results.length && <p>比赛已结束 · 成绩同步中，请稍后刷新。</p>}
                     <table className={`tbl row-hover ${r.tbl}`}>
                       <thead><tr><th>名次</th><th>车手</th><th className={r.hideS}>车队</th><th className="r">{quali[0].qualifying_q1 ? "Q1" : "成绩"}</th>{quali[0].qualifying_q1 && <><th className={`r ${r.hideS}`}>Q2</th><th className="r">Q3</th></>}{qLaps && <th className={`r ${r.hideS}`}>圈数</th>}</tr></thead>
                       <tbody>

@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import Link from "next/link";
 import { ViewTransition } from "react";
 import s from "@/components/compare/compare.module.css";
@@ -30,6 +31,7 @@ const PRESETS: [string, string, string][] = [
 const CRUMBS = [{ label: "车手", href: "/drivers" }, { label: "对比" }];
 
 export default async function ComparePage({ searchParams }: { searchParams: Promise<{ a?: string; b?: string }> }) {
+  await ensureFreshDatabase();
   const sp = await searchParams;
   const a = sp.a ?? "lewis-hamilton", b = sp.b ?? "max-verstappen";
   const A = getDriver(a), B = getDriver(b);

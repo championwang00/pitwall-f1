@@ -1475,10 +1475,10 @@
       ]
     },
     {
-      "tag": "纪录",
-      "title": "维斯塔潘还没赢过的地方",
-      "text": "维斯塔潘在新加坡出战9次，最好成绩是2018、2024和2025年的三个亚军。按2025年赛历，这是他唯一没赢过的赛道；红牛2013年之后在这里也只赢过一次，即2022年的佩雷兹。",
-      "year": null,
+      "tag": "历史回声",
+      "title": "截至2025年的新加坡空白",
+      "text": "截至2025年新加坡站，维斯塔潘在这里出战9次，最好成绩是2018、2024和2025年的三个亚军。按2025年赛历，新加坡当时是他唯一没赢过的赛道；这段记录描述的是2025年结束时的情况。",
+      "year": 2025,
       "gp": null,
       "circuit": "marina-bay",
       "sources": [
@@ -1490,7 +1490,12 @@
           "label": "Wikipedia · 2025 Singapore Grand Prix",
           "url": "https://en.wikipedia.org/wiki/2025_Singapore_Grand_Prix"
         }
-      ]
+      ],
+      "temporal": "snapshot",
+      "asOfRace": {
+        "year": 2025,
+        "round": 18
+      }
     },
     {
       "tag": "冷知识",
@@ -1512,7 +1517,8 @@
           "label": "RacingNews365 · F1 confirm 2026 sprint calendar",
           "url": "https://racingnews365.com/f1-confirm-2026-sprint-calendar-with-major-change"
         }
-      ]
+      ],
+      "temporal": "event"
     },
     {
       "tag": "纪录",
@@ -1699,32 +1705,6 @@
         {
           "label": "GPFans · United States Grand Prix stats (2022)",
           "url": "https://www.gpfans.com/en/f1-news/94495/united-states-grand-prix-stats"
-        }
-      ]
-    },
-    {
-      "tag": "冷知识",
-      "title": "2026年告别冲刺赛",
-      "text": "美国站在2023至2025年连续三年采用冲刺赛周末，三场冲刺赛都由维斯塔潘获胜。2026年的六场冲刺赛名单中没有奥斯汀，三年的冲刺赛周期就此结束。",
-      "year": 2026,
-      "gp": "united-states",
-      "circuit": "austin",
-      "sources": [
-        {
-          "label": "RacingNews365 · F1 confirm 2026 sprint calendar",
-          "url": "https://racingnews365.com/f1-confirm-2026-sprint-calendar-with-major-change"
-        },
-        {
-          "label": "Wikipedia · 2023 United States Grand Prix",
-          "url": "https://en.wikipedia.org/wiki/2023_United_States_Grand_Prix"
-        },
-        {
-          "label": "Wikipedia · 2024 United States Grand Prix",
-          "url": "https://en.wikipedia.org/wiki/2024_United_States_Grand_Prix"
-        },
-        {
-          "label": "Wikipedia · 2025 United States Grand Prix",
-          "url": "https://en.wikipedia.org/wiki/2025_United_States_Grand_Prix"
         }
       ]
     }

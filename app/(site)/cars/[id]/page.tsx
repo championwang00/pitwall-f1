@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import CarRaceGallery from "@/components/cars/CarRaceGallery";
 import { raceLivery, seasonLiveryPhoto } from "@/lib/carLiveries";
 import Link from "next/link";
@@ -31,6 +32,7 @@ export const dynamic = "force-dynamic";
 
 
 export default async function CarPage({ params }: { params: Promise<{ id: string }> }) {
+  await ensureFreshDatabase();
   const { id } = await params;
   const ch = getChassis(id);
   if (!ch) notFound();

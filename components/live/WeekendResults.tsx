@@ -26,7 +26,7 @@ const fmtGap = (g: number | string | null) => (g == null ? "" : typeof g === "st
 
 /** this weekend's finished sessions: classification + 计时回放 when OpenF1 serves it, else 数据整理中 (user: 非实时直播…刚结束…能展示的就展示).
  *  `dark`: rendered inside the black next-race banner it belongs to. */
-export default function WeekendResults({ sessions, year, dark, loading }: { sessions: DoneSession[]; year: number; dark?: boolean;
+export default function WeekendResults({ sessions, year, dark, loading, title }: { sessions: DoneSession[]; year: number; dark?: boolean; title?: string;
   /** the <Suspense> placeholder while the classifications stream in: 成绩加载中, not 数据整理中 */
   loading?: boolean }) {
   if (!sessions.length) return null;
@@ -34,8 +34,8 @@ export default function WeekendResults({ sessions, year, dark, loading }: { sess
   return (
     <section className={`${l.section} ${dark ? w.dark : ""}`} aria-labelledby="wr-title">
       <div className={l.head}>
-        <div><p className="kicker">This weekend</p><h2 id="wr-title" className="cn-h2">本站已结束节次</h2></div>
-        <span className={l.sub}>成绩来自 OpenF1 · 时间按你所在时区显示</span>
+        <div><p className="kicker">{title ? "Last race weekend" : "This weekend"}</p><h2 id="wr-title" className="cn-h2">{title ?? "本站已结束节次"}</h2></div>
+        <span className={l.sub}>成绩来自 F1DB / OpenF1 · 时间按你所在时区显示</span>
       </div>
       <div className={w.box}>
         {tabs && sessions.map((x, i) => (
@@ -148,7 +148,7 @@ function Row({ r, x, year, hasGrid, leaderLaps }: { r: ResultRow; x: DoneSession
 
 /** Streams the classifications in after the page (wrap in <Suspense> with `WeekendResults loading` as the fallback):
  *  the page never waits on OpenF1, and a cold server shows the results once they arrive, not a premature 数据整理中. */
-export async function WeekendResultsLive({ st, dark }: { st: LiveState; dark?: boolean }) {
+export async function WeekendResultsLive({ st, dark, title }: { st: LiveState; dark?: boolean; title?: string }) {
   const sessions = await weekendResults(st);
-  return <WeekendResults sessions={sessions} year={st.year} dark={dark} />;
+  return <WeekendResults sessions={sessions} year={st.year} dark={dark} title={title} />;
 }

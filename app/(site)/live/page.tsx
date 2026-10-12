@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import type { Metadata } from "next";
 import { permanentRedirect } from "next/navigation";
 import { liveState } from "@/lib/live";
@@ -29,6 +30,7 @@ function ab(sp: SP) {
  * /seasons/Y; ?session=K (not the live one) → its race's replay page; ?a&b alone → /seasons/{this season}/replay.
  */
 export default async function Live({ searchParams }: { searchParams: Promise<SP> }) {
+  await ensureFreshDatabase();
   const sp = await searchParams;
   // results: false — the weekend's classifications stream in under <Suspense> (LivePage), the page never waits on OpenF1
   const st = await liveState({ debugPhase: one(sp.debugPhase) ?? null, debugLive: one(sp.debugLive) ?? null, debugWeekend: one(sp.debugWeekend) ?? null, results: false });

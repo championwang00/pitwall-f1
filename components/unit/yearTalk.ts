@@ -15,7 +15,7 @@ import { circuitRaces, constructorLineage, driverYears, constructorYears } from 
 import { driverTotals, teamTotals } from "@/lib/hero";
 import { inRange, rangeLabel, type Range } from "@/lib/range";
 
-const uniq = (ns: Note[]) => [...new Map(ns.map((n) => [n.title, n])).values()];
+const uniq = (ns: Note[]) => [...new Map(ns.map((n) => [n.topic ?? n.title, n])).values()];
 const surname = (zh: string | null | undefined) => zh?.split(/[·・]/).pop() ?? null;
 const dn = (id: string, name: string) => zhName.driver(id) ?? name;
 
@@ -79,8 +79,8 @@ export function circuitYearTalk(id: string, year: number, races: ReturnType<type
 const tn = (id: string, name?: string | null) => zhName.team(id) ?? TEAM_ZH[id] ?? name ?? id;
 const span = (a: number, b: number) => (a === b ? `${a}` : `${a}–${b}`);
 const pts = (n: number) => Math.round(n * 10) / 10;
-/** a period's curated notes: newest first, at most 16 (season storylines carry their season as `year`) */
-const periodNotes = (ns: Note[]) => uniq(ns).sort((a, b) => (b.year ?? 0) - (a.year ?? 0)).slice(0, 16);
+/** a period's curated notes: newest first, fully expanded (season storylines carry their season as `year`) */
+const periodNotes = (ns: Note[]) => uniq(ns).sort((a, b) => (b.year ?? 0) - (a.year ?? 0));
 const seasonNotes = (ys: number[], hit: (n: Note) => boolean) => ys.flatMap((y) => notes.season(y).filter(hit).map((n) => ({ ...n, year: n.year ?? y })));
 
 export function driverPeriodTalk(id: string, r: Range): { notes: Note[]; auto: Talk[] } {

@@ -1,12 +1,14 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { searchIndex, allSeasons } from "@/lib/f1";
 import { drivers as dContent, teams as tContent, circuits as cContent } from "@/lib/content";
 import { DRIVERS_2026 } from "@/lib/assets";
 import { TEAM_ZH } from "@/lib/names";
 import { zhName } from "@/lib/zh";
 
-export const dynamic = "force-static";
+export const dynamic = "force-dynamic";
 
 export async function GET() {
+  await ensureFreshDatabase();
   const idx = searchIndex();
   const dz = dContent(), tz = tContent(), cz = cContent();
   const items = [

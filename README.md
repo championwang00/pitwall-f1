@@ -45,7 +45,7 @@ npm run dev        # http://localhost:3210
 
 ## 数据
 
-- **F1DB**（`data/f1db.db`，1950 → 2026 第 16 站，CC BY 4.0）：比赛、成绩、积分、底盘、引擎、赛道布局。`npm run update-data` 拉取最新版本（带 SHA-256 校验）。
+- **F1DB**（`data/f1db.db`，1950 → 2026 第 17 站，CC BY 4.0）：比赛、成绩、积分、底盘、引擎、赛道布局。页面访问时自动检查最新发布版本（5 分钟内共用一次检查），有新版则校验 SHA-256 后切换成绩库及积分数据；无需重新部署或手动更新。更新文件写入本地缓存或 Vercel 的 `/tmp`，数据源异常时保留最后一份已验证数据。`npm run update-data` 可更新部署自带的基础快照。
 - **OpenF1**：赛程各节时间、实时 / 回放计时、遥测坐标（3D 赛道由排位赛最快圈的位置数据重建，见 `data/tracks/`，`npm run tracks` 可重建）。
 - **MultiViewer 赛道 API**（`api.multiviewer.app`，公开、无鉴权，**只在构建期访问**）：弯心位置与编号。`npm run corners`（`scripts/build-corners.mjs`）把弯心吸附到 `data/tracks` 的遥测圈，写入 `data/corners/`；同一脚本从 OpenF1 取该圈的 S1/S2/S3 边界与弯心最低速度 / 挡位（直播时段 OpenF1 返回 401，脚本跳过并保留弯角）。**`npm run tracks` 之后必须再跑 `npm run corners`**。弯角中文名与注释是人工策展的 `content/corners.json`；页面渲染时只读这两个文件，不联网。
 - **Wikipedia REST**：单场综述（中文优先）、历史车手与赛车照片（`data/wiki.json` 由 Jolpica 的维基链接映射而来）。
@@ -61,6 +61,7 @@ npm run dev        # http://localhost:3210
 ## 注意
 
 - 非官方项目，与 Formula 1 / FIA 无关联。车手、车队、赛车、赛道图片直接引用 formula1.com 媒体服务器（未转存）；Formula1 字体通过同域路由代理；本地缓存在 `.cache/`、云端缓存在 `/tmp`。第三方品牌、字体、图片与起跑音效不属于项目代码的授权；商业使用需另行确认权利。
+- 无线电字幕由独立云端任务每小时检查已结束节次并增量转写，保存在独立数据分支；部署页面自动读取并轮询新字幕，无需再次发布。首次生成需要等待处理，语音噪声可能导致误听；空音频会明确显示未识别出清晰语音。运行与核验说明见 `docs/radio-transcripts.md`。
 - OpenF1 的实时数据在比赛进行中可能需要付费授权；未授权时页面会提示并回退到最近一节已完成的会话回放。
 - 日历订阅地址跟随访问域名，线上订阅可持续使用，本地订阅依赖本机服务。
 
@@ -70,4 +71,4 @@ Vercel 使用 Node 22；数据库与 JSON 内容由 Next 文件追踪显式打�
 
 起跑灯录音来源与处理见 `public/sounds/f1-start-light.source.md`；引擎录音为 rfhache 的 F1 BR 06 Engine Starts 2（CC BY 4.0），改编与归属见 `public/sounds/f1-engine-launch.source.md`。项目为非官方展示，不拥有 F1 品牌、字体与媒体资产。车模功能暂不接入。
 
-云端无线电转录可读取已缓存的内容；新音频的本地 Whisper 转录需要 Python、ffmpeg 与模型，Vercel 当前不提供该本机环境。
+部署端通过独立数据分支读取云端无线电转录；定时任务在 GitHub Actions 使用 CPU Whisper 生成新字幕并增量保存，不在 Vercel 内运行本机转写。新内容维度与日期/有效期规则见 `docs/commentary-data.md`。

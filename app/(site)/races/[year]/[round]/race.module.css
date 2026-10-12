@@ -74,10 +74,7 @@
 .story[lang="en"] { font-family: var(--font-body); }
 .enNote { font-size: 12px; color: var(--mute); margin-top: 12px; }
 .en { margin: 4px 0 12px; }
-.en summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 4px; font: 700 14px/16px var(--font-cn); color: var(--ink); }
-.en summary::-webkit-details-marker { display: none; }
-.en summary:hover { text-decoration: underline; text-underline-offset: 4px; }
-.en[open] summary svg { transform: rotate(180deg); }
+.en h3 { font: 700 14px/16px var(--font-cn); color: var(--ink); }
 .en p { font-family: var(--font-body); font-size: 15px; line-height: 1.8; color: #3a3a42; margin-top: 10px; max-width: 760px; }
 .storyVis { position: relative; min-height: 380px; border-radius: 8px; overflow: hidden; background: radial-gradient(ellipse at 50% 55%, #1c1c25, #0b0b10 75%); color: #fff; }
 .storyVis :global(.track-field) { position: absolute; inset: 0; }

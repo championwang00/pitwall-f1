@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { entityOverview, overviewSource } from "@/lib/overview";
 import Link from "next/link";
 import { isLight } from "@/lib/color";
@@ -46,6 +47,7 @@ const FAMILY_ZH: Record<string, string> = {
 };
 
 export default async function DriverPage({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<Record<string, string>> }) {
+  await ensureFreshDatabase();
   const { id } = await params;
   const sp = await searchParams;
   const d = getDriver(id);

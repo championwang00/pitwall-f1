@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { ViewTransition } from "react";
 import s from "@/components/index/index.module.css";
 import { all } from "@/lib/db";
@@ -17,6 +18,7 @@ import YearSpan from "@/components/entity/YearSpan";
 export const dynamic = "force-dynamic";
 
 export default async function CarsIndex({ searchParams }: { searchParams: Promise<Record<string, string>> }) {
+  await ensureFreshDatabase();
   // ?year=Y switches the top block to 「Y 年的 N 台赛车」 (spec §4.7); the current season keeps the curated 2026 cards
   const latest = allSeasons()[0].year as number;
   const year = parseYear((await searchParams).year);

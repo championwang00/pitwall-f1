@@ -12,7 +12,7 @@
 .y i { display: block; width: 14px; height: 8px; border-radius: 1px; background: var(--c); opacity: .8; transition: width .25s var(--ease-out), height .25s var(--ease-out), opacity .2s; }
 .y:hover { color: #fff; background: #23232d; }  /* rail = menu: row highlight */
 .y:hover i { width: 22px; opacity: 1; }
-.num { font-family: var(--font-data); font-weight: 700; font-size: 14px; font-variant-numeric: tabular-nums; }
+.num { white-space: nowrap; font-family: var(--font-data); font-weight: 700; font-size: 14px; font-variant-numeric: tabular-nums; }
 .y em { font-style: normal; font-size: 11px; color: #6e6e78; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-align: right; }
 .on { background: #fff !important; color: var(--ink) !important; height: 34px; }
 .on::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--f1-red); }
@@ -54,8 +54,9 @@ a.ctxTitle:hover { color: #d0d0d8; }
 .group > span b { order: 2; color: #8a8a94 !important; font-weight: 400; }
 a.group:hover { background: #23232d; }
 .gsq { flex: none; width: 10px; height: 10px; border-radius: 2px; }
-.gap { display: block; margin: 2px 12px 2px 18px; padding: 4px 0 4px 32px; font-size: 11px; color: #6e6e78; border-top: 1px dashed #2e2e38; border-bottom: 1px dashed #2e2e38; }
-.gap:hover { color: #b8b8c0; background: #23232d; }
+.missingYear { opacity: .16; }
+.missingYear:hover { opacity: .3; }
+.missingYear:focus-visible { opacity: .7; }
 .y em small { font-size: 10px; color: #6e6e78; }
 .on em small { color: var(--mute); }
 .dual { background: linear-gradient(90deg, var(--c) 50%, var(--c2) 50%) !important; }

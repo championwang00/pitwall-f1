@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import Header, { type NextSession } from "@/components/shell/Header";
 import Footer from "@/components/shell/Footer";
 import { nextSession } from "@/lib/schedule";
@@ -8,6 +9,7 @@ import DemoCursor from "@/components/shell/DemoCursor";
 import { Suspense } from "react";
 
 export default async function SiteLayout({ children }: { children: React.ReactNode }) {
+  await ensureFreshDatabase();
   let next: NextSession = null;
   try { next = await nextSession(); } catch {}
   return (

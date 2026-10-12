@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "./db";
 import { seasonRaces } from "./f1";
 import { weekendSessions } from "./openf1";
 
@@ -25,6 +26,7 @@ function f1dbSessions(r: any): Sess[] {
 }
 
 export async function seasonSchedule(year: number): Promise<ScheduledRace[]> {
+  await ensureFreshDatabase();
   const races = seasonRaces(year);
   let weekends: Awaited<ReturnType<typeof weekendSessions>> = [];
   try { weekends = await weekendSessions(year); } catch {}

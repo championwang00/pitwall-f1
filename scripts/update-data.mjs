@@ -16,4 +16,5 @@ if (got !== want) throw new Error(`checksum mismatch ${got} != ${want}`);
 execFileSync("unzip", ["-o", "-q", zip, "-d", "_data_raw/f1db/new"]);
 fs.renameSync("_data_raw/f1db/new/f1db.db", "data/f1db.db");
 fs.rmSync("_data_raw/f1db/new", { recursive: true, force: true });
+fs.writeFileSync("data/f1db-release.json", JSON.stringify({ tag: rel.tag_name, published: rel.published_at }) + "\n");
 console.log("data/f1db.db updated → restart `npm run dev` to reopen the database");

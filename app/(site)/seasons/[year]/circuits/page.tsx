@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { ViewTransition } from "react";
 import YearCircuitsGrid from "@/components/unit/YearCircuitsGrid";
 import RailScope from "@/components/season/RailScope";
@@ -6,6 +7,7 @@ export const dynamic = "force-dynamic";
 
 /** Circuits tab: every circuit used this year and where this year sits in its own history (same block as /circuits?year=Y). */
 export default async function YearCircuits({ params }: { params: Promise<{ year: string }> }) {
+  await ensureFreshDatabase();
   const year = +(await params).year;
   return (
     <ViewTransition enter="page" exit="page" default="none">

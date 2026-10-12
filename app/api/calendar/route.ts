@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { seasonSchedule } from "@/lib/schedule";
 import { gpZh } from "@/lib/names";
 import { SESSION_ZH } from "@/lib/openf1";
@@ -17,6 +18,7 @@ const fold = (line: string) => {
 };
 
 export async function GET(req: Request) {
+  await ensureFreshDatabase();
   const url = new URL(req.url);
   const year = +(url.searchParams.get("year") ?? new Date().getUTCFullYear());
   const scope = url.searchParams.get("scope") ?? "all";

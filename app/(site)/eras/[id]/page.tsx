@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import { notFound } from "next/navigation";
 import { ViewTransition } from "react";
 import { eraById } from "@/lib/eras";
@@ -8,6 +9,7 @@ export const dynamic = "force-dynamic";
 
 /** 时代介绍页：年份栏里每个时代标题的去处。 */
 export default async function EraPage({ params }: { params: Promise<{ id: string }> }) {
+  await ensureFreshDatabase();
   const er = eraById((await params).id);
   if (!er) notFound();
   const years: number[] = [];

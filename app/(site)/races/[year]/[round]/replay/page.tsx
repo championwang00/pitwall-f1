@@ -1,3 +1,4 @@
+import { ensureFreshDatabase } from "@/lib/db";
 import type { Metadata } from "next";
 import { notFound, permanentRedirect, redirect } from "next/navigation";
 import { getRaceByYearRound } from "@/lib/f1";
@@ -30,6 +31,7 @@ export async function generateMetadata({ params }: P): Promise<Metadata> {
  * No OpenF1 data (before 2023, or not run yet) → the race page.
  */
 export default async function RaceReplayPage({ params, searchParams }: P) {
+  await ensureFreshDatabase();
   const { year: ys, round: rs } = await params;
   const year = +ys, round = +rs;
   const sp = await searchParams;

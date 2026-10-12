@@ -1,3 +1,5 @@
+import { raceFinished } from "@/lib/raceStatus";
+import { ensureFreshDatabase } from "@/lib/db";
 import { ViewTransition } from "react";
 import cal from "@/components/calendar/calendar.module.css";
 import c from "@/components/season/cal.module.css";
@@ -16,17 +18,18 @@ export const dynamic = "force-dynamic";
 /** 赛历 tab (Schedule, /seasons/Y/calendar since v5.1 — 总览 took /seasons/Y): the season race by race, formula1.com Schedule language on the light page surface.
  *  Current season = live calendar (Latest + Next, countdown, timing replays); past seasons = archive of race cards. */
 export default async function YearCalendar({ params }: { params: Promise<{ year: string }> }) {
+  await ensureFreshDatabase();
   const year = +(await params).year;
   const sched = await seasonSchedule(year);
   const now = Date.now();
   const podOf = seasonPodiums(year);
   const nextIdx = sched.findIndex((r) => !r.winner && r.sessions.some((x) => new Date(x.end).getTime() > now));
   const next = nextIdx >= 0 ? sched[nextIdx] : null;
-  const doneList = sched.filter((r) => r.winner);
+  const doneList = sched.filter((r) => raceFinished(r, now));
   const latest = doneList.at(-1) ?? null;
   const replay = (r: (typeof sched)[number]) => replayHref(r, now);
   const coords = new Map(all<any>("select id, latitude, longitude from circuit").map((x) => [x.id, x]));
-  const stops = sched.map((r, i) => ({ round: r.round, lat: coords.get(r.circuit)?.latitude ?? 0, lon: coords.get(r.circuit)?.longitude ?? 0, label: gpZh(r.gp), done: !!r.winner, next: i === nextIdx }));
+  const stops = sched.map((r, i) => ({ round: r.round, lat: coords.get(r.circuit)?.latitude ?? 0, lon: coords.get(r.circuit)?.longitude ?? 0, label: gpZh(r.gp), done: raceFinished(r, now), next: i === nextIdx }));
   const hasReplays = sched.some((r) => replay(r));
 
   return (
@@ -59,7 +62,7 @@ export default async function YearCalendar({ params }: { params: Promise<{ year:
           </div>
           <ol className={c.grid}>
             {sched.map((r, i) => (
-              <ScheduleCard key={r.round} r={r} state={r.winner ? "done" : i === nextIdx ? "next" : "future"} podium={podOf(r.round)} replay={replay(r)}
+              <ScheduleCard key={r.round} r={r} state={raceFinished(r, now) ? "done" : i === nextIdx ? "next" : "future"} podium={podOf(r.round)} replay={replay(r)}
                 tag={r === latest && next ? "最新" : undefined} />
             ))}
           </ol>

@@ -114,8 +114,8 @@ export function driverStandingsAfter(year: number, round?: number) {
      from race_driver_standing s join driver d on d.id = s.driver_id where s.race_id = ? order by s.position_display_order`, year, year, race.id);
 }
 
-export function constructorStandingsAfter(year: number) {
-  const race = get<any>("select r.id from race r where r.year = ? and exists (select 1 from race_constructor_standing s where s.race_id = r.id) order by r.round desc limit 1", year);
+export function constructorStandingsAfter(year: number, round?: number) {
+  const race = get<any>("select r.id from race r where r.year = ? and r.round <= ? and exists (select 1 from race_constructor_standing s where s.race_id = r.id) order by r.round desc limit 1", year, round ?? 999);
   if (!race) return [];
   return all<any>(
     `select s.position_number pos, s.position_text posText, s.constructor_id team, c.name, s.points, s.championship_won champ, s.engine_manufacturer_id engine
