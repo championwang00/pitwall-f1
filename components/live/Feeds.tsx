@@ -178,7 +178,9 @@ export function Radio({ model, clock }: { model: Model; clock: Clock }) {
   // the card lingers after the clip ends, like the broadcast graphic — long enough to read the transcript,
   // and never before the transcript has arrived
   const clipTx = clip ? txOf(clip.url) : null;
-  const linger = clipTx?.st === "done" ? 5000 + (clipTx.t!.text.split(/\s+/).length * 250) : clipTx?.st === "error" ? 4000 : null;
+  const linger = clipTx?.st === "done" && clipTx.t?.translationStatus !== "pending"
+    ? 5000 + clipTx.t!.text.split(/\s+/).length * 250 + (clipTx.t!.textZh?.length ?? 0) * 100
+    : clipTx?.st === "error" ? 4000 : null;
   useEffect(() => {
     if (!ended || !clip || linger == null) return;
     const id = setTimeout(close, linger);
