@@ -400,7 +400,7 @@ function RadioCard({ clip, person, color, acr, year, lap, pos, time, playing, en
         <span className={s.rTrack}><i ref={bar} /></span>
         <span className={s.tech}>{mmss(ct)} / {mmss(dur)}</span>
       </div>
-      <p className={s.rNote} lang="zh"><i className={s.rKeyDriver} />车手 <i className={s.rKeyTeam} />车队 · 说话人为自动推断 · 英文原声，本机 Whisper 转写，仅供参考</p>
+      <p className={s.rNote} lang="zh"><i className={s.rKeyDriver} />车手 <i className={s.rKeyTeam} />车队 · 说话人为自动推断 · 英文原声，自动转写，仅供参考</p>
     </div>
   );
 }
