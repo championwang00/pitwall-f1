@@ -190,6 +190,13 @@ class CloudRadioTests(unittest.TestCase):
             self.assertNotIn('textZh',upgraded,'new English invalidates the old Chinese')
             self.assertEqual(self.w.discover(root,2026,now=datetime(2026,10,12,tzinfo=timezone.utc),get=get),[])
 
+    def test_disagreeing_audio_decodes_are_unclear(self):
+        raw=[{'start':0,'end':3,'text':'For Plan C we need to pick up the pace.'},{'start':3,'end':4,'text':'Copy.'}]
+        filtered=[{'start':0,'end':3,'text':'For Francie we need to pick up their pizza.'},{'start':3,'end':4,'text':'Copy.'}]
+        result=self.w.agreed_segments(raw,filtered)
+        self.assertEqual(result[0]['text'],'[Unclear radio]')
+        self.assertEqual(result[1]['text'],'Copy.')
+
     def test_low_confidence_is_not_presented_as_certain_speech(self):
         from types import SimpleNamespace
         segment=SimpleNamespace(text='heat soap side of pedals',start=0,end=2,no_speech_prob=0,avg_logprob=-0.9,compression_ratio=1)

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Incremental, resumable OpenF1 team-radio transcription; no ASR imports during discovery."""
+import difflib
 import argparse
 import hashlib
 import json
@@ -18,7 +19,7 @@ from datetime import datetime, timedelta, timezone
 
 MAX_BYTES = 8 * 1024 * 1024
 ASR_MODEL = 'large-v3'
-ASR_REVISION = 4
+ASR_REVISION = 5
 
 def current_asr(tx):
     return isinstance(tx,dict) and tx.get('asrRevision') == ASR_REVISION and tx.get('model') == 'faster-whisper/'+ASR_MODEL
@@ -26,7 +27,7 @@ def current_asr(tx):
 API = 'https://api.openf1.org/v1/'
 PUBLIC_AUDIO_PROXY = 'https://pitwall-f1-nine.vercel.app/api/radio/audio'
 # Vocabulary only: spellings help recognition without supplying claims or scripted radio lines.
-F1_VOCABULARY = 'Formula One vocabulary: Verstappen, Hamilton, Leclerc, Norris, Piastri, Russell, Antonelli, Alonso, Sainz, Albon, Gasly, Ocon, Hulkenberg, Stroll, Lawson, Hadjar, Bearman, Bortoleto, Colapinto, Lindblad, Perez, Bottas; tyres, tyre degradation, box, pit lane, DRS, delta, brake balance, differential, safety car, virtual safety car, sectors.'
+F1_VOCABULARY = 'Formula One vocabulary: Verstappen, Hamilton, Leclerc, Norris, Piastri, Russell, Antonelli, Alonso, Sainz, Albon, Gasly, Ocon, Hulkenberg, Stroll, Lawson, Hadjar, Bearman, Bortoleto, Colapinto, Lindblad, Perez, Bottas; tyres, tyre degradation, box, pit lane, DRS, delta, brake balance, differential, safety car, virtual safety car, sectors, Plan A, Plan B, Plan C, pace, tyre life, heat soak, steering wheel, turn one, turn eighteen.'
 
 def utcnow(): return datetime.now(timezone.utc)
 def iso(now=None): return (now or utcnow()).isoformat()
@@ -129,6 +130,22 @@ def clean_segments(segments):
         out.append({'start':round(s.start,2),'end':round(s.end,2),'text':'[Unclear radio]' if s.avg_logprob < -0.8 else text}); last=norm
     return out
 
+def agreed_segments(primary,reference):
+    # Both inputs are separate waveform decodes, never language-model rewrites.
+    def words(text): return re.findall(r"[a-z0-9]+",text.lower())
+    tokens=[]; spans=[]
+    for segment in primary:
+        start=len(tokens); tokens.extend(words(segment['text'])); spans.append((start,len(tokens)))
+    check=[word for segment in reference for word in words(segment['text']) if segment['text']!='[Unclear radio]']
+    matches=set()
+    for block in difflib.SequenceMatcher(None,tokens,check,autojunk=False).get_matching_blocks():
+        matches.update(range(block.a,block.a+block.size))
+    result=[]
+    for segment,(start,end) in zip(primary,spans):
+        agreement=sum(i in matches for i in range(start,end))/max(1,end-start)
+        result.append({**segment,'text':segment['text'] if agreement>=0.85 else '[Unclear radio]'})
+    return result
+
 def prepare_audio(file):
     ffmpeg=shutil.which('ffmpeg')
     if not ffmpeg: return file
@@ -168,10 +185,16 @@ class Transcriber:
         with tempfile.TemporaryDirectory(prefix='cloud-radio-') as d:
             file=pathlib.Path(d)/'clip.mp3'
             download_audio(url,file)
-            segments,info=self.model.transcribe(str(prepare_audio(file)),language='en',beam_size=5,temperature=0,vad_filter=True,condition_on_previous_text=False,word_timestamps=True,initial_prompt=F1_VOCABULARY)
+            options=dict(language='en',beam_size=5,temperature=0,vad_filter=True,condition_on_previous_text=False,word_timestamps=True,initial_prompt=F1_VOCABULARY)
+            segments,info=self.model.transcribe(str(file),**options)
             if info.duration > 300: raise ValueError('radio clip exceeds 300 seconds')
-            lines=clean_segments(segments)
-            return {'text':' '.join(s['text'] for s in lines),'segments':lines,'model':f'faster-whisper/{self.name}','at':iso(),'v':3,'asrRevision':ASR_REVISION}
+            raw=clean_segments(segments)
+            prepared=prepare_audio(file)
+            if prepared==file: raise RuntimeError('ffmpeg is required for independent radio audio checks')
+            segments,_=self.model.transcribe(str(prepared),**options)
+            filtered=clean_segments(segments)
+            lines=agreed_segments(raw,filtered)
+            return {'text':' '.join(s['text'] for s in lines),'segments':lines,'model':f'faster-whisper/{self.name}','at':iso(),'v':3,'asrRevision':ASR_REVISION,'asrChecks':{'rawText':' '.join(s['text'] for s in raw),'filteredText':' '.join(s['text'] for s in filtered)}}
 
 class BatchTranscriptionError(RuntimeError):
     def __init__(self,attempted,success):
@@ -222,6 +245,7 @@ def main():
     p.add_argument('--data-dir',type=pathlib.Path,required=True)
     p.add_argument('--year',type=int,default=utcnow().year)
     p.add_argument('--session',type=int)
+    p.add_argument('--recording-url',help='Optional single official clip for quality validation')
     p.add_argument('--discover-only',action='store_true')
     p.add_argument('--dry-run',action='store_true')
     p.add_argument('--from-queue',action='store_true',help='Use previously discovered queue without another API scan')
@@ -231,7 +255,12 @@ def main():
     p.add_argument('--seed',type=pathlib.Path)
     args=p.parse_args(); root=args.data_dir; root.mkdir(parents=True,exist_ok=True)
     if args.seed: seed(root,args.seed); return
-    queue=read_json(root/'queue.json',[]) if args.from_queue else discover(root,args.year,args.session,retry_failed=args.retry_failed)
+    if args.recording_url:
+        if not valid_url(args.recording_url): p.error('invalid official recording URL')
+        queue=[{'url':args.recording_url,'sessionKey':args.session}]
+        if args.discover_only: write_json(root/'queue.json',queue)
+    else:
+        queue=read_json(root/'queue.json',[]) if args.from_queue else discover(root,args.year,args.session,retry_failed=args.retry_failed)
     if os.environ.get('GITHUB_OUTPUT'):
         with open(os.environ['GITHUB_OUTPUT'],'a') as f: f.write(f'has_work={str(bool(queue)).lower()}\n')
     if args.discover_only or args.dry_run or not queue: return

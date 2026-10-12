@@ -12,6 +12,10 @@ on:
         description: 'Optional season year; blank uses current UTC year'
         required: false
         type: string
+      recording_url:
+        description: 'Optional single official radio recording for a quality check'
+        required: false
+        type: string
       clip_limit:
         description: 'ASR batch size; use 1 for a cloud quality smoke check'
         required: false
@@ -55,10 +59,12 @@ jobs:
         env:
           INPUT_SESSION: ${{ inputs.session }}
           INPUT_YEAR: ${{ inputs.year }}
+          INPUT_RECORDING: ${{ inputs.recording_url }}
         run: |
           args=(--data-dir "$RUNNER_TEMP/radio-data" --discover-only)
           if [ -n "$INPUT_SESSION" ]; then args+=(--session "$INPUT_SESSION"); fi
           if [ -n "$INPUT_YEAR" ]; then args+=(--year "$INPUT_YEAR"); fi
+          if [ -n "$INPUT_RECORDING" ]; then args+=(--recording-url "$INPUT_RECORDING"); fi
           if [ "$INPUT_RETRY_FAILED" = "true" ]; then args+=(--retry-failed); fi
           python scripts/cloud-radio-transcripts.py "${args[@]}"
       - name: Restore speech model
