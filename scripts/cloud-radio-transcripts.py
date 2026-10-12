@@ -18,6 +18,7 @@ from datetime import datetime, timedelta, timezone
 
 MAX_BYTES = 8 * 1024 * 1024
 API = 'https://api.openf1.org/v1/'
+PUBLIC_AUDIO_PROXY = 'https://pitwall-f1-nine.vercel.app/api/radio/audio'
 # Vocabulary only: spellings help recognition without supplying claims or scripted radio lines.
 F1_VOCABULARY = 'Formula One vocabulary: Verstappen, Hamilton, Leclerc, Norris, Piastri, Russell, Antonelli, Alonso, Sainz, Albon, Gasly, Ocon, Hulkenberg, Stroll, Lawson, Hadjar, Bearman, Bortoleto, Colapinto, Lindblad, Perez, Bottas; tyres, tyre degradation, box, pit lane, DRS, delta, brake balance, differential, safety car, virtual safety car, sectors.'
 
@@ -74,7 +75,7 @@ def get_json(url):
             if isinstance(e,urllib.error.HTTPError): delay=min(30,float(e.headers.get('Retry-After',delay)))
             time.sleep(delay)
 
-def discover(root,year,session=None,now=None,get=get_json):
+def discover(root,year,session=None,now=None,get=get_json,retry_failed=False):
     now=now or utcnow()
     manifest=read_json(root/'manifest.json',{'version':1,'sessions':{}})
     query=f'sessions?session_key={session}' if session else f'sessions?year={year}'
@@ -100,7 +101,7 @@ def discover(root,year,session=None,now=None,get=get_json):
             url=r['recording_url']; pack=load_pack(root,url)
             if url in pack.get('transcripts',{}): continue
             retry=parse_date(pack.get('failures',{}).get(url,{}).get('retryAt'))
-            if retry and retry>now: continue
+            if retry and retry>now and not retry_failed: continue
             queue.append({'url':url,'sessionKey':s['session_key']})
     queue=list({entry['url']:entry for entry in queue}.values())
     # Daily change also keeps a public repository's scheduled job active between race weekends.
@@ -131,6 +132,26 @@ def prepare_audio(file):
                    check=True,timeout=60,capture_output=True)
     return wav
 
+def audio_request_url(url,proxy=None):
+    if not valid_url(url): raise ValueError('invalid radio URL')
+    if not proxy: return url
+    # This public endpoint is the same authorised interface used by the website's audio player.
+    if proxy!=PUBLIC_AUDIO_PROXY: raise ValueError('audio proxy must be the authorised Pitwall audio endpoint')
+    return proxy+'?'+urllib.parse.urlencode({'url':url})
+
+def download_audio(url,file,proxy=None,opener=OPENER):
+    request_url=audio_request_url(url,proxy or os.environ.get('RADIO_AUDIO_PROXY'))
+    with opener.open(urllib.request.Request(request_url,headers={'User-Agent':'pitwall-f1-radio/1.0'}),timeout=30) as r:
+        content_type=r.headers.get('Content-Type','').split(';',1)[0].strip().lower()
+        if content_type not in {'audio/mpeg','audio/mp3','audio/x-mpeg','application/octet-stream'}:
+            raise ValueError('audio endpoint returned a non-audio content type: '+content_type)
+        declared=r.headers.get('Content-Length')
+        if declared and int(declared)>MAX_BYTES: raise ValueError('audio too large')
+        audio=r.read(MAX_BYTES+1)
+        if len(audio)>MAX_BYTES: raise ValueError('audio too large')
+        if not audio: raise ValueError('empty audio response')
+        file.write_bytes(audio)
+
 class Transcriber:
     def __init__(self,model):
         from faster_whisper import WhisperModel
@@ -140,17 +161,17 @@ class Transcriber:
         if not valid_url(url): raise ValueError('invalid radio URL')
         with tempfile.TemporaryDirectory(prefix='cloud-radio-') as d:
             file=pathlib.Path(d)/'clip.mp3'
-            with OPENER.open(urllib.request.Request(url,headers={'User-Agent':'pitwall-f1-radio/1.0'}),timeout=30) as r:
-                declared=r.headers.get('Content-Length')
-                if declared and int(declared)>MAX_BYTES: raise ValueError('audio too large')
-                audio=r.read(MAX_BYTES+1)
-                if len(audio)>MAX_BYTES: raise ValueError('audio too large')
-                file.write_bytes(audio)
+            download_audio(url,file)
             segments,_=self.model.transcribe(str(prepare_audio(file)),language='en',beam_size=5,vad_filter=True,condition_on_previous_text=False,word_timestamps=True,initial_prompt=F1_VOCABULARY)
             lines=clean_segments(segments)
             return {'text':' '.join(s['text'] for s in lines),'segments':lines,'model':f'faster-whisper/{self.name}','at':iso(),'v':3}
 
-def process_queue(root,queue,limit,transcribe):
+class BatchTranscriptionError(RuntimeError):
+    def __init__(self,attempted,success):
+        self.attempted=attempted; self.success=success
+        super().__init__(f'All {attempted} attempted clips failed; retry state was saved')
+
+def process_queue(root,queue,limit,transcribe,retry_failed=False):
     success=0; attempted=0; seen=set()
     for item in queue:
         url=item['url']
@@ -158,7 +179,7 @@ def process_queue(root,queue,limit,transcribe):
         seen.add(url); pack=load_pack(root,url)
         if url in pack.get('transcripts',{}): continue
         retry=parse_date(pack.get('failures',{}).get(url,{}).get('retryAt'))
-        if retry and retry>utcnow(): continue
+        if retry and retry>utcnow() and not retry_failed: continue
         if attempted>=limit: break
         attempted+=1; pack['sessionKey']=item.get('sessionKey')
         try:
@@ -174,6 +195,7 @@ def process_queue(root,queue,limit,transcribe):
         # Durable after every clip: one failure or an interrupted job never discards the successful batch.
         save_pack(root,url,pack)
     print(f'Processed {attempted} clips; {success} succeeded',flush=True)
+    if attempted>0 and success==0: raise BatchTranscriptionError(attempted,success)
     return success
 
 def seed(root,file):
@@ -196,13 +218,15 @@ def main():
     p.add_argument('--from-queue',action='store_true',help='Use previously discovered queue without another API scan')
     p.add_argument('--limit',type=int,default=80)
     p.add_argument('--model',default='small.en')
+    p.add_argument('--retry-failed',action='store_true',help='Manual recovery: retry failed clips immediately, ignoring cooldown; completed clips are still skipped')
     p.add_argument('--seed',type=pathlib.Path)
     args=p.parse_args(); root=args.data_dir; root.mkdir(parents=True,exist_ok=True)
     if args.seed: seed(root,args.seed); return
-    queue=read_json(root/'queue.json',[]) if args.from_queue else discover(root,args.year,args.session)
+    queue=read_json(root/'queue.json',[]) if args.from_queue else discover(root,args.year,args.session,retry_failed=args.retry_failed)
     if os.environ.get('GITHUB_OUTPUT'):
         with open(os.environ['GITHUB_OUTPUT'],'a') as f: f.write(f'has_work={str(bool(queue)).lower()}\n')
     if args.discover_only or args.dry_run or not queue: return
-    process_queue(root,queue,args.limit,Transcriber(args.model))
+    try: process_queue(root,queue,args.limit,Transcriber(args.model),retry_failed=args.retry_failed)
+    except BatchTranscriptionError as e: p.exit(1,str(e)+"\n")
 
 if __name__=='__main__': main()

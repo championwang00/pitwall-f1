@@ -12,6 +12,11 @@ on:
         description: 'Optional season year; blank uses current UTC year'
         required: false
         type: string
+      retry_failed:
+        description: 'Retry failed clips immediately; completed clips stay unchanged'
+        required: false
+        default: false
+        type: boolean
 permissions:
   contents: write
 concurrency:
@@ -21,6 +26,9 @@ jobs:
   update:
     runs-on: ubuntu-latest
     timeout-minutes: 45
+    env:
+      RADIO_AUDIO_PROXY: https://pitwall-f1-nine.vercel.app/api/radio/audio
+      INPUT_RETRY_FAILED: ${{ github.event_name == 'workflow_dispatch' && inputs.retry_failed }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -42,6 +50,7 @@ jobs:
           args=(--data-dir "$RUNNER_TEMP/radio-data" --discover-only)
           if [ -n "$INPUT_SESSION" ]; then args+=(--session "$INPUT_SESSION"); fi
           if [ -n "$INPUT_YEAR" ]; then args+=(--year "$INPUT_YEAR"); fi
+          if [ "$INPUT_RETRY_FAILED" = "true" ]; then args+=(--retry-failed); fi
           python scripts/cloud-radio-transcripts.py "${args[@]}"
       - name: Restore speech model
         if: steps.discover.outputs.has_work == 'true'
@@ -57,7 +66,10 @@ jobs:
           python -m pip install -r scripts/cloud-radio-requirements.txt
       - name: Transcribe up to 80 clips
         if: steps.discover.outputs.has_work == 'true'
-        run: python scripts/cloud-radio-transcripts.py --data-dir "$RUNNER_TEMP/radio-data" --from-queue --limit 80
+        run: |
+          args=(--data-dir "$RUNNER_TEMP/radio-data" --from-queue --limit 80)
+          if [ "$INPUT_RETRY_FAILED" = "true" ]; then args+=(--retry-failed); fi
+          python scripts/cloud-radio-transcripts.py "${args[@]}"
       - name: Persist successful clips and retry state
         if: always() && steps.data.outputs.ready == 'true'
         run: |

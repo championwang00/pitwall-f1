@@ -95,6 +95,83 @@ class CloudRadioTests(unittest.TestCase):
         with patch.object(self.w.shutil,'which',return_value=None):
             self.assertEqual(self.w.prepare_audio(source),source)
 
+
+    def test_proxy_request_keeps_source_url_restricted(self):
+        self.assertTrue(hasattr(self.w,'audio_request_url'),'cloud downloads must support the authorised website audio interface')
+        from urllib.parse import urlsplit,parse_qs
+        proxy='https://pitwall-f1-nine.vercel.app/api/radio/audio'
+        request=self.w.audio_request_url(self.a,proxy)
+        self.assertEqual(request.split('?')[0],proxy)
+        self.assertEqual(parse_qs(urlsplit(request).query),{'url':[self.a]})
+        self.assertEqual(self.w.audio_request_url(self.a),self.a)
+        with self.assertRaises(ValueError): self.w.audio_request_url('https://evil.com/clip.mp3',proxy)
+        with self.assertRaises(ValueError): self.w.audio_request_url(self.a,'https://evil.com/audio')
+
+    def test_download_checks_media_type_and_size(self):
+        self.assertTrue(hasattr(self.w,'download_audio'))
+        import io
+        from types import SimpleNamespace
+        def opener(mime,payload):
+            def open(request,timeout):
+                self.assertEqual(timeout,30)
+                body=io.BytesIO(payload); body.headers={'Content-Type':mime}
+                return body
+            return SimpleNamespace(open=open)
+        with tempfile.TemporaryDirectory() as d:
+            file=pathlib.Path(d)/'clip.mp3'
+            self.w.download_audio(self.a,file,opener=opener('audio/mpeg',b'ID3test'))
+            self.assertEqual(file.read_bytes(),b'ID3test')
+            for mime in ['text/html','application/json','']:
+                with self.assertRaises(ValueError): self.w.download_audio(self.a,file,opener=opener(mime,b'blocked'))
+            with self.assertRaises(ValueError): self.w.download_audio(self.a,file,opener=opener('audio/mpeg',b'a'*(self.w.MAX_BYTES+1)))
+
+    def test_all_clip_failures_raise_after_saving_retry_state(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=pathlib.Path(d)
+            def fail(url): raise RuntimeError('HTTP 403')
+            with self.assertRaises(RuntimeError): self.w.process_queue(root,[{'url':self.a}],80,fail)
+            pack=self.w.load_pack(root,self.a)
+            self.assertIn(self.a,pack['failures'],'systemic failure must still save every clip retry record')
+
+    def test_manual_retry_ignores_cooldown_but_skips_completed(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=pathlib.Path(d)
+            self.w.save_pack(root,self.a,{'version':1,'transcripts':{self.a:{'text':'Already done','segments':[]}},'failures':{}})
+            self.w.save_pack(root,self.b,{'version':1,'transcripts':{self.a:{'text':'Already done','segments':[]}},'failures':{self.b:{'retryAt':'2099-01-01T00:00:00+00:00','attempts':1}}})
+            queue=[{'url':self.a},{'url':self.b}]; called=[]
+            def success(url): called.append(url); return {'text':'Recovered','segments':[]}
+            self.assertEqual(self.w.process_queue(root,queue,80,success),0)
+            self.assertEqual(self.w.process_queue(root,queue,80,success,retry_failed=True),1)
+            self.assertEqual(called,[self.b])
+            self.assertNotIn(self.b,self.w.load_pack(root,self.b)['failures'])
+
+    def test_manual_discovery_includes_cooling_down_failures(self):
+        now=datetime(2026,10,12,tzinfo=timezone.utc)
+        session={'session_key':1,'session_type':'Race','session_name':'Race','date_end':'2026-10-11T15:00:00+00:00'}
+        def get(url): return [session] if 'sessions?' in url else [{'recording_url':self.a}]
+        with tempfile.TemporaryDirectory() as d:
+            root=pathlib.Path(d)
+            self.w.save_pack(root,self.a,{'version':1,'transcripts':{},'failures':{self.a:{'retryAt':'2099-01-01T00:00:00+00:00','attempts':1}}})
+            self.assertEqual(self.w.discover(root,2026,now=now,get=get),[])
+            self.assertEqual(len(self.w.discover(root,2026,now=now,get=get,retry_failed=True)),1)
+
+
+    def test_cli_all_failures_exit_nonzero_after_persisting(self):
+        from unittest.mock import patch
+        with tempfile.TemporaryDirectory() as d:
+            root=pathlib.Path(d)
+            self.w.write_json(root/'queue.json',[{'url':self.a}])
+            def fail(url): raise RuntimeError('HTTP 403')
+            with patch.object(sys,'argv',['worker','--data-dir',d,'--from-queue']), patch.object(self.w,'Transcriber',return_value=fail):
+                with self.assertRaises(SystemExit) as exit:
+                    self.w.main()
+            self.assertEqual(exit.exception.code,1)
+            self.assertIn(self.a,self.w.load_pack(root,self.a)['failures'])
+
+    def test_audio_redirects_are_rejected(self):
+        with self.assertRaises(ValueError):
+            self.w.NoRedirect().redirect_request(None,None,302,'Found',{},'https://evil.com/audio')
+
     def test_silence_and_loops_filtered(self):
         if not hasattr(self,'w'): self.skipTest('worker absent')
         from types import SimpleNamespace
