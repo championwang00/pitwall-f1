@@ -10,10 +10,10 @@ from datetime import timedelta
 spec=importlib.util.spec_from_file_location('radio_worker',pathlib.Path(__file__).with_name('cloud-radio-transcripts.py'))
 radio=importlib.util.module_from_spec(spec); spec.loader.exec_module(radio)
 MODEL='Helsinki-NLP/opus-mt-en-zh'
-VERSION=1
+VERSION=2
 
 def complete(tx):
-    return tx.get('translationVersion')==VERSION and isinstance(tx.get('textZh'),str) and all(isinstance(s.get('zh'),str) and (not s.get('text','').strip() or s['zh'].strip()) for s in tx.get('segments',[]))
+    return tx.get('translationVersion')==1 and tx.get('translationRevision')==VERSION and isinstance(tx.get('textZh'),str) and all(isinstance(s.get('zh'),str) and (not s.get('text','').strip() or s['zh'].strip()) for s in tx.get('segments',[]))
 
 def discover(root,session=None,retry_failed=False):
     queue=[]
@@ -31,6 +31,16 @@ def discover(root,session=None,retry_failed=False):
             queue.append({'url':url,'file':str(file)})
     # Prioritise newest events when backfilling the season.
     return sorted(queue,key=lambda x:x['url'],reverse=True)
+
+def translation_input(text,context):
+    # Context resolves the idiom only for a clip explicitly discussing track limits.
+    # English source and speaker identity are preserved verbatim in the stored transcript.
+    if re.search(r'\btrack limits\b',context,re.I):
+        if re.fullmatch(r"No[, ]+but you['’]re pushing it[.!?]*",text,re.I):
+            return 'No, but you are close to exceeding the track limits.'
+        if re.fullmatch(r'Did you get one[.!?]*',text,re.I):
+            return 'Did you receive a track limits warning?'
+    return text
 
 class Translator:
     def __init__(self):
@@ -51,14 +61,16 @@ class Translator:
                 for chunk in chunks:
                     if not chunk: continue
                     if len(self.tokenizer.encode(chunk))>450: raise ValueError('segment exceeds translation model context')
-                    inputs=self.tokenizer('>>cmn_Hans<< '+chunk,return_tensors='pt')
+                    inputs=self.tokenizer('>>cmn_Hans<< '+translation_input(chunk,' '.join(texts)),return_tensors='pt')
                     with self.torch.inference_mode():
                         result=self.model.generate(**inputs,num_beams=4,max_new_tokens=512)
                     zh=self.tokenizer.decode(result[0],skip_special_tokens=True).strip()
                     if not zh or not re.search(r'[\u3400-\u9fff]',zh): raise ValueError('translation returned no Chinese text')
                     # Unambiguous radio commands and terminology, never speaker inference.
                     if re.fullmatch(r'box(?:[,.!\s]+box)*[,.!\s]*',chunk,re.I): zh='进站'+('，进站' if len(re.findall(r'box',chunk,re.I))>1 else '')+'。'
-                    zh=zh.replace('轨道限制','赛道界限').replace('轨道界限','赛道界限').replace('软轮胎','软胎').replace('硬轮胎','硬胎').replace('中型轮胎','中性胎')
+                    if translation_input(chunk,' '.join(texts))!=chunk:
+                        zh='没有，但你已经快要越过赛道界限了。' if chunk.lower().startswith('no') else '你有收到赛道界限警告吗？'
+                    zh=zh.replace('轨迹限制','赛道界限').replace('赛道限制','赛道界限').replace('轨道限制','赛道界限').replace('轨道界限','赛道界限').replace('软轮胎','软胎').replace('硬轮胎','硬胎').replace('中型轮胎','中性胎')
                     translated.append(zh)
                 output.append(' '.join(translated))
         return output
@@ -79,7 +91,7 @@ def process(root,queue,limit,translate):
             for i,zh in zip(indexes,chinese): updated[i]['zh']=zh
             text_zh=' '.join(chinese)
             if not segments and tx.get('text','').strip(): text_zh=translate([tx['text']])[0]
-            pack['transcripts'][url]={**tx,'segments':updated,'textZh':text_zh,'translationVersion':VERSION,'translationModel':MODEL,'translatedAt':radio.iso()}
+            pack['transcripts'][url]={**tx,'segments':updated,'textZh':text_zh,'translationVersion':1,'translationRevision':VERSION,'translationModel':MODEL,'translatedAt':radio.iso()}
             pack.setdefault('translationFailures',{}).pop(url,None)
             success+=1
             print(f'[{attempted}/{limit}] translated {url.rsplit("/",1)[-1]}',flush=True)

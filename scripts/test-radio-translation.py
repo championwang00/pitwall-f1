@@ -22,11 +22,15 @@ class TranslationTests(unittest.TestCase):
     def test_mismatch_never_partially_overwrites(self):
         with self.assertRaises(RuntimeError):m.process(self.root,m.discover(self.root),80,lambda _:[])
         self.assertEqual(m.radio.load_pack(self.root,URL)['transcripts'][URL],self.tx)
+    def test_radio_context_is_narrow(self):
+        self.assertEqual(m.translation_input("No, but you're pushing it.",'Track limits.'),'No, but you are close to exceeding the track limits.')
+        self.assertEqual(m.translation_input("No, but you're pushing it.",'Keep going.'),"No, but you're pushing it.")
+        self.assertEqual(m.translation_input('Did you get one?','Track limits.'),'Did you receive a track limits warning?')
     def test_session_filter(self): self.assertEqual(m.discover(self.root,999),[])
     def test_empty_speech_needs_no_model(self):
         m.radio.save_pack(self.root,URL,{'version':1,'transcripts':{URL:{'text':'','segments':[]}}})
         m.process(self.root,m.discover(self.root),80,lambda _:self.fail('must not translate empty speech'))
         self.assertTrue(m.complete(m.radio.load_pack(self.root,URL)['transcripts'][URL]))
     def test_incomplete_segment_is_backfilled(self):
-        self.assertFalse(m.complete({**self.tx,'translationVersion':1,'textZh':'进站'}))
+        self.assertFalse(m.complete({**self.tx,'translationVersion':m.VERSION,'textZh':'进站'}))
 if __name__=='__main__':unittest.main()
