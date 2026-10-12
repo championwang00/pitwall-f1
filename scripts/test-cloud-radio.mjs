@@ -18,7 +18,7 @@ const realFetch = globalThis.fetch;
 globalThis.fetch = fetcher;
 const { GET, POST } = await import('../app/api/radio/transcript/route.ts');
 const hit = await GET(new Request('https://local/api/radio/transcript?url='+encodeURIComponent(a)));
-assert.equal(hit.status,200); assert.equal((await hit.json()).text,t.text);
+assert.equal(hit.status,200); const hitData = await hit.json(); assert.equal(hitData.text,t.text); assert.equal(hitData.voiceStatus,"unavailable");
 const pending = await GET(new Request('https://local/api/radio/transcript?url='+encodeURIComponent(b)));
 assert.equal(pending.status,202); assert.equal((await pending.json()).status,'pending'); assert.ok(pending.headers.get('retry-after'));
 const peek = await POST(new Request('https://local/api/radio/transcript',{method:'POST',body:JSON.stringify({urls:[a,b]})}));
@@ -66,6 +66,11 @@ globalThis.fetch=async()=>{translationCalls++;return Response.json(translationCa
 client.want('translation-test');await new Promise(r=>setTimeout(r,30));
 assert.equal(client.txOf('translation-test').st,'done');assert.equal(client.txOf('translation-test').t.text,t.text,'English stays visible during translation');
 await new Promise(r=>setTimeout(r,1100));assert.equal(client.txOf('translation-test').t.textZh,'进站，进站。','Chinese arrives without page refresh');client.unwant('translation-test');
+// Missing identity references must not keep finished bilingual captions polling.
+let identityCalls=0;
+globalThis.fetch=async()=>{identityCalls++;return Response.json({...t,translationStatus:'complete',voiceStatus:'needs-reference',retryAfter:0.01});};
+client.want('identity-unavailable-test');await new Promise(r=>setTimeout(r,30));
+await new Promise(r=>setTimeout(r,1100));assert.equal(identityCalls,1,'unavailable identity does not block finished captions');client.unwant('identity-unavailable-test');
 // A translated cloud record must override the older English-only bundled record.
 Date.now=()=>now()+601000;
 globalThis.fetch=async()=>Response.json({version:1,transcripts:{[existing]:{...bundle[existing],textZh:'云端更新',translationVersion:1,segments:bundle[existing].segments.map(s=>({...s,zh:'中文'}))}}});

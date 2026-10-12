@@ -3,7 +3,7 @@ import { cloudFailure, cloudTranscripts } from "@/lib/cloudRadioTranscripts";
 
 function payload(t: import("@/lib/radioTranscript").Transcript) {
   const translated = t.translationVersion === 1 && typeof t.textZh === "string" && t.segments.every(s => !s.text.trim() || !!s.zh?.trim());
-  return { voiceStatus: !t.text.trim() ? "complete" : t.voiceStatus ?? "pending", text: t.text, textZh: t.textZh, segments: t.segments, translationStatus: !t.text.trim() || translated ? "complete" : "pending", retryAfter: 30 };
+  return { voiceStatus: "unavailable", text: t.text, textZh: t.textZh, segments: t.segments, translationStatus: !t.text.trim() || translated ? "complete" : "pending", retryAfter: 30 };
 }
 
 export const runtime = "nodejs";

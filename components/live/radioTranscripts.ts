@@ -2,7 +2,7 @@
 import { useSyncExternalStore } from "react";
 
 export type Segment = { start: number; end: number; text: string; zh?: string; speaker?: string; speakerSource?: string; voiceId?: string; voiceSimilarity?: number; voiceReferenceId?: string };
-export type Transcript = { text: string; textZh?: string; segments: Segment[]; translationStatus?: "pending" | "complete"; voiceStatus?: "pending" | "needs-reference" | "complete" };
+export type Transcript = { text: string; textZh?: string; segments: Segment[]; translationStatus?: "pending" | "complete"; voiceStatus?: "pending" | "needs-reference" | "complete" | "unavailable" };
 export type TxState = { st: "idle" | "queued" | "loading" | "pending" | "done" | "error"; t?: Transcript; retrying?: boolean };
 const MAX = 2;
 const store = new Map<string, TxState>();
@@ -17,7 +17,7 @@ const attempts = new Map<string, number>();
 const ctl = new Map<string, AbortController>();
 function emit() { version++; for (const f of subs) f(); }
 function set(url: string, v: TxState) { store.set(url, v); emit(); }
-function complete(url: string) { const x = txOf(url); return x.st === "done" && x.t?.translationStatus !== "pending" && x.t?.voiceStatus !== "pending" && x.t?.voiceStatus !== "needs-reference"; }
+function complete(url: string) { const x = txOf(url); return x.st === "done" && x.t?.translationStatus !== "pending"; }
 function active(url: string) { return visible.has(url) || urgentSet.has(url); }
 export function txOf(url: string): TxState { return store.get(url) ?? { st: "idle" }; }
 export function useTxVersion() {
@@ -36,7 +36,7 @@ export async function peekAll(urls: string[]) {
       for (const [u, t] of Object.entries(data)) if (t && typeof t.text === "string" && Array.isArray(t.segments)) {
         clearTimeout(timers.get(u)); timers.delete(u);
         set(u, { st: "done", t });
-        if (t.translationStatus === "pending" || t.voiceStatus === "pending" || t.voiceStatus === "needs-reference") retry(u, 30);
+        if (t.translationStatus === "pending") retry(u, 30);
       }
     } catch { batch.forEach(u => peeked.delete(u)); }
   }
@@ -66,7 +66,7 @@ function load(url: string) {
       }
       if (!r.ok || typeof data.text !== "string" || !Array.isArray(data.segments)) throw new Error(String(r.status));
       set(url, { st: "done", t: data });
-      if (data.translationStatus === "pending" || data.voiceStatus === "pending" || data.voiceStatus === "needs-reference") retry(url, Number(data.retryAfter) || 30); else attempts.delete(url);
+      if (data.translationStatus === "pending") retry(url, Number(data.retryAfter) || 30); else attempts.delete(url);
     })
     .catch(() => { if (!c.signal.aborted && !complete(url)) { if (txOf(url).st !== "done") set(url, { st: "error" }); retry(url, 30); } })
     .finally(() => {

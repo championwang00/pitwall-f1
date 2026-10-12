@@ -389,7 +389,7 @@ function RadioCard({ clip, person, color, acr, year, lap, pos, time, playing, en
       <div className={s.rCaption} lang="en" aria-live="polite">
         {tx.st === "done" && segs.length > 0 && visible.map((l) => (
           <div key={l.i} className={`${l.past ? s.rPast : ""} ${who[l.i] === "driver" ? s.rDriver : who[l.i] === "team" ? s.rTeamVoice : s.rVoiceUnknown}`}>
-            <small className={s.rVoiceLabel} lang="zh">{who[l.i] === "driver" ? "车手" : who[l.i] === "team" ? "车队" : `${segs[l.i].voiceId?.replace("voice_", "声音 ") ?? "声音"} · 身份待确认`}</small>
+            {who[l.i] !== "unknown" && <small className={s.rVoiceLabel} lang="zh">{who[l.i] === "driver" ? "车手" : "车队"}</small>}
             <p lang="en">{l.words.map((w, k) => <span key={k} className={k < l.n ? undefined : s.rAhead}>{w} </span>)}</p>
             <p className={s.rTranslation} lang="zh">{segs[l.i].zh || "中文翻译正在生成…"}</p>
           </div>
@@ -404,7 +404,7 @@ function RadioCard({ clip, person, color, acr, year, lap, pos, time, playing, en
         <span className={s.rTrack}><i ref={bar} /></span>
         <span className={s.tech}>{mmss(ct)} / {mmss(dur)}</span>
       </div>
-      <p className={s.rNote} lang="zh"><i className={s.rKeyDriver} />车手 <i className={s.rKeyTeam} />车队 · 身份由声纹匹配，未匹配的标为待确认 · 自动字幕仅供参考</p>
+      <p className={s.rNote} lang="zh">自动字幕仅供参考</p>
     </div>
   );
 }
