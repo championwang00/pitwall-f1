@@ -30,6 +30,12 @@ class TranslationTests(unittest.TestCase):
         with self.assertRaises(ValueError):m.decode_response(response([{'id':0,'zh':'进站'}],'length'),1)
     def test_old_translations_are_reprocessed(self):
         self.assertFalse(m.complete({**self.tx,'textZh':'进站','segments':[{'start':1,'end':2,'text':'Box','zh':'进站'}],'translationVersion':1,'translationRevision':2,'translationModel':'Helsinki-NLP/opus-mt-en-zh'}))
+    def test_changed_english_invalidates_translation(self):
+        m.process(self.root,m.discover(self.root),80,lambda _:['进站'])
+        tx=m.radio.load_pack(self.root,URL)['transcripts'][URL]
+        tx['segments'][0]['text']='Stay out.';tx['text']='Stay out.'
+        self.assertFalse(m.complete(tx),'Chinese must follow its exact English source')
+
     def test_session_filter(self): self.assertEqual(m.discover(self.root,999),[])
     def test_empty_speech_needs_no_model(self):
         m.radio.save_pack(self.root,URL,{'version':1,'transcripts':{URL:{'text':'','segments':[]}}})

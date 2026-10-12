@@ -39,7 +39,7 @@ class CloudRadioTests(unittest.TestCase):
             queue=[{'url':self.a,'sessionKey':1},{'url':self.b,'sessionKey':1},{'url':self.a,'sessionKey':1}]
             def transcribe(url):
                 if url==self.b: raise RuntimeError('one broken clip')
-                return {'text':'Box, box.','segments':[{'start':0,'end':1,'text':'Box, box.'}],'model':'test','at':'now','v':3}
+                return {'text':'Box, box.','segments':[{'start':0,'end':1,'text':'Box, box.'}],'model':'faster-whisper/large-v3','asrRevision':self.w.ASR_REVISION,'at':'now','v':3}
             self.assertEqual(self.w.process_queue(root,queue,80,transcribe),1)
             pack=self.w.read_json(root/'sessions'/f'{self.w.pack_key(self.a)}.json',{})
             self.assertEqual(pack['transcripts'][self.a]['text'],'Box, box.')
@@ -65,7 +65,7 @@ class CloudRadioTests(unittest.TestCase):
 
     def seed_file(self, root):
         file=root/'seed.json'
-        self.w.write_json(file,{self.a:{'text':'Box.','segments':[]}})
+        self.w.write_json(file,{self.a:{'text':'Box.','segments':[],'model':'faster-whisper/large-v3','asrRevision':self.w.ASR_REVISION}})
         return file
 
 
@@ -136,8 +136,8 @@ class CloudRadioTests(unittest.TestCase):
     def test_manual_retry_ignores_cooldown_but_skips_completed(self):
         with tempfile.TemporaryDirectory() as d:
             root=pathlib.Path(d)
-            self.w.save_pack(root,self.a,{'version':1,'transcripts':{self.a:{'text':'Already done','segments':[]}},'failures':{}})
-            self.w.save_pack(root,self.b,{'version':1,'transcripts':{self.a:{'text':'Already done','segments':[]}},'failures':{self.b:{'retryAt':'2099-01-01T00:00:00+00:00','attempts':1}}})
+            self.w.save_pack(root,self.a,{'version':1,'transcripts':{self.a:{'text':'Already done','segments':[],'model':'faster-whisper/large-v3','asrRevision':self.w.ASR_REVISION}},'failures':{}})
+            self.w.save_pack(root,self.b,{'version':1,'transcripts':{self.a:{'text':'Already done','segments':[],'model':'faster-whisper/large-v3','asrRevision':self.w.ASR_REVISION}},'failures':{self.b:{'retryAt':'2099-01-01T00:00:00+00:00','attempts':1}}})
             queue=[{'url':self.a},{'url':self.b}]; called=[]
             def success(url): called.append(url); return {'text':'Recovered','segments':[]}
             self.assertEqual(self.w.process_queue(root,queue,80,success),0)
@@ -171,6 +171,30 @@ class CloudRadioTests(unittest.TestCase):
     def test_audio_redirects_are_rejected(self):
         with self.assertRaises(ValueError):
             self.w.NoRedirect().redirect_request(None,None,302,'Found',{},'https://evil.com/audio')
+
+    def test_quality_upgrade_requeues_old_bilingual_and_preserves_on_failure(self):
+        with tempfile.TemporaryDirectory() as d:
+            root=pathlib.Path(d)
+            old={'text':'Bad old English','segments':[{'start':0,'end':1,'text':'Bad old English','zh':'旧翻译'}],'textZh':'旧翻译','translationVersion':1,'model':'faster-whisper/small.en','v':3}
+            self.w.save_pack(root,self.a,{'version':1,'transcripts':{self.a:old}})
+            session={'session_key':1,'session_type':'Race','session_name':'Race','date_end':'2026-10-11T15:00:00+00:00'}
+            get=lambda url:[session] if 'sessions?' in url else [{'recording_url':self.a}]
+            queue=self.w.discover(root,2026,now=datetime(2026,10,12,tzinfo=timezone.utc),get=get)
+            self.assertEqual(len(queue),1,'old model output must be upgraded automatically')
+            with self.assertRaises(RuntimeError):self.w.process_queue(root,queue,1,lambda _:(_ for _ in ()).throw(RuntimeError('offline')))
+            self.assertEqual(self.w.load_pack(root,self.a)['transcripts'][self.a],old)
+            fresh={'text':'Correct English','segments':[{'start':0,'end':1,'text':'Correct English'}],'model':'faster-whisper/large-v3','asrRevision':self.w.ASR_REVISION,'v':3}
+            self.w.process_queue(root,queue,1,lambda _:fresh,retry_failed=True)
+            upgraded=self.w.load_pack(root,self.a)['transcripts'][self.a]
+            self.assertEqual(upgraded['text'],'Correct English')
+            self.assertNotIn('textZh',upgraded,'new English invalidates the old Chinese')
+            self.assertEqual(self.w.discover(root,2026,now=datetime(2026,10,12,tzinfo=timezone.utc),get=get),[])
+
+    def test_low_confidence_is_not_presented_as_certain_speech(self):
+        from types import SimpleNamespace
+        segment=SimpleNamespace(text='heat soap side of pedals',start=0,end=2,no_speech_prob=0,avg_logprob=-0.9,compression_ratio=1)
+        result=self.w.clean_segments([segment])
+        self.assertEqual(result[0]['text'],'[Unclear radio]')
 
     def test_silence_and_loops_filtered(self):
         if not hasattr(self,'w'): self.skipTest('worker absent')

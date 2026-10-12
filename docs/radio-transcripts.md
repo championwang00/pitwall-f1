@@ -66,3 +66,11 @@ Cloud records take precedence over older bundled records. The API returns `trans
 Speaker identity is suspended after source research and a mixed-speaker calibration failure. The hourly workflow processes transcription and DeepSeek translation only. The API reports `voiceStatus: unavailable`; finished bilingual captions do not keep polling for missing identities. Unknown speech uses readable white, with no repeated identity-confirmation label. Text patterns and car-channel identifiers do not assign roles. Verified audio roles remain supported by the renderer, but none have been registered. See [source findings and retained experiment](radio-voice-plan.md).
 
 Regression checks cover cloud-over-bundle precedence, bilingual updates without refreshing, translation retries without losing English, audio-only role provenance, and stopping identity polling when reliable references are unavailable.
+
+## ASR quality upgrade (2026-10-12)
+
+Production now uses faster-whisper `large-v3` on CPU/int8, deterministic temperature 0, English language and F1 vocabulary, rather than `small.en`. `asrRevision: 4` makes all older model records eligible for automatic reprocessing. Newest finished sessions are first; each hourly run processes at most 16 clips with a 25-minute ASR budget checked between clips, so historical backfill is gradual. Files exceeding 300 seconds are rejected. The worker commits each success and failure state. Existing English/Chinese remains available if an upgrade fails. Successful ASR replaces the old record, discarding obsolete Chinese and voice data, and clears obsolete translation retry cooldowns.
+
+No numerical accuracy claim has been established. Segment mean log probability below -0.8 is treated conservatively as `[Unclear radio]`, not reliable speech; severe silence/loop/hallucination filters still apply. Chinese renders that marker as 【语音不清】. Confidence is a model heuristic, not a ground-truth correctness measurement.
+
+DeepSeek translations record a SHA-256 of the exact English text and timed segment source. Any source change automatically invalidates the translation and queues it again, independently of website deployment. Subtitle English and Chinese now use the same white colour in the list and player, including previously spoken lines and after playback. Speaker classification and role labels remain suspended.

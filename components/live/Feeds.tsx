@@ -4,7 +4,7 @@ import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "rea
 import { Clock, useClockT } from "./clock";
 import { fmtTrackTime, lastAt, type Model } from "./model";
 import { rcZh, type RcKind } from "./names";
-import { speakers } from "./radioSpeaker";
+
 import Icon from "@/components/ui/Icon";
 import { radioPerson, type RadioPerson } from "./radioPeople";
 import { peekAll, txOf, unwant, useTxVersion, want } from "./radioTranscripts";
@@ -287,10 +287,8 @@ export function Radio({ model, clock }: { model: Model; clock: Clock }) {
                     <span className={`${s.rMeta} ${s.tech}`}>{lap ? `L${lap} · ` : ""}{fmtTrackTime(r.t, gmt).slice(0, 5)}</span>
                   </span>
                   {later ? <span className={s.rWait}>尚未播到 · 点击跳到这里</span> : tx.text ? (() => {
-                    // preview coloured by speaker too: driver = team colour, team = white
                     const segs = txOf(r.recording_url).t?.segments ?? [];
-                    const who = speakers(segs, [p.latin.split(" ")[0], p.last]);
-                    return <><span className={s.rText} lang="en">{segs.length ? segs.map((sg, k) => <span key={k} className={who[k] === "driver" ? s.rDriver : who[k] === "team" ? s.rTeamVoice : s.rVoiceUnknown}>{sg.text} </span>) : tx.text}</span><span className={s.rTextZh} lang="zh">{txOf(r.recording_url).t?.textZh || "中文翻译正在生成…"}</span></>;
+                    return <><span className={s.rText} lang="en">{segs.length ? segs.map((sg, k) => <span key={k} className={s.rSubtitle}>{sg.text} </span>) : tx.text}</span><span className={s.rTextZh} lang="zh">{txOf(r.recording_url).t?.textZh || "中文翻译正在生成…"}</span></>;
                   })() : <span className={s.rWait}>{tx.status}</span>}
                 </span>
                 <span className={s.rPlay}><Icon name={on && playing ? "pause" : "play"} size={12} /></span>
@@ -348,7 +346,6 @@ function RadioCard({ clip, person, color, acr, year, lap, pos, time, playing, en
 
   const segs = tx.st === "done" ? tx.t!.segments : [];
   // Driver speech uses team colour; engineer speech uses white, including after playback.
-  const who = speakers(segs, [person.latin.split(" ")[0], person.last]);
   // reveal the transcript in time with the clip; inside a segment, word by word across its span
   const shownAll = ended;
   const lines = segs.map((sg, i) => {
@@ -388,9 +385,8 @@ function RadioCard({ clip, person, color, acr, year, lap, pos, time, playing, en
       </div>
       <div className={s.rCaption} lang="en" aria-live="polite">
         {tx.st === "done" && segs.length > 0 && visible.map((l) => (
-          <div key={l.i} className={`${l.past ? s.rPast : ""} ${who[l.i] === "driver" ? s.rDriver : who[l.i] === "team" ? s.rTeamVoice : s.rVoiceUnknown}`}>
-            {who[l.i] !== "unknown" && <small className={s.rVoiceLabel} lang="zh">{who[l.i] === "driver" ? "车手" : "车队"}</small>}
-            <p lang="en">{l.words.map((w, k) => <span key={k} className={k < l.n ? undefined : s.rAhead}>{w} </span>)}</p>
+          <div key={l.i} className={s.rSubtitle}>
+            <p lang="en">{l.words.map((w, k) => <span key={k} >{w} </span>)}</p>
             <p className={s.rTranslation} lang="zh">{segs[l.i].zh || "中文翻译正在生成…"}</p>
           </div>
         ))}

@@ -12,6 +12,14 @@ on:
         description: 'Optional season year; blank uses current UTC year'
         required: false
         type: string
+      clip_limit:
+        description: 'ASR batch size; use 1 for a cloud quality smoke check'
+        required: false
+        default: '16'
+        type: choice
+        options:
+          - '16'
+          - '1'
       retry_failed:
         description: 'Retry failed clips immediately; completed clips stay unchanged'
         required: false
@@ -28,6 +36,7 @@ jobs:
     timeout-minutes: 45
     env:
       RADIO_AUDIO_PROXY: https://pitwall-f1-nine.vercel.app/api/radio/audio
+      INPUT_CLIP_LIMIT: ${{ inputs.clip_limit || '16' }}
       INPUT_RETRY_FAILED: ${{ github.event_name == 'workflow_dispatch' && inputs.retry_failed }}
     steps:
       - uses: actions/checkout@v4
@@ -57,17 +66,17 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.cache/huggingface
-          key: radio-whisper-small-en-v1
+          key: radio-whisper-large-v3-v4
       - name: Install speech engine only when audio is pending
         if: steps.discover.outputs.has_work == 'true'
         run: |
           sudo apt-get update -qq
           sudo apt-get install -y ffmpeg
           python -m pip install -r scripts/cloud-radio-requirements.txt
-      - name: Transcribe up to 80 clips
+      - name: Upgrade or transcribe up to 16 clips
         if: steps.discover.outputs.has_work == 'true'
         run: |
-          args=(--data-dir "$RUNNER_TEMP/radio-data" --from-queue --limit 80)
+          args=(--data-dir "$RUNNER_TEMP/radio-data" --from-queue --limit "$INPUT_CLIP_LIMIT")
           if [ "$INPUT_RETRY_FAILED" = "true" ]; then args+=(--retry-failed); fi
           python scripts/cloud-radio-transcripts.py "${args[@]}"
       - name: Discover captions missing Chinese

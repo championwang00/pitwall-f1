@@ -17,6 +17,12 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 
 MAX_BYTES = 8 * 1024 * 1024
+ASR_MODEL = 'large-v3'
+ASR_REVISION = 4
+
+def current_asr(tx):
+    return isinstance(tx,dict) and tx.get('asrRevision') == ASR_REVISION and tx.get('model') == 'faster-whisper/'+ASR_MODEL
+
 API = 'https://api.openf1.org/v1/'
 PUBLIC_AUDIO_PROXY = 'https://pitwall-f1-nine.vercel.app/api/radio/audio'
 # Vocabulary only: spellings help recognition without supplying claims or scripted radio lines.
@@ -99,7 +105,7 @@ def discover(root,year,session=None,now=None,get=get_json,retry_failed=False):
             time.sleep(0.35)
         for r in rows:
             url=r['recording_url']; pack=load_pack(root,url)
-            if url in pack.get('transcripts',{}): continue
+            if current_asr(pack.get('transcripts',{}).get(url)): continue
             retry=parse_date(pack.get('failures',{}).get(url,{}).get('retryAt'))
             if retry and retry>now and not retry_failed: continue
             queue.append({'url':url,'sessionKey':s['session_key']})
@@ -120,7 +126,7 @@ def clean_segments(segments):
         if not text or not norm or norm==last or re.fullmatch(r'(you|thank you|thank you for watching|thanks|thanks for watching)',norm): continue
         if re.search(r'[^\x00-\u024f\u2018-\u201d\u2026]',text): continue
         if not (0<=s.start<=s.end): continue
-        out.append({'start':round(s.start,2),'end':round(s.end,2),'text':text}); last=norm
+        out.append({'start':round(s.start,2),'end':round(s.end,2),'text':'[Unclear radio]' if s.avg_logprob < -0.8 else text}); last=norm
     return out
 
 def prepare_audio(file):
@@ -162,30 +168,33 @@ class Transcriber:
         with tempfile.TemporaryDirectory(prefix='cloud-radio-') as d:
             file=pathlib.Path(d)/'clip.mp3'
             download_audio(url,file)
-            segments,_=self.model.transcribe(str(prepare_audio(file)),language='en',beam_size=5,vad_filter=True,condition_on_previous_text=False,word_timestamps=True,initial_prompt=F1_VOCABULARY)
+            segments,info=self.model.transcribe(str(prepare_audio(file)),language='en',beam_size=5,temperature=0,vad_filter=True,condition_on_previous_text=False,word_timestamps=True,initial_prompt=F1_VOCABULARY)
+            if info.duration > 300: raise ValueError('radio clip exceeds 300 seconds')
             lines=clean_segments(segments)
-            return {'text':' '.join(s['text'] for s in lines),'segments':lines,'model':f'faster-whisper/{self.name}','at':iso(),'v':3}
+            return {'text':' '.join(s['text'] for s in lines),'segments':lines,'model':f'faster-whisper/{self.name}','at':iso(),'v':3,'asrRevision':ASR_REVISION}
 
 class BatchTranscriptionError(RuntimeError):
     def __init__(self,attempted,success):
         self.attempted=attempted; self.success=success
         super().__init__(f'All {attempted} attempted clips failed; retry state was saved')
 
-def process_queue(root,queue,limit,transcribe,retry_failed=False):
-    success=0; attempted=0; seen=set()
+def process_queue(root,queue,limit,transcribe,retry_failed=False,budget_seconds=1500):
+    success=0; attempted=0; seen=set(); started=time.monotonic()
     for item in queue:
         url=item['url']
         if url in seen or not valid_url(url): continue
         seen.add(url); pack=load_pack(root,url)
-        if url in pack.get('transcripts',{}): continue
+        if current_asr(pack.get('transcripts',{}).get(url)): continue
         retry=parse_date(pack.get('failures',{}).get(url,{}).get('retryAt'))
         if retry and retry>utcnow() and not retry_failed: continue
-        if attempted>=limit: break
+        if attempted>=limit or time.monotonic()-started>=budget_seconds: break
         attempted+=1; pack['sessionKey']=item.get('sessionKey')
         try:
             tx=transcribe(url)
             pack.setdefault('transcripts',{})[url]=tx
             pack.setdefault('failures',{}).pop(url,None)
+            pack.setdefault('translationFailures',{}).pop(url,None)
+            pack.setdefault('voiceFailures',{}).pop(url,None)
             success+=1
             print(f'[{attempted}/{limit}] {url.rsplit("/",1)[-1]}: {tx["text"][:100]}',flush=True)
         except Exception as e:
@@ -216,8 +225,8 @@ def main():
     p.add_argument('--discover-only',action='store_true')
     p.add_argument('--dry-run',action='store_true')
     p.add_argument('--from-queue',action='store_true',help='Use previously discovered queue without another API scan')
-    p.add_argument('--limit',type=int,default=80)
-    p.add_argument('--model',default='small.en')
+    p.add_argument('--limit',type=int,default=16)
+    p.add_argument('--model',default=ASR_MODEL)
     p.add_argument('--retry-failed',action='store_true',help='Manual recovery: retry failed clips immediately, ignoring cooldown; completed clips are still skipped')
     p.add_argument('--seed',type=pathlib.Path)
     args=p.parse_args(); root=args.data_dir; root.mkdir(parents=True,exist_ok=True)
