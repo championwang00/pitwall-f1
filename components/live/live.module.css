@@ -480,4 +480,4 @@
 .rVoiceLabel { display: block; font: 400 11px/1.5 var(--font-cn); margin-bottom: 3px; opacity: .75; color: #aeb8ce; }
 
 /* Bilingual radio speech shares one readable colour at every playback stage. */
-.rSubtitle { color: #fff; }
+.rSubtitle, .rText { color: #fff; }
