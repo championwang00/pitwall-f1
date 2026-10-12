@@ -20,7 +20,8 @@ async function pack(key: string, fetcher: typeof fetch): Promise<Pack> {
   if (current) return current;
   const promise = (async () => {
     try {
-      const r = await fetcher(`${BASE}${key}.json`, { cache: "no-store", signal: AbortSignal.timeout(8000) });
+      // Bypass an older GitHub CDN copy when our five-minute cache refreshes.
+      const r = await fetcher(`${BASE}${key}.json?v=${Date.now()}`, { cache: "no-store", signal: AbortSignal.timeout(8000) });
       if (!r.ok && r.status !== 404) throw new Error(`cloud radio ${r.status}`);
       const value = r.status === 404 ? { version: 1, transcripts: {} } : await r.json() as Pack;
       if (value.version !== 1 || !value.transcripts || typeof value.transcripts !== "object") throw new Error("invalid cloud radio pack");
