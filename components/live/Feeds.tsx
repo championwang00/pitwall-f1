@@ -288,7 +288,7 @@ export function Radio({ model, clock }: { model: Model; clock: Clock }) {
                     // preview coloured by speaker too: driver = team colour, team = white
                     const segs = txOf(r.recording_url).t?.segments ?? [];
                     const who = speakers(segs, [p.latin.split(" ")[0], p.last]);
-                    return <span className={s.rText} lang="en">{segs.length ? segs.map((sg, k) => <span key={k} className={who[k] === "driver" ? s.rDriver : s.rTeamVoice}>{sg.text} </span>) : tx.text}</span>;
+                    return <><span className={s.rText} lang="en">{segs.length ? segs.map((sg, k) => <span key={k} className={who[k] === "driver" ? s.rDriver : who[k] === "team" ? s.rTeamVoice : s.rUnknown}>{sg.text} </span>) : tx.text}</span><span className={s.rTextZh} lang="zh">{txOf(r.recording_url).t?.textZh || "中文翻译正在生成…"}</span></>;
                   })() : <span className={s.rWait}>{tx.status}</span>}
                 </span>
                 <span className={s.rPlay}><Icon name={on && playing ? "pause" : "play"} size={12} /></span>
@@ -345,7 +345,7 @@ function RadioCard({ clip, person, color, acr, year, lap, pos, time, playing, en
   }, [analyser, audio]);
 
   const segs = tx.st === "done" ? tx.t!.segments : [];
-  // driver's own voice in his team colour, the team (engineer) in white — user rule; speaker is phrase-inferred
+  // Only verified identities receive driver/team colours; uncertain speech stays neutral.
   const who = speakers(segs, [person.latin.split(" ")[0], person.last]);
   // reveal the transcript in time with the clip; inside a segment, word by word across its span
   const shownAll = ended;
@@ -386,9 +386,10 @@ function RadioCard({ clip, person, color, acr, year, lap, pos, time, playing, en
       </div>
       <div className={s.rCaption} lang="en" aria-live="polite">
         {tx.st === "done" && segs.length > 0 && visible.map((l) => (
-          <p key={l.i} className={`${l.past ? s.rPast : ""} ${who[l.i] === "driver" ? s.rDriver : s.rTeamVoice}`}>
-            {l.words.map((w, k) => <span key={k} className={k < l.n ? undefined : s.rAhead}>{w} </span>)}
-          </p>
+          <div key={l.i} className={`${l.past ? s.rPast : ""} ${who[l.i] === "driver" ? s.rDriver : who[l.i] === "team" ? s.rTeamVoice : s.rUnknown}`}>
+            <p lang="en">{l.words.map((w, k) => <span key={k} className={k < l.n ? undefined : s.rAhead}>{w} </span>)}</p>
+            <p className={s.rTranslation} lang="zh">{segs[l.i].zh || "中文翻译正在生成…"}</p>
+          </div>
         ))}
         {tx.st === "done" && segs.length > 0 && !visible.length && <p className={s.rHint}>…</p>}
         {tx.st === "done" && !segs.length && <p className={s.rHint} lang="zh">未识别出清晰语音</p>}
@@ -400,7 +401,7 @@ function RadioCard({ clip, person, color, acr, year, lap, pos, time, playing, en
         <span className={s.rTrack}><i ref={bar} /></span>
         <span className={s.tech}>{mmss(ct)} / {mmss(dur)}</span>
       </div>
-      <p className={s.rNote} lang="zh"><i className={s.rKeyDriver} />车手 <i className={s.rKeyTeam} />车队 · 说话人为自动推断 · 英文原声，自动转写，仅供参考</p>
+      <p className={s.rNote} lang="zh"><i className={s.rKeyDriver} />已确认车手 <i className={s.rKeyTeam} />已确认车队 · 灰色表示身份未确认 · 自动转写与翻译，仅供参考</p>
     </div>
   );
 }

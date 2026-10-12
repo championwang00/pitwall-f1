@@ -471,3 +471,8 @@
 .rSep { list-style: none; padding: 10px 12px 4px; font: 700 11px/14px var(--font-cn); color: rgba(255,255,255,.45); letter-spacing: .04em; }
 .rAhead { opacity: .45; transition: opacity .15s; }
 .rAhead:hover, .rAhead:focus-visible { opacity: .85; }
+
+.rUnknown { color: var(--t-2); }
+.rTextZh { display: block; font: 400 12px/1.5 var(--font-cn); color: var(--t-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 3px; }
+.rTranslation { font: 400 14px/1.6 var(--font-cn); margin-top: 4px; }
+.rCaption > div + div { margin-top: 10px; }

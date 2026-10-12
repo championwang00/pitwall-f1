@@ -59,4 +59,17 @@ client.want('reattach-test'); client.unwant('reattach-test'); client.want('reatt
 await new Promise(r=>setTimeout(r,20));
 assert.equal(client.txOf('reattach-test').st,'done','a visible row reattached during abort restarts its request');
 client.unwant('reattach-test'); globalThis.fetch=realFetch;
+const {speakers}=await import('../components/live/radioSpeaker.ts');
+assert.deepEqual(speakers([{text:'Box, box.'},{text:'I have no grip.',speaker:'driver',spk:'voice'},{text:'Copy.',speaker:'team',speakerSource:'verified'}]),['unknown','unknown','team']);
+let translationCalls=0;
+globalThis.fetch=async()=>{translationCalls++;return Response.json(translationCalls===1 ? {...t,translationStatus:'pending',retryAfter:0.01} : {...t,textZh:'进站，进站。',segments:[{...t.segments[0],zh:'进站，进站。'}],translationStatus:'complete'});};
+client.want('translation-test');await new Promise(r=>setTimeout(r,30));
+assert.equal(client.txOf('translation-test').st,'done');assert.equal(client.txOf('translation-test').t.text,t.text,'English stays visible during translation');
+await new Promise(r=>setTimeout(r,1100));assert.equal(client.txOf('translation-test').t.textZh,'进站，进站。','Chinese arrives without page refresh');client.unwant('translation-test');
+// A translated cloud record must override the older English-only bundled record.
+Date.now=()=>now()+601000;
+globalThis.fetch=async()=>Response.json({version:1,transcripts:{[existing]:{...bundle[existing],textZh:'云端更新',translationVersion:1,segments:bundle[existing].segments.map(s=>({...s,zh:'中文'}))}}});
+const enriched=await GET(new Request('https://local/api/radio/transcript?url='+encodeURIComponent(existing)));
+assert.equal((await enriched.json()).textZh,'云端更新');assert.equal(enriched.headers.get('cache-control'),'no-store');
+Date.now=now;globalThis.fetch=realFetch;
 console.log('PASS: cloud packs, URL boundaries, deployed cache and pending polling');

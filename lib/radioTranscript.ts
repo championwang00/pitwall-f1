@@ -8,8 +8,8 @@ import os from "node:os";
 import path from "node:path";
 import { textScore } from "./radioSpeakerText";
 
-export type Segment = { start: number; end: number; text: string; speaker?: "driver" | "team"; spk?: "voice" };
-export type Transcript = { text: string; segments: Segment[]; model: string; at: string; v: number };
+export type Segment = { start: number; end: number; text: string; zh?: string; speaker?: "driver" | "team"; speakerSource?: "verified"; spk?: "voice" };
+export type Transcript = { text: string; textZh?: string; translationVersion?: number; segments: Segment[]; model: string; at: string; v: number };
 /** Format of newly generated transcripts; readable older records remain available. */
 const VERSION = 3; // v3: sentence-level lines + speaker (voice clustering within the clip, labelled by phrasing)
 

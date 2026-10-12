@@ -1,8 +1,8 @@
 "use client";
 import { useSyncExternalStore } from "react";
 
-export type Segment = { start: number; end: number; text: string };
-export type Transcript = { text: string; segments: Segment[] };
+export type Segment = { start: number; end: number; text: string; zh?: string; speaker?: string; speakerSource?: string };
+export type Transcript = { text: string; textZh?: string; segments: Segment[]; translationStatus?: "pending" | "complete" };
 export type TxState = { st: "idle" | "queued" | "loading" | "pending" | "done" | "error"; t?: Transcript; retrying?: boolean };
 const MAX = 2;
 const store = new Map<string, TxState>();
@@ -17,6 +17,7 @@ const attempts = new Map<string, number>();
 const ctl = new Map<string, AbortController>();
 function emit() { version++; for (const f of subs) f(); }
 function set(url: string, v: TxState) { store.set(url, v); emit(); }
+function complete(url: string) { const x = txOf(url); return x.st === "done" && x.t?.translationStatus !== "pending"; }
 function active(url: string) { return visible.has(url) || urgentSet.has(url); }
 export function txOf(url: string): TxState { return store.get(url) ?? { st: "idle" }; }
 export function useTxVersion() {
@@ -24,7 +25,7 @@ export function useTxVersion() {
 }
 const peeked = new Set<string>();
 export async function peekAll(urls: string[]) {
-  const todo = urls.filter(u => !peeked.has(u) && txOf(u).st !== "done");
+  const todo = urls.filter(u => !peeked.has(u) && !complete(u));
   todo.forEach(u => peeked.add(u));
   for (let i = 0; i < todo.length; i += 200) {
     const batch = todo.slice(i, i + 200);
@@ -35,6 +36,7 @@ export async function peekAll(urls: string[]) {
       for (const [u, t] of Object.entries(data)) if (t && typeof t.text === "string" && Array.isArray(t.segments)) {
         clearTimeout(timers.get(u)); timers.delete(u);
         set(u, { st: "done", t });
+        if (t.translationStatus === "pending") retry(u, 30);
       }
     } catch { batch.forEach(u => peeked.delete(u)); }
   }
@@ -46,50 +48,51 @@ function retry(url: string, after: number) {
   const delay = Math.min(120, Math.max(1, after) * Math.min(4, 2 ** (n - 1)));
   timers.set(url, setTimeout(() => {
     timers.delete(url);
-    if (active(url) && txOf(url).st !== "done") enqueue(url);
+    if (active(url) && !complete(url)) enqueue(url);
   }, delay * 1000));
 }
 function load(url: string) {
   const c = new AbortController();
   ctl.set(url, c); running++;
-  set(url, { st: "loading" });
+  if (txOf(url).st !== "done") set(url, { st: "loading" });
   fetch(`/api/radio/transcript?url=${encodeURIComponent(url)}${urgentSet.has(url) ? "&p=1" : ""}`, { signal: c.signal })
     .then(async r => {
       const data = await r.json();
-      if (c.signal.aborted || txOf(url).st === "done") return;
+      if (c.signal.aborted || complete(url)) return;
       if (r.status === 202) {
-        set(url, { st: "pending", retrying: data.status === "retrying" });
+        if (txOf(url).st !== "done") set(url, { st: "pending", retrying: data.status === "retrying" });
         retry(url, Number(data.retryAfter) || Number(r.headers.get("retry-after")) || 30);
         return;
       }
       if (!r.ok || typeof data.text !== "string" || !Array.isArray(data.segments)) throw new Error(String(r.status));
-      attempts.delete(url); set(url, { st: "done", t: data });
+      set(url, { st: "done", t: data });
+      if (data.translationStatus === "pending") retry(url, Number(data.retryAfter) || 30); else attempts.delete(url);
     })
-    .catch(() => { if (!c.signal.aborted && txOf(url).st !== "done") { set(url, { st: "error" }); retry(url, 30); } })
+    .catch(() => { if (!c.signal.aborted && !complete(url)) { if (txOf(url).st !== "done") set(url, { st: "error" }); retry(url, 30); } })
     .finally(() => {
       running--;
       if (ctl.get(url) === c) ctl.delete(url);
-      if (c.signal.aborted && active(url) && txOf(url).st !== "done") enqueue(url);
+      if (c.signal.aborted && active(url) && !complete(url)) enqueue(url);
       pump();
     });
 }
 function pump() {
   while (running < MAX && queue.length) {
     const url = queue.shift()!;
-    if (active(url) && txOf(url).st !== "done") load(url);
+    if (active(url) && !complete(url)) load(url);
   }
 }
 function enqueue(url: string) {
-  if (txOf(url).st === "done" || ctl.has(url)) return;
+  if (complete(url) || ctl.has(url)) return;
   const i = queue.indexOf(url);
   if (i >= 0) queue.splice(i, 1);
   if (urgentSet.has(url)) queue.unshift(url); else queue.push(url);
-  set(url, { st: "queued" }); pump();
+  if (txOf(url).st !== "done") set(url, { st: "queued" }); pump();
 }
 /** Visible rows and the open audio card retain polling until they leave the screen. */
 export function want(url: string, urgent = false) {
   if (urgent) urgentSet.add(url); else visible.add(url);
-  if (txOf(url).st === "done" || ctl.has(url) || timers.has(url)) return;
+  if (complete(url) || ctl.has(url) || timers.has(url)) return;
   enqueue(url);
 }
 export function unwant(url: string, urgent = false) {
