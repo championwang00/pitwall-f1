@@ -197,6 +197,14 @@ class CloudRadioTests(unittest.TestCase):
         self.assertEqual(result[0]['text'],'[Unclear radio]')
         self.assertEqual(result[1]['text'],'Copy.')
 
+    def test_single_disputed_word_is_marked_not_silently_published(self):
+        raw=[{'start':0,'end':4,'text':"For Plan C, we need to pick up the pizza. We're dropping off."}]
+        filtered=[{'start':0,'end':4,'text':"For Plan C, we need to pick up the pace. We're dropping off."}]
+        result=self.w.agreed_segments(raw,filtered)
+        self.assertNotIn('pizza',result[0]['text'])
+        self.assertIn('[Unclear radio]',result[0]['text'])
+        self.assertIn('For Plan C',result[0]['text'])
+
     def test_low_confidence_is_not_presented_as_certain_speech(self):
         from types import SimpleNamespace
         segment=SimpleNamespace(text='heat soap side of pedals',start=0,end=2,no_speech_prob=0,avg_logprob=-0.9,compression_ratio=1)

@@ -19,7 +19,7 @@ from datetime import datetime, timedelta, timezone
 
 MAX_BYTES = 8 * 1024 * 1024
 ASR_MODEL = 'large-v3'
-ASR_REVISION = 5
+ASR_REVISION = 6
 
 def current_asr(tx):
     return isinstance(tx,dict) and tx.get('asrRevision') == ASR_REVISION and tx.get('model') == 'faster-whisper/'+ASR_MODEL
@@ -143,7 +143,21 @@ def agreed_segments(primary,reference):
     result=[]
     for segment,(start,end) in zip(primary,spans):
         agreement=sum(i in matches for i in range(start,end))/max(1,end-start)
-        result.append({**segment,'text':segment['text'] if agreement>=0.85 else '[Unclear radio]'})
+        text=segment['text']
+        if agreement<0.85:
+            text='[Unclear radio]'
+        elif agreement<1:
+            # Even one disputed word can change strategy meaning: pizza vs pace.
+            positions=list(re.finditer(r'[a-z0-9]+',text,re.I))
+            disputed=[j for j in range(len(positions)) if start+j not in matches]
+            groups=[]
+            for j in disputed:
+                if groups and j==groups[-1][-1]+1: groups[-1].append(j)
+                else: groups.append([j])
+            for group in reversed(groups):
+                a=positions[group[0]].start(); b=positions[group[-1]].end()
+                text=text[:a]+'[Unclear radio]'+text[b:]
+        result.append({**segment,'text':text})
     return result
 
 def prepare_audio(file):
@@ -194,7 +208,7 @@ class Transcriber:
             segments,_=self.model.transcribe(str(prepared),**options)
             filtered=clean_segments(segments)
             lines=agreed_segments(raw,filtered)
-            return {'text':' '.join(s['text'] for s in lines),'segments':lines,'model':f'faster-whisper/{self.name}','at':iso(),'v':3,'asrRevision':ASR_REVISION,'asrChecks':{'rawText':' '.join(s['text'] for s in raw),'filteredText':' '.join(s['text'] for s in filtered)}}
+            return {'text':' '.join(s['text'] for s in lines),'segments':lines,'model':f'faster-whisper/{self.name}','at':iso(),'v':3,'asrRevision':ASR_REVISION,'asrChecks':{'rawSegments':raw,'filteredSegments':filtered,'rawText':' '.join(s['text'] for s in raw),'filteredText':' '.join(s['text'] for s in filtered)}}
 
 class BatchTranscriptionError(RuntimeError):
     def __init__(self,attempted,success):
