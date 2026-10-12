@@ -1,7 +1,5 @@
-import { speakers as inferSpeakers, type Speaker } from "@/lib/radioSpeakerText";
-export type { Speaker };
-/** Keep the driver/team colour convention; verified roles override contextual automatic inference. */
-export function speakers(segments: { text: string; speaker?: string; speakerSource?: string }[], names: string[] = []): Speaker[] {
-  const inferred = inferSpeakers(segments, names);
-  return segments.map((s,i) => s.speakerSource === "verified" && (s.speaker === "driver" || s.speaker === "team") ? s.speaker : inferred[i]);
+export type Speaker = "driver" | "team" | "unknown";
+/** Roles only come from audio matching against verified references, never subtitle wording. */
+export function speakers(segments: { speaker?: string; speakerSource?: string; voiceSimilarity?: number; voiceReferenceId?: string }[], _names: string[] = []): Speaker[] {
+  return segments.map(s => s.speakerSource === "audio" && !!s.voiceReferenceId && Number.isFinite(s.voiceSimilarity) && s.voiceSimilarity! >= 0.72 && (s.speaker === "driver" || s.speaker === "team") ? s.speaker : "unknown");
 }

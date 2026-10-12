@@ -290,7 +290,7 @@ export function Radio({ model, clock }: { model: Model; clock: Clock }) {
                     // preview coloured by speaker too: driver = team colour, team = white
                     const segs = txOf(r.recording_url).t?.segments ?? [];
                     const who = speakers(segs, [p.latin.split(" ")[0], p.last]);
-                    return <><span className={s.rText} lang="en">{segs.length ? segs.map((sg, k) => <span key={k} className={who[k] === "driver" ? s.rDriver : s.rTeamVoice}>{sg.text} </span>) : tx.text}</span><span className={s.rTextZh} lang="zh">{txOf(r.recording_url).t?.textZh || "中文翻译正在生成…"}</span></>;
+                    return <><span className={s.rText} lang="en">{segs.length ? segs.map((sg, k) => <span key={k} className={who[k] === "driver" ? s.rDriver : who[k] === "team" ? s.rTeamVoice : s.rVoiceUnknown}>{sg.text} </span>) : tx.text}</span><span className={s.rTextZh} lang="zh">{txOf(r.recording_url).t?.textZh || "中文翻译正在生成…"}</span></>;
                   })() : <span className={s.rWait}>{tx.status}</span>}
                 </span>
                 <span className={s.rPlay}><Icon name={on && playing ? "pause" : "play"} size={12} /></span>
@@ -388,7 +388,8 @@ function RadioCard({ clip, person, color, acr, year, lap, pos, time, playing, en
       </div>
       <div className={s.rCaption} lang="en" aria-live="polite">
         {tx.st === "done" && segs.length > 0 && visible.map((l) => (
-          <div key={l.i} className={`${l.past ? s.rPast : ""} ${who[l.i] === "driver" ? s.rDriver : s.rTeamVoice}`}>
+          <div key={l.i} className={`${l.past ? s.rPast : ""} ${who[l.i] === "driver" ? s.rDriver : who[l.i] === "team" ? s.rTeamVoice : s.rVoiceUnknown}`}>
+            <small className={s.rVoiceLabel} lang="zh">{who[l.i] === "driver" ? "车手" : who[l.i] === "team" ? "车队" : `${segs[l.i].voiceId?.replace("voice_", "声音 ") ?? "声音"} · 身份待确认`}</small>
             <p lang="en">{l.words.map((w, k) => <span key={k} className={k < l.n ? undefined : s.rAhead}>{w} </span>)}</p>
             <p className={s.rTranslation} lang="zh">{segs[l.i].zh || "中文翻译正在生成…"}</p>
           </div>
@@ -403,7 +404,7 @@ function RadioCard({ clip, person, color, acr, year, lap, pos, time, playing, en
         <span className={s.rTrack}><i ref={bar} /></span>
         <span className={s.tech}>{mmss(ct)} / {mmss(dur)}</span>
       </div>
-      <p className={s.rNote} lang="zh"><i className={s.rKeyDriver} />车手 <i className={s.rKeyTeam} />车队 · 说话人为自动推断 · 自动转写与翻译，仅供参考</p>
+      <p className={s.rNote} lang="zh"><i className={s.rKeyDriver} />车手 <i className={s.rKeyTeam} />车队 · 身份由声纹匹配，未匹配的标为待确认 · 自动字幕仅供参考</p>
     </div>
   );
 }
