@@ -47,6 +47,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: pip
+          cache-dependency-path: scripts/cloud-radio-requirements.txt
       - name: Open persistent data branch
         id: data
         run: |
@@ -74,11 +76,14 @@ jobs:
           path: ~/.cache/huggingface
           key: radio-whisper-large-v3-v4
       - name: Install speech engine only when audio is pending
+        timeout-minutes: 8
         if: steps.discover.outputs.has_work == 'true'
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y ffmpeg
-          python -m pip install -r scripts/cloud-radio-requirements.txt
+          if ! command -v ffmpeg >/dev/null; then
+            sudo apt-get update -qq -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20 -o Acquire::Retries=2
+            sudo apt-get install -y ffmpeg
+          fi
+          python -m pip install --timeout 30 --retries 2 -r scripts/cloud-radio-requirements.txt
       - name: Upgrade or transcribe up to 16 clips
         if: steps.discover.outputs.has_work == 'true'
         run: |
