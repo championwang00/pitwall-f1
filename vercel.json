@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "git": {
+    "deploymentEnabled": {
+      "codex/radio-transcripts": false,
+      "radio-transcripts": false,
+      "codex/editorial-news": false
+    }
+  }
+}
