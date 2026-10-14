@@ -6,8 +6,7 @@ import l from "./livepage.module.css";
 
 /**
  * The season's rounds as one horizontal strip (user: 左右滚动；中间定位到当前比赛，左边上一场，右边下一场).
- * Opens centred on `focus`; ‹ › arrows page by two cards; the mouse wheel scrolls it sideways while it can still move
- * that way, then hands the wheel back to the page (no scroll trap at either end).
+ * Opens centred on `focus`; arrows page by two cards. Vertical wheels remain page scrolling.
  */
 export default function RoundStrip({ children, focus }: { children: React.ReactNode; focus: number }) {
   const ref = useRef<HTMLOListElement>(null);
@@ -27,18 +26,9 @@ export default function RoundStrip({ children, focus }: { children: React.ReactN
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const wheel = (e: WheelEvent) => {
-      if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return; // trackpad sideways swipes scroll natively
-      const max = el.scrollWidth - el.clientWidth;
-      if ((e.deltaY > 0 && el.scrollLeft < max - 1) || (e.deltaY < 0 && el.scrollLeft > 1)) {
-        e.preventDefault();
-        el.scrollLeft += e.deltaY;
-      }
-    };
-    el.addEventListener("wheel", wheel, { passive: false });
     el.addEventListener("scroll", update, { passive: true });
     window.addEventListener("resize", update);
-    return () => { el.removeEventListener("wheel", wheel); el.removeEventListener("scroll", update); window.removeEventListener("resize", update); };
+    return () => { el.removeEventListener("scroll", update); window.removeEventListener("resize", update); };
   }, [update]);
 
   const page = (dir: 1 | -1) => {

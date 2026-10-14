@@ -130,6 +130,13 @@ def build(source,items,catalog,root):
         ids=[d for d in x.get('driverIds',[]) if d in drivers];team=x.get('teamId') if x.get('teamId') in teams else None
         race=next((r for r in catalog['races'] if r['gp']==x.get('gp') and r['year']==year),None)
         races=[r for r in catalog['races'] if r['year']==year and r['gp'] in set([x.get('gp')]+x.get('gps',[]))]
+        # Official team race URLs outrank the model's inferred race.
+        scoped=re.search(r'/formula-1/(\d{4})/([a-z-]+)-grand-prix/',urllib.parse.urlsplit(source['url']).path)
+        if scoped:
+            source_year=int(scoped.group(1));source_gp=scoped.group(2)
+            races=[r for r in races if r['year']==source_year and r['gp']==source_gp]
+            if race not in races:race=None
+
         note={'topic':'news-'+hashlib.sha256(source['url'].encode()).hexdigest()[:16]+'-'+str(i),'title':x['title'],'text':x['text'],'tag':{'social':'场外动态','equipment':'车手装备','livery':'新涂装'}[x['kind']], 'dimension':'personality' if x['kind']=='social' else 'visual','year':year,'publishedAt':source['publishedAt'],'temporal':'event','status':'confirmed','related':{'drivers':ids,'teams':[team] if team else [],'seasons':[year] if year else [],'races':[str(r['year'])+'/'+str(r['round']) for r in races]},'sources':[{'label':'F1 官方' if 'formula1.com' in source['url'] else '车队官方','url':source['url']}],'verifiedAt':datetime.datetime.now(datetime.timezone.utc).date().isoformat()}
         if x.get('socialUrl') in source['socialUrls']:note['sources'].append({'label':'社媒原帖','url':x['socialUrl']})
         index=x.get('imageIndex')

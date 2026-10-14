@@ -17,8 +17,8 @@ const honour = (label: string): Tone | null =>
   /连胜|赢得最多|胜场最多|统治力/.test(label) ? "gold" : /杆位最多/.test(label) ? "red" : /最快圈/.test(label) ? "purple" : null;
 
 /** On-air crib sheet: curated, web-verified notes first, then numbers computed from F1DB. */
-export default function TalkingPoints({ auto, notes = [], title = "解说要点", subject, more, records, skip, year, skipRace, chronological = false }: {
-  chronological?: boolean; auto: Talk[]; notes?: Note[]; title?: string; subject: string; more?: { href: string; label: string }; records?: Rec[];
+export default function TalkingPoints({ auto, notes = [], title = "解说要点", subject, more, records, skip, year, skipRace, chronological = false, masonry = false }: {
+  masonry?: boolean; chronological?: boolean; auto: Talk[]; notes?: Note[]; title?: string; subject: string; more?: { href: string; label: string }; records?: Rec[];
   /** Entity id of the page's own subject, so prose doesn't link back to the page it is on. */
   skip?: string;
   /** the page's year context: names open their ?year= slice, a bare "XX大奖赛" that year's race (lib/linkify) */
@@ -31,7 +31,7 @@ export default function TalkingPoints({ auto, notes = [], title = "解说要点"
   if (!items.length) return null;
   const plain = commentaryText(notes, auto) + (records?.length ? "\n【纪录簿】" + records.map((r) => `${r.label}：${r.value}${r.who ? "（" + r.who + "）" : ""}${r.when ? " " + r.when : ""}`).join("；") + "\n来源：F1DB https://github.com/f1db/f1db" : "");
   return (
-    <section className={`${s.band} ${items.some(i => i.curated && i.photo) ? s.withPhotos : ""}`}>
+    <section className={`${s.band} ${masonry ? s.masonry : ""} ${items.some(i => i.curated && i.photo) ? s.withPhotos : ""}`}>
       <div className="wrap">
         <div className={s.head}>
           <div>
@@ -64,8 +64,8 @@ export default function TalkingPoints({ auto, notes = [], title = "解说要点"
           const [first, ...rest] = items;
           return (
             <div className={s.layout}>
-              <ol className={s.leadCol}>{render(first, 0, true)}</ol>
-              <ol className={s.grid}>{rest.map((it, i) => render(it, i + 1))}</ol>
+              {!masonry && <ol className={s.leadCol}>{render(first, 0, true)}</ol>}
+              <ol className={s.grid}>{(masonry ? items : rest).map((it, i) => render(it, masonry ? i : i + 1))}</ol>
             </div>
           );
         })()}

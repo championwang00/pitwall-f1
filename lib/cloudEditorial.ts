@@ -25,3 +25,11 @@ export async function ensureFreshEditorial(fetcher: typeof fetch = fetch): Promi
 export function recentNews(year: number, now=Date.now()): Note[] {
   return cloudNotes().filter(n=>n.year===year && n.publishedAt && Date.parse(n.publishedAt)<=now && now-Date.parse(n.publishedAt)<=45*86400000).sort((a,b)=>(b.publishedAt??'').localeCompare(a.publishedAt??''));
 }
+
+/** Publication recency cannot establish which race a story belongs to. */
+export function liveNews(year: number, round: number | null, now=Date.now(), entries: Note[]=cloudNotes()): { race: Note[]; social: Note[] } {
+  const recent=entries.filter(n=>n.year===year && n.publishedAt && Date.parse(n.publishedAt)<=now && now-Date.parse(n.publishedAt)<=45*86400000 && (!n.validUntil || Date.parse(n.validUntil)>=now));
+  const race=round===null ? [] : recent.filter(n=>(n.race?.year===year && n.race.round===round) || n.related?.races?.includes(`${year}/${round}`));
+  const social=recent.filter(n=>n.tag==='场外动态' && !n.race && !n.gp && !n.related?.races?.length);
+  return {race,social};
+}

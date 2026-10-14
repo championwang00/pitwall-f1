@@ -1,5 +1,5 @@
 import TalkingPoints from "@/components/entity/TalkingPoints";
-import { recentNews } from "@/lib/cloudEditorial";
+import { liveNews } from "@/lib/cloudEditorial";
 import { raceFinished } from "@/lib/raceStatus";
 import Link from "next/link";
 import { Suspense, ViewTransition } from "react";
@@ -228,6 +228,7 @@ export default function LivePage({ st, panel }: { st: LiveState; panel: PanelPro
   const off = st.phase === "offseason" || !next;
   const standings = driverStandingsAfter(st.lastRace.year);
   const archive = { href: `/races/${st.lastRace.year}/${st.lastRace.round}`, label: "看这一站的档案" };
+  const news = liveNews(st.year, off ? null : next.round);
   return (
     <ViewTransition enter="page" exit="page" default="none">
       <div data-page="live" data-phase={st.phase} className={l.page}>
@@ -247,7 +248,8 @@ export default function LivePage({ st, panel }: { st: LiveState; panel: PanelPro
           </Suspense>
         )}
         {((live && st.liveFeed) || panel.focus) && <div className={l.panelTop}><Panel {...panel} archive={archive} /></div>}
-        <TalkingPoints chronological auto={[]} notes={recentNews(st.year)} title="赛前动态" subject="车手装备 · 特别涂装 · 场外故事与社媒" year={st.year} />
+        {!off && (news.race.length ? <TalkingPoints masonry chronological auto={[]} notes={news.race} title={`${gpZh(next.grand_prix_id)} · 赛前动态`} subject="仅收录明确属于本站的装备、涂装与围场信息" year={st.year} /> : <section className={l.newsEmpty}><div className="wrap"><h2>{gpZh(next.grand_prix_id)} · 赛前动态</h2><p>暂未收录本站已确认的装备与涂装更新，官方发布后会自动补充。</p></div></section>)}
+        <TalkingPoints masonry chronological auto={[]} notes={news.social} title="近期车手动态" subject="公开社媒与场外故事 · 不代表本站装备或涂装" year={st.year} />
         <RoundCards year={st.year} schedule={st.schedule} title={<><EntityLink kind="year" id={String(st.year)} className="hlink">{st.year}</EntityLink> 赛季 · 全部分站</>} nextRound={off ? null : next.round} weekend={st.phase === "live" || st.phase === "weekend"} />
       </div>
     </ViewTransition>

@@ -17,6 +17,12 @@ class NewsTests(unittest.TestCase):
  def test_correct_race_and_no_invented_entity(self):
   with tempfile.TemporaryDirectory() as d:
    notes,liveries=m.build(self.source,[self.item],self.catalog,pathlib.Path(d));self.assertEqual(notes[0]['related']['drivers'],['driver']);self.assertEqual(liveries[0]['rounds'],[17])
+ def test_official_race_url_overrides_model(self):
+  source={**self.source,'url':'https://www.mclaren.com/racing/formula-1/2026/singapore-grand-prix/spotted-in-the-paddock/'}
+  catalog={**self.catalog,'races':self.catalog['races']+[{'year':2026,'round':18,'gp':'united-states'}]}
+  with tempfile.TemporaryDirectory() as d:
+   notes,liveries=m.build(source,[dict(self.item,gp='united-states')],catalog,pathlib.Path(d))
+   self.assertEqual(notes[0]['related']['races'],[]);self.assertEqual(liveries,[])
  def test_historical_livery_never_becomes_current(self):
   with tempfile.TemporaryDirectory() as d:
    notes,liveries=m.build(self.source,[dict(self.item,eventYear=2025)],self.catalog,pathlib.Path(d));self.assertEqual(liveries,[]);self.assertEqual(notes[0]['related']['races'],[])

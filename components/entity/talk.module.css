@@ -78,3 +78,9 @@
 .withPhotos .lead h3 { font-size:26px !important; }
 .withPhotos .item h3 { font-size:19px; }
 @media (max-width:960px) { .withPhotos .lead h3 { font-size:22px !important; } }
+
+.masonry .layout { display:block; }
+.masonry .grid { display:block; columns:3; column-gap:8px; }
+.masonry .item { break-inside:avoid; margin-bottom:8px; }
+@media (max-width:960px) { .masonry .grid { columns:2; } }
+@media (max-width:600px) { .masonry .grid { columns:1; } }

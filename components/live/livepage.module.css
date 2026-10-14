@@ -103,7 +103,7 @@
 @media (max-width: 960px) { .placeFit { font-size: min(64px, calc((100vw - 40px) / (1.45 * var(--len)))) !important; } }
 .head .kicker { margin-bottom: 6px; }
 
-/* season rounds strip (RoundStrip): one row, centred on the current race, arrows + wheel */
+/* season rounds strip (RoundStrip): one row, centred on the current race, arrows + touch */
 .stripWrap { position: relative; margin: 0 calc(-1 * var(--gutter)); }
 /* the scroller clips overflow: 20px top / 44px bottom room for the ring, the lift and the drop shadow, given back by margins */
 .strip { position: relative; list-style: none; margin: -12px 0 -28px; padding: 20px var(--gutter) 44px; display: grid; grid-auto-flow: column; grid-auto-columns: minmax(300px, 340px); gap: 24px; overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none; overscroll-behavior-x: contain; }
@@ -119,3 +119,7 @@
 .stripPrev { left: calc(var(--gutter) / 2 - 6px); }
 .stripNext { right: calc(var(--gutter) / 2 - 6px); }
 @media (prefers-reduced-motion: reduce) { .stripArrow { transition: none; } }
+
+.newsEmpty { padding:48px 0 0; }
+.newsEmpty h2 { font-size:24px; font-weight:900; }
+.newsEmpty p { margin-top:12px; color:var(--mute); line-height:1.75; }
