@@ -1,7 +1,7 @@
 import type { Note } from './content';
 import type { Talk } from './talk';
 
-const ORDER = ['冠军形势','周末前瞻','近期状态','新涂装','涂装故事','特别头盔','头盔故事','场外故事','人物关系','队内关系','职业动向','技术变化','策略看点','轮胎策略','策略复盘','驾驶看点','最近一次','故事线','下一站','现役','历史回声','里程碑','纪录','数字','冷知识','赛前档案'];
+const ORDER = ['冠军形势','周末前瞻','近期状态','新涂装','涂装故事','车手装备','特别头盔','头盔故事','场外动态','场外故事','人物关系','队内关系','职业动向','技术变化','策略看点','轮胎策略','策略复盘','驾驶看点','最近一次','故事线','下一站','现役','历史回声','里程碑','纪录','数字','冷知识','赛前档案'];
 const order = (tag: string) => { const i = ORDER.indexOf(tag); return i < 0 ? ORDER.length : i; };
 function similar(a: string, b: string) {
   const grams = (t: string) => { const g = new Set<string>(), x = t.replace(/\s|[，。、：；·（）()]/g, ''); for (let i=0;i<x.length-1;i++) g.add(x.slice(i,i+2)); return g; };
@@ -35,10 +35,11 @@ export function mergeTalkingPoints(notes: Note[], auto: Talk[]): CommentaryItem[
   const items: CommentaryItem[] = [...unique.map(n=>({...n,curated:true as const})),...auto.filter(a=>!unique.some(n=>covered(a,n))).map(a=>({...a,curated:false as const}))];
   const seen = new Set<string>();
   return items.filter(i=>{if(!i.topic)return true; if(seen.has(i.topic))return false; seen.add(i.topic); return true;})
-    .sort((a,b)=>order(a.tag)-order(b.tag) || ('eventDate' in b ? b.eventDate ?? '' : '').localeCompare('eventDate' in a ? a.eventDate ?? '' : ''));
+    .sort((a,b)=>order(a.tag)-order(b.tag) || ('eventDate' in b ? b.eventDate ?? b.publishedAt ?? '' : '').localeCompare('eventDate' in a ? a.eventDate ?? a.publishedAt ?? '' : ''));
 }
 export function noteDate(n: Partial<Note>): string {
-  return [n.eventDate && `事件 ${n.eventDate}`,n.publishedAt && `发布 ${n.publishedAt}`,n.verifiedAt && `核实 ${n.verifiedAt}`,n.asOfRace && `截至 ${n.asOfRace.year} 第 ${n.asOfRace.round} 站`,n.status==='statement' && '公开表态',n.status==='analysis' && '观察'].filter(Boolean).join(' · ');
+  const short = (d: string) => d.split("T")[0];
+  return [n.eventDate && `事件 ${short(n.eventDate)}`,n.publishedAt && `发布 ${short(n.publishedAt)}`,n.verifiedAt && `核实 ${short(n.verifiedAt)}`,n.asOfRace && `截至 ${n.asOfRace.year} 第 ${n.asOfRace.round} 站`,n.status==='statement' && '公开表态',n.status==='analysis' && '观察'].filter(Boolean).join(' · ');
 }
 export function commentaryText(notes: Note[], auto: Talk[]): string {
   return mergeTalkingPoints(notes,auto).map(i=>{

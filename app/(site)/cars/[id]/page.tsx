@@ -1,3 +1,4 @@
+import { ensureFreshEditorial } from "@/lib/cloudEditorial";
 import { ensureFreshDatabase } from "@/lib/db";
 import CarRaceGallery from "@/components/cars/CarRaceGallery";
 import { raceLivery, seasonLiveryPhoto } from "@/lib/carLiveries";
@@ -32,7 +33,7 @@ export const dynamic = "force-dynamic";
 
 
 export default async function CarPage({ params }: { params: Promise<{ id: string }> }) {
-  await ensureFreshDatabase();
+  await Promise.all([ensureFreshDatabase(), ensureFreshEditorial()]);
   const { id } = await params;
   const ch = getChassis(id);
   if (!ch) notFound();

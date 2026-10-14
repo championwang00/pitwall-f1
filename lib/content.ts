@@ -1,3 +1,4 @@
+import { cloudNotes } from "./cloudEditorial";
 import fs from "node:fs";
 import path from "node:path";
 import { get } from "./db";
@@ -60,6 +61,7 @@ export const nameZh = {
 
 export type EditorialDimension = "performance" | "personality" | "relationships" | "career" | "visual" | "tech" | "weekend" | "heritage";
 export type Note = {
+  photo?: { url: string; caption: string; source: string; width: number; height: number; bytes: number };
   tag: string; title: string; text: string; year?: number | null; gp?: string | null; circuit?: string | null; sources: Source[];
   topic?: string; dimension?: EditorialDimension; publishedAt?: string; verifiedAt?: string; eventDate?: string;
   race?: { year: number; round: number }; asOfRace?: { year: number; round: number };
@@ -84,7 +86,7 @@ export function selectNotes(entries: Note[], q: NoteContext): Note[] {
   });
 }
 const notesOf = (file: string) => load<Record<string, Note[]>>(file) as Record<string, Note[]>;
-const editorial = () => { const data = load<Note[]>("notes.editorial.json"); return [...(Array.isArray(data) ? data : []), ...Object.values(notesOf("notes.races.json")).flat()]; };
+const editorial = () => { const data = load<Note[]>("notes.editorial.json"); return [...(Array.isArray(data) ? data : []), ...Object.values(notesOf("notes.races.json")).flat(), ...cloudNotes()]; };
 const applicable = (entries: Note[], q: NoteContext) => entries.filter((n) =>
   !expired(n, q.now ?? new Date().toISOString()) &&
   !(n.temporal === "preview" && (q.completed || (n.race && !!get("select 1 from race r join race_result rr on rr.race_id=r.id where r.year=? and r.round=? limit 1", n.race.year, n.race.round)))) &&

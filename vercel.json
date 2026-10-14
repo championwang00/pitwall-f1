@@ -3,7 +3,8 @@
   "git": {
     "deploymentEnabled": {
       "codex/radio-transcripts": false,
-      "radio-transcripts": false
+      "radio-transcripts": false,
+      "codex/editorial-news": false
     }
   }
 }

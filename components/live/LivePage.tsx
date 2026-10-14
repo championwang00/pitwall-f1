@@ -1,3 +1,5 @@
+import TalkingPoints from "@/components/entity/TalkingPoints";
+import { recentNews } from "@/lib/cloudEditorial";
 import { raceFinished } from "@/lib/raceStatus";
 import Link from "next/link";
 import { Suspense, ViewTransition } from "react";
@@ -245,6 +247,7 @@ export default function LivePage({ st, panel }: { st: LiveState; panel: PanelPro
           </Suspense>
         )}
         {((live && st.liveFeed) || panel.focus) && <div className={l.panelTop}><Panel {...panel} archive={archive} /></div>}
+        <TalkingPoints chronological auto={[]} notes={recentNews(st.year)} title="赛前动态" subject="车手装备 · 特别涂装 · 场外故事与社媒" year={st.year} />
         <RoundCards year={st.year} schedule={st.schedule} title={<><EntityLink kind="year" id={String(st.year)} className="hlink">{st.year}</EntityLink> 赛季 · 全部分站</>} nextRound={off ? null : next.round} weekend={st.phase === "live" || st.phase === "weekend"} />
       </div>
     </ViewTransition>

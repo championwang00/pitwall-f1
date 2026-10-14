@@ -481,3 +481,5 @@
 
 /* Bilingual radio speech shares one readable colour at every playback stage. */
 .rSubtitle, .rText { color: #fff; }
+
+.bPhoto { display:block; width:100%; height:auto; margin-top:8px; border-radius:4px; }

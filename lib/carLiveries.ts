@@ -1,3 +1,4 @@
+import { cloudLiveries } from "./cloudEditorial";
 import fs from "node:fs";
 import path from "node:path";
 import { baseAsset } from "./baseAssets";
@@ -33,7 +34,7 @@ export function seasonLiveryPhoto(chassis: string, year: number): LiveryPhoto | 
 }
 /** Unknown special liveries are never inferred from another year's car. */
 export function raceLivery(chassis: string, year: number, round: number, reference?: LiveryPhoto | null): { livery: Livery | null; photo: LiveryPhoto | null } {
-  const variants = read<Variant[]>("car-liveries.json", []);
+  const variants = [...cloudLiveries(), ...read<Variant[]>("car-liveries.json", [])];
   const variant = variants.find(v => v.chassis === chassis && v.year === year && v.rounds.includes(round));
   const photos = read<Record<string, LiveryPhoto>>("car-livery-photos.json", {});
   const actual = photos[`${chassis}@${year}:${round}`];

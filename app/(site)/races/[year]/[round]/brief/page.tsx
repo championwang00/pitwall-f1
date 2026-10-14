@@ -1,3 +1,4 @@
+import { ensureFreshEditorial } from "@/lib/cloudEditorial";
 import { ensureFreshDatabase, get } from "@/lib/db";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -33,7 +34,7 @@ export const dynamic = "force-dynamic";
 
 /** 解说手册 = one race's document (IA spec v5 §0.5.4): /races/Y/R/brief, a child of the race hub. /brief redirects here. */
 export default async function BriefPage({ params }: { params: Promise<{ year: string; round: string }> }) {
-  await ensureFreshDatabase();
+  await Promise.all([ensureFreshDatabase(), ensureFreshEditorial()]);
   const { year: ys, round: rs } = await params;
   const year = +ys, round = +rs;
   const race = getRaceByYearRound(year, round);

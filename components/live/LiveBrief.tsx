@@ -8,7 +8,7 @@ import Person from "@/components/entity/Person";
 import LinkedParts from "@/components/entity/LinkedParts";
 import type { LinkPart } from "@/lib/linkify";
 
-type Pt = { tag: string; title: string; text: string; src: string | null; titleParts?: LinkPart[]; textParts?: LinkPart[] };
+type Pt = { photo?: import("@/lib/content").Note["photo"]; tag: string; title: string; text: string; src: string | null; titleParts?: LinkPart[]; textParts?: LinkPart[] };
 type Rec = { starts: number; wins: number; pods: number; poles: number; best: { pos: number; year: number } | null; last: { pos: number | null; pt: string; year: number } | null };
 type D = { id: string; name: string; zh: string; rec: Rec | null; points: Pt[] } | null;
 type Data = { circuit: string; circuitZh: string; circuitPoints: Pt[]; drivers: Record<string, D> };
@@ -38,7 +38,7 @@ export default function LiveBrief({ circuit, a, b, year }: { circuit: string | u
         </p>
         <ul className={s.bList}>
           {d.points.map((p, i) => (
-            <li key={i}><span>{p.tag}</span><b>{p.titleParts ? <LinkedParts parts={p.titleParts} /> : p.title}</b><p>{p.textParts ? <LinkedParts parts={p.textParts} /> : p.text}{p.src && <a href={p.src} target="_blank" rel="noreferrer"> 来源</a>}</p></li>
+            <li key={i}><span>{p.tag}</span><b>{p.titleParts ? <LinkedParts parts={p.titleParts} /> : p.title}</b><p>{p.textParts ? <LinkedParts parts={p.textParts} /> : p.text}{p.src && <a href={p.src} target="_blank" rel="noreferrer"> 来源</a>}</p>{p.photo && <img className={s.bPhoto} src={p.photo.url} alt={p.photo.caption} width={p.photo.width} height={p.photo.height} loading="lazy" />}</li>
           ))}
         </ul>
       </div>
@@ -57,7 +57,7 @@ export default function LiveBrief({ circuit, a, b, year }: { circuit: string | u
         <div className={s.bCard}>
           <div className={s.bHead}><span className={s.bSide}>赛道</span><EntityLink kind="circuit" id={data.circuit} year={year} className="ilink"><b>{data.circuitZh}</b></EntityLink></div>
           <ul className={s.bList}>
-            {data.circuitPoints.map((p, i) => <li key={i}><span>{p.tag}</span><b>{p.titleParts ? <LinkedParts parts={p.titleParts} /> : p.title}</b><p>{p.textParts ? <LinkedParts parts={p.textParts} /> : p.text}{p.src && <a href={p.src} target="_blank" rel="noreferrer"> 来源</a>}</p></li>)}
+            {data.circuitPoints.map((p, i) => <li key={i}><span>{p.tag}</span><b>{p.titleParts ? <LinkedParts parts={p.titleParts} /> : p.title}</b><p>{p.textParts ? <LinkedParts parts={p.textParts} /> : p.text}{p.src && <a href={p.src} target="_blank" rel="noreferrer"> 来源</a>}</p>{p.photo && <img className={s.bPhoto} src={p.photo.url} alt={p.photo.caption} width={p.photo.width} height={p.photo.height} loading="lazy" />}</li>)}
           </ul>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { ensureFreshEditorial } from "@/lib/cloudEditorial";
 import { ensureFreshDatabase } from "@/lib/db";
 import { all } from "@/lib/db";
 import { circuitTalk, driverTalk } from "@/lib/talk";
@@ -8,7 +9,7 @@ import { linkParts } from "@/lib/linkify";
 
 // GET /api/talk?circuit=marina-bay&acr=VER,ANT — commentator cards for the live page.
 export async function GET(req: Request) {
-  await ensureFreshDatabase();
+  await Promise.all([ensureFreshDatabase(), ensureFreshEditorial()]);
   const u = new URL(req.url);
   const circuit = u.searchParams.get("circuit") ?? "";
   const acrs = (u.searchParams.get("acr") ?? "").split(",").filter(Boolean).slice(0, 4);
@@ -26,14 +27,14 @@ export async function GET(req: Request) {
   const drivers = Object.fromEntries(acrs.map((a) => {
     const d = byAcr.get(a);
     if (!d) return [a, null];
-    const curated = notes.driver(d.id).slice(0, 2);
-    const auto = driverTalk(d.id).filter((t) => t.tag !== "下一站").slice(0, 3);
+    const curated = notes.driver(d.id);
+    const auto = driverTalk(d.id).filter((t) => t.tag !== "下一站");
     return [a, {
       id: d.id, name: d.name, zh: dContent()[d.id]?.nameZh ?? DRIVERS_2026[d.id]?.nameZh ?? d.name,
       rec: recs.find((r) => r.id === d.id) ?? null,
-      points: [...curated.map((n) => ({ tag: n.tag, title: n.title, text: n.text, src: n.sources[0]?.url ?? null, year: n.year })), ...auto.map((t) => ({ tag: t.tag, title: t.title, text: t.text, src: null }))].slice(0, 4).map((p) => lp(p, d.id)),
+      points: [...curated.map((n) => ({ tag: n.tag, title: n.title, text: n.text, src: n.sources[0]?.url ?? null, year: n.year, photo: n.photo })), ...auto.map((t) => ({ tag: t.tag, title: t.title, text: t.text, src: null }))].map((p) => lp(p, d.id)),
     }];
   }));
-  const ct = circuit ? [...notes.circuit(circuit).slice(0, 2).map((n) => ({ tag: n.tag, title: n.title, text: n.text, src: n.sources[0]?.url ?? null, year: n.year })), ...circuitTalk(circuit).slice(0, 4).map((t) => ({ tag: t.tag, title: t.title, text: t.text, src: null }))] : [];
-  return Response.json({ circuit, circuitZh: cContent()[circuit]?.nameZh ?? circuit, circuitPoints: ct.slice(0, 5).map((p) => lp(p, circuit)), drivers });
+  const ct = circuit ? [...notes.circuit(circuit).map((n) => ({ tag: n.tag, title: n.title, text: n.text, src: n.sources[0]?.url ?? null, year: n.year, photo: n.photo })), ...circuitTalk(circuit).map((t) => ({ tag: t.tag, title: t.title, text: t.text, src: null }))] : [];
+  return Response.json({ circuit, circuitZh: cContent()[circuit]?.nameZh ?? circuit, circuitPoints: ct.map((p) => lp(p, circuit)), drivers });
 }

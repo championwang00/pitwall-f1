@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3210",
-    "test": "node --no-warnings --experimental-strip-types --import ./scripts/lib/ts-register.mjs scripts/test-database-refresh.mjs && node --no-warnings --experimental-strip-types --import ./scripts/lib/ts-register.mjs scripts/test-race-freshness.mjs && node scripts/test-initial-resources.mjs && node --no-warnings --experimental-strip-types --import ./scripts/lib/ts-register.mjs scripts/test-commentary.mjs && node --no-warnings --experimental-strip-types --import ./scripts/lib/ts-register.mjs scripts/test-cloud-radio.mjs && python3 scripts/test-cloud-radio.py && python3 scripts/test-radio-translation.py && python3 scripts/test-radio-voices.py",
+    "test": "node --no-warnings --experimental-strip-types --import ./scripts/lib/ts-register.mjs scripts/test-database-refresh.mjs && node --no-warnings --experimental-strip-types --import ./scripts/lib/ts-register.mjs scripts/test-race-freshness.mjs && node scripts/test-initial-resources.mjs && node --no-warnings --experimental-strip-types --import ./scripts/lib/ts-register.mjs scripts/test-commentary.mjs && node --no-warnings --experimental-strip-types --import ./scripts/lib/ts-register.mjs scripts/test-cloud-radio.mjs && python3 scripts/test-cloud-radio.py && python3 scripts/test-radio-translation.py && python3 scripts/test-radio-voices.py && node --no-warnings --experimental-strip-types --import ./scripts/lib/ts-register.mjs scripts/test-cloud-editorial.mjs",
     "build": "next build",
     "start": "next start -p 3210",
     "shot": "node scripts/shot.mjs",
