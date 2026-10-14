@@ -33,7 +33,8 @@ assert.deepEqual(liveNews(2026,18,timestamp,entries).race.map(n=>n.title),['美�
 assert.deepEqual(liveNews(2026,18,timestamp,entries).social.map(n=>n.title),['车手兰卡威朋友团建','公开动态']);
 assert.deepEqual(liveNews(2026,17,timestamp,entries).race.map(n=>n.title),['被旧标签误标的球衣','新加坡球衣','新加坡涂装']);
 assert.deepEqual(liveNews(2026,null,timestamp,entries).race,[]);
-assert.deepEqual(liveNews(2027,1,timestamp,entries),{race:[],social:[]});
+assert.deepEqual(liveNews(2027,1,timestamp,entries).race,[]);
+assert.deepEqual(liveNews(2027,1,timestamp,entries).social.map(n=>n.title),['车手兰卡威朋友团建','公开动态']);
 console.log('PASS: next-race switch, previous-race exclusion, uncertain equipment quarantine, expiry and offseason');
 
 const oldShirt={...seed.notes.find(n=>n.title==='皮亚斯特里周六身穿新加坡系列球衣'),tag:'场外动态'};
@@ -42,3 +43,6 @@ assert.deepEqual(liveNews(2026,18,timestamp,[oldShirt]),{race:[],social:[]},'old
 assert.equal(liveNews(2026,17,timestamp,[oldShirt]).race.length,1);
 assert.deepEqual(liveNews(2026,null,timestamp,[oldRaceSocial]).social.map(n=>n.title),['车手兰卡威朋友团建']);
 console.log('PASS: past-race lifestyle survives race switch and old apparel labels are corrected');
+
+const lastYearStory={...oldRaceSocial,publishedAt:'2026-12-20'};
+assert.equal(liveNews(2027,1,Date.parse('2027-01-02'),[lastYearStory]).social.length,1,'recent lifestyle survives a season boundary');

@@ -28,9 +28,9 @@ export function recentNews(year: number, now=Date.now()): Note[] {
 
 /** Publication recency cannot establish which race a story belongs to. */
 export function liveNews(year: number, round: number | null, now=Date.now(), entries: Note[]=cloudNotes()): { race: Note[]; social: Note[] } {
-  const recent=entries.filter(n=>n.year===year && n.publishedAt && Date.parse(n.publishedAt)<=now && now-Date.parse(n.publishedAt)<=45*86400000 && (!n.validUntil || Date.parse(n.validUntil)>=now));
+  const recent=entries.filter(n=>n.publishedAt && Date.parse(n.publishedAt)<=now && now-Date.parse(n.publishedAt)<=45*86400000 && (!n.validUntil || Date.parse(n.validUntil)>=now));
   const kind=(n: Note)=>n.newsKind ?? seed.notes.find(s=>s.topic===n.topic)?.newsKind ?? (n.tag==='车手装备' ? 'equipment' : n.tag==='新涂装' ? 'livery' : n.tag==='场外动态' ? 'social' : null);
-  const race=round===null ? [] : recent.filter(n=>(kind(n)==='equipment' || kind(n)==='livery') && ((n.race?.year===year && n.race.round===round) || n.related?.races?.includes(`${year}/${round}`)));
+  const race=round===null ? [] : recent.filter(n=>n.year===year && (kind(n)==='equipment' || kind(n)==='livery') && ((n.race?.year===year && n.race.round===round) || n.related?.races?.includes(`${year}/${round}`)));
   const social=recent.filter(n=>kind(n)==='social');
   return {race,social};
 }
