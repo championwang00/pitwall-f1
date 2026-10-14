@@ -2,6 +2,14 @@ import importlib.util,pathlib,tempfile,unittest,io
 from PIL import Image
 s=importlib.util.spec_from_file_location('news','scripts/cloud-editorial.py');m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
 class NewsTests(unittest.TestCase):
+ def test_official_redirects_and_boundaries(self):
+  request=m.urllib.request.Request('https://www.formula1.com/en/latest/all')
+  handler=m.ApprovedRedirect(m.ARTICLE_HOSTS)
+  allowed=handler.redirect_request(request,None,302,'',{},'https://www.formula1.com/en/latest')
+  self.assertEqual(allowed.full_url,'https://www.formula1.com/en/latest')
+  for target in ['http://www.formula1.com/en/latest','https://evil.com/','https://user:pass@www.formula1.com/','https://www.formula1.com:8443/']:
+   with self.assertRaises(ValueError):handler.redirect_request(request,None,302,'',{},target)
+
  def setUp(self):
   self.source={'url':'https://www.formula1.com/en/latest/article/test.id','title':'Team special livery','text':'The team revealed a special livery for Singapore.','publishedAt':'2026-10-05T12:00:00Z','images':[],'socialUrls':[]}
   self.catalog={'year':2026,'drivers':[{'id':'driver'}],'teams':[{'id':'audi','chassis':'audi-r26'}],'races':[{'year':2026,'round':17,'gp':'singapore'}]}

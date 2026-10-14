@@ -11,10 +11,19 @@ SOCIAL_HOSTS={'www.instagram.com','instagram.com','x.com','twitter.com','www.you
 class NoRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self,*args): raise ValueError('redirect rejected')
 OPENER=urllib.request.build_opener(NoRedirect())
+class ApprovedRedirect(urllib.request.HTTPRedirectHandler):
+    max_redirections=3
+    max_repeats=1
+    def __init__(self,hosts):self.hosts=hosts
+    def redirect_request(self,req,fp,code,msg,headers,newurl):
+        u=urllib.parse.urlsplit(newurl)
+        if u.scheme!='https' or u.hostname not in self.hosts or u.username or u.password or u.port not in (None,443):raise ValueError('unapproved redirect')
+        return super().redirect_request(req,fp,code,msg,headers,newurl)
+
 def fetch(url,hosts,limit=5_000_000):
     u=urllib.parse.urlsplit(url)
     if u.scheme!='https' or u.hostname not in hosts or u.username or u.password:raise ValueError('unapproved source')
-    with OPENER.open(urllib.request.Request(url,headers={'User-Agent':'Pitwall editorial reader/1.0'}),timeout=30) as r:
+    with urllib.request.build_opener(ApprovedRedirect(hosts)).open(urllib.request.Request(url,headers={'User-Agent':'Pitwall editorial reader/1.0'}),timeout=30) as r:
         body=r.read(limit+1)
         if len(body)>limit:raise ValueError('source too large')
         return body

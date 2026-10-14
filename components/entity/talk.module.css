@@ -74,3 +74,7 @@
   .withPhotos .copy { font-size:12px; padding:8px 12px; }
   .withPhotos .sub { font-weight:400; font-size:12px; line-height:20px; margin-top:10px; }
 }
+
+.withPhotos .lead h3 { font-size:26px !important; }
+.withPhotos .item h3 { font-size:19px; }
+@media (max-width:960px) { .withPhotos .lead h3 { font-size:22px !important; } }
