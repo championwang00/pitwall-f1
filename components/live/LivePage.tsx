@@ -248,8 +248,8 @@ export default function LivePage({ st, panel }: { st: LiveState; panel: PanelPro
           </Suspense>
         )}
         {((live && st.liveFeed) || panel.focus) && <div className={l.panelTop}><Panel {...panel} archive={archive} /></div>}
-        {!off && (news.race.length ? <TalkingPoints masonry chronological auto={[]} notes={news.race} title={`${gpZh(next.grand_prix_id)} · 赛前动态`} subject="仅收录明确属于本站的装备、涂装与围场信息" year={st.year} /> : <section className={l.newsEmpty}><div className="wrap"><h2>{gpZh(next.grand_prix_id)} · 赛前动态</h2><p>暂未收录本站已确认的装备与涂装更新，官方发布后会自动补充。</p></div></section>)}
-        <TalkingPoints masonry chronological auto={[]} notes={news.social} title="近期车手动态" subject="公开社媒与场外故事 · 不代表本站装备或涂装" year={st.year} />
+        {!off && (news.race.length ? <TalkingPoints masonry chronological auto={[]} notes={news.race} title={`${gpZh(next.grand_prix_id)} · 装备与涂装`} subject="仅收录明确属于本站的装备与涂装更新" year={st.year} /> : <section className={l.newsEmpty}><div className="wrap"><h2>{gpZh(next.grand_prix_id)} · 装备与涂装</h2><p>暂未收录本站已确认的装备与涂装更新，官方发布后会自动补充。</p></div></section>)}
+        <TalkingPoints masonry chronological auto={[]} notes={news.social} title="近期车手动态" subject="近45天车手生活、朋友互动与社媒趣事" year={st.year} />
         <RoundCards year={st.year} schedule={st.schedule} title={<><EntityLink kind="year" id={String(st.year)} className="hlink">{st.year}</EntityLink> 赛季 · 全部分站</>} nextRound={off ? null : next.round} weekend={st.phase === "live" || st.phase === "weekend"} />
       </div>
     </ViewTransition>

@@ -40,7 +40,8 @@
         "bytes": 32728,
         "caption": "奥迪新加坡特别涂装 · 官方照片",
         "source": "https://www.formula1.com/en/latest/article/gallery-audi-unveil-special-livery-for-singapore-grand-prix.5Z07QWFA7vVqCPC1jb6AIq"
-      }
+      },
+      "newsKind": "livery"
     },
     {
       "topic": "news-32c6c7ac7d30578d-0",
@@ -84,7 +85,8 @@
         "bytes": 167094,
         "caption": "车手公开动态 · 来源 F1 官方报道",
         "source": "https://www.formula1.com/en/latest/article/karting-chaos-cycling-tours-and-chess-inside-carlos-sainzs-f1-training-camp.3NUu7MqKEugEvgjb41pPt0"
-      }
+      },
+      "newsKind": "social"
     },
     {
       "topic": "news-32c6c7ac7d30578d-1",
@@ -122,7 +124,8 @@
         "bytes": 71418,
         "caption": "卡丁车计时屏上的车手昵称 · 拉塞尔公开动态",
         "source": "https://www.formula1.com/en/latest/article/karting-chaos-cycling-tours-and-chess-inside-carlos-sainzs-f1-training-camp.3NUu7MqKEugEvgjb41pPt0"
-      }
+      },
+      "newsKind": "social"
     },
     {
       "topic": "news-32c6c7ac7d30578d-2",
@@ -160,7 +163,8 @@
         "bytes": 170500,
         "caption": "车手公开动态 · 来源 F1 官方报道",
         "source": "https://www.formula1.com/en/latest/article/karting-chaos-cycling-tours-and-chess-inside-carlos-sainzs-f1-training-camp.3NUu7MqKEugEvgjb41pPt0"
-      }
+      },
+      "newsKind": "social"
     },
     {
       "topic": "news-c6f90024b47764ec-0",
@@ -193,13 +197,14 @@
           "url": "https://www.mclaren.com/racing/formula-1/2026/singapore-grand-prix/spotted-in-the-paddock/"
         }
       ],
-      "verifiedAt": "2026-10-14"
+      "verifiedAt": "2026-10-14",
+      "newsKind": "equipment"
     },
     {
       "topic": "news-c6f90024b47764ec-1",
       "title": "皮亚斯特里周六身穿新加坡系列球衣",
       "text": "皮亚斯特里周六将黑色和木瓜橙配色的新加坡灵感足球球衣与黑色牛仔裤搭配，展示车队新加坡系列服装。",
-      "tag": "场外动态",
+      "tag": "车手装备",
       "dimension": "personality",
       "year": 2026,
       "publishedAt": "2026-10-12T13:00:00.000Z",
@@ -233,7 +238,8 @@
         "bytes": 53664,
         "caption": "皮亚斯特里在新加坡围场 · 车队官方照片",
         "source": "https://www.mclaren.com/racing/formula-1/2026/singapore-grand-prix/spotted-in-the-paddock/"
-      }
+      },
+      "newsKind": "equipment"
     },
     {
       "topic": "news-c6f90024b47764ec-2",
@@ -274,7 +280,8 @@
         "bytes": 98730,
         "caption": "韦德与迈凯伦两位车手在车库合影",
         "source": "https://www.mclaren.com/racing/formula-1/2026/singapore-grand-prix/spotted-in-the-paddock/"
-      }
+      },
+      "newsKind": "social"
     },
     {
       "topic": "news-f11cdaf92d6621bd-0",
@@ -316,7 +323,8 @@
         "bytes": 33734,
         "caption": "迈凯伦 OKX 特别涂装 · 车队官方照片",
         "source": "https://www.mclaren.com/racing/formula-1/2026/italian-grand-prix/okx-livery/"
-      }
+      },
+      "newsKind": "livery"
     },
     {
       "topic": "news-382c1c4386535041-0",
@@ -357,7 +365,8 @@
         "bytes": 154688,
         "caption": "官方报道配图",
         "source": "https://www.formula1.com/en/latest/article/all-the-liveries-special-helmet-designs-and-eye-catching-looks-for-miami.7oF76lk9j3Og4NMq8G4duU"
-      }
+      },
+      "newsKind": "livery"
     },
     {
       "topic": "news-382c1c4386535041-1",
@@ -398,7 +407,8 @@
         "bytes": 154688,
         "caption": "迈阿密特别装备与涂装 · 官方报道配图",
         "source": "https://www.formula1.com/en/latest/article/all-the-liveries-special-helmet-designs-and-eye-catching-looks-for-miami.7oF76lk9j3Og4NMq8G4duU"
-      }
+      },
+      "newsKind": "livery"
     },
     {
       "topic": "news-382c1c4386535041-2",
@@ -438,7 +448,8 @@
         "bytes": 154688,
         "caption": "官方报道配图",
         "source": "https://www.formula1.com/en/latest/article/all-the-liveries-special-helmet-designs-and-eye-catching-looks-for-miami.7oF76lk9j3Og4NMq8G4duU"
-      }
+      },
+      "newsKind": "equipment"
     },
     {
       "topic": "paddock-extra-0",
@@ -468,7 +479,8 @@
           "url": "https://www.formula1.com/en/latest/article/karting-chaos-cycling-tours-and-chess-inside-carlos-sainzs-f1-training-camp.3NUu7MqKEugEvgjb41pPt0"
         }
       ],
-      "verifiedAt": "2026-10-14"
+      "verifiedAt": "2026-10-14",
+      "newsKind": "social"
     },
     {
       "topic": "paddock-extra-1",
@@ -498,7 +510,8 @@
           "url": "https://www.formula1.com/en/latest/article/karting-chaos-cycling-tours-and-chess-inside-carlos-sainzs-f1-training-camp.3NUu7MqKEugEvgjb41pPt0"
         }
       ],
-      "verifiedAt": "2026-10-14"
+      "verifiedAt": "2026-10-14",
+      "newsKind": "social"
     },
     {
       "topic": "paddock-extra-2",
@@ -529,7 +542,8 @@
           "url": "https://www.formula1.com/en/latest/article/karting-chaos-cycling-tours-and-chess-inside-carlos-sainzs-f1-training-camp.3NUu7MqKEugEvgjb41pPt0"
         }
       ],
-      "verifiedAt": "2026-10-14"
+      "verifiedAt": "2026-10-14",
+      "newsKind": "social"
     }
   ],
   "liveries": [

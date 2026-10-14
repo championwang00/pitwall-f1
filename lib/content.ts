@@ -62,6 +62,7 @@ export const nameZh = {
 export type EditorialDimension = "performance" | "personality" | "relationships" | "career" | "visual" | "tech" | "weekend" | "heritage";
 export type Note = {
   photo?: { url: string; caption: string; source: string; width: number; height: number; bytes: number };
+  newsKind?: "social" | "equipment" | "livery";
   tag: string; title: string; text: string; year?: number | null; gp?: string | null; circuit?: string | null; sources: Source[];
   topic?: string; dimension?: EditorialDimension; publishedAt?: string; verifiedAt?: string; eventDate?: string;
   race?: { year: number; round: number }; asOfRace?: { year: number; round: number };
